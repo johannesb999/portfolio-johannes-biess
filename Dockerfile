@@ -2,14 +2,14 @@ FROM node:20-alpine
 
 # Create destination directory
 RUN mkdir -p /usr/src/nuxt-app
-WORKDIR /usr/src/portfolio
+WORKDIR /usr/src/nuxt-app
 
 # Update and install dependencies
 RUN apk update && apk upgrade
 RUN apk add git
 
 # Copy the app, note .dockerignore
-COPY . /usr/src/portfolio
+COPY . /usr/src/nuxt-app/
 
 # Install dependencies and build the application using npm
 RUN npm install
