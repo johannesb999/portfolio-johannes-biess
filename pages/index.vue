@@ -1,6 +1,6 @@
 vue <template>
     <div>
-        landing page
+        Johannes Biess
     </div>
 </template>
 <script>
