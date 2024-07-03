@@ -1,4 +1,4 @@
-<template lang="en">
+<template>
     <div>
         About Page
     </div>
@@ -8,6 +8,6 @@ export default {
     
 }
 </script>
-<style lang="en">
+<style>
     
 </style>
