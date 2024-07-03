@@ -1,15 +1,26 @@
 FROM node:20-alpine
-# create destination directory
+
+# Create destination directory
 RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
-# update and install dependency
+
+# Update and install dependencies
 RUN apk update && apk upgrade
 RUN apk add git
-# copy the app, note .dockerignore
+
+# Copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
-RUN yarn install
-RUN yarn build
+
+# Install dependencies and build the application using npm
+RUN npm install
+RUN npm run build
+
+# Expose the port the app runs on
 EXPOSE 3000
+
+# Set environment variables for Nuxt
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=3000
-CMD [ "node", ".output/server/index.mjs"]
+
+# Start the Nuxt server
+CMD ["node", ".output/server/index.mjs"]
