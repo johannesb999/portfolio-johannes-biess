@@ -2,11 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  css: ["~/assets/scss/main.scss"],
+
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
   },
 
   compatibilityDate: "2024-07-04",

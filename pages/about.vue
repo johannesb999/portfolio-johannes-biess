@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <main>
     <div id="aboutMe">ABOUT ME</div>
-
     <div id="startLinkAbout">
       <nuxt-link to="/" class="custom-link">START</nuxt-link>
     </div>
@@ -16,16 +15,14 @@
       <div id="line4">PUNCTUALITY FAIRNESS</div>
       <div id="line4">CREATIVE ACCURACY</div>
     </div>
-  </div>
+  </main>
 </template>
 
-<script>
-export default {
-  name: "AboutPage",
-};
+<script setup>
+
 </script>
 
-<style>
+<style scoped>
 #aboutMe {
   color: black;
   font-weight: 300;

@@ -1,23 +1,21 @@
 <template>
-  <div>
-    <div id="contact">CONTACT</div>
-
+  <main>
+    <div id="contact">CONTACT ME</div>
     <div id="startLinkContact">
       <nuxt-link to="/" class="custom-link">START</nuxt-link>
     </div>
     <div class="contactText">
-      <div id="line1">CONTACT ME</div>
+      <div id="asdf">CONTACT ME</div>
     </div>
-  </div>
+  </main>
 </template>
 
-<script>
-export default {
-  name: "ContactPage",
-};
+<script setup>
+
 </script>
 
-<style>
+<style scoped>
+
 #contact {
   color: black;
   font-weight: 300;

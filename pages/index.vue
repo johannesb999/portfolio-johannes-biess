@@ -25,7 +25,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+
 #start {
   color: black;
   font-weight: 300;

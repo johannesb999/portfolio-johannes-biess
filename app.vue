@@ -7,35 +7,37 @@
   />
   <title>Johannes Biess</title>
   <link rel="icon" href="/favicon.ico" />
-  <div>
-    <NuxtPage />
-  </div>
+  
+  <transition :name="transitionName">
+    <div>
+      <NuxtPage />
+    </div>
+  </transition>
 </template>
 
-<script>
-export default {
-  name: "HomePage",
-};
-</script>
+<script setup></script>
 
 <style>
-@font-face {
-  .geologica-<uniquifier > {
-    font-family: "Geologica", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
 
-body {
+html {
   color: black;
   font-size: 14px;
   font-family: "Geologica", sans-serif;
-  background-color: white; 
+  background-color: white;
+}/* Basis-Animationseigenschaften */
+.page-enter-active,
+.page-leave-active {
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-
-
+/* Spezifische Animationen für das Einfliegen */
+.page-enter-from {
+  transform: translateX(100%); /* Einfliegen von rechts */
+  opacity: 0;
+}
+.page-leave-to {
+  transform: translateX(-100%); /* Ausfliegen nach links */
+  opacity: 0;
+}
 </style>
