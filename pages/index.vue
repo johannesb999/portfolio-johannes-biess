@@ -1,9 +1,9 @@
 <template>
   <div>
     <div id="start">START</div>
-    <div id="aboutLink">
-      <nuxt-link to="about" class="custom-link">ABOUT</nuxt-link>
-    </div>
+      <div id="aboutLink">
+        <nuxt-link to="about" class="custom-link">ABOUT</nuxt-link>
+      </div>
     <div id="contactLink">
       <nuxt-link to="contact" class="custom-link">CONTACT</nuxt-link>
     </div>
@@ -80,4 +80,7 @@
   font-weight: 200;
   text-align: left;
 }
+
+
+
 </style>

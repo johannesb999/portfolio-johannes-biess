@@ -10,12 +10,8 @@
   </main>
 </template>
 
-<script setup>
-
-</script>
-
+<script setup></script>
 <style scoped>
-
 #contact {
   color: black;
   font-weight: 300;
