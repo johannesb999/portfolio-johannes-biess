@@ -1,5 +1,13 @@
 <template>
-  <div>project Page</div>
+    <div>
+        project Page
+    </div>
 </template>
-<script></script>
-<style></style>
+<script>
+export default {
+    name: "projectPage",
+}
+</script>
+<style >
+    
+</style>

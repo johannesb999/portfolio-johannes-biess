@@ -1,5 +1,13 @@
 <template>
-  <div>resume Page</div>
+    <div>
+        resume Page
+    </div>
 </template>
-<script setup></script>
-<style></style>
+<script>
+export default {
+    name: "resumePage",
+}
+</script>
+<style >
+    
+</style>
