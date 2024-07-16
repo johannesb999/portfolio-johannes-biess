@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "nuxt": "^3.12.3",
     "sass": "^1.77.7",

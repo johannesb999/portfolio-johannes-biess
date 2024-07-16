@@ -19,15 +19,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "HomePage",
-};
-</script>
+<script setup></script>
 
 <style scoped>
-
-
 #start {
   color: black;
   font-weight: 300;
