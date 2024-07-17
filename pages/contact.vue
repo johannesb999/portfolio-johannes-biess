@@ -15,8 +15,6 @@
 
 <style scoped>
 main {
-  background-color: #949494;
-  box-sizing: border-box;
   height: 90vh;
   width: 100%;
 }
@@ -24,7 +22,7 @@ main {
 #contact {
   color: black;
   font-weight: 300;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
   margin-top: 50px;
   font-style: normal;
@@ -34,7 +32,7 @@ main {
 #resumeLink {
   color: black;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
   margin-top: 800px;
   font-style: normal;
@@ -45,7 +43,7 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
 }
 

@@ -25,7 +25,7 @@
 #start {
   color: black;
   font-weight: 300;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
   margin-top: 50px;
   font-style: normal;
@@ -35,7 +35,7 @@
 #projectLink {
   color: black;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
   margin-top: 800px;
   font-style: normal;
@@ -47,7 +47,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -76,7 +76,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 200;
   text-align: left;
 }

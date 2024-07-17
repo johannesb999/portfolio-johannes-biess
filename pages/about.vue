@@ -15,17 +15,21 @@
       <div id="line4">PUNCTUALITY FAIRNESS</div>
       <div id="line4">CREATIVE ACCURACY</div>
     </div>
+
+    <div class="picture">
+      <img
+        style="border-radius: 10px"
+        src="https://via.placeholder.com/220x380"
+        alt="profilpicture"
+      />
+    </div>
   </main>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style scoped>
 main {
-  background-color: #949494;
-  box-sizing: border-box;
   height: 90vh;
   width: 100%;
 }
@@ -50,7 +54,6 @@ main {
   line-height: normal;
 }
 
-
 #startLinkAbout {
   position: absolute;
   top: 50%;
@@ -58,7 +61,6 @@ main {
   font-size: 2rem;
   font-weight: 700;
 }
-
 
 #startLinkAbout {
   right: 0;
@@ -104,5 +106,13 @@ main {
   #line6 {
     font-weight: 300;
   }
+}
+
+.picture {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding-left: 20rem;
+  transform: translateY(-50%);
 }
 </style>
