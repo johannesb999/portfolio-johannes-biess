@@ -38,5 +38,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
       to.meta.pageTransition = { name: toDepth > fromDepth ? reverseTransition : normalTransition };
       from.meta.pageTransition = { name: toDepth > fromDepth ? reverseTransition : normalTransition };
     }
+    console.log(to.meta.pageTransition);
+    
   });
   
