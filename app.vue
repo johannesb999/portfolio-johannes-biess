@@ -7,24 +7,21 @@
   />
   <title>Johannes Biess</title>
   <link rel="icon" href="/favicon.ico" />
-  
-  
-    <div>
-      <NuxtPage />
-    </div>
-  
+
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
 
 html {
-  color: black;
+  color: #171717;
   font-size: 14px;
   font-family: "Geologica", sans-serif;
-  background-color: white;
+  background-color: #fbfbfb;
 }
 </style>

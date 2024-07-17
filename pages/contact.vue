@@ -4,17 +4,22 @@
     <div id="startLinkContact">
       <nuxt-link to="/" class="custom-link">START</nuxt-link>
     </div>
+    <div id="resumeLink"></div>
     <div class="contactText">
-      <div id="asdf">CONTACT ME</div>
+      <div id="line1">I AM HAPPY TO HEAR FROM YOU</div>
     </div>
   </main>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style scoped>
+main {
+  background-color: #949494;
+  box-sizing: border-box;
+  height: 90vh;
+  width: 100%;
+}
 
 #contact {
   color: black;
@@ -24,7 +29,16 @@
   margin-top: 50px;
   font-style: normal;
   line-height: normal;
-  text-decoration: underline;
+}
+
+#resumeLink {
+  color: black;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 800px;
+  font-style: normal;
+  line-height: normal;
 }
 
 #startLinkContact {
@@ -60,5 +74,9 @@
   font-size: 24px;
   font-weight: 200;
   text-align: left;
+
+  #line1 {
+    font-weight: 700;
+  }
 }
 </style>
