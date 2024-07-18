@@ -30,7 +30,7 @@ const props = defineProps({
   },
 });
 
-const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÜ";
 
 function getRandomChar() {
   return alphabet[Math.floor(Math.random() * alphabet.length)];

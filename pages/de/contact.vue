@@ -2,7 +2,7 @@
   <main>
     <div id="contact">CONTACT ME</div>
     <div id="startLinkContact">
-      <nuxt-link to="/" class="custom-link">START</nuxt-link>
+      <nuxt-link to="/de" class="custom-link">START</nuxt-link>
     </div>
     <div id="resumeLink"></div>
     <div class="contactText">

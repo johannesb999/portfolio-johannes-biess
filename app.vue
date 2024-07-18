@@ -10,8 +10,12 @@
 
   <div>
     <header class="language-switch">
-      <button @click="switchLanguage('en')" :disabled="currentLocale === 'en'">English</button>
-      <button @click="switchLanguage('de')" :disabled="currentLocale === 'de'">Deutsch</button>
+      <button @click="switchLanguage('en')" :disabled="currentLocale === 'en'">
+        English
+      </button>
+      <button @click="switchLanguage('de')" :disabled="currentLocale === 'de'">
+        Deutsch
+      </button>
     </header>
     <NuxtPage />
   </div>
@@ -23,35 +27,39 @@ import { ref, watchEffect } from "vue";
 
 const router = useRouter();
 const route = useRoute();
-const currentLocale = ref(route.path.startsWith('/de') ? 'de' : 'en');
+const currentLocale = ref(route.path.startsWith("/de") ? "de" : "en");
 
 watchEffect(() => {
-  currentLocale.value = route.path.startsWith('/de') ? 'de' : 'en';
+  currentLocale.value = route.path.startsWith("/de") ? "de" : "en";
 });
 
 const switchLanguage = (lang) => {
   const currentPath = route.path;
-  const pathSegments = currentPath.split("/").filter((segment) => segment);
+  let newPath = '';
 
-  if (lang === "de") {
-    // Von Englisch zu Deutsch
-    if (pathSegments[0] === "en") {
-      pathSegments[0] = "de";
+  if (currentPath === '/' && lang === 'de') {
+    newPath = '/de';
+  } else if (currentPath === '/de' && lang === 'en') {
+    newPath = '/';
+  } else {
+    // Allgemeine Behandlung für den Wechsel von spezifischen Seiten
+    const pathWithoutLocale = currentPath.replace(/^\/(de|en)\//, '/');
+    if (lang === 'de') {
+      newPath = pathWithoutLocale.startsWith('/') ? `/de${pathWithoutLocale}` : `/de/${pathWithoutLocale}`;
     } else {
-      pathSegments.unshift("de");
-    }
-  } else if (lang === "en") {
-    // Von Deutsch zu Englisch
-    if (pathSegments[0] === "de") {
-      pathSegments.shift(); // Entferne 'de' aus der URL
+      newPath = pathWithoutLocale.startsWith('/') ? `/en${pathWithoutLocale}` : `/en/${pathWithoutLocale}`;
     }
   }
 
-  const newPath = `/${pathSegments.join("/")}`;
-  currentLocale.value = lang;
-  router.push({ path: newPath });
+  if (newPath) {
+    router.push(newPath);
+    currentLocale.value = lang;
+  }
 };
 </script>
+
+
+
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
@@ -71,7 +79,7 @@ html {
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 1000; /* Sicherstellen, dass die Buttons immer im Vordergrund sind */
+  z-index: 1000; 
 }
 
 .language-switch button {
@@ -141,4 +149,15 @@ html {
 .page-down-enter-to {
   transform: translateX(0) translateY(0);
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.4s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
 </style>

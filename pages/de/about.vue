@@ -1,21 +1,20 @@
 <template>
   <main>
-    <div id="aboutMe">ABOUT ME</div>
+    <div id="aboutMe">ÜBER MICH</div>
     <div id="startLinkAbout">
-      <nuxt-link to="/de/" class="custom-link">START</nuxt-link>
+      <nuxt-link to="/de" class="custom-link">START</nuxt-link>
     </div>
     <div id="resumeLink">
-      <nuxt-link to="resume" class="custom-link">PERSONAL RESUME</nuxt-link>
+      <nuxt-link to="resume" class="custom-link">LEBENSLAUF</nuxt-link>
     </div>
     <div class="aboutMeText">
       <SplitFlapText
         :texts="[
-          'ABOUT ME      VALUES      ',
-          'TEAMWORK   TRUST  CLARITY ',
-          'ANOTHER  ORGANISATION     ',
-          '     ADAPTABILITY         ',
-          ' PUNCTUALITY  FAIRNESS    ',
-          'CREATIVITY  ACCURACY      ',
+          'ÜBER MICH      WERTE      ',
+          'TEAMWORK  VERTRAUEN       ',
+          '  ANPASSUNGSFÄHIGKEIT     ',
+          ' PÜNKTLICHKEIT FAIRNESS   ',
+          'KREATIVITÄT  GENAUIGKEIT  ',
         ]"
       />
     </div>
@@ -35,7 +34,6 @@ import SplitFlapText from "@/components/splitFlapText.vue";
 </script>
 
 <style scoped>
-
 #resumeBar {
   position: absolute;
   bottom: 0;

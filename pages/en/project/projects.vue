@@ -5,14 +5,14 @@
       <nuxt-link to="/" class="custom-link">Start</nuxt-link>
     </div>
     <div id="projectLinkNext">
-      <nuxt-link to="next" class="custom-link">JumpStar</nuxt-link>
+      <nuxt-link to="/en/project/jumpStar" class="custom-link">JumpStar</nuxt-link>
     </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="before" class="custom-link">GoEase</nuxt-link>
+    <div id="projectLinkBefore">  
+      <nuxt-link to="/en/project/goEase" class="custom-link">GoEase</nuxt-link>
     </div>
 
     <div class="projectText">
-      <div id="line1">PLANTMONIT</div>
+      <div id="line1">PlantMonit</div>
     </div>
     <div class="picture">
       <img

@@ -9,7 +9,7 @@
       <nuxt-link to="/en/contact" class="custom-link">CONTACT</nuxt-link>
     </div>
     <div id="projectLink">
-      <nuxt-link to="/en/projects" class="custom-link">
+      <nuxt-link to="/en/project/projects" class="custom-link">
         <span
           v-for="(char, index) in 'PROJECTS'.split('')"
           :key="index"
