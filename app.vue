@@ -13,7 +13,18 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useRouter } from 'vue-router';
+import { ref } from 'vue';
+
+const router = useRouter();
+const currentLocale = ref('en');
+
+const switchLanguage = (lang) => {
+  currentLocale.value = lang;
+  router.push({ path: `/${lang}` });
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
