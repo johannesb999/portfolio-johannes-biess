@@ -8,7 +8,15 @@
       <nuxt-link to="contact" class="custom-link">CONTACT</nuxt-link>
     </div>
     <div id="projectLink">
-      <nuxt-link to="projects" class="custom-link">PROJECTS</nuxt-link>
+      <nuxt-link to="projects" class="custom-link">
+        <span
+          v-for="(char, index) in 'PROJECTS'.split('')"
+          :key="index"
+          class="project-char"
+        >
+          {{ char }}
+        </span>
+      </nuxt-link>
     </div>
     <div
       v-for="(textArray, idx) in textArrays"
@@ -30,10 +38,13 @@
       </div>
     </div>
   </div>
+  <div id="quote">
+    “Develope to solve a Problem <br />- not only to create a Feature.”
+  </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const texts = [
   "HI MY NAME IS   ",
@@ -41,7 +52,12 @@ const texts = [
   "AND I AM        ",
   "DEVELOPER       ",
 ];
-const newWords = ["DESIGNER", "A PROBLEMSOLVER", "PROTOTYPER", "YOUR NEXT INTERN"];
+const newWords = [
+  "DESIGNER",
+  "A PROBLEMSOLVER",
+  "PROTOTYPER",
+  "YOUR NEXT INTERN",
+];
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function getRandomChar() {
@@ -49,16 +65,19 @@ function getRandomChar() {
 }
 
 function createTextArray(text, maxLength) {
-  return text.padEnd(maxLength, ' ').split("").map((char) => ({
-    target: char === " " ? getRandomChar() : char,
-    current: getRandomChar(),
-    isSeparator: char === " ",
-  }));
+  return text
+    .padEnd(maxLength, " ")
+    .split("")
+    .map((char) => ({
+      target: char === " " ? getRandomChar() : char,
+      current: getRandomChar(),
+      isSeparator: char === " ",
+    }));
 }
 
-const maxLength = Math.max(...texts.map(text => text.length)); // Ermitteln der maximalen Länge
+const maxLength = Math.max(...texts.map((text) => text.length));
 
-const textArrays = ref(texts.map(text => createTextArray(text, maxLength)));
+const textArrays = ref(texts.map((text) => createTextArray(text, maxLength)));
 
 const hasAnimated = ref(new Array(texts.length).fill(false));
 
@@ -95,17 +114,68 @@ const animateBottomLineNewWord = () => {
 };
 
 onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
   textArrays.value.forEach((_, index) => animateOnce(index));
   setInterval(() => {
     animateBottomLineNewWord();
   }, 6000);
 });
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+
+const lastScrollTop = ref(0);
+const isAnimating = ref(false);
+
+const debounce = (func, wait) => {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
+
+const handleScroll = debounce(() => {
+  const st = window.pageYOffset || document.documentElement.scrollTop;
+  if (st > lastScrollTop.value && !isAnimating.value) {
+    isAnimating.value = true;
+    triggerSplitFlapAnimation();
+    setTimeout(() => {
+      isAnimating.value = false;
+    }, 1000);
+  }
+  lastScrollTop.value = st <= 0 ? 0 : st;
+}, 100);
+
+const triggerSplitFlapAnimation = () => {
+  const projectLinkCharacters = document.querySelectorAll(
+    "#projectLink .project-char"
+  );
+  animateCharacters(projectLinkCharacters);
+  textArrays.value.forEach((textArray) => {
+    animateCharacters(textArray.map((x) => x.element));
+  });
+};
+
+const animateCharacters = (characters) => {
+  characters.forEach((char, index) => {
+    setTimeout(() => {
+      char.classList.add("project-flip");
+      setTimeout(() => {
+        char.classList.remove("project-flip");
+      }, 600);
+    }, index * 100);
+  });
+};
 </script>
 
-
 <style scoped>
-html,
-body {
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -213,5 +283,34 @@ body {
   font-size: 2rem;
   font-weight: 200;
   text-align: center;
+}
+
+#quote {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.project-char {
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.project-flip {
+  animation: projectFlipAnimation 1s ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes projectFlipAnimation {
+  0%,
+  100% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(360deg);
+  }
 }
 </style>
