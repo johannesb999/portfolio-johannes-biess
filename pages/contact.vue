@@ -45,6 +45,8 @@ main {
   transform: translateY(-50%);
   font-size: 2rem;
   font-weight: 700;
+  left: 0;
+  padding-left: 20px;
 }
 
 #startLinkContact {

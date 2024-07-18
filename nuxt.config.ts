@@ -4,9 +4,7 @@ export default defineNuxtConfig({
 
   css: ["~/assets/scss/main.scss"],
 
-  app: {
-    pageTransition: { name: "page", mode: "out-in" },
-  },
+ 
 
   compatibilityDate: "2024-07-04",
 });

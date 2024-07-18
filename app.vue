@@ -23,9 +23,11 @@ html {
   font-size: 14px;
   font-family: "Geologica", sans-serif;
   background-color: #fbfbfb;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
-
-
 
 .page-left-enter-active,
 .page-right-enter-active,

@@ -18,6 +18,10 @@
         </span>
       </nuxt-link>
     </div>
+    <div id="quote">
+      “Develope to solve a Problem <br />- not only to create a Feature.”
+    </div>
+
     <div
       v-for="(textArray, idx) in textArrays"
       :key="idx"
@@ -37,9 +41,6 @@
         </span>
       </div>
     </div>
-  </div>
-  <div id="quote">
-    “Develope to solve a Problem <br />- not only to create a Feature.”
   </div>
 </template>
 
@@ -76,9 +77,7 @@ function createTextArray(text, maxLength) {
 }
 
 const maxLength = Math.max(...texts.map((text) => text.length));
-
 const textArrays = ref(texts.map((text) => createTextArray(text, maxLength)));
-
 const hasAnimated = ref(new Array(texts.length).fill(false));
 
 const animateOnce = (index) => {
@@ -114,7 +113,7 @@ const animateBottomLineNewWord = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("wheel", handleWheel);
   textArrays.value.forEach((_, index) => animateOnce(index));
   setInterval(() => {
     animateBottomLineNewWord();
@@ -122,7 +121,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
+  window.removeEventListener("wheel", handleWheel);
 });
 
 const lastScrollTop = ref(0);
@@ -140,17 +139,16 @@ const debounce = (func, wait) => {
   };
 };
 
-const handleScroll = debounce(() => {
-  const st = window.pageYOffset || document.documentElement.scrollTop;
-  if (st > lastScrollTop.value && !isAnimating.value) {
+const handleWheel = debounce((event) => {
+  if (event.deltaY > 0 && !isAnimating.value) {
+    // Überprüfen, ob nach unten gescrollt wird
     isAnimating.value = true;
     triggerSplitFlapAnimation();
     setTimeout(() => {
       isAnimating.value = false;
-    }, 1000);
+    }, 1000); // Stelle sicher, dass die Animation Zeit hat zu beenden
   }
-  lastScrollTop.value = st <= 0 ? 0 : st;
-}, 100);
+}, 200);
 
 const triggerSplitFlapAnimation = () => {
   const projectLinkCharacters = document.querySelectorAll(
@@ -297,6 +295,7 @@ html {
 .project-char {
   display: inline-block;
   perspective: 1000px;
+  
 }
 
 .project-flip {
