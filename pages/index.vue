@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div id="start">START</div>
     <div id="aboutLink">
       <nuxt-link to="about" class="custom-link">ABOUT</nuxt-link>
@@ -10,10 +10,21 @@
     <div id="projectLink">
       <nuxt-link to="projects" class="custom-link">PROJECTS</nuxt-link>
     </div>
-    <div class="mainText" @click="animate">
-      <div id="line1">
-        <span v-for="(letter, index) in textArray" :key="index"
-              :class="['char', { 'separator': letter.isSeparator, 'normal': !letter.isSeparator }]">
+    <div
+      v-for="(textArray, idx) in textArrays"
+      :key="idx"
+      class="mainText"
+      @click="() => animate(idx)"
+    >
+      <div>
+        <span
+          v-for="(letter, index) in textArray"
+          :key="index"
+          :class="[
+            'char',
+            { separator: letter.isSeparator, normal: !letter.isSeparator },
+          ]"
+        >
           {{ letter.current }}
         </span>
       </div>
@@ -21,48 +32,76 @@
   </div>
 </template>
 
-
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 
-const originalText = 'HI MY NAME IS';
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ';
+const texts = [
+  "HI MY NAME IS",
+  "JOHANNES BIESS",
+  "AND I AM ",
+  "DEVELOPER",
+  
+];
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
 
-// Hilfsfunktionen
 function getRandomChar() {
   return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
 
-const textArray = ref(originalText.split('').map(char => ({
-  target: char === ' ' ? getRandomChar() : char,
-  current: getRandomChar(),
-  isSeparator: char === ' ',
-})));
+function createTextArray(text) {
+  return text.split("").map((char) => ({
+    target: char === " " ? getRandomChar() : char,
+    current: getRandomChar(),
+    isSeparator: char === " ",
+  }));
+}
+
+const textArrays = ref(texts.map(createTextArray));
 
 // Animation steuern
-const animate = () => {
-  textArray.value.forEach((item, index) => {
+const animate = (index) => {
+  textArrays.value[index].forEach((item, idx) => {
     const step = () => {
       if (item.current !== item.target) {
         item.current = getRandomChar();
         setTimeout(step, 50);
       }
     };
-    setTimeout(step, index * 50);
+    setTimeout(step, idx * 50);
   });
 };
 
-onMounted(animate);
+onMounted(() => {
+  textArrays.value.forEach((_, index) => animate(index));
+});
 </script>
 
-
 <style scoped>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Verhindert das Scrollen */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertikale Zentrierung */
+  align-items: center; /* Horizontale Zentrierung */
+  height: 100vh; /* Volle Höhe des Bildschirms */
+  text-align: center; /* Textzentrierung */
+  position: relative;
+}
+
 #start {
   color: #171717;
   font-weight: 300;
   font-size: 2rem;
-  text-align: center;
-  margin-top: 50px;
+  position: absolute;
+  top: 20px; /* Positioniert "START" oben mittig */
+  left: 50%;
+  transform: translateX(-50%);
   font-style: normal;
   line-height: normal;
 }
@@ -71,8 +110,10 @@ onMounted(animate);
   color: #171717;
   font-weight: 700;
   font-size: 2rem;
-  text-align: center;
-  margin-top: 800px;
+  position: absolute;
+  bottom: 20px; /* Positioniert "PROJECTS" unten mittig */
+  left: 50%;
+  transform: translateX(-50%);
   font-style: normal;
   line-height: normal;
 }
@@ -140,12 +181,9 @@ onMounted(animate);
 }
 
 .mainText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 10px 0;
   font-size: 2rem;
   font-weight: 200;
-  text-align: left;
+  text-align: center; /* Zentriert den Text innerhalb der Zeilen */
 }
 </style>
