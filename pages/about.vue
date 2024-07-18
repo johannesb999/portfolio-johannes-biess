@@ -8,12 +8,16 @@
       <nuxt-link to="resume" class="custom-link">PERSONAL RESUME</nuxt-link>
     </div>
     <div class="aboutMeText">
-      <div id="line1">ABOUT ME</div>
-      <div id="line2">TEAMWORK TRUST</div>
-      <div id="line3">ORGANIZATION CLARITY</div>
-      <div id="line4">ADAPTABILITY</div>
-      <div id="line4">PUNCTUALITY FAIRNESS</div>
-      <div id="line4">CREATIVE ACCURACY</div>
+      <SplitFlapText
+        :texts="[
+          'ABOUT ME                  ',
+          'TEAMWORK   TRUST  CLARITY ',
+          'ANOTHER  ORGANISATION     ',
+          '     ADAPTABILITY         ',
+          ' PUNCTUALITY  FAIRNESS    ',
+          'CREATIVITY  ACCURACY      ',
+        ]"
+      />
     </div>
 
     <div class="picture">
@@ -26,7 +30,9 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+import SplitFlapText from "@/components/splitFlapText.vue";
+</script>
 
 <style scoped>
 main {
@@ -110,9 +116,9 @@ main {
 
 .picture {
   position: absolute;
-  top: 50%;
+  top: 50%; 
   left: 0;
-  padding-left: 20rem;
+  padding-left: 10rem;
   transform: translateY(-50%);
 }
 </style>

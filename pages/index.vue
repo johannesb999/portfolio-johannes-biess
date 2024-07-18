@@ -36,61 +36,89 @@
 import { ref, onMounted } from "vue";
 
 const texts = [
-  "HI MY NAME IS",
-  "JOHANNES BIESS",
-  "AND I AM ",
-  "DEVELOPER",
-  
+  "HI MY NAME IS   ",
+  "JOHANNES BIESS  ",
+  "AND I AM        ",
+  "DEVELOPER       ",
 ];
-const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+const newWords = ["DESIGNER", "A PROBLEMSOLVER", "PROTOTYPER", "YOUR NEXT INTERN"];
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function getRandomChar() {
   return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
 
-function createTextArray(text) {
-  return text.split("").map((char) => ({
+function createTextArray(text, maxLength) {
+  return text.padEnd(maxLength, ' ').split("").map((char) => ({
     target: char === " " ? getRandomChar() : char,
     current: getRandomChar(),
     isSeparator: char === " ",
   }));
 }
 
-const textArrays = ref(texts.map(createTextArray));
+const maxLength = Math.max(...texts.map(text => text.length)); // Ermitteln der maximalen Länge
 
-// Animation steuern
-const animate = (index) => {
-  textArrays.value[index].forEach((item, idx) => {
+const textArrays = ref(texts.map(text => createTextArray(text, maxLength)));
+
+const hasAnimated = ref(new Array(texts.length).fill(false));
+
+const animateOnce = (index) => {
+  if (!hasAnimated.value[index]) {
+    textArrays.value[index].forEach((item, idx) => {
+      const step = () => {
+        if (item.current !== item.target) {
+          item.current = getRandomChar();
+          setTimeout(step, 40);
+        }
+      };
+      setTimeout(step, idx * 40);
+    });
+    hasAnimated.value[index] = true;
+  }
+};
+
+const animateBottomLineNewWord = () => {
+  const bottomIndex = textArrays.value.length - 1;
+  const word = newWords.shift();
+  newWords.push(word);
+  textArrays.value[bottomIndex] = createTextArray(word, maxLength);
+
+  textArrays.value[bottomIndex].forEach((item, idx) => {
     const step = () => {
       if (item.current !== item.target) {
         item.current = getRandomChar();
-        setTimeout(step, 50);
+        setTimeout(step, 40);
       }
     };
-    setTimeout(step, idx * 50);
+    setTimeout(step, idx * 40);
   });
 };
 
 onMounted(() => {
-  textArrays.value.forEach((_, index) => animate(index));
+  textArrays.value.forEach((_, index) => animateOnce(index));
+  setInterval(() => {
+    animateBottomLineNewWord();
+  }, 6000);
 });
 </script>
 
+
 <style scoped>
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; /* Verhindert das Scrollen */
+  overflow: hidden;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertikale Zentrierung */
-  align-items: center; /* Horizontale Zentrierung */
-  height: 100vh; /* Volle Höhe des Bildschirms */
-  text-align: center; /* Textzentrierung */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
   position: relative;
 }
 
@@ -99,7 +127,7 @@ html, body {
   font-weight: 300;
   font-size: 2rem;
   position: absolute;
-  top: 20px; /* Positioniert "START" oben mittig */
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-style: normal;
@@ -111,7 +139,7 @@ html, body {
   font-weight: 700;
   font-size: 2rem;
   position: absolute;
-  bottom: 20px; /* Positioniert "PROJECTS" unten mittig */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-style: normal;
@@ -159,7 +187,7 @@ html, body {
 }
 
 .separator {
-  color: rgb(232, 232, 232);
+  color: rgb(239, 239, 239);
 }
 
 .normal {
@@ -184,6 +212,6 @@ html, body {
   margin: 10px 0;
   font-size: 2rem;
   font-weight: 200;
-  text-align: center; /* Zentriert den Text innerhalb der Zeilen */
+  text-align: center;
 }
 </style>
