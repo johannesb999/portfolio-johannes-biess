@@ -10,7 +10,7 @@
     <div class="aboutMeText">
       <SplitFlapText
         :texts="[
-          'ABOUT ME      VALUES      ',
+          'ABOUT ME                  ',
           'TEAMWORK   TRUST  CLARITY ',
           'ANOTHER  ORGANISATION     ',
           '     ADAPTABILITY         ',
@@ -35,14 +35,6 @@ import SplitFlapText from "@/components/splitFlapText.vue";
 </script>
 
 <style scoped>
-
-#resumeBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
 main {
   height: 90vh;
   width: 100%;
@@ -59,13 +51,11 @@ main {
 }
 
 #resumeLink {
-  color: #171717;
+  color: black;
   font-weight: 700;
   font-size: 2rem;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 800px;
   font-style: normal;
   line-height: normal;
 }
@@ -126,7 +116,7 @@ main {
 
 .picture {
   position: absolute;
-  top: 50%;
+  top: 50%; 
   left: 0;
   padding-left: 10rem;
   transform: translateY(-50%);
