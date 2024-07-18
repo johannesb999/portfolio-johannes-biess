@@ -1,6 +1,9 @@
 <template>
   <body>
     <main>
+      <div id="startLinkAbout">
+        <nuxt-link to="about" class="custom-link">START</nuxt-link>
+      </div>
       <div class="gridSquare col1"></div>
       <div class="gridSquare col3"></div>
       <div class="gridSquare col1"></div>
