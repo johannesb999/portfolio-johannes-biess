@@ -9,20 +9,47 @@
   <link rel="icon" href="/favicon.ico" />
 
   <div>
+    <header class="language-switch">
+      <button @click="switchLanguage('en')" :disabled="currentLocale === 'en'">English</button>
+      <button @click="switchLanguage('de')" :disabled="currentLocale === 'de'">Deutsch</button>
+    </header>
     <NuxtPage />
   </div>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router';
-import { ref } from 'vue';
+import { useRouter, useRoute } from "vue-router";
+import { ref, watchEffect } from "vue";
 
 const router = useRouter();
-const currentLocale = ref('en');
+const route = useRoute();
+const currentLocale = ref(route.path.startsWith('/de') ? 'de' : 'en');
+
+watchEffect(() => {
+  currentLocale.value = route.path.startsWith('/de') ? 'de' : 'en';
+});
 
 const switchLanguage = (lang) => {
+  const currentPath = route.path;
+  const pathSegments = currentPath.split("/").filter((segment) => segment);
+
+  if (lang === "de") {
+    // Von Englisch zu Deutsch
+    if (pathSegments[0] === "en") {
+      pathSegments[0] = "de";
+    } else {
+      pathSegments.unshift("de");
+    }
+  } else if (lang === "en") {
+    // Von Deutsch zu Englisch
+    if (pathSegments[0] === "de") {
+      pathSegments.shift(); // Entferne 'de' aus der URL
+    }
+  }
+
+  const newPath = `/${pathSegments.join("/")}`;
   currentLocale.value = lang;
-  router.push({ path: `/${lang}` });
+  router.push({ path: newPath });
 };
 </script>
 
@@ -38,6 +65,33 @@ html {
   padding: 0;
   height: 100%;
   overflow: hidden;
+}
+
+.language-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Sicherstellen, dass die Buttons immer im Vordergrund sind */
+}
+
+.language-switch button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #171717;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.language-switch button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.language-switch button:hover:enabled {
+  background-color: #333;
 }
 
 .page-left-enter-active,

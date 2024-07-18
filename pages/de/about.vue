@@ -2,7 +2,7 @@
   <main>
     <div id="aboutMe">ABOUT ME</div>
     <div id="startLinkAbout">
-      <nuxt-link to="/" class="custom-link">START</nuxt-link>
+      <nuxt-link to="/de/" class="custom-link">START</nuxt-link>
     </div>
     <div id="resumeLink">
       <nuxt-link to="resume" class="custom-link">PERSONAL RESUME</nuxt-link>

@@ -1,16 +1,17 @@
 <template>
   <div class="container">
+    
     <div id="start">START</div>
     <div id="aboutLink">
-      <nuxt-link to="/de/about" class="custom-link">ABOUT</nuxt-link>
+      <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>
     </div>
     <div id="contactLink">
-      <nuxt-link to="/de/contact" class="custom-link">CONTACT</nuxt-link>
+      <nuxt-link to="/de/contact" class="custom-link">KONTAKT</nuxt-link>
     </div>
     <div id="projectLink">
       <nuxt-link to="/de/projects" class="custom-link">
         <span
-          v-for="(char, index) in 'PROJECTS'.split('')"
+          v-for="(char, index) in 'PROJEKTE'.split('')"
           :key="index"
           class="project-char"
         >
@@ -19,7 +20,7 @@
       </nuxt-link>
     </div>
     <div id="quote">
-      “Develope to solve a Problem <br />- not only to create a Feature.”
+      “Entwickel, um Probleme zu lösen <br />- nicht um Features zu erschaffen.”
     </div>
 
     <div
@@ -48,18 +49,18 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const texts = [
-  "HI MY NAME IS   ",
-  "JOHANNES BIESS  ",
-  "AND I AM        ",
-  "DEVELOPER       ",
+  "HI MEIN NAME IST        ",
+  "JOHANNES BIESS          ",
+  "UND ICH BIN             ",
+  "ENTWICKLER              ",
 ];
 const newWords = [
-  "DESIGNER",
-  "A PROBLEMSOLVER",
+  "ENTWICKLER",
+  "PROBLEMLÖSER",
   "PROTOTYPER",
-  "YOUR NEXT INTERN",
+  "EUER NÄCHSTER PRAKTIKANT",
 ];
-const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÖÄÜ";
 
 function getRandomChar() {
   return alphabet[Math.floor(Math.random() * alphabet.length)];
