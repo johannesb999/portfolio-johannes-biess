@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <header>
-      <HeaderSwitch />
-    </header>
+    
     <div id="start">START</div>
     <div id="aboutLink">
       <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>

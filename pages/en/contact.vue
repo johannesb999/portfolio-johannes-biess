@@ -1,7 +1,4 @@
 <template>
-  <header>
-    <HeaderSwitch />
-  </header>
   <main>
     <div id="contact">CONTACT ME</div>
     <div id="startLinkContact">

@@ -1,7 +1,4 @@
 <template>
-  <header>
-    <HeaderSwitch />
-  </header>
   <body>
     <main>
       <div id="startLinkAbout">

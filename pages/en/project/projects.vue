@@ -1,7 +1,4 @@
 <template>
-  <header>
-    <HeaderSwitch />
-  </header>
   <main>
     <div id="project">MORE</div>
     <div id="projectLinkStart">

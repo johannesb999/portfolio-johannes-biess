@@ -1,7 +1,4 @@
 <template>
-  <header>
-    <HeaderSwitch />
-  </header>
   <main>
     <div id="aboutMe">ABOUT ME</div>
     <div id="startLinkAbout">

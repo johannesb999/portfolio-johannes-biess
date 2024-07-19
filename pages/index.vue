@@ -1,9 +1,6 @@
 <template>
   <div class="container">
-    <header>
-      <HeaderSwitch />
-    </header>
-
+      
     <div id="start">START</div>
     <div id="aboutLink">
       <nuxt-link to="/en/about" class="custom-link">ABOUT</nuxt-link>
@@ -50,10 +47,10 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
-const currentLocale = ref("en");
+const currentLocale = ref('en');
 
 const switchLanguage = (lang) => {
   currentLocale.value = lang;

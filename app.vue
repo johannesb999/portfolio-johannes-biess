@@ -9,11 +9,59 @@
   <link rel="icon" href="/favicon.ico" />
 
   <div>
+    <header class="language-switch">
+      <button @click="switchLanguage('en')" :disabled="currentLocale === 'en'">
+        EN
+      </button>
+      <div>|</div>
+      <button @click="switchLanguage('de')" :disabled="currentLocale === 'de'">
+        DE
+      </button>
+    </header>
     <NuxtPage />
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useRouter, useRoute } from "vue-router";
+import { ref, watchEffect } from "vue";
+
+const router = useRouter();
+const route = useRoute();
+const currentLocale = ref(route.path.startsWith("/de") ? "de" : "en");
+
+watchEffect(() => {
+  currentLocale.value = route.path.startsWith("/de") ? "de" : "en";
+});
+
+const switchLanguage = (lang) => {
+  const currentPath = route.path;
+  let newPath = "";
+
+  if (currentPath === "/" && lang === "de") {
+    newPath = "/de";
+  } else if (currentPath === "/de" && lang === "en") {
+    newPath = "/";
+  } else {
+    // Allgemeine Behandlung für den Wechsel von spezifischen Seiten
+    const pathWithoutLocale = currentPath.replace(/^\/(de|en)\//, "/");
+    if (lang === "de") {
+      newPath = pathWithoutLocale.startsWith("/")
+        ? `/de${pathWithoutLocale}`
+        : `/de/${pathWithoutLocale}`;
+    } else {
+      newPath = pathWithoutLocale.startsWith("/")
+        ? `/en${pathWithoutLocale}`
+        : `/en/${pathWithoutLocale}`;
+    }
+  }
+
+  if (newPath) {
+    router.push(newPath);
+    currentLocale.value = lang;
+  }
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
@@ -27,6 +75,37 @@ html {
   padding: 0;
   height: 100%;
   overflow: hidden;
+}
+
+.language-switch {
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.language-switch button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #9e9e9e;
+  border: none;
+  font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
+.language-switch button:disabled {
+  color: #171717;
+  cursor: default;
+}
+
+.language-switch button:not(:disabled):hover {
+  color: #171717;
 }
 
 .page-left-enter-active,
@@ -75,5 +154,15 @@ html {
 .page-up-enter-to,
 .page-down-enter-to {
   transform: translateX(0) translateY(0);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.4s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }
 </style>
