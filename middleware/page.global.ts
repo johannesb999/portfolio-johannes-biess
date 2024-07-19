@@ -1,11 +1,9 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const getDepth = (path: string) => {
-    return path.split("/").filter((seg) => seg.length > 0).length;
+  const getDepth = (path: any) => {
+    return path.split("/").filter((seg: any) => seg.length > 0).length;
   };
 
-  const checkSpecialRoutes = (
-    path: string
-  ): "contact" | "about" | "project-resume" | "resume" | null => {
+  const checkSpecialRoutes = (path: any) => {
     if (path.includes("/contact")) {
       return "contact";
     } else if (path.includes("/about")) {
@@ -27,7 +25,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     "goEase",
   ];
 
-  const getPageName = (path: string) => {
+  const getPageName = (path: any) => {
     const segments = path.split("/");
     return segments.pop() || "index";
   };
@@ -46,7 +44,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
   const languageChanged = fromLang && toLang && fromLang[1] !== toLang[1];
 
   if (languageChanged) {
-    // Wende die "fade" Transition an, wenn sich die Sprache ändert
     to.meta.pageTransition = { name: "fade" };
     from.meta.pageTransition = { name: "fade" };
     return;
