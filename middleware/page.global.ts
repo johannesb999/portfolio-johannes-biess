@@ -41,6 +41,18 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
   const movingInProjectPages = fromIndex !== -1 && toIndex !== -1;
 
+  const fromLang = from.path.match(/\/(de|en)\//);
+  const toLang = to.path.match(/\/(de|en)\//);
+  const languageChanged = fromLang && toLang && fromLang[1] !== toLang[1];
+
+  if (languageChanged) {
+    // Wende die "fade" Transition an, wenn sich die Sprache ändert
+    to.meta.pageTransition = { name: "fade" };
+    from.meta.pageTransition = { name: "fade" };
+    return;
+  }
+
+  // Überprüfe die anderen speziellen Übergänge, wenn keine Sprachänderung vorliegt
   if (movingInProjectPages) {
     const lastIndex = projectPages.length - 1;
     const forward =
