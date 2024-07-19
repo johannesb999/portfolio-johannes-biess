@@ -46,6 +46,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
   if (languageChanged) {
     to.meta.pageTransition = { name: "fade" };
     from.meta.pageTransition = { name: "fade" };
+    console.log("Transition name: fade");
     return;
   }
 
@@ -62,25 +63,30 @@ export default defineNuxtRouteMiddleware((to, from) => {
     if (forward) {
       to.meta.pageTransition = { name: "page-left" };
       from.meta.pageTransition = { name: "page-left" };
+      console.log("Transition name: page-left");
     } else if (backward) {
       to.meta.pageTransition = { name: "page-right" };
       from.meta.pageTransition = { name: "page-right" };
+      console.log("Transition name: page-right");
     }
   } else if (
     toSpecial === "project-resume" &&
     fromSpecial !== "project-resume"
   ) {
-    to.meta.pageTransition = { name: "page-down" };
-    from.meta.pageTransition = { name: "page-down" };
+    to.meta.pageTransition = { name: "page-up" };
+    from.meta.pageTransition = { name: "page-up" };
+    console.log("Transition name: page-up");
   } else if (
     fromSpecial === "project-resume" &&
     toSpecial !== "project-resume"
   ) {
-    to.meta.pageTransition = { name: "page-up" };
-    from.meta.pageTransition = { name: "page-up" };
+    to.meta.pageTransition = { name: "page-down" };
+    from.meta.pageTransition = { name: "page-down" };
+    console.log("Transition name: page-down");
   } else if (fromSpecial === "resume" && toSpecial === "about") {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
+    console.log("Transition name: page-up");
   } else if (
     toSpecial === "contact" ||
     fromSpecial === "contact" ||
@@ -101,9 +107,11 @@ export default defineNuxtRouteMiddleware((to, from) => {
     from.meta.pageTransition = {
       name: toDepth > fromDepth ? reverseTransition : normalTransition,
     };
+    console.log("Transition name:", to.meta.pageTransition.name);
   } else {
     // Standard-Transition, wenn keine anderen Bedingungen zutreffen
     to.meta.pageTransition = { name: "fade" };
     from.meta.pageTransition = { name: "fade" };
+    console.log("Transition name: fade");
   }
 });
