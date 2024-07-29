@@ -120,8 +120,9 @@ html {
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   transition: transform 700ms cubic-bezier(0.77, 0, 0.175, 1),
-    box-shadow 700ms cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow 500ms cubic-bezier(0.77, 0, 0.175, 1);
   z-index: 100;
   width: 100%;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0);
@@ -179,17 +180,12 @@ html {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
 }
 
-.page-content {
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease-out;
+}
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
-  animation: fadeInContent 3s ease forwards;
-  animation-delay: 0.7s;
 }
-
-@keyframes fadeInContent {
-  to {
-    opacity: 1;
-  }
-}
-
-
 </style>

@@ -20,7 +20,7 @@
       </nuxt-link>
     </div>
     <div id="quote">
-      “Entwickel, um Probleme zu lösen <br />- nicht um Features zu erschaffen.”
+      “Entwickel, um Probleme zu lösen <br />- nicht nur um Features zu erschaffen.”
     </div>
 
     <div

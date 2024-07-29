@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div id="project">MORE</div>
+    <div id="project">MEHR</div>
     <div id="projectLinkStart">
       <nuxt-link to="/de" class="custom-link">Start</nuxt-link>
     </div>

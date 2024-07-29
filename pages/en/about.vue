@@ -35,7 +35,6 @@ import SplitFlapText from "@/components/splitFlapText.vue";
 </script>
 
 <style scoped>
-
 #resumeBar {
   position: absolute;
   bottom: 0;
@@ -44,7 +43,7 @@ import SplitFlapText from "@/components/splitFlapText.vue";
 }
 
 main {
-  height: 90vh;
+  height: 100%;
   width: 100%;
 }
 

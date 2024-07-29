@@ -29,10 +29,13 @@
   <style scoped>
   #project {
     color: black;
-    font-weight: 300;
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 900px;
+  font-weight: 300;
+  font-size: 2rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   }
   
   #projectLinkStart {

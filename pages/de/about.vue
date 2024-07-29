@@ -42,7 +42,7 @@ import SplitFlapText from "@/components/splitFlapText.vue";
 }
 
 main {
-  height: 90vh;
+  height: 100%;
   width: 100%;
 }
 

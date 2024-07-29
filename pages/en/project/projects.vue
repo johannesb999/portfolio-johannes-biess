@@ -2,17 +2,19 @@
   <main>
     <div id="project">MORE</div>
     <div id="projectLinkStart">
-      <nuxt-link to="/" class="custom-link">Start</nuxt-link>
+      <nuxt-link to="/" class="custom-link">START</nuxt-link>
     </div>
     <div id="projectLinkNext">
-      <nuxt-link to="/en/project/jumpStar" class="custom-link">JumpStar</nuxt-link>
+      <nuxt-link to="/en/project/jumpStar" class="custom-link"
+        >JUMPSTAR</nuxt-link
+      >
     </div>
-    <div id="projectLinkBefore">  
-      <nuxt-link to="/en/project/goEase" class="custom-link">GoEase</nuxt-link>
+    <div id="projectLinkBefore">
+      <nuxt-link to="/en/project/goEase" class="custom-link">GOEASE</nuxt-link>
     </div>
 
     <div class="projectText">
-      <div id="line1">PlantMonit</div>
+      <div id="line1">PLANTMONIT</div>
     </div>
     <div class="picture">
       <img
@@ -32,7 +34,10 @@
   font-weight: 300;
   font-size: 2rem;
   text-align: center;
-  margin-top: 900px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #projectLinkStart {
