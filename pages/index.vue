@@ -1,56 +1,57 @@
 <template>
-  <div class="container">
-      
-    <div id="start">START</div>
-    <div id="aboutLink">
-      <nuxt-link to="/en/about" class="custom-link">ABOUT</nuxt-link>
-    </div>
-    <div id="contactLink">
-      <nuxt-link to="/en/contact" class="custom-link">CONTACT</nuxt-link>
-    </div>
-    <div id="projectLink">
-      <nuxt-link to="/en/project/projects" class="custom-link">
-        <span
-          v-for="(char, index) in 'PROJECTS'.split('')"
-          :key="index"
-          class="project-char"
-        >
-          {{ char }}
-        </span>
-      </nuxt-link>
-    </div>
-    <div id="quote">
-      “Develop to solve a Problem <br />- not only to create a Feature.”
-    </div>
+  <html>
+    <div class="container">
+      <div id="start">START</div>
+      <div id="aboutLink">
+        <nuxt-link to="/en/about" class="custom-link">ABOUT</nuxt-link>
+      </div>
+      <div id="contactLink">
+        <nuxt-link to="/en/contact" class="custom-link">CONTACT</nuxt-link>
+      </div>
+      <div id="projectLink">
+        <nuxt-link to="/en/project/projects" class="custom-link">
+          <span
+            v-for="(char, index) in 'PROJECTS'.split('')"
+            :key="index"
+            class="project-char"
+          >
+            {{ char }}
+          </span>
+        </nuxt-link>
+      </div>
+      <div id="quote">
+        “Develop to solve a Problem <br />- not only to create a Feature.”
+      </div>
 
-    <div
-      v-for="(textArray, idx) in textArrays"
-      :key="idx"
-      class="mainText"
-      @click="() => animate(idx)"
-    >
-      <div>
-        <span
-          v-for="(letter, index) in textArray"
-          :key="index"
-          :class="[
-            'char',
-            { separator: letter.isSeparator, normal: !letter.isSeparator },
-          ]"
-        >
-          {{ letter.current }}
-        </span>
+      <div
+        v-for="(textArray, idx) in textArrays"
+        :key="idx"
+        class="mainText"
+        @click="() => animate(idx)"
+      >
+        <div>
+          <span
+            v-for="(letter, index) in textArray"
+            :key="index"
+            :class="[
+              'char',
+              { separator: letter.isSeparator, normal: !letter.isSeparator },
+            ]"
+          >
+            {{ letter.current }}
+          </span>
+        </div>
       </div>
     </div>
-  </div>
+  </html>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
 const router = useRouter();
-const currentLocale = ref('en');
+const currentLocale = ref("en");
 
 const switchLanguage = (lang) => {
   currentLocale.value = lang;

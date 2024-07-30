@@ -1,34 +1,25 @@
 <template>
-  <html>
-    <main>
-      <div id="aboutMe">ÜBER MICH</div>
-      <div id="startLinkAbout">
-        <nuxt-link to="/de" class="custom-link">START</nuxt-link>
-      </div>
-      <div id="resumeLink">
-        <nuxt-link to="resume" class="custom-link">LEBENSLAUF</nuxt-link>
-      </div>
-      <div class="aboutMeText">
-        <SplitFlapText
-          :texts="[
-            'ÜBER MICH      WERTE      ',
-            'TEAMWORK  VERTRAUEN       ',
-            '  ANPASSUNGSFÄHIGKEIT     ',
-            ' PÜNKTLICHKEIT FAIRNESS   ',
-            'KREATIVITÄT  GENAUIGKEIT  ',
-          ]"
-        />
-      </div>
+  <main>
+    <div id="resumeLinkHfg">
+      <nuxt-link to="/en/resume" class="custom-link"
+        >Curriculum vitae</nuxt-link
+      >
+    </div>
 
-      <div class="picture">
-        <img
-          style="border-radius: 10px"
-          src="https://via.placeholder.com/220x380"
-          alt="profilpicture"
-        />
-      </div>
-    </main>
-  </html>
+    <div class="hfgText">
+      <SplitFlapText
+        :texts="[
+          'INTERNSHIP      LEARNINGS      ',
+          'FIGMA   UX        UI    ',
+          'PROTOTYPING  USABILITY  ',
+          '     DESIGNTHINKING         ',
+          ' USER CENTERED  LEANDESIGN    ',
+          'FULLSTACK DEVELOPMENT   ',
+        ]"
+      />
+    </div>
+    <div>what i hope to learn usw quasi bewerbungsschreiben</div>
+  </main>
 </template>
 
 <script setup>
@@ -40,6 +31,7 @@ import SplitFlapText from "@/components/splitFlapText.vue";
   position: absolute;
   bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
 }
 
@@ -48,7 +40,7 @@ main {
   width: 100%;
 }
 
-#aboutMe {
+#hfg {
   color: black;
   font-weight: 300;
   font-size: 2rem;
@@ -56,7 +48,6 @@ main {
   margin-top: 50px;
   font-style: normal;
   line-height: normal;
-
 }
 
 #resumeLink {
@@ -71,17 +62,19 @@ main {
   line-height: normal;
 }
 
-#startLinkAbout {
+#resumeLinkHfg {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
   font-weight: 700;
+  left: 0;
+  padding-left: 20px;
 }
 
-#startLinkAbout {
-  right: 0;
-  padding-right: 20px;
+#resumeLinkHfg {
+  left: 0;
+  padding-left: 20px;
 }
 
 .custom-link {
@@ -94,7 +87,7 @@ main {
   text-decoration: underline;
 }
 
-.aboutMeText {
+.hfgText {
   display: flex;
   flex-direction: column;
   position: absolute;

@@ -43,7 +43,6 @@ const switchLanguage = (lang) => {
   } else if (currentPath === "/de" && lang === "en") {
     newPath = "/";
   } else {
-    // Allgemeine Behandlung für den Wechsel von spezifischen Seiten
     const pathWithoutLocale = currentPath.replace(/^\/(de|en)\//, "/");
     if (lang === "de") {
       newPath = pathWithoutLocale.startsWith("/")
@@ -74,7 +73,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+  letter-spacing: 2px;
 }
 
 .language-switch {

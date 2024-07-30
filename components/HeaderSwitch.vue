@@ -10,10 +10,6 @@
     </button>
   </div>
 
-
-
-
-  
   <header>
     <HeaderSwitch />
   </header>
@@ -83,5 +79,14 @@ const switchLanguage = (lang) => {
 
 .language-switch button:not(:disabled):hover {
   color: #171717;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease-out;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

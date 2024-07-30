@@ -1,48 +1,50 @@
 <template>
-  <div class="container">
-    
-    <div id="start">START</div>
-    <div id="aboutLink">
-      <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>
-    </div>
-    <div id="contactLink">
-      <nuxt-link to="/de/contact" class="custom-link">KONTAKT</nuxt-link>
-    </div>
-    <div id="projectLink">
-      <nuxt-link to="/de/project/projects" class="custom-link">
-        <span
-          v-for="(char, index) in 'PROJEKTE'.split('')"
-          :key="index"
-          class="project-char"
-        >
-          {{ char }}
-        </span>
-      </nuxt-link>
-    </div>
-    <div id="quote">
-      “Entwickel, um Probleme zu lösen <br />- nicht nur um Features zu erschaffen.”
-    </div>
+  <html>
+    <div class="container">
+      <div id="start">START</div>
+      <div id="aboutLink">
+        <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>
+      </div>
+      <div id="contactLink">
+        <nuxt-link to="/de/contact" class="custom-link">KONTAKT</nuxt-link>
+      </div>
+      <div id="projectLink">
+        <nuxt-link to="/de/project/projects" class="custom-link">
+          <span
+            v-for="(char, index) in 'PROJEKTE'.split('')"
+            :key="index"
+            class="project-char"
+          >
+            {{ char }}
+          </span>
+        </nuxt-link>
+      </div>
+      <div id="quote">
+        “Entwickel, um Probleme zu lösen <br />- nicht nur um Features zu
+        erschaffen.”
+      </div>
 
-    <div
-      v-for="(textArray, idx) in textArrays"
-      :key="idx"
-      class="mainText"
-      @click="() => animate(idx)"
-    >
-      <div>
-        <span
-          v-for="(letter, index) in textArray"
-          :key="index"
-          :class="[
-            'char',
-            { separator: letter.isSeparator, normal: !letter.isSeparator },
-          ]"
-        >
-          {{ letter.current }}
-        </span>
+      <div
+        v-for="(textArray, idx) in textArrays"
+        :key="idx"
+        class="mainText"
+        @click="() => animate(idx)"
+      >
+        <div>
+          <span
+            v-for="(letter, index) in textArray"
+            :key="index"
+            :class="[
+              'char',
+              { separator: letter.isSeparator, normal: !letter.isSeparator },
+            ]"
+          >
+            {{ letter.current }}
+          </span>
+        </div>
       </div>
     </div>
-  </div>
+  </html>
 </template>
 
 <script setup>
@@ -296,7 +298,6 @@ html {
 .project-char {
   display: inline-block;
   perspective: 1000px;
-  
 }
 
 .project-flip {
