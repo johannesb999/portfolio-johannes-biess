@@ -1,34 +1,48 @@
 <template>
-  <main>
-    <div id="project">MORE</div>
-    <div id="projectLinkStart">
-      <nuxt-link to="/" class="custom-link">START</nuxt-link>
-    </div>
-    <div id="projectLinkNext">
-      <nuxt-link to="/en/project/jumpStar" class="custom-link"
-        >JUMPSTAR</nuxt-link
-      >
-    </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="/en/project/goEase" class="custom-link">GOEASE</nuxt-link>
-    </div>
+  <html>
+    <main>
+      <div id="project">MORE</div>
+      <div id="projectLinkStart">
+        <nuxt-link to="/" class="custom-link">START</nuxt-link>
+      </div>
+      <div id="projectLinkNext">
+        <nuxt-link to="/en/project/jumpStar" class="custom-link"
+          >JUMPSTAR</nuxt-link
+        >
+      </div>
+      <div id="projectLinkBefore">
+        <nuxt-link to="/en/project/goEase" class="custom-link"
+          >GOEASE</nuxt-link
+        >
+      </div>
 
-    <div class="projectText">
-      <div id="line1">PLANTMONIT</div>
-    </div>
-    <div class="picture">
-      <img
-        style="padding: 50px"
-        src="https://via.placeholder.com/550x300"
-        alt="plantmonit"
-      />
-    </div>
-  </main>
+      <div class="projectText">
+        <div id="line1">PLANTMONIT</div>
+      </div>
+      <div class="picture">
+        <img
+          style="padding: 50px"
+          src="https://via.placeholder.com/550x300"
+          alt="plantmonit"
+        />
+      </div>
+    </main>
+  </html>
 </template>
 
 <script setup></script>
 
 <style scoped>
+html {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
 #project {
   color: black;
   font-weight: 300;

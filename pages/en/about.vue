@@ -38,11 +38,13 @@ import SplitFlapText from "@/components/splitFlapText.vue";
 
 <style scoped>
 html {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100%;
+  width: 100%;
 }
 
 #resumeBar {
@@ -51,12 +53,6 @@ html {
   left: 0;
   width: 100%;
 }
-
-main {
-  height: 100%;
-  width: 100%;
-}
-
 #aboutMe {
   color: black;
   font-weight: 300;

@@ -1,9 +1,9 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const getDepth = (path: any) => {
-    return path.split("/").filter((seg: any) => seg.length > 0).length;
+  const getDepth = (path) => {
+    return path.split("/").filter((seg) => seg.length > 0).length;
   };
 
-  const checkSpecialRoutes = (path: any) => {
+  const checkSpecialRoutes = (path) => {
     if (path.includes("/contact")) {
       return "contact";
     } else if (path.includes("/about")) {
@@ -16,15 +16,15 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return null;
   };
 
-  const checkKeywords = (path: any) => {
+  const checkKeywords = (path) => {
     if (
       path.includes("bosch") ||
       path.includes("hfg") ||
       path.includes("dtack")
     ) {
-      return "right";
-    } else if (path.includes("kbsz") || path.includes("internship")) {
       return "left";
+    } else if (path.includes("kbsz") || path.includes("internship")) {
+      return "right";
     }
     return null;
   };
@@ -38,7 +38,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     "goEase",
   ];
 
-  const getPageName = (path: any) => {
+  const getPageName = (path) => {
     const segments = path.split("/");
     return segments.pop() || "index";
   };

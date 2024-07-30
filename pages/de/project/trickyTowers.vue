@@ -1,4 +1,5 @@
 <template>
+    <html>
     <main>
       <div id="project">MEHR</div>
       <div id="projectLinkStart">
@@ -22,11 +23,22 @@
         />
       </div>
     </main>
+    </html>
   </template>
   
   <script setup></script>
   
   <style scoped>
+  html {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+  }
   #project {
     color: black;
     font-weight: 300;

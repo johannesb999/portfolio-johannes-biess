@@ -73,7 +73,9 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
   letter-spacing: 2px;
+  overflow: hidden;
 }
 
 .language-switch {
@@ -182,11 +184,9 @@ html {
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.6s ease-out;
-  
 }
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
-    
 }
 </style>
