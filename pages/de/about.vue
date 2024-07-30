@@ -36,6 +36,13 @@ import SplitFlapText from "@/components/splitFlapText.vue";
 </script>
 
 <style scoped>
+html {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 #resumeBar {
   position: absolute;
   bottom: 0;
@@ -56,7 +63,6 @@ main {
   margin-top: 50px;
   font-style: normal;
   line-height: normal;
-
 }
 
 #resumeLink {

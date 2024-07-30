@@ -9,6 +9,7 @@
   <link rel="icon" href="/favicon.ico" />
 
   <div>
+    <NuxtPage />
     <header class="language-switch">
       <button @click="switchLanguage('en')" :disabled="currentLocale === 'en'">
         EN
@@ -18,7 +19,6 @@
         DE
       </button>
     </header>
-    <NuxtPage />
   </div>
 </template>
 
@@ -181,10 +181,12 @@ html {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.4s ease-out;
+  transition: opacity 0.6s ease-out;
+  
 }
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+    
 }
 </style>

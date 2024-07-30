@@ -20,7 +20,7 @@
             <NuxtLink to="/en/cv/internship" class="content">
               <h2>Hopefully Your Company!</h2>
               <p>Internship</p>
-              <p class="location">open for everywhere</p> 
+              <p class="location">open for everywhere</p>
             </NuxtLink>
             <div class="date">
               <h3>2025</h3>
@@ -67,6 +67,14 @@
 <script setup></script>
 
 <style scoped>
+html {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+
+
 #projectLinkStart {
   position: absolute;
   top: 0;

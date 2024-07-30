@@ -1,33 +1,35 @@
 <template>
-  <main>
-    <div id="aboutMe">ABOUT ME</div>
-    <div id="startLinkAbout">
-      <nuxt-link to="/" class="custom-link">START</nuxt-link>
-    </div>
-    <div id="resumeLink">
-      <nuxt-link to="resume" class="custom-link">PERSONAL RESUME</nuxt-link>
-    </div>
-    <div class="aboutMeText">
-      <SplitFlapText
-        :texts="[
-          'ABOUT ME      VALUES      ',
-          'TEAMWORK   TRUST  CLARITY ',
-          'ANOTHER  ORGANISATION     ',
-          '     ADAPTABILITY         ',
-          ' PUNCTUALITY  FAIRNESS    ',
-          'CREATIVITY  ACCURACY      ',
-        ]"
-      />
-    </div>
+  <html>
+    <main>
+      <div id="aboutMe">ABOUT ME</div>
+      <div id="startLinkAbout">
+        <nuxt-link to="/" class="custom-link">START</nuxt-link>
+      </div>
+      <div id="resumeLink">
+        <nuxt-link to="resume" class="custom-link">PERSONAL RESUME</nuxt-link>
+      </div>
+      <div class="aboutMeText">
+        <SplitFlapText
+          :texts="[
+            'ABOUT ME      VALUES      ',
+            'TEAMWORK   TRUST  CLARITY ',
+            'ANOTHER  ORGANISATION     ',
+            '     ADAPTABILITY         ',
+            ' PUNCTUALITY  FAIRNESS    ',
+            'CREATIVITY  ACCURACY      ',
+          ]"
+        />
+      </div>
 
-    <div class="picture">
-      <img
-        style="border-radius: 10px"
-        src="https://via.placeholder.com/220x380"
-        alt="profilpicture"
-      />
-    </div>
-  </main>
+      <div class="picture">
+        <img
+          style="border-radius: 10px"
+          src="https://via.placeholder.com/220x380"
+          alt="profilpicture"
+        />
+      </div>
+    </main>
+  </html>
 </template>
 
 <script setup>
@@ -35,6 +37,14 @@ import SplitFlapText from "@/components/splitFlapText.vue";
 </script>
 
 <style scoped>
+html {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 #resumeBar {
   position: absolute;
   bottom: 0;

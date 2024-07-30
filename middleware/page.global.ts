@@ -16,6 +16,19 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return null;
   };
 
+  const checkKeywords = (path: any) => {
+    if (
+      path.includes("bosch") ||
+      path.includes("hfg") ||
+      path.includes("dtack")
+    ) {
+      return "right";
+    } else if (path.includes("kbsz") || path.includes("internship")) {
+      return "left";
+    }
+    return null;
+  };
+
   const projectPages = [
     "projects",
     "jumpStar",
@@ -36,6 +49,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
   const fromDepth = getDepth(from.path);
   const toSpecial = checkSpecialRoutes(to.path);
   const fromSpecial = checkSpecialRoutes(from.path);
+  const toKeyword = checkKeywords(to.path);
+  const fromKeyword = checkKeywords(from.path);
 
   const movingInProjectPages = fromIndex !== -1 && toIndex !== -1;
 
@@ -50,7 +65,26 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return;
   }
 
-  // Überprüfe die anderen speziellen Übergänge, wenn keine Sprachänderung vorliegt
+  // Prüfen, ob von einer Seite mit bestimmten Keywords auf die resume-Seite gewechselt wird
+  if (
+    to.path.includes("/resume") &&
+    (fromKeyword || fromSpecial === "project-resume")
+  ) {
+    const transitionName = fromKeyword === "left" ? "page-right" : "page-left";
+    to.meta.pageTransition = { name: transitionName };
+    from.meta.pageTransition = { name: transitionName };
+    console.log("Transition name:", transitionName);
+    return;
+  }
+
+  if (toKeyword) {
+    const transitionName = toKeyword === "left" ? "page-left" : "page-right";
+    to.meta.pageTransition = { name: transitionName };
+    from.meta.pageTransition = { name: transitionName };
+    console.log("Transition name:", transitionName);
+    return;
+  }
+
   if (movingInProjectPages) {
     const lastIndex = projectPages.length - 1;
     const forward =
@@ -109,7 +143,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
     };
     console.log("Transition name:", to.meta.pageTransition.name);
   } else {
-    // Standard-Transition, wenn keine anderen Bedingungen zutreffen
     to.meta.pageTransition = { name: "fade" };
     from.meta.pageTransition = { name: "fade" };
     console.log("Transition name: fade");
