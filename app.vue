@@ -88,34 +88,37 @@ html {
   text-decoration: none;
   position: absolute;
   top: 50px;
-  left: 100px;
+  left: 2%;
   z-index: 100;
-
+  background-color: #fbfbfb;
 }
 
 .language-switch {
   position: absolute;
   top: 50px;
-  right: 100px;
+  right: 3%;
   display: flex;
   align-items: center;
   z-index: 100;
+  background-color: #fbfbfb;
 }
 
 #en {
   font-weight: 100;
   font-size: 1.75rem;
+  background-color: #fbfbfb;
 }
 
 #de {
   font-weight: 100;
   font-size: 1.75rem;
+  background-color: #fbfbfb;
 }
 
 .language-switch button {
   margin: 0 5px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #fbfbfb;
   color: #dadada;
   border: none;
   line-height: 1rem;

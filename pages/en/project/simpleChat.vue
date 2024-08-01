@@ -1,125 +1,50 @@
 <template>
   <html>
-  <main>
-    <div id="project">MORE</div>
-    <div id="projectLinkStart">
-      <nuxt-link to="/" class="custom-link">START</nuxt-link>
-    </div>
-    <div id="projectLinkNext">
-      <nuxt-link to="/en/project/drawingLight" class="custom-link"
-        >DRAWINGLIGHT</nuxt-link
-      >
-    </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="/en/project/jumpStar" class="custom-link"
-        >JUMPSTAR</nuxt-link
-      >
-    </div>
+    <main>
+      <div id="projectLinkStart">
+        <nuxt-link to="/" class="custom-link">START</nuxt-link>
+      </div>
+      <div id="projectLinkNext">
+        <nuxt-link to="/en/project/drawingLight" class="custom-link"
+          >DRAWINGLIGHT
+        </nuxt-link>
+      </div>
+      <div id="projectLinkBefore">
+        <nuxt-link to="/en/project/jumpStar" class="custom-link"
+          >JUMPSTAR
+        </nuxt-link>
+      </div>
 
-    <div class="projectText">
-      <div id="line1">SIMPLECHAT</div>
-    </div>
-    <div class="picture">
-      <img
-        style="padding: 50px"
-        src="https://via.placeholder.com/550x300"
-        alt="plantmonit"
-      />
-    </div>
-  </main>
+      <div class="projectFlap">
+        <SplitFlapText
+          :texts="[
+            'ABOUT ME      VALUES      ',
+            'TEAMWORK   TRUST  CLARITY ',
+            'ANOTHER  ORGANISATION     ',
+            '     ADAPTABILITY         ',
+            ' PUNCTUALITY  FAIRNESS    ',
+            'CREATIVITY  ACCURACY      ',
+          ]"
+        />
+      </div>
+
+      <div class="projectText">
+        <div id="line1">SIMPLECHAT</div>
+      </div>
+      <div class="picture">
+        <img
+          style="border: 1px solid black; border-radius: 10px"
+          src="https://via.placeholder.com/500x500"
+          alt="plantmonit"
+        />
+      </div>
+      <NuxtLink to="/en/project/details/SimpleChat" class="detailsLink"
+        >DETAILS
+      </NuxtLink>
+    </main>
   </html>
 </template>
 
 <script setup></script>
 
-<style scoped>
-html {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-}
-#project {
-  color: black;
-  font-weight: 300;
-  font-size: 2rem;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#projectLinkStart {
-  position: absolute;
-  top: 0;
-  padding-top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-#projectLinkNext {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  padding-right: 20px;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-#projectLinkBefore {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  padding-left: 20px;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.custom-link {
-  color: black;
-  text-decoration: none;
-}
-
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
-
-.projectText {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: 200;
-  text-align: left;
-
-  #line1 {
-    font-weight: 700;
-  }
-}
-
-.picture {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: 200;
-  text-align: left;
-}
-</style>
+<style src="assets/project.css" scoped></style>
