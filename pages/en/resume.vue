@@ -60,6 +60,8 @@
           <div style="clear: both"></div>
         </ul>
       </div>
+
+      <div id="title">CURICULUM VITAE</div>
     </main>
   </html>
 </template>
@@ -73,7 +75,19 @@ html {
   right: 0;
   height: 100%;
   width: 100%;
-  overflow: scroll;
+  overflow-y: auto; 
+}
+
+#title {
+  color: black;
+  font-weight: 300;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  padding-bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #projectLinkStart {

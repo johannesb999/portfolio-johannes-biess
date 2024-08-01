@@ -1,7 +1,6 @@
 <template>
   <html>
     <main>
-      <div id="project">MORE</div>
       <div id="projectLinkStart">
         <nuxt-link to="/" class="custom-link">START</nuxt-link>
       </div>
@@ -26,6 +25,7 @@
           alt="plantmonit"
         />
       </div>
+      <div id="title">PROJECTS</div>
     </main>
   </html>
 </template>
@@ -41,9 +41,9 @@ html {
   bottom: 0;
   height: 100%;
   width: 100%;
-  overflow: scroll;
+  overflow-y: auto; 
 }
-#project {
+#title {
   color: black;
   font-weight: 300;
   font-size: 2rem;

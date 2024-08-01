@@ -1,9 +1,9 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const getDepth = (path) => {
-    return path.split("/").filter((seg) => seg.length > 0).length;
+  const getDepth = (path: any) => {
+    return path.split("/").filter((seg: any) => seg.length > 0).length;
   };
 
-  const checkSpecialRoutes = (path) => {
+  const checkSpecialRoutes = (path: any) => {
     if (path.includes("/contact")) {
       return "contact";
     } else if (path.includes("/about")) {
@@ -16,15 +16,15 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return null;
   };
 
-  const checkKeywords = (path) => {
+  const checkKeywords = (path: any) => {
     if (
       path.includes("bosch") ||
       path.includes("hfg") ||
       path.includes("dtack")
     ) {
-      return "left";
-    } else if (path.includes("kbsz") || path.includes("internship")) {
       return "right";
+    } else if (path.includes("kbsz") || path.includes("internship")) {
+      return "left";
     }
     return null;
   };
@@ -38,7 +38,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     "goEase",
   ];
 
-  const getPageName = (path) => {
+  const getPageName = (path: any) => {
     const segments = path.split("/");
     return segments.pop() || "index";
   };
@@ -58,6 +58,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
   const toLang = to.path.match(/\/(de|en)\//);
   const languageChanged = fromLang && toLang && fromLang[1] !== toLang[1];
 
+  // 1. Priorität: Sprachwechsel
   if (languageChanged) {
     to.meta.pageTransition = { name: "fade" };
     from.meta.pageTransition = { name: "fade" };
@@ -65,18 +66,19 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return;
   }
 
-  // Prüfen, ob von einer Seite mit bestimmten Keywords auf die resume-Seite gewechselt wird
-  if (
-    to.path.includes("/resume") &&
-    (fromKeyword || fromSpecial === "project-resume")
-  ) {
-    const transitionName = fromKeyword === "left" ? "page-right" : "page-left";
-    to.meta.pageTransition = { name: transitionName };
-    from.meta.pageTransition = { name: transitionName };
-    console.log("Transition name:", transitionName);
-    return;
+  // 2. Priorität: Wechsel auf die /resume-Seite von speziellen Routen oder Keywords
+  if (to.path.includes("/resume")) {
+    if (fromKeyword || fromSpecial === "project-resume") {
+      const transitionName =
+        fromKeyword === "left" ? "page-right" : "page-left";
+      to.meta.pageTransition = { name: transitionName };
+      from.meta.pageTransition = { name: transitionName };
+      console.log("Transition name:", transitionName);
+      return;
+    }
   }
 
+  // 3. Priorität: Wechsel zwischen Routen mit speziellen Keywords
   if (toKeyword) {
     const transitionName = toKeyword === "left" ? "page-left" : "page-right";
     to.meta.pageTransition = { name: transitionName };
@@ -85,6 +87,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return;
   }
 
+  // 4. Priorität: Wechsel innerhalb der Projektseiten
   if (movingInProjectPages) {
     const lastIndex = projectPages.length - 1;
     const forward =
@@ -103,13 +106,15 @@ export default defineNuxtRouteMiddleware((to, from) => {
       from.meta.pageTransition = { name: "page-right" };
       console.log("Transition name: page-right");
     }
-  } else if (
-    toSpecial === "project-resume" &&
-    fromSpecial !== "project-resume"
-  ) {
+    return;
+  }
+
+  // 5. Priorität: Wechsel zwischen speziellen Routen
+  if (toSpecial === "project-resume" && fromSpecial !== "project-resume") {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
     console.log("Transition name: page-up");
+    return;
   } else if (
     fromSpecial === "project-resume" &&
     toSpecial !== "project-resume"
@@ -117,10 +122,12 @@ export default defineNuxtRouteMiddleware((to, from) => {
     to.meta.pageTransition = { name: "page-down" };
     from.meta.pageTransition = { name: "page-down" };
     console.log("Transition name: page-down");
+    return;
   } else if (fromSpecial === "resume" && toSpecial === "about") {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
     console.log("Transition name: page-up");
+    return;
   } else if (
     toSpecial === "contact" ||
     fromSpecial === "contact" ||
@@ -142,9 +149,11 @@ export default defineNuxtRouteMiddleware((to, from) => {
       name: toDepth > fromDepth ? reverseTransition : normalTransition,
     };
     console.log("Transition name:", to.meta.pageTransition.name);
-  } else {
-    to.meta.pageTransition = { name: "fade" };
-    from.meta.pageTransition = { name: "fade" };
-    console.log("Transition name: fade");
+    return;
   }
+
+  // 6. Standard-Transition
+  to.meta.pageTransition = { name: "fade" };
+  from.meta.pageTransition = { name: "fade" };
+  console.log("Transition name: fade");
 });

@@ -23,16 +23,12 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
-import { ref, watchEffect } from "vue";
 
 const router = useRouter();
 const route = useRoute();
 const currentLocale = ref(route.path.startsWith("/de") ? "de" : "en");
-
-watchEffect(() => {
-  currentLocale.value = route.path.startsWith("/de") ? "de" : "en";
-});
 
 const switchLanguage = (lang) => {
   const currentPath = route.path;
@@ -44,15 +40,8 @@ const switchLanguage = (lang) => {
     newPath = "/";
   } else {
     const pathWithoutLocale = currentPath.replace(/^\/(de|en)\//, "/");
-    if (lang === "de") {
-      newPath = pathWithoutLocale.startsWith("/")
-        ? `/de${pathWithoutLocale}`
-        : `/de/${pathWithoutLocale}`;
-    } else {
-      newPath = pathWithoutLocale.startsWith("/")
-        ? `/en${pathWithoutLocale}`
-        : `/en/${pathWithoutLocale}`;
-    }
+    newPath =
+      lang === "de" ? `/de${pathWithoutLocale}` : `/en${pathWithoutLocale}`;
   }
 
   if (newPath) {
@@ -63,8 +52,6 @@ const switchLanguage = (lang) => {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
-
 html {
   color: #171717;
   font-size: 14px;
