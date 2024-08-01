@@ -209,7 +209,7 @@ html {
 
 #start {
   color: #171717;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 2rem;
   position: absolute;
   top: 20px;

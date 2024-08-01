@@ -1,29 +1,29 @@
 <template>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap"
-    rel="stylesheet"
-  />
-  <title>Johannes Biess</title>
-  <link rel="icon" href="/favicon.ico" />
-
   <div>
     <NuxtPage />
     <header class="language-switch">
-      <button @click="switchLanguage('en')" :disabled="currentLocale === 'en'">
+      <button
+        id="en"
+        @click="switchLanguage('en')"
+        :disabled="currentLocale === 'en'"
+      >
         EN
       </button>
       <div>|</div>
-      <button @click="switchLanguage('de')" :disabled="currentLocale === 'de'">
+      <button
+        id="de"
+        @click="switchLanguage('de')"
+        :disabled="currentLocale === 'de'"
+      >
         DE
       </button>
     </header>
+    <nuxt-link to="/" class="returnHome">JB</nuxt-link>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
@@ -46,9 +46,13 @@ const switchLanguage = (lang) => {
 
   if (newPath) {
     router.push(newPath);
-    currentLocale.value = lang;
   }
 };
+
+// Überwacht Änderungen der Route und aktualisiert den currentLocale-Wert
+watch(route, (newRoute) => {
+  currentLocale.value = newRoute.path.startsWith("/de") ? "de" : "en";
+});
 </script>
 
 <style>
@@ -65,25 +69,55 @@ html {
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 1px;
+  background-color: #fbfbfb;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fbfbfb;
+  border: 0px solid #fbfbfb;
+}
+
+.returnHome {
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-size: 2rem;
+  line-height: 1rem;
+  color: #171717;
+  text-decoration: none;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 100;
+
+}
+
 .language-switch {
   position: absolute;
-  top: 30px;
-  right: 70px;
-  z-index: 1000;
+  top: 50px;
+  right: 100px;
   display: flex;
   align-items: center;
+  z-index: 100;
+}
+
+#en {
+  font-weight: 100;
+  font-size: 1.75rem;
+}
+
+#de {
+  font-weight: 100;
+  font-size: 1.75rem;
 }
 
 .language-switch button {
   margin: 0 5px;
-  padding: 5px 10px;
-  font-size: 14px;
   cursor: pointer;
   background-color: transparent;
-  color: #9e9e9e;
+  color: #dadada;
   border: none;
-  font-weight: 100;
-  font-size: 1.5rem;
   line-height: 1rem;
 }
 
