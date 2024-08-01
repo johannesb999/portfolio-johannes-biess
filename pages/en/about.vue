@@ -1,6 +1,5 @@
 <template>
   <html>
-    <HeaderSwitch />
     <main>
       <div id="aboutMe">ABOUT ME</div>
       <div id="startLinkAbout">

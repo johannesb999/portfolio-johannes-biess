@@ -1,5 +1,4 @@
 <template>
-  <HeaderSwitch />
   <html>
     <div class="container">
       <div id="start">START</div>
@@ -178,6 +177,7 @@ const animateCharacters = (characters) => {
 
 <style scoped>
 html {
+
   position: absolute;
   top: 0;
   left: 0;

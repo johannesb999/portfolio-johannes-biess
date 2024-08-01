@@ -1,6 +1,5 @@
 <template>
   <html>
-    <HeaderSwitch />
     <main>
       <div id="aboutMe">ÜBER MICH</div>
       <div id="startLinkAbout">
@@ -33,6 +32,7 @@
 </template>
 
 <script setup>
+import SplitFlapText from "@/components/splitFlapText.vue";
 </script>
 
 <style scoped>

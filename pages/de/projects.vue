@@ -1,17 +1,13 @@
 <template>
-  <HeaderSwitch />
-
   <main>
     <div id="project">MEHR</div>
     <div id="projectLinkStart">
       <nuxt-link to="/de" class="custom-link">Start</nuxt-link>
     </div>
     <div id="projectLinkNext">
-      <nuxt-link to="/de/project/jumpStar" class="custom-link"
-        >JumpStar</nuxt-link
-      >
+      <nuxt-link to="/de/project/jumpStar" class="custom-link">JumpStar</nuxt-link>
     </div>
-    <div id="projectLinkBefore">
+    <div id="projectLinkBefore">  
       <nuxt-link to="/de/project/goEase" class="custom-link">GoEase</nuxt-link>
     </div>
 

@@ -1,5 +1,4 @@
 <template>
-  <HeaderSwitch />
   <html>
     <main>
       <div id="contact">KONTAKT</div>

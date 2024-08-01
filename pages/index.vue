@@ -1,6 +1,5 @@
 <template>
   <html>
-    <HeaderSwitch />
     <!-- <CustomCursor /> -->
     <div class="container">
       <div id="start">START</div>
@@ -51,7 +50,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
-import HeaderSwitch from "~/components/HeaderSwitch.vue";
 // import CustomCursor from "/components/customCursor.vue";
 
 const router = useRouter();

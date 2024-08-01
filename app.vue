@@ -1,6 +1,24 @@
 <template>
   <div>
     <NuxtPage />
+    <header class="language-switch">
+      <button
+        id="en"
+        @click="switchLanguage('en')"
+        :disabled="currentLocale === 'en'"
+      >
+        EN
+      </button>
+      <div>|</div>
+      <button
+        id="de"
+        @click="switchLanguage('de')"
+        :disabled="currentLocale === 'de'"
+      >
+        DE
+      </button>
+    </header>
+    <nuxt-link to="/" class="returnHome">JB</nuxt-link>
   </div>
 </template>
 
@@ -59,6 +77,57 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: #fbfbfb;
   border: 0px solid #fbfbfb;
+}
+
+.returnHome {
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-size: 2rem;
+  line-height: 1rem;
+  color: #171717;
+  text-decoration: none;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 100;
+
+}
+
+.language-switch {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+#en {
+  font-weight: 100;
+  font-size: 1.75rem;
+}
+
+#de {
+  font-weight: 100;
+  font-size: 1.75rem;
+}
+
+.language-switch button {
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #dadada;
+  border: none;
+  line-height: 1rem;
+}
+
+.language-switch button:disabled {
+  color: #171717;
+  cursor: default;
+}
+
+.language-switch button:not(:disabled):hover {
+  color: #171717;
 }
 
 .page-left-enter-active,
