@@ -1,4 +1,7 @@
 <template>
+  <html>
+  <HeaderSwitch />
+
   <main>
     <div id="resumeLinkHfg">
       <nuxt-link to="/en/resume" class="custom-link"
@@ -19,6 +22,7 @@
       />
     </div>
   </main>
+  </html>
 </template>
 
 <script setup>

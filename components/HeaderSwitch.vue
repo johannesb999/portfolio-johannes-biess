@@ -1,75 +1,75 @@
-@ -0,0 +1,78 @@
 <template>
-  <div class="language-switch">
-    <button @click="switchLanguage('en')" :disabled="currentLocale === 'en'">
-      EN
-    </button>
-    <div>|</div>
-    <button @click="switchLanguage('de')" :disabled="currentLocale === 'de'">
-      DE
-    </button>
+  <div class="header-container">
+    <nuxt-link to="/" class="returnHome">JB</nuxt-link>
+    <header class="language-switch">
+      <button
+        id="en"
+        @click="switchLanguage('en')"
+        :disabled="currentLocale === 'en'"
+      >
+        EN
+      </button>
+      <div>|</div>
+      <button
+        id="de"
+        @click="switchLanguage('de')"
+        :disabled="currentLocale === 'de'"
+      >
+        DE
+      </button>
+    </header>
   </div>
-
-  <header>
-    <HeaderSwitch />
-  </header>
 </template>
 
 <script setup>
-import { useRouter, useRoute } from "vue-router";
-import { ref, watchEffect } from "vue";
 
-const router = useRouter();
-const route = useRoute();
-const currentLocale = ref(route.path.startsWith("/de") ? "de" : "en");
-
-watchEffect(() => {
-  currentLocale.value = route.path.startsWith("/de") ? "de" : "en";
-});
-
-const switchLanguage = (lang) => {
-  const currentPath = route.path;
-  let newPath = "";
-
-  if (currentPath === "/" && lang === "de") {
-    newPath = "/de";
-  } else if (currentPath === "/de" && lang === "en") {
-    newPath = "/";
-  } else {
-    const pathWithoutLocale = currentPath.replace(/^\/(de|en)\//, "/");
-    newPath = pathWithoutLocale.startsWith("/")
-      ? `/${lang}${pathWithoutLocale}`
-      : `/${lang}/${pathWithoutLocale}`;
-  }
-
-  if (newPath) {
-    router.push(newPath);
-    currentLocale.value = lang;
-  }
-};
 </script>
 
 <style scoped>
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.returnHome {
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-size: 2rem;
+  line-height: 1rem;
+  color: #171717;
+  text-decoration: none;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 100;
+}
+
 .language-switch {
   position: absolute;
-  top: 30px;
-  right: 70px;
+  top: 50px;
+  right: 100px;
   display: flex;
   align-items: center;
-  font-family: "Geologica", sans-serif;
+}
+
+#en,
+#de {
+  font-weight: 100;
+  font-size: 1.75rem;
 }
 
 .language-switch button {
   margin: 0 5px;
-  padding: 5px 10px;
-  font-size: 14px;
   cursor: pointer;
   background-color: transparent;
-  color: #9e9e9e;
+  color: #dadada;
   border: none;
-  font-weight: 100;
-  font-size: 1.5rem;
   line-height: 1rem;
+  z-index: 100;
+
 }
 
 .language-switch button:disabled {
@@ -79,14 +79,5 @@ const switchLanguage = (lang) => {
 
 .language-switch button:not(:disabled):hover {
   color: #171717;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.4s ease-out;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>

@@ -1,32 +1,34 @@
 <template>
-  <html>
-  <main>
-    <div id="project">MEHR</div>
-    <div id="projectLinkStart">
-      <nuxt-link to="/de" class="custom-link">Start</nuxt-link>
-    </div>
-    <div id="projectLinkNext">
-      <nuxt-link to="/de/project/simpleChat" class="custom-link"
-        >SIMPLECHAT</nuxt-link
-      >
-    </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="/de/project/projects" class="custom-link"
-        >PlantMonit</nuxt-link
-      >
-    </div>
+  <HeaderSwitch />
 
-    <div class="projectText">
-      <div id="line1">Jump Star</div>
-    </div>
-    <div class="picture">
-      <img
-        style="padding: 50px"
-        src="https://via.placeholder.com/550x300"
-        alt="plantmonit"
-      />
-    </div>
-  </main>
+  <html>
+    <main>
+      <div id="project">MEHR</div>
+      <div id="projectLinkStart">
+        <nuxt-link to="/de" class="custom-link">Start</nuxt-link>
+      </div>
+      <div id="projectLinkNext">
+        <nuxt-link to="/de/project/simpleChat" class="custom-link"
+          >SIMPLECHAT</nuxt-link
+        >
+      </div>
+      <div id="projectLinkBefore">
+        <nuxt-link to="/de/project/projects" class="custom-link"
+          >PlantMonit</nuxt-link
+        >
+      </div>
+
+      <div class="projectText">
+        <div id="line1">Jump Star</div>
+      </div>
+      <div class="picture">
+        <img
+          style="padding: 50px"
+          src="https://via.placeholder.com/550x300"
+          alt="plantmonit"
+        />
+      </div>
+    </main>
   </html>
 </template>
 

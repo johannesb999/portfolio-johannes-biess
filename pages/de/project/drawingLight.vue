@@ -1,4 +1,6 @@
 <template>
+  <HeaderSwitch />
+
   <html>
     <main>
       <div id="project">MEHR</div>

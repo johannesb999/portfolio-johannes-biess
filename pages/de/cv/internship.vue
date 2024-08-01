@@ -1,25 +1,28 @@
 <template>
-  <main>
-    <div id="resumeLinkHfg">
-      <nuxt-link to="/de/resume" class="custom-link"
-        >Curriculum vitae</nuxt-link
-      >
-    </div>
+  <html>
+    <HeaderSwitch />
+    <main>
+      <div id="resumeLinkHfg">
+        <nuxt-link to="/de/resume" class="custom-link"
+          >Curriculum vitae</nuxt-link
+        >
+      </div>
 
-    <div class="hfgText">
-      <SplitFlapText
-        :texts="[
-          'INTERNSHIP      LEARNINGS      ',
-          'FIGMA   UX        UI    ',
-          'PROTOTYPING  USABILITY  ',
-          '     DESIGNTHINKING         ',
-          ' USER CENTERED  LEANDESIGN    ',
-          'FULLSTACK DEVELOPMENT   ',
-        ]"
-      />
-    </div>
-    <div>what i hope to learn usw quasi bewerbungsschreiben</div>
-  </main>
+      <div class="hfgText">
+        <SplitFlapText
+          :texts="[
+            'INTERNSHIP      LEARNINGS      ',
+            'FIGMA   UX        UI    ',
+            'PROTOTYPING  USABILITY  ',
+            '     DESIGNTHINKING         ',
+            ' USER CENTERED  LEANDESIGN    ',
+            'FULLSTACK DEVELOPMENT   ',
+          ]"
+        />
+      </div>
+      <div>what i hope to learn usw quasi bewerbungsschreiben</div>
+    </main>
+  </html>
 </template>
 
 <script setup>
