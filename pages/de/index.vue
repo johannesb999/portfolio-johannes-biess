@@ -37,6 +37,7 @@
             :class="[
               'char',
               { separator: letter.isSeparator, normal: !letter.isSeparator },
+              letter.styleClass,
             ]"
           >
             {{ letter.current }}
@@ -49,10 +50,20 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { useRouter } from "vue-router";
+import "assets/index.css";
+
+const router = useRouter();
+const currentLocale = ref("en");
+
+const switchLanguage = (lang) => {
+  currentLocale.value = lang;
+  router.push({ path: `/${lang}` });
+};
 
 const texts = [
   "HI MEIN NAME IST        ",
-  "JOHANNES BIESS          ",
+  "[JOHANNES] [BIESS]          ",
   "UND ICH BIN             ",
   "ENTWICKLER              ",
 ];
@@ -69,23 +80,42 @@ function getRandomChar() {
 }
 
 function createTextArray(text, maxLength) {
-  return text
-    .padEnd(maxLength, " ")
-    .split("")
-    .map((char) => ({
+  const result = [];
+  let inStyledWord = false;
+
+  for (let char of text.padEnd(maxLength, " ")) {
+    if (char === "[") {
+      inStyledWord = true;
+      continue;
+    }
+    if (char === "]") {
+      inStyledWord = false;
+      continue;
+    }
+
+    result.push({
       target: char === " " ? getRandomChar() : char,
       current: getRandomChar(),
       isSeparator: char === " ",
-    }));
+      styleClass: inStyledWord ? "custom-style" : "",
+    });
+  }
+
+  return result;
 }
 
-const maxLength = Math.max(...texts.map((text) => text.length));
+// Funktion zur Berechnung der Länge des Textes ohne Klammern
+const getTextLengthWithoutBrackets = (text) =>
+  text.replace(/\[|\]/g, "").length;
+
+const maxLength = Math.max(...texts.map(getTextLengthWithoutBrackets));
 const textArrays = ref(texts.map((text) => createTextArray(text, maxLength)));
 const hasAnimated = ref(new Array(texts.length).fill(false));
 
 const animateOnce = (index) => {
   if (!hasAnimated.value[index]) {
     textArrays.value[index].forEach((item, idx) => {
+      if (item.isSeparator) return;
       const step = () => {
         if (item.current !== item.target) {
           item.current = getRandomChar();
@@ -105,6 +135,7 @@ const animateBottomLineNewWord = () => {
   textArrays.value[bottomIndex] = createTextArray(word, maxLength);
 
   textArrays.value[bottomIndex].forEach((item, idx) => {
+    if (item.isSeparator) return;
     const step = () => {
       if (item.current !== item.target) {
         item.current = getRandomChar();
@@ -116,19 +147,11 @@ const animateBottomLineNewWord = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("wheel", handleWheel);
   textArrays.value.forEach((_, index) => animateOnce(index));
   setInterval(() => {
     animateBottomLineNewWord();
   }, 6000);
 });
-
-onUnmounted(() => {
-  window.removeEventListener("wheel", handleWheel);
-});
-
-const lastScrollTop = ref(0);
-const isAnimating = ref(false);
 
 const debounce = (func, wait) => {
   let timeout;
@@ -144,14 +167,15 @@ const debounce = (func, wait) => {
 
 const handleWheel = debounce((event) => {
   if (event.deltaY > 0 && !isAnimating.value) {
-    // Überprüfen, ob nach unten gescrollt wird
     isAnimating.value = true;
     triggerSplitFlapAnimation();
     setTimeout(() => {
       isAnimating.value = false;
-    }, 1000); // Stelle sicher, dass die Animation Zeit hat zu beenden
+    }, 1000);
   }
 }, 200);
+
+const isAnimating = ref(false);
 
 const triggerSplitFlapAnimation = () => {
   const projectLinkCharacters = document.querySelectorAll(
@@ -173,149 +197,7 @@ const animateCharacters = (characters) => {
     }, index * 100);
   });
 };
+
 </script>
 
-<style scoped>
-html {
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  position: relative;
-}
-
-#start {
-  color: #171717;
-  font-weight: 300;
-  font-size: 2rem;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-style: normal;
-  line-height: normal;
-}
-
-#projectLink {
-  color: #171717;
-  font-weight: 700;
-  font-size: 2rem;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-style: normal;
-  line-height: normal;
-}
-
-#aboutLink,
-#contactLink {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-#aboutLink {
-  left: 0;
-  padding-left: 20px;
-}
-
-#contactLink {
-  right: 0;
-  padding-right: 20px;
-}
-
-.custom-link {
-  color: #171717;
-  text-decoration: none;
-}
-
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
-
-.char {
-  display: inline-block;
-  width: 1.5rem;
-  height: 2rem;
-  overflow: hidden;
-  font-size: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  vertical-align: bottom;
-}
-
-.separator {
-  color: rgb(239, 239, 239);
-}
-
-.normal {
-  color: #171717;
-}
-
-.char.flip {
-  animation: flap 1s ease-in-out forwards;
-}
-
-@keyframes flap {
-  0%,
-  100% {
-    transform: rotateX(0deg);
-  }
-  50% {
-    transform: rotateX(360deg);
-  }
-}
-
-.mainText {
-  margin: 10px 0;
-  font-size: 2rem;
-  font-weight: 200;
-  text-align: center;
-}
-
-#quote {
-  position: absolute;
-  bottom: 100px;
-  left: 100px;
-  font-size: 1.5rem;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.project-char {
-  display: inline-block;
-  perspective: 1000px;
-}
-
-.project-flip {
-  animation: projectFlipAnimation 1s ease-in-out;
-  transform-origin: center;
-}
-
-@keyframes projectFlipAnimation {
-  0%,
-  100% {
-    transform: rotateX(0deg);
-  }
-  50% {
-    transform: rotateX(360deg);
-  }
-}
-</style>
+<style scoped></style>

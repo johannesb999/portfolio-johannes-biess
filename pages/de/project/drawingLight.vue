@@ -18,7 +18,7 @@
       <div class="projectFlap">
         <SplitFlapText
           :texts="[
-            'ABOUT ME      VALUES      ',
+            '[D] [R] [A] [W] [I] [N] [G]  [L] [I] [G] [H] [T]  ',
             'TEAMWORK   TRUST  CLARITY ',
             'ANOTHER  ORGANISATION     ',
             '     ADAPTABILITY         ',
@@ -29,7 +29,7 @@
       </div>
 
       <div class="projectText">
-        <div id="line1">DrawingLight</div>
+        <!-- <div id="line1">DrawingLight</div> -->
       </div>
       <div class="picture">
         <img

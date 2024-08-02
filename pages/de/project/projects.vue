@@ -14,7 +14,7 @@
     <div class="projectFlap">
       <SplitFlapText
         :texts="[
-          'ABOUT ME      VALUES      ',
+          '[PLANTMONIT]      VALUES    ',
           'TEAMWORK   TRUST  CLARITY ',
           'ANOTHER  ORGANISATION     ',
           '     ADAPTABILITY         ',

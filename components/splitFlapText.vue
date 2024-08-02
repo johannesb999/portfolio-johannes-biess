@@ -1,23 +1,24 @@
 <template>
-    <div
-      v-for="(textArray, idx) in textArrays"
-      :key="idx"
-      class="mainText"
-      @click="() => animate(idx)"
-    >
-      <div>
-        <span
-          v-for="(letter, index) in textArray"
-          :key="index"
-          :class="[
-            'char',
-            { separator: letter.isSeparator, normal: !letter.isSeparator },
-          ]"
-        >
-          {{ letter.current }}
-        </span>
-      </div>
+  <div
+    v-for="(textArray, idx) in textArrays"
+    :key="idx"
+    class="mainText"
+    @click="() => animate(idx)"
+  >
+    <div>
+      <span
+        v-for="(letter, index) in textArray"
+        :key="index"
+        :class="[
+          'char',
+          { separator: letter.isSeparator, normal: !letter.isSeparator },
+          letter.styleClass,
+        ]"
+      >
+        {{ letter.current }}
+      </span>
     </div>
+  </div>
 </template>
 
 <script setup>
@@ -37,11 +38,26 @@ function getRandomChar() {
 }
 
 function createTextArray(text) {
-  return text.split("").map((char) => ({
-    target: char === " " ? getRandomChar() : char,
-    current: getRandomChar(),
-    isSeparator: char === " ",
-  }));
+  let inStyledWord = false;
+  return text
+    .split("")
+    .map((char) => {
+      if (char === "[") {
+        inStyledWord = true;
+        return null;
+      }
+      if (char === "]") {
+        inStyledWord = false;
+        return null;
+      }
+      return {
+        target: char === " " ? getRandomChar() : char,
+        current: getRandomChar(),
+        isSeparator: char === " ",
+        styleClass: inStyledWord ? "custom-style" : "",
+      };
+    })
+    .filter((item) => item !== null);
 }
 
 const textArrays = ref(props.texts.map(createTextArray));
@@ -76,8 +92,8 @@ watch(
 .split-flap-text {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
+  align-items: flex-start; /* Zeilen linksbündig ausrichten */
+  justify-content: center;
   width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
@@ -88,7 +104,7 @@ watch(
   margin: 10px 0;
   font-size: 2rem;
   font-weight: 200;
-  text-align: center; 
+  text-align: left; /* Text linksbündig ausrichten */
 }
 
 .char {
@@ -103,11 +119,21 @@ watch(
 }
 
 .separator {
-  color: rgb(239, 239, 239);
+  color: #0000000f;
+  
 }
 
 .normal {
   color: #171717;
+  padding-left: 1px;
+
+}
+
+.custom-style {
+  font-weight: 700;
+  padding-left: 1px;
+
+  color: #000000;
 }
 
 .char.flip {

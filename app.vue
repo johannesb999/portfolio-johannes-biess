@@ -9,7 +9,7 @@
       >
         EN
       </button>
-      <div>|</div>
+      <div id="line">|</div>
       <button
         id="de"
         @click="switchLanguage('de')"
@@ -34,6 +34,8 @@ const switchLanguage = (lang) => {
   const currentPath = route.path;
   let newPath = "";
 
+  console.log("Current Path:", currentPath);
+
   if (currentPath === "/" && lang === "de") {
     newPath = "/de";
   } else if (currentPath === "/de" && lang === "en") {
@@ -43,6 +45,8 @@ const switchLanguage = (lang) => {
     newPath =
       lang === "de" ? `/de${pathWithoutLocale}` : `/en${pathWithoutLocale}`;
   }
+
+  console.log("New Path:", newPath);
 
   if (newPath) {
     router.push(newPath);
@@ -65,7 +69,7 @@ html {
   padding: 0;
   height: 100%;
   width: 100%;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   overflow: hidden;
 }
 
@@ -110,6 +114,13 @@ html {
 }
 
 #de {
+  font-weight: 100;
+  font-size: 1.75rem;
+  background-color: #fbfbfb;
+}
+
+#line {
+  padding-bottom: 5px;
   font-weight: 100;
   font-size: 1.75rem;
   background-color: #fbfbfb;
