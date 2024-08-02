@@ -15,22 +15,24 @@
         >
       </div>
 
-      <div class="projectFlap">
-        <SplitFlapText
-          :texts="[
-            'ABOUT ME      VALUES      ',
-            'TEAMWORK   TRUST  CLARITY ',
-            'ANOTHER  ORGANISATION     ',
-            '     ADAPTABILITY         ',
-            ' PUNCTUALITY  FAIRNESS    ',
-            'CREATIVITY  ACCURACY      ',
-          ]"
-        />
+      <div class="porjectDescription">
+        <div class="projectText">
+          <div id="line1">JumpStar</div>
+        </div>
+        <div class="projectFlap">
+          <SplitFlapText
+            :texts="[
+              'ABOUT ME      VALUES      ',
+              'TEAMWORK   TRUST  CLARITY ',
+              'ANOTHER  ORGANISATION     ',
+              '     ADAPTABILITY         ',
+              ' PUNCTUALITY  FAIRNESS    ',
+              'CREATIVITY  ACCURACY      ',
+            ]"
+          />
+        </div>
       </div>
 
-      <div class="projectText">
-        <div id="line1">JumpStar</div>
-      </div>
       <div class="picture">
         <img
           style="border: 1px solid black; border-radius: 10px"
