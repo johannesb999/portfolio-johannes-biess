@@ -109,6 +109,19 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return;
   }
 
+  // Neue Transition: Wechsel zwischen /project und /details
+  if (from.path.includes("/project") && to.path.includes("/details")) {
+    to.meta.pageTransition = { name: "page-up" };
+    from.meta.pageTransition = { name: "page-up" };
+    console.log("Transition name: page-up");
+    return;
+  } else if (from.path.includes("/details") && to.path.includes("/project")) {
+    to.meta.pageTransition = { name: "page-down" };
+    from.meta.pageTransition = { name: "page-down" };
+    console.log("Transition name: page-down");
+    return;
+  }
+
   // 5. Priorität: Wechsel zwischen speziellen Routen
   if (toSpecial === "project-resume" && fromSpecial !== "project-resume") {
     to.meta.pageTransition = { name: "page-up" };

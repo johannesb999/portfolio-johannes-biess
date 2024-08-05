@@ -18,12 +18,11 @@
       <div class="projectFlap">
         <SplitFlapText
           :texts="[
-            'ABOUT ME      VALUES      ',
-            'TEAMWORK   TRUST  CLARITY ',
-            'ANOTHER  ORGANISATION     ',
+            '  SVELTE      FIGMA      ',
+            '   ARDUINO               ',
             '     ADAPTABILITY         ',
-            ' PUNCTUALITY  FAIRNESS    ',
-            'CREATIVITY  ACCURACY      ',
+            ' MQTT         FAIRNESS    ',
+            'CREATIVITY  MONGODB      ',
           ]"
         />
       </div>
@@ -33,12 +32,14 @@
       </div>
       <div class="picture">
         <img
-          style=" border: 1px solid black; border-radius: 10px; " 
+          style="border: 1px solid black; border-radius: 10px"
           src="https://via.placeholder.com/500x500"
           alt="plantmonit"
         />
       </div>
-      <NuxtLink to="/en/project/details/PlantMonit" class="detailsLink">DETAILS</NuxtLink>
+      <NuxtLink to="/en/project/details/PlantMonit" class="detailsLink"
+        >DETAILS</NuxtLink
+      >
     </main>
   </html>
 </template>
