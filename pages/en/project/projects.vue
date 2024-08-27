@@ -20,9 +20,9 @@
           :texts="[
             '  SVELTE      FIGMA      ',
             '   ARDUINO               ',
-            '     ADAPTABILITY         ',
-            ' MQTT         FAIRNESS    ',
-            'CREATIVITY  MONGODB      ',
+            '     FUSION360           ',
+            ' MQTT     USERCENTERED    ',
+            'USERCENTERED  MONGODB      ',
           ]"
         />
       </div>

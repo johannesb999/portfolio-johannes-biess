@@ -9,15 +9,7 @@
 
       <div class="project-details">
         <div class="project-section">
-          <div class="project-video">
-            <iframe
-              src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-              title="YouTube video player"
-              frameborder="1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
+          
         </div>
         <div class="project-header">
           <h1 class="project-title">PLANTMONIT</h1>
@@ -26,7 +18,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>Problem</h2>
+              <h2>PROBLEM</h2>
               <p>
                 In our hectic daily lives, there is often little time left for
                 the care of indoor and garden plants. Many people, especially
@@ -53,26 +45,41 @@
 
         <div class="project-section-reverse">
           <div class="project-content">
-            <div class="image">
+            <div class="image medium">
               <img src="public\img\pm\process.svg" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2>Process</h2>
+              <h2>PROCESS</h2>
               <p>
                 Our approach to developing PlantMonit followed a structured and
                 iterative process, ensuring that we addressed both technical and
-                user-friendly aspects of our product. <br /><br />Persona
-                Development We began by creating a detailed persona to identify
-                and analyze the needs of our target audience. This helped us
-                understand the specific requirements and challenges our users
-                face, allowing us to tailor our solution accordingly. The
-                persona served as a solid foundation for all subsequent design
-                and development decisions. <br /><br />User Journey During the
-                app development, we prioritized designing the user journey. This
-                included creating detailed user paths to ensure a seamless and
-                intuitive experience from app installation to daily use. The
-                user journey helped us identify potential obstacles and
-                continuously enhance the app's usability.
+                user-friendly aspects of our product. <br /><br />
+                <h3>Conceptional Process</h3>
+                Persona Development We began by creating a detailed persona to
+                identify and analyze the needs of our target audience. This
+                helped us understand the specific requirements and challenges
+                our users face, allowing us to tailor our solution accordingly.
+                The persona served as a solid foundation for all subsequent
+                design and development decisions. <br /><br />User Journey
+                During the app development, we prioritized designing the user
+                journey. This included creating detailed user paths to ensure a
+                seamless and intuitive experience from app installation to daily
+                use. The user journey helped us identify potential obstacles and
+                continuously enhance the app's usability. <br /><br />           
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section-reverse">
+          <div class="project-content">
+            <div class="image medium">
+              <img src="public\img\pm\mobile3.svg" alt="plantmonit" />
+            </div>
+            <div class="text">
+              <h3>Software Process</h3>
+              <p>
+             
                 <br /><br />Prototyping and Feedback Our development process
                 involved several prototyping phases: LoFi Prototypes: We created
                 initial rough sketches to visualize the basic user experience
@@ -88,24 +95,47 @@
                 users and experts to make iterative improvements and optimize
                 the product.
 
-                <br /><br />Technical Implementation The technical
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section-reverse">
+          <div class="project-content">
+            <div class="image large">
+              <img src="public\img\pm\process.svg" alt="plantmonit" />
+            </div>
+            <div class="text">
+              <h3>Hardware Process</h3>
+              <p>
+                
+                <br /><br />The technical
                 implementation involved several steps, incorporating both
                 innovative hardware solutions and modern software development
-                practices. Hardware Design and Integration: We utilized ESP32
-                Feather and ESP32 Cam for data collection and transmission.
+                practices. <br /><br />
+
+                Hardware Design and Integration: We utilized ESP32
+                Feather and ESP32 Cam for data collection and transmission.<br />
                 These devices provided the flexibility and performance necessary
-                for precise monitoring. The use of the OpenAI Vision API enabled
+                for precise monitoring. <br /><br />
+
+                The use of the OpenAI Vision API enabled
                 advanced analysis of plant images, which was a novel solution at
-                the time of development, making our app particularly innovative.
+                the time of development, making our app particularly innovative.<br /><br />
+
                 Seamless communication between the ESP32 devices via Websockets
                 ensured that all components worked efficiently together,
-                providing reliable data transmission. Backend Development: By
-                using MongoDB and Mongoose, we built a robust and scalable
+                providing reliable data transmission. <br /><br />
+                Backend Development: By using MongoDB and Mongoose, we built a robust and scalable
                 database structure that facilitated efficient storage and
-                management of collected data. Our API development focused on
+                management of collected data. 
+                <br />Our API development focused on
                 fast and reliable data transfers to ensure a smooth user
-                experience. Security measures like .env and user logins
-                protected sensitive data. Frontend Development: We developed a
+                experience. 
+                <br />Security measures like .env and user logins
+                protected sensitive data. <br /><br />
+
+                Frontend Development: We developed a
                 user-friendly interface with Svelte, characterized by intuitive
                 operation and appealing design. This ensured that users of all
                 experience levels could easily use the app. Close alignment with
@@ -117,10 +147,12 @@
           </div>
         </div>
 
+
+
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>Solution</h2>
+              <h2>SOLUTION</h2>
               <p>
                 Through this structured, methodical approach, we developed a
                 product that meets our target audience's needs and significantly
@@ -145,8 +177,19 @@
               </p>
             </div>
             <div class="image">
-              <img src="https://via.placeholder.com/400x300" alt="plantmonit" />
+              <img src="public\img\pm\PlantInRoom.svg" alt="plantmonit" />
             </div>
+          </div>
+        </div>
+        <div class="project-section">
+          <div class="project-video">
+            <iframe
+              src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+              title="YouTube video player"
+              frameborder="1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
