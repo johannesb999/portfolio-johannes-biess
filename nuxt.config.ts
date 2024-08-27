@@ -2,6 +2,7 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  modules: ["@nuxt/image-edge"],
 
-  compatibilityDate: "2024-07-04",
+  compatibilityDate: "2024-08-27",
 });

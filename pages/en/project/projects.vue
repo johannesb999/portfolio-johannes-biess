@@ -19,10 +19,10 @@
         <SplitFlapText
           :texts="[
             '  SVELTE      FIGMA      ',
-            '   ARDUINO               ',
-            '     FUSION360           ',
-            ' MQTT     USERCENTERED    ',
-            'USERCENTERED  MONGODB      ',
+            '   ESP32   WIREFRAMES    ',
+            '   FUSION360  UI  UX     ',
+            ' MQTT     USERCENTERED   ',
+            'OPENAI        MONGODB    ',
           ]"
         />
       </div>
@@ -33,7 +33,7 @@
       <div class="picture">
         <img
           style="border: 1px solid black; border-radius: 10px"
-          src="https://via.placeholder.com/500x500"
+          src="public\img\pm\pm4.svg"
           alt="plantmonit"
         />
       </div>

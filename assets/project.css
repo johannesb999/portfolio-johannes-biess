@@ -115,9 +115,11 @@ html {
   flex-direction: column;
   position: absolute;
   top: 50%;
-  left: 70%;
+  left: 65%;
   transform: translate(-50%, -50%);
   font-size: 24px;
   font-weight: 200;
   text-align: left;
+  max-width: 600px;
+  max-width: 600px;
 }

@@ -147,8 +147,6 @@
           </div>
         </div>
 
-
-
         <div class="project-section">
           <div class="project-content">
             <div class="text">
@@ -172,7 +170,7 @@
                 MongoDB and Mongoose ensures efficient data storage and
                 management. By combining these elements, we created an
                 innovative solution that revolutionizes plant care and helps
-                both beginners and experienced gardeners keep their plants
+                both beginners and experienced gardeaners keep their plants
                 healthy.
               </p>
             </div>
