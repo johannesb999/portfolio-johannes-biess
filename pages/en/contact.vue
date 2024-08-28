@@ -10,14 +10,18 @@
       <div class="contactMeText">
         <SplitFlapText
           :texts="[
-            '  I  WOULD  LOVE  TO   ',
-            '  HEAR  FROM    YOU    ',
-            '         |INSTAGRAM|     ',
-            '|GITHUB|         |EMAIL|   ',
-            '      |LINKEDIN|         ',
+            'I  WOULD  LOVE  TO     ',
+            'HEAR  FROM    YOU      ',
+            '[$GITHUB$]                 ',
+            '[@EMAIL@]                  ',
+            '[|LINKEDIN|]               ',
           ]"
         />
       </div>
+      <div id="impressum">
+        <nuxt-link to="legal" class="custom-link">LEGAL INFORMATION</nuxt-link>
+      </div>
+      
     </main>
   </html>
 </template>
