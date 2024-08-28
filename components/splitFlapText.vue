@@ -11,11 +11,21 @@
         :key="index"
         :class="[
           'char',
-          { separator: letter.isSeparator, normal: !letter.isSeparator },
+          {
+            separator: letter.isSeparator,
+            normal: !letter.isSeparator && !letter.isLink,
+          },
           letter.styleClass,
         ]"
       >
-        {{ letter.current }}
+        <template v-if="letter.isLink">
+          <a :href="letter.linkTarget" class="custom-link" target="_blank">{{
+            letter.current
+          }}</a>
+        </template>
+        <template v-else>
+          {{ letter.current }}
+        </template>
       </span>
     </div>
   </div>
@@ -39,6 +49,8 @@ function getRandomChar() {
 
 function createTextArray(text) {
   let inStyledWord = false;
+  let inLink = false;
+  let linkTarget = null;
   return text
     .split("")
     .map((char) => {
@@ -50,11 +62,22 @@ function createTextArray(text) {
         inStyledWord = false;
         return null;
       }
+      if (char === "|") {
+        inLink = !inLink;
+        if (inLink) {
+          linkTarget = "https://www.example.com"; // Standardlink, der ersetzt werden kann
+        } else {
+          linkTarget = null;
+        }
+        return null;
+      }
       return {
         target: char === " " ? getRandomChar() : char,
         current: getRandomChar(),
         isSeparator: char === " ",
-        styleClass: inStyledWord ? "custom-style" : "",
+        isLink: inLink,
+        linkTarget: linkTarget,
+        styleClass: inLink ? "link-style" : inStyledWord ? "custom-style" : "",
       };
     })
     .filter((item) => item !== null);
@@ -102,7 +125,7 @@ watch(
 
 .mainText {
   margin: 10px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 200;
   text-align: left; /* Text linksbündig ausrichten */
 }
@@ -110,9 +133,9 @@ watch(
 .char {
   display: inline-block;
   width: 1.5rem;
-  height: 2rem;
+  height: 1.5rem;
   overflow: hidden;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   text-align: center;
   vertical-align: bottom;
@@ -120,13 +143,11 @@ watch(
 
 .separator {
   color: #0000000f;
-  
 }
 
 .normal {
   color: #171717;
   padding-left: 1px;
-
 }
 
 .custom-style {

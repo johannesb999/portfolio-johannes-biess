@@ -20,7 +20,7 @@
             <NuxtLink to="/en/cv/internship" class="content">
               <h2>Hopefully Your Company!</h2>
               <p>Internship</p>
-              <p class="location">open for everywhere</p>
+              <p class="location">anywhere worldwide</p>
             </NuxtLink>
             <div class="date">
               <h3>2025</h3>
@@ -61,7 +61,7 @@
         </ul>
       </div>
 
-      <div id="title">CURICULUM VITAE</div>
+      <div id="title">CV HIGHLIGHTS</div>
     </main>
   </html>
 </template>

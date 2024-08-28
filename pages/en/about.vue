@@ -13,7 +13,7 @@
           :texts="[
             '[ABOUT] [ME]     VALUES       ',
             '  TEAMWORK  ORGANISATION  ',
-            '     ADAPTILITY   ACCURACY ',
+            '     ADAPTILITY   ACCURACY',
             'PUNCTUALITY  FAIRNESS     ',
             '    CREATIVITY     TRUST  ',
           ]"
@@ -33,8 +33,7 @@
 
 <script setup>
 import SplitFlapText from "@/components/splitFlapText.vue";
-import "assets/about.css";
 
 </script>
 
-<style scoped></style>
+<style src="assets/about.css"  scoped></style>

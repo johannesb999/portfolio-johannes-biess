@@ -11,7 +11,7 @@
       </div>
       <div id="projectLinkBefore">
         <nuxt-link to="/en/project/projects" class="custom-link"
-          >JumpStar</nuxt-link
+          >PLANTMONIT</nuxt-link
         >
       </div>
       <div class="projectFlap">
