@@ -1,7 +1,7 @@
 <template>
   <html>
     <main>
-      <div id="aboutMe">ABOUT ME</div>
+      <!-- <div id="aboutMe">ABOUT ME</div> -->
       <div id="startLinkAbout">
         <nuxt-link to="/" class="custom-link">START</nuxt-link>
       </div>

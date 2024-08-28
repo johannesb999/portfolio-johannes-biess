@@ -1,154 +1,150 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    position: relative;
-  }
-  
-  #start {
-    color: #171717;
-    font-weight: 200;
-    font-size: 2rem;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-style: normal;
-    line-height: normal;
-  }
-  
-  #projectLink {
-    color: #171717;
-    font-weight: 700;
-    font-size: 2rem;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-style: normal;
-    line-height: normal;
-  }
-  
-  #aboutLink,
-  #contactLink {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    font-weight: 700;
-  }
-  
-  #aboutLink {
-    left: 0;
-    padding-left: 20px;
-  }
-  
-  #contactLink {
-    right: 0;
-    padding-right: 20px;
-  }
-  
-  .custom-link {
-    color: #171717;
-    text-decoration: none;
-  }
-  
-  .custom-link:hover {
-    color: black;
-    text-decoration: underline;
-  }
-  
-  .char {
-    display: inline-block;
-    width: 1.5rem;
-    height: 2rem;
-    overflow: hidden;
-    font-size: 2rem;
-    line-height: 2rem;
-    text-align: center;
-    vertical-align: bottom;
-  }
-  
-  .separator {
-    color: #0000000f;
-    padding-left: 1px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
 
-  }
-  
-  .normal {
-    color: #171717;
-    padding-left: 1px;
+#start {
+  color: #171717;
+  font-weight: 200;
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-style: normal;
+  line-height: normal;
+}
 
+#projectLink {
+  color: #171717;
+  font-weight: 700;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-style: normal;
+  line-height: normal;
+}
 
+#aboutLink,
+#contactLink {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  text-orientation: mixed; /* Stellt sicher, dass Text richtig ausgerichtet ist */
+}
+
+#aboutLink {
+  top: 50%;
+  left: 2.5%; /* Abstand vom linken Rand */
+  transform: translateY(-50%) rotate(180deg); /* Dreht den Text um 180 Grad */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+#contactLink {
+  top: 50%;
+  right: 3%; /* Abstand vom rechten Rand */
+  transform: translateY(-50%);
+}
+
+.custom-link {
+  color: #171717;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.char {
+  display: inline-block;
+  width: 1.5rem;
+  height: 2rem;
+  overflow: hidden;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.separator {
+  color: #0000000f;
+  padding-left: 1px;
+}
+
+.normal {
+  color: #171717;
+  padding-left: 1px;
+}
+
+.custom-style {
+  font-weight: 700;
+  color: #000000;
+}
+
+.char.flip {
+  animation: flap 1s ease-in-out forwards;
+}
+
+@keyframes flap {
+  0%,
+  100% {
+    transform: rotateX(0deg);
   }
-  
-  .custom-style {
-    font-weight: 700;
-    color: #000000;
+  50% {
+    transform: rotateX(360deg);
   }
-  
-  .char.flip {
-    animation: flap 1s ease-in-out forwards;
+}
+
+.mainText {
+  margin: 10px 0;
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+#quote {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.project-char {
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.project-flip {
+  animation: projectFlipAnimation 1s ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes projectFlipAnimation {
+  0%,
+  100% {
+    transform: rotateX(0deg);
   }
-  
-  @keyframes flap {
-    0%,
-    100% {
-      transform: rotateX(0deg);
-    }
-    50% {
-      transform: rotateX(360deg);
-    }
+  50% {
+    transform: rotateX(360deg);
   }
-  
-  .mainText {
-    margin: 10px 0;
-    font-size: 2rem;
-    font-weight: 200;
-    text-align: center;
-  }
-  
-  #quote {
-    position: absolute;
-    bottom: 100px;
-    left: 100px;
-    font-size: 1.5rem;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .project-char {
-    display: inline-block;
-    perspective: 1000px;
-  }
-  
-  .project-flip {
-    animation: projectFlipAnimation 1s ease-in-out;
-    transform-origin: center;
-  }
-  
-  @keyframes projectFlipAnimation {
-    0%,
-    100% {
-      transform: rotateX(0deg);
-    }
-    50% {
-      transform: rotateX(360deg);
-    }
-  }
-  
+}

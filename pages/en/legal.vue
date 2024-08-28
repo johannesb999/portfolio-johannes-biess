@@ -2,7 +2,7 @@
   <html>
     <main>
       <div id="projectLinkStart">
-        <nuxt-link to="/en/contact" class="custom-link">CONTACT</nuxt-link>
+        <nuxt-link to="/en/contact" class="custom-link">Contact</nuxt-link>
       </div>
       
 

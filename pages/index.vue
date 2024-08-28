@@ -1,9 +1,9 @@
 <template>
   <html>
     <div class="container">
-      <div id="start">START</div>
+      <!-- <div id="start">START</div> -->
       <div id="aboutLink">
-        <nuxt-link to="/en/about" class="custom-link">ABOUT</nuxt-link>
+        <nuxt-link to="/en/about" class="custom-link">ABOUT ME</nuxt-link>
       </div>
       <div id="contactLink">
         <nuxt-link to="/en/contact" class="custom-link">CONTACT</nuxt-link>

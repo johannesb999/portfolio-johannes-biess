@@ -167,10 +167,10 @@ const animate = (index) => {
     const step = () => {
       if (item.current !== item.target) {
         item.current = getRandomChar();
-        setTimeout(step, 40);
+        setTimeout(step, 20);
       }
     };
-    setTimeout(step, idx * 30);
+    setTimeout(step, idx * 20);
   });
 };
 
