@@ -119,7 +119,6 @@ watch(
   justify-content: center;
   width: 100%;
   padding: 20px;
-  border: 1px solid #ccc;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 

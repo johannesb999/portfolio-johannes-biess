@@ -10,12 +10,11 @@
       <div class="contactMeText">
         <SplitFlapText
           :texts="[
-            '      |GITHUB|     ',
-            '            |LINKEDIN|    ',
-            '  TEAMWORK  ORGANISATION  ',
-            '     ADAPTILITY   ACCURACY',
-            'PUNCTUALITY  FAIRNESS     ',
-            '    CREATIVITY     TRUST  ',
+            '  I  WOULD  LOVE  TO   ',
+            '  HEAR  FROM    YOU    ',
+            '         |INSTAGRAM|     ',
+            '|GITHUB|         |EMAIL|   ',
+            '      |LINKEDIN|         ',
           ]"
         />
       </div>
