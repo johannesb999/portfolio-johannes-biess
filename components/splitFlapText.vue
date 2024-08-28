@@ -54,7 +54,7 @@ const props = defineProps({
   },
 });
 
-const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÜ1234567890";
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÜ3260";
 const showAlert = ref(false);
 
 function getRandomChar() {
@@ -167,10 +167,10 @@ const animate = (index) => {
     const step = () => {
       if (item.current !== item.target) {
         item.current = getRandomChar();
-        setTimeout(step, 20);
+        setTimeout(step, 2);
       }
     };
-    setTimeout(step, idx * 20);
+    setTimeout(step, idx * 2);
   });
 };
 

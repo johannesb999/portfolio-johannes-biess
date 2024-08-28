@@ -26,9 +26,37 @@ html {
     line-height: normal;
   }
   
-
+  #resumeLink {
+    color: #171717;
+    font-weight: 700;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: normal;
+    line-height: normal;
+  }
   
+  #startLinkAbout {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: 700;
+    right: 0;
+    padding-right: 20px;
+  }
   
+  .custom-link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .custom-link:hover {
+    color: black;
+    text-decoration: underline;
+  }
   
   .aboutMeText {
     display: flex;
@@ -54,17 +82,5 @@ html {
     font-weight: 300;
   }
   
-  .picture {
-    display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: 200;
-  text-align: left;
-  max-width: 600px;
-  max-width: 600px;
-  }
+  
   

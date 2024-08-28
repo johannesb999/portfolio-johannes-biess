@@ -2,14 +2,11 @@
   <html>
     <main>
       <div id="rightLink">
-        <nuxt-link to="/" class="custom-link">START</nuxt-link>
+        <nuxt-link to="about" class="custom-link">ABOUT</nuxt-link>
       </div>
-      <div id="bottomLink">
+      <!-- <div id="resumeLink">
         <nuxt-link to="resume" class="custom-link">PERSONAL RESUME</nuxt-link>
-      </div>
-      <div id="leftLink">
-        <nuxt-link to="/en/skillset" class="custom-link">SKILLSET</nuxt-link> 
-      </div>
+      </div> -->
       <div class="aboutMeText">
         <SplitFlapText
           :texts="[
@@ -21,21 +18,12 @@
           ]"
         />
       </div>
-
-      <div class="picture">
-        <img
-          style="border-radius: 10px"
-          src="https://via.placeholder.com/220x380"
-          alt="profilpicture"
-        />
-      </div>
     </main>
   </html>
 </template>
 
 <script setup>
 import SplitFlapText from "@/components/splitFlapText.vue";
-
 </script>
 
-<style src="assets/about.css"  scoped></style>
+<style src="assets/skillset.css" scoped></style>

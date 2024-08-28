@@ -224,4 +224,64 @@ html {
 .fade-leave-to {
   opacity: 0;
 }
+
+#bottomLink {
+  color: #171717;
+  font-weight: 700;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-style: normal;
+  line-height: normal;
+}
+
+
+#topLink {
+  position: absolute;
+  top: 0;
+  padding-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+
+#rightLink {
+  top: 50%;
+  right: 3%; /* Abstand vom rechten Rand */
+  transform: translateY(-50%);
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  text-orientation: mixed; 
+}
+
+#leftLink {
+  top: 50%;
+  left: 2.5%; /* Abstand vom linken Rand */
+  transform: translateY(-50%) rotate(180deg); /* Dreht den Text um 180 Grad */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.custom-link {
+  color: black;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  color: black;
+  text-decoration: underline;
+}
 </style>

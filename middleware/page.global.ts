@@ -1,22 +1,26 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const getDepth = (path: any) => {
-    return path.split("/").filter((seg: any) => seg.length > 0).length;
+  const getDepth = (path:any) => {
+    return path.split("/").filter((seg:any) => seg.length > 0).length;
   };
 
-  const checkSpecialRoutes = (path: any) => {
+  const checkSpecialRoutes = (path:any) => {
     if (path.includes("/contact")) {
       return "contact";
     } else if (path.includes("/about")) {
       return "about";
+    } else if (path.includes("/skillset")) {
+      return "skillset";
     } else if (path.includes("/project") || path.includes("/resume")) {
       return "project-resume";
     } else if (path.includes("/resume")) {
       return "resume";
+    } else if (path.includes("/legal")) {
+      return "legal";
     }
     return null;
   };
 
-  const checkKeywords = (path: any) => {
+  const checkKeywords = (path:any) => {
     if (
       path.includes("bosch") ||
       path.includes("hfg") ||
@@ -39,7 +43,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     "goEase",
   ];
 
-  const getPageName = (path: any) => {
+  const getPageName = (path:any) => {
     const segments = path.split("/");
     return segments.pop() || "index";
   };
@@ -120,6 +124,32 @@ export default defineNuxtRouteMiddleware((to, from) => {
     to.meta.pageTransition = { name: "page-down" };
     from.meta.pageTransition = { name: "page-down" };
     console.log("Transition name: page-down");
+    return;
+  }
+
+  // Spezifische Transition zwischen contact und legal
+  if (fromSpecial === "contact" && toSpecial === "legal") {
+    to.meta.pageTransition = { name: "page-up" };
+    from.meta.pageTransition = { name: "page-up" };
+    console.log("Transition name: page-up");
+    return;
+  } else if (fromSpecial === "legal" && toSpecial === "contact") {
+    to.meta.pageTransition = { name: "page-down" };
+    from.meta.pageTransition = { name: "page-down" };
+    console.log("Transition name: page-down");
+    return;
+  }
+
+  // Spezifische Transition zwischen about und skillset
+  if (fromSpecial === "about" && toSpecial === "skillset") {
+    to.meta.pageTransition = { name: "page-right" };
+    from.meta.pageTransition = { name: "page-right" };
+    console.log("Transition name: page-right");
+    return;
+  } else if (fromSpecial === "skillset" && toSpecial === "about") {
+    to.meta.pageTransition = { name: "page-left" };
+    from.meta.pageTransition = { name: "page-left" };
+    console.log("Transition name: page-left");
     return;
   }
 

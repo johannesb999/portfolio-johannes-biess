@@ -2,13 +2,13 @@
   <html>
     <div class="container">
       <!-- <div id="start">START</div> -->
-      <div id="aboutLink">
+      <div id="leftLink">
         <nuxt-link to="/en/about" class="custom-link">ABOUT ME</nuxt-link>
       </div>
-      <div id="contactLink">
+      <div id="rightLink">
         <nuxt-link to="/en/contact" class="custom-link">CONTACT</nuxt-link>
       </div>
-      <div id="projectLink">
+      <div id="bottomLink">
         <nuxt-link to="/en/project/projects" class="custom-link">
           <span
             v-for="(char, index) in 'PROJECTS'.split('')"

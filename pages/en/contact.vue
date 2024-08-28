@@ -1,8 +1,8 @@
 <template>
   <html>
     <main>
-      <div id="contact">CONTACT ME</div>
-      <div id="startLinkContact">
+      <!-- <div id="contact">CONTACT ME</div> -->
+      <div id="leftLink">
         <nuxt-link to="/" class="custom-link">START</nuxt-link>
       </div>
       <div id="resumeLink"></div>
@@ -28,4 +28,6 @@
 
 <script setup></script>
 
-<style src="assets/contact.css" scoped></style>
+<style src="assets/contact.css" scoped>
+
+</style>

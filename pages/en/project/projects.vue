@@ -1,7 +1,7 @@
 <template>
   <html>
     <main>
-      <div id="projectLinkStart">
+      <div id="topLink">
         <nuxt-link to="/" class="custom-link">START</nuxt-link>
       </div>
       <div id="projectLinkNext">
