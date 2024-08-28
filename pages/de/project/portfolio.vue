@@ -5,39 +5,39 @@
         <nuxt-link to="/" class="custom-link">START</nuxt-link>
       </div>
       <div id="projectLinkNext">
-        <nuxt-link to="/en/project/TrickyTowers" class="custom-link"
-          >TRICKYTOWERS</nuxt-link
+        <nuxt-link to="/de/project/drawingLight" class="custom-link"
+          >DRAWINGLIGHT</nuxt-link
         >
       </div>
       <div id="projectLinkBefore">
-        <nuxt-link to="/en/project/portfolio" class="custom-link"
-          >THIS WEBSITE</nuxt-link
+        <nuxt-link to="/de/project/simpleChat" class="custom-link"
+          >SIMPLECHAT</nuxt-link
         >
       </div>
 
       <div class="projectFlap">
         <SplitFlapText
           :texts="[
-            'MECHATRONICS      VALUES      ',
-            'TEAMWORK   PHOTOGRAPHY  CLARITY ',
-            'ANOTHER  ORGANISATION     ',
-            '     ARDUINO         ',
-            'CREATIVITY  LIGHTDRAWING      ',
+            '  NUXT3      FIGMA      ',
+            '   GITHUB   WIREFRAMES   ',
+            '   FUSION360  UI  UX     ',
+            '      VUE                ',
+            'OPENAI        AAAA       ',
           ]"
         />
       </div>
 
       <div class="projectText">
-        <div id="line1">DrawingLight</div>
+        <div id="line1">DIESE WEBSITE</div>
       </div>
       <div class="picture">
         <img
           style="border: 1px solid black; border-radius: 10px"
-          src="https://via.placeholder.com/500x500"
-          alt="DrawingLight"
+          src="public\img\po\test2.png"
+          alt="plantmonit"
         />
       </div>
-      <NuxtLink to="/en/project/details/DrawingLight" class="detailsLink"
+      <NuxtLink to="/en/project/details/Portfolio" class="detailsLink"
         >DETAILS</NuxtLink
       >
     </main>

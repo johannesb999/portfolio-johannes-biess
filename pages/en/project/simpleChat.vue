@@ -5,8 +5,8 @@
         <nuxt-link to="/" class="custom-link">START</nuxt-link>
       </div>
       <div id="projectLinkNext">
-        <nuxt-link to="/en/project/drawingLight" class="custom-link"
-          >DRAWINGLIGHT
+        <nuxt-link to="/en/project/portfolio" class="custom-link"
+          >THIS WEBSITE
         </nuxt-link>
       </div>
       <div id="projectLinkBefore">
@@ -18,10 +18,10 @@
       <div class="projectFlap">
         <SplitFlapText
           :texts="[
-            'ABOUT ME      VALUES      ',
-            'TEAMWORK   TRUST  CLARITY ',
-            'ANOTHER  ORGANISATION     ',
-            '     ADAPTABILITY         ',
+            'FIGMA      VALUES      ',
+            'WIREFRAMES   USERCENTERED ',
+            'ANOTHER  DESIGNMETHODS     ',
+            '     INTERVIEWS         ',
             ' PUNCTUALITY  FAIRNESS    ',
             'CREATIVITY  ACCURACY      ',
           ]"

@@ -33,6 +33,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     "projects",
     "jumpStar",
     "simpleChat",
+    "portfolio",
     "drawingLight",
     "trickyTowers",
     "goEase",
