@@ -6,7 +6,9 @@ html {
   bottom: 0;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
 }
+
 .detailsLink {
   color: black;
   font-weight: 300;
@@ -63,67 +65,35 @@ html {
   text-decoration: underline;
 }
 
-.projectText {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 30%;
-  left: 25.5%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  font-weight: 200;
-  text-align: left;
-
-  #line1 {
-    font-weight: 700;
-  }
-  #line2 {
-    font-weight: 300;
-  }
-}
-
-.projectFlap {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 32%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: 200;
-  text-align: left;
-
-  #line1 {
-    font-weight: 700;
-  }
-  #line2 {
-    font-weight: 300;
-  }
-  #line3 {
-    font-weight: 300;
-  }
-  #line4 {
-    font-weight: 300;
-  }
-  #line5 {
-    font-weight: 300;
-  }
-  #line6 {
-    font-weight: 700;
-  }
-}
-
+.projectText,
+.projectFlap,
 .wrapper {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 50%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 200;
   text-align: left;
+}
+
+.projectText {
+  top: 30%;
+  left: 25.5%;
+  transform: translate(-50%, -50%);
+}
+
+.projectFlap {
+  top: 50%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+.wrapper {
+  top: 50%;
+  left: 65%;
   max-width: 560px;
+  transform: translate(-50%, -50%);
 }
 
 .picture {
@@ -139,4 +109,133 @@ html {
   font-size: 1rem;
   font-weight: 200;
   text-align: left;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+  #projectLinkStart {
+    font-size: 1.75rem;
+  }
+
+  .projectText, .projectFlap, .wrapper {
+    font-size: 1.75rem;
+  }
+
+  .projectFlap {
+    left: 28%;
+  }
+
+  .wrapper {
+    left: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  #projectLinkStart {
+    font-size: 1.5rem;
+  }
+
+  .projectText, .projectFlap, .wrapper {
+    font-size: 1.5rem;
+  }
+
+  .projectFlap {
+    left: 28%;
+  }
+
+  .wrapper {
+    left: 60%;
+  }
+
+  .picture {
+    max-width: 100%;
+  }
+
+  .projectDescription {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #projectLinkStart {
+    font-size: 1.25rem;
+  }
+
+  .projectText, .projectFlap, .wrapper {
+    font-size: 1.25rem;
+  }
+
+  .projectText {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .projectFlap {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .wrapper {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+  }
+
+  .projectDescription {
+    font-size: 0.85rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .picture img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #projectLinkStart {
+    font-size: 1rem;
+  }
+
+  .detailsLink {
+    font-size: 1rem;
+  }
+
+  .projectText, .projectFlap, .wrapper {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .projectText, .projectFlap, .wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+
+  .wrapper {
+    top: 70%;
+    max-width: 90%;
+  }
+
+  .picture {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+
+  .projectDescription {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+
+  .picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }

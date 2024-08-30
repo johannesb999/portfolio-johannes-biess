@@ -10,24 +10,29 @@
       <div class="contactMeText">
         <SplitFlapText
           :texts="[
-            'I  WOULD  LOVE  TO     ',
-            'HEAR  FROM    YOU      ',
+            '        [CONTACT]        ',
+
             '[$GITHUB$]                 ',
             '[@EMAIL@]                  ',
             '[|LINKEDIN|]               ',
           ]"
         />
       </div>
+
+      <div id="quote">
+        “I would love to<br />
+        hear from you.”
+      </div>
+      <!-- 'I  WOULD  LOVE  TO     ',
+      'HEAR  FROM YOU VIA     ', -->
+
       <div id="impressum">
         <nuxt-link to="legal" class="custom-link">LEGAL INFORMATION</nuxt-link>
       </div>
-      
     </main>
   </html>
 </template>
 
 <script setup></script>
 
-<style src="assets/contact.css" scoped>
-
-</style>
+<style src="assets/contact.css" scoped></style>

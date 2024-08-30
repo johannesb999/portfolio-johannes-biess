@@ -21,16 +21,15 @@
           ]"
         />
       </div>
-
-      <div class="picture">
-        <img
-          style="border-radius: 10px"
-          src="https://via.placeholder.com/450x450"
-          alt="profilpicture"
-        />
-      </div>
-      <div id="quote">
-        “There is never<br />- too much cheese.”
+      <div class="wrapper">
+        <div class="picture">
+          <img
+            style="border-radius: 10px"
+            src="public\profilepicture.jpg"
+            alt="profilepicture"
+          />
+        </div>
+        <div id="quote">“There is never<br />- too much cheese.”</div>
       </div>
     </main>
   </html>

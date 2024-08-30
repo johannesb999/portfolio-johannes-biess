@@ -194,8 +194,7 @@ watch(
 );
 </script>
 
-<style scoped>
-.split-flap-text {
+<style scoped>.split-flap-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -210,6 +209,7 @@ watch(
   font-size: 1.5rem;
   font-weight: 200;
   text-align: left;
+  line-height: 2rem; /* Standard-Zeilenhöhe */
 }
 
 .char {
@@ -277,5 +277,64 @@ watch(
   opacity: 0.9;  
 }
 
+/* Responsive Design */
 
+@media (max-width: 992px) {
+  .mainText {
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+  }
+
+  .char {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+  }
+
+  .custom-alert {
+    top: 20rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainText {
+    font-size: 1.1rem;
+    line-height: 1.5rem; 
+  }
+
+  .char {
+    width: 1.1rem;
+    height: 1.1rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem; 
+  }
+
+  .custom-alert {
+    top: 18rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainText {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4rem; 
+  }
+
+  .char {
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+    line-height: 1.4rem; 
+  }
+
+  .custom-alert {
+    top: 16rem;
+    font-size: 0.7rem;
+    padding: 8px 16px;
+  }
+}
 </style>

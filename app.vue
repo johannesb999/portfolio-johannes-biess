@@ -59,8 +59,7 @@ watch(route, (newRoute) => {
 });
 </script>
 
-<style>
-html {
+<style>html {
   color: #171717;
   font-size: 14px;
   font-family: "Geologica", sans-serif;
@@ -107,20 +106,7 @@ html {
   background-color: #fbfbfb;
 }
 
-#en {
-  font-weight: 100;
-  font-size: 1.75rem;
-  background-color: #fbfbfb;
-}
-
-#de {
-  font-weight: 100;
-  font-size: 1.75rem;
-  background-color: #fbfbfb;
-}
-
-#line {
-  padding-bottom: 5px;
+#en, #de, #line {
   font-weight: 100;
   font-size: 1.75rem;
   background-color: #fbfbfb;
@@ -133,7 +119,6 @@ html {
   color: #dadada;
   border: none;
   line-height: 1rem;
-  
 }
 
 .language-switch button:disabled {
@@ -279,5 +264,70 @@ html {
 .custom-link:hover {
   color: black;
   text-decoration: underline;
+}
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+  .returnHome {
+    font-size: 1.75rem;
+    top: 30px;
+    left: 5%;
+  }
+
+  .language-switch {
+    top: 30px;
+    right: 5%;
+  }
+
+  #en, #de, #line {
+    font-size: 1.5rem;
+  }
+
+  #bottomLink, #topLink, #rightLink, #leftLink {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .returnHome {
+    font-size: 1.5rem;
+    top: 20px;
+    left: 5%;
+  }
+
+  .language-switch {
+    top: 20px;
+    right: 5%;
+  }
+
+  #en, #de, #line {
+    font-size: 1.25rem;
+  }
+
+  #bottomLink, #topLink, #rightLink, #leftLink {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .returnHome {
+    font-size: 1.25rem;
+    top: 15px;
+    left: 10%;
+  }
+
+  .language-switch {
+    top: 15px;
+    right: 10%;
+  }
+
+  #en, #de, #line {
+    font-size: 1rem;
+  }
+
+  #bottomLink, #topLink, #rightLink, #leftLink {
+    font-size: 1.25rem;
+  }
 }
 </style>
