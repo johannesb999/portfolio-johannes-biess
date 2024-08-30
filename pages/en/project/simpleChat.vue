@@ -18,25 +18,32 @@
       <div class="projectFlap">
         <SplitFlapText
           :texts="[
-            'FIGMA      VALUES      ',
+            '       [SIMPLECHAT]       ',
+            '   FIGMA      PROTOTYPE   ',
             'WIREFRAMES   USERCENTERED ',
-            'ANOTHER  DESIGNMETHODS     ',
-            '     INTERVIEWS         ',
-            ' PUNCTUALITY  FAIRNESS    ',
-            'CREATIVITY  ACCURACY      ',
+            '   VOICE OF THE CUSTOMER  ',
+            '     USER INTERVIEWS      ',
+            'FIGMA      DESIGN THINKING',
           ]"
         />
       </div>
 
-      <div class="projectText">
-        <div id="line1">SIMPLECHAT</div>
-      </div>
-      <div class="picture">
-        <img
-          style="border: 1px solid black; border-radius: 10px"
-          src="https://via.placeholder.com/500x500"
-          alt="plantmonit"
-        />
+      <div class="wrapper">
+        <div class="picture">
+          <img
+            style="border: 1px solid black; border-radius: 10px"
+            src="public\img\pm\pm4.svg"
+            alt="SimpleChat"
+          />
+        </div>
+        <div class="projectDescription">
+          <p>
+            The aim of the project was to redesign and rethink the the currently
+            used Chatroom by my School Slack. The goal was to create a more
+            user-centered and intuitive platform to improve the communication
+            beetween school, students and alumnis... <br />
+          </p>
+        </div>
       </div>
       <NuxtLink to="/en/project/details/SimpleChat" class="detailsLink"
         >DETAILS

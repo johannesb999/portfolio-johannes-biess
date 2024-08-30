@@ -1,70 +1,73 @@
 /* about.css */
 html {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-  }
-  
-  #resumeBar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  #aboutMe {
-    color: black;
-    font-weight: 100;
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 50px;
-    font-style: normal;
-    line-height: normal;
-  }
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
 
-  
-  
-  
-  .aboutMeText {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: 200;
-    text-align: left;
-  }
-  
-  .aboutMeText #line1 {
-    font-weight: 700;
-  }
-  
-  .aboutMeText #line2,
-  .aboutMeText #line3,
-  .aboutMeText #line4,
-  .aboutMeText #line5,
-  .aboutMeText #line6 {
-    font-weight: 300;
-  }
-  
-  .picture {
-    display: flex;
+#resumeBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#aboutMe {
+  color: black;
+  font-weight: 100;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 50px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.aboutMeText {
+  display: flex;
   flex-direction: column;
   position: absolute;
   top: 50%;
-  left: 65%;
+  left: 32%;
   transform: translate(-50%, -50%);
   font-size: 24px;
   font-weight: 200;
   text-align: left;
-  max-width: 600px;
-  max-width: 600px;
-  }
-  
+}
+
+.aboutMeText #line1 {
+  font-weight: 700;
+}
+
+.aboutMeText #line2,
+.aboutMeText #line3,
+.aboutMeText #line4,
+.aboutMeText #line5,
+.aboutMeText #line6 {
+  font-weight: 300;
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  max-width: 550px;
+}
+
+#quote {
+  position: absolute;
+  /* bottom: 6.25rem;
+  left: 105.25rem; */
+  top: 79%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-style: italic;
+}

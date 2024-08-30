@@ -164,15 +164,22 @@ const textArrays = ref(props.texts.map(createTextArray));
 
 const animate = (index) => {
   textArrays.value[index].forEach((item, idx) => {
+    const maxSteps = 13; 
+    let currentStep = 0;
+
     const step = () => {
-      if (item.current !== item.target) {
+      if (item.current !== item.target && currentStep < maxSteps) {
         item.current = getRandomChar();
-        setTimeout(step, 2);
+        currentStep++;
+        setTimeout(step, 500 / maxSteps); 
+      } else {
+        item.current = item.target; 
       }
     };
-    setTimeout(step, idx * 2);
+    setTimeout(step, idx * (500 / maxSteps));
   });
 };
+
 
 onMounted(() => {
   textArrays.value.forEach((_, index) => animate(index));

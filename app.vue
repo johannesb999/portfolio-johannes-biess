@@ -92,7 +92,7 @@ html {
   text-decoration: none;
   position: absolute;
   top: 50px;
-  left: 2%;
+  left: 2.3%;
   z-index: 100;
   background-color: #fbfbfb;
 }
@@ -100,7 +100,7 @@ html {
 .language-switch {
   position: absolute;
   top: 50px;
-  right: 3%;
+  right: 2.3%;
   display: flex;
   align-items: center;
   z-index: 100;
@@ -133,6 +133,7 @@ html {
   color: #dadada;
   border: none;
   line-height: 1rem;
+  
 }
 
 .language-switch button:disabled {
@@ -237,7 +238,6 @@ html {
   line-height: normal;
 }
 
-
 #topLink {
   position: absolute;
   top: 0;
@@ -249,30 +249,26 @@ html {
   text-align: center;
 }
 
-
-
 #rightLink {
   top: 50%;
-  right: 3%; /* Abstand vom rechten Rand */
+  right: 2.3%;
   transform: translateY(-50%);
   position: absolute;
   font-size: 2rem;
   font-weight: 700;
   writing-mode: vertical-rl;
-  text-orientation: mixed; 
+  text-orientation: mixed;
 }
 
 #leftLink {
   top: 50%;
-  left: 2.5%; /* Abstand vom linken Rand */
-  transform: translateY(-50%) rotate(180deg); /* Dreht den Text um 180 Grad */
+  left: 2.3%;
+  transform: translateY(-50%) rotate(180deg);
   writing-mode: vertical-rl;
   text-orientation: mixed;
   position: absolute;
   font-size: 2rem;
   font-weight: 700;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
 }
 
 .custom-link {

@@ -17,25 +17,32 @@
       <div class="projectFlap">
         <SplitFlapText
           :texts="[
-            'ABOUT ME      VALUES      ',
-            'TEAMWORK   TRUST  CLARITY ',
-            'ANOTHER  ORGANISATION     ',
-            '     ADAPTABILITY         ',
-            ' PUNCTUALITY  FAIRNESS    ',
-            'CREATIVITY  ACCURACY      ',
+            '        [JUMPSTAR]        ',
+            'THREEJS     SERVERHOSTING ',
+            '  WEB DEPLOYMENT  PIPELINE',
+            '  DOCKER       SVELTE     ',
+            ' CLOUDFLARE      PORTAINER',
+            'MONGOOSE    GITHUB ACTIONS',
           ]"
         />
       </div>
 
-      <div class="projectText">
-        <div id="line1">JumpStar</div>
-      </div>
-      <div class="picture">
-        <img
-          style="border: 1px solid black; border-radius: 10px"
-          src="https://via.placeholder.com/500x500"
-          alt="JumpStar"
-        />
+      <div class="wrapper">
+        <div class="picture">
+          <img
+            style="border: 1px solid black; border-radius: 10px"
+            src="public\img\pm\pm4.svg"
+            alt="plantmonit"
+          />
+        </div>
+        <div class="projectDescription">
+          <p>
+            With our website we want to present the scientific view of
+            horoscopes and astrology. We show that star signs are constructed
+            concepts that have no scientific basis and therefore have no impact
+            on people or our everyday lives...
+          </p>
+        </div>
       </div>
       <NuxtLink to="/en/project/details/JumpStar" class="detailsLink"
         >DETAILS</NuxtLink

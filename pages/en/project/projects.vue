@@ -14,10 +14,10 @@
           >GOEASE</nuxt-link
         >
       </div>
-
       <div class="projectFlap">
         <SplitFlapText
           :texts="[
+            '       [PLANTMONIT]        ',
             '  SVELTE      FIGMA      ',
             '   ESP32   WIREFRAMES    ',
             '   FUSION360  UI  UX     ',
@@ -27,16 +27,30 @@
         />
       </div>
 
-      <div class="projectText">
+      <!-- <div class="projectText">
         <div id="line1">PLANTMONIT</div>
+      </div> -->
+      <div class="wrapper">
+        <div class="picture">
+          <img
+            style="border: 1px solid black; border-radius: 10px"
+            src="public\img\pm\pm4.svg"
+            alt="plantmonit"
+          />
+        </div>
+        <div class="projectDescription">
+          <p>
+            The aim of the project was to revolutionize the care of plants.
+            Thanks to new technological possibilities and corresponding sensors
+            PlantMonit continuously captures images of the plant and important
+            Parameters such as soil moisture, humidity, temperature and Lighting
+            conditions. These are created by artificial intelligence "Buddy"
+            analyzed and classified. Buddy enables a simple efficient and
+            optimal care of the Green Friends....<br />
+          </p>
+        </div>
       </div>
-      <div class="picture">
-        <img
-          style="border: 1px solid black; border-radius: 10px"
-          src="public\img\pm\pm4.svg"
-          alt="plantmonit"
-        />
-      </div>
+
       <NuxtLink to="/en/project/details/PlantMonit" class="detailsLink"
         >DETAILS</NuxtLink
       >

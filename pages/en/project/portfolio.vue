@@ -18,25 +18,36 @@
       <div class="projectFlap">
         <SplitFlapText
           :texts="[
-            '  NUXT3      FIGMA      ',
+            '        [PORTFOLIO]        ',
             '   GITHUB   WIREFRAMES   ',
             '   FUSION360  UI  UX     ',
             '      VUE                ',
-            'OPENAI        AAAA       ',
+            'OPENAI        DEPLOYMENT  ',
           ]"
         />
       </div>
 
-      <div class="projectText">
-        <div id="line1">THIS WEBSITE</div>
+      <div class="wrapper">
+        <div class="picture">
+          <img
+            style="border: 1px solid black; border-radius: 10px"
+            src="public\img\pm\pm4.svg"
+            alt="plantmonit"
+          />
+        </div>
+        <div class="projectDescription">
+          <p>
+            The aim of the project was to revolutionize the care of plants.
+            Thanks to new technological possibilities and corresponding sensors
+            PlantMonit continuously captures images of the plant and important
+            Parameters such as soil moisture, humidity, temperature and Lighting
+            conditions. These are created by artificial intelligence "Buddy"
+            analyzed and classified. Buddy enables a simple efficient and
+            optimal care of the Green Friends....<br />
+          </p>
+        </div>
       </div>
-      <div class="picture">
-        <img
-          style="border: 1px solid black; border-radius: 10px"
-          src="public\img\po\test2.png"
-          alt="plantmonit"
-        />
-      </div>
+
       <NuxtLink to="/en/project/details/Portfolio" class="detailsLink"
         >DETAILS</NuxtLink
       >
