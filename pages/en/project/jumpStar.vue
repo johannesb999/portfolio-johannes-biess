@@ -31,7 +31,7 @@
         <div class="picture">
           <img
             style="border: 1px solid black; border-radius: 10px"
-            src="public\img\pm\pm4.svg"
+            src="public\img\js\js.svg"
             alt="plantmonit"
           />
         </div>
