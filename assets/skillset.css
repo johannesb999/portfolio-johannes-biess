@@ -62,25 +62,15 @@ html {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
     font-weight: 200;
     text-align: left;
+    width: 60%;
+    align-items: center;
   }
   
-  .aboutMeText #line1 {
-    font-weight: 700;
-  }
-  
-  .aboutMeText #line2,
-  .aboutMeText #line3,
-  .aboutMeText #line4,
-  .aboutMeText #line5,
-  .aboutMeText #line6 {
-    font-weight: 300;
-  }
   
   
   

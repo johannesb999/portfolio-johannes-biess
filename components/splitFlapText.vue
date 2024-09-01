@@ -39,10 +39,10 @@
   </div>
   <!-- Benachrichtigung mit dynamischer Klasse -->
   <div :class="['custom-alert', { show: showAlert }]">
-  EMAIL COPIED<br> TO CLIPBOARD
+    EMAIL COPIED<br />
+    TO CLIPBOARD
   </div>
 </template>
-
 
 <script setup>
 import { ref, onMounted, watch } from "vue";
@@ -159,30 +159,64 @@ function copyEmailToClipboard() {
   }
 }
 
-
 const textArrays = ref(props.texts.map(createTextArray));
 
 const animate = (index) => {
   textArrays.value[index].forEach((item, idx) => {
-    const maxSteps = 13; 
+    const maxSteps = 13;
     let currentStep = 0;
 
     const step = () => {
       if (item.current !== item.target && currentStep < maxSteps) {
         item.current = getRandomChar();
         currentStep++;
-        setTimeout(step, 500 / maxSteps); 
+        setTimeout(step, 500 / maxSteps);
       } else {
-        item.current = item.target; 
+        item.current = item.target;
       }
     };
     setTimeout(step, idx * (500 / maxSteps));
   });
 };
 
+// Funktion zum Zurücksetzen und erneuten Animieren der Link-Buchstaben
+const resetAndAnimateLinks = () => {
+  textArrays.value.forEach((textArray) => {
+    textArray.forEach((item) => {
+      if (item.isLink) {
+        item.current = getRandomChar(); // Setzt den aktuellen Wert auf ein zufälliges Zeichen
+      }
+    });
+  });
+
+  // Nach dem Zurücksetzen animieren
+  textArrays.value.forEach((textArray, idx) => {
+    textArray.forEach((item, itemIdx) => {
+      if (item.isLink) {
+        const maxSteps = 13;
+        let currentStep = 0;
+
+        const step = () => {
+          if (item.current !== item.target && currentStep < maxSteps) {
+            item.current = getRandomChar();
+            currentStep++;
+            setTimeout(step, 700 / maxSteps);
+          } else {
+            item.current = item.target;
+          }
+        };
+        setTimeout(step, itemIdx * (500 / maxSteps));
+      }
+    });
+  });
+};
 
 onMounted(() => {
   textArrays.value.forEach((_, index) => animate(index));
+
+  setInterval(() => {
+    resetAndAnimateLinks();
+  }, 6000);
 });
 
 watch(
@@ -194,7 +228,8 @@ watch(
 );
 </script>
 
-<style scoped>.split-flap-text {
+<style scoped>
+.split-flap-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -262,19 +297,19 @@ watch(
   top: 22rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fbfbfb; 
-  color: #171717; 
+  background-color: #fbfbfb;
+  color: #171717;
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   z-index: 1000;
-  opacity: 0;  
-  transition: opacity 0.5s ease-in-out;  
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .custom-alert.show {
-  opacity: 0.9;  
+  opacity: 0.9;
 }
 
 /* Responsive Design */
@@ -282,14 +317,14 @@ watch(
 @media (max-width: 992px) {
   .mainText {
     font-size: 1.25rem;
-    line-height: 1.75rem; 
+    line-height: 1.75rem;
   }
 
   .char {
     width: 1.25rem;
     height: 1.25rem;
     font-size: 1.25rem;
-    line-height: 1.75rem; 
+    line-height: 1.75rem;
   }
 
   .custom-alert {
@@ -301,14 +336,14 @@ watch(
 @media (max-width: 768px) {
   .mainText {
     font-size: 1.1rem;
-    line-height: 1.5rem; 
+    line-height: 1.5rem;
   }
 
   .char {
     width: 1.1rem;
     height: 1.1rem;
     font-size: 1.1rem;
-    line-height: 1.5rem; 
+    line-height: 1.5rem;
   }
 
   .custom-alert {
@@ -321,14 +356,14 @@ watch(
   .mainText {
     font-size: 1rem;
     text-align: center;
-    line-height: 1.4rem; 
+    line-height: 1.4rem;
   }
 
   .char {
     width: 1rem;
     height: 1rem;
     font-size: 1rem;
-    line-height: 1.4rem; 
+    line-height: 1.4rem;
   }
 
   .custom-alert {

@@ -1,7 +1,6 @@
 <template>
   <html>
     <div class="container">
-      <!-- <div id="start">START</div> -->
       <div id="leftLink">
         <nuxt-link to="/en/about" class="custom-link">ABOUT ME</nuxt-link>
       </div>
@@ -111,20 +110,22 @@ const maxLength = Math.max(...texts.map(getTextLengthWithoutBrackets));
 const textArrays = ref(texts.map((text) => createTextArray(text, maxLength)));
 const hasAnimated = ref(new Array(texts.length).fill(false));
 
-const animateOnce = (index) => {
-  if (!hasAnimated.value[index]) {
-    textArrays.value[index].forEach((item, idx) => {
-      if (item.isSeparator) return;
-      const step = () => {
-        if (item.current !== item.target) {
-          item.current = getRandomChar();
-          setTimeout(step, 40);
-        }
-      };
-      setTimeout(step, idx * 40);
-    });
-    hasAnimated.value[index] = true;
-  }
+const animate = (index) => {
+  const maxSteps = 13;
+  textArrays.value[index].forEach((item, idx) => {
+    let currentStep = 0;
+
+    const step = () => {
+      if (item.current !== item.target && currentStep < maxSteps) {
+        item.current = getRandomChar();
+        currentStep++;
+        setTimeout(step, 500 / maxSteps);
+      } else {
+        item.current = item.target;
+      }
+    };
+    setTimeout(step, idx * (500 / maxSteps));
+  });
 };
 
 const animateBottomLineNewWord = () => {
@@ -134,23 +135,21 @@ const animateBottomLineNewWord = () => {
   textArrays.value[bottomIndex] = createTextArray(word, maxLength);
 
   textArrays.value[bottomIndex].forEach((item, idx) => {
-    if (item.isSeparator) return;
+    let currentStep = 0;
+    const maxSteps = 13;
+
     const step = () => {
-      if (item.current !== item.target) {
+      if (item.current !== item.target && currentStep < maxSteps) {
         item.current = getRandomChar();
-        setTimeout(step, 40);
+        currentStep++;
+        setTimeout(step, 500 / maxSteps);
+      } else {
+        item.current = item.target;
       }
     };
-    setTimeout(step, idx * 40);
+    setTimeout(step, idx * (500 / maxSteps));
   });
 };
-
-onMounted(() => {
-  textArrays.value.forEach((_, index) => animateOnce(index));
-  setInterval(() => {
-    animateBottomLineNewWord();
-  }, 6000);
-});
 
 const debounce = (func, wait) => {
   let timeout;
@@ -164,6 +163,8 @@ const debounce = (func, wait) => {
   };
 };
 
+const isAnimating = ref(false);
+
 const handleWheel = debounce((event) => {
   if (event.deltaY > 0 && !isAnimating.value) {
     isAnimating.value = true;
@@ -174,16 +175,13 @@ const handleWheel = debounce((event) => {
   }
 }, 200);
 
-const isAnimating = ref(false);
-
 const triggerSplitFlapAnimation = () => {
   const projectLinkCharacters = document.querySelectorAll(
-    "#projectLink .project-char"
+    "#bottomLink .project-char"
   );
+
   animateCharacters(projectLinkCharacters);
-  textArrays.value.forEach((textArray) => {
-    animateCharacters(textArray.map((x) => x.element));
-  });
+  textArrays.value.forEach((textArray, index) => animate(index));
 };
 
 const animateCharacters = (characters) => {
@@ -196,6 +194,35 @@ const animateCharacters = (characters) => {
     }, index * 100);
   });
 };
+
+onMounted(() => {
+  textArrays.value.forEach((_, index) => animate(index));
+  setInterval(() => {
+    animateBottomLineNewWord();
+  }, 6000);
+
+  window.addEventListener("wheel", handleWheel);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("wheel", handleWheel);
+});
 </script>
 
-<style scoped></style>
+<style scoped>
+.project-flip {
+  animation: flip 0.6s forwards;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+</style>

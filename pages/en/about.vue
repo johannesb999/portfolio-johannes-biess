@@ -7,17 +7,17 @@
       <div id="bottomLink">
         <nuxt-link to="resume" class="custom-link">PERSONAL RESUME</nuxt-link>
       </div>
-      <div id="leftLink">
+      <!-- <div id="leftLink">
         <nuxt-link to="/en/skillset" class="custom-link">SKILLSET</nuxt-link>
-      </div>
+      </div> -->
       <div class="aboutMeText">
         <SplitFlapText
           :texts="[
-            '      [ABOUT] [MY] [VALUES]     ',
-            '  TEAMWORK  ORGANISATION  ',
-            '     ADAPTILITY   ACCURACY',
-            'PUNCTUALITY  FAIRNESS     ',
-            '    CREATIVITY     TRUST  ',
+            '         [ABOUT]  [ME]         ',
+            '   TEAMWORK   AGILE        ',
+            '      ADAPTILITY   ACCURACY',
+            'PUNCTUALITY   FAIRNESS     ',
+            '     CREATIVITY     TRUST  ',
           ]"
         />
       </div>

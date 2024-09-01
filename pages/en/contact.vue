@@ -10,18 +10,17 @@
       <div class="contactMeText">
         <SplitFlapText
           :texts="[
-            '        [CONTACT]        ',
-
-            '[$GITHUB$]                 ',
-            '[@EMAIL@]                  ',
-            '[|LINKEDIN|]               ',
+            '        [CONTACT]       ',
+            '            $GITHUB$    ',
+            '  @EMAIL@               ',
+            '         |LINKEDIN|     ',
           ]"
         />
       </div>
 
       <div id="quote">
         “I would love to<br />
-        hear from you.”
+        -hear from you.”
       </div>
       <!-- 'I  WOULD  LOVE  TO     ',
       'HEAR  FROM YOU VIA     ', -->
