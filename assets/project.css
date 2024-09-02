@@ -11,7 +11,7 @@ html {
 
 .detailsLink {
   color: black;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 2rem;
   text-align: center;
   position: absolute;
@@ -20,6 +20,10 @@ html {
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
+}
+
+.detailsLink:hover {
+  text-decoration: underline;
 }
 
 #projectLinkStart {
@@ -101,6 +105,8 @@ html {
   flex-direction: column;
   max-width: 550px;
   padding-bottom: 1rem;
+  overflow: hidden;
+
 }
 
 .projectDescription {
@@ -118,7 +124,9 @@ html {
     font-size: 1.75rem;
   }
 
-  .projectText, .projectFlap, .wrapper {
+  .projectText,
+  .projectFlap,
+  .wrapper {
     font-size: 1.75rem;
   }
 
@@ -136,7 +144,9 @@ html {
     font-size: 1.5rem;
   }
 
-  .projectText, .projectFlap, .wrapper {
+  .projectText,
+  .projectFlap,
+  .wrapper {
     font-size: 1.5rem;
   }
 
@@ -162,7 +172,9 @@ html {
     font-size: 1.25rem;
   }
 
-  .projectText, .projectFlap, .wrapper {
+  .projectText,
+  .projectFlap,
+  .wrapper {
     font-size: 1.25rem;
   }
 
@@ -206,12 +218,16 @@ html {
     font-size: 1rem;
   }
 
-  .projectText, .projectFlap, .wrapper {
+  .projectText,
+  .projectFlap,
+  .wrapper {
     font-size: 1rem;
     text-align: center;
   }
 
-  .projectText, .projectFlap, .wrapper {
+  .projectText,
+  .projectFlap,
+  .wrapper {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

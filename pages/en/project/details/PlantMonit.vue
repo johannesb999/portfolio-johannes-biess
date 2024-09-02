@@ -12,13 +12,23 @@
           
         </div>
         <div class="project-header">
-          <h1 class="project-title">PLANTMONIT</h1>
+          <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>PLANTMONIT<span>HGBBVSAIHJTJGEUMJAUD</span></h1>
+
+          <SplitFlapText
+          :texts="[
+            '         [TIME]           ',
+            '     SECOND  SEMSTER    ',
+            '       TWO MONTHS       ',
+            '         [GRADE]          ',
+            '          1.0           ',
+          ]"
+        />
         </div>
 
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>PROBLEM</h2>
+              <h2>PROBLEM<span>GBUDAHAJKSBVFGKHAPOIVBAKSJHKAK</span></h2>
               <p>
                 In our hectic daily lives, there is often little time left for
                 the care of indoor and garden plants. Many people, especially
@@ -49,7 +59,7 @@
               <img src="public\img\pm\process.svg" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2>PROCESS</h2>
+              <h2>PROCESS<span>GBUDAHAJKSBVFGKHAPOIVBAKSJHKAK</span></h2>
               <p>
                 Our approach to developing PlantMonit followed a structured and
                 iterative process, ensuring that we addressed both technical and
@@ -150,7 +160,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>SOLUTION</h2>
+              <h2>SOLUTION<span>GBUDAHAJKSBVFGKHAPOIVBAKSJHKAK</span></h2>
               <p>
                 Through this structured, methodical approach, we developed a
                 product that meets our target audience's needs and significantly
@@ -174,12 +184,14 @@
                 healthy.
               </p>
             </div>
-            <div class="image">
+            <div class="image medium">
               <img src="public\img\pm\PlantInRoom.svg" alt="plantmonit" />
             </div>
           </div>
         </div>
         <div class="project-section">
+          <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>WATCH<span>HGBBVSAIHJTJGEUMJAUD</span><br><br></h1>
+
           <div class="project-video">
             <iframe
               src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
