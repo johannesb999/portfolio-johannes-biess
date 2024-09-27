@@ -20,19 +20,7 @@
             <div class="text">
               <h2>APPRENTICESHIP<span>GBUFKUZTFGHJARNZGKHAK</span></h2>
               <p>
-                During my time at HfG, I worked on
-                <nuxt-link to="/en/project/projects" class="custom-link"
-                  >projects</nuxt-link
-                >
-                that were practical from the start.<br />
-                I was encouraged to dive deep into fundamental questions like:
-                What’s worth developing? How can I make sure it meets user
-                needs? What technologies are necessary, and how do I use them
-                effectively? HfG created an inspiring learning environment where
-                I could not only build up my design and tech skills, but also
-                learn how to apply them in real-world projects.
-
-                <br /><br />
+               beschreibung zu meiner ausbildung bei d-tack Zeugnis als Download anbieten
               </p>
             </div>
             <div class="imageSplit">
