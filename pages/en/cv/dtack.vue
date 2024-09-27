@@ -1,128 +1,83 @@
 <template>
-  <main>
-    <div id="resumeLinkHfg">
-      <nuxt-link to="/en/resume" class="custom-link"
-      >Curriculum vitae</nuxt-link
-    >    </div>
-    
-   
-    <div class="hfgText">
-      <SplitFlapText
-        :texts="[
-          'D-TACK      LEARNINGS      ',
-          'FIGMA   UX        UI    ',
-          'PROTOTYPING  USABILITY  ',
-          '     DESIGNTHINKING         ',
-          ' USER CENTERED  LEANDESIGN    ',
-          'FULLSTACK DEVELOPMENT   ',
-        ]"
-      />
-    </div>
+  <html>
+    <main>
+      <div id="projectLinkStart">
+        <nuxt-link to="/en/resume" class="custom-link">CV</nuxt-link>
+      </div>
 
-    
-   
-  </main>
+      <div class="project-details">
+        <div class="project-section"></div>
+        <div class="project-header">
+          <h1 class="project-title">
+            <span>UZHJHJUDAUD</span>D-TACK GMBH<span
+              >JGEUMJAUD</span
+            >
+          </h1>
+        </div>
+
+        <div class="project-section">
+          <div class="project-content">
+            <div class="text">
+              <h2>APPRENTICESHIP<span>GBUFKUZTFGHJARNZGKHAK</span></h2>
+              <p>
+                During my time at HfG, I worked on
+                <nuxt-link to="/en/project/projects" class="custom-link"
+                  >projects</nuxt-link
+                >
+                that were practical from the start.<br />
+                I was encouraged to dive deep into fundamental questions like:
+                What’s worth developing? How can I make sure it meets user
+                needs? What technologies are necessary, and how do I use them
+                effectively? HfG created an inspiring learning environment where
+                I could not only build up my design and tech skills, but also
+                learn how to apply them in real-world projects.
+
+                <br /><br />
+              </p>
+            </div>
+            <div class="imageSplit">
+              <SplitFlapText
+                :texts="[
+                  '        [LEARNINGS]      ',
+                  'TEAMWORK    UX        UI    ',
+                  'PROTOTYPING  USABILITY   ',
+                  '     DESIGNTHINKING      ',
+                  ' USER CENTERED LEANDESIGN',
+                  '  FULLSTACK DEVELOPMENT  ',
+                ]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section-reverse">
+          <div class="project-content">
+            <div class="image small">
+              <img src="public\img\cv\dtack.jpg" alt="plantmonit" />
+            </div>
+            <div class="text">
+              <h2>ABOUT DTACK<span>GBTRUZTJKKJHGREDFUIK</span></h2>
+              <p>
+               
+                The University of Design (HfG) has really shaped my skills in
+                design and development. At this well-known university in
+                Germany, I didn’t just learn theory, but also got hands-on
+                experience that has prepared me for the working world. The
+                practical, project-based teaching gave me early insights into
+                real-world work processes. What stood out to me the most was the
+                focus on teamwork, which helped me improve my skills in a
+                collaborative setting. Thanks to the iterative approach in
+                teaching, I was able to learn all the steps from the initial
+                concept to the finished prototype.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </html>
 </template>
 
-<script setup>
-import SplitFlapText from "@/components/splitFlapText.vue";
-</script>
+<script setup></script>
 
-<style scoped>
-#resumeBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
-main {
-  height: 100%;
-  width: 100%;
-}
-
-#hfg {
-  color: black;
-  font-weight: 300;
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 50px;
-  font-style: normal;
-  line-height: normal;
-}
-
-#resumeLink {
-  color: #171717;
-  font-weight: 700;
-  font-size: 2rem;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-style: normal;
-  line-height: normal;
-}
-
-#resumeLinkHfg {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-#resumeLinkHfg {
-  right: 0;
-  padding-right: 20px;
-}
-
-.custom-link {
-  color: black;
-  text-decoration: none;
-}
-
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
-
-.hfgText {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: 200;
-  text-align: left;
-
-  #line1 {
-    font-weight: 700;
-  }
-  #line2 {
-    font-weight: 300;
-  }
-  #line3 {
-    font-weight: 300;
-  }
-  #line4 {
-    font-weight: 300;
-  }
-  #line5 {
-    font-weight: 300;
-  }
-  #line6 {
-    font-weight: 300;
-  }
-}
-
-.picture {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  padding-left: 10rem;
-  transform: translateY(-50%);
-}
-</style>
+<style src="assets/cv.css" scoped></style>

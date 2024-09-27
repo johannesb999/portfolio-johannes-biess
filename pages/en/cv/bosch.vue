@@ -1,125 +1,76 @@
 <template>
-  <main>
-    <div id="resumeLinkHfg">
-      <nuxt-link to="/en/resume" class="custom-link"
-        >Curriculum vitae</nuxt-link
-      >
-    </div>
+  <html>
+    <main>
+      <div id="projectLinkStart">
+        <nuxt-link to="/en/resume" class="custom-link">CV</nuxt-link>
+      </div>
 
-    <div class="hfgText">
-      <SplitFlapText
-        :texts="[
-          'BOSCH      LEARNINGS      ',
-          'FIGMA   UX        UI    ',
-          'PROTOTYPING  USABILITY  ',
-          '     DESIGNTHINKING         ',
-          ' USER CENTERED  LEANDESIGN    ',
-          'FULLSTACK DEVELOPMENT   ',
-        ]"
-      />
-    </div>
-  </main>
+      <div class="project-details">
+        <div class="project-section"></div>
+        <div class="project-header">
+          <h1 class="project-title">
+            <span>UZHJHASGBVSAIJUDAUD</span>BOSCH<span
+              >HGBBVSAIHJTJGEUMJAUD</span
+            >
+          </h1>
+        </div>
+
+        <div class="project-section">
+          <div class="project-content">
+            <div class="text">
+              <h2>WORKINGSTUDENT<span>GBUFKUZTFGHJARNZGKHAK</span></h2>
+              <p>
+                Als Werkstudent bei Bosch Automotive Steering GmbH konnte ich
+                ein Jahr lang meine Kenntnisse in der Softwareentwicklung und im
+                agilen Projektmanagement vertiefen. Während meiner Zeit bei
+                Bosch habe ich tiefgehende Kenntnisse in als JIRA Administrator
+                erlangen können und konnte so helfen Prozesse im Team zu
+                optimieren.
+
+                <br /><br />
+              </p>
+            </div>
+            <div class="imageSplit">
+              <SplitFlapText
+                :texts="[
+                  '        [LEARNINGS]       ',
+                  '    JIRA     DOCUPEDIA  ',
+                  '      SCRUM       AGILE ',
+                  '     PROCESS DESIGN     ',
+                  ' CONFLUENCE     KANBAN  ',
+                  '   TICKETING SYSTEMS    ',
+                ]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section-reverse">
+          <div class="project-content">
+            <div class="image small">
+              <img src="public\img\cv\bosch.jpg" alt="plantmonit" />
+            </div>
+            <div class="text">
+              <h2>ABOUT BOSCH VM GMBH<span>GBTRRHKAK</span></h2>
+              <p>
+                The Schwäbisch Gmünd site is the lead plant of the Vehicle
+                Motion Vehicle Motion division and comprises the competence
+                competence center for development, central functions and
+                production. production. A passion for steering unites around
+                4,000 employees employees from different nations in various
+                fields of activity and different fields of activity and three
+                sub-plants. Safe, comfortable and innovative steering systems
+                are manufactured for the global passenger car and commercial
+                vehicle market.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </html>
 </template>
 
-<script setup>
-import SplitFlapText from "@/components/splitFlapText.vue";
-</script>
+<script setup></script>
 
-<style scoped>
-#resumeBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
-main {
-  height: 100%;
-  width: 100%;
-}
-
-#hfg {
-  color: black;
-  font-weight: 300;
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 50px;
-  font-style: normal;
-  line-height: normal;
-}
-
-#resumeLink {
-  color: #171717;
-  font-weight: 700;
-  font-size: 2rem;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-style: normal;
-  line-height: normal;
-}
-
-#resumeLinkHfg {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-#resumeLinkHfg {
-  right: 0;
-  padding-right: 20px;
-}
-
-.custom-link {
-  color: black;
-  text-decoration: none;
-}
-
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
-
-.hfgText {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: 200;
-  text-align: left;
-
-  #line1 {
-    font-weight: 700;
-  }
-  #line2 {
-    font-weight: 300;
-  }
-  #line3 {
-    font-weight: 300;
-  }
-  #line4 {
-    font-weight: 300;
-  }
-  #line5 {
-    font-weight: 300;
-  }
-  #line6 {
-    font-weight: 300;
-  }
-}
-
-.picture {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  padding-left: 10rem;
-  transform: translateY(-50%);
-}
-</style>
+<style src="assets/cv.css" scoped></style>
