@@ -15,10 +15,9 @@
 
           <SplitFlapText
           :texts="[
-            '         [TIME]           ',
+            '        [GOEASE]           ',
             '     SECOND  SEMSTER    ',
             '       THREE MONTHS       ',
-            '         [GRADE]          ',
             '          1.3           ',
           ]"
         />

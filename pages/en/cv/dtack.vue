@@ -8,17 +8,17 @@
       <div class="project-details">
         <div class="project-section"></div>
         <div class="project-header">
-          <h1 class="project-title">
+          <!-- <h1 class="project-title">
             <span>UZHJHJUDAUD</span>D-TACK GMBH<span
               >JGEUMJAUD</span
             >
-          </h1>
+          </h1> -->
         </div>
 
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>APPRENTICESHIP<span>GBUFKUZTFGHJARNZGKHAK</span></h2>
+              <h2><span>GBUFKHJARNZGK</span>APPRENTICESHIP<span>GBUHJAZGHAK</span></h2>
               <p>
                beschreibung zu meiner ausbildung bei d-tack Zeugnis als Download anbieten
               </p>
@@ -26,12 +26,12 @@
             <div class="imageSplit">
               <SplitFlapText
                 :texts="[
-                  '        [LEARNINGS]      ',
-                  'TEAMWORK    UX        UI    ',
-                  'PROTOTYPING  USABILITY   ',
-                  '     DESIGNTHINKING      ',
-                  ' USER CENTERED LEANDESIGN',
-                  '  FULLSTACK DEVELOPMENT  ',
+                  '          [D-TACK]      ',
+                  'TEAMWORK    UX    UI    ',
+                  'WHOLESALE  USABILITY  ',
+                  '     FREE SPEAKING    ',
+                  ' BUSINESS MANAGEMENT   ',
+                  '  FULLSTACK DEVELOPMENT ',
                 ]"
               />
             </div>
@@ -44,7 +44,7 @@
               <img src="public\img\cv\dtack.jpg" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2>ABOUT DTACK<span>GBTRUZTJKKJHGREDFUIK</span></h2>
+              <h2><span>GBUFKUIOGKH</span>ABOUT DTACK<span>GBTRHGREDFUIK</span></h2>
               <p>
                
                 The University of Design (HfG) has really shaped my skills in

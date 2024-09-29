@@ -13,15 +13,14 @@
           
         </div>
         <div class="project-header">
-          <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>JUMPSTAR<span>HGBBVSAIHJTJGEUMJAUD</span></h1>
+          <!-- <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>JUMPSTAR<span>HGBBVSAIHJTJGEUMJAUD</span></h1> -->
 
           <SplitFlapText
           :texts="[
-            '         [TIME]          ',
+            '       [JUMPSTAR]        ',
             '     THIRD  SEMSTER    ',
-            '       TWHO MONTHS       ',
-            '         [GRADE]         ',
-            '          1.0           ',
+            '      TWHO MONTHS      ',
+            '          1.0          ',
           ]"
         />
         </div>
@@ -48,7 +47,7 @@
                 and disappointment.
               </p>
             </div>
-            <div class="image large">
+            <div class="image medium">
               <img src="public\img\js\js.png" alt="plantmonit" />
             </div>
           </div>

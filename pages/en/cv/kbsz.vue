@@ -8,17 +8,17 @@
       <div class="project-details">
         <div class="project-section"></div>
         <div class="project-header">
-          <h1 class="project-title">
+          <!-- <h1 class="project-title">
             <span>UZHJHJUDAUD</span>KBSZ ELLWANGEN<span
               >JGEUMJAUD</span
             >
-          </h1>
+          </h1> -->
         </div>
 
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>Diploma of Vocational Education (Business)<span>GBUFKUZTFGUTAVEEH</span></h2>
+              <h2><span>UZGJ</span>Diploma of Vocational Education (Business)<span>GBAEH</span></h2>
               <p>
                 bewerbungsschreiben
 
@@ -28,7 +28,7 @@
             <div class="imageSplit">
               <SplitFlapText
                 :texts="[
-                  '        [LEARINGS]      ',
+                  '          [KBSZ]         ',
                   'FIGMA    UX        UI    ',
                   'PROTOTYPING  USABILITY   ',
                   '     DESIGNTHINKING      ',
@@ -46,7 +46,7 @@
               <img src="public\img\cv\kbsz.png" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2>ABOUT KBSZ<span>GBTRUZTRDSXCVHJKKJHGREDFUIK</span></h2>
+              <h2><span>UZGKJHNKAIHJ</span>ABOUT KBSZ<span>GBTRUZGREDFUIK</span></h2>
               <p>
                
                 The University of Design (HfG) has really shaped my skills in

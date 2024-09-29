@@ -13,15 +13,14 @@
           
         </div>
         <div class="project-header">
-          <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>DRAWINGLIGHT<span>HGBBVSAIHJTJGEUMJAUD</span></h1>
+          <!-- <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>DRAWINGLIGHT<span>HGBBVSAIHJTJGEUMJAUD</span></h1> -->
 
           <SplitFlapText
           :texts="[
-            '         [TIME]          ',
+            '      [DRAWINGLIGHT]     ',
             '     THIRD  SEMSTER    ',
-            '       ONE WEEK       ',
-            '         [GRADE]         ',
-            '          1.0           ',
+            '        ONE WEEK       ',
+            '          1.0          ',
           ]"
         />
         </div>

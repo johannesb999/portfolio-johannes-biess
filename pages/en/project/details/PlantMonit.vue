@@ -12,14 +12,13 @@
           
         </div>
         <div class="project-header">
-          <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>PLANTMONIT<span>HGBBVSAIHJTJGEUMJAUD</span></h1>
+          <!-- <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>PLANTMONIT<span>HGBBVSAIHJTJGEUMJAUD</span></h1> -->
 
           <SplitFlapText
           :texts="[
-            '         [TIME]           ',
+            '      [PLANTMONIT]        ',
             '     SECOND  SEMSTER    ',
             '       TWO MONTHS       ',
-            '         [GRADE]          ',
             '          1.0           ',
           ]"
         />
@@ -28,7 +27,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>PROBLEM<span>GBUDAHAJKSBVFGKHAPOIVBAKSJHKAK</span></h2>
+              <h2><span>GBUDAHAJPOIVBAKSJHKAK</span>PROBLEM<span>GBUDAHAJPOIVBAKSJHKAK</span></h2>
               <p>
                 In our hectic daily lives, there is often little time left for
                 the care of indoor and garden plants. Many people, especially
@@ -47,8 +46,8 @@
                 and disappointment.
               </p>
             </div>
-            <div class="image">
-              <img src="public\img\pm\problem.svg" alt="plantmonit" />
+            <div class="image small">
+              <img src="public\img\pm\problem.svg" alt="plantmonit"/>
             </div>
           </div>
         </div>
@@ -59,7 +58,7 @@
               <img src="public\img\pm\process.svg" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2>PROCESS<span>GBUDAHAJKSBVFGKHAPOIVBAKSJHKAK</span></h2>
+              <h2><span>GBUDAHAJPOIVBSJHUZ</span>PROCESS<span>GBUDAAPOIVBAK</span></h2>
               <p>
                 Our approach to developing PlantMonit followed a structured and
                 iterative process, ensuring that we addressed both technical and
@@ -160,7 +159,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>SOLUTION<span>GBUDAHAJKSBVFGKHAPOIVBAKSJHKAK</span></h2>
+              <h2><span>GBUDAHAJPOIVBAKHKAK</span>SOLUTION<span>GBUDAHVBAKSJHKAK</span></h2>
               <p>
                 Through this structured, methodical approach, we developed a
                 product that meets our target audience's needs and significantly
@@ -209,4 +208,6 @@
 
 <script setup></script>
 
-<style src="assets/details.css" scoped></style>
+<style src="assets/details.css" scoped>
+
+</style>

@@ -8,17 +8,17 @@
       <div class="project-details">
         <div class="project-section"></div>
         <div class="project-header">
-          <h1 class="project-title">
+          <!-- <h1 class="project-title">
             <span>UZHJHASGBVSAIJUDAUD</span>BOSCH<span
               >HGBBVSAIHJTJGEUMJAUD</span
             >
-          </h1>
+          </h1> -->
         </div>
 
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>WORKINGSTUDENT<span>GBUFKUZTFGHJARNZGKHAK</span></h2>
+              <h2><span>GBUFKUZTFGHJ</span>WORKINGSTUDENT<span>GBUFKUZTFGHJ</span></h2>
               <p>
                 Als Werkstudent bei Bosch Automotive Steering GmbH konnte ich
                 ein Jahr lang meine Kenntnisse in der Softwareentwicklung und im
@@ -33,11 +33,11 @@
             <div class="imageSplit">
               <SplitFlapText
                 :texts="[
-                  '        [LEARNINGS]       ',
-                  '    JIRA     DOCUPEDIA  ',
-                  '      SCRUM       AGILE ',
-                  '     PROCESS DESIGN     ',
-                  ' CONFLUENCE     KANBAN  ',
+                  '        [BOSCH]       ',
+                  '    JIRA    DOCUPEDIA  ',
+                  '      SCRUM      AGILE ',
+                  '     PROCESS DESIGN  ',
+                  ' CONFLUENCE    KANBAN  ',
                   '   TICKETING SYSTEMS    ',
                 ]"
               />

@@ -6,19 +6,18 @@
       </div>
 
       <div class="project-details">
-        <div class="project-section"></div>
         <div class="project-header">
-          <h1 class="project-title">
+          <!-- <h1 class="project-title">
             <span>UZHJHJUDAUD</span>HOCHSCHULE FÜR GESTALTUNG<span
               >JGEUMJAUD</span
             >
-          </h1>
+          </h1> -->
         </div>
 
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>STUDENT<span>GBUFKUZTFGHJARNZGKHAK</span></h2>
+              <h2><span>GBUDAHAJPOIVBA</span>LEARNINGS<span>GBUFKRNZGKHAK</span></h2>
               <p>
                 During my time at HfG, I worked on
                 <nuxt-link to="/en/project/projects" class="custom-link"
@@ -38,7 +37,7 @@
             <div class="imageSplit">
               <SplitFlapText
                 :texts="[
-                  '        [LEARNINGS]      ',
+                  '        [HFG]      ',
                   'FIGMA    UX        UI    ',
                   'PROTOTYPING  USABILITY   ',
                   '     DESIGNTHINKING      ',
@@ -56,7 +55,7 @@
               <img src="public\img\cv\hfgbuilding.jpeg" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2>ABOUT HFG<span>GBTRUZTRDSXCVHJKKJHGREDFUIK</span></h2>
+              <h2><span>GBUDAHAJPOIV</span>ABOUT HFG<span>GBTRHJKEDFUIK</span></h2>
               <p>
                
                 The University of Design (HfG) has really shaped my skills in
