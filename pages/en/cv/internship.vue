@@ -18,7 +18,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2><span>GBUFKKHAK</span>WHAT I HOPE TO LEARN<span>GTAVEEH</span></h2>
+              <SplitFlapText :texts="['         [LEARNINGS]          ']" />
               <p>
                 bewerbungsschreiben
 
@@ -46,7 +46,7 @@
               <img src="public\img\cv\intern.jpg" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2><span>ZAZGH</span>WHY YOU SHOULD CHOOSE ME<span>GBUZTU</span></h2>
+              <SplitFlapText :texts="['         [ABOUT]          ']" />
               <p>
                
                 The University of Design (HfG) has really shaped my skills in

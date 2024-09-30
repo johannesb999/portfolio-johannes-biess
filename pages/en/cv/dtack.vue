@@ -18,7 +18,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2><span>GBUFKHJARNZGK</span>APPRENTICESHIP<span>GBUHJAZGHAK</span></h2>
+              <SplitFlapText :texts="['         [LEARNINGS]          ']" />
               <p>
                beschreibung zu meiner ausbildung bei d-tack Zeugnis als Download anbieten
               </p>
@@ -44,7 +44,7 @@
               <img src="public\img\cv\dtack.jpg" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2><span>GBUFKUIOGKH</span>ABOUT DTACK<span>GBTRHGREDFUIK</span></h2>
+              <SplitFlapText :texts="['         [ABOUT] [D-TACK]         ']" />
               <p>
                
                 The University of Design (HfG) has really shaped my skills in

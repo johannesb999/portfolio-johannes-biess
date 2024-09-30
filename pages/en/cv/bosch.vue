@@ -18,7 +18,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2><span>GBUFKUZTFGHJ</span>WORKINGSTUDENT<span>GBUFKUZTFGHJ</span></h2>
+              <SplitFlapText :texts="['         [LEARNINGS]          ']" />
               <p>
                 Als Werkstudent bei Bosch Automotive Steering GmbH konnte ich
                 ein Jahr lang meine Kenntnisse in der Softwareentwicklung und im
@@ -51,7 +51,7 @@
               <img src="public\img\cv\bosch.jpg" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2>ABOUT BOSCH VM GMBH<span>GBTRRHKAK</span></h2>
+              <SplitFlapText :texts="['        [ABOUT] [BOSCH]         ']" />
               <p>
                 The Schwäbisch Gmünd site is the lead plant of the Vehicle
                 Motion Vehicle Motion division and comprises the competence

@@ -18,7 +18,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2><span>UZGJ</span>Diploma of Vocational Education (Business)<span>GBAEH</span></h2>
+              <SplitFlapText :texts="['         [LEARNINGS]          ']" />
               <p>
                 bewerbungsschreiben
 
@@ -46,7 +46,7 @@
               <img src="public\img\cv\kbsz.png" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2><span>UZGKJHNKAIHJ</span>ABOUT KBSZ<span>GBTRUZGREDFUIK</span></h2>
+              <SplitFlapText :texts="['         [ABOUT] [KBSZ]          ']" />
               <p>
                
                 The University of Design (HfG) has really shaped my skills in
