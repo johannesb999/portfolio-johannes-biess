@@ -1,5 +1,20 @@
 <template>
   <div>
+    <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet"
+      />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet"
+      />
+    </head>
     <NuxtPage />
     <header class="language-switch">
       <button
@@ -59,10 +74,11 @@ watch(route, (newRoute) => {
 });
 </script>
 
-<style>html {
+<style>
+html {
   color: #171717;
-  font-size: 14px;
-  font-family: "Geologica", sans-serif;
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
   background-color: #fbfbfb;
   margin: 0;
   padding: 0;
@@ -106,7 +122,9 @@ watch(route, (newRoute) => {
   background-color: #fbfbfb;
 }
 
-#en, #de, #line {
+#en,
+#de,
+#line {
   font-weight: 100;
   font-size: 1.75rem;
   background-color: #fbfbfb;
@@ -280,11 +298,16 @@ watch(route, (newRoute) => {
     right: 5%;
   }
 
-  #en, #de, #line {
+  #en,
+  #de,
+  #line {
     font-size: 1.5rem;
   }
 
-  #bottomLink, #topLink, #rightLink, #leftLink {
+  #bottomLink,
+  #topLink,
+  #rightLink,
+  #leftLink {
     font-size: 1.75rem;
   }
 }
@@ -301,11 +324,16 @@ watch(route, (newRoute) => {
     right: 5%;
   }
 
-  #en, #de, #line {
+  #en,
+  #de,
+  #line {
     font-size: 1.25rem;
   }
 
-  #bottomLink, #topLink, #rightLink, #leftLink {
+  #bottomLink,
+  #topLink,
+  #rightLink,
+  #leftLink {
     font-size: 1.5rem;
   }
 }
@@ -322,11 +350,16 @@ watch(route, (newRoute) => {
     right: 10%;
   }
 
-  #en, #de, #line {
+  #en,
+  #de,
+  #line {
     font-size: 1rem;
   }
 
-  #bottomLink, #topLink, #rightLink, #leftLink {
+  #bottomLink,
+  #topLink,
+  #rightLink,
+  #leftLink {
     font-size: 1.25rem;
   }
 }

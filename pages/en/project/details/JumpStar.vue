@@ -28,8 +28,11 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>IDEA<span>GBUDAHAJKSBVFGKHAPOIVBAKSJHKAK</span></h2>
-              <p>
+              <SplitFlapText
+              :texts="[
+                '           [IDEA]            ',
+              ]"
+            />                <p>
                 In our hectic daily lives, there is often little time left for
                 the care of indoor and garden plants. Many people, especially
                 those with stressful jobs or other time-consuming commitments,
@@ -59,8 +62,11 @@
               <img src="public\img\dl\drawingLight (9).jpg" alt="plantmonit" />
             </div>
             <div class="text">
-              <h2>PROCESS<span>GBUDAHAJKSBVFGKHAPOIVBAKSJHKAK</span></h2>
-              <p>
+              <SplitFlapText
+              :texts="[
+                '          [PROCESS]          ',
+              ]"
+            />                <p>
                 Our approach to developing PlantMonit followed a structured and
                 iterative process, ensuring that we addressed both technical and
                 user-friendly aspects of our product. <br /><br />
@@ -88,8 +94,11 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <h2>IMPLEMENTATION<span>GBUDAHAJKSBVFGKHAPOIVBAKSJHKAK</span></h2>
-              <p>
+              <SplitFlapText
+              :texts="[
+                '      [IMPLEMENTATION]       ',
+              ]"
+            />                <p>
                 Through this structured, methodical approach, we developed a
                 product that meets our target audience's needs and significantly
                 simplifies plant care. PlantMonit combines cutting-edge
@@ -118,8 +127,11 @@
           </div>
         </div>
         <div class="project-section">
-          <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>WATCH<span>HGBBVSAIHJTJGEUMJAUD</span><br><br></h1>
-
+          <SplitFlapText
+          :texts="[
+            '          [PROJECT] [VIDEO]          ',
+          ]"
+        />  
           <div class="project-video">
             <iframe
               src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"

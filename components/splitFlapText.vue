@@ -250,7 +250,7 @@ watch(
 .char {
   display: inline-block;
   width: 1.5rem;
-  height: 1.5rem;
+  height: 1.7rem;
   overflow: hidden;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -259,11 +259,11 @@ watch(
 }
 
 .separator {
-  color: #0000000f;
+  color: #00000019;
 }
 
 .normal {
-  color: #171717;
+  color: #171717b0;
   padding-left: 1px;
 }
 
@@ -271,10 +271,11 @@ watch(
   font-weight: 700;
   padding-left: 1px;
   color: #000000;
+  font-size: x-large;
 }
 
 .link-style {
-  color: blue;
+  color: rgb(48, 48, 48);
   text-decoration: underline;
 }
 

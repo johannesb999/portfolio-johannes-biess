@@ -14,7 +14,7 @@
         <SplitFlapText
           :texts="[
             '         [ABOUT]  [ME]         ',
-            '   TEAMWORK   AGILE        ',
+            '   TEAMWORK   AGILE  CURIOS',
             '      ADAPTILITY   ACCURACY',
             'PUNCTUALITY   FAIRNESS     ',
             '     CREATIVITY     TRUST  ',
