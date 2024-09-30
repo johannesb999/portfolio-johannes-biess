@@ -8,7 +8,7 @@
         <ul>
           <li>
             <NuxtLink to="/en/cv/hfg" class="content">
-              <h2>HfG - Hochschule <br />für Gestaltung</h2>
+              <h2>Hochschule <br />für Gestaltung</h2>
               <p>Bachelor of Arts</p>
               <p class="location">Schwäbisch Günd, Germany</p>
             </NuxtLink>

@@ -249,7 +249,7 @@ watch(
 
 .char {
   display: inline-block;
-  width: 1.5rem;
+  width: 1.3rem;
   height: 1.7rem;
   overflow: hidden;
   font-size: 1.5rem;

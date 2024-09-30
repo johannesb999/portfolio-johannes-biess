@@ -13,7 +13,7 @@
       <div class="aboutMeText">
         <SplitFlapText
           :texts="[
-            '         [ABOUT]  [ME]         ',
+            '         [ABOUT] [ME]          ',
             '   TEAMWORK   AGILE  CURIOS',
             '      ADAPTILITY   ACCURACY',
             'PUNCTUALITY   FAIRNESS     ',

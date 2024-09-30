@@ -84,7 +84,7 @@ html {
   padding: 0;
   height: 100%;
   width: 100%;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   overflow: hidden;
 }
 

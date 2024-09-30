@@ -18,11 +18,10 @@
         <SplitFlapText
           :texts="[
             '        [GOEASE]        ',
-            'TEAMWORK   TRUST  CLARITY ',
-            'ANOTHER  ORGANISATION     ',
-            '     ADAPTABILITY         ',
+            'SMART SYSTEM              ',
+            '      REACT NATIVE        ',
+            '     ESP32   MONGOOSE         ',
             ' PUNCTUALITY  FAIRNESS    ',
-            'CREATIVITY  ACCURACY      ',
           ]"
         />
       </div>

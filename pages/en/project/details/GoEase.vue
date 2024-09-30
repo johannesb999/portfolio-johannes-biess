@@ -11,7 +11,6 @@
           
         </div>
         <div class="project-header">
-          <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>GOEASE<span>HGBBVSAIHJTJGEUMJAUD</span></h1>
 
           <SplitFlapText
           :texts="[
@@ -169,7 +168,8 @@
               :texts="[
                 '          [SOULUTION]          ',
               ]"
-            />                <p>
+            />          
+                <p>
                 Through this structured, methodical approach, we developed a
                 product that meets our target audience's needs and significantly
                 simplifies plant care. PlantMonit combines cutting-edge

@@ -21,7 +21,6 @@
             '  SVELTE      FIGMA      ',
             '   ESP32   WIREFRAMES    ',
             '   FUSION360  UI  UX     ',
-            ' MQTT     USERCENTERED   ',
             'OPENAI        MONGODB    ',
           ]"
         />
