@@ -70,6 +70,7 @@ const newWords = [
   "A PROBLEMSOLVER",
   "PROTOTYPER",
   "YOUR NEXT INTERN",
+  "DEVELOPER",
 ];
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

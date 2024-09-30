@@ -61,7 +61,10 @@
         </ul>
       </div>
 
-      <div id="title">CV HIGHLIGHTS</div>
+      <div id="title">
+        <a href="public\Lebenslauf.pdf" download="JohannesBiessCV.pdf" class="custom-link">DOWNLOAD FULL CV</a>
+      </div>
+      
     </main>
   </html>
 </template>

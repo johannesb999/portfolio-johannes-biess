@@ -41,26 +41,26 @@ html {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  padding-top: 3rem;
+  padding-top: 8rem;
   letter-spacing: 1px;
 }
 
-.project-header {
+/* .project-header {
   text-align: center;
   margin-bottom: 2rem;
   align-items: center;
   align-self: center;
   display: flex;
   flex-direction: column;
-}
+} */
 
-.project-title {
+/* .project-title {
   font-size: 2.3rem;
   font-weight: 700;
   margin-bottom: 10px;
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
+} */
 
 span {
   font-weight: 200;
@@ -72,7 +72,7 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .project-content {
@@ -85,6 +85,7 @@ span {
 
 .project-section.reverse .project-content {
   flex-direction: row-reverse;
+  
 }
 
 .text {
@@ -154,7 +155,7 @@ h3 {
 @media (max-width: 1200px) {
   .project-details {
     padding: 15px;
-    padding-top: 6rem;
+    padding-top: 7rem;
   }
 
   .project-title {
