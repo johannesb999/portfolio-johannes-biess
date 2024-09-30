@@ -62,7 +62,7 @@
       </div>
 
       <div id="title">
-        <a href="public\Lebenslauf.pdf" download="JohannesBiessCV.pdf" class="custom-link">DOWNLOAD FULL CV</a>
+        <a href="/Lebenslauf.pdf" download="JohannesBiessCV.pdf" class="custom-link">DOWNLOAD FULL CV</a>
       </div>
       
     </main>
