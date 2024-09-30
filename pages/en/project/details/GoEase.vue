@@ -7,20 +7,8 @@
         >
       </div>
       <div class="project-details">
-        <div class="project-section">
-          
-        </div>
-        <div class="project-header">
-
-          <SplitFlapText
-          :texts="[
-            '        [GOEASE]           ',
-            '     SECOND  SEMSTER    ',
-            '       THREE MONTHS       ',
-            '          1.3           ',
-          ]"
-        />
-        </div>
+        
+       
 
         <div class="project-section">
           <div class="project-content">
@@ -213,6 +201,8 @@
             ></iframe>
           </div>
         </div>
+
+        
       </div>
     </main>
   </html>
