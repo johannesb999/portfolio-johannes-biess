@@ -44,12 +44,17 @@ export default defineNuxtRouteMiddleware((to, from) => {
   ];
 
   const getPageName = (path:any) => {
-    const segments = path.split("/");
-    return segments.pop() || "index";
+    const segments = path.replace(/\/+$/, '').split('/').filter((seg: string) => seg.length > 0);
+    return segments.pop() || 'index';
   };
+  
 
-  const fromIndex = projectPages.indexOf(getPageName(from.path));
-  const toIndex = projectPages.indexOf(getPageName(to.path));
+  const fromIndex = projectPages.map(page => page.toLowerCase()).indexOf(getPageName(from.path).toLowerCase());
+  const toIndex = projectPages.map(page => page.toLowerCase()).indexOf(getPageName(to.path).toLowerCase());
+  
+  console.log('from.path:', from.path, 'getPageName:', getPageName(from.path), 'fromIndex:', fromIndex);
+console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:', toIndex);
+
   const toDepth = getDepth(to.path);
   const fromDepth = getDepth(from.path);
   const toSpecial = checkSpecialRoutes(to.path);

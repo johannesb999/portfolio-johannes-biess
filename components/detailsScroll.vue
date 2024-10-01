@@ -29,7 +29,7 @@
   
   // Optional: Stellen sicher, dass die Scroll-Verknüpfung nach dem Mounten korrekt funktioniert
   onMounted(() => {
-    console.log('ScrollLink-Komponente erfolgreich geladen.');
+    // console.log('ScrollLink-Komponente erfolgreich geladen.');
   });
   </script>
   
