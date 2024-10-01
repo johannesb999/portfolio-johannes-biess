@@ -1,10 +1,10 @@
 <template>
-  <html>
+
     <main>
       <div class="background">
-      <div id="projectLinkStart">
-        <nuxt-link to="/" class="custom-link">START</nuxt-link>
-      </div>
+        <client-only>
+          <ScrollLink />
+        </client-only>
       </div>
       <div id="projectLinkNext">
         <nuxt-link to="/en/project/TrickyTowers" class="custom-link"
@@ -20,11 +20,11 @@
       <div class="projectFlap">
         <SplitFlapText
           :texts="[
-            '      [DRAWINGLIGHT]          ',
-            'MECHATRONICS      VALUES      ',
-            'TEAMWORK   PHOTOGRAPHY  CLARITY ',
+            '      [DRAWINGLIGHT]      ',
+            'MECHATRONICS    ESP32    ',
+            'TEAMWORK   PHOTOGRAPHY   ',
             '     ARDUINO         ',
-            'CREATIVITY  LIGHTDRAWING      ',
+            '  LIGHTDRAWING      ',
           ]"
         />
       </div>
@@ -49,12 +49,11 @@
           </p>
         </div> -->
       </div>
-      <!-- <NuxtLink to="/en/project/details/DrawingLight" class="detailsLink"
-        >DETAILS</NuxtLink
-      > -->
+      <DetailsScroll/>
+
       <div class="project-details">
         
-        <div class="project-section">
+        <div class="project-section" id="details-section">
           <div class="project-content">
             <div class="text">
               <SplitFlapText
@@ -170,7 +169,6 @@
       </div>
     
     </main>
-  </html>
 </template>
 
 <script setup></script>

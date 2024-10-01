@@ -1,5 +1,4 @@
 <template>
-  <html>
     <main>
       <div id="projectLinkStart">
         <nuxt-link to="/en/about" class="custom-link">ABOUT ME</nuxt-link>
@@ -66,7 +65,6 @@
       </div>
       
     </main>
-  </html>
 </template>
 
 <script setup></script>

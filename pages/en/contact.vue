@@ -1,5 +1,5 @@
 <template>
-  <html>
+  
     <main>
       <!-- <div id="contact">CONTACT ME</div> -->
       <div id="leftLink">
@@ -29,7 +29,6 @@
         <nuxt-link to="legal" class="custom-link">LEGAL INFORMATION</nuxt-link>
       </div>
     </main>
-  </html>
 </template>
 
 <script setup></script>

@@ -1,9 +1,11 @@
 <template>
-  <html>
     <main>
-      <div id="topLink">
-        <nuxt-link to="/" class="custom-link">START</nuxt-link>
+      <div class="background">
+        <client-only>
+          <ScrollLink />
+        </client-only>
       </div>
+
       <div id="projectLinkNext">
         <nuxt-link to="/en/project/jumpStar" class="custom-link"
           >JUMPSTAR</nuxt-link
@@ -50,11 +52,14 @@
         </div> -->
       </div>
 
+      <DetailsScroll/>
+
+
       <div class="project-details">
         
        
 
-        <div class="project-section">
+        <div class="project-section" id="details-section">
           <div class="project-content">
             <div class="text">
               <SplitFlapText
@@ -247,10 +252,10 @@
       </div>
 
     </main>
-  </html>
 </template>
 
 <script setup>
+
 </script>
 
 <style src="assets/project.css" scoped>

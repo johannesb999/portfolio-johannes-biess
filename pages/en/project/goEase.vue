@@ -1,11 +1,10 @@
 <template>
-  <html>
     <main>
       <div class="background">
-      <div id="projectLinkStart">
-        <nuxt-link to="/" class="custom-link">START</nuxt-link>
+        <client-only>
+          <ScrollLink />
+        </client-only>
       </div>
-    </div>
       <div id="projectLinkNext">
         <nuxt-link to="/en/project/projects" class="custom-link"
           >PLANTMONIT</nuxt-link
@@ -49,8 +48,7 @@
         </div> -->
       </div>
       
-      <!-- <a href="#details-section" class="detailsLink">DETAILS</a> -->
-
+<DetailsScroll/>
 
       <div class="project-details">
         
@@ -248,11 +246,12 @@
       </div>
 
     </main>
-  </html>
 </template>
 
 <script setup>
+
 </script>
+
 
 <style src="assets/project.css" scoped>
 

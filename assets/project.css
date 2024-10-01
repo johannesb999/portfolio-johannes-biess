@@ -1,12 +1,5 @@
 html {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
+  min-width: 100%;
 }
 
 .detailsLink {
@@ -20,6 +13,7 @@ html {
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
+  
 }
 
 .detailsLink:hover {

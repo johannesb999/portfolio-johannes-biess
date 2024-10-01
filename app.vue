@@ -77,7 +77,7 @@ watch(route, (newRoute) => {
 <style>
 html {
   color: #171717;
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Roboto Mono", monospace;
   background-color: #fbfbfb;
   margin: 0;
@@ -85,7 +85,7 @@ html {
   height: 100%;
   width: 100%;
   letter-spacing: 1px;
-  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -105,7 +105,7 @@ html {
   line-height: 1rem;
   color: #171717;
   text-decoration: none;
-  position: absolute;
+  position: fixed;
   top: 50px;
   left: 2.3%;
   z-index: 100;
@@ -113,7 +113,7 @@ html {
 }
 
 .language-switch {
-  position: absolute;
+  position: fixed;
   top: 50px;
   right: 2.3%;
   display: flex;
@@ -137,6 +137,7 @@ html {
   color: #dadada;
   border: none;
   line-height: 1rem;
+  
 }
 
 .language-switch button:disabled {

@@ -46,9 +46,8 @@
               <img src="public\img\cv\kbsz.png" alt="plantmonit" />
             </div>
             <div class="text">
-              <SplitFlapText :texts="['         [ABOUT] [KBSZ]          ']" />
+              <SplitFlapText :texts="['       [ABOUT] [KBSZ]        ']" />
               <p>
-               
                 The University of Design (HfG) has really shaped my skills in
                 design and development. At this well-known university in
                 Germany, I didn’t just learn theory, but also got hands-on

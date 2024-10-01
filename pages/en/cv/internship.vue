@@ -1,5 +1,4 @@
 <template>
-  <html>
     <main>
       <div id="projectLinkStartLeft">
         <nuxt-link to="/en/resume" class="custom-link">CV</nuxt-link>
@@ -65,7 +64,6 @@
         </div>
       </div>
     </main>
-  </html>
 </template>
 
 <script setup></script>

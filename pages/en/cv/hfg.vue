@@ -17,7 +17,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText :texts="['         [LEARNINGS]          ']" />
+              <SplitFlapText :texts="['          [HFG]            ']" />
               <p>
                 During my time at HfG, I worked on
                 <nuxt-link to="/en/project/projects" class="custom-link"
@@ -37,7 +37,7 @@
             <div class="imageSplit">
               <SplitFlapText
                 :texts="[
-                  '          [HFG]           ',
+                  '        [LEARNINGS]        ',
                   'FIGMA    UX        UI    ',
                   'PROTOTYPING  USABILITY   ',
                   '     DESIGNTHINKING      ',
@@ -56,7 +56,7 @@
             </div>
             <div class="text">
               
-                <SplitFlapText :texts="['        [ABOUT] [HFG]        ']" />
+                <SplitFlapText :texts="['       [ABOUT] [HFG]         ']" />
               <p>
                 The University of Design (HfG) has really shaped my skills in
                 design and development. At this well-known university in
