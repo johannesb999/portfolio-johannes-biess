@@ -37,7 +37,6 @@
             <div class="imageSplit">
               <SplitFlapText
                 :texts="[
-                  '        [LEARNINGS]        ',
                   'FIGMA    UX        UI    ',
                   'PROTOTYPING  USABILITY   ',
                   '     DESIGNTHINKING      ',

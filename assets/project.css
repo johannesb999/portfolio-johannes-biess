@@ -13,7 +13,7 @@ html {
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
-  
+
 }
 
 .detailsLink:hover {
@@ -194,6 +194,11 @@ span {
   line-height: 1.5;
 }
 
+p, 
+h3 {
+  font-family: "Geologica", system-ui;
+}
+
 .image {
   flex: 1;
   padding: 30px;
@@ -252,6 +257,7 @@ h3 {
 .image.large img {
   max-height: 600px;
 }
+
 /* Responsive Design */
 
 @media (max-width: 1200px) {
@@ -378,6 +384,7 @@ h3 {
     max-width: 100%;
     height: auto;
   }
+
   .project-title {
     font-size: 1.5rem;
   }

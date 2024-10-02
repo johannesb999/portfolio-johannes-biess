@@ -59,7 +59,8 @@
               :texts="[
                 '           [IDEA]            ',
               ]"
-            />                <p>
+            />              
+              <p>
                 In our hectic daily lives, there is often little time left for
                 the care of indoor and garden plants. Many people, especially
                 those with stressful jobs or other time-consuming commitments,
@@ -93,11 +94,14 @@
               :texts="[
                 '          [PROCESS]          ',
               ]"
-            />                <p>
+            />              
+              <p>
                 Our approach to developing PlantMonit followed a structured and
                 iterative process, ensuring that we addressed both technical and
                 user-friendly aspects of our product. <br /><br />
                 <h3>Conceptional Process</h3>
+                </p>
+                <p>
                 Persona Development We began by creating a detailed persona to
                 identify and analyze the needs of our target audience. This
                 helped us understand the specific requirements and challenges
