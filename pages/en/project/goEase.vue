@@ -19,10 +19,10 @@
       <SplitFlapText
         :texts="[
           '          [GOEASE]          ',
-          'SMART SYSTEM              ',
-          '      REACT NATIVE        ',
-          '     ESP32   MONGOOSE     ',
-          ' PUNCTUALITY  FAIRNESS    ',
+          '       SMART SYSTEM       ',
+          '  REACT NATIVE      GPS   ',
+          '     ESP32   ANDROIDSDK   ',
+          ' BLE     OPENMAPBOX       ',
         ]"
       />
     </div>
@@ -35,17 +35,6 @@
           alt="plantmonit"
         />
       </div>
-      <!-- <div class="projectDescription">
-          <p>
-            The aim of the project was to revolutionize the care of plants.
-            Thanks to new technological possibilities and corresponding sensors
-            PlantMonit continuously captures images of the plant and important
-            Parameters such as soil moisture, humidity, temperature and Lighting
-            conditions. These are created by artificial intelligence "Buddy"
-            analyzed and classified. Buddy enables a simple efficient and
-            optimal care of the Green Friends....<br />
-          </p>
-        </div> -->
     </div>
 
     <DetailsScroll />
@@ -55,24 +44,31 @@
         <div class="project-content">
           <div class="text">
             <SplitFlapText :texts="['          [PROBLEM]          ']" />
-            <p>
-              In our hectic daily lives, there is often little time left for the
-              care of indoor and garden plants. Many people, especially those
-              with stressful jobs or other time-consuming commitments, regularly
-              forget to water, fertilize, or properly place their plants. This
-              often leads to plants wilting, being over- or under-watered, or
-              otherwise not receiving the necessary care. Statistics show that
-              37% of hobby gardeners let one or two houseplants die each year.
-              Millennials, in particular, seem to have more problems, with about
-              seven houseplants dying on average. Most people do not have a
-              green thumb and lack the necessary knowledge to properly care for
-              plants. How should one react to discolored leaves? What should be
-              done about aphids? Or is my plant even sick? Improper care and
-              lack of knowledge about the specific needs of plants often lead to
-              frustration, sadness, and disappointment.
-            </p>
+            <div class="paragraph">
+              Local public transportation in Germany is facing some big
+              challenges. There are lots of different bus companies and
+              associations, each with their own fare systems. Often, there isn't
+              a good app solution or none at all. Passengers, especially those
+              who only use public transport now and then, are faced with a
+              confusing array of systems. They often don't know which company
+              operates on their route, let alone how to buy a ticket or choose
+              the right fare. On top of that, the ticket machines are often
+              complicated, unhygienic, and broken, making the process even more
+              difficult. It would be great to have a simple solution for bus
+              travel, especially on days when the car isn't available, like on a
+              rainy day or when unexpected events occur. Instead, the different
+              fares and the lack of a central solution make it difficult for
+              many passengers. The idea for GoEase came from thinking about how
+              we could make local public transport more accessible and
+              convenient. The idea behind GoEase is a beacon system that can be
+              easily added to buses throughout Germany. Combined with a mobile
+              app that only needs to be set up once and then runs in the
+              background, the goal is to create a fully automated and convenient
+              way to travel by bus—without having to think about fares or buy a
+              ticket from complicated, unhygienic machines.
+            </div>
           </div>
-          <div class="image medium">
+          <div class="image large">
             <img src="public\img\ge\Frame 39.svg" alt="plantmonit" />
           </div>
         </div>
@@ -80,30 +76,40 @@
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image medium">
-            <img src="public\img\ge\goease 5.jpg" alt="plantmonit" />
+          <div class="image large">
+            <img src="public\img\ge\Frame 5.svg" alt="plantmonit " />
           </div>
           <div class="text">
             <SplitFlapText :texts="['          [PROCESS]          ']" />
-            <p>
-              Our approach to developing PlantMonit followed a structured and
-              iterative process, ensuring that we addressed both technical and
-              user-friendly aspects of our product. <br /><br />
-            </p>
-            <h3>Conceptional Process</h3>
-            <p>
-              Persona Development We began by creating a detailed persona to
-              identify and analyze the needs of our target audience. This helped
-              us understand the specific requirements and challenges our users
-              face, allowing us to tailor our solution accordingly. The persona
-              served as a solid foundation for all subsequent design and
-              development decisions. <br /><br />User Journey During the app
-              development, we prioritized designing the user journey. This
-              included creating detailed user paths to ensure a seamless and
-              intuitive experience from app installation to daily use. The user
-              journey helped us identify potential obstacles and continuously
-              enhance the app's usability. <br /><br />
-            </p>
+            <div class="paragraph">
+              We kicked things off with an intensive brainstorming session,
+              where we chatted through all the ideas and came up with some
+              initial concepts. Our initial vision was pretty ambitious. We
+              wanted to create a box that integrated all kinds of functions. We
+              wanted to use GPS to record the location, BLE to detect which cell
+              phones were currently boarding, and a light barrier to check the
+              number of people boarding. We also planned to create three
+              different user interfaces—one for the end user and two for the
+              public transport companies that send fare evasion figures and help
+              set up the system. The system should be able to be used on all
+              public transport, not just buses. That means trains, buses, planes
+              and ships too. This first idea included lots of different features
+              and was meant to be a complete solution for the whole
+              transportation industry. As the project went on, though, we
+              realized that trying to implement all these features would not
+              only take longer than we thought, but it would also get in the way
+              of the core idea. All these planned features made the project look
+              more like a bunch of random functions than a focused idea. So we
+              decided to go back to the drawing board and focus on the
+              essentials. We trimmed the features down to just the essentials so
+              we could zero in on the core idea: making bus travel easier and
+              more convenient. The new plan was to have a box that works with
+              just one app and is only for buses at first. This made things
+              simpler and let us focus on one API, for example, without having
+              to think about other interfaces. This focus helped us make the
+              core idea work well and get it off the ground, and create a solid
+              MVP (Minimum Viable Product) that we could build on later.
+            </div>
           </div>
         </div>
       </div>
@@ -111,25 +117,38 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image medium">
-            <img src="public\img\ge\goease 2.png" alt="plantmonit" />
+            <img src="public\img\ge\softwareProcess.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <h3>Software Process</h3>
-            <p>
-              <br /><br />Prototyping and Feedback Our development process
-              involved several prototyping phases: LoFi Prototypes: We created
-              initial rough sketches to visualize the basic user experience and
-              test fundamental functions. This phase focused on the structure
-              and key interactions of the app. MidFi Prototypes: We developed
-              more detailed designs, emphasizing component selection, text
-              sizes, and layout decisions. This phase helped us refine the user
-              interface and improve usability. HighFi Prototypes: We finalized
-              the visual and functional aspects to ensure a realistic and
-              user-friendly design. In this phase, we placed great emphasis on a
-              consistent and appealing UI design. In each phase, we continuously
-              gathered feedback from potential users and experts to make
-              iterative improvements and optimize the product.
-            </p>
+            <div class="paragraph">
+              <h3>Software Process</h3>
+              Next, we started working on the user interface and app features.
+              First, we put together some wireframes and design dummies in Figma
+              to get a feel for the user experience and make sure the app would
+              be simple to use. The wireframes were really important for
+              planning the user experience in advance and spotting any potential
+              design issues early on. During this phase, we made sure the user
+              experience was simple and straightforward. We used these
+              wireframes to build the mobile app with React Native, which lets
+              us use it on different platforms. We chose React Native because it
+              lets the app talk to the beacons via BLE. We made sure to get the
+              core functions up and running smoothly and efficiently, including
+              things like automatic beacon detection, trip data collection, and
+              background processes. The software development process was very
+              iterative. Once we had the first functional prototypes up and
+              running, we did a few rounds of user testing to get feedback and
+              make sure we were constantly improving the app and the features it
+              had based on what the testers had to say. It was really important
+              for us to get direct feedback on how easy the app was to use and
+              what we could do to make it even better. One of the most important
+              things we wanted to get right with the app was the setup process.
+              We wanted it to be quick and easy for the user. Once you've set up
+              the app, it's basically ready to go. It runs in the background and
+              takes care of all the steps needed to record bus journeys and
+              organize billing. You can also monitor your journey and see which
+              costs have already been debited. This way, you're always in the
+              know and in control.
+            </div>
           </div>
         </div>
       </div>
@@ -137,12 +156,12 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img src="public\img\ge\goease 2.png" alt="plantmonit" />
+            <img src="public\img\ge\goease 4.png" alt="plantmonit" />
           </div>
           <div class="text">
-            <h3>Hardware Process</h3>
-            <p>
-              <br /><br />The technical implementation involved several steps,
+            <div class="paragraph">
+              <h3>Hardware Process</h3>
+              The technical implementation involved several steps,
               incorporating both innovative hardware solutions and modern
               software development practices. <br /><br />
 
@@ -172,7 +191,7 @@
               the app. Close alignment with prototypes and regular user feedback
               helped us achieve a consistent and attractive design that met our
               target audience's high standards.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -181,7 +200,7 @@
         <div class="project-content">
           <div class="text">
             <SplitFlapText :texts="['          [SOULUTION]          ']" />
-            <p>
+            <div class="paragraph">
               Through this structured, methodical approach, we developed a
               product that meets our target audience's needs and significantly
               simplifies plant care. PlantMonit combines cutting-edge technology
@@ -201,10 +220,10 @@
               elements, we created an innovative solution that revolutionizes
               plant care and helps both beginners and experienced gardeaners
               keep their plants healthy.
-            </p>
+            </div>
           </div>
           <div class="image medium">
-            <img src="public\img\ge\goease 4.png" alt="plantmonit" />
+            <img src="public\img\ge\goease 2.png" alt="plantmonit" />
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@
                 '           [IDEA]            ',
               ]"
             />              
-              <p>
+            <div class="paragraph">
                 In our hectic daily lives, there is often little time left for
                 the care of indoor and garden plants. Many people, especially
                 those with stressful jobs or other time-consuming commitments,
@@ -76,7 +76,7 @@
                 is my plant even sick? Improper care and lack of knowledge about
                 the specific needs of plants often lead to frustration, sadness,
                 and disappointment.
-              </p>
+            </div>
             </div>
             <div class="image medium">
               <img src="public\img\js\js.png" alt="plantmonit" />

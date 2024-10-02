@@ -13,7 +13,6 @@
           
         </div>
         <div class="project-header">
-          <!-- <h1 class="project-title"><span>UZHJHASGBVSAIJUDAUD</span>DRAWINGLIGHT<span>HGBBVSAIHJTJGEUMJAUD</span></h1> -->
 
           <SplitFlapText
           :texts="[
