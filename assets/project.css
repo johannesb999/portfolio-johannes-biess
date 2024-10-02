@@ -176,6 +176,15 @@ span {
   flex-direction: row-reverse;
 }
 
+.projectDetailsFlap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+}
+
 .text {
   flex: 1;
   padding: 30px;

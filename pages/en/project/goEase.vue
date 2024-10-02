@@ -94,7 +94,8 @@
               :texts="[
                 '          [PROCESS]          ',
               ]"
-            />                <p>
+            />       
+                     <p>
                 Our approach to developing PlantMonit followed a structured and
                 iterative process, ensuring that we addressed both technical and
                 user-friendly aspects of our product. <br /><br />
@@ -111,7 +112,7 @@
                 use. The user journey helped us identify potential obstacles and
                 continuously enhance the app's usability. <br /><br />           
               </p>
-            </div>
+                        </div>
           </div>
         </div>
 
@@ -241,6 +242,16 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+          </div>
+          <div class="projectDetailsFlap">
+            <SplitFlapText
+              :texts="[
+                '        [KEYDATA]         ',
+                '        TWO MONTHS          ',
+                '    THIRD SEMESTER     ',
+                '      GRADE: 1.3        ',
+              ]"
+            />
           </div>
         </div>
       </div>
