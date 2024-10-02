@@ -1,5 +1,5 @@
 <template>
-  <html>
+  
     <main>
       <div id="rightLink">
         <nuxt-link to="/" class="custom-link">START</nuxt-link>
@@ -14,7 +14,7 @@
         <SplitFlapText
           :texts="[
             '         [ABOUT] [ME]          ',
-            '   TEAMWORK   AGILE  CURIOS',
+            '   DECISIVE   AGILE  CURIOS',
             '      ADAPTILITY   ACCURACY',
             'PUNCTUALITY   FAIRNESS     ',
             '     CREATIVITY     TRUST  ',
@@ -32,7 +32,6 @@
         <div id="quote">“There is never<br />- too much cheese.”</div>
       </div>
     </main>
-  </html>
 </template>
 
 <script setup>

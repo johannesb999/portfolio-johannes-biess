@@ -275,7 +275,7 @@ watch(
 }
 
 .link-style {
-  color: rgb(48, 48, 48);
+  color: rgba(48, 48, 48, 0);
   text-decoration: underline;
 }
 

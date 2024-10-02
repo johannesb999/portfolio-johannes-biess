@@ -1,5 +1,4 @@
 <template>
-  <html>
     <main>
       <div id="projectLinkStart">
         <nuxt-link to="/en/about" class="custom-link">ABOUT ME</nuxt-link>
@@ -8,9 +7,9 @@
         <ul>
           <li>
             <NuxtLink to="/en/cv/hfg" class="content">
-              <h2>Hochschule <br />für Gestaltung</h2>
-              <p>Bachelor of Arts</p>
-              <p class="location">Schwäbisch Günd, Germany</p>
+              <h2>HOCHSCHULE <br />FÜR GESTALTUNG</h2>
+              <p>BACHELOR OF ARTS</p>
+              <p class="location">SCHWÄBISCH GÜND, GERMANY</p>
             </NuxtLink>
             <div class="date">
               <h3>2026</h3>
@@ -18,9 +17,9 @@
           </li>
           <li>
             <NuxtLink to="/en/cv/internship" class="content">
-              <h2>Hopefully Your Company!</h2>
-              <p>Internship</p>
-              <p class="location">anywhere worldwide</p>
+              <h2>HOPEFULLY YOUR COMPANY!</h2>
+              <p>INTERNSHIP</p>
+              <p class="location">ANYWHERE WORLDWIDE</p>
             </NuxtLink>
             <div class="date">
               <h3>2025</h3>
@@ -28,9 +27,9 @@
           </li>
           <li>
             <NuxtLink to="/en/cv/bosch" class="content">
-              <h2>Bosch AS</h2>
-              <p>Woriking Student</p>
-              <p class="location">Schwäbisch Günd, Germany</p>
+              <h2>BOSCH AS</h2>
+              <p>WORKING STUDENT</p>
+              <p class="location">SCHWÄBISCH GÜND, GERMANY</p>
             </NuxtLink>
             <div class="date">
               <h3>2024</h3>
@@ -39,8 +38,8 @@
           <li>
             <NuxtLink to="/en/cv/kbsz" class="content">
               <h2>KBSZ</h2>
-              <p>Diploma of Vocational Education (Business)</p>
-              <p class="location">Ellwangen, Germany</p>
+              <p>DIPLOMA OF VOCATIONAL EDUCATION (BUSINESS)</p>
+              <p class="location">ELLWANGEN, GERMANY</p>
             </NuxtLink>
             <div class="date">
               <h3>2020</h3>
@@ -49,8 +48,8 @@
           <li>
             <NuxtLink to="/en/cv/dtack" class="content">
               <h2>D-TACK</h2>
-              <p>Business Administration in Wholesale & Foreign Trade</p>
-              <p class="location">Hüttlingen, Germany</p>
+              <p>BUSINESS ADMINISTRATION IN WHOLESALE & FOREIGN TRADE</p>
+              <p class="location">HÜTTLINGEN, GERMANY</p>
             </NuxtLink>
             <div class="date">
               <h3>2019</h3>
@@ -66,7 +65,6 @@
       </div>
       
     </main>
-  </html>
 </template>
 
 <script setup></script>
@@ -79,12 +77,13 @@ html {
   height: 100%;
   width: 100%;
   overflow-y: auto;
+  font-family: "Roboto Mono", monospace;
 }
 
 #title {
   color: black;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   position: relative;
   bottom: 0;
@@ -123,7 +122,6 @@ html {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Geologica", sans-serif;
   color: #171717;
   text-decoration: none;
 }

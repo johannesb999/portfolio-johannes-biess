@@ -1,8 +1,7 @@
 <template>
-  <html>
     <main>
       <div id="projectLinkStart">
-        <nuxt-link to="/en/contact" class="custom-link">Contact</nuxt-link>
+        <nuxt-link to="/en/contact" class="custom-link">CONTACT</nuxt-link>
       </div>
       <div id="impressum">
         <h1>Imprint</h1>
@@ -55,7 +54,6 @@
         </p>
       </div>
     </main>
-  </html>
 </template>
 
 <script setup></script>
@@ -90,4 +88,6 @@
   text-align: center;
   padding: 20px;
 }
+
+
 </style>

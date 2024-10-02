@@ -4,14 +4,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet"
-      />
-
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet"
       />
     </head>
@@ -77,7 +70,7 @@ watch(route, (newRoute) => {
 <style>
 html {
   color: #171717;
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Roboto Mono", monospace;
   background-color: #fbfbfb;
   margin: 0;
@@ -85,7 +78,7 @@ html {
   height: 100%;
   width: 100%;
   letter-spacing: 1px;
-  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -105,7 +98,7 @@ html {
   line-height: 1rem;
   color: #171717;
   text-decoration: none;
-  position: absolute;
+  position: fixed;
   top: 50px;
   left: 2.3%;
   z-index: 100;
@@ -113,7 +106,7 @@ html {
 }
 
 .language-switch {
-  position: absolute;
+  position: fixed;
   top: 50px;
   right: 2.3%;
   display: flex;
