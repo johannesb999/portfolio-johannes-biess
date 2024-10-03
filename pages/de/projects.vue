@@ -66,15 +66,7 @@
   font-weight: 700;
 }
 
-.custom-link {
-  color: black;
-  text-decoration: none;
-}
 
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
 
 .projectText {
   display: flex;

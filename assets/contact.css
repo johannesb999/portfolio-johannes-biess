@@ -46,15 +46,7 @@ html {
   padding-left: 20px;
 }
 
-.custom-link {
-  color: #171717;
-  text-decoration: none;
-}
 
-.custom-link:hover {
-  color: #171717;
-  text-decoration: underline;
-}
 
 .contactMeText {
   display: flex;

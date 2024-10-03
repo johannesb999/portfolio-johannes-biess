@@ -2,6 +2,8 @@
   <div class="custom-cursor" ref="customCursor"></div>
 </template>
 
+// CustomCursor.vue
+
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
@@ -14,44 +16,39 @@ const updateCursorPosition = (e) => {
   }
 };
 
-const handleMouseEnter = () => {
-  if (customCursor.value) {
-    customCursor.value.classList.add("hover");
+const handleMouseOver = (e) => {
+  if (e.target.closest(".custom-link, .custom-button, .content .detailsLink")) {
+    if (customCursor.value) {
+      customCursor.value.classList.add("hover");
+    }
   }
 };
 
-const handleMouseLeave = () => {
-  if (customCursor.value) {
-    customCursor.value.classList.remove("hover");
+const handleMouseOut = (e) => {
+  if (e.target.closest(".custom-link, .custom-button, .content .detailsLink")) {
+    if (customCursor.value) {
+      customCursor.value.classList.remove("hover");
+    }
   }
-};
-
-const addHoverEffect = () => {
-  document.querySelectorAll(".custom-link, .custom-button").forEach((el) => {
-    el.addEventListener("mouseenter", handleMouseEnter);
-    el.addEventListener("mouseleave", handleMouseLeave);
-  });
 };
 
 onMounted(() => {
-  customCursor.value = document.querySelector(".custom-cursor");
   document.addEventListener("mousemove", updateCursorPosition);
-  addHoverEffect();
+  document.addEventListener("mouseover", handleMouseOver);
+  document.addEventListener("mouseout", handleMouseOut);
 });
 
 onBeforeUnmount(() => {
   document.removeEventListener("mousemove", updateCursorPosition);
-  document.querySelectorAll(".custom-link, .custom-button").forEach((el) => {
-    el.removeEventListener("mouseenter", handleMouseEnter);
-    el.removeEventListener("mouseleave", handleMouseLeave);
-  });
+  document.removeEventListener("mouseover", handleMouseOver);
+  document.removeEventListener("mouseout", handleMouseOut);
 });
 </script>
 
-<style scoped>
-html,
-body {
-  cursor: none;
+
+<style>
+:global(*) {
+  cursor: none !important;
 }
 
 .custom-cursor {
@@ -65,9 +62,12 @@ body {
   pointer-events: none;
   z-index: 10000;
   transition: background-color 0.1s ease;
+  transform: translate(-50%, -50%);
 }
 
 .custom-cursor.hover {
   background-color: rgb(0, 0, 0);
+  width: 45px;
+  height: 45px;
 }
 </style>

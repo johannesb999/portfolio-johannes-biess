@@ -34,13 +34,5 @@ html {
   text-align: center;
 }
 
-.custom-link {
-  color: black;
-  text-decoration: none;
-}
 
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
 </style>

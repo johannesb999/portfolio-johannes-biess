@@ -74,15 +74,7 @@ main {
   padding-right: 20px;
 }
 
-.custom-link {
-  color: black;
-  text-decoration: none;
-}
 
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
 
 .hfgText {
   display: flex;
@@ -94,7 +86,7 @@ main {
   font-size: 24px;
   font-weight: 200;
   text-align: left;
-
+}
   #line1 {
     font-weight: 700;
   }

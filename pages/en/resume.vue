@@ -6,7 +6,7 @@
       <div class="timeline">
         <ul>
           <li>
-            <NuxtLink to="/en/cv/hfg" class="content">
+            <NuxtLink to="/en/cv/hfg" class="content ">
               <h2>HOCHSCHULE <br />FÜR GESTALTUNG</h2>
               <p>BACHELOR OF ARTS</p>
               <p class="location">SCHWÄBISCH GÜND, GERMANY</p>
@@ -70,7 +70,7 @@
 <script setup></script>
 
 <style scoped>
-html {
+main {
   position: absolute;
   left: 0;
   right: 0;
@@ -78,6 +78,7 @@ html {
   width: 100%;
   overflow-y: auto;
   font-family: "Roboto Mono", monospace;
+
 }
 
 #title {
@@ -110,14 +111,7 @@ html {
   margin-top: 50px;
 }
 
-.custom-link {
-  color: black;
-  text-decoration: none;
-}
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
+
 
 * {
   margin: 0;
@@ -141,6 +135,7 @@ p {
   font-size: 1.75rem;
   font-weight: 100;
   letter-spacing: 7px;
+
 }
 
 .location {
@@ -184,18 +179,21 @@ p {
 .timeline ul li .content h2 {
   color: #171717;
   padding: 0px 2px 18px 0px;
+
 }
 
 .timeline ul li:nth-child(odd) {
   float: left;
   text-align: right;
   clear: both;
+
 }
 
 .timeline ul li:nth-child(even) {
   float: right;
   text-align: left;
   clear: both;
+
 }
 
 .date {

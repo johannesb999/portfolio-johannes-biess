@@ -84,7 +84,6 @@ main {
 
 .custom-link:hover {
   color: black;
-  text-decoration: underline;
 }
 
 .hfgText {

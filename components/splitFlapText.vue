@@ -276,7 +276,6 @@ watch(
 
 .link-style {
   color: rgba(48, 48, 48, 0);
-  text-decoration: underline;
 }
 
 .char.flip {

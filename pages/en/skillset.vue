@@ -258,7 +258,6 @@ html {
 
 .custom-link:hover {
   color: black;
-  text-decoration: underline;
 }
 
 .aboutMeText {
@@ -291,7 +290,6 @@ html {
 
 .link-style {
   color: blue;
-  text-decoration: underline;
 }
 
 .custom-alert {

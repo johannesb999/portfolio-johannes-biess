@@ -9,16 +9,19 @@
       />
     </head>
     <NuxtPage />
+
     <header class="language-switch">
       <button
+        class="custom-link"
         id="en"
         @click="switchLanguage('en')"
         :disabled="currentLocale === 'en'"
       >
         EN
       </button>
-      <div id="line">|</div>
+      <div id="line" class="custom-link">|</div>
       <button
+        class="custom-link"
         id="de"
         @click="switchLanguage('de')"
         :disabled="currentLocale === 'de'"
@@ -26,7 +29,8 @@
         DE
       </button>
     </header>
-    <nuxt-link to="/" class="returnHome">JB</nuxt-link>
+    <nuxt-link to="/" class="returnHome custom-link">JB</nuxt-link>
+    <!-- <CustomCursor /> -->
   </div>
 </template>
 
@@ -65,6 +69,10 @@ const switchLanguage = (lang) => {
 watch(route, (newRoute) => {
   currentLocale.value = newRoute.path.startsWith("/de") ? "de" : "en";
 });
+
+//für customCursor:
+// in html curser: none !important; , in custom-link und custom-link:hover curser:none;
+//
 </script>
 
 <style>
@@ -79,7 +87,9 @@ html {
   width: 100%;
   letter-spacing: 1px;
   scroll-behavior: smooth;
+  
 }
+
 
 ::-webkit-scrollbar {
   width: 1px;
@@ -125,7 +135,6 @@ html {
 
 .language-switch button {
   margin: 0 5px;
-  cursor: pointer;
   background-color: #fbfbfb;
   color: #dadada;
   border: none;
@@ -134,7 +143,6 @@ html {
 
 .language-switch button:disabled {
   color: #171717;
-  cursor: default;
 }
 
 .language-switch button:not(:disabled):hover {
@@ -274,8 +282,9 @@ html {
 
 .custom-link:hover {
   color: black;
-  text-decoration: underline;
 }
+
+
 
 /* Responsive Design */
 

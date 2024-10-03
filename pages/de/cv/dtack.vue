@@ -77,15 +77,7 @@ main {
   padding-right: 20px;
 }
 
-.custom-link {
-  color: black;
-  text-decoration: none;
-}
 
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
 
 .hfgText {
   display: flex;

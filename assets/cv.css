@@ -27,15 +27,6 @@ html {
   text-orientation: mixed;
 }
 
-.custom-link {
-  color: black;
-  text-decoration: none;
-}
-
-.custom-link:hover {
-  color: black;
-  text-decoration: underline;
-}
 
 .project-details {
   max-width: 1200px;

@@ -84,7 +84,6 @@ main {
 
 .custom-link:hover {
   color: black;
-  text-decoration: underline;
 }
 
 .hfgText {
@@ -97,7 +96,7 @@ main {
   font-size: 24px;
   font-weight: 200;
   text-align: left;
-
+}
   #line1 {
     font-weight: 700;
   }
