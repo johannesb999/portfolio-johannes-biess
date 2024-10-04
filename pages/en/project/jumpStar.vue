@@ -1,168 +1,145 @@
 <template>
-    <main>
-      <div class="background">
-        <client-only>
-          <ScrollLink />
-        </client-only>
-      </div>
+  <main>
+    <div class="background">
+      <client-only>
+        <ScrollLink />
+      </client-only>
+    </div>
 
+    <div id="projectLinkNext">
+      <nuxt-link to="/en/project/simpleChat" class="custom-link"
+        >SIMPLECHAT</nuxt-link
+      >
+    </div>
+    <div id="projectLinkBefore">
+      <nuxt-link to="/en/project/projects" class="custom-link"
+        >PLANTMONIT</nuxt-link
+      >
+    </div>
+    <div class="projectFlap">
+      <SplitFlapText
+        :texts="[
+          '        [JUMPSTAR]          ',
+          '  WEB DEPLOYMENT PIPELINE ',
+          'THREEJS     SERVERHOSTING ',
+          '      DOCKER   SVELTE     ',
+          ' CLOUDFLARE      PORTAINER',
+          'MONGOOSE    GITHUB ACTIONS',
+        ]"
+      />
+    </div>
 
-      <div id="projectLinkNext">
-        <nuxt-link to="/en/project/simpleChat" class="custom-link"
-          >SIMPLECHAT</nuxt-link
-        >
-      </div>
-      <div id="projectLinkBefore">
-        <nuxt-link to="/en/project/projects" class="custom-link"
-          >PLANTMONIT</nuxt-link
-        >
-      </div>
-      <div class="projectFlap">
-        <SplitFlapText
-          :texts="[
-            '        [JUMPSTAR]        ',
-            'THREEJS     SERVERHOSTING ',
-            '  WEB DEPLOYMENT  PIPELINE',
-            '  DOCKER       SVELTE     ',
-            ' CLOUDFLARE      PORTAINER',
-            'MONGOOSE    GITHUB ACTIONS',
-          ]"
+    <div class="wrapper">
+      <div class="picture">
+        <img
+          style="border: 1px solid black; border-radius: 10px"
+          src="public\img\js\js.svg"
+          alt="plantmonit"
         />
       </div>
+    </div>
+    <DetailsScroll />
 
-      <div class="wrapper">
-        <div class="picture">
-          <img
-            style="border: 1px solid black; border-radius: 10px"
-            src="public\img\js\js.svg"
-            alt="plantmonit"
-          />
+    <div class="project-details">
+      <div class="project-section" id="details-section">
+        <div class="project-content">
+          <div class="text">
+            <SplitFlapText :texts="['            [IDEA]             ']" />
+            <div class="paragraph">
+              The course just asked us to do something with stars. <br/>We got a link
+              to a CSV file that had around 340,000 stars and their data in it.
+              <br/><br/>The course was more about learning the deployment pipeline
+              <br/>than develop the content to something unique. <br/>Even so, we wanted to
+              create a website that doesn't already exist in this form. <br/><br/>Many
+              people believe that the constellation of the stars at the time of
+              their birth has a special significance for their lives. This
+              belief affects our choices and attitudes in everyday life, from
+              horoscopes to astrological predictions.<br/> With our website, we aimed
+              to show, in a fun way, that constellations are simply a random
+              grouping of celestial bodies that appear coherent because of our
+              perspective. Our goal was to offer a new perspective on the
+              universe and to highlight that the supposed meanings of the
+              constellations are just fiction.
+            </div>
+          </div>
+          <div class="image medium">
+            <img src="public\img\js\js.png" alt="plantmonit" />
+          </div>
         </div>
-        <!-- <div class="projectDescription">
-          <p>
-            With our website we want to present the scientific view of
-            horoscopes and astrology. We show that star signs are constructed
-            concepts that have no scientific basis and therefore have no impact
-            on people or our everyday lives...
-          </p>
-        </div> -->
       </div>
-      <DetailsScroll/>
 
+      <div class="project-section-reverse">
+        <div class="project-content">
+          <div class="image medium">
+            <img src="public\img\js\Process.svg" alt="concept work in figma" />
+          </div>
+          <div class="text">
+            <SplitFlapText :texts="['           [PROCESS]           ']" />
+            <div class="paragraph">
+              At the start of the project, we discussed how we wanted to portray
+              the stars. <br/>We quickly decided to add a fun element by simulating a
+              spaceship flying <br/>through space. This approach lets you see the
+              stars and constellations from different angles, which makes it
+              easier to understand how random the arrangements are.<br/> After some
+              feedback discussions, we decided to put the idea of displaying
+              scientific data on the back burner to focus more on the visual
+              experience. <br/>As you move through space, the lines that connect the
+              stars start to get distorted, making it harder to recognize
+              constellations. <br/>This makes users realise that even a slight shift
+              in perspective is enough to destroy these supposed constellations.
+              <br/><br/> To make it more immersive, we chose a sleek, unobtrusive design
+              for the navigation tools that blends in with the background
+              without disturbing the visual focus on the stars.
+            </div>
+          </div>
+        </div>
 
-      <div class="project-details">
-        
-        <div class="project-section" id="details-section">
+        <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText
-              :texts="[
-                '           [IDEA]            ',
-              ]"
-            />              
-            <div class="paragraph">
-                In our hectic daily lives, there is often little time left for
-                the care of indoor and garden plants. Many people, especially
-                those with stressful jobs or other time-consuming commitments,
-                regularly forget to water, fertilize, or properly place their
-                plants. This often leads to plants wilting, being over- or
-                under-watered, or otherwise not receiving the necessary care.
-                Statistics show that 37% of hobby gardeners let one or two
-                houseplants die each year. Millennials, in particular, seem to
-                have more problems, with about seven houseplants dying on
-                average. Most people do not have a green thumb and lack the
-                necessary knowledge to properly care for plants. How should one
-                react to discolored leaves? What should be done about aphids? Or
-                is my plant even sick? Improper care and lack of knowledge about
-                the specific needs of plants often lead to frustration, sadness,
-                and disappointment.
-            </div>
+              <SplitFlapText :texts="['      [IMPLEMENTATION]       ']" />
+              <div class="paragraph">
+                The result is an interactive website that lets users have some
+                fun exploring space. <br/>You can view stars and constellations from
+                different perspectives with the help of a simulated spaceship.
+                <br/>The idea is to show that constellations are just a matter of
+                perspective.<br/> There are some subtle animations that show how even
+                small changes in the viewing angle can make the constellations
+                seem less ordered. <br/>Users get to see first-hand how random the
+                arrangement of the celestial bodies really is—without any direct
+                instruction, but through their own discovery and experience. <br/><br/>The
+                website is built on the Svelte framework, and THREE.js handles
+                the 3D environment. We store the star data in a MongoDB
+                database, which is hosted on our own server along with the
+                backend. We use Docker and Portainer to manage the
+                infrastructure, and GitHub Actions provides us with a nearly
+                automated deployment pipeline, which makes it easy to deploy the
+                application.
+              </div>
             </div>
             <div class="image medium">
-              <img src="public\img\js\js.png" alt="plantmonit" />
+              <img
+                src="public\img\js\Implementaion.svg"
+                alt="a moitor displaying jumpstar"
+              />
             </div>
           </div>
         </div>
 
-        <div class="project-section-reverse">
-          <div class="project-content">
-            <div class="image large">
-              <img src="public\img\dl\drawingLight (9).jpg" alt="plantmonit" />
-            </div>
-            <div class="text">
-              <SplitFlapText
-              :texts="[
-                '          [PROCESS]          ',
-              ]"
-            />              
-              <p>
-                Our approach to developing PlantMonit followed a structured and
-                iterative process, ensuring that we addressed both technical and
-                user-friendly aspects of our product. <br /><br />
-                <h3>Conceptional Process</h3>
-                </p>
-                <p>
-                Persona Development We began by creating a detailed persona to
-                identify and analyze the needs of our target audience. This
-                helped us understand the specific requirements and challenges
-                our users face, allowing us to tailor our solution accordingly.
-                The persona served as a solid foundation for all subsequent
-                design and development decisions. <br /><br />User Journey
-                During the app development, we prioritized designing the user
-                journey. This included creating detailed user paths to ensure a
-                seamless and intuitive experience from app installation to daily
-                use. The user journey helped us identify potential obstacles and
-                continuously enhance the app's usability. <br /><br />           
-              </p>
-            </div>
-          </div>
-        </div>
-
+        <a
+          href="https://starsapp.johannes-biess.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="tryOutLink custom-link"
+          >TRY IT OUT LIVE</a
+        >
         
-
-      
-
-        <div class="project-section">
-          <div class="project-content">
-            <div class="text">
-              <SplitFlapText
-              :texts="[
-                '      [IMPLEMENTATION]       ',
-              ]"
-            />                <p>
-                Through this structured, methodical approach, we developed a
-                product that meets our target audience's needs and significantly
-                simplifies plant care. PlantMonit combines cutting-edge
-                technology with a user-friendly design to ensure optimal plant
-                maintenance. <br />
-                Key Features of PlantMonit: Automatic Plant Monitoring: Sensors
-                for soil moisture, humidity, temperature, and light continuously
-                monitor the vital data of plants. Advanced Image Analysis: The
-                use of the OpenAI Vision API allows for detailed analysis of
-                plant images, contributing to early problem detection. Intuitive
-                User Interface: A user-friendly app that presents all collected
-                data clearly and provides personalized care tips. Seamless
-                Integration: Efficient communication between hardware components
-                via Websockets ensures reliable data transmission and easy
-                setup. Scalable Database: A robust backend structure with
-                MongoDB and Mongoose ensures efficient data storage and
-                management. By combining these elements, we created an
-                innovative solution that revolutionizes plant care and helps
-                both beginners and experienced gardeaners keep their plants
-                healthy.
-              </p>
-            </div>
-            <div class="image large">
-              <img src="public\img\dl\drawingLight (11).jpg" alt="plantmonit" />
-            </div>
-          </div>
-        </div>
-        <div class="project-section">
+        <div class="project-section" style="padding-top: 2rem">
           <SplitFlapText
-          :texts="[
-            '          [PROJECT] [VIDEO]          ',
-          ]"
-        />  
+            :texts="[
+              '                       [PROJECT] [VIDEO]                       ',
+            ]"
+          />
           <div class="project-video">
             <iframe
               src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
@@ -173,8 +150,19 @@
             ></iframe>
           </div>
         </div>
+        <div class="projectDetailsFlap">
+          <SplitFlapText
+            :texts="[
+              '        [KEYDATA]         ',
+              '        TWO MONTHS          ',
+              '    THIRD SEMESTER     ',
+              '      GRADE: 1.0        ',
+            ]"
+          />
+        </div>
       </div>
-    </main>
+    </div>
+  </main>
 </template>
 
 <script setup></script>

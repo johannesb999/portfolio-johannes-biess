@@ -20,6 +20,10 @@ html {
   cursor: none; 
 } */
 
+.detailsLink:hover {
+  text-decoration: underline;
+}
+
 #projectLinkStart {
   position: fixed;
   top: 0;
@@ -125,23 +129,7 @@ html {
   letter-spacing: 0.3px;
 }
 
-.project-header {
-  text-align: center;
-  margin-top: 8rem;
-  margin-bottom: 8rem;
-  align-items: center;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-}
 
-.project-title {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
 
 span {
   font-weight: 200;
@@ -187,9 +175,28 @@ span {
 }
 
 .paragraph {
-  font-family: "Geologica", system-ui;
-  
+  /* font-family: "Open Sans", sans-serif; */
+  font-optical-sizing: auto;
+  font-family: "Inter Tight", sans-serif;
 }
+
+
+.tryOutLink {
+  color: black;
+  font-weight: 700;
+  font-size: 2rem;
+  transform: translateX(-50%);
+  text-decoration: none;
+  left: 39.5%;
+
+  position: relative;
+}
+
+.tryOutLink:hover {
+  text-decoration: underline;
+}
+
+
 
 .image {
   flex: 1;
@@ -241,7 +248,7 @@ h3 {
 }
 
 .image.medium img {
-  max-height: 500px;
+  max-height: 450px;
 }
 
 .image.large img {

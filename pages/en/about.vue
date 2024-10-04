@@ -25,7 +25,7 @@
         <div class="picture">
           <img
             style="border-radius: 10px"
-            src="public\profilepicture.jpg"
+            src="public\profilepicture2.jpg"
             alt="profilepicture"
           />
         </div>

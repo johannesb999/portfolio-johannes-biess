@@ -18,10 +18,10 @@
         />
       </div>
 
-      <div id="quote">
+      <!-- <div id="quote">
         “I would love to<br />
         -hear from you.”
-      </div>
+      </div> -->
       <!-- 'I  WOULD  LOVE  TO     ',
       'HEAR  FROM YOU VIA     ', -->
 
