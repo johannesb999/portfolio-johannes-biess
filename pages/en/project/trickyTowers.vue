@@ -137,7 +137,7 @@
         </div>
       </div>
       <a
-      href="https://starsapp.johannes-biess.com/"
+      href="https://trickyTowers.johannes-biess.com/"
       target="_blank"
       rel="noopener noreferrer"
       class="tryOutLink custom-link"
