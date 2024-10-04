@@ -76,36 +76,8 @@ main {
 
 
 
-.hfgText {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: 200;
-  text-align: left;
-}
-  #line1 {
-    font-weight: 700;
-  }
-  #line2 {
-    font-weight: 300;
-  }
-  #line3 {
-    font-weight: 300;
-  }
-  #line4 {
-    font-weight: 300;
-  }
-  #line5 {
-    font-weight: 300;
-  }
-  #line6 {
-    font-weight: 300;
-  }
-}
+
+
 
 .picture {
   position: absolute;
