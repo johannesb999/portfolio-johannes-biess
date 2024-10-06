@@ -32,7 +32,7 @@
       <div class="picture">
         <img
           style="border: 1px solid black; border-radius: 10px"
-          src="public\img\dl\drawingLight (4).jpg"
+          src="public\img\dl\drawingLight (4).svg"
           alt="plantmonit"
         />
       </div>
@@ -138,7 +138,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\dl\drawingLight (11).jpg" alt="plantmonit" />
+            <img src="public\img\dl\drawingLight (11).svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -146,16 +146,16 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image medium">
-            <img src="public\img\dl\drawingLight (4).jpg" alt="plantmonit" />
+            <img src="public\img\dl\drawingLight (5).svg" alt="plantmonit" />
           </div>
           <div class="image medium">
-            <img src="public\img\dl\drawingLight (3).jpg" alt="plantmonit" />
+            <img src="public\img\dl\drawingLight (6).svg" alt="plantmonit" />
           </div>
           <div class="image medium">
-            <img src="public\img\dl\drawingLight (7).jpg" alt="plantmonit" />
+            <img src="public\img\dl\drawingLight (7).svg" alt="plantmonit" />
           </div>
           <div class="image medium">
-            <img src="public\img\dl\drawingLight (12).jpg" alt="plantmonit" />
+            <img src="public\img\dl\drawingLight (12).svg" alt="plantmonit" />
           </div>
         </div>
 

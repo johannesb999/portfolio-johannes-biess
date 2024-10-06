@@ -1,71 +1,60 @@
 <template>
-  
-    <main>
-      <div class="background">
-        <client-only>
-          <ScrollLink />
-        </client-only>
-      </div>
-        
-    <div id="projectLinkNext">
-        <nuxt-link to="/en/project/portfolio" class="custom-link"
-          >THIS WEBSITE
-        </nuxt-link>
-      </div>
-      <div id="projectLinkBefore">
-        <nuxt-link to="/en/project/jumpStar" class="custom-link"
-          >JUMPSTAR
-        </nuxt-link>
-      </div>
+  <main>
+    <div class="background">
+      <client-only>
+        <ScrollLink />
+      </client-only>
+    </div>
 
-      <div class="projectFlap">
-        <SplitFlapText
-          :texts="[
-            '       [SIMPLECHAT]       ',
-            '   FIGMA      PROTOTYPE   ',
-            'WIREFRAMES   USERCENTERED ',
-            '   VOICE OF THE CUSTOMER  ',
-            '     USER INTERVIEWS      ',
-            'FIGMA      DESIGN THINKING',
-          ]"
+    <div id="projectLinkNext">
+      <nuxt-link to="/en/project/portfolio" class="custom-link"
+        >THIS WEBSITE
+      </nuxt-link>
+    </div>
+    <div id="projectLinkBefore">
+      <nuxt-link to="/en/project/jumpStar" class="custom-link"
+        >JUMPSTAR
+      </nuxt-link>
+    </div>
+
+    <div class="projectFlap">
+      <SplitFlapText
+        :texts="[
+          '        [SIMPLECHAT]        ',
+          '       CHAT PLATFORM      ',
+          'WIREFRAMES   USERCENTERED ',
+          '   DESIGN THINKING        ',
+          '         USER INTERVIEWS  ',
+          '  FIGMA PROTOTYPE         ',
+        ]"
+      />
+    </div>
+
+    <div class="wrapper">
+      <div class="picture">
+        <img
+          style="border: 1px solid black; border-radius: 10px"
+          src="public\img\sc\sc (3).svg"
+          alt="SimpleChat"
         />
       </div>
+    </div>
+    <DetailsScroll />
 
-      <div class="wrapper">
-        <div class="picture">
-          <img
-            style="border: 1px solid black; border-radius: 10px"
-            src="public\img\sc\sc (3).svg"
-            alt="SimpleChat"
-          />
-        </div>
-        <!-- <div class="projectDescription">
-          <p>
-            The aim of the project was to redesign and rethink the the currently
-            used Chatroom by my School Slack. The goal was to create a more
-            user-centered and intuitive platform to improve the communication
-            beetween school, students and alumnis... <br />
-          </p>
-        </div> -->
-      </div>
-      <DetailsScroll/>
-
-
-      <div class="project-details">
-        <div class="project-section" id="details-section">
+    <div class="project-details">
+      <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="[
-                '          [PROBLEM]          ',
-              ]"
-            />  
-            <p>
-              The university's current communication platform, Slack, is to be
-              changed. Therefore, the task is to create an own platform that
-              enables or even improves the communication between the
-              university, students and alumni. The platform should be easy to use and offer a wide range of functions. The aim is to create a platform that is used by all students and alumni of the university  
-            </p>
+            <SplitFlapText :texts="['          [PROBLEM]          ']" />
+            <div class="paragraph">
+              The university's current communication platform, Slack, is being
+              replaced by a new dedicated platform that will make it easier for
+              the university, students, and alumni to communicate with each
+              other. The new platform needs to be simple to use and have lots of
+              different features. The goal was to create a solution that would
+              be used by all students and alumni to keep the connection to the
+              university strong.
+            </div>
           </div>
           <div class="image small">
             <img src="public\img\sc\sc (1).svg" alt="plantmonit" />
@@ -79,79 +68,21 @@
             <img src="public\img\pm\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText
-            :texts="[
-              '          [PROCESS]          ',
-            ]"
-          />  
-            <p>
-              First to get an Idea of what the users want, we conducted a
-              survey of diffrent already existing platforms. After that we
-              used diffrent methods of user research and design thinking like
-              ..., ... and ... to create a low fidelity prototype. These
-              methods brought several learnings which we used to create a low
-              fidelity protoype and to do first test with some potential
-              users. This feedback helped us to improve and overthink some of
-              our ideas. For example we had to change our structure of
-              navigation. The most dificult thing for us was it to create an
-              interface which is able to combine all of the needed features
-              and to keep it simple and user friendly at the same time.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image medium">
-            <img src="public\img\sc\simplechat3.png" alt="plantmonit" />
-          </div>
-          <div class="text">
-            <h3>Design Thinking</h3>
-            <p>Methoden darauf eingehen</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image large">
-            <img src="public\img\sc\simplechat1.png" alt="plantmonit" />
-          </div>
-          <div class="text">
-            <p>
-              <h3>Interface Process</h3>
-              The technical implementation involved several steps,
-              incorporating both innovative hardware solutions and modern
-              software development practices. <br /><br />
-
-              Hardware Design and Integration: We utilized ESP32 Feather and
-              ESP32 Cam for data collection and transmission.<br />
-              These devices provided the flexibility and performance necessary
-              for precise monitoring. <br /><br />
-
-              The use of the OpenAI Vision API enabled advanced analysis of
-              plant images, which was a novel solution at the time of
-              development, making our app particularly innovative.<br /><br />
-
-              Seamless communication between the ESP32 devices via Websockets
-              ensured that all components worked efficiently together,
-              providing reliable data transmission. <br /><br />
-              Backend Development: By using MongoDB and Mongoose, we built a
-              robust and scalable database structure that facilitated
-              efficient storage and management of collected data.
-              <br />Our API development focused on fast and reliable data
-              transfers to ensure a smooth user experience. <br />Security
-              measures like .env and user logins protected sensitive data.
-              <br /><br />
-
-              Frontend Development: We developed a user-friendly interface
-              with Svelte, characterized by intuitive operation and appealing
-              design. This ensured that users of all experience levels could
-              easily use the app. Close alignment with prototypes and regular
-              user feedback helped us achieve a consistent and attractive
-              design that met our target audience's high standards.
-            </p>
+            <SplitFlapText :texts="['          [PROCESS]          ']" />
+            <div class="paragraph">
+              To get a feel for what users need, we started by taking a look at
+              what other platforms are out there. We used user research methods
+              like user interviews and analyzing what customers want to really
+              understand what the target group needs. We used these findings to
+              put together a rough prototype, which we then made some more
+              improvements to. As we went along, we kept making changes based on
+              tests with potential users to make it even more user-friendly. We
+              used the low- and mid-fidelity prototypes we made in Figma
+              as a starting point for regular user tests. We used an iterative
+              approach and took user feedback into account to create a platform
+              that's both functional and intuitive. This effectively simplifies
+              the complexity of the many functions.
+            </div>
           </div>
         </div>
       </div>
@@ -159,65 +90,64 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-            :texts="[
-              '           [SOULUTION]           ',
-            ]"
-          />              <p>
-              Through this structured, methodical approach, we developed a
-              product that meets our target audience's needs and significantly
-              simplifies plant care. PlantMonit combines cutting-edge
-              technology with a user-friendly design to ensure optimal plant
-              maintenance. <br />
-              Key Features of PlantMonit: Automatic Plant Monitoring: Sensors
-              for soil moisture, humidity, temperature, and light continuously
-              monitor the vital data of plants. Advanced Image Analysis: The
-              use of the OpenAI Vision API allows for detailed analysis of
-              plant images, contributing to early problem detection. Intuitive
-              User Interface: A user-friendly app that presents all collected
-              data clearly and provides personalized care tips. Seamless
-              Integration: Efficient communication between hardware components
-              via Websockets ensures reliable data transmission and easy
-              setup. Scalable Database: A robust backend structure with
-              MongoDB and Mongoose ensures efficient data storage and
-              management. By combining these elements, we created an
-              innovative solution that revolutionizes plant care and helps
-              both beginners and experienced gardeaners keep their plants
-              healthy.
-            </p>
+            <SplitFlapText :texts="['           [SOULUTION]           ']" />
+            <div class="paragraph">
+              The result is SimpleChat, an all-in-one platform that lets users
+              chat and offers other features to connect the university and
+              students in new ways. One of the key features of the platform is
+              the ability for users to maintain their own profiles. These
+              profiles include key info like a public timeline where
+              internships, studying abroad, and other big moments are
+              documented. There's also a tag system where you can store
+              interests and relevant facts about the person. These features let
+              other users search for people with specific experiences or
+              interests. For example, they can search for someone who has stayed
+              abroad in Costa Rica. The platform also includes the university
+              itself and companies. The university can use the platform to
+              manage a bulletin board, post grades and notifications directly on
+              accounts, and combine several platforms. Courses and team channels
+              are also part of SimpleChat, so that teaching materials can be
+              shared easily. Companies get restricted accounts and can use the
+              platform to advertise job vacancies or search for people with
+              specific skills that interest them. SimpleChat thus offers a way
+              to communicate more effectively while becoming an integral part of
+              university life and students' career planning.
+            </div>
           </div>
           <div class="image medium">
             <img src="public\img\sc\simplechat2.png" alt="plantmonit" />
           </div>
         </div>
       </div>
-      <div class="project-section">
-        <h1 class="project-title">
-          <span>UZHJHASGBVSAIJUDAUD</span>WATCH<span
-            >HGBBVSAIHJTJGEUMJAUD</span
-          ><br /><br />
-        </h1>
 
+      <a class="tryOutLink custom-link" style="text-decoration: none"
+        >TRY IT OUT LIVE</a
+      >
+      <div class="project-section">
         <div class="project-video">
           <iframe
-            src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            style="border: 1px solid #171717"
+            width="800"
+            height="450"
+            src="https://embed.figma.com/proto/lAaQo23W7BEgJGwKB9lQD8/Designmethoden-USerresearch?page-id=0%3A1&node-id=213-2808&node-type=frame&viewport=-2921%2C-796%2C0.15&scaling=scale-down&content-scaling=fixed&starting-point-node-id=213%3A2808&embed-host=share"
             allowfullscreen
           ></iframe>
         </div>
       </div>
+      <div class="projectDetailsFlap">
+        <SplitFlapText
+          :texts="[
+            '        [KEYDATA]         ',
+            '       TWO WEEKS       ',
+            '    THIRD SEMESTER     ',
+            '      GRADE: 1.7        ',
+          ]"
+        />
+      </div>
     </div>
-    </main>
+  </main>
 </template>
 
-<script setup>
-
-</script>
-
-
-
-
+<script setup></script>
 
 <style src="assets/project.css" scoped></style>

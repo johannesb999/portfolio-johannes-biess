@@ -117,7 +117,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img src="public\img\ge\softwareProcess.svg" alt="plantmonit" />
+            <img src="public\img\ge\softwareProcess.svg" alt="plantmonit" style="background-color:#2e2e2efe" />
           </div>
           <div class="text">
             <div class="paragraph">

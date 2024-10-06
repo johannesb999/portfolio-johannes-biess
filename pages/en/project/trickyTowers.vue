@@ -1,155 +1,130 @@
 <template>
-    <main>
-      <div class="background">
-        <client-only>
-          <ScrollLink />
-        </client-only>
-      </div>
+  <main>
+    <div class="background">
+      <client-only>
+        <ScrollLink />
+      </client-only>
+    </div>
 
-      <div id="projectLinkNext">
-        <nuxt-link to="/en/project/goEase" class="custom-link"
-          >GOEASE</nuxt-link
-        >
-      </div>
-      <div id="projectLinkBefore">
-        <nuxt-link to="/en/project/drawingLight" class="custom-link"
-          >DRAWINGLIGHT</nuxt-link
-        >
-      </div>
+    <div id="projectLinkNext">
+      <nuxt-link to="/en/project/goEase" class="custom-link">GOEASE</nuxt-link>
+    </div>
+    <div id="projectLinkBefore">
+      <nuxt-link to="/en/project/drawingLight" class="custom-link"
+        >DRAWINGLIGHT</nuxt-link
+      >
+    </div>
 
-      <div class="projectFlap">
-        <SplitFlapText
-          :texts="[
-            '      [TRICKYTOWERS]        ',
-            'TEAMWORK   TRUST  CLARITY ',
-            'ANOTHER  ORGANISATION     ',
-            '     ADAPTABILITY         ',
-            ' PUNCTUALITY  FAIRNESS    ',
-            'CREATIVITY  ACCURACY      ',
-          ]"
+    <div class="projectFlap">
+      <SplitFlapText
+        :texts="[
+          '      [TRICKYTOWERS]        ',
+          '   INTERACTIVE WINDOW     ',
+          'HTML   CSS  JAVASCRIPT    ',
+          '  FIGMA        WEBCAM     ',
+          ' GOOGLE MEDIA PIPE        ',
+        ]"
+      />
+    </div>
+
+    <div class="wrapper">
+      <div class="picture">
+        <img
+          style="border: 1px solid black; border-radius: 10px"
+          src="public\img\tt\tt (1).svg"
+          alt="plantmonit"
         />
       </div>
+    </div>
+    <DetailsScroll />
 
-      <div class="wrapper">
-        <div class="picture">
-          <img
-            style="border: 1px solid black; border-radius: 10px"
-            src="public\img\tt\tt (1).svg"
-            alt="plantmonit"
-          />
-        </div>
-      
-      </div>
-      <DetailsScroll/>
-
-
-      <div class="project-details">
-        <div class="project-section" id="details-section">
+    <div class="project-details">
+      <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-            :texts="[
-              '          [IDEA]          ',
-            ]"
-          />              
-          <div class="paragraph">
-
-              Whats the best way to not only show passents the thins you offer but to make the contact between them and your windwo a remarkebale experience?
-              In this case how can we improve the marketing of our school and make it more present to the public?
-          </div>
+            <SplitFlapText :texts="['           [PROBLEM]           ']" />
+            <div class="paragraph">
+              The project focused on answering this question: What's the best
+              way to draw attention to a shop window or building? We wanted to
+              find out how we could market our university better and make it
+              more visible to the public to attract more potential students. We
+              wanted to create an interactive installation that would make the
+              university's shop window come alive.<br /><br />
+              The idea was to create an installation that would get people's
+              attention and make them curious about the school. We wanted to
+              turn the shop window into a place that not only grabs your
+              attention but also leaves a lasting impression. The goal was to
+              attract more students to our university.
+            </div>
           </div>
           <div class="image medium">
-            <img src="public\img\js\js.png" alt="plantmonit" />
+            <img src="public\img\tt\idea.png" alt="plantmonit" />
           </div>
         </div>
       </div>
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image large">
-            <img src="public\img\dl\drawingLight (9).jpg" alt="plantmonit" />
+          <div class="image small">
+            <img src="public\img\tt\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText
-            :texts="[
-              '          [PROCESS]          ',
-            ]"
-          />            
-          <div class="paragraph">
-            Our approach to developing PlantMonit followed a structured and
-              iterative process, ensuring that we addressed both technical and
-              user-friendly aspects of our product. <br /><br />
-              <h3>Conceptional Process</h3>
-              Persona Development We began by creating a detailed persona to
-              identify and analyze the needs of our target audience. This
-              helped us understand the specific requirements and challenges
-              our users face, allowing us to tailor our solution accordingly.
-              The persona served as a solid foundation for all subsequent
-              design and development decisions. <br /><br />User Journey
-              During the app development, we prioritized designing the user
-              journey. This included creating detailed user paths to ensure a
-              seamless and intuitive experience from app installation to daily
-              use. The user journey helped us identify potential obstacles and
-              continuously enhance the app's usability. <br /><br />           
-          </div>
+            <SplitFlapText :texts="['           [PROCESS]          ']" />
+            <div class="paragraph">
+              We started off with a big, intensive brainstorming and research
+              phase for this project. We wanted to figure out the best way to
+              reach young people who are interested in both technology and
+              design so they'd know about our degree program. It didn't take
+              long to realize that just having a shop window with animations or
+              videos wouldn't be enough. Not many people stopping by will take
+              the time to watch any videos. We quickly decided to develop an
+              interactive solution. It was really important for us to come up
+              with a design that would get people's attention and also make them
+              curious about what we had to offer. The installation had to be
+              designed in a way that made it easy for people to interact with
+              it. This would help to keep their interest and make it simple for
+              them to use.
+            </div>
           </div>
         </div>
       </div>
-
-      
-
-    
 
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-            :texts="[
-              '          [IMPLEMENTATION]          ',
-            ]"
-          />             
-          <div class="paragraph">
-            Through this structured, methodical approach, we developed a
-              product that meets our target audience's needs and significantly
-              simplifies plant care. PlantMonit combines cutting-edge
-              technology with a user-friendly design to ensure optimal plant
-              maintenance. <br />
-              Key Features of PlantMonit: Automatic Plant Monitoring: Sensors
-              for soil moisture, humidity, temperature, and light continuously
-              monitor the vital data of plants. Advanced Image Analysis: The
-              use of the OpenAI Vision API allows for detailed analysis of
-              plant images, contributing to early problem detection. Intuitive
-              User Interface: A user-friendly app that presents all collected
-              data clearly and provides personalized care tips. Seamless
-              Integration: Efficient communication between hardware components
-              via Websockets ensures reliable data transmission and easy
-              setup. Scalable Database: A robust backend structure with
-              MongoDB and Mongoose ensures efficient data storage and
-              management. By combining these elements, we created an
-              innovative solution that revolutionizes plant care and helps
-              both beginners and experienced gardeaners keep their plants
-              healthy.
+            <SplitFlapText :texts="['          [SOLUTION]           ']" />
+            <div class="paragraph">
+              TrickyTowers is an interactive shop window that attracts
+              passers-by in a playful way and offers an extraordinary
+              experience. The installation consists of a screen, a backlight
+              projector and a web app which, in combination with a webcam and
+              Google MediaPipe, recognizes the user's hand movements. As soon as
+              the user's hand is recognized, a game starts. The game principle
+              of TrickyTowers can best be described as a kind of Tetris with a
+              physics engine. However, the aim is not to build rows, but to
+              build a tower as high as possible. The physical elements make
+              building a challenge that requires skill and strategic thinking.
+              This interactive experience not only attracts attention, but also
+              actively invites users to engage with the installation and
+              experience the connection to the university in a playful and
+              positive way.
+            </div>
           </div>
-          </div>
-          <div class="image large">
-            <img src="public\img\dl\drawingLight (11).jpg" alt="plantmonit" />
+          <div class="image small">
+            <img src="public\img\tt\tt (4).svg" alt="plantmonit" />
           </div>
         </div>
       </div>
       <a
-      href="https://trickyTowers.johannes-biess.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="tryOutLink custom-link"
-      >TRY IT OUT LIVE</a
+        href="https://trickyTowers.johannes-biess.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="tryOutLink custom-link"
+        >TRY IT OUT LIVE</a
       >
-      <div class="project-section" style="padding-top: 3rem">
-        <SplitFlapText
-        :texts="[
-          '          [PROJECT] [VIDEO]          ',
-        ]"
-      />  
-        <div class="project-video" >
+      <!-- <div class="project-section" style="padding-top: 3rem">
+        <SplitFlapText :texts="['          [PROJECT] [VIDEO]          ']" />
+        <div class="project-video">
           <iframe
             src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
             title="YouTube video player"
@@ -157,23 +132,21 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-        </div>
-        <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]         ',
-              '        ONE WEEK        ',
-              '    SECOND SEMESTER      ',
-              '      GRADE: 1.0        ',
-            ]"
-          />
-        </div>
+        </div> -->
+      <div class="projectDetailsFlap">
+        <SplitFlapText
+          :texts="[
+            '        [KEYDATA]         ',
+            '        ONE WEEK        ',
+            '    SECOND SEMESTER      ',
+            '      GRADE: 1.0        ',
+          ]"
+        />
       </div>
     </div>
-    </main>
+    <!-- </div> -->
+  </main>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 <style src="assets/project.css" scoped></style>
