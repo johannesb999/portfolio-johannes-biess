@@ -7,17 +7,13 @@
       <div class="project-details">
         <div class="project-section"></div>
         <div class="project-header">
-          <!-- <h1 class="project-title">
-            <span>UZHJHJUDAUD</span>D-TACK GMBH<span
-              >JGEUMJAUD</span
-            >
-          </h1> -->
+        
         </div>
 
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText :texts="['         [LEARNINGS]          ']" />
+              <SplitFlapText :texts="['         [D-TACK]          ']" />
               <p>
                beschreibung zu meiner ausbildung bei d-tack Zeugnis als Download anbieten
               </p>
@@ -25,7 +21,6 @@
             <div class="imageSplit">
               <SplitFlapText
                 :texts="[
-                  '          [D-TACK]      ',
                   'TEAMWORK    UX    UI    ',
                   'WHOLESALE  USABILITY  ',
                   '     FREE SPEAKING    ',

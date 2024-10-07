@@ -1,18 +1,11 @@
 <template>
-  <html>
     <main>
       <div id="projectLinkStart">
         <nuxt-link to="/en/resume" class="custom-link">CV</nuxt-link>
       </div>
 
       <div class="project-details">
-        <!-- <div class="project-header">
-           <h1 class="project-title">
-            <span>UZHJHJUDAUD</span>HOCHSCHULE FÜR GESTALTUNG<span
-              >JGEUMJAUD</span
-            >
-          </h1>
-        </div> -->
+        
 
         <div class="project-section">
           <div class="project-content">
@@ -20,7 +13,10 @@
               <SplitFlapText :texts="['          [HFG]            ']" />
               <p>
                 During my time at HfG, I worked on
-                <nuxt-link to="/en/project/projects" class="custom-link"
+                <nuxt-link
+                  to="/en/project/projects"
+                  class="custom-link"
+                  style="text-decoration: underline"
                   >projects</nuxt-link
                 >
                 that were practical from the start.<br />
@@ -54,8 +50,7 @@
               <img src="public\img\cv\hfgbuilding.jpeg" alt="plantmonit" />
             </div>
             <div class="text">
-              
-                <SplitFlapText :texts="['       [ABOUT] [HFG]         ']" />
+              <SplitFlapText :texts="['       [ABOUT] [HFG]         ']" />
               <p>
                 The University of Design (HfG) has really shaped my skills in
                 design and development. At this well-known university in
@@ -73,7 +68,6 @@
         </div>
       </div>
     </main>
-  </html>
 </template>
 
 <script setup></script>

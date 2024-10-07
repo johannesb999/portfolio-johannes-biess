@@ -1,40 +1,41 @@
 <template>
-  <html>
-    <main>
-      <div id="aboutMe">ÜBER MICH</div>
-      <div id="startLinkAbout">
-        <nuxt-link to="/de" class="custom-link">START</nuxt-link>
-      </div>
-      <div id="resumeLink">
-        <nuxt-link to="resume" class="custom-link">LEBENSLAUF</nuxt-link>
-      </div>
-      <div class="aboutMeText">
-        <SplitFlapText
-          :texts="[
-            '[ÜBER] [MICH]      WERTE      ',
-            'TEAMWORK  VERTRAUEN       ',
-            '  ANPASSUNGSFÄHIGKEIT     ',
-            ' PÜNKTLICHKEIT FAIRNESS   ',
-            'KREATIVITÄT  GENAUIGKEIT  ',
-          ]"
-        />
-      </div>
-
+  
+  <main>
+    <div id="rightLink">
+      <nuxt-link to="/de" class="custom-link">START</nuxt-link>
+    </div>
+    <div id="bottomLink">
+      <nuxt-link to="resume" class="custom-link">LEBENSLAUF</nuxt-link>
+    </div>
+    <!-- <div id="leftLink">
+      <nuxt-link to="/en/skillset" class="custom-link">SKILLSET</nuxt-link>
+    </div> -->
+    <div class="aboutMeText">
+      <SplitFlapText
+        :texts="[
+          '         [ÜBER] [MICH]          ',
+          '  FLEXIBEL  AGIL   NEUGIERIG  ',
+          'ANPASSUNGSFÄHIG      GENAU    ',
+          'PÜNKTLICHKEIT   FAIRNESS     ',
+          ' KREATIV   ENTSCHDIUNGSSTARK ',
+        ]"
+      />
+    </div>
+    <div class="wrapper">
       <div class="picture">
         <img
           style="border-radius: 10px"
-          src="https://via.placeholder.com/220x380"
-          alt="profilpicture"
+          src="public\profilepicture3.jpg"
+          alt="profilepicture"
         />
       </div>
-    </main>
-  </html>
+      <div id="quote">“Es gibt nicht<br />- zu viel Käse.”</div>
+    </div>
+  </main>
 </template>
 
 <script setup>
 import SplitFlapText from "@/components/splitFlapText.vue";
-import 'assets/about.css'; 
-
 </script>
 
-<style scoped></style>
+<style src="assets/about.css" scoped></style>

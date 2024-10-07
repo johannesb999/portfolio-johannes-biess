@@ -22,7 +22,6 @@
           <div class="imageSplit">
             <SplitFlapText
               :texts="[
-                '        [BOSCH]       ',
                 '    JIRA    DOCUPEDIA  ',
                 '      SCRUM      AGILE ',
                 '     PROCESS DESIGN  ',

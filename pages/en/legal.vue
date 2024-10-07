@@ -12,14 +12,14 @@
         <p>Germany</p>
 
         <h2 id="m56">Contact Information</h2>
-        <p>Email Address: contact@johannes-biess.com</p>
-        <p>Phone: +49 176 41107111</p>
-        <p>
+        <div>Email Address: contact@johannes-biess.com</div>
+        <div>Phone: +49 176 41107111</div>
+        <div>
           Contact Form:
           <a href="https://johannes-biess.com/en/contact" target="_blank"
             >https://johannes-biess.com/en/contact</a
           >
-        </p>
+        </div>
 
         <h2 id="m65">Liability and Copyright Notices</h2>
         <p>

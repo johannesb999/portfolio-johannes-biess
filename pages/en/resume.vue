@@ -122,7 +122,7 @@ main {
 
 h2 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 200;
 }
 
 h3 {
@@ -133,7 +133,7 @@ h3 {
 
 p {
   font-size: 1.75rem;
-  font-weight: 100;
+  font-weight: 700;
   letter-spacing: 7px;
 
 }

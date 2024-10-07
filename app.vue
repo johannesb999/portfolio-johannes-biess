@@ -29,7 +29,11 @@
         DE
       </button>
     </header>
-    <nuxt-link to="/" class="returnHome custom-link">JB</nuxt-link>
+    <nuxt-link
+      :to="currentLocale === 'de' ? '/de' : '/'"
+      class="returnHome custom-link"
+      >JB</nuxt-link
+    >
     <!-- <CustomCursor /> -->
   </div>
 </template>
