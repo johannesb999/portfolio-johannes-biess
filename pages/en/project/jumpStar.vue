@@ -33,7 +33,7 @@
       <div class="picture">
         <img
           style="border: 1px solid black; border-radius: 10px"
-          src="public\img\js\js.svg"
+          src="public\img\js\thumbnail.svg"
           alt="plantmonit"
         />
       </div>

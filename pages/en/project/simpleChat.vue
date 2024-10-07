@@ -34,7 +34,7 @@
       <div class="picture">
         <img
           style="border: 1px solid black; border-radius: 10px"
-          src="public\img\sc\sc (3).svg"
+          src="public\img\sc\thumbnail.svg"
           alt="SimpleChat"
         />
       </div>
@@ -57,15 +57,15 @@
             </div>
           </div>
           <div class="image small">
-            <img src="public\img\sc\sc (1).svg" alt="plantmonit" />
+            <img src="public\img\sc\problem.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image medium">
-            <img src="public\img\pm\process.svg" alt="plantmonit" />
+          <div class="image small">
+            <img src="public\img\sc\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
             <SplitFlapText :texts="['          [PROCESS]          ']" />
@@ -115,7 +115,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\sc\simplechat2.png" alt="plantmonit" />
+            <img src="public\img\sc\solution.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
