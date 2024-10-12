@@ -1,11 +1,11 @@
 <template>
-  <div
-    v-for="(textArray, idx) in textArrays"
-    :key="idx"
-    class="mainText"
-    @click="() => animate(idx)"
-  >
-    <div>
+  <div>
+    <div
+      v-for="(textArray, idx) in textArrays"
+      :key="idx"
+      class="mainText"
+      @click="() => animate(idx)"
+    >
       <span
         v-for="(letter, index) in textArray"
         :key="index"
@@ -36,11 +36,11 @@
         </template>
       </span>
     </div>
-  </div>
-  <!-- Benachrichtigung mit dynamischer Klasse -->
-  <div :class="['custom-alert', { show: showAlert }]">
-    EMAIL COPIED<br />
-    TO CLIPBOARD
+    <!-- Benachrichtigung mit dynamischer Klasse -->
+    <div :class="['custom-alert', { show: showAlert }]">
+      EMAIL COPIED<br />
+      TO CLIPBOARD
+    </div>
   </div>
 </template>
 
@@ -244,7 +244,7 @@ watch(
   font-size: 1.5rem;
   font-weight: 200;
   text-align: left;
-  line-height: 2rem; 
+  line-height: 2rem;
 }
 
 .char {
