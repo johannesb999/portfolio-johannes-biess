@@ -15,6 +15,7 @@ html {
   margin-top: 50px;
   font-style: normal;
   line-height: normal;
+  
 }
 
 #quote {
@@ -58,19 +59,10 @@ html {
   font-size: 24px;
   font-weight: 200;
   text-align: left;
+  line-height: 2rem;
 }
 
-.aboutMeText #line1 {
-  font-weight: 700;
-}
 
-.aboutMeText #line2,
-.aboutMeText #line3,
-.aboutMeText #line4,
-.aboutMeText #line5,
-.aboutMeText #line6 {
-  font-weight: 300;
-}
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {

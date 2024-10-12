@@ -92,6 +92,7 @@ html {
   letter-spacing: 1px;
   scroll-behavior: smooth;
   font-optical-sizing: auto;
+  cursor: url("public\cursor.png"), auto;
 }
 
 ::-webkit-scrollbar {
@@ -105,43 +106,45 @@ html {
 }
 
 .returnHome {
-  font-size: 1.5rem;
   font-weight: 100;
   font-size: 2rem;
-  line-height: 1rem;
   color: #171717;
   text-decoration: none;
   position: fixed;
-  top: 50px;
+  top: 2rem;
   left: 2.3%;
   z-index: 100;
-  background-color: #fbfbfb;
+  
 }
 
 .language-switch {
   position: fixed;
-  top: 50px;
+  top: 2rem;
   right: 2.3%;
   display: flex;
   align-items: center;
   z-index: 100;
-  background-color: #fbfbfb;
 }
 
 #en,
 #de,
 #line {
   font-weight: 100;
-  font-size: 1.75rem;
-  background-color: #fbfbfb;
+  font-size: 1.6rem;
+}
+
+#line {
+  margin: 0rem;
+}
+
+button {
+  background-color: transparent;
 }
 
 .language-switch button {
-  margin: 0 5px;
-  background-color: #fbfbfb;
-  color: #dadada;
+  color: #d3d1d1;
   border: none;
-  line-height: 1rem;
+  padding: 0 1 1rem;
 }
 
 .language-switch button:disabled {
@@ -280,12 +283,15 @@ html {
 
 .custom-link {
   color: black;
-  text-decoration: none;
+  text-decoration: none; /* Dauerhafte Unterstreichung */
+  display: inline-block; /* Ermöglicht das Skalieren */
+  transition: transform 0.3s ease; /* Animation für die Größe */
+  cursor: url("public\pointer.png"), auto;
+  margin: 0.3rem;
 }
 
 .custom-link:hover {
-  color: black;
-  text-decoration: underline;
+  transform: scale(1.1);
 }
 
 /* Responsive Design */

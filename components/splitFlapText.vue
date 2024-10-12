@@ -244,22 +244,22 @@ watch(
   font-size: 1.5rem;
   font-weight: 200;
   text-align: left;
-  line-height: 2rem; /* Standard-Zeilenhöhe */
+  line-height: 2rem; 
 }
 
 .char {
   display: inline-block;
   width: 1.3rem;
-  height: 1.7rem;
+  height: 1.9rem;
   overflow: hidden;
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.7rem;
   text-align: center;
   vertical-align: bottom;
 }
 
 .separator {
-  color: #00000019;
+  color: #00000023;
 }
 
 .normal {

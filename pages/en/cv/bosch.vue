@@ -5,28 +5,30 @@
     </div>
 
     <div class="project-details">
+      <div class="project-section"></div>
+      <div class="project-header"></div>
+
       <div class="project-section">
         <div class="project-content">
           <div class="text">
             <SplitFlapText :texts="['         [LEARNINGS]          ']" />
-            <p>
+            <div class="textStyle">
               Als Werkstudent bei Bosch Automotive Steering GmbH konnte ich ein
               Jahr lang meine Kenntnisse in der Softwareentwicklung und im
               agilen Projektmanagement vertiefen. Während meiner Zeit bei Bosch
               habe ich tiefgehende Kenntnisse in als JIRA Administrator erlangen
               können und konnte so helfen Prozesse im Team zu optimieren.
 
-              <br /><br />
-            </p>
+            </div>
           </div>
-          <div class="imageSplit">
+          <div class="imageSplit textStyle">
             <SplitFlapText
               :texts="[
-                '    JIRA    DOCUPEDIA  ',
-                '      SCRUM      AGILE ',
-                '     PROCESS DESIGN  ',
-                ' CONFLUENCE    KANBAN  ',
-                '   TICKETING SYSTEMS    ',
+                'TEAMWORK    UX    UI    ',
+                'WHOLESALE  USABILITY  ',
+                '     FREE SPEAKING    ',
+                ' BUSINESS MANAGEMENT   ',
+                '  FULLSTACK DEVELOPMENT ',
               ]"
             />
           </div>
@@ -40,7 +42,7 @@
           </div>
           <div class="text">
             <SplitFlapText :texts="['        [ABOUT] [BOSCH]         ']" />
-            <p>
+            <div class="textStyle">
               The Schwäbisch Gmünd site is the lead plant of the Vehicle Motion
               Vehicle Motion division and comprises the competence competence
               center for development, central functions and production.
@@ -49,7 +51,7 @@
               different fields of activity and three sub-plants. Safe,
               comfortable and innovative steering systems are manufactured for
               the global passenger car and commercial vehicle market.
-            </p>
+            </div>
           </div>
         </div>
       </div>

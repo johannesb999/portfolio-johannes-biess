@@ -2,27 +2,29 @@ html {
   min-width: 100%;
 }
 
-.detailsLink {
-  color: black;
-  font-weight: 700;
-  font-size: 2rem;
-  text-align: center;
+.detailsLink-container {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   padding-bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
 
+}
+
+.detailsLink {
+  color: black;
+  /* display: inline-block; */
+  /* transition: transform 0.3s ease; */
+  text-decoration: none;
 }
 
 /* .detailsLink:hover {
-  cursor: none; 
+  transform: scale(1.1);
 } */
 
-.detailsLink:hover {
-  text-decoration: underline;
-}
 
 #projectLinkStart {
   position: fixed;
