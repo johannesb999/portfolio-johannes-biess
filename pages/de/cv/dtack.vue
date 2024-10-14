@@ -11,20 +11,35 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [D-TACK]          ']" />
+            <SplitFlapText :texts="['       [LEARNINGS]         ']" />
             <div class="textStyle">
-              beschreibung zu meiner ausbildung bei d-tack Zeugnis als Download
-              anbieten
+              Während meiner Ausbildung zum Kaufmann im Groß- und Außenhandel
+              bei D-TACK und der IHK Deutschland durchlief ich innerhalb von
+              drei Jahren sowohl im Unterricht als auch im Betrieb alle
+              relevanten Abteilungen eines Großhandelsunternehmens.<br> Dabei erwarb
+              ich grundlegende Kenntnisse in den Bereichen Einkauf, Verkauf,
+              Marketing und Logistik. Besonders meine<br> Softskills wie
+              Teamfähigkeit, Kommunikation und Organisation wurden erstmalig in
+              einem professionellen Umfeld geschult und gefördert. Ein weiteren
+              Einblick in meine Leistungen und Tätigkeiten während der
+              Ausbildung findet sich in meinem
+              <a
+                href="/path/to/Arbeitszeugnis.pdf"
+                class="custom-link"
+                style="text-decoration: underline"
+                download
+                >Arbeitszeugnis</a
+              >.
             </div>
           </div>
-          <div class="imageSplit textStyle">
+          <div class="imageSplit ">
             <SplitFlapText
               :texts="[
-                'TEAMWORK    UX    UI    ',
-                'WHOLESALE  USABILITY  ',
-                '     FREE SPEAKING    ',
-                ' BUSINESS MANAGEMENT   ',
-                '  FULLSTACK DEVELOPMENT ',
+                '   WHOLESALE     ECONOMICS ',
+                '      MARCET RESEARCH      ',
+                ' FINANCE        ACCOUNTING ',
+                ' CONTRACT LAW        SALES ',
+                'MARKETING      DISPOSITION',
               ]"
             />
           </div>
@@ -34,12 +49,28 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image small">
-            <img src="public\img\cv\dtack.jpg" alt="plantmonit" />
+            <img src="public\img\cv\dtack.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['      [ABOUT] [D-TACK]       ']" />
+            <SplitFlapText :texts="['      [ÜBER] [D-TACK]       ']" />
             <div class="textStyle">
-              kleinen text über d-tack
+              D-TACK ist ein Unternehmen, das sich auf die Entwicklung und den
+              Vertrieb von Klebebändern für verschiedene Industrieanwendungen
+              spezialisiert hat. In der Ausbildung bei D-TACK durchlaufen die
+              Auszubildenden verschiedene Abteilungen wie Einkauf, Verkauf,
+              Marketing und Logistik. Dabei erhalten sie einen praxisnahen
+              Einblick in die Prozesse des Großhandels und erlernen die
+              wesentlichen kaufmännischen Abläufe. Die Ausbildung legt
+              besonderen Wert auf den Aufbau von Softskills wie Kommunikation,
+              Teamarbeit und Organisation. Weitere Informationen zu den
+              Ausbildungsinhalten auf ihrer
+              <nuxt-link
+                to="https://www.d-tack.de/ausbildung?srsltid=AfmBOor2XUpCV5NFF_DtUYp2PfYXWaT6FYBF1oI200zuMLlf_o3gj6WG"
+                class="custom-link"
+                style="text-decoration: underline"
+                target="_blank"
+                >Website</nuxt-link
+              >.
             </div>
           </div>
         </div>

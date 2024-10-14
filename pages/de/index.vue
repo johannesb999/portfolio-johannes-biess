@@ -60,16 +60,16 @@ const switchLanguage = (lang) => {
 };
 
 const texts = [
-  "HI MEIN NAME IST   ",
-  "[JOHANNES] [BIESS]     ",
+  "HI MEIN NAME IST    ",
+  "[JOHANNES] [BIESS]      ",
   "UND ICH BIN        ",
   "ENTWICKLER       ",
 ];
 const newWords = [
   "DESIGNER",
-  "PROBLEMLÖSER",
+  "EIN PROBLEMLÖSER",
   "PROTOTYPER",
-  "IHR NÄCHSTER PRAKTIKANT",
+  "IHR NEUER PRAKTIKANT",
   "ENTWICKLER",
 ];
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÖÄ";

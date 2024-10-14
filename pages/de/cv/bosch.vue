@@ -11,24 +11,24 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [LEARNINGS]          ']" />
+            <SplitFlapText :texts="['        [LEARNINGS]         ']" />
             <div class="textStyle">
               Als Werkstudent bei Bosch Automotive Steering GmbH konnte ich ein
               Jahr lang meine Kenntnisse in der Softwareentwicklung und im
               agilen Projektmanagement vertiefen. Während meiner Zeit bei Bosch
-              habe ich tiefgehende Kenntnisse in als JIRA Administrator erlangen
-              können und konnte so helfen Prozesse im Team zu optimieren.
-
+              habe ich tiefgehende Kenntnisse in als JIRA Administrator erlangt
+              und konnte so helfen Prozesse in Teams und arbeitsbereichen in
+              methodeische bahnen zu lenken oder bestehende Arbeitsabläufe zu
+              optimieren.
             </div>
           </div>
-          <div class="imageSplit textStyle">
+          <div class="imageSplit ">
             <SplitFlapText
               :texts="[
-                'TEAMWORK    UX    UI    ',
-                'WHOLESALE  USABILITY  ',
-                '     FREE SPEAKING    ',
-                ' BUSINESS MANAGEMENT   ',
-                '  FULLSTACK DEVELOPMENT ',
+                '  SCRUM       CONFLUENCE  ',
+                '       JIRA      AGILE    ',
+                '     SOFTWARE DEVELOPMENT ',
+                '  PROCESS OPTIMIZATION    ',
               ]"
             />
           </div>
@@ -38,19 +38,20 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image small">
-            <img src="public\img\cv\bosch.jpg" alt="plantmonit" />
+            <img src="public\img\cv\bosch.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['        [ABOUT] [BOSCH]         ']" />
+            <SplitFlapText :texts="['      [ÜBER] [BOSCH]        ']" />
             <div class="textStyle">
-              The Schwäbisch Gmünd site is the lead plant of the Vehicle Motion
-              Vehicle Motion division and comprises the competence competence
-              center for development, central functions and production.
-              production. A passion for steering unites around 4,000 employees
-              employees from different nations in various fields of activity and
-              different fields of activity and three sub-plants. Safe,
-              comfortable and innovative steering systems are manufactured for
-              the global passenger car and commercial vehicle market.
+              Der Standort Schwäbisch Gmünd ist das Leitwerk des
+              Unternehmensbereichs Vehicle Motion Vehicle Motion und umfasst das
+              Kompetenzzentrum für Entwicklung zentrum für Entwicklung,
+              Zentralfunktionen und Produktion. Produktion. Die Leidenschaft
+              fürs Lenken vereint rund 4.000 Mitarbeiter Mitarbeiter aus
+              verschiedenen Nationen in unterschiedlichen Tätigkeitsfeldern und
+              verschiedenen Tätigkeitsfeldern und drei Teilbetrieben. Sichere,
+              komfortable und innovative Lenksysteme werden für den weltweiten
+              den weltweiten Pkw- und Nutzfahrzeugmarkt.
             </div>
           </div>
         </div>

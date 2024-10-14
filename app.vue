@@ -92,7 +92,7 @@ html {
   letter-spacing: 1px;
   scroll-behavior: smooth;
   font-optical-sizing: auto;
-  cursor: url("public\cursor.png"), auto;
+  /*cursor: url("public\cursor.png"), auto;*/
 }
 
 ::-webkit-scrollbar {
@@ -286,7 +286,7 @@ button {
   text-decoration: none; /* Dauerhafte Unterstreichung */
   display: inline-block; /* Ermöglicht das Skalieren */
   transition: transform 0.3s ease; /* Animation für die Größe */
-  cursor: url("public\pointer.png"), auto;
+  /*cursor: url("public\pointer.png"), auto;*/
   margin: 0.3rem;
 }
 

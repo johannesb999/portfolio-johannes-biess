@@ -58,7 +58,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\tt\idea.png" alt="plantmonit" />
+            <img src="public\img\tt\idea.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
             </div>
           </div>
           <div class="image small">
-            <img src="public\img\tt\tt (4).svg" alt="plantmonit" />
+            <img src="public\img\tt/solution.svg" alt="plantmonit" />
           </div>
         </div>
       </div>

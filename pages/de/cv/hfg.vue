@@ -11,33 +11,32 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [HFG]            ']" />
+            <SplitFlapText :texts="['       [LEARNINGS]         ']" />
             <div class="textStyle">
-              During my time at HfG, I worked on
+              Während meiner Zeit an der HfG arbeitete ich an
               <nuxt-link
-                to="/en/project/projects"
+                to="/de/project/projects"
                 class="custom-link"
                 style="text-decoration: underline"
-                >projects</nuxt-link
+                >Projekten</nuxt-link
               >
-              that were practical from the start.<br />
-              I was encouraged to dive deep into fundamental questions like:
-              What’s worth developing? How can I make sure it meets user needs?
-              What technologies are necessary, and how do I use them
-              effectively? HfG created an inspiring learning environment where I
-              could not only build up my design and tech skills, but also learn
-              how to apply them in real-world projects.
-
-             
+              die von Anfang an sehr praxisorientiert waren.<br />
+              Ich wurde gelehrt, tief in grundlegende Fragen einzutauchen wie:
+              Was lohnt sich zu entwickeln? Wie kann ich sicherstellen, dass es
+              den Bedürfnissen der Nutzer entspricht? Welche Technologien sind
+              notwendig und wie setze ich sie effektiv ein? Die HfG schuf eine
+              inspirierende Lernumgebung, in der ich nicht nur meine Design- und
+              Technikfähigkeiten aufbauen konnte, sondern auch lernte, wie ich
+              sie in realen Projekten anwenden kann.
             </div>
           </div>
-          <div class="imageSplit textStyle">
+          <div class="imageSplit ">
             <SplitFlapText
               :texts="[
-                'FIGMA    UX        UI    ',
+                'FIGMA   UX LEANDESIGN    ',
                 'PROTOTYPING  USABILITY   ',
                 '     DESIGNTHINKING      ',
-                ' USER CENTERED LEANDESIGN',
+                ' USER CENTERED    UI     ',
                 '  FULLSTACK DEVELOPMENT  ',
               ]"
             />
@@ -48,22 +47,21 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image small">
-            <img src="public\img\cv\hfgbuilding.jpg" alt="buildung of hfg" />
+            <img src="public\img\cv\hfgbuilding.svg" alt="buildung of hfg" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['       [ABOUT] [HFG]         ']" />
+            <SplitFlapText :texts="['       [ÜBER] [HFG]         ']" />
             <div class="textStyle">
-              Die Hochschule für Gestaltung (HfG) hat meine Fähigkeiten in
-              Design und Entwicklung wirklich geprägt. An dieser renommierten
-              Universität in Deutschland habe ich nicht nur Theorie gelernt,
-              sondern auch praktische Erfahrungen gesammelt, die mich auf die
-              Arbeitswelt vorbereitet haben. Der praxisorientierte,
-              projektbasierte Unterricht gab mir frühzeitig Einblicke in reale
-              Arbeitsprozesse. Besonders beeindruckt hat mich der Fokus auf
-              Teamarbeit, der mir geholfen hat, meine Fähigkeiten in einem
-              kollaborativen Umfeld zu verbessern. Dank des iterativen Ansatzes
-              im Unterricht konnte ich alle Schritte vom ersten Konzept bis zum
-              fertigen Prototypen erlernen.
+              Die Hochschule für Gestaltung Schwäbisch Gmünd (HfG) ist bekannt
+              für ihren praxisorientierten, projektbasierten Ansatz in der
+              Ausbildung von Studierenden. Sie legt großen Wert auf eine enge
+              Verbindung zwischen Theorie und Praxis, was den Studierenden
+              frühzeitig Einblicke in reale Arbeitsprozesse ermöglicht.
+              Besonders im Fokus stehen Teamarbeit und interdisziplinäre
+              Zusammenarbeit, die die Studierenden auf ein kollaboratives
+              Arbeitsumfeld vorbereiten. Durch iterative Lernmethoden und einen
+              starken Bezug zur Praxis lernen die Studierenden alle Schritte von
+              der Konzeptentwicklung bis hin zum fertigen Prototypen kennen.
             </div>
           </div>
         </div>

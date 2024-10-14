@@ -51,7 +51,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
 }
 
 
@@ -74,7 +73,6 @@ main {
 .text {
   flex: 1;
   padding: 10px;
-  /* Reduce padding */
   font-size: 1rem;
   font-weight: 200;
   line-height: 1.5;
@@ -93,8 +91,7 @@ main {
 }
 
 .imageSplit {
-  padding: 20px;
-  margin-right: 20px;
+  margin-top: 3.2rem;
 }
 
 .project-image img,
