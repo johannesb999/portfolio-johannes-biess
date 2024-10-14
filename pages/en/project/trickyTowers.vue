@@ -122,17 +122,7 @@
         class="tryOutLink custom-link"
         >TRY IT OUT LIVE</a
       >
-      <!-- <div class="project-section" style="padding-top: 3rem">
-        <SplitFlapText :texts="['          [PROJECT] [VIDEO]          ']" />
-        <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div> -->
+     
       <div class="projectDetailsFlap">
         <SplitFlapText
           :texts="[
@@ -144,7 +134,6 @@
         />
       </div>
     </div>
-    <!-- </div> -->
   </main>
 </template>
 

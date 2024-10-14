@@ -6,33 +6,68 @@
       class="mainText"
       @click="() => animate(idx)"
     >
-      <span
-        v-for="(letter, index) in textArray"
-        :key="index"
-        :class="[
-          'char',
-          {
-            separator: letter.isSeparator,
-            normal: !letter.isSeparator && !letter.isLink,
-          },
-          letter.styleClass,
-        ]"
-      >
-        <template v-if="letter.isLink && letter.linkTarget.includes('mailto')">
+      <span v-for="(segment, segmentIdx) in textArray" :key="segmentIdx">
+        <template
+          v-if="segment.isLink && segment.linkTarget.includes('mailto')"
+        >
           <a
             href="#"
-            class="custom-link"
+            class="custom-link hitbox"
             @click.prevent="copyEmailToClipboard"
-            >{{ letter.current }}</a
           >
+            <span
+              v-for="(letter, index) in segment.letters"
+              :key="index"
+              :class="[
+                'char',
+                {
+                  separator: letter.isSeparator,
+                  normal: !letter.isSeparator && !letter.isLink,
+                },
+                letter.styleClass,
+              ]"
+            >
+              {{ letter.current }}
+            </span>
+          </a>
         </template>
-        <template v-else-if="letter.isLink">
-          <a :href="letter.linkTarget" class="custom-link" target="_blank">{{
-            letter.current
-          }}</a>
+        <template v-else-if="segment.isLink">
+          <a
+            :href="segment.linkTarget"
+            class="custom-link hitbox"
+            target="_blank"
+          >
+            <span
+              v-for="(letter, index) in segment.letters"
+              :key="index"
+              :class="[
+                'char',
+                {
+                  separator: letter.isSeparator,
+                  normal: !letter.isSeparator && !letter.isLink,
+                },
+                letter.styleClass,
+              ]"
+            >
+              {{ letter.current }}
+            </span>
+          </a>
         </template>
         <template v-else>
-          {{ letter.current }}
+          <span
+            v-for="(letter, index) in segment.letters"
+            :key="index"
+            :class="[
+              'char',
+              {
+                separator: letter.isSeparator,
+                normal: !letter.isSeparator && !letter.isLink,
+              },
+              letter.styleClass,
+            ]"
+          >
+            {{ letter.current }}
+          </span>
         </template>
       </span>
     </div>
@@ -62,44 +97,66 @@ function getRandomChar() {
 }
 
 function createTextArray(text) {
+  let segments = [];
+  let currentSegment = {
+    letters: [],
+    isLink: false,
+    linkTarget: null,
+    styleClass: "",
+  };
   let inStyledWord = false;
   let inLink = false;
   let linkTarget = null;
 
-  return text
-    .split("")
-    .map((char) => {
-      if (char === "[" || char === "]") {
-        inStyledWord = !inStyledWord;
-        return null;
-      }
+  text.split("").forEach((char) => {
+    if (char === "[" || char === "]") {
+      inStyledWord = !inStyledWord;
+      return;
+    }
 
-      if (char === "|" || char === "@" || char === "$") {
-        if (!inLink) {
-          inLink = true;
-          switch (char) {
-            case "|":
-              linkTarget =
-                "https://de.linkedin.com/in/johannes-biess-8464a21bb";
-              break;
-            case "@":
-              linkTarget = "mailto:biessjohannes@gmail.com";
-              break;
-            case "$":
-              linkTarget = "https://github.com/johannesb999";
-              break;
-          }
-        } else {
-          inLink = false;
-          linkTarget = null;
+    if (char === "|" || char === "@" || char === "$") {
+      if (!inLink) {
+        inLink = true;
+        switch (char) {
+          case "|":
+            linkTarget = "https://de.linkedin.com/in/johannes-biess-8464a21bb";
+            break;
+          case "@":
+            linkTarget = "mailto:biessjohannes@gmail.com";
+            break;
+          case "$":
+            linkTarget = "https://github.com/johannesb999";
+            break;
         }
-        return null;
+      } else {
+        inLink = false;
+        linkTarget = null;
       }
+      if (currentSegment.letters.length > 0) {
+        segments.push(currentSegment);
+        currentSegment = {
+          letters: [],
+          isLink: inLink,
+          linkTarget: linkTarget,
+          styleClass:
+            inLink && inStyledWord
+              ? "link-style custom-style"
+              : inLink
+              ? "link-style"
+              : inStyledWord
+              ? "custom-style"
+              : "",
+        };
+      }
+      return;
+    }
 
-      return {
-        target: char === " " ? getRandomChar() : char,
-        current: getRandomChar(),
-        isSeparator: char === " ",
+    if (currentSegment.isLink !== inLink) {
+      if (currentSegment.letters.length > 0) {
+        segments.push(currentSegment);
+      }
+      currentSegment = {
+        letters: [],
         isLink: inLink,
         linkTarget: linkTarget,
         styleClass:
@@ -111,8 +168,31 @@ function createTextArray(text) {
             ? "custom-style"
             : "",
       };
-    })
-    .filter((item) => item !== null);
+    }
+
+    const letterObj = {
+      target: char === " " ? getRandomChar() : char,
+      current: getRandomChar(),
+      isSeparator: char === " ",
+      isLink: inLink,
+      linkTarget: linkTarget,
+      styleClass:
+        inLink && inStyledWord
+          ? "link-style custom-style"
+          : inLink
+          ? "link-style"
+          : inStyledWord
+          ? "custom-style"
+          : "",
+    };
+    currentSegment.letters.push(letterObj);
+  });
+
+  if (currentSegment.letters.length > 0) {
+    segments.push(currentSegment);
+  }
+
+  return segments;
 }
 
 function copyEmailToClipboard() {
@@ -162,50 +242,56 @@ function copyEmailToClipboard() {
 const textArrays = ref(props.texts.map(createTextArray));
 
 const animate = (index) => {
-  textArrays.value[index].forEach((item, idx) => {
-    const maxSteps = 13;
-    let currentStep = 0;
+  textArrays.value[index].forEach((segment) => {
+    segment.letters.forEach((item, idx) => {
+      const maxSteps = 13;
+      let currentStep = 0;
 
-    const step = () => {
-      if (item.current !== item.target && currentStep < maxSteps) {
-        item.current = getRandomChar();
-        currentStep++;
-        setTimeout(step, 500 / maxSteps);
-      } else {
-        item.current = item.target;
-      }
-    };
-    setTimeout(step, idx * (500 / maxSteps));
+      const step = () => {
+        if (item.current !== item.target && currentStep < maxSteps) {
+          item.current = getRandomChar();
+          currentStep++;
+          setTimeout(step, 500 / maxSteps);
+        } else {
+          item.current = item.target;
+        }
+      };
+      setTimeout(step, idx * (500 / maxSteps));
+    });
   });
 };
 
 // Funktion zum Zurücksetzen und erneuten Animieren der Link-Buchstaben
 const resetAndAnimateLinks = () => {
   textArrays.value.forEach((textArray) => {
-    textArray.forEach((item) => {
-      if (item.isLink) {
-        item.current = getRandomChar(); // Setzt den aktuellen Wert auf ein zufälliges Zeichen
+    textArray.forEach((segment) => {
+      if (segment.isLink) {
+        segment.letters.forEach((item) => {
+          item.current = getRandomChar();
+        });
       }
     });
   });
 
   // Nach dem Zurücksetzen animieren
-  textArrays.value.forEach((textArray, idx) => {
-    textArray.forEach((item, itemIdx) => {
-      if (item.isLink) {
-        const maxSteps = 13;
-        let currentStep = 0;
+  textArrays.value.forEach((textArray) => {
+    textArray.forEach((segment) => {
+      if (segment.isLink) {
+        segment.letters.forEach((item, idx) => {
+          const maxSteps = 13;
+          let currentStep = 0;
 
-        const step = () => {
-          if (item.current !== item.target && currentStep < maxSteps) {
-            item.current = getRandomChar();
-            currentStep++;
-            setTimeout(step, 700 / maxSteps);
-          } else {
-            item.current = item.target;
-          }
-        };
-        setTimeout(step, itemIdx * (500 / maxSteps));
+          const step = () => {
+            if (item.current !== item.target && currentStep < maxSteps) {
+              item.current = getRandomChar();
+              currentStep++;
+              setTimeout(step, 700 / maxSteps);
+            } else {
+              item.current = item.target;
+            }
+          };
+          setTimeout(step, idx * (500 / maxSteps));
+        });
       }
     });
   });
@@ -253,9 +339,10 @@ watch(
   height: 1.9rem;
   overflow: hidden;
   font-size: 1.5rem;
-  line-height: 1.7rem;
+  line-height: 1rem;
   text-align: center;
   vertical-align: bottom;
+  color: #171717;
 }
 
 .separator {
@@ -275,7 +362,23 @@ watch(
 }
 
 .link-style {
-  color: rgba(48, 48, 48, 0);
+  color: #171717;
+  text-decoration-color: #afafaf;
+}
+
+a.custom-link.hitbox {
+  position: relative; /* Ermöglicht die Positionierung des Pseudo-Elements */
+  text-decoration: none; /* Entfernt die Standard-Unterstreichung */
+}
+
+a.custom-link.hitbox::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px; /* Dicke der Unterstreichung */
+  background-color: #afafaf; /* Farbe der Unterstreichung */
+  bottom: 0.4em; /* Positioniert die Linie höher */
 }
 
 .char.flip {

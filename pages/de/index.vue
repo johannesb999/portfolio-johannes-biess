@@ -200,7 +200,7 @@ onMounted(() => {
   textArrays.value.forEach((_, index) => animate(index));
   setInterval(() => {
     animateBottomLineNewWord();
-  }, 6000);
+  }, 3000);
 
   window.addEventListener("wheel", handleWheel);
 });

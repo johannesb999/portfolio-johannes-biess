@@ -30,14 +30,14 @@
               sie in realen Projekten anwenden kann.
             </div>
           </div>
-          <div class="imageSplit ">
+          <div class="imageSplit">
             <SplitFlapText
               :texts="[
-                'FIGMA   UX LEANDESIGN    ',
-                'PROTOTYPING  USABILITY   ',
-                '     DESIGNTHINKING      ',
-                ' USER CENTERED    UI     ',
-                '  FULLSTACK DEVELOPMENT  ',
+                'FIGMA    DESIGNTHINKING  ',
+                'PROTOTYPING     ITERATIV ',
+                '  BENUTZERFREUNDLICHKEIT ',
+                ' NUTZERZENTRIERT  UI  UX ',
+                '  FULLSTACK ENTWICKLUNG  ',
               ]"
             />
           </div>
@@ -50,7 +50,7 @@
             <img src="public\img\cv\hfgbuilding.svg" alt="buildung of hfg" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['       [ÜBER] [HFG]         ']" />
+            <SplitFlapText :texts="['          [HFG]           ']" />
             <div class="textStyle">
               Die Hochschule für Gestaltung Schwäbisch Gmünd (HfG) ist bekannt
               für ihren praxisorientierten, projektbasierten Ansatz in der

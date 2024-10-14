@@ -18,9 +18,6 @@
           </span>
         </nuxt-link>
       </div>
-      <!-- <div id="quote">
-        “Develop to solve a Problem <br />- not only to create a Feature.”
-      </div> -->
 
       <div
         v-for="(textArray, idx) in textArrays"
@@ -137,7 +134,7 @@ const animateBottomLineNewWord = () => {
 
   textArrays.value[bottomIndex].forEach((item, idx) => {
     let currentStep = 0;
-    const maxSteps = 13;
+    const maxSteps = 12;
 
     const step = () => {
       if (item.current !== item.target && currentStep < maxSteps) {
@@ -200,7 +197,7 @@ onMounted(() => {
   textArrays.value.forEach((_, index) => animate(index));
   setInterval(() => {
     animateBottomLineNewWord();
-  }, 6000);
+  }, 3000);
 
   window.addEventListener("wheel", handleWheel);
 });

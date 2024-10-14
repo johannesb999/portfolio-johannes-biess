@@ -1,18 +1,20 @@
 @ -0,0 +1,78 @@
 <template>
-  <div class="language-switch">
-    <button @click="switchLanguage('en')" :disabled="currentLocale === 'en'">
-      EN
-    </button>
-    <div>|</div>
-    <button @click="switchLanguage('de')" :disabled="currentLocale === 'de'">
-      DE
-    </button>
-  </div>
+  <div>
+    <div class="language-switch">
+      <button @click="switchLanguage('en')" :disabled="currentLocale === 'en'">
+        EN
+      </button>
+      <div>|</div>
+      <button @click="switchLanguage('de')" :disabled="currentLocale === 'de'">
+        DE
+      </button>
+    </div>
 
-  <header>
-    <HeaderSwitch />
-  </header>
+    <header>
+      <HeaderSwitch />
+    </header>
+  </div>
 </template>
 
 <script setup>
