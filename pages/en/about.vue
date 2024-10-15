@@ -22,15 +22,12 @@
         />
       </div>
       <div class="wrapper">
-        <div class="picture">
           <img
-            style="border-radius: 10px"
             src="public\profilepicture3.jpg"
             alt="profilepicture"
           />
+          <div id="quote">“There is never<br />- too much cheese.”</div>
         </div>
-        <div id="quote">“There is never<br />- too much cheese.”</div>
-      </div>
     </main>
 </template>
 

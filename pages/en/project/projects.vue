@@ -30,7 +30,6 @@
     <div class="wrapper">
       <div class="picture">
         <img
-          style="border: 1px solid black; border-radius: 10px"
           src="public\img\pm\thumbnail.svg"
           alt="plantmonit"
         />
@@ -179,7 +178,7 @@
               keep their plants healthy.
             </div>
           </div>
-          <div class="image medium">
+          <div class="image large">
             <img src="public\img\pm\solution.svg" alt="plantmonit" />
           </div>
         </div>

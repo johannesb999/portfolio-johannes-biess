@@ -30,7 +30,6 @@
     <div class="wrapper">
       <div class="picture">
         <img
-          style="border: 1px solid black; border-radius: 10px"
           src="public\img\tt\tt (1).svg"
           alt="plantmonit"
         />

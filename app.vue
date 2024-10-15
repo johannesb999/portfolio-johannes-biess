@@ -102,13 +102,11 @@ const applyDarkTheme = () => {
   root.style.setProperty("--color-primary", "#fbfbfb");
   root.style.setProperty("--color-background", "#171717");
   root.style.setProperty("--color-secondary", "#707070");
-  root.style.setProperty("--color-gray-light", "rgba(224, 224, 224, 0.164)");
-  root.style.setProperty(
-    "--color-primary-translucent",
-    "rgba(238, 238, 238, 0.863)"
-  );
+  root.style.setProperty("--color-gray-light", "#e0e0e02a");
+  root.style.setProperty("--color-primary-translucent", "#eeeeeedc");
   root.style.setProperty("--color-black", "#fbfbfb");
   root.style.setProperty("--color-accent", "#d4d4d4");
+  root.style.setProperty("--border-color-black", "#444444dc");
   root.style.setProperty("--color-gray", "#bfbfbf");
 };
 
@@ -117,13 +115,11 @@ const applyLightTheme = () => {
   root.style.setProperty("--color-primary", "#171717");
   root.style.setProperty("--color-background", "#fbfbfb");
   root.style.setProperty("--color-secondary", "#d3d1d1");
-  root.style.setProperty("--color-gray-light", "rgba(0, 0, 0, 0.164)");
-  root.style.setProperty(
-    "--color-primary-translucent",
-    "rgba(23, 23, 23, 0.69)"
-  );
-  root.style.setProperty("--color-black", "#000000");
+  root.style.setProperty("--color-gray-light", "#0000002a");
+  root.style.setProperty("--color-primary-translucent", "#171717b0");
+  root.style.setProperty("--color-black", "#171717");
   root.style.setProperty("--color-accent", "#afafaf");
+  root.style.setProperty("--border-color-black", "#171717");
   root.style.setProperty("--color-gray", "#bfbfbf");
 };
 
@@ -142,15 +138,21 @@ onMounted(() => {
 
 <style>
 :root {
+  --color-picker: #171717b0;
+
   /* Farben */
   --color-primary: #171717;
   --color-background: #fbfbfb;
   --color-secondary: #d3d1d1;
-  --color-gray-light: rgba(0, 0, 0, 0.164);
-  --color-primary-translucent: rgba(23, 23, 23, 0.69);
+  --color-gray-light: #0000002a;
+  --color-primary-translucent: #171717b0;
   --color-black: #000000;
   --color-accent: #afafaf;
   --color-gray: #bfbfbf;
+
+  --border-color-black: #171717;
+  --border-size: 0.1rem;
+  --border-radius: 0.7rem;
 
   /* Schriftarten */
   --font-family-main: "Roboto Mono", monospace;
@@ -206,7 +208,7 @@ onMounted(() => {
   --line-height-normal: normal;
   --line-height-big: 1.5;
   --line-height-normal: 2;
---color-white-transition: rgba(146, 146, 146, 0.3);
+  --color-white-transition: rgba(146, 146, 146, 0.3);
   --scrollbar-width: 0.05rem; /* 0.8px */
   --box-shadow-light: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
   --transition-duration: 0.7s;
@@ -225,6 +227,16 @@ html {
   letter-spacing: var(--letter-spacing-base);
   scroll-behavior: smooth;
   font-optical-sizing: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: var(--border-size) solid var(--border-color-black);
+  border-radius: var(--border-radius);
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 ::-webkit-scrollbar {

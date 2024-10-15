@@ -20,7 +20,8 @@ html {
   font-weight: var(--font-weight-thin);
   font-size: var(--font-size-xxxxl);
   text-align: center;
-  margin-top: 3.125rem; /* 50px */
+  margin-top: 3.125rem;
+  /* 50px */
   font-style: normal;
   line-height: var(--line-height-normal);
 }
@@ -59,25 +60,16 @@ html {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-thin);
   font-style: italic;
-  max-width: 35rem; /* 560px */
+  max-width: 35rem;
+  /* 560px */
 }
 
-.picture {
-  display: flex;
-  flex-direction: column;
-  width: 31.25rem; /* 500px */
-  height: auto;
-  margin-bottom: var(--spacing-xl);
-  border: solid 1px var(--color-black);
-  border-radius: 10px;
-  object-fit: cover;
-}
+
 
 #quote {
-  display: flex;
-  flex-direction: column;
   font-size: 1.3rem;
   font-weight: var(--font-weight-thin);
+  margin-bottom: var(--spacing-xl);
   text-align: center;
-  
+  padding: var(--spacing-xl);
 }
