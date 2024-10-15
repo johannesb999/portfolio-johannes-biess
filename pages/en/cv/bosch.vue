@@ -11,7 +11,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [LEARNINGS]        ']" />
+            <SplitFlapText :texts="['       [LEARNINGS]       ']" />
             <div class="textStyle">
               I spent a year at Bosch Automotive Steering GmbH, where I got to
               deepen my knowledge of software development and agile project
@@ -39,7 +39,7 @@
             <img src="public\img\cv\bosch.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['      [ABOUT] [BOSCH]       ']" />
+            <SplitFlapText :texts="['     [ABOUT] [BOSCH]       ']" />
             <div class="textStyle">
               The Schwäbisch Gmünd site is the lead plant of the Vehicle Motion
               Vehicle Motion Vehicle Motion division and comprises the

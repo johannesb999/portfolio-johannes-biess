@@ -11,7 +11,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [LEARNINGS]        ']" />
+            <SplitFlapText :texts="['      [LEARNINGS]        ']" />
             <div class="textStyle">
               During my time at the KBSZ, I obtained the Baden-Würtenberg Abitur
               with a focus on economics and English. The decision not to go into
@@ -38,7 +38,7 @@
             <img src="public\img\cv\kbsz.svg" alt="intern sign" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['     [ABOUT] [DIPLOMA]      ']" />
+            <SplitFlapText :texts="['     [ABOUT] [DIPLOMA]     ']" />
             <div class="textStyle">
               The "Fachgebundene Fachhochschulreife" is a school qualification in
               Germany that enables students to study all courses at universities

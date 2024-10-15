@@ -8,31 +8,23 @@ html {
 }
 
 #contact {
-  color: #171717;
-  font-weight: 300;
-  font-size: 2rem;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-xxxxl);
   text-align: center;
-  margin-top: 50px;
+  margin-top: 3.125rem; /* 50px */
   font-style: normal;
-  line-height: normal;
-
+  line-height: var(--line-height-normal);
 }
 
-#quote {
-  position: absolute;
-  bottom: 100px;
-  left: 1500px;
-  font-size: 1.5rem;
-  font-weight: 100;
-  font-style: italic;
-}
+
 
 #impressum {
-  color: #bfbfbf;
-  font-weight: 100;
-  font-size: 1rem;
+  color: var(--color-gray);
+  font-weight: var(--font-weight-thin);
+  font-size: var(--font-size-lg);
   position: absolute;
-  bottom: 20px;
+  bottom: var(--spacing-lg);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -41,13 +33,11 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-bold);
   left: 0;
-  padding-left: 20px;
+  padding-left: var(--spacing-lg);
 }
-
-
 
 .contactMeText {
   display: flex;
@@ -56,79 +46,8 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: 200;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extra-light);
   text-align: left;
   line-height: 2rem;
-}
-
-
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  #quote {
-    left: 80%;
-  }
-}
-
-@media (max-width: 992px) {
-  #quote {
-    left: 70%;
-    font-size: 1.3rem;
-  }
-
-  #startLinkContact {
-    font-size: 1.5rem;
-  }
-
-  #contact {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #quote {
-    left: 60%;
-    font-size: 1.2rem;
-    bottom: 80px;
-  }
-
-  #startLinkContact {
-    font-size: 1.2rem;
-    padding-left: 10px;
-  }
-
-  #contact {
-    font-size: 1.5rem;
-    margin-top: 30px;
-  }
-
-  .contactMeText {
-    font-size: 20px;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  #quote {
-    left: 50%;
-    font-size: 1rem;
-    bottom: 60px;
-    transform: translateX(-50%);
-  }
-
-  #startLinkContact {
-    font-size: 1rem;
-    padding-left: 5px;
-  }
-
-  #contact {
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-
-  .contactMeText {
-    font-size: 18px;
-    text-align: center;
-  }
 }

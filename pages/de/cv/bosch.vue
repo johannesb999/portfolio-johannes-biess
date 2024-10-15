@@ -11,7 +11,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [LEARNINGS]        ']" />
+            <SplitFlapText :texts="['      [LEARNINGS]        ']" />
             <div class="textStyle">
               Als Werkstudent bei Bosch Automotive Steering GmbH konnte ich ein
               Jahr lang meine Kenntnisse in der Softwareentwicklung und im
@@ -41,7 +41,7 @@
             <img src="public\img\cv\bosch.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['         [BOSCH]          ']" />
+            <SplitFlapText :texts="['         [BOSCH]         ']" />
             <div class="textStyle">
               Der Standort Schwäbisch Gmünd ist das Leitwerk des
               Unternehmensbereichs Vehicle Motion Vehicle Motion und umfasst das

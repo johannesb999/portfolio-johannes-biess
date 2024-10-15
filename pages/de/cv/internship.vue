@@ -44,7 +44,7 @@
             <img src="public\img\cv\intern.svg" alt="intern sign" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['       [PRAKTIKUM]        ']" />
+            <SplitFlapText :texts="['       [PRAKTIKUM]       ']" />
             <div class="textStyle">
               Von dem Unternehmen, in dem ich mein Praktikum absolviere, erhoffe
               ich mir eine offene und innovative Unternehmenskultur, die

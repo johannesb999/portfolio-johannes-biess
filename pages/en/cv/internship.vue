@@ -11,7 +11,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['  [WHAT] [I] [HOPE] [TO] [LEARN]  ']" />
+            <SplitFlapText :texts="[' [WHAT] [I] [HOPE] [TO] [LEARN]  ']" />
 
             <div class="textStyle">
               In einem Praktikum erhoffe ich mir die Chance, meine bisherigen
@@ -45,7 +45,7 @@
             <img src="public\img\cv\intern.svg" alt="intern sign" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['      [INTERNSHIP]        ']" />
+            <SplitFlapText :texts="['      [INTERNSHIP]       ']" />
             <div class="textStyle">
               Von dem Unternehmen, in dem ich mein Praktikum absolviere, erhoffe
               ich mir eine offene und innovative Unternehmenskultur, die

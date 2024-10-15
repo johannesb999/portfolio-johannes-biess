@@ -18,9 +18,7 @@
           </span>
         </nuxt-link>
       </div>
-      <!-- <div id="quote">
-        “Develop to solve a Problem <br />- not only to create a Feature.”
-      </div> -->
+    
 
       <div
         v-for="(textArray, idx) in textArrays"

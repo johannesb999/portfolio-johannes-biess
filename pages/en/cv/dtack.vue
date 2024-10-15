@@ -11,7 +11,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [LEARNINGS]         ']" />
+            <SplitFlapText :texts="['       [LEARNINGS]      ']" />
             <div class="textStyle">
               While I was training as a wholesale and foreign trade merchant at
               D-TACK and the German Chamber of Industry and Commerce (IHK), I
@@ -51,7 +51,7 @@
             <img src="public\img\cv\dtack.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['      [ABOUT] [D-TACK]       ']" />
+            <SplitFlapText :texts="['     [ABOUT] [D-TACK]      ']" />
             <div class="textStyle">
               D-TACK is a company that develops and sells adhesive tapes for all
               kinds of industrial uses. During their training at D-TACK,
