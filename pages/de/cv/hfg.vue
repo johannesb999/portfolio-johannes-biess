@@ -11,7 +11,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [LEARNINGS]         ']" />
+            <SplitFlapText :texts="['       [LEARNINGS]        ']" />
             <div class="textStyle">
               Während meiner Zeit an der HfG arbeitete ich an
               <nuxt-link
@@ -50,7 +50,7 @@
             <img src="public\img\cv\hfgbuilding.svg" alt="buildung of hfg" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['          [HFG]           ']" />
+            <SplitFlapText :texts="['          [HFG]          ']" />
             <div class="textStyle">
               Die Hochschule für Gestaltung Schwäbisch Gmünd (HfG) ist bekannt
               für ihren praxisorientierten, projektbasierten Ansatz in der

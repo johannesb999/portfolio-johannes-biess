@@ -244,7 +244,7 @@ const textArrays = ref(props.texts.map(createTextArray));
 const animate = (index) => {
   textArrays.value[index].forEach((segment) => {
     segment.letters.forEach((item, idx) => {
-      const maxSteps = 13;
+      const maxSteps = 11;
       let currentStep = 0;
 
       const step = () => {
@@ -321,14 +321,14 @@ watch(
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-lg);
+  box-shadow: var(--box-shadow-light);
 }
 
 .mainText {
-  margin: 10px 0;
-  font-size: 1.5rem;
-  font-weight: 200;
+  margin: var(--spacing-md) 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extra-light);
   text-align: left;
   line-height: 2rem;
 }
@@ -338,37 +338,37 @@ watch(
   width: 1.3rem;
   height: 1.9rem;
   overflow: hidden;
-  font-size: 1.5rem;
-  line-height: 1rem;
+  font-size: var(--font-size-xxxl);
+  line-height: line-height-normal;
   text-align: center;
   vertical-align: bottom;
-  color: #171717;
+  color: var(--color-primary);
 }
 
 .separator {
-  color: #00000023;
+  color: var(--color-gray-light);
 }
 
 .normal {
-  color: #171717b0;
+  color: var(--color-primary-translucent);
   padding-left: 1px;
 }
 
 .custom-style {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   padding-left: 1px;
-  color: #000000;
-  font-size: x-large;
+  color: var(--color-black);
+  font-size: var(--font-size-xxxxl);
 }
 
 .link-style {
-  color: #171717;
-  text-decoration-color: #afafaf;
+  color: var(--color-primary);
+  text-decoration-color: var(--color-accent);
 }
 
 a.custom-link.hitbox {
-  position: relative; /* Ermöglicht die Positionierung des Pseudo-Elements */
-  text-decoration: none; /* Entfernt die Standard-Unterstreichung */
+  position: relative;
+  text-decoration: none;
 }
 
 a.custom-link.hitbox::after {
@@ -376,9 +376,9 @@ a.custom-link.hitbox::after {
   position: absolute;
   left: 0;
   right: 0;
-  height: 1px; /* Dicke der Unterstreichung */
-  background-color: #afafaf; /* Farbe der Unterstreichung */
-  bottom: 0.4em; /* Positioniert die Linie höher */
+  height: 1px;
+  background-color: var(--color-accent);
+  bottom: 0em;
 }
 
 .char.flip {
@@ -400,79 +400,18 @@ a.custom-link.hitbox::after {
   top: 22rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fbfbfb;
-  color: #171717;
-  padding: 10px 20px;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
-  z-index: 1000;
+  box-shadow: var(--box-shadow-light);
+  font-size: var(--font-size-base);
+  z-index: var(--z-index-alert);
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
 .custom-alert.show {
   opacity: 0.9;
-}
-
-/* Responsive Design */
-
-@media (max-width: 992px) {
-  .mainText {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .char {
-    width: 1.25rem;
-    height: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .custom-alert {
-    top: 20rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .mainText {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-  }
-
-  .char {
-    width: 1.1rem;
-    height: 1.1rem;
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-  }
-
-  .custom-alert {
-    top: 18rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .mainText {
-    font-size: 1rem;
-    text-align: center;
-    line-height: 1.4rem;
-  }
-
-  .char {
-    width: 1rem;
-    height: 1rem;
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
-
-  .custom-alert {
-    top: 16rem;
-    font-size: 0.7rem;
-    padding: 8px 16px;
-  }
 }
 </style>
