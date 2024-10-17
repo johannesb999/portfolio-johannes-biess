@@ -201,12 +201,13 @@ p {
 
   /* 767px */
   .timeline {
-    width: 100%;
+    width: 95vw;
+  
+    
   }
 
   .timeline:before {
     left: 1.25rem;
-    /* 20px */
   }
 
   .timeline ul li:nth-child(odd),
@@ -214,7 +215,6 @@ p {
     width: 100%;
     text-align: left;
     padding-left: 3.125rem;
-    /* 50px */
   }
 
   .timeline ul li:nth-child(odd):before {

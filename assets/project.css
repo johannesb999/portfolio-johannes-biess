@@ -3,14 +3,14 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .detailsLink-container {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   padding-bottom: var(--spacing-lg);
@@ -27,7 +27,7 @@ html {
   position: fixed;
   top: 0;
   padding-top: var(--spacing-lg);
-  left: 50%;
+  left: 50vw;
   transform: translateX(-50%);
   font-size: var(--font-size-big);
   font-weight: var(--font-weight-bold);
@@ -37,8 +37,8 @@ html {
 
 .background {
   position: fixed;
-  height: 5rem;
-  width: 100%;
+  height: 9vh;
+  width: 100vw;
   top: 0;
   z-index: var(--z-index-high);
   background-color: var(--color-background);
@@ -46,7 +46,7 @@ html {
 
 #projectLinkNext {
   position: fixed;
-  top: 50%;
+  top: 50vh;
   right: var(--side-percentage);
   transform: translateY(-50%);
   font-size: var(--font-size-big);
@@ -57,7 +57,7 @@ html {
 
 #projectLinkBefore {
   position: fixed;
-  top: 50%;
+  top: 50vh;
   left: var(--side-percentage);
   transform: translateY(-50%) rotate(180deg);
   font-size: var(--font-size-big);
@@ -77,15 +77,15 @@ html {
 }
 
 .projectFlap {
-  top: 50%;
-  left: 35%;
+  top: 50vh;
+  left: 32vw;
   transform: translate(-50%, -50%);
   font-size: var(--font-size-xl);
 }
 
 .wrapper {
-  top: 50%;
-  left: 65%;
+  top: 50vh;
+  left: 65vw;
   max-width: 35rem;
   transform: translate(-50%, -50%);
   flex-direction: row;
@@ -94,7 +94,7 @@ html {
 .picture {
   display: flex;
   flex-direction: column;
-  width: 30rem;
+  width: 80vw;
   height: var(--img-height-md);
   max-height: fit-content;
   overflow: hidden;
@@ -108,7 +108,7 @@ html {
   max-width: 87.5rem;
   margin: 0 auto;
   padding: var(--spacing-lg);
-  padding-top: 60%;
+  padding-top: 100vh;
   letter-spacing: 0.3px;
 }
 
@@ -236,8 +236,8 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
   }
 
 
@@ -260,7 +260,7 @@ h3 {
     position: fixed;
     top: 0;
     padding-top: var(--spacing-lg);
-    left: 50%;
+    left: 50vw;
     transform: translateX(-50%);
     font-size: var(--font-size-big);
     font-weight: var(--font-weight-bold);
@@ -270,16 +270,17 @@ h3 {
 
   .background {
     position: fixed;
-    height: 5rem;
-    width: 100%;
+    height: 8vh;
+    width: 100vw;
     top: 0;
     z-index: var(--z-index-high);
     background-color: var(--color-background);
+
   }
 
   #projectLinkNext {
     position: fixed;
-    top: 50%;
+    top: 50vh;
     right: var(--side-percentage);
     transform: translateY(-50%);
     font-size: var(--font-size-big);
@@ -290,7 +291,7 @@ h3 {
 
   #projectLinkBefore {
     position: fixed;
-    top: 50%;
+    top: 50vh;
     left: var(--side-percentage);
     transform: translateY(-50%) rotate(180deg);
     font-size: var(--font-size-big);
@@ -307,20 +308,21 @@ h3 {
     font-size: var(--font-size-xxxxl);
     font-weight: var(--font-weight-extra-light);
     text-align: left;
+    align-items: center;
+    justify-content: center;
   }
 
   .projectFlap {
-    top: 35%;
-    left: 50%;
+    top: 35vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
     font-size: var(--font-size-xl);
-    min-width: 90%;
+    min-width: 80%;
   }
 
   .wrapper {
-    top: 65%;
-    left: 50%;
-    max-width: 25rem;
+    top: 67vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
     flex-direction: row;
   }
@@ -333,15 +335,16 @@ h3 {
     overflow: hidden;
     border: var(--border-size) solid var(--border-color-black);
     border-radius: var(--border-radius);
+    max-width: 65vw;
   }
 
 
 
   .project-details {
-    max-width: 87.5rem;
+    max-width: 80vw;
     margin: 0 auto;
     padding: var(--spacing-lg);
-    padding-top: 210%;
+    padding-top: 100vh;
     letter-spacing: 0.3px;
   }
 
@@ -357,9 +360,9 @@ h3 {
   .project-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-self: center;
     justify-content: space-between;
-    width: 100%;
+    width: 80vw;
   }
 
   .project-section.reverse .project-content {
@@ -369,7 +372,7 @@ h3 {
   .projectDetailsFlap {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: center;
     justify-content: center;
     padding-bottom: var(--spacing-bigger);
     padding-top: var(--spacing-big);
@@ -377,16 +380,19 @@ h3 {
 
   .text {
     flex: 1;
-    padding: var(--spacing-xxxl);
+    padding: var(--spacing-xxl);
     padding-top: var(--spacing-md);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-light);
     line-height: var(--line-height-big);
+    max-width: 70vw;
+    align-self: center;
   }
 
   .paragraph {
     font-optical-sizing: auto;
     font-family: var(--font-family-alt);
+
   }
 
   .tryOutLink {
@@ -400,11 +406,15 @@ h3 {
   }
 
 
+
+
+
   .image {
     flex: 1;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm);
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
     object-fit: contain;
   }
 
@@ -421,6 +431,7 @@ h3 {
     width: 100%;
     object-fit: contain;
     object-position: center;
+    align-self: center;
   }
 
   .project-image {
@@ -441,18 +452,26 @@ h3 {
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-xs);
     margin-top: var(--spacing-xs);
+    align-items: center;
+    justify-content: center;
+
   }
 
   .image.small img {
     max-height: var(--img-height-sm);
+    max-width: var(--img-width-lg);
+
   }
 
   .image.medium img {
     max-height: var(--img-height-md);
+    max-width: var(--img-width-lg);
   }
 
   .image.large img {
     max-height: var(--img-height-lg);
+    max-width: var(--img-width-lg);
+
   }
 }
 

@@ -121,7 +121,6 @@ const applyLightTheme = () => {
   root.style.setProperty("--color-accent", "#afafaf");
   root.style.setProperty("--border-color-black", "#171717");
   root.style.setProperty("--color-gray", "#bfbfbf");
-  document.createElement("body").classList.remove("dark")
 };
 
 // Beim Laden der Seite das Theme aus localStorage laden
@@ -147,7 +146,7 @@ onMounted(() => {
 
   /* Farben */
   --color-primary: #171717;
-  --color-background: #c8cbfb;
+  --color-background: #fbfbfb;
   --color-secondary: #d3d1d1;
   --color-gray-light: #0000002a;
   --color-primary-translucent: #171717b0;
@@ -211,14 +210,17 @@ onMounted(() => {
   --line-height-big: 1.5;
   --line-height-normal: 2;
   --color-white-transition: rgba(146, 146, 146, 0.3);
-  --scrollbar-width: 0.05rem; /* 0.8px */
+  --scrollbar-width: 0.01rem; /* 0.8px */
   --box-shadow-light: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
-  --transition-duration: 0.7s;
-  --transition-easing: cubic-bezier(0.77, 0, 0.175, 1);
 
-  --img-height-sm: 18.75rem;
-  --img-height-md: 28.125rem;
-  --img-height-lg: 37.5rem;
+  /* Bildhöhen */
+  --img-height-md: 50vh;
+  --img-height-sm: 40vh;
+  --img-height-lg: 70vh;
+
+  --img-width-sm: 40vw;
+  --img-width-md: 50vw;
+  --img-width-lg: 70vw;
 }
 
 html {
@@ -228,8 +230,8 @@ html {
   background-color: var(--color-background);
   margin: var(--spacing-none);
   padding: var(--spacing-none);
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   letter-spacing: var(--letter-spacing-base);
   scroll-behavior: smooth;
   font-optical-sizing: auto;
@@ -346,7 +348,7 @@ button {
   font-size: var(--font-size-big);
   position: absolute;
   bottom: var(--side-percentage);
-  left: 50%;
+  left: 50vw;
   transform: translateX(-50%);
   font-style: normal;
   line-height: var(--line-height-normal);
@@ -356,7 +358,7 @@ button {
   position: absolute;
   top: 0;
   padding-top: var(--side-percentage);
-  left: 50%;
+  left: 50vw;
   transform: translateX(-50%);
   font-size: var(--font-size-big);
   font-weight: var(--font-weight-bold);
@@ -364,7 +366,7 @@ button {
 }
 
 #rightLink {
-  top: 50%;
+  top: 50vh;
   right: var(--side-percentage);
   transform: translateY(-50%);
   position: absolute;
@@ -375,7 +377,7 @@ button {
 }
 
 #leftLink {
-  top: 50%;
+  top: 50vh;
   left: var(--side-percentage);
   transform: translateY(-50%) rotate(180deg);
   writing-mode: vertical-rl;
@@ -513,6 +515,7 @@ button {
     --spacing-xxs: 0.192rem; /* 0.24rem  */
     --spacing-xs: 0.3rem; /* 0.5rem  */
     --spacing-sm: 0.5rem; /* 0.8rem  */
+    --spacing-sm-md: 0.52rem; /* 1rem  */
     --spacing-md: 0.75rem; /* 1rem  */
     --spacing-lg: 0.9rem; /* 1.5rem  */
     --spacing-xl: 1.28rem; /* 1.6rem  */
@@ -539,9 +542,10 @@ button {
     --line-height-big: 1.2; /* 1.5  */
     --line-height-normal: 1.6; /* 2  */
 
-    --img-height-sm: 8.75rem;
-    --img-height-md: 18.125rem;
-    --img-height-lg: 27.5rem;
+    /* Bildhöhen */
+    --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
+    --img-height-md: 40vh; /* 40% der Viewport-Höhe */
+    --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
   }
 
   html {
@@ -579,19 +583,20 @@ button {
   }
 
   .returnHome {
-    font-weight: var(--font-weight-normal);
-    font-size: var(--font-size-huge);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-bigger);
     color: var(--color-primary);
     text-decoration: none;
     position: fixed;
-    top: var(--top-spacing);
     left: var(--side-percentage);
+    padding-left: var(--spacing-xs);
     z-index: var(--z-index-high);
+    top: var(--side-percentage);
   }
 
   .language-switch {
     position: fixed;
-    top: var(--top-spacing);
+    top: var(--side-percentage);
     right: var(--side-percentage);
     display: flex;
     align-items: center;
@@ -602,7 +607,7 @@ button {
   #de,
   #line {
     font-weight: var(--font-weight-thin);
-    font-size: var(--font-size-bigger);
+    font-size: var(--font-size-big);
   }
 
   #line {
@@ -637,6 +642,8 @@ button {
     border: none;
     cursor: pointer;
     z-index: var(--z-index-high);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
   }
 
   .theme-switcher:focus {
@@ -669,7 +676,7 @@ button {
     font-size: var(--font-size-big);
     position: absolute;
     bottom: var(--side-percentage);
-    left: 50%;
+    left: 50vw;
     transform: translateX(-50%);
     font-style: normal;
     line-height: var(--line-height-normal);
@@ -679,7 +686,7 @@ button {
     position: absolute;
     top: 0;
     padding-top: var(--side-percentage);
-    left: 50%;
+    left: 50vw;
     transform: translateX(-50%);
     font-size: var(--font-size-big);
     font-weight: var(--font-weight-bold);
@@ -687,7 +694,7 @@ button {
   }
 
   #rightLink {
-    top: 50%;
+    top: 50vh;
     right: var(--side-percentage);
     transform: translateY(-50%);
     position: absolute;
@@ -698,7 +705,7 @@ button {
   }
 
   #leftLink {
-    top: 50%;
+    top: 50vh;
     left: var(--side-percentage);
     transform: translateY(-50%) rotate(180deg);
     writing-mode: vertical-rl;

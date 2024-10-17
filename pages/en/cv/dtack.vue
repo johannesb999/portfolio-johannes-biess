@@ -47,7 +47,7 @@
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image small">
+          <div class="image medium">
             <img src="public\img\cv\dtack.svg" alt="plantmonit" />
           </div>
           <div class="text">
