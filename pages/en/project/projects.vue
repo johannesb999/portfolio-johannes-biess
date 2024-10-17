@@ -29,22 +29,8 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img
-          src="public\img\pm\thumbnail.svg"
-          alt="plantmonit"
-        />
+        <img src="public\img\pm\thumbnail.svg" alt="plantmonit" />
       </div>
-      <!-- <div class="projectDescription">
-          <p>
-            The aim of the project was to revolutionize the care of plants.
-            Thanks to new technological possibilities and corresponding sensors
-            PlantMonit continuously captures images of the plant and important
-            Parameters such as soil moisture, humidity, temperature and Lighting
-            conditions. These are created by artificial intelligence "Buddy"
-            analyzed and classified. Buddy enables a simple efficient and
-            optimal care of the Green Friends....<br />
-          </p>
-        </div> -->
     </div>
 
     <DetailsScroll />

@@ -1,23 +1,13 @@
-html {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-
 #contact {
   color: var(--color-primary);
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-xxxxl);
   text-align: center;
-  margin-top: 3.125rem; /* 50px */
+  margin-top: 3.125rem;
+  /* 50px */
   font-style: normal;
   line-height: var(--line-height-normal);
 }
-
-
 
 #impressum {
   color: var(--color-gray);
@@ -29,16 +19,6 @@ html {
   transform: translateX(-50%);
 }
 
-#startLinkContact {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-bold);
-  left: 0;
-  padding-left: var(--spacing-lg);
-}
-
 .contactMeText {
   display: flex;
   flex-direction: column;
@@ -46,8 +26,38 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-extra-light);
-  text-align: left;
-  line-height: 2rem;
+}
+
+@media (max-width: 480px) {
+
+  #contact {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-xxxxl);
+    text-align: center;
+    margin-top: 3.125rem;
+    font-style: normal;
+    line-height: var(--line-height-normal);
+  }
+
+  #impressum {
+    color: var(--color-gray);
+    font-weight: var(--font-weight-thin);
+    font-size: var(--font-size-xl);
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .contactMeText {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 90%;
+
+  }
 }

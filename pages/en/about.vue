@@ -7,9 +7,7 @@
       <div id="bottomLink">
         <nuxt-link to="resume" class="custom-link">PERSONAL RESUME</nuxt-link>
       </div>
-      <!-- <div id="leftLink">
-        <nuxt-link to="/en/skillset" class="custom-link">SKILLSET</nuxt-link>
-      </div> -->
+      
       <div class="aboutMeText">
         <SplitFlapText
           :texts="[

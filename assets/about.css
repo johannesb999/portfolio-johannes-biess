@@ -1,31 +1,3 @@
-html {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-
-#resumeBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-#aboutMe {
-  color: var(--color-black);
-  font-weight: var(--font-weight-thin);
-  font-size: var(--font-size-xxxxl);
-  text-align: center;
-  margin-top: 3.125rem;
-  /* 50px */
-  font-style: normal;
-  line-height: var(--line-height-normal);
-}
-
 .aboutMeText {
   display: flex;
   flex-direction: column;
@@ -36,18 +8,6 @@ html {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-extra-light);
   text-align: left;
-}
-
-.aboutMeText #line1 {
-  font-weight: var(--font-weight-bold);
-}
-
-.aboutMeText #line2,
-.aboutMeText #line3,
-.aboutMeText #line4,
-.aboutMeText #line5,
-.aboutMeText #line6 {
-  font-weight: var(--font-weight-light);
 }
 
 .wrapper {
@@ -65,11 +25,34 @@ html {
 }
 
 
-
 #quote {
   font-size: 1.3rem;
   font-weight: var(--font-weight-thin);
   margin-bottom: var(--spacing-xl);
   text-align: center;
   padding: var(--spacing-xl);
+}
+
+/* Extra kleine Geräte (Handys im Hochformat, 320px bis 480px) */
+@media (max-width: 480px) {
+
+  .aboutMeText {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    min-width: 90%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-thin);
+    font-style: italic;
+    max-width: 50rem;
+  }
 }

@@ -121,6 +121,7 @@ const applyLightTheme = () => {
   root.style.setProperty("--color-accent", "#afafaf");
   root.style.setProperty("--border-color-black", "#171717");
   root.style.setProperty("--color-gray", "#bfbfbf");
+  document.createElement("body").classList.remove("dark")
 };
 
 // Beim Laden der Seite das Theme aus localStorage laden
@@ -140,9 +141,13 @@ onMounted(() => {
 :root {
   --color-picker: #171717b0;
 
+  /* Schriftarten */
+  --font-family-main: "Roboto Mono", monospace;
+  --font-family-alt: "Inter Tight", sans-serif;
+
   /* Farben */
   --color-primary: #171717;
-  --color-background: #fbfbfb;
+  --color-background: #c8cbfb;
   --color-secondary: #d3d1d1;
   --color-gray-light: #0000002a;
   --color-primary-translucent: #171717b0;
@@ -153,10 +158,6 @@ onMounted(() => {
   --border-color-black: #171717;
   --border-size: 0.1rem;
   --border-radius: 0.7rem;
-
-  /* Schriftarten */
-  --font-family-main: "Roboto Mono", monospace;
-  --font-family-alt: "Inter Tight", sans-serif;
 
   /* Schriftgrößen */
   --font-size-base: 0.8rem; /* 12.8px */
@@ -184,6 +185,7 @@ onMounted(() => {
   --spacing-xs: 0.5rem; /* 8px */
   --spacing-sm: 0.8rem; /* 12.8px */
   --spacing-md: 1rem; /* 16px */
+  --spacing-md-lg: 1.3rem; /* 20.8px */
   --spacing-lg: 1.5rem; /* 24px */
   --spacing-xl: 1.6rem; /* 25.6px */
   --spacing-xxl: 2.4rem; /* 38.4px */
@@ -213,6 +215,10 @@ onMounted(() => {
   --box-shadow-light: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
   --transition-duration: 0.7s;
   --transition-easing: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --img-height-sm: 18.75rem;
+  --img-height-md: 28.125rem;
+  --img-height-lg: 37.5rem;
 }
 
 html {
@@ -471,5 +477,268 @@ button {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* Media Queries */
+
+/* Extra kleine Geräte (Handys im Hochformat, 320px bis 480px) */
+@media (max-width: 480px) {
+  :root {
+    --border-color-black: #171717;
+    --border-size: 0.08rem; /* 0.1rem  */
+    --border-radius: 0.56rem; /* 0.7rem  */
+
+    /* Schriftgrößen */
+    --font-size-base: 0.65rem; /* 0.625rem  */
+    --font-size-sm: 0.6rem; /* 0.75rem  */
+    --font-size-md: 0.64rem; /* 0.8rem  */
+    --font-size-lg: 0.8rem; /* 1rem  */
+    --font-size-xl: 0.96rem; /* 1.2rem  */
+    --font-size-xxl: 1.02rem; /* 1.28rem  */
+    --font-size-xxxl: 1.1rem; /* 1.4rem  */
+    --font-size-xxxxl: 1.28rem; /* 1.6rem  */
+    --font-size-big: 1.6rem; /* 2rem  */
+    --font-size-bigger: 1.92rem; /* 2.4rem  */
+    --font-size-huge: 2.56rem; /* 3.2rem  */
+
+    /* Schriftgewichte */
+    --font-weight-thin: 100;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* Abstände */
+    --spacing-none: 0;
+    --spacing-xxs: 0.192rem; /* 0.24rem  */
+    --spacing-xs: 0.3rem; /* 0.5rem  */
+    --spacing-sm: 0.5rem; /* 0.8rem  */
+    --spacing-md: 0.75rem; /* 1rem  */
+    --spacing-lg: 0.9rem; /* 1.5rem  */
+    --spacing-xl: 1.28rem; /* 1.6rem  */
+    --spacing-xxl: 1.92rem; /* 2.4rem  */
+    --spacing-xxxl: 2.56rem; /* 3.2rem  */
+    --spacing-big: 3.84rem; /* 4.8rem  */
+    --spacing-bigger: 5.12rem; /* 6.4rem  */
+
+    --radius-xxs: 0.192rem; /* 0.24rem  */
+    --radius-xs: 0.4rem; /* 0.5rem  */
+    --radius-sm: 0.64rem; /* 0.8rem  */
+    --radius-md: 0.8rem; /* 1rem  */
+
+    /* Positionierung */
+    --top-spacing: 1.04rem; /* 1.3rem  */
+    --side-percentage: 1.5%;
+    --z-index-high: 100;
+    --z-index-alert: 1000;
+
+    /* Sonstiges */
+    --letter-spacing-base: 0.04rem; /* 0.05rem  */
+    --line-height-small: 1;
+    --line-height-normal: normal;
+    --line-height-big: 1.2; /* 1.5  */
+    --line-height-normal: 1.6; /* 2  */
+
+    --img-height-sm: 8.75rem;
+    --img-height-md: 18.125rem;
+    --img-height-lg: 27.5rem;
+  }
+
+  html {
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-main);
+    background-color: var(--color-background);
+    margin: var(--spacing-none);
+    padding: var(--spacing-none);
+    height: 100%;
+    width: 100%;
+    letter-spacing: var(--letter-spacing-base);
+    scroll-behavior: smooth;
+    font-optical-sizing: auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border: var(--border-size) solid var(--border-color-black);
+    border-radius: var(--border-radius);
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  ::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    background-color: var(--color-background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-background);
+    border: var(--spacing-none) solid var(--color-background);
+  }
+
+  .returnHome {
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-huge);
+    color: var(--color-primary);
+    text-decoration: none;
+    position: fixed;
+    top: var(--top-spacing);
+    left: var(--side-percentage);
+    z-index: var(--z-index-high);
+  }
+
+  .language-switch {
+    position: fixed;
+    top: var(--top-spacing);
+    right: var(--side-percentage);
+    display: flex;
+    align-items: center;
+    z-index: var(--z-index-high);
+  }
+
+  #en,
+  #de,
+  #line {
+    font-weight: var(--font-weight-thin);
+    font-size: var(--font-size-bigger);
+  }
+
+  #line {
+    margin: var(--spacing-none);
+  }
+
+  button {
+    background-color: transparent;
+  }
+
+  .language-switch button {
+    color: var(--color-secondary);
+    border: none;
+  }
+
+  .language-switch button:disabled {
+    color: var(--color-primary);
+  }
+
+  .language-switch button:not(:disabled):hover {
+    color: var(--color-primary);
+  }
+
+  /* Theme Switcher Button */
+  .theme-switcher {
+    position: fixed;
+    bottom: var(--top-spacing);
+    right: var(--side-percentage);
+    font-size: var(--font-size-xxxxl);
+    font-weight: var(--font-weight-normal);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: var(--z-index-high);
+  }
+
+  .theme-switcher:focus {
+    outline: none;
+  }
+
+  /* Transition für Theme-Wechsel */
+  .theme-transition {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  .theme-transition,
+  .theme-transition * {
+    transition: color 0.5s ease, background-color 0.5s ease,
+      border-color 0.5s ease;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.6s ease-out;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  #bottomLink {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-big);
+    position: absolute;
+    bottom: var(--side-percentage);
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: normal;
+    line-height: var(--line-height-normal);
+  }
+
+  #topLink {
+    position: absolute;
+    top: 0;
+    padding-top: var(--side-percentage);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+  }
+
+  #rightLink {
+    top: 50%;
+    right: var(--side-percentage);
+    transform: translateY(-50%);
+    position: absolute;
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-bold);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  #leftLink {
+    top: 50%;
+    left: var(--side-percentage);
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .custom-link {
+    color: var(--color-black);
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin: var(--spacing-xxs);
+  }
+}
+
+/* Kleine Geräte (Tablets und Handys im Querformat, 481px bis 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Stile für Tablets und Handys im Querformat */
+}
+
+/* Mittlere Geräte (Laptops und kleinere Bildschirme, 769px bis 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Stile für kleine Bildschirme und Laptops */
+}
+
+/* Große Geräte (Desktops und größere Bildschirme, 1025px bis 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* Stile für Desktops und größere Bildschirme */
+}
+
+/* Extra große Geräte (Sehr große Bildschirme, ab 1201px) */
+@media (min-width: 1201px) {
+  /* Stile für sehr große Bildschirme und Fernseher */
+}
+
+/* Ultra große Bildschirme (ab 1600px) */
+@media (min-width: 1600px) {
+  /* Stile für sehr große Bildschirme (z.B. 4K-Monitore) */
 }
 </style>

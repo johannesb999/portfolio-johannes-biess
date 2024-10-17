@@ -67,8 +67,6 @@ body {
 
 }
 
-
-
 .project-char {
   display: inline-block;
   perspective: 1000px;
@@ -88,5 +86,102 @@ body {
 
   50% {
     transform: rotateX(360deg);
+  }
+}
+
+/* Extra kleine Geräte (Handys im Hochformat, 320px bis 480px) */
+@media (max-width: 480px) {
+
+  html,
+  body {
+    margin: var(--spacing-none);
+    padding: var(--spacing-none);
+    height: 100%;
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+
+  }
+
+  .char {
+    display: inline-block;
+    width: var(--spacing-xl);
+    height: 2rem;
+    overflow: hidden;
+    font-size: var(--font-size-xxxxl);
+    line-height: 2rem;
+    text-align: center;
+    vertical-align: bottom;
+  }
+
+  .separator {
+    color: var(--color-gray-light);
+    padding-left: 1px;
+  }
+
+  .normal {
+    color: var(--color-primary-translucent);
+    padding-left: 1px;
+  }
+
+  .custom-style {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+  }
+
+  .char.flip {
+    animation: flap 1s ease-in-out forwards;
+  }
+
+  @keyframes flap {
+
+    0%,
+    100% {
+      transform: rotateX(0deg);
+    }
+
+    50% {
+      transform: rotateX(360deg);
+    }
+  }
+
+  .mainText {
+    margin: var(--spacing-sm) 0;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extra-light);
+    text-align: center;
+
+  }
+
+
+
+  .project-char {
+    display: inline-block;
+    perspective: 1000px;
+  }
+
+  .project-flip {
+    animation: projectFlipAnimation 1s ease-in-out;
+    transform-origin: center;
+  }
+
+  @keyframes projectFlipAnimation {
+
+    0%,
+    100% {
+      transform: rotateX(0deg);
+    }
+
+    50% {
+      transform: rotateX(360deg);
+    }
   }
 }
