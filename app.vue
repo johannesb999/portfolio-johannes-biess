@@ -551,7 +551,6 @@ button {
   html {
     color: var(--color-primary);
     font-size: var(--font-size-base);
-    height: -webkit-fill-available; 
     font-family: var(--font-family-main);
     background-color: var(--color-background);
     margin: var(--spacing-none);
@@ -566,7 +565,6 @@ button {
     height: auto;
     border: var(--border-size) solid var(--border-color-black);
     border-radius: var(--border-radius);
-    width: 100%;
     object-fit: contain;
     object-position: center;
   }
@@ -638,7 +636,6 @@ button {
     font-size: var(--font-size-xxxxl);
     font-weight: var(--font-weight-normal);
     background-color: transparent;
-    border: none;
     cursor: pointer;
     z-index: var(--z-index-high);
     writing-mode: vertical-rl;
