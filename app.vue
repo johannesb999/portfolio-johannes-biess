@@ -551,12 +551,11 @@ button {
   html {
     color: var(--color-primary);
     font-size: var(--font-size-base);
+    height: -webkit-fill-available; 
     font-family: var(--font-family-main);
     background-color: var(--color-background);
     margin: var(--spacing-none);
     padding: var(--spacing-none);
-    height: 100%;
-    width: 100%;
     letter-spacing: var(--letter-spacing-base);
     scroll-behavior: smooth;
     font-optical-sizing: auto;

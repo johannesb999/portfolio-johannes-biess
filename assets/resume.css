@@ -20,6 +20,16 @@ main {
   transform: translateX(-50%);
 }
 
+.background {
+  position: fixed;
+  height: 8vh;
+  width: 100vw;
+  top: 0;
+  z-index: var(--z-index-high);
+  background-color: var(--color-background);
+
+}
+
 #projectLinkStart {
   position: absolute;
   top: 0;
@@ -182,16 +192,13 @@ p {
 .timeline ul li:nth-child(even) .date {
   position: absolute;
   top: 0.75rem;
-  /* 12px */
   left: -9.375rem;
-  /* -150px */
   margin: var(--spacing-none);
   padding: var(--spacing-md) 3px;
 }
 
 @media (max-width: 62.5rem) {
 
-  /* 1000px */
   .timeline {
     width: 100%;
   }
@@ -199,11 +206,10 @@ p {
 
 @media (max-width: 47.9375rem) {
 
-  /* 767px */
   .timeline {
     width: 95vw;
-  
-    
+
+
   }
 
   .timeline:before {
@@ -219,24 +225,18 @@ p {
 
   .timeline ul li:nth-child(odd):before {
     top: -1.125rem;
-    /* -18px */
     left: 0.625rem;
-    /* 10px */
   }
 
   .timeline ul li:nth-child(even):before {
     top: -1.125rem;
-    /* -18px */
     left: 0.625rem;
-    /* 10px */
   }
 
   .timeline ul li:nth-child(odd) .date,
   .timeline ul li:nth-child(even) .date {
     top: -1.875rem;
-    /* -30px */
     left: 3.125rem;
-    /* 50px */
     right: inherit;
   }
 }

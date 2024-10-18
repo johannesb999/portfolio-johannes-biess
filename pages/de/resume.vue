@@ -1,8 +1,10 @@
 <template>
   <html>
     <main>
-      <div id="projectLinkStart">
-        <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>
+      <div class="background">
+        <div id="projectLinkStart">
+          <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>
+        </div>
       </div>
       <div class="timeline">
         <ul>
@@ -39,7 +41,7 @@
           <li>
             <NuxtLink to="/de/cv/kbsz" class="content custom-link">
               <h2>KBSZ</h2>
-              <p>FACHGEBUNDENE FACHHOCHSCHULEREIFE <br>(WIRTSCHAFT)</p>
+              <p>FACHGEBUNDENE FACHHOCHSCHULEREIFE <br />(WIRTSCHAFT)</p>
               <p class="location">ELLWANGEN, GERMANY</p>
             </NuxtLink>
             <div class="date">
@@ -56,7 +58,7 @@
               <h3>2019</h3>
             </div>
           </li>
-  
+
           <div style="clear: both"></div>
         </ul>
       </div>

@@ -22,7 +22,7 @@
               optimieren.
             </div>
           </div>
-          <div class="imageSplit ">
+          <div class="imageSplit">
             <SplitFlapText
               :texts="[
                 '  SCRUM       CONFLUENCE  ',

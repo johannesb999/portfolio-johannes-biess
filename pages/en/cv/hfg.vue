@@ -30,7 +30,7 @@
               sie in realen Projekten anwenden kann.
             </div>
           </div>
-          <div class="imageSplit ">
+          <div class="imageSplit">
             <SplitFlapText
               :texts="[
                 'FIGMA   UX LEANDESIGN    ',

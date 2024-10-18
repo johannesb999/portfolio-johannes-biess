@@ -1,7 +1,9 @@
 <template>
   <main>
-    <div id="projectLinkStart">
-      <nuxt-link to="/en/about" class="custom-link">ABOUT ME</nuxt-link>
+    <div class="background">
+      <div id="projectLinkStart">
+        <nuxt-link to="/en/about" class="custom-link">ABOUT ME</nuxt-link>
+      </div>
     </div>
     <div class="timeline">
       <ul>
@@ -71,4 +73,3 @@
 <script setup></script>
 
 <style src="assets/resume.css" scoped></style>
-

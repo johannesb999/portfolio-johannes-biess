@@ -13,6 +13,7 @@ main {
   transform: translateY(-50%);
   padding: var(--spacing-md);
   margin: calc(-1 * var(--spacing-md));
+
 }
 
 #projectLinkStartLeft {
@@ -35,7 +36,6 @@ main {
 
 .project-details {
   max-width: 75rem;
-  /* 1200px */
   margin: var(--spacing-none);
   padding: var(--spacing-lg);
   padding-top: var(--spacing-xxl);
@@ -81,18 +81,20 @@ main {
   padding: var(--spacing-lg);
   display: flex;
   align-items: flex-start;
+  object-fit: contain;
+
 }
 
 .imageSplit {
   margin-top: 3.2rem;
-  width: 100%;
 }
 
 .project-image img,
 .image img {
   width: 100%;
+  border: 1px solid var(--color-black);
   border: 1px solid var(--border-color-black);
-  border-radius: var(--radius-sm);
+  border-radius: 10px;
   object-fit: cover;
   object-position: center;
 }
@@ -121,17 +123,17 @@ h3 {
 }
 
 .image.small img {
-  max-height: var(--img-height-sm);
+  max-height: 18.75rem;
   /* 300px */
 }
 
 .image.medium img {
-  max-height: var(--img-height-md);
+  max-height: 31.25rem;
   /* 500px */
 }
 
 .image.large img {
-  max-height: var(--img-height-lg);
+  max-height: 37.5rem;
   /* 600px */
 }
 
@@ -142,13 +144,14 @@ h3 {
 }
 
 
+
 /* Extra kleine Geräte (Handys im Hochformat, 320px bis 480px) */
 @media (max-width: 480px) {
 
   html,
   main {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
 
   #projectLinkStart {
@@ -183,15 +186,16 @@ h3 {
     justify-content: center;
     align-items: center;
     margin-bottom: var(--spacing-lg);
+
   }
 
   .project-content {
-    display: flex;
     flex-direction: column;
+    display: flex;
     align-self: center;
     justify-content: space-between;
-    width: 85vw;
-    top: 10%;
+    width: 82vw;
+
   }
 
   .project-section.reverse .project-content {
@@ -207,25 +211,28 @@ h3 {
     line-height: var(--line-height-big);
     max-width: 75vw;
     align-self: center;
+
   }
 
   .textStyle {
     font-optical-sizing: auto;
     font-family: var(--font-family-alt);
+    padding-top: var(--spacing-md);
   }
 
   .image {
     flex: 1;
-    padding: var(--spacing-md);
     display: flex;
-    justify-content: center;
     align-self: center;
     object-fit: contain;
+    width: 95%;
+
   }
 
   .imageSplit {
     margin-top: 3.2rem;
     align-self: center;
+    width: 100%;
 
   }
 
@@ -255,6 +262,7 @@ h3 {
   .image.small img {
     max-height: var(--img-height-sm);
     max-width: var(--img-width-lg);
+    margin: none;
 
   }
 

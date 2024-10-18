@@ -18,7 +18,6 @@
           </span>
         </nuxt-link>
       </div>
-    
 
       <div
         v-for="(textArray, idx) in textArrays"

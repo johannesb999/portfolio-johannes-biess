@@ -7,6 +7,8 @@ html {
   width: 100vw;
 }
 
+
+
 .detailsLink-container {
   position: absolute;
   bottom: 0;
@@ -176,6 +178,7 @@ html {
   display: flex;
   align-items: flex-start;
   object-fit: contain;
+  width: 100%;
 }
 
 .project-video iframe {
@@ -236,6 +239,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
+    height: --webkit-fill-available;
     height: 100vh;
     width: 100vw;
   }
@@ -392,6 +396,7 @@ h3 {
   .paragraph {
     font-optical-sizing: auto;
     font-family: var(--font-family-alt);
+    padding-top: var(--spacing-md);
 
   }
 
@@ -403,6 +408,7 @@ h3 {
     text-decoration: none;
     left: 50%;
     position: relative;
+    text-decoration: underline;
   }
 
 
