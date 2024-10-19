@@ -1,10 +1,4 @@
 main {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
   font-family: var(--font-family-main);
 }
 
@@ -21,7 +15,7 @@ main {
 }
 
 .background {
-  position: fixed;
+  position: sticky;
   height: 8vh;
   width: 100vw;
   top: 0;
@@ -86,9 +80,7 @@ p {
   height: 100%;
   left: 50%;
   width: 0.25rem;
-  /* 4px */
   top: -1.25rem;
-  /* -20px */
   transition: background-color 0.3s ease;
   border: solid 1px var(--color-black);
 }
@@ -239,4 +231,8 @@ p {
     left: 3.125rem;
     right: inherit;
   }
+}
+
+@media (max-width: 480px) {
+  
 }

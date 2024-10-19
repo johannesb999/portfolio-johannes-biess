@@ -1,18 +1,34 @@
 <template>
   <main>
-    <div id="projectLinkStart">
-      <nuxt-link to="/en/resume" class="custom-link">CV</nuxt-link>
+    <div class="background"></div>
+
+    <div id="projectLinkNext">
+      <nuxt-link to="/en/resume" class="custom-link">RESUME</nuxt-link>
+    </div>
+
+    <div class="projectFlap">
+      <SplitFlapText
+        :texts="[
+          '  SCRUM       CONFLUENCE  ',
+          '       JIRA      AGILE    ',
+          '     SOFTWARE DEVELOPMENT ',
+          '  PROCESS OPTIMIZATION    ',
+        ]"
+      />
+    </div>
+
+    <div class="wrapper">
+      <div class="picture">
+        <img src="public\img\cv\bosch.svg" alt="Picture of Bosch Building" />
+      </div>
     </div>
 
     <div class="project-details">
-      <div class="project-section"></div>
-      <div class="project-header"></div>
-
-      <div class="project-section">
+      <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [LEARNINGS]       ']" />
-            <div class="textStyle">
+            <SplitFlapText :texts="['          [LEARNINGS]        ']" />
+            <div class="paragraph">
               I spent a year at Bosch Automotive Steering GmbH, where I got to
               deepen my knowledge of software development and agile project
               management. I was a JIRA administrator, so I learned a lot about
@@ -20,27 +36,10 @@
               making existing workflows more efficient.
             </div>
           </div>
-          <div class="imageSplit">
-            <SplitFlapText
-              :texts="[
-                '  SCRUM       CONFLUENCE  ',
-                '       JIRA      AGILE    ',
-                '     SOFTWARE DEVELOPMENT ',
-                '  PROCESS OPTIMIZATION    ',
-              ]"
-            />
-          </div>
-        </div>
-      </div>
 
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image small">
-            <img src="public\img\cv\bosch.svg" alt="plantmonit" />
-          </div>
           <div class="text">
-            <SplitFlapText :texts="['     [ABOUT] [BOSCH]       ']" />
-            <div class="textStyle">
+            <SplitFlapText :texts="['         [ABOUT] [BOSCH]       ']" />
+            <div class="paragraph">
               The Schwäbisch Gmünd site is the lead plant of the Vehicle Motion
               Vehicle Motion Vehicle Motion division and comprises the
               Competence Center for Development Center for Development, central
@@ -58,6 +57,8 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>import { useDeviceType } from "~/assets/composables/useDeviceType.js";
+
+const { isMobile, isTablet, isDesktop } = useDeviceType();</script>
 
 <style src="assets/cv.css" scoped></style>

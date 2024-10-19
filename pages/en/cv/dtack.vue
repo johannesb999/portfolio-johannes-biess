@@ -1,18 +1,35 @@
 <template>
   <main>
-    <div id="projectLinkStart">
-      <nuxt-link to="/en/resume" class="custom-link">CV</nuxt-link>
+    <div class="background"></div>
+
+    <div id="projectLinkNext">
+      <nuxt-link to="/en/resume" class="custom-link">RESUME</nuxt-link>
+    </div>
+
+    <div class="projectFlap">
+      <SplitFlapText
+        :texts="[
+          '   WHOLESALE     ECONOMICS ',
+          '      MARCET RESEARCH      ',
+          ' FINANCE        ACCOUNTING ',
+          ' CONTRACT LAW        SALES ',
+          'MARKETING      DISPOSITION',
+        ]"
+      />
+    </div>
+
+    <div class="wrapper">
+      <div class="picture">
+        <img src="public\img\cv\dtack.svg" alt="Picture of D-TACK Building" />
+      </div>
     </div>
 
     <div class="project-details">
-      <div class="project-section"></div>
-      <div class="project-header"></div>
-
-      <div class="project-section">
+      <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [LEARNINGS]      ']" />
-            <div class="textStyle">
+            <SplitFlapText :texts="['          [LEARNINGS]          ']" />
+            <div class="paragraph">
               While I was training as a wholesale and foreign trade merchant at
               D-TACK and the German Chamber of Industry and Commerce (IHK), I
               got to experience all the different departments of a wholesale
@@ -23,36 +40,18 @@
               first time. You can find out more about what I learned and did
               during my apprenticeship in my
               <a
-                href="/path/to/Arbeitszeugnis.pdf"
+                href="docs/EmploymentReference.pdf"
+                download="Employment Reference.pdf"
                 class="custom-link"
                 style="text-decoration: underline"
-                download
-                >employment reference</a
-              >.
+                >Employment Reference.pdf</a
+              >
             </div>
           </div>
-          <div class="imageSplit ">
-            <SplitFlapText
-              :texts="[
-                '   WHOLESALE     ECONOMICS ',
-                '      MARCET RESEARCH      ',
-                ' FINANCE        ACCOUNTING ',
-                ' CONTRACT LAW        SALES ',
-                'MARKETING      DISPOSITION',
-              ]"
-            />
-          </div>
-        </div>
-      </div>
 
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image medium">
-            <img src="public\img\cv\dtack.svg" alt="plantmonit" />
-          </div>
           <div class="text">
-            <SplitFlapText :texts="['     [ABOUT] [D-TACK]      ']" />
-            <div class="textStyle">
+            <SplitFlapText :texts="['          [ABOUT] [D-TACK]       ']" />
+            <div class="paragraph">
               D-TACK is a company that develops and sells adhesive tapes for all
               kinds of industrial uses. During their training at D-TACK,
               trainees get to try out different departments like purchasing,
@@ -67,8 +66,8 @@
                 class="custom-link"
                 style="text-decoration: underline"
                 target="_blank"
-                >website</nuxt-link
-              >.
+                >website.</nuxt-link
+              >
             </div>
           </div>
         </div>
@@ -77,6 +76,10 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+import { useDeviceType } from "~/assets/composables/useDeviceType.js";
+
+const { isMobile, isTablet, isDesktop } = useDeviceType();
+</script>
 
 <style src="assets/cv.css" scoped></style>
