@@ -2,9 +2,8 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
+  height: 100vh;
+  width: 100vw;
   font-family: var(--font-family-main);
 }
 
@@ -239,4 +238,8 @@ p {
     left: 3.125rem;
     right: inherit;
   }
+}
+
+@media (max-width: 480px) {
+  
 }
