@@ -315,8 +315,6 @@ watch(
 </script>
 
 <style scoped>
-
-
 .mainText {
   margin: var(--spacing-sm) 0;
   font-size: var(--font-size-xl);
@@ -339,7 +337,6 @@ watch(
 
 .separator {
   color: var(--color-gray-light);
-  
 }
 
 .normal {
@@ -408,15 +405,13 @@ a.custom-link.hitbox::after {
   opacity: 0.9;
 }
 
-
 @media (max-width: 480px) {
-  
   .mainText {
     margin: var(--spacing-sm) 0;
     text-align: center;
     min-width: 100%;
   }
-  
+
   .char {
     display: inline-block;
     width: var(--spacing-lg);
@@ -427,31 +422,31 @@ a.custom-link.hitbox::after {
     vertical-align: bottom;
     color: var(--color-primary);
   }
-  
+
   .separator {
     color: var(--color-gray-light);
   }
-  
+
   .normal {
     color: var(--color-primary-translucent);
   }
-  
+
   .custom-style {
     font-weight: var(--font-weight-bold);
     color: var(--color-black);
     font-size: var(--font-size-xxxl);
   }
-  
+
   .link-style {
     color: var(--color-primary);
     text-decoration-color: var(--color-accent);
   }
-  
+
   a.custom-link.hitbox {
     position: relative;
     text-decoration: none;
   }
-  
+
   a.custom-link.hitbox::after {
     content: "";
     position: absolute;
@@ -461,11 +456,11 @@ a.custom-link.hitbox::after {
     background-color: var(--color-accent);
     bottom: 0em;
   }
-  
+
   .char.flip {
     animation: flap 1s ease-in-out forwards;
   }
-  
+
   @keyframes flap {
     0%,
     100% {
@@ -475,7 +470,7 @@ a.custom-link.hitbox::after {
       transform: rotateX(360deg);
     }
   }
-  
+
   .custom-alert {
     position: fixed;
     top: 22rem;
@@ -491,7 +486,95 @@ a.custom-link.hitbox::after {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
-  
+
+  .custom-alert.show {
+    opacity: 0.9;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .mainText {
+    margin: var(--spacing-sm) 0;
+    text-align: center;
+    align-content: center;
+    min-width: 100%;
+  }
+
+  .char {
+    display: inline-block;
+    width: var(--spacing-lg);
+    height: var(--spacing-xxl);
+    overflow: hidden;
+    font-size: var(--font-size-xxxxl);
+    text-align: center;
+    vertical-align: bottom;
+    color: var(--color-primary);
+  }
+
+  .separator {
+    color: var(--color-gray-light);
+  }
+
+  .normal {
+    color: var(--color-primary-translucent);
+  }
+
+  .custom-style {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+    font-size: var(--font-size-xxxl);
+  }
+
+  .link-style {
+    color: var(--color-primary);
+    text-decoration-color: var(--color-accent);
+  }
+
+  a.custom-link.hitbox {
+    position: relative;
+    text-decoration: none;
+  }
+
+  a.custom-link.hitbox::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    bottom: 0em;
+  }
+
+  .char.flip {
+    animation: flap 1s ease-in-out forwards;
+  }
+
+  @keyframes flap {
+    0%,
+    100% {
+      transform: rotateX(0deg);
+    }
+    50% {
+      transform: rotateX(360deg);
+    }
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 22rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-light);
+    font-size: var(--font-size-base);
+    z-index: var(--z-index-alert);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
   .custom-alert.show {
     opacity: 0.9;
   }

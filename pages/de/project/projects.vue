@@ -97,8 +97,7 @@
           </div>
           <div class="text">
             <div class="paragraph">
-              <h3>Software Process</h3>
-
+                <h3>Software Process</h3>
               We started with the software process by creating low-fi, mid-fi,
               and high-fi wireframes to plan the structure and user experience
               of the application. This process was very iterative, with a big
