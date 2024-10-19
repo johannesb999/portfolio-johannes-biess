@@ -96,7 +96,8 @@ body {
   body {
     margin: var(--spacing-none);
     padding: var(--spacing-none);
-    height: -webkit-fill-available; /* Korrekte Verwendung */
+    height: -webkit-fill-available;
+    /* Korrekte Verwendung */
     height: 100vh;
     width: 100vw;
 
@@ -164,6 +165,104 @@ body {
   }
 
 
+
+  .project-char {
+    display: inline-block;
+    perspective: 1000px;
+  }
+
+  .project-flip {
+    animation: projectFlipAnimation 1s ease-in-out;
+    transform-origin: center;
+  }
+
+  @keyframes projectFlipAnimation {
+
+    0%,
+    100% {
+      transform: rotateX(0deg);
+    }
+
+    50% {
+      transform: rotateX(360deg);
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+  html,
+  body {
+    margin: var(--spacing-none);
+    padding: var(--spacing-none);
+    height: -webkit-fill-available;
+    /* Korrekte Verwendung */
+    height: 100vh;
+    width: 100vw;
+
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+
+  }
+
+  .char {
+    display: inline-block;
+    width: var(--spacing-xl);
+    height: 2rem;
+    overflow: hidden;
+    font-size: var(--font-size-xxxxl);
+    line-height: 2rem;
+    text-align: center;
+    vertical-align: bottom;
+  }
+
+  .separator {
+    color: var(--color-gray-light);
+    padding-left: 1px;
+  }
+
+  .normal {
+    color: var(--color-primary-translucent);
+    padding-left: 1px;
+  }
+
+  .custom-style {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+  }
+
+  .char.flip {
+    animation: flap 1s ease-in-out forwards;
+  }
+
+  @keyframes flap {
+
+    0%,
+    100% {
+      transform: rotateX(0deg);
+    }
+
+    50% {
+      transform: rotateX(360deg);
+    }
+  }
+
+  .mainText {
+    margin: var(--spacing-sm) 0;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extra-light);
+    text-align: center;
+    align-self: center;
+
+  }
 
   .project-char {
     display: inline-block;

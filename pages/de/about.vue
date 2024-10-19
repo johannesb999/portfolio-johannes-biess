@@ -14,10 +14,10 @@
       <SplitFlapText
         :texts="[
           '         [ÜBER] [MICH]          ',
-          '  FLEXIBEL  AGIL   NEUGIERIG  ',
-          'ANPASSUNGSFÄHIG      GENAU    ',
-          'PÜNKTLICHKEIT   FAIRNESS     ',
-          ' KREATIV   ENTSCHDIUNGSSTARK ',
+          '   FLEXIBEL  AGIL  NEUGIERIG',
+          'ANPASSUNGSFÄHIG      GENAU  ',
+          'PÜNKTLICHKEIT   FAIRNESS    ',
+          ' KREATIV   ENTSCHDIUNGSSTARK',
         ]"
       />
     </div>

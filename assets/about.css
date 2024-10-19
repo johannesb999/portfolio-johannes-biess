@@ -57,3 +57,26 @@
   }
 
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .aboutMeText {
+    position: absolute;
+    top: 25vh;
+    left: 52vw;
+    min-width: 62%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-thin);
+    font-style: italic;
+    max-width: 30rem;
+  }
+
+}

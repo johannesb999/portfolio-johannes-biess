@@ -1,10 +1,15 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-export function useIsMobile(breakpoint = 480) {
+export function useDeviceType() {
   const isMobile = ref(false);
+  const isTablet = ref(false);
+  const isDesktop = ref(false);
 
   const checkScreenSize = () => {
-    isMobile.value = window.innerWidth <= breakpoint;
+    const width = window.innerWidth;
+    isMobile.value = width <= 480;
+    isTablet.value = width > 481 && width <= 768;
+    isDesktop.value = width > 768;
   };
 
   onMounted(() => {
@@ -18,5 +23,7 @@ export function useIsMobile(breakpoint = 480) {
 
   return {
     isMobile,
+    isTablet,
+    isDesktop,
   };
 }
