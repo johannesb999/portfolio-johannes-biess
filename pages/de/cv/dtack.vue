@@ -1,59 +1,58 @@
 <template>
   <main>
-    <div id="projectLinkStart">
-      <nuxt-link to="/de/resume" class="custom-link">CV</nuxt-link>
+    <div class="background"></div>
+
+    <div id="projectLinkNext">
+      <nuxt-link to="/de/resume" class="custom-link">RESUME</nuxt-link>
+    </div>
+
+    <div class="projectFlap">
+      <SplitFlapText
+        :texts="[
+          '   GROßHANDEL  WIRTSCHAFT ',
+          '      MARKTFORSCHUNG      ',
+          ' FINANZEN     BUCHHALTUNG ',
+          ' VERTRAGSRECHT    VERKAUF ',
+          'MARKETING      DISPOSITION',
+        ]"
+      />
+    </div>
+
+    <div class="wrapper">
+      <div class="picture">
+        <img src="public\img\cv\dtack.svg" alt="Picture of D-TACK Building" />
+      </div>
     </div>
 
     <div class="project-details">
-      <div class="project-section"></div>
-      <div class="project-header"></div>
-
-      <div class="project-section">
+      <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [LEARNINGS]       ']" />
-            <div class="textStyle">
+            <SplitFlapText :texts="['          [LEARNINGS]          ']" />
+            <div class="paragraph">
               Während meiner Ausbildung zum Kaufmann im Groß- und Außenhandel
               bei D-TACK und der IHK Deutschland durchlief ich innerhalb von
               drei Jahren sowohl im Unterricht als auch im Betrieb alle
-              relevanten Abteilungen eines Großhandelsunternehmens.
-              Dabei erwarb ich grundlegende Kenntnisse in den Bereichen Einkauf,
-              Verkauf, Marketing und Logistik. Besonders meine
-              Softskills wie Teamfähigkeit, Kommunikation und Organisation
-              wurden erstmalig in einem professionellen Umfeld geschult und
-              gefördert. Ein weiteren Einblick in meine Leistungen und
-              Tätigkeiten während der Ausbildung findet sich in meinem
+              relevanten Abteilungen eines Großhandelsunternehmens. Dabei erwarb
+              ich grundlegende Kenntnisse in den Bereichen Einkauf, Verkauf,
+              Marketing und Logistik. Besonders meine Softskills wie
+              Teamfähigkeit, Kommunikation und Organisation wurden erstmalig in
+              einem professionellen Umfeld geschult und gefördert. Ein weiteren
+              Einblick in meine Leistungen und Tätigkeiten während der
+              Ausbildung findet sich in meinem
               <a
-                href="/path/to/Arbeitszeugnis.pdf"
+                href="/docs/Arbeitszeugnis.pdf"
+                download="Arbeitszeugnis.pdf"
                 class="custom-link"
                 style="text-decoration: underline"
-                download
-                >Arbeitszeugnis</a
-              >.
+                >Arbeitszeugnis.pdf</a
+              >
             </div>
           </div>
-          <div class="imageSplit">
-            <SplitFlapText
-              :texts="[
-                '   GROßHANDEL  WIRTSCHAFT ',
-                '      MARKTFORSCHUNG      ',
-                ' FINANZEN     BUCHHALTUNG ',
-                ' VERTRAGSRECHT    VERKAUF ',
-                'MARKETING      DISPOSITION',
-              ]"
-            />
-          </div>
-        </div>
-      </div>
 
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image small">
-            <img src="public\img\cv\dtack.svg" alt="plantmonit" />
-          </div>
           <div class="text">
-            <SplitFlapText :texts="['         [D-TACK]        ']" />
-            <div class="textStyle">
+            <SplitFlapText :texts="['          [ABOUT] [D-TACK]       ']" />
+            <div class="paragraph">
               D-TACK ist ein Unternehmen, das sich auf die Entwicklung und den
               Vertrieb von Klebebändern für verschiedene Industrieanwendungen
               spezialisiert hat. In der Ausbildung bei D-TACK durchlaufen die
@@ -69,8 +68,8 @@
                 class="custom-link"
                 style="text-decoration: underline"
                 target="_blank"
-                >Website</nuxt-link
-              >.
+                >Website.</nuxt-link
+              >
             </div>
           </div>
         </div>
@@ -79,6 +78,10 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+import { useDeviceType } from "~/assets/composables/useDeviceType.js";
+
+const { isMobile, isTablet, isDesktop } = useDeviceType();
+</script>
 
 <style src="assets/cv.css" scoped></style>

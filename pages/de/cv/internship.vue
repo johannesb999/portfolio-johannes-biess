@@ -1,18 +1,40 @@
 <template>
   <main>
-    <div id="projectLinkStartLeft">
-      <nuxt-link to="/de/resume" class="custom-link">CV</nuxt-link>
+    <div class="background"></div>
+
+    <div id="projectLinkBefore">
+      <nuxt-link to="/de/resume" class="custom-link">RESUME</nuxt-link>
+    </div>
+
+    <div class="projectFlap">
+      <SplitFlapText
+        :texts="[
+          '        PRDUCT DESIGN    ',
+          '  PROTOTYPING            ',
+          '      WEBDEVELOPMENT     ',
+          ' CONCEPT DEVELPMENT      ',
+          '    FULLSTACK DEVELOPMENT ',
+        ]"
+      />
+    </div>
+
+    <div class="wrapper">
+      <div class="picture">
+        <img
+          src="public\img\cv\intern.svg"
+          alt="Picture of me in front of goldengate bridge"
+        />
+      </div>
     </div>
 
     <div class="project-details">
-      <div class="project-section"></div>
-      <div class="project-header"></div>
-
-      <div class="project-section">
+      <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="[' [HOFFENTLICH] [LERNE] [ICH]  ']" />
-            <div class="textStyle">
+            <SplitFlapText
+              :texts="['    [WHAT] [I] [HOPE] [TO] [LEARN]    ']"
+            />
+            <div class="paragraph">
               In einem Praktikum erhoffe ich mir die Chance, meine bisherigen
               Kenntnisse praktisch anzuwenden und neue Fähigkeiten zu erlernen.
               Ich möchte mich aktiv in Projekte einbringen, eigenständig
@@ -24,28 +46,10 @@
               und mich gleichzeitig neuen Herausforderungen zu stellen.
             </div>
           </div>
-          <div class="imageSplit ">
-            <SplitFlapText
-              :texts="[
-                '        PRDUKT DESIGN    ',
-                '  PROTOTYPING            ',
-                '      WEBENTWICKLUNG     ',
-                ' KONCEPT ENTWICKLUNG     ',
-                '    FULLSTACK ENTWICKLUNG',
-              ]"
-            />
-          </div>
-        </div>
-      </div>
 
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image small">
-            <img src="public\img\cv\intern.svg" alt="intern sign" />
-          </div>
           <div class="text">
-            <SplitFlapText :texts="['       [PRAKTIKUM]       ']" />
-            <div class="textStyle">
+            <SplitFlapText :texts="['          [INTERNSHIP]         ']" />
+            <div class="paragraph">
               Von dem Unternehmen, in dem ich mein Praktikum absolviere, erhoffe
               ich mir eine offene und innovative Unternehmenskultur, die
               Kreativität und Eigeninitiative fördert. Besonders wichtig ist mir
@@ -64,6 +68,8 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>import { useDeviceType } from "~/assets/composables/useDeviceType.js";
+
+const { isMobile, isTablet, isDesktop } = useDeviceType();</script>
 
 <style src="assets/cv.css" scoped></style>

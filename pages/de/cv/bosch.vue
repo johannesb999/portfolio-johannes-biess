@@ -1,18 +1,34 @@
 <template>
   <main>
-    <div id="projectLinkStart">
-      <nuxt-link to="/de/resume" class="custom-link">CV</nuxt-link>
+    <div class="background"></div>
+
+    <div id="projectLinkNext">
+      <nuxt-link to="/de/resume" class="custom-link">RESUME</nuxt-link>
+    </div>
+
+    <div class="projectFlap">
+      <SplitFlapText
+        :texts="[
+          '  SCRUM       CONFLUENCE  ',
+          '       JIRA      AGILE    ',
+          '     SOFTWARE ENTWICKLUNG ',
+          '  PROCESS OPTIMIERUNG     ',
+        ]"
+      />
+    </div>
+
+    <div class="wrapper">
+      <div class="picture">
+        <img src="public\img\cv\bosch.svg" alt="Picture of Bosch Building" />
+      </div>
     </div>
 
     <div class="project-details">
-      <div class="project-section"></div>
-      <div class="project-header"></div>
-
-      <div class="project-section">
+      <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['      [LEARNINGS]        ']" />
-            <div class="textStyle">
+            <SplitFlapText :texts="['          [LEARNINGS]        ']" />
+            <div class="paragraph">
               Als Werkstudent bei Bosch Automotive Steering GmbH konnte ich ein
               Jahr lang meine Kenntnisse in der Softwareentwicklung und im
               agilen Projektmanagement vertiefen. Während meiner Zeit bei Bosch
@@ -22,27 +38,10 @@
               optimieren.
             </div>
           </div>
-          <div class="imageSplit">
-            <SplitFlapText
-              :texts="[
-                '  SCRUM       CONFLUENCE  ',
-                '       JIRA      AGILE    ',
-                '     SOFTWARE ENTWICKLUNG ',
-                '  PROCESS OPTIMIERUNG     ',
-              ]"
-            />
-          </div>
-        </div>
-      </div>
 
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image small">
-            <img src="public\img\cv\bosch.svg" alt="plantmonit" />
-          </div>
           <div class="text">
-            <SplitFlapText :texts="['         [BOSCH]         ']" />
-            <div class="textStyle">
+            <SplitFlapText :texts="['         [ABOUT] [BOSCH]       ']" />
+            <div class="paragraph">
               Der Standort Schwäbisch Gmünd ist das Leitwerk des
               Unternehmensbereichs Vehicle Motion Vehicle Motion und umfasst das
               Kompetenzzentrum für Entwicklung zentrum für Entwicklung,
@@ -60,6 +59,10 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+import { useDeviceType } from "~/assets/composables/useDeviceType.js";
+
+const { isMobile, isTablet, isDesktop } = useDeviceType();
+</script>
 
 <style src="assets/cv.css" scoped></style>
