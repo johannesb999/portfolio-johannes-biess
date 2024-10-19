@@ -115,7 +115,7 @@ const applyLightTheme = () => {
   root.style.setProperty("--color-primary", "#171717");
   root.style.setProperty("--color-background", "#fbfbfb");
   root.style.setProperty("--color-secondary", "#d3d1d1");
-  root.style.setProperty("--color-gray-light", "#0000002a");
+  root.style.setProperty("--color-gray-light", "#0000002d");
   root.style.setProperty("--color-primary-translucent", "#171717b0");
   root.style.setProperty("--color-black", "#171717");
   root.style.setProperty("--color-accent", "#afafaf");
@@ -148,7 +148,7 @@ onMounted(() => {
   --color-primary: #171717;
   --color-background: #fbfbfb;
   --color-secondary: #d3d1d1;
-  --color-gray-light: #0000002a;
+  --color-gray-light: #0000002d;
   --color-primary-translucent: #171717b0;
   --color-black: #000000;
   --color-accent: #afafaf;

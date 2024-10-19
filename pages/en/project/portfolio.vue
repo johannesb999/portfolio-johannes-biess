@@ -32,7 +32,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\po\thumbnail.svg" alt="plantmonit" />
+        <img src="public\img\po\thumbnail.svg" alt="picture of my portfolio" />
       </div>
     </div>
 

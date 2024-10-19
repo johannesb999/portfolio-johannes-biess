@@ -60,7 +60,7 @@
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image small">
+          <div class="image medium">
             <img src="public\img\sc\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
@@ -86,7 +86,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [SOULUTION]           ']" />
+            <SplitFlapText :texts="['          [SOULUTION]          ']" />
             <div class="paragraph">
               The result is SimpleChat, an all-in-one platform that lets users
               chat and offers other features to connect the university and

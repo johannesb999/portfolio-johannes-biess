@@ -23,7 +23,7 @@
     </div>
     <div class="wrapper">
         <img
-          src="public\profilepicture3.jpg"
+          src="public\profilepicture.svg"
           alt="profilepicture"
         />
         <div id="quote">“Es gibt nicht<br />- zu viel Käse.”</div>
