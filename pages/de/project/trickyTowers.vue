@@ -40,17 +40,20 @@
           <div class="text">
             <SplitFlapText :texts="['           [PROBLEM]           ']" />
             <div class="paragraph">
-              The project focused on answering this question: What's the best
-              way to draw attention to a shop window or building? We wanted to
-              find out how we could market our university better and make it
-              more visible to the public to attract more potential students. We
-              wanted to create an interactive installation that would make the
-              university's shop window come alive.<br /><br />
-              The idea was to create an installation that would get people's
-              attention and make them curious about the school. We wanted to
-              turn the shop window into a place that not only grabs your
-              attention but also leaves a lasting impression. The goal was to
-              attract more students to our university.
+              Das Projekt befasste sich mit der Frage: Wie zieht man
+              Aufmerksamkeit auf ein Schaufenster oder Gebäude? In diesem Fall
+              sollte herausgefunden werden, wie das Marketing der Hochschule
+              verbessert und sie für die Öffentlichkeit präsenter gemacht werden
+              kann, um mehr potenzielle Studierende anzusprechen. Ziel war es,
+              eine interaktive Installation zu entwickeln, die das Schaufenster
+              der Hochschule in ein lebendiges, dynamisches Medium verwandelt.
+              Anstatt lediglich Informationen anzuzeigen, sollte die
+              Installation eine spielerische und ansprechende Interaktion
+              zwischen den Passanten und der Hochschule ermöglichen, um Neugier
+              und Interesse zu wecken. Die Idee war, das Schaufenster zu einem
+              Ort zu machen, der nicht nur die Aufmerksamkeit der Vorbeigehenden
+              fesselt, sondern sie auch nachhaltig beeindruckt – mit dem klaren
+              Ziel, mehr Studierende für die Hochschule zu gewinnen.
             </div>
           </div>
           <div class="image medium">
@@ -67,19 +70,25 @@
           <div class="text">
             <SplitFlapText :texts="['           [PROCESS]          ']" />
             <div class="paragraph">
-              We started off with a big, intensive brainstorming and research
-              phase for this project. We wanted to figure out the best way to
-              reach young people who are interested in both technology and
-              design so they'd know about our degree program. It didn't take
-              long to realize that just having a shop window with animations or
-              videos wouldn't be enough. Not many people stopping by will take
-              the time to watch any videos. We quickly decided to develop an
-              interactive solution. It was really important for us to come up
-              with a design that would get people's attention and also make them
-              curious about what we had to offer. The installation had to be
-              designed in a way that made it easy for people to interact with
-              it. This would help to keep their interest and make it simple for
-              them to use.
+              Das Projekt begann mit einer intensiven Phase von Brainstorming
+              und Recherche. Es sollte herausgefunden werden, wie am besten
+              junge Menschen, die sich sowohl für Technologie als auch für
+              Design interessieren, erreicht werden können, um sie auf das
+              Studienangebot aufmerksam zu machen. Schnell wurde klar, dass ein
+              Schaufenster, das nur Animationen oder Videos abspielt, nicht
+              ausreichen würde. Nur wenige Passanten nehmen sich die Zeit,
+              stehenzubleiben und ein Video anzusehen. Die Entscheidung, eine
+              interaktive Lösung zu entwickeln, wurde daher schnell getroffen.
+              Es war entscheidend, ein Konzept zu entwerfen, das Aufmerksamkeit
+              erregt und gleichzeitig die Neugier der Passanten weckt. Die
+              Installation musste so gestaltet sein, dass die Interaktion
+              intuitiv ist, um das anfängliche Interesse aufrechtzuerhalten und
+              die Hemmschwelle zur Nutzung möglichst gering zu halten. Neben der
+              Gestaltung der Benutzerinteraktion musste auch berücksichtigt
+              werden, welche Technologie sich am besten für die Umsetzung
+              eignet. Das Ziel war, eine effektive Balance zwischen einem
+              auffälligen visuellen Design und einer benutzerfreundlichen,
+              zugänglichen Interaktion zu finden.
             </div>
           </div>
         </div>
@@ -90,20 +99,21 @@
           <div class="text">
             <SplitFlapText :texts="['          [SOLUTION]           ']" />
             <div class="paragraph">
-              TrickyTowers is an interactive shop window that attracts
-              passers-by in a playful way and offers an extraordinary
-              experience. The installation consists of a screen, a backlight
-              projector and a web app which, in combination with a webcam and
-              Google MediaPipe, recognizes the user's hand movements. As soon as
-              the user's hand is recognized, a game starts. The game principle
-              of TrickyTowers can best be described as a kind of Tetris with a
-              physics engine. However, the aim is not to build rows, but to
-              build a tower as high as possible. The physical elements make
-              building a challenge that requires skill and strategic thinking.
-              This interactive experience not only attracts attention, but also
-              actively invites users to engage with the installation and
-              experience the connection to the university in a playful and
-              positive way.
+              TrickyTowers ist ein interaktives Schaufenster, das Passanten auf
+              spielerische Weise anzieht und ein außergewöhnliches Erlebnis
+              bietet. Die Installation besteht aus einem Bildschirm, einem
+              Rückprojektor und einer Web-App, die in Kombination mit einer
+              Webcam und Google MediaPipe die Handbewegungen der Nutzer erkennt.
+              Sobald die Hand des Nutzers erkannt wird, startet ein Spiel. Das
+              Spielprinzip von TrickyTowers lässt sich am besten als eine Art
+              Tetris mit einer Physik-Engine beschreiben. Ziel ist es jedoch
+              nicht, Reihen zu bilden, sondern einen möglichst hohen Turm zu
+              bauen. Die physikalischen Elemente machen das Bauen zu einer
+              Herausforderung, die Geschick und strategisches Denken erfordert.
+              Dieses interaktive Erlebnis zieht nicht nur Aufmerksamkeit auf
+              sich, sondern lädt die Nutzer auch aktiv dazu ein, mit der
+              Installation zu interagieren und die Verbindung zur Hochschule auf
+              spielerische und positive Weise zu erleben.
             </div>
           </div>
           <div class="image small">
@@ -137,17 +147,20 @@
           <div class="text">
             <SplitFlapText :texts="['           [PROBLEM]           ']" />
             <div class="paragraph">
-              The project focused on answering this question: What's the best
-              way to draw attention to a shop window or building? We wanted to
-              find out how we could market our university better and make it
-              more visible to the public to attract more potential students. We
-              wanted to create an interactive installation that would make the
-              university's shop window come alive.<br /><br />
-              The idea was to create an installation that would get people's
-              attention and make them curious about the school. We wanted to
-              turn the shop window into a place that not only grabs your
-              attention but also leaves a lasting impression. The goal was to
-              attract more students to our university.
+              Das Projekt befasste sich mit der Frage: Wie zieht man
+              Aufmerksamkeit auf ein Schaufenster oder Gebäude? In diesem Fall
+              sollte herausgefunden werden, wie das Marketing der Hochschule
+              verbessert und sie für die Öffentlichkeit präsenter gemacht werden
+              kann, um mehr potenzielle Studierende anzusprechen. Ziel war es,
+              eine interaktive Installation zu entwickeln, die das Schaufenster
+              der Hochschule in ein lebendiges, dynamisches Medium verwandelt.
+              Anstatt lediglich Informationen anzuzeigen, sollte die
+              Installation eine spielerische und ansprechende Interaktion
+              zwischen den Passanten und der Hochschule ermöglichen, um Neugier
+              und Interesse zu wecken. Die Idee war, das Schaufenster zu einem
+              Ort zu machen, der nicht nur die Aufmerksamkeit der Vorbeigehenden
+              fesselt, sondern sie auch nachhaltig beeindruckt – mit dem klaren
+              Ziel, mehr Studierende für die Hochschule zu gewinnen.
             </div>
           </div>
           <div class="image medium">
@@ -162,21 +175,27 @@
             <img src="public\img\tt\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['             [PROCESS]             ']" />
+            <SplitFlapText :texts="['            [PROCESS]          ']" />
             <div class="paragraph">
-              We started off with a big, intensive brainstorming and research
-              phase for this project. We wanted to figure out the best way to
-              reach young people who are interested in both technology and
-              design so they'd know about our degree program. It didn't take
-              long to realize that just having a shop window with animations or
-              videos wouldn't be enough. Not many people stopping by will take
-              the time to watch any videos. We quickly decided to develop an
-              interactive solution. It was really important for us to come up
-              with a design that would get people's attention and also make them
-              curious about what we had to offer. The installation had to be
-              designed in a way that made it easy for people to interact with
-              it. This would help to keep their interest and make it simple for
-              them to use.
+              Das Projekt begann mit einer intensiven Phase von Brainstorming
+              und Recherche. Es sollte herausgefunden werden, wie am besten
+              junge Menschen, die sich sowohl für Technologie als auch für
+              Design interessieren, erreicht werden können, um sie auf das
+              Studienangebot aufmerksam zu machen. Schnell wurde klar, dass ein
+              Schaufenster, das nur Animationen oder Videos abspielt, nicht
+              ausreichen würde. Nur wenige Passanten nehmen sich die Zeit,
+              stehenzubleiben und ein Video anzusehen. Die Entscheidung, eine
+              interaktive Lösung zu entwickeln, wurde daher schnell getroffen.
+              Es war entscheidend, ein Konzept zu entwerfen, das Aufmerksamkeit
+              erregt und gleichzeitig die Neugier der Passanten weckt. Die
+              Installation musste so gestaltet sein, dass die Interaktion
+              intuitiv ist, um das anfängliche Interesse aufrechtzuerhalten und
+              die Hemmschwelle zur Nutzung möglichst gering zu halten. Neben der
+              Gestaltung der Benutzerinteraktion musste auch berücksichtigt
+              werden, welche Technologie sich am besten für die Umsetzung
+              eignet. Das Ziel war, eine effektive Balance zwischen einem
+              auffälligen visuellen Design und einer benutzerfreundlichen,
+              zugänglichen Interaktion zu finden.
             </div>
           </div>
         </div>
@@ -185,22 +204,23 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['             [SOLUTION]            ']" />
+            <SplitFlapText :texts="['          [SOLUTION]           ']" />
             <div class="paragraph">
-              TrickyTowers is an interactive shop window that attracts
-              passers-by in a playful way and offers an extraordinary
-              experience. The installation consists of a screen, a backlight
-              projector and a web app which, in combination with a webcam and
-              Google MediaPipe, recognizes the user's hand movements. As soon as
-              the user's hand is recognized, a game starts. The game principle
-              of TrickyTowers can best be described as a kind of Tetris with a
-              physics engine. However, the aim is not to build rows, but to
-              build a tower as high as possible. The physical elements make
-              building a challenge that requires skill and strategic thinking.
-              This interactive experience not only attracts attention, but also
-              actively invites users to engage with the installation and
-              experience the connection to the university in a playful and
-              positive way.
+              TrickyTowers ist ein interaktives Schaufenster, das Passanten auf
+              spielerische Weise anzieht und ein außergewöhnliches Erlebnis
+              bietet. Die Installation besteht aus einem Bildschirm, einem
+              Rückprojektor und einer Web-App, die in Kombination mit einer
+              Webcam und Google MediaPipe die Handbewegungen der Nutzer erkennt.
+              Sobald die Hand des Nutzers erkannt wird, startet ein Spiel. Das
+              Spielprinzip von TrickyTowers lässt sich am besten als eine Art
+              Tetris mit einer Physik-Engine beschreiben. Ziel ist es jedoch
+              nicht, Reihen zu bilden, sondern einen möglichst hohen Turm zu
+              bauen. Die physikalischen Elemente machen das Bauen zu einer
+              Herausforderung, die Geschick und strategisches Denken erfordert.
+              Dieses interaktive Erlebnis zieht nicht nur Aufmerksamkeit auf
+              sich, sondern lädt die Nutzer auch aktiv dazu ein, mit der
+              Installation zu interagieren und die Verbindung zur Hochschule auf
+              spielerische und positive Weise zu erleben.
             </div>
           </div>
           <div class="image small">
@@ -234,17 +254,20 @@
           <div class="text">
             <SplitFlapText :texts="['         [PROBLEM]         ']" />
             <div class="paragraph">
-              The project focused on answering this question: What's the best
-              way to draw attention to a shop window or building? We wanted to
-              find out how we could market our university better and make it
-              more visible to the public to attract more potential students. We
-              wanted to create an interactive installation that would make the
-              university's shop window come alive.<br /><br />
-              The idea was to create an installation that would get people's
-              attention and make them curious about the school. We wanted to
-              turn the shop window into a place that not only grabs your
-              attention but also leaves a lasting impression. The goal was to
-              attract more students to our university.
+              Das Projekt befasste sich mit der Frage: Wie zieht man
+              Aufmerksamkeit auf ein Schaufenster oder Gebäude? In diesem Fall
+              sollte herausgefunden werden, wie das Marketing der Hochschule
+              verbessert und sie für die Öffentlichkeit präsenter gemacht werden
+              kann, um mehr potenzielle Studierende anzusprechen. Ziel war es,
+              eine interaktive Installation zu entwickeln, die das Schaufenster
+              der Hochschule in ein lebendiges, dynamisches Medium verwandelt.
+              Anstatt lediglich Informationen anzuzeigen, sollte die
+              Installation eine spielerische und ansprechende Interaktion
+              zwischen den Passanten und der Hochschule ermöglichen, um Neugier
+              und Interesse zu wecken. Die Idee war, das Schaufenster zu einem
+              Ort zu machen, der nicht nur die Aufmerksamkeit der Vorbeigehenden
+              fesselt, sondern sie auch nachhaltig beeindruckt – mit dem klaren
+              Ziel, mehr Studierende für die Hochschule zu gewinnen.
             </div>
           </div>
           <div class="image medium">
@@ -258,19 +281,25 @@
           <div class="text">
             <SplitFlapText :texts="['      [PROCESS]       ']" />
             <div class="paragraph">
-              We started off with a big, intensive brainstorming and research
-              phase for this project. We wanted to figure out the best way to
-              reach young people who are interested in both technology and
-              design so they'd know about our degree program. It didn't take
-              long to realize that just having a shop window with animations or
-              videos wouldn't be enough. Not many people stopping by will take
-              the time to watch any videos. We quickly decided to develop an
-              interactive solution. It was really important for us to come up
-              with a design that would get people's attention and also make them
-              curious about what we had to offer. The installation had to be
-              designed in a way that made it easy for people to interact with
-              it. This would help to keep their interest and make it simple for
-              them to use.
+              Das Projekt begann mit einer intensiven Phase von Brainstorming
+              und Recherche. Es sollte herausgefunden werden, wie am besten
+              junge Menschen, die sich sowohl für Technologie als auch für
+              Design interessieren, erreicht werden können, um sie auf das
+              Studienangebot aufmerksam zu machen. Schnell wurde klar, dass ein
+              Schaufenster, das nur Animationen oder Videos abspielt, nicht
+              ausreichen würde. Nur wenige Passanten nehmen sich die Zeit,
+              stehenzubleiben und ein Video anzusehen. Die Entscheidung, eine
+              interaktive Lösung zu entwickeln, wurde daher schnell getroffen.
+              Es war entscheidend, ein Konzept zu entwerfen, das Aufmerksamkeit
+              erregt und gleichzeitig die Neugier der Passanten weckt. Die
+              Installation musste so gestaltet sein, dass die Interaktion
+              intuitiv ist, um das anfängliche Interesse aufrechtzuerhalten und
+              die Hemmschwelle zur Nutzung möglichst gering zu halten. Neben der
+              Gestaltung der Benutzerinteraktion musste auch berücksichtigt
+              werden, welche Technologie sich am besten für die Umsetzung
+              eignet. Das Ziel war, eine effektive Balance zwischen einem
+              auffälligen visuellen Design und einer benutzerfreundlichen,
+              zugänglichen Interaktion zu finden.
             </div>
           </div>
           <div class="image small">
@@ -284,20 +313,21 @@
           <div class="text">
             <SplitFlapText :texts="['      [SOLUTION]      ']" />
             <div class="paragraph">
-              TrickyTowers is an interactive shop window that attracts
-              passers-by in a playful way and offers an extraordinary
-              experience. The installation consists of a screen, a backlight
-              projector and a web app which, in combination with a webcam and
-              Google MediaPipe, recognizes the user's hand movements. As soon as
-              the user's hand is recognized, a game starts. The game principle
-              of TrickyTowers can best be described as a kind of Tetris with a
-              physics engine. However, the aim is not to build rows, but to
-              build a tower as high as possible. The physical elements make
-              building a challenge that requires skill and strategic thinking.
-              This interactive experience not only attracts attention, but also
-              actively invites users to engage with the installation and
-              experience the connection to the university in a playful and
-              positive way.
+              TrickyTowers ist ein interaktives Schaufenster, das Passanten auf
+              spielerische Weise anzieht und ein außergewöhnliches Erlebnis
+              bietet. Die Installation besteht aus einem Bildschirm, einem
+              Rückprojektor und einer Web-App, die in Kombination mit einer
+              Webcam und Google MediaPipe die Handbewegungen der Nutzer erkennt.
+              Sobald die Hand des Nutzers erkannt wird, startet ein Spiel. Das
+              Spielprinzip von TrickyTowers lässt sich am besten als eine Art
+              Tetris mit einer Physik-Engine beschreiben. Ziel ist es jedoch
+              nicht, Reihen zu bilden, sondern einen möglichst hohen Turm zu
+              bauen. Die physikalischen Elemente machen das Bauen zu einer
+              Herausforderung, die Geschick und strategisches Denken erfordert.
+              Dieses interaktive Erlebnis zieht nicht nur Aufmerksamkeit auf
+              sich, sondern lädt die Nutzer auch aktiv dazu ein, mit der
+              Installation zu interagieren und die Verbindung zur Hochschule auf
+              spielerische und positive Weise zu erleben.
             </div>
           </div>
           <div class="image small">

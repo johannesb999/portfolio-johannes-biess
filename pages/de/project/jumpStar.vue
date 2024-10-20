@@ -42,21 +42,22 @@
           <div class="text">
             <SplitFlapText :texts="['            [IDEA]             ']" />
             <div class="paragraph">
-              The course just asked us to do something with stars. <br />We got
-              a link to a CSV file that had around 340,000 stars and their data
-              in it. <br /><br />The course was more about learning the
-              deployment pipeline <br />than develop the content to something
-              unique. <br />Even so, we wanted to create a website that doesn't
-              already exist in this form. <br /><br />Many people believe that
-              the constellation of the stars at the time of their birth has a
-              special significance for their lives. This belief affects our
-              choices and attitudes in everyday life, from horoscopes to
-              astrological predictions.<br />
-              With our website, we aimed to show, in a fun way, that
-              constellations are simply a random grouping of celestial bodies
-              that appear coherent because of our perspective. Our goal was to
-              offer a new perspective on the universe and to highlight that the
-              supposed meanings of the constellations are just fiction.
+              Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
+              wurde ein Link zu einer CSV-Datei mit etwa 340.000 Sternendaten
+              bereitgestellt. Der Schwerpunkt des Kurses lag auf dem Erlernen
+              der Deployment Pipeline und weniger auf dem Nutzen der Inhalte.
+              Trotzdem sollte eine Website entwickelt werden, die in dieser Form
+              nicht schon weit verbreitet ist. Viele Menschen glauben, dass die
+              Konstellation der Sterne zum Zeitpunkt ihrer Geburt eine besondere
+              Bedeutung für ihr Leben hat. Dieser Glaube beeinflusst
+              Entscheidungen und Einstellungen im Alltag, sei es durch Horoskope
+              oder astrologische Vorhersagen. Mit der Website sollte auf
+              spielerische Weise gezeigt werden, dass Sternbilder letztlich
+              nichts anderes als eine zufällige Anordnung von Himmelskörpern
+              sind, die nur durch unsere Perspektive als zusammenhängend
+              erscheinen. Ziel war es, den Menschen eine neue Sichtweise auf das
+              Universum zu eröffnen und die vermeintliche Bedeutung der
+              Sternbilder als Fiktion darzustellen.
             </div>
           </div>
           <div class="image medium">
@@ -73,22 +74,23 @@
           <div class="text">
             <SplitFlapText :texts="['           [PROCESS]           ']" />
             <div class="paragraph">
-              At the start of the project, we discussed how we wanted to portray
-              the stars. <br />We quickly decided to add a fun element by
-              simulating a spaceship flying <br />through space. This approach
-              lets you see the stars and constellations from different angles,
-              which makes it easier to understand how random the arrangements
-              are.<br />
-              After some feedback discussions, we decided to put the idea of
-              displaying scientific data on the back burner to focus more on the
-              visual experience. <br />As you move through space, the lines that
-              connect the stars start to get distorted, making it harder to
-              recognize constellations. <br />This makes users realise that even
-              a slight shift in perspective is enough to destroy these supposed
-              constellations. <br /><br />
-              To make it more immersive, we chose a sleek, unobtrusive design
-              for the navigation tools that blends in with the background
-              without disturbing the visual focus on the stars.
+              Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt
+              werden sollten. Schnell fiel die Entscheidung, eine spielerische
+              Komponente einzubringen, indem ein Raumschiff simuliert wird, das
+              durch das Weltall fliegt. Diese Herangehensweise ermöglicht es,
+              Sterne und Konstellationen aus verschiedenen Perspektiven zu
+              betrachten und so die Zufälligkeit der Anordnungen zu
+              verdeutlichen. Die Idee, wissenschaftliche Daten aktiv anzuzeigen,
+              wurde nach einigen Feedbackgesprächen in den Hintergrund gerückt,
+              um den Fokus stärker auf das visuelle Erleben zu legen. Dezente
+              Linien, die die Sterne so verbinden, dass Sternkonstellationen
+              erkennbar werden, verzerren sich im Laufe der Reise zunehmend.
+              Dadurch wird den Nutzern klar, dass schon eine kleine Veränderung
+              der Perspektive ausreicht, um die vermeintlichen Sternbilder
+              aufzulösen. Um die Immersion zu verstärken, wurde ein schlankes,
+              unauffälliges Design für die Navigationstools gewählt, das sich
+              dezent in den Hintergrund einfügt und den visuellen Fokus auf die
+              Sterne nicht stört.
             </div>
           </div>
         </div>
@@ -98,23 +100,24 @@
             <div class="text">
               <SplitFlapText :texts="['      [IMPLEMENTATION]       ']" />
               <div class="paragraph">
-                The result is an interactive website that lets users have some
-                fun exploring space. <br />You can view stars and constellations
-                from different perspectives with the help of a simulated
-                spaceship. <br />The idea is to show that constellations are
-                just a matter of perspective.<br />
-                There are some subtle animations that show how even small
-                changes in the viewing angle can make the constellations seem
-                less ordered. <br />Users get to see first-hand how random the
-                arrangement of the celestial bodies really is—without any direct
-                instruction, but through their own discovery and experience.
-                <br /><br />The website is built on the Svelte framework, and
-                THREE.js handles the 3D environment. We store the star data in a
-                MongoDB database, which is hosted on our own server along with
-                the backend. We use Docker and Portainer to manage the
-                infrastructure, and GitHub Actions provides us with a nearly
-                automated deployment pipeline, which makes it easy to deploy the
-                application.
+                Das Resultat ist eine interaktive Website, die den Nutzern eine
+                spielerische Reise durch das Weltall ermöglicht. Mithilfe eines
+                simulierten Raumschiffs können Sterne und Konstellationen aus
+                verschiedenen Blickwinkeln betrachtet werden. Ziel ist es,
+                aufzuzeigen, dass Sternbilder reine Fiktion und eine Frage der
+                Perspektive sind. Subtile Animationen verdeutlichen, dass selbst
+                kleinste Veränderungen im Blickwinkel die scheinbare Ordnung der
+                Sternbilder auflösen. Die Nutzer erleben so, wie zufällig die
+                Anordnung der Himmelskörper wirklich ist – nicht durch
+                Belehrung, sondern durch eigenes Entdecken und Erleben. Die
+                Website basiert auf dem Framework Svelte, während THREE.js die
+                3D-Umgebung realisiert. Die Sternendaten werden in einer
+                MongoDB-Datenbank gespeichert, die zusammen mit dem Backend auf
+                einem eigenen Server gehostet wird. Mithilfe von Docker und
+                Portainer wird die Infrastruktur verwaltet, und GitHub Actions
+                sorgt für eine nahezu automatisierte Deployment Pipeline. So
+                wird eine effiziente und zuverlässige Bereitstellung der
+                Anwendung gewährleistet.
               </div>
             </div>
             <div class="image medium">
@@ -169,21 +172,22 @@
           <div class="text">
             <SplitFlapText :texts="['               [IDEA]              ']" />
             <div class="paragraph">
-              The course just asked us to do something with stars. <br />We got
-              a link to a CSV file that had around 340,000 stars and their data
-              in it. <br /><br />The course was more about learning the
-              deployment pipeline <br />than develop the content to something
-              unique. <br />Even so, we wanted to create a website that doesn't
-              already exist in this form. <br /><br />Many people believe that
-              the constellation of the stars at the time of their birth has a
-              special significance for their lives. This belief affects our
-              choices and attitudes in everyday life, from horoscopes to
-              astrological predictions.<br />
-              With our website, we aimed to show, in a fun way, that
-              constellations are simply a random grouping of celestial bodies
-              that appear coherent because of our perspective. Our goal was to
-              offer a new perspective on the universe and to highlight that the
-              supposed meanings of the constellations are just fiction.
+              Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
+              wurde ein Link zu einer CSV-Datei mit etwa 340.000 Sternendaten
+              bereitgestellt. Der Schwerpunkt des Kurses lag auf dem Erlernen
+              der Deployment Pipeline und weniger auf dem Nutzen der Inhalte.
+              Trotzdem sollte eine Website entwickelt werden, die in dieser Form
+              nicht schon weit verbreitet ist. Viele Menschen glauben, dass die
+              Konstellation der Sterne zum Zeitpunkt ihrer Geburt eine besondere
+              Bedeutung für ihr Leben hat. Dieser Glaube beeinflusst
+              Entscheidungen und Einstellungen im Alltag, sei es durch Horoskope
+              oder astrologische Vorhersagen. Mit der Website sollte auf
+              spielerische Weise gezeigt werden, dass Sternbilder letztlich
+              nichts anderes als eine zufällige Anordnung von Himmelskörpern
+              sind, die nur durch unsere Perspektive als zusammenhängend
+              erscheinen. Ziel war es, den Menschen eine neue Sichtweise auf das
+              Universum zu eröffnen und die vermeintliche Bedeutung der
+              Sternbilder als Fiktion darzustellen.
             </div>
           </div>
           <div class="image medium">
@@ -197,22 +201,23 @@
           <div class="text">
             <SplitFlapText :texts="['             [PROCESS]             ']" />
             <div class="paragraph">
-              At the start of the project, we discussed how we wanted to portray
-              the stars. <br />We quickly decided to add a fun element by
-              simulating a spaceship flying <br />through space. This approach
-              lets you see the stars and constellations from different angles,
-              which makes it easier to understand how random the arrangements
-              are.<br />
-              After some feedback discussions, we decided to put the idea of
-              displaying scientific data on the back burner to focus more on the
-              visual experience. <br />As you move through space, the lines that
-              connect the stars start to get distorted, making it harder to
-              recognize constellations. <br />This makes users realise that even
-              a slight shift in perspective is enough to destroy these supposed
-              constellations. <br /><br />
-              To make it more immersive, we chose a sleek, unobtrusive design
-              for the navigation tools that blends in with the background
-              without disturbing the visual focus on the stars.
+              Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt
+              werden sollten. Schnell fiel die Entscheidung, eine spielerische
+              Komponente einzubringen, indem ein Raumschiff simuliert wird, das
+              durch das Weltall fliegt. Diese Herangehensweise ermöglicht es,
+              Sterne und Konstellationen aus verschiedenen Perspektiven zu
+              betrachten und so die Zufälligkeit der Anordnungen zu
+              verdeutlichen. Die Idee, wissenschaftliche Daten aktiv anzuzeigen,
+              wurde nach einigen Feedbackgesprächen in den Hintergrund gerückt,
+              um den Fokus stärker auf das visuelle Erleben zu legen. Dezente
+              Linien, die die Sterne so verbinden, dass Sternkonstellationen
+              erkennbar werden, verzerren sich im Laufe der Reise zunehmend.
+              Dadurch wird den Nutzern klar, dass schon eine kleine Veränderung
+              der Perspektive ausreicht, um die vermeintlichen Sternbilder
+              aufzulösen. Um die Immersion zu verstärken, wurde ein schlankes,
+              unauffälliges Design für die Navigationstools gewählt, das sich
+              dezent in den Hintergrund einfügt und den visuellen Fokus auf die
+              Sterne nicht stört.
             </div>
           </div>
           <div class="image medium">
@@ -225,23 +230,24 @@
             <div class="text">
               <SplitFlapText :texts="['           [IMPLEMENTATION]        ']" />
               <div class="paragraph">
-                The result is an interactive website that lets users have some
-                fun exploring space. <br />You can view stars and constellations
-                from different perspectives with the help of a simulated
-                spaceship. <br />The idea is to show that constellations are
-                just a matter of perspective.<br />
-                There are some subtle animations that show how even small
-                changes in the viewing angle can make the constellations seem
-                less ordered. <br />Users get to see first-hand how random the
-                arrangement of the celestial bodies really is—without any direct
-                instruction, but through their own discovery and experience.
-                <br /><br />The website is built on the Svelte framework, and
-                THREE.js handles the 3D environment. We store the star data in a
-                MongoDB database, which is hosted on our own server along with
-                the backend. We use Docker and Portainer to manage the
-                infrastructure, and GitHub Actions provides us with a nearly
-                automated deployment pipeline, which makes it easy to deploy the
-                application.
+                Das Resultat ist eine interaktive Website, die den Nutzern eine
+                spielerische Reise durch das Weltall ermöglicht. Mithilfe eines
+                simulierten Raumschiffs können Sterne und Konstellationen aus
+                verschiedenen Blickwinkeln betrachtet werden. Ziel ist es,
+                aufzuzeigen, dass Sternbilder reine Fiktion und eine Frage der
+                Perspektive sind. Subtile Animationen verdeutlichen, dass selbst
+                kleinste Veränderungen im Blickwinkel die scheinbare Ordnung der
+                Sternbilder auflösen. Die Nutzer erleben so, wie zufällig die
+                Anordnung der Himmelskörper wirklich ist – nicht durch
+                Belehrung, sondern durch eigenes Entdecken und Erleben. Die
+                Website basiert auf dem Framework Svelte, während THREE.js die
+                3D-Umgebung realisiert. Die Sternendaten werden in einer
+                MongoDB-Datenbank gespeichert, die zusammen mit dem Backend auf
+                einem eigenen Server gehostet wird. Mithilfe von Docker und
+                Portainer wird die Infrastruktur verwaltet, und GitHub Actions
+                sorgt für eine nahezu automatisierte Deployment Pipeline. So
+                wird eine effiziente und zuverlässige Bereitstellung der
+                Anwendung gewährleistet.
               </div>
             </div>
             <div class="image medium">
@@ -294,21 +300,22 @@
           <div class="text">
             <SplitFlapText :texts="['          [IDEA]           ']" />
             <div class="paragraph">
-              The course just asked us to do something with stars. <br />We got
-              a link to a CSV file that had around 340,000 stars and their data
-              in it. <br /><br />The course was more about learning the
-              deployment pipeline <br />than develop the content to something
-              unique. <br />Even so, we wanted to create a website that doesn't
-              already exist in this form. <br /><br />Many people believe that
-              the constellation of the stars at the time of their birth has a
-              special significance for their lives. This belief affects our
-              choices and attitudes in everyday life, from horoscopes to
-              astrological predictions.<br />
-              With our website, we aimed to show, in a fun way, that
-              constellations are simply a random grouping of celestial bodies
-              that appear coherent because of our perspective. Our goal was to
-              offer a new perspective on the universe and to highlight that the
-              supposed meanings of the constellations are just fiction.
+              Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
+              wurde ein Link zu einer CSV-Datei mit etwa 340.000 Sternendaten
+              bereitgestellt. Der Schwerpunkt des Kurses lag auf dem Erlernen
+              der Deployment Pipeline und weniger auf dem Nutzen der Inhalte.
+              Trotzdem sollte eine Website entwickelt werden, die in dieser Form
+              nicht schon weit verbreitet ist. Viele Menschen glauben, dass die
+              Konstellation der Sterne zum Zeitpunkt ihrer Geburt eine besondere
+              Bedeutung für ihr Leben hat. Dieser Glaube beeinflusst
+              Entscheidungen und Einstellungen im Alltag, sei es durch Horoskope
+              oder astrologische Vorhersagen. Mit der Website sollte auf
+              spielerische Weise gezeigt werden, dass Sternbilder letztlich
+              nichts anderes als eine zufällige Anordnung von Himmelskörpern
+              sind, die nur durch unsere Perspektive als zusammenhängend
+              erscheinen. Ziel war es, den Menschen eine neue Sichtweise auf das
+              Universum zu eröffnen und die vermeintliche Bedeutung der
+              Sternbilder als Fiktion darzustellen.
             </div>
           </div>
           <div class="image medium">
@@ -322,22 +329,23 @@
           <div class="text">
             <SplitFlapText :texts="['      [PROCESS]       ']" />
             <div class="paragraph">
-              At the start of the project, we discussed how we wanted to portray
-              the stars. <br />We quickly decided to add a fun element by
-              simulating a spaceship flying <br />through space. This approach
-              lets you see the stars and constellations from different angles,
-              which makes it easier to understand how random the arrangements
-              are.<br />
-              After some feedback discussions, we decided to put the idea of
-              displaying scientific data on the back burner to focus more on the
-              visual experience. <br />As you move through space, the lines that
-              connect the stars start to get distorted, making it harder to
-              recognize constellations. <br />This makes users realise that even
-              a slight shift in perspective is enough to destroy these supposed
-              constellations. <br /><br />
-              To make it more immersive, we chose a sleek, unobtrusive design
-              for the navigation tools that blends in with the background
-              without disturbing the visual focus on the stars.
+              Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt
+              werden sollten. Schnell fiel die Entscheidung, eine spielerische
+              Komponente einzubringen, indem ein Raumschiff simuliert wird, das
+              durch das Weltall fliegt. Diese Herangehensweise ermöglicht es,
+              Sterne und Konstellationen aus verschiedenen Perspektiven zu
+              betrachten und so die Zufälligkeit der Anordnungen zu
+              verdeutlichen. Die Idee, wissenschaftliche Daten aktiv anzuzeigen,
+              wurde nach einigen Feedbackgesprächen in den Hintergrund gerückt,
+              um den Fokus stärker auf das visuelle Erleben zu legen. Dezente
+              Linien, die die Sterne so verbinden, dass Sternkonstellationen
+              erkennbar werden, verzerren sich im Laufe der Reise zunehmend.
+              Dadurch wird den Nutzern klar, dass schon eine kleine Veränderung
+              der Perspektive ausreicht, um die vermeintlichen Sternbilder
+              aufzulösen. Um die Immersion zu verstärken, wurde ein schlankes,
+              unauffälliges Design für die Navigationstools gewählt, das sich
+              dezent in den Hintergrund einfügt und den visuellen Fokus auf die
+              Sterne nicht stört.
             </div>
           </div>
           <div class="image medium">
@@ -350,23 +358,24 @@
             <div class="text">
               <SplitFlapText :texts="['      [IMPLEMENTATION]      ']" />
               <div class="paragraph">
-                The result is an interactive website that lets users have some
-                fun exploring space. <br />You can view stars and constellations
-                from different perspectives with the help of a simulated
-                spaceship. <br />The idea is to show that constellations are
-                just a matter of perspective.<br />
-                There are some subtle animations that show how even small
-                changes in the viewing angle can make the constellations seem
-                less ordered. <br />Users get to see first-hand how random the
-                arrangement of the celestial bodies really is—without any direct
-                instruction, but through their own discovery and experience.
-                <br /><br />The website is built on the Svelte framework, and
-                THREE.js handles the 3D environment. We store the star data in a
-                MongoDB database, which is hosted on our own server along with
-                the backend. We use Docker and Portainer to manage the
-                infrastructure, and GitHub Actions provides us with a nearly
-                automated deployment pipeline, which makes it easy to deploy the
-                application.
+                Das Resultat ist eine interaktive Website, die den Nutzern eine
+                spielerische Reise durch das Weltall ermöglicht. Mithilfe eines
+                simulierten Raumschiffs können Sterne und Konstellationen aus
+                verschiedenen Blickwinkeln betrachtet werden. Ziel ist es,
+                aufzuzeigen, dass Sternbilder reine Fiktion und eine Frage der
+                Perspektive sind. Subtile Animationen verdeutlichen, dass selbst
+                kleinste Veränderungen im Blickwinkel die scheinbare Ordnung der
+                Sternbilder auflösen. Die Nutzer erleben so, wie zufällig die
+                Anordnung der Himmelskörper wirklich ist – nicht durch
+                Belehrung, sondern durch eigenes Entdecken und Erleben. Die
+                Website basiert auf dem Framework Svelte, während THREE.js die
+                3D-Umgebung realisiert. Die Sternendaten werden in einer
+                MongoDB-Datenbank gespeichert, die zusammen mit dem Backend auf
+                einem eigenen Server gehostet wird. Mithilfe von Docker und
+                Portainer wird die Infrastruktur verwaltet, und GitHub Actions
+                sorgt für eine nahezu automatisierte Deployment Pipeline. So
+                wird eine effiziente und zuverlässige Bereitstellung der
+                Anwendung gewährleistet.
               </div>
             </div>
             <div class="image medium">

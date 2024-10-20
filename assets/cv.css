@@ -154,23 +154,11 @@ html {
 .paragraph {
   font-optical-sizing: auto;
   font-family: var(--font-family-alt);
-  display: flex;
-  flex-direction: column;
+
 }
 
-.tryOutLink {
-  color: var(--color-black);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-xxxxl);
-  transform: translateX(-50%);
-  text-decoration: none;
-  left: 50%;
-  position: relative;
-}
 
-.tryOutLink:hover {
-  text-decoration: underline;
-}
+
 
 
 
@@ -360,20 +348,9 @@ h3 {
     font-optical-sizing: auto;
     font-family: var(--font-family-alt);
     padding-top: var(--spacing-md);
-    display: flex;
-    flex-direction: column;
+    
   }
 
-  .tryOutLink {
-    color: var(--color-black);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xxxxl);
-    transform: translateX(-50%);
-    text-decoration: none;
-    left: 50%;
-    position: relative;
-    text-decoration: underline;
-  }
 
 
   .project-image,
@@ -577,20 +554,9 @@ h3 {
     font-optical-sizing: auto;
     font-family: var(--font-family-alt);
     padding-top: var(--spacing-md);
-    display: flex;
-    flex-direction: column;
+    
   }
 
-  .tryOutLink {
-    color: var(--color-black);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xxxxl);
-    transform: translateX(-50%);
-    text-decoration: none;
-    left: 50%;
-    position: relative;
-    text-decoration: underline;
-  }
 
 
   .image {

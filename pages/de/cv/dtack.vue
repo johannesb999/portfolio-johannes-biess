@@ -41,8 +41,8 @@
               Einblick in meine Leistungen und Tätigkeiten während der
               Ausbildung findet sich in meinem
               <a
-                href="/docs/Arbeitszeugnis.pdf"
-                download="Arbeitszeugnis.pdf"
+                href="/docs/ArbeitszeugnisDtack.pdf"
+                download="ArbeitszeugnisDtack.pdf"
                 class="custom-link"
                 style="text-decoration: underline"
                 >Arbeitszeugnis.pdf</a

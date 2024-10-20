@@ -214,13 +214,13 @@ onMounted(() => {
   --box-shadow-light: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
 
   /* Bildhöhen */
-  --img-height-md: 50vh;
-  --img-height-sm: 40vh;
-  --img-height-lg: 70vh;
+  --img-height-md: 50dvh;
+  --img-height-sm: 40dvh;
+  --img-height-lg: 70dvh;
 
-  --img-width-sm: 40vw;
-  --img-width-md: 50vw;
-  --img-width-lg: 70vw;
+  --img-width-sm: 40dvw;
+  --img-width-md: 50dvw;
+  --img-width-lg: 70dvw;
 }
 
 html {
@@ -230,8 +230,8 @@ html {
   background-color: var(--color-background);
   margin: var(--spacing-none);
   padding: var(--spacing-none);
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
   letter-spacing: var(--letter-spacing-base);
   scroll-behavior: smooth;
   font-optical-sizing: auto;
@@ -348,7 +348,7 @@ button {
   font-size: var(--font-size-big);
   position: absolute;
   bottom: var(--side-percentage);
-  left: 50vw;
+  left: 50dvw;
   transform: translateX(-50%);
   font-style: normal;
   line-height: var(--line-height-normal);
@@ -358,7 +358,7 @@ button {
   position: absolute;
   top: 0;
   padding-top: var(--side-percentage);
-  left: 50vw;
+  left: 50dvw;
   transform: translateX(-50%);
   font-size: var(--font-size-big);
   font-weight: var(--font-weight-bold);
@@ -366,7 +366,7 @@ button {
 }
 
 #rightLink {
-  top: 50vh;
+  top: 50dvh;
   right: var(--side-percentage);
   transform: translateY(-50%);
   position: absolute;
@@ -377,7 +377,7 @@ button {
 }
 
 #leftLink {
-  top: 50vh;
+  top: 50dvh;
   left: var(--side-percentage);
   transform: translateY(-50%) rotate(180deg);
   writing-mode: vertical-rl;
@@ -558,6 +558,8 @@ button {
     letter-spacing: var(--letter-spacing-base);
     scroll-behavior: smooth;
     font-optical-sizing: auto;
+    height: 100dvh;
+    width: 100dvw;
   }
 
   img {
@@ -672,7 +674,7 @@ button {
     font-size: var(--font-size-big);
     position: absolute;
     bottom: var(--side-percentage);
-    left: 50vw;
+    left: 50dvw;
     transform: translateX(-50%);
     font-style: normal;
     line-height: var(--line-height-normal);
@@ -682,7 +684,7 @@ button {
     position: absolute;
     top: 0;
     padding-top: var(--side-percentage);
-    left: 50vw;
+    left: 50dvw;
     transform: translateX(-50%);
     font-size: var(--font-size-big);
     font-weight: var(--font-weight-bold);
@@ -690,7 +692,7 @@ button {
   }
 
   #rightLink {
-    top: 50vh;
+    top: 50dvh;
     right: var(--side-percentage);
     transform: translateY(-50%);
     position: absolute;
@@ -701,7 +703,7 @@ button {
   }
 
   #leftLink {
-    top: 50vh;
+    top: 50dvh;
     left: var(--side-percentage);
     transform: translateY(-50%) rotate(180deg);
     writing-mode: vertical-rl;

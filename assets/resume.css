@@ -26,7 +26,7 @@ main {
 
 #projectLinkStart {
   position: absolute;
-  top: 0;
+  top: var(--side-percentage);
   padding-top: var(--spacing-lg);
   left: 50%;
   transform: translateX(-50%);
@@ -58,14 +58,12 @@ h3 {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-thin);
   letter-spacing: 0.4375rem;
-  /* 7px */
 }
 
 p {
   font-size: 1.75rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.4375rem;
-  /* 7px */
 }
 
 .location {
@@ -94,8 +92,8 @@ p {
 .timeline {
   position: relative;
   margin: var(--spacing-xl) auto;
-  margin-top: 12.5rem;
-  /* 200px */
+  margin-top: 10dvh;
+
   width: 93.75rem;
   /* 1500px */
   padding: var(--spacing-xl) 0;
@@ -141,42 +139,32 @@ p {
   content: "";
   position: absolute;
   width: 1.5625rem;
-  /* 25px */
   height: 1.5625rem;
-  /* 25px */
   border: 1px solid var(--color-primary);
   box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.2);
   border-radius: 50%;
   right: -1rem;
-  /* -16px */
   background-color: var(--color-background);
   top: 1.5rem;
-  /* 24px */
 }
 
 .timeline ul li:nth-child(even):before {
   content: "";
   position: absolute;
   width: 1.5625rem;
-  /* 25px */
   height: 1.5625rem;
-  /* 25px */
   border-radius: 50%;
   border: 1px solid var(--color-primary);
   box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.2);
   left: -0.6875rem;
-  /* -11px */
   background-color: var(--color-background);
   top: 1.5rem;
-  /* 24px */
 }
 
 .timeline ul li:nth-child(odd) .date {
   position: absolute;
   top: 0.75rem;
-  /* 12px */
   right: -9.375rem;
-  /* -150px */
   margin: var(--spacing-none);
   padding: var(--spacing-md) 3px;
 }
@@ -233,6 +221,4 @@ p {
   }
 }
 
-@media (max-width: 480px) {
-  
-}
+@media (max-width: 480px) {}

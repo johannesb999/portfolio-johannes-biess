@@ -67,18 +67,21 @@
           <div class="text">
             <SplitFlapText :texts="['          [PROCESS]          ']" />
             <div class="paragraph">
-              To get a feel for what users need, we started by taking a look at
-              what other platforms are out there. We used user research methods
-              like user interviews and analyzing what customers want to really
-              understand what the target group needs. We used these findings to
-              put together a rough prototype, which we then made some more
-              improvements to. As we went along, we kept making changes based on
-              tests with potential users to make it even more user-friendly. We
-              used the low- and mid-fidelity prototypes we made in Figma as a
-              starting point for regular user tests. We used an iterative
-              approach and took user feedback into account to create a platform
-              that's both functional and intuitive. This effectively simplifies
-              the complexity of the many functions.
+              Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
+              Umfrage zu bereits existierenden Plattformen durchgeführt. Durch
+              Methoden des User Research wie Nutzerinterviews und die Analyse
+              der "Voice of the Customer" wurde ein tiefes Verständnis für die
+              Anforderungen der Zielgruppe entwickelt. Diese Erkenntnisse wurden
+              genutzt, um einen Low-Fidelity-Prototyp zu erstellen, der iterativ
+              weiterentwickelt wurde. In Testphasen mit potenziellen Nutzern
+              wurden kontinuierlich Anpassungen vorgenommen, um die
+              Benutzerfreundlichkeit weiter zu optimieren. Die in Figma
+              entwickelten Low-, Mid- und High-Fidelity-Prototypen dienten als
+              Grundlage für regelmäßige Nutzertests. Das iterative Vorgehen und
+              die Berücksichtigung des Nutzerfeedbacks ermöglichten die
+              Entwicklung einer Plattform, die sowohl funktional als auch
+              intuitiv ist und die Komplexität der vielen Funktionen effektiv
+              vereinfacht darstellt.
             </div>
           </div>
         </div>
@@ -89,26 +92,31 @@
           <div class="text">
             <SplitFlapText :texts="['           [SOULUTION]           ']" />
             <div class="paragraph">
-              The result is SimpleChat, an all-in-one platform that lets users
-              chat and offers other features to connect the university and
-              students in new ways. One of the key features of the platform is
-              the ability for users to maintain their own profiles. These
-              profiles include key info like a public timeline where
-              internships, studying abroad, and other big moments are
-              documented. There's also a tag system where you can store
-              interests and relevant facts about the person. These features let
-              other users search for people with specific experiences or
-              interests. For example, they can search for someone who has stayed
-              abroad in Costa Rica. The platform also includes the university
-              itself and companies. The university can use the platform to
-              manage a bulletin board, post grades and notifications directly on
-              accounts, and combine several platforms. Courses and team channels
-              are also part of SimpleChat, so that teaching materials can be
-              shared easily. Companies get restricted accounts and can use the
-              platform to advertise job vacancies or search for people with
-              specific skills that interest them. SimpleChat thus offers a way
-              to communicate more effectively while becoming an integral part of
-              university life and students' career planning.
+              Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
+              nur das Chatten ermöglicht, sondern auch eine Vielzahl
+              zusätzlicher Funktionen bietet, um die Hochschule und die
+              Studierenden besser zu vernetzen. Ein zentrales Element der
+              Plattform sind die Profile, die die Nutzer selbst pflegen. In
+              diesen Profilen sind wichtige Informationen wie eine öffentlich
+              sichtbare Timeline zu finden, in der Praktika, Auslandsaufenthalte
+              und andere wichtige Meilensteine dokumentiert sind. Zusätzlich
+              ermöglicht ein Tag-System, Interessen und relevante Fakten zur
+              Person zu hinterlegen. Diese Funktionen erlauben es anderen
+              Nutzern, gezielt nach Personen mit spezifischen Erfahrungen oder
+              Interessen zu suchen – zum Beispiel für Informationen zu einem
+              Auslandsaufenthalt in Costa Rica. Neben den Studierenden sind auch
+              die Hochschule selbst und Unternehmen auf der Plattform vertreten.
+              Die Hochschule kann ein Schwarzes Brett führen, Noten und
+              Bescheide direkt accountbezogen bereitstellen und somit
+              verschiedene Plattformen miteinander verknüpfen. Kurse und
+              Teamkanäle sind ebenfalls Teil von SimpleChat, sodass
+              Unterrichtsmaterialien leicht geteilt werden können. Unternehmen
+              erhalten eingeschränkte Accounts und haben die Möglichkeit,
+              Stellenangebote zu veröffentlichen oder gezielt nach Personen mit
+              bestimmten Fähigkeiten zu suchen, die für sie von Interesse sind.
+              SimpleChat bietet somit nicht nur eine Lösung für eine bessere
+              Kommunikation, sondern wird zu einem integralen Bestandteil des
+              Hochschullebens und der Berufsplanung der Studierenden.
             </div>
           </div>
           <div class="image medium">
@@ -167,22 +175,24 @@
 
       <div class="project-section-reverse">
         <div class="project-content">
-         
           <div class="text">
             <SplitFlapText :texts="['             [PROCESS]             ']" />
             <div class="paragraph">
-              To get a feel for what users need, we started by taking a look at
-              what other platforms are out there. We used user research methods
-              like user interviews and analyzing what customers want to really
-              understand what the target group needs. We used these findings to
-              put together a rough prototype, which we then made some more
-              improvements to. As we went along, we kept making changes based on
-              tests with potential users to make it even more user-friendly. We
-              used the low- and mid-fidelity prototypes we made in Figma as a
-              starting point for regular user tests. We used an iterative
-              approach and took user feedback into account to create a platform
-              that's both functional and intuitive. This effectively simplifies
-              the complexity of the many functions.
+              Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
+              Umfrage zu bereits existierenden Plattformen durchgeführt. Durch
+              Methoden des User Research wie Nutzerinterviews und die Analyse
+              der "Voice of the Customer" wurde ein tiefes Verständnis für die
+              Anforderungen der Zielgruppe entwickelt. Diese Erkenntnisse wurden
+              genutzt, um einen Low-Fidelity-Prototyp zu erstellen, der iterativ
+              weiterentwickelt wurde. In Testphasen mit potenziellen Nutzern
+              wurden kontinuierlich Anpassungen vorgenommen, um die
+              Benutzerfreundlichkeit weiter zu optimieren. Die in Figma
+              entwickelten Low-, Mid- und High-Fidelity-Prototypen dienten als
+              Grundlage für regelmäßige Nutzertests. Das iterative Vorgehen und
+              die Berücksichtigung des Nutzerfeedbacks ermöglichten die
+              Entwicklung einer Plattform, die sowohl funktional als auch
+              intuitiv ist und die Komplexität der vielen Funktionen effektiv
+              vereinfacht darstellt.
             </div>
           </div>
           <div class="image small">
@@ -196,26 +206,31 @@
           <div class="text">
             <SplitFlapText :texts="['             [SOLUTION]            ']" />
             <div class="paragraph">
-              The result is SimpleChat, an all-in-one platform that lets users
-              chat and offers other features to connect the university and
-              students in new ways. One of the key features of the platform is
-              the ability for users to maintain their own profiles. These
-              profiles include key info like a public timeline where
-              internships, studying abroad, and other big moments are
-              documented. There's also a tag system where you can store
-              interests and relevant facts about the person. These features let
-              other users search for people with specific experiences or
-              interests. For example, they can search for someone who has stayed
-              abroad in Costa Rica. The platform also includes the university
-              itself and companies. The university can use the platform to
-              manage a bulletin board, post grades and notifications directly on
-              accounts, and combine several platforms. Courses and team channels
-              are also part of SimpleChat, so that teaching materials can be
-              shared easily. Companies get restricted accounts and can use the
-              platform to advertise job vacancies or search for people with
-              specific skills that interest them. SimpleChat thus offers a way
-              to communicate more effectively while becoming an integral part of
-              university life and students' career planning.
+              Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
+              nur das Chatten ermöglicht, sondern auch eine Vielzahl
+              zusätzlicher Funktionen bietet, um die Hochschule und die
+              Studierenden besser zu vernetzen. Ein zentrales Element der
+              Plattform sind die Profile, die die Nutzer selbst pflegen. In
+              diesen Profilen sind wichtige Informationen wie eine öffentlich
+              sichtbare Timeline zu finden, in der Praktika, Auslandsaufenthalte
+              und andere wichtige Meilensteine dokumentiert sind. Zusätzlich
+              ermöglicht ein Tag-System, Interessen und relevante Fakten zur
+              Person zu hinterlegen. Diese Funktionen erlauben es anderen
+              Nutzern, gezielt nach Personen mit spezifischen Erfahrungen oder
+              Interessen zu suchen – zum Beispiel für Informationen zu einem
+              Auslandsaufenthalt in Costa Rica. Neben den Studierenden sind auch
+              die Hochschule selbst und Unternehmen auf der Plattform vertreten.
+              Die Hochschule kann ein Schwarzes Brett führen, Noten und
+              Bescheide direkt accountbezogen bereitstellen und somit
+              verschiedene Plattformen miteinander verknüpfen. Kurse und
+              Teamkanäle sind ebenfalls Teil von SimpleChat, sodass
+              Unterrichtsmaterialien leicht geteilt werden können. Unternehmen
+              erhalten eingeschränkte Accounts und haben die Möglichkeit,
+              Stellenangebote zu veröffentlichen oder gezielt nach Personen mit
+              bestimmten Fähigkeiten zu suchen, die für sie von Interesse sind.
+              SimpleChat bietet somit nicht nur eine Lösung für eine bessere
+              Kommunikation, sondern wird zu einem integralen Bestandteil des
+              Hochschullebens und der Berufsplanung der Studierenden.
             </div>
           </div>
           <div class="image medium">
@@ -277,18 +292,21 @@
           <div class="text">
             <SplitFlapText :texts="['        [PROCESS]         ']" />
             <div class="paragraph">
-              To get a feel for what users need, we started by taking a look at
-              what other platforms are out there. We used user research methods
-              like user interviews and analyzing what customers want to really
-              understand what the target group needs. We used these findings to
-              put together a rough prototype, which we then made some more
-              improvements to. As we went along, we kept making changes based on
-              tests with potential users to make it even more user-friendly. We
-              used the low- and mid-fidelity prototypes we made in Figma as a
-              starting point for regular user tests. We used an iterative
-              approach and took user feedback into account to create a platform
-              that's both functional and intuitive. This effectively simplifies
-              the complexity of the many functions.
+              Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
+              Umfrage zu bereits existierenden Plattformen durchgeführt. Durch
+              Methoden des User Research wie Nutzerinterviews und die Analyse
+              der "Voice of the Customer" wurde ein tiefes Verständnis für die
+              Anforderungen der Zielgruppe entwickelt. Diese Erkenntnisse wurden
+              genutzt, um einen Low-Fidelity-Prototyp zu erstellen, der iterativ
+              weiterentwickelt wurde. In Testphasen mit potenziellen Nutzern
+              wurden kontinuierlich Anpassungen vorgenommen, um die
+              Benutzerfreundlichkeit weiter zu optimieren. Die in Figma
+              entwickelten Low-, Mid- und High-Fidelity-Prototypen dienten als
+              Grundlage für regelmäßige Nutzertests. Das iterative Vorgehen und
+              die Berücksichtigung des Nutzerfeedbacks ermöglichten die
+              Entwicklung einer Plattform, die sowohl funktional als auch
+              intuitiv ist und die Komplexität der vielen Funktionen effektiv
+              vereinfacht darstellt.
             </div>
           </div>
           <div class="image small">
@@ -302,26 +320,31 @@
           <div class="text">
             <SplitFlapText :texts="['        [SOLUTION]        ']" />
             <div class="paragraph">
-              The result is SimpleChat, an all-in-one platform that lets users
-              chat and offers other features to connect the university and
-              students in new ways. One of the key features of the platform is
-              the ability for users to maintain their own profiles. These
-              profiles include key info like a public timeline where
-              internships, studying abroad, and other big moments are
-              documented. There's also a tag system where you can store
-              interests and relevant facts about the person. These features let
-              other users search for people with specific experiences or
-              interests. For example, they can search for someone who has stayed
-              abroad in Costa Rica. The platform also includes the university
-              itself and companies. The university can use the platform to
-              manage a bulletin board, post grades and notifications directly on
-              accounts, and combine several platforms. Courses and team channels
-              are also part of SimpleChat, so that teaching materials can be
-              shared easily. Companies get restricted accounts and can use the
-              platform to advertise job vacancies or search for people with
-              specific skills that interest them. SimpleChat thus offers a way
-              to communicate more effectively while becoming an integral part of
-              university life and students' career planning.
+              Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
+              nur das Chatten ermöglicht, sondern auch eine Vielzahl
+              zusätzlicher Funktionen bietet, um die Hochschule und die
+              Studierenden besser zu vernetzen. Ein zentrales Element der
+              Plattform sind die Profile, die die Nutzer selbst pflegen. In
+              diesen Profilen sind wichtige Informationen wie eine öffentlich
+              sichtbare Timeline zu finden, in der Praktika, Auslandsaufenthalte
+              und andere wichtige Meilensteine dokumentiert sind. Zusätzlich
+              ermöglicht ein Tag-System, Interessen und relevante Fakten zur
+              Person zu hinterlegen. Diese Funktionen erlauben es anderen
+              Nutzern, gezielt nach Personen mit spezifischen Erfahrungen oder
+              Interessen zu suchen – zum Beispiel für Informationen zu einem
+              Auslandsaufenthalt in Costa Rica. Neben den Studierenden sind auch
+              die Hochschule selbst und Unternehmen auf der Plattform vertreten.
+              Die Hochschule kann ein Schwarzes Brett führen, Noten und
+              Bescheide direkt accountbezogen bereitstellen und somit
+              verschiedene Plattformen miteinander verknüpfen. Kurse und
+              Teamkanäle sind ebenfalls Teil von SimpleChat, sodass
+              Unterrichtsmaterialien leicht geteilt werden können. Unternehmen
+              erhalten eingeschränkte Accounts und haben die Möglichkeit,
+              Stellenangebote zu veröffentlichen oder gezielt nach Personen mit
+              bestimmten Fähigkeiten zu suchen, die für sie von Interesse sind.
+              SimpleChat bietet somit nicht nur eine Lösung für eine bessere
+              Kommunikation, sondern wird zu einem integralen Bestandteil des
+              Hochschullebens und der Berufsplanung der Studierenden.
             </div>
           </div>
           <div class="image medium">

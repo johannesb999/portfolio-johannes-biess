@@ -35,7 +35,7 @@
             <div class="paragraph">
               When I was at the HfG, I worked on
               <NuxtLink
-                to="/de/project/projects"
+                to="/en/project/projects"
                 class="custom-link"
                 style="text-decoration: underline"
                 >projects</NuxtLink
@@ -46,22 +46,44 @@
               needs? What technologies are needed and how can I use them
               effectively? The HfG created an inspiring learning environment
               where I could not only build my design and technical skills, but
-              also learn how to apply them in real projects.
+              also learn how to apply them in real projects. Take a look at my
+              <a
+                href="/docs/TransscriptOfRecords.pdf"
+                download="transcriptOfRecords.pdf"
+                class="custom-link"
+                style="text-decoration: underline"
+                >transcriptOfRecords.pdf</a
+              >for more details.
             </div>
           </div>
 
           <div class="text">
             <SplitFlapText :texts="['          [ABOUT] [HFG]        ']" />
             <div class="paragraph">
-              The Hochschule für Gestaltung Schwäbisch Gmünd (HfG) is known for
-              its real-world, project-based approach to training students. The
-              school places a lot of emphasis on combining theory and practice,
-              which gives students a good understanding of how work actually
-              gets done. There's a strong focus on teamwork and working across
-              disciplines, which prepares students for a collaborative work
-              environment. Through a combination of hands-on learning and a
-              strong link to practice, students learn all the steps from concept
-              development to the finished prototype.
+              The
+              <nuxt-link
+                to="https://www.hfg-gmuend.de/en/studium/digital-product-design-and-development"
+                class="custom-link"
+                style="text-decoration: underline"
+                target="_blank"
+                >Hochschule für Gestaltung Schwäbisch Gmünd.</nuxt-link
+              >
+              (HfG) is known for its real-world, project-based approach to
+              training students. The school places a lot of emphasis on
+              combining theory and practice, which gives students a good
+              understanding of how work actually gets done. There's a strong
+              focus on teamwork and working across disciplines, which prepares
+              students for a collaborative work environment. Through a
+              combination of hands-on learning and a strong link to practice,
+              students learn all the steps from concept development to the
+              finished prototype. Take a look at the
+              <a
+                href="/docs/moduleManual.pdf"
+                download="moduleManual.pdf"
+                class="custom-link"
+                style="text-decoration: underline"
+                >moduleManual.pdf</a
+              >for more details.
             </div>
           </div>
         </div>

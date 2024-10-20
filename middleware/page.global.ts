@@ -1,9 +1,9 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const getDepth = (path:any) => {
-    return path.split("/").filter((seg:any) => seg.length > 0).length;
+  const getDepth = (path: any) => {
+    return path.split("/").filter((seg: any) => seg.length > 0).length;
   };
 
-  const checkSpecialRoutes = (path:any) => {
+  const checkSpecialRoutes = (path: any) => {
     if (path.includes("/contact")) {
       return "contact";
     } else if (path.includes("/about")) {
@@ -20,7 +20,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return null;
   };
 
-  const checkKeywords = (path:any) => {
+  const checkKeywords = (path: any) => {
     if (
       path.includes("bosch") ||
       path.includes("hfg") ||
@@ -43,17 +43,23 @@ export default defineNuxtRouteMiddleware((to, from) => {
     "goEase",
   ];
 
-  const getPageName = (path:any) => {
-    const segments = path.replace(/\/+$/, '').split('/').filter((seg: string) => seg.length > 0);
-    return segments.pop() || 'index';
+  const getPageName = (path: any) => {
+    const segments = path
+      .replace(/\/+$/, "")
+      .split("/")
+      .filter((seg: string) => seg.length > 0);
+    return segments.pop() || "index";
   };
-  
 
-  const fromIndex = projectPages.map(page => page.toLowerCase()).indexOf(getPageName(from.path).toLowerCase());
-  const toIndex = projectPages.map(page => page.toLowerCase()).indexOf(getPageName(to.path).toLowerCase());
-  
-  console.log('from.path:', from.path, 'getPageName:', getPageName(from.path), 'fromIndex:', fromIndex);
-console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:', toIndex);
+  const fromIndex = projectPages
+    .map((page) => page.toLowerCase())
+    .indexOf(getPageName(from.path).toLowerCase());
+  const toIndex = projectPages
+    .map((page) => page.toLowerCase())
+    .indexOf(getPageName(to.path).toLowerCase());
+
+  // console.log('from.path:', from.path, 'getPageName:', getPageName(from.path), 'fromIndex:', fromIndex);
+  // console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:', toIndex);
 
   const toDepth = getDepth(to.path);
   const fromDepth = getDepth(from.path);
@@ -72,7 +78,7 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
   if (languageChanged) {
     to.meta.pageTransition = { name: "fade" };
     from.meta.pageTransition = { name: "fade" };
-    console.log("Transition name: fade");
+    // console.log("Transition name: fade");
     return;
   }
 
@@ -83,7 +89,7 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
         fromKeyword === "left" ? "page-right" : "page-left";
       to.meta.pageTransition = { name: transitionName };
       from.meta.pageTransition = { name: transitionName };
-      console.log("Transition name:", transitionName);
+      // console.log("Transition name:", transitionName);
       return;
     }
   }
@@ -93,7 +99,7 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
     const transitionName = toKeyword === "left" ? "page-left" : "page-right";
     to.meta.pageTransition = { name: transitionName };
     from.meta.pageTransition = { name: transitionName };
-    console.log("Transition name:", transitionName);
+    // console.log("Transition name:", transitionName);
     return;
   }
 
@@ -110,11 +116,11 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
     if (forward) {
       to.meta.pageTransition = { name: "page-left" };
       from.meta.pageTransition = { name: "page-left" };
-      console.log("Transition name: page-left");
+      // console.log("Transition name: page-left");
     } else if (backward) {
       to.meta.pageTransition = { name: "page-right" };
       from.meta.pageTransition = { name: "page-right" };
-      console.log("Transition name: page-right");
+      // console.log("Transition name: page-right");
     }
     return;
   }
@@ -123,12 +129,12 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
   if (from.path.includes("/project") && to.path.includes("/details")) {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
-    console.log("Transition name: page-up");
+    // console.log("Transition name: page-up");
     return;
   } else if (from.path.includes("/details") && to.path.includes("/project")) {
     to.meta.pageTransition = { name: "page-down" };
     from.meta.pageTransition = { name: "page-down" };
-    console.log("Transition name: page-down");
+    // console.log("Transition name: page-down");
     return;
   }
 
@@ -136,12 +142,12 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
   if (fromSpecial === "contact" && toSpecial === "legal") {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
-    console.log("Transition name: page-up");
+    // console.log("Transition name: page-up");
     return;
   } else if (fromSpecial === "legal" && toSpecial === "contact") {
     to.meta.pageTransition = { name: "page-down" };
     from.meta.pageTransition = { name: "page-down" };
-    console.log("Transition name: page-down");
+    // console.log("Transition name: page-down");
     return;
   }
 
@@ -149,12 +155,12 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
   if (fromSpecial === "about" && toSpecial === "skillset") {
     to.meta.pageTransition = { name: "page-right" };
     from.meta.pageTransition = { name: "page-right" };
-    console.log("Transition name: page-right");
+    // console.log("Transition name: page-right");
     return;
   } else if (fromSpecial === "skillset" && toSpecial === "about") {
     to.meta.pageTransition = { name: "page-left" };
     from.meta.pageTransition = { name: "page-left" };
-    console.log("Transition name: page-left");
+    // console.log("Transition name: page-left");
     return;
   }
 
@@ -162,7 +168,7 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
   if (toSpecial === "project-resume" && fromSpecial !== "project-resume") {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
-    console.log("Transition name: page-up");
+    // console.log("Transition name: page-up");
     return;
   } else if (
     fromSpecial === "project-resume" &&
@@ -170,12 +176,12 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
   ) {
     to.meta.pageTransition = { name: "page-down" };
     from.meta.pageTransition = { name: "page-down" };
-    console.log("Transition name: page-down");
+    // console.log("Transition name: page-down");
     return;
   } else if (fromSpecial === "resume" && toSpecial === "about") {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
-    console.log("Transition name: page-up");
+    // console.log("Transition name: page-up");
     return;
   } else if (
     toSpecial === "contact" ||
@@ -197,12 +203,12 @@ console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:
     from.meta.pageTransition = {
       name: toDepth > fromDepth ? reverseTransition : normalTransition,
     };
-    console.log("Transition name:", to.meta.pageTransition.name);
+    // console.log("Transition name:", to.meta.pageTransition.name);
     return;
   }
 
   // 6. Standard-Transition
   to.meta.pageTransition = { name: "fade" };
   from.meta.pageTransition = { name: "fade" };
-  console.log("Transition name: fade");
+  // console.log("Transition name: fade");
 });

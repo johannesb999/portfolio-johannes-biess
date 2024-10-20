@@ -33,7 +33,15 @@
               deepen my knowledge of software development and agile project
               management. I was a JIRA administrator, so I learned a lot about
               guiding teams and work areas towards more methodical processes and
-              making existing workflows more efficient.
+              making existing workflows more efficient. You can find out more about what I learned and did
+              during my apprenticeship in my
+              <a
+                href="/docs/EmploymentReferenceBosch.pdf"
+                download="EmploymentReferenceBosch.pdf"
+                class="custom-link"
+                style="text-decoration: underline"
+                >Employment Reference.pdf</a
+              >
             </div>
           </div>
 

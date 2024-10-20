@@ -74,16 +74,19 @@
           <div class="text">
             <SplitFlapText :texts="['           [PROCESS]           ']" />
             <div class="paragraph">
-              I started with a concept phase, where I thought through different
-              layout options and design approaches for my portfolio website.
-              <br /><br />The biggest challenge was to create a website that
-              would serve as an application, reflect my personality, follow the
-              conventions of web design, and still look modern, unique, and
-              individual. I wanted a design that would look clean and show off
-              my projects in a way that also reflected my personal values.<br />
-              After testing out different designs and making lots of changes, I
-              finally found a solution that works well and I'm happy with. It
-              looks great and it's also functional.
+              Der Entwicklungsprozess meiner Portfolio-Website begann mit einer
+              Konzeptionsphase, in der ich verschiedene Layout-Varianten und
+              Designansätze durchdachte. Die größte Herausforderung bestand
+              darin, zu beantworten, wie eine Website aussehen sollte, die
+              sowohl als Bewerbung dient, meine Persönlichkeit widerspiegelt,
+              den Konventionen des Webdesigns folgt und dennoch modern,
+              einzigartig und individuell bleibt. Ich suchte nach einem Design,
+              das meine Projekte clean präsentiert und gleichzeitig Raum bietet,
+              meine persönlichen Werte zum Ausdruck zu bringen. Durch iteratives
+              Testen und fortlaufendes Überarbeiten der Designvarianten konnte
+              ich schließlich eine stimmige Lösung finden, die sowohl funktional
+              als auch ästhetisch überzeugt und meine Designphilosophie auf
+              authentische Weise vermittelt.
             </div>
           </div>
         </div>
@@ -97,17 +100,20 @@
           <div class="text">
             <div class="paragraph">
               <h3>Software Process</h3>
-              Once I had a solid concept in Figma, it was time to turn it into a
-              functional website.<br />
-              I'd already worked with React, Next.js, and Svelte on other
-              projects, but I decided to use Nuxt 3 to learn more and get to
-              know another framework.<br />
-              This choice let me explore the Vue ecosystem more deeply while
-              using the latest features of Nuxt to build a fast website.<br />
-              I concentrated on making the code modular so that the website
-              would be easy to maintain and future updates would be simple. I
-              automated the deployment process using GitHub Actions to make sure
-              that I could keep developing the website without any breaks.
+              Nachdem ich mit Figma ein ausgearbeitetes Konzept erstellt hatte,
+              ging es daran, dieses in eine funktionale Website umzusetzen. In
+              vorherigen Projekten hatte ich bereits mit React, Next.js und
+              Svelte gearbeitet, entschied mich jedoch bewusst dafür, Nuxt 3 zu
+              nutzen, um meine Kenntnisse zu erweitern und ein weiteres
+              Framework kennenzulernen. Diese Entscheidung ermöglichte es mir,
+              mich intensiver mit dem Vue-Ökosystem auseinanderzusetzen und
+              gleichzeitig die modernen Features von Nuxt zu nutzen, um eine
+              performante Webseite zu schaffen. Ein besonderer Fokus lag dabei
+              auf der Modularität des Codes, um die Wartbarkeit der Website zu
+              erleichtern und zukünftige Erweiterungen problemlos umsetzen zu
+              können. Der Deploymentprozess wurde durch GitHub Actions
+              automatisiert, um einen kontinuierlichen Entwicklungs-Workflow
+              sicherzustellen.
             </div>
           </div>
         </div>
@@ -171,16 +177,19 @@
           <div class="text">
             <SplitFlapText :texts="['             [PROCESS]             ']" />
             <div class="paragraph">
-              I started with a concept phase, where I thought through different
-              layout options and design approaches for my portfolio website.
-              <br /><br />The biggest challenge was to create a website that
-              would serve as an application, reflect my personality, follow the
-              conventions of web design, and still look modern, unique, and
-              individual. I wanted a design that would look clean and show off
-              my projects in a way that also reflected my personal values.<br />
-              After testing out different designs and making lots of changes, I
-              finally found a solution that works well and I'm happy with. It
-              looks great and it's also functional.
+              Der Entwicklungsprozess meiner Portfolio-Website begann mit einer
+              Konzeptionsphase, in der ich verschiedene Layout-Varianten und
+              Designansätze durchdachte. Die größte Herausforderung bestand
+              darin, zu beantworten, wie eine Website aussehen sollte, die
+              sowohl als Bewerbung dient, meine Persönlichkeit widerspiegelt,
+              den Konventionen des Webdesigns folgt und dennoch modern,
+              einzigartig und individuell bleibt. Ich suchte nach einem Design,
+              das meine Projekte clean präsentiert und gleichzeitig Raum bietet,
+              meine persönlichen Werte zum Ausdruck zu bringen. Durch iteratives
+              Testen und fortlaufendes Überarbeiten der Designvarianten konnte
+              ich schließlich eine stimmige Lösung finden, die sowohl funktional
+              als auch ästhetisch überzeugt und meine Designphilosophie auf
+              authentische Weise vermittelt.
             </div>
           </div>
           <div class="image small">
@@ -194,17 +203,20 @@
           <div class="text">
             <div class="paragraph">
               <h3>Software Process</h3>
-              Once I had a solid concept in Figma, it was time to turn it into a
-              functional website.<br />
-              I'd already worked with React, Next.js, and Svelte on other
-              projects, but I decided to use Nuxt 3 to learn more and get to
-              know another framework.<br />
-              This choice let me explore the Vue ecosystem more deeply while
-              using the latest features of Nuxt to build a fast website.<br />
-              I concentrated on making the code modular so that the website
-              would be easy to maintain and future updates would be simple. I
-              automated the deployment process using GitHub Actions to make sure
-              that I could keep developing the website without any breaks.
+              Nachdem ich mit Figma ein ausgearbeitetes Konzept erstellt hatte,
+              ging es daran, dieses in eine funktionale Website umzusetzen. In
+              vorherigen Projekten hatte ich bereits mit React, Next.js und
+              Svelte gearbeitet, entschied mich jedoch bewusst dafür, Nuxt 3 zu
+              nutzen, um meine Kenntnisse zu erweitern und ein weiteres
+              Framework kennenzulernen. Diese Entscheidung ermöglichte es mir,
+              mich intensiver mit dem Vue-Ökosystem auseinanderzusetzen und
+              gleichzeitig die modernen Features von Nuxt zu nutzen, um eine
+              performante Webseite zu schaffen. Ein besonderer Fokus lag dabei
+              auf der Modularität des Codes, um die Wartbarkeit der Website zu
+              erleichtern und zukünftige Erweiterungen problemlos umsetzen zu
+              können. Der Deploymentprozess wurde durch GitHub Actions
+              automatisiert, um einen kontinuierlichen Entwicklungs-Workflow
+              sicherzustellen.
             </div>
           </div>
           <div class="image small">
@@ -271,16 +283,19 @@
           <div class="text">
             <SplitFlapText :texts="['        [PROCESS]          ']" />
             <div class="paragraph">
-              I started with a concept phase, where I thought through different
-              layout options and design approaches for my portfolio website.
-              <br /><br />The biggest challenge was to create a website that
-              would serve as an application, reflect my personality, follow the
-              conventions of web design, and still look modern, unique, and
-              individual. I wanted a design that would look clean and show off
-              my projects in a way that also reflected my personal values.<br />
-              After testing out different designs and making lots of changes, I
-              finally found a solution that works well and I'm happy with. It
-              looks great and it's also functional.
+              Der Entwicklungsprozess meiner Portfolio-Website begann mit einer
+              Konzeptionsphase, in der ich verschiedene Layout-Varianten und
+              Designansätze durchdachte. Die größte Herausforderung bestand
+              darin, zu beantworten, wie eine Website aussehen sollte, die
+              sowohl als Bewerbung dient, meine Persönlichkeit widerspiegelt,
+              den Konventionen des Webdesigns folgt und dennoch modern,
+              einzigartig und individuell bleibt. Ich suchte nach einem Design,
+              das meine Projekte clean präsentiert und gleichzeitig Raum bietet,
+              meine persönlichen Werte zum Ausdruck zu bringen. Durch iteratives
+              Testen und fortlaufendes Überarbeiten der Designvarianten konnte
+              ich schließlich eine stimmige Lösung finden, die sowohl funktional
+              als auch ästhetisch überzeugt und meine Designphilosophie auf
+              authentische Weise vermittelt.
             </div>
           </div>
           <div class="image small">
@@ -294,17 +309,20 @@
           <div class="text">
             <div class="paragraph">
               <h3>Software Process</h3>
-              Once I had a solid concept in Figma, it was time to turn it into a
-              functional website.<br />
-              I'd already worked with React, Next.js, and Svelte on other
-              projects, but I decided to use Nuxt 3 to learn more and get to
-              know another framework.<br />
-              This choice let me explore the Vue ecosystem more deeply while
-              using the latest features of Nuxt to build a fast website.<br />
-              I concentrated on making the code modular so that the website
-              would be easy to maintain and future updates would be simple. I
-              automated the deployment process using GitHub Actions to make sure
-              that I could keep developing the website without any breaks.
+              Nachdem ich mit Figma ein ausgearbeitetes Konzept erstellt hatte,
+              ging es daran, dieses in eine funktionale Website umzusetzen. In
+              vorherigen Projekten hatte ich bereits mit React, Next.js und
+              Svelte gearbeitet, entschied mich jedoch bewusst dafür, Nuxt 3 zu
+              nutzen, um meine Kenntnisse zu erweitern und ein weiteres
+              Framework kennenzulernen. Diese Entscheidung ermöglichte es mir,
+              mich intensiver mit dem Vue-Ökosystem auseinanderzusetzen und
+              gleichzeitig die modernen Features von Nuxt zu nutzen, um eine
+              performante Webseite zu schaffen. Ein besonderer Fokus lag dabei
+              auf der Modularität des Codes, um die Wartbarkeit der Website zu
+              erleichtern und zukünftige Erweiterungen problemlos umsetzen zu
+              können. Der Deploymentprozess wurde durch GitHub Actions
+              automatisiert, um einen kontinuierlichen Entwicklungs-Workflow
+              sicherzustellen.
             </div>
           </div>
           <div class="image small">

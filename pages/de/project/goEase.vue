@@ -83,36 +83,41 @@
           <div class="text">
             <SplitFlapText :texts="['          [PROCESS]          ']" />
             <div class="paragraph">
-              We kicked things off with an intensive brainstorming session,
-              where we chatted through all the ideas and came up with some
-              initial concepts.<br />
-              Our initial vision was pretty ambitious. We wanted to create a box
-              that integrated all kinds of functions. We wanted to use GPS to
-              record the location, BLE to detect which cell phones were
-              currently boarding, and a light barrier to check the number of
-              people boarding. We also planned to create three different user
-              interfaces—one for the end user and two for the public transport
-              companies that send fare evasion figures and help set up the
-              system. The system should be able to be used on all public
-              transport, not just buses. <br />That means trains, buses, planes
-              and ships too. <br /><br />This first idea included lots of
-              different features and was meant to be a complete solution for the
-              whole transportation industry. As the project went on, though, we
-              realized that trying to implement all these features would not
-              only take longer than we thought, but it would also get in the way
-              of the core idea.<br />
-              All these planned features made the project look more like a bunch
-              of random functions than a focused idea. So we decided to go back
-              to the drawing board and focus on the essentials. We trimmed the
-              features down to just the essentials so we could zero in on the
-              core idea: making bus travel easier and more convenient. The new
-              plan was to have a box that works with just one app and is only
-              for buses at first. This made things simpler and let us focus on
-              one API, for example, without having to think about other
-              interfaces.<br />
-              This focus helped us make the core idea work well and get it off
-              the ground, and create a solid MVP (Minimum Viable Product) that
-              we could build on later.
+              Der allgemeine Prozess begann mit einer intensiven
+              Brainstorming-Phase, in der verschiedene Ideen diskutiert und
+              erste Konzepte entwickelt wurden. Die anfängliche Vision war sehr
+              ambitioniert: Eine Box sollte geschaffen werden, die zahlreiche
+              Funktionen integriert. Sie sollte mithilfe von GPS den Standort
+              erfassen, mit BLE erkennen, welche Handys gerade einsteigen, und
+              mittels einer Lichtschranke die Anzahl der eingestiegenen Personen
+              überprüfen. Zudem sollten drei unterschiedliche Schnittstellen und
+              Nutzeroberflächen entwickelt werden – eine für die Endnutzer und
+              zwei für die ÖPNV-Unternehmen, die Schwarzfahrerzahlen übermitteln
+              und die Einrichtung des Systems ermöglichen. Das System sollte
+              nicht nur auf Busse beschränkt sein, sondern eine universelle
+              Lösung für den gesamten öffentlichen Verkehr darstellen,
+              einschließlich Zügen, Bussen, Flugzeugen und Schiffen. Dieses
+              erste grobe Konzept beinhaltete eine Vielzahl an Features und
+              sollte eine umfassende Lösung für den gesamten Transportsektor
+              bieten. Im Laufe des Projekts wurde jedoch klar, dass die
+              Umsetzung all dieser Funktionen nicht nur den zeitlichen Rahmen
+              sprengen würde, sondern auch vom eigentlichen Kern der Idee
+              ablenkte. Die vielen geplanten Features führten dazu, dass das
+              Projekt eher wie eine unzusammenhängende Sammlung von Funktionen
+              wirkte, anstatt sich fokussiert dem Grundgedanken zu widmen.
+              Deshalb wurde beschlossen, das Konzept zu überarbeiten und sich
+              auf das Wesentliche zu konzentrieren. Die Features wurden auf ein
+              Minimum reduziert, sodass ausschließlich auf die Kernidee – das
+              Busfahren einfacher und komfortabler zu machen – fokussiert werden
+              konnte. Das überarbeitete Konzept bestand aus einer Box, die
+              zusammen mit nur einer App arbeitet und sich zunächst
+              ausschließlich auf Busse beschränkt. Diese Reduzierung ermöglichte
+              es, die Komplexität zu senken und sich beispielsweise nur auf eine
+              API zu konzentrieren, ohne weitere Schnittstellen berücksichtigen
+              zu müssen. Durch diese Fokussierung konnte die Kernidee effizient
+              und umsetzbar gestaltet und ein solides MVP (Minimum Viable
+              Product) geschaffen werden, auf dem später weiter aufgebaut werden
+              kann.
             </div>
           </div>
         </div>
@@ -126,33 +131,42 @@
           <div class="text">
             <div class="paragraph">
               <h3>Software Process</h3>
-              Next, we started working on the user interface and app features.
-              First, we put together some wireframes and design dummies in Figma
-              to get a feel for the user experience and make sure the app would
-              be simple to use. The wireframes were really important for
-              planning the user experience in advance and spotting any potential
-              design issues early on. During this phase, we made sure the user
-              experience was simple and straightforward. We used these
-              wireframes to build the mobile app with React Native, which lets
-              us use it on different platforms.<br />
-              <br />We chose React Native because it lets the app talk to the
-              beacons via BLE. <br />We made sure to get the core functions up
-              and running smoothly and efficiently, including things like
-              automatic beacon detection, trip data collection, and background
-              processes. The software development process was very iterative.<br />
-              Once we had the first functional prototypes up and running, we did
-              a few rounds of user testing to get feedback and make sure we were
-              constantly improving the app and the features it had based on what
-              the testers had to say. It was really important for us to get
-              direct feedback on how easy the app was to use and what we could
-              do to make it even better. One of the most important things we
-              wanted to get right with the app was the setup process. We wanted
-              it to be quick and easy for the user. <br />Once you've set up the
-              app, it's basically ready to go. It runs in the background and
-              takes care of all the steps needed to record bus journeys and
-              organize billing. You can also monitor your journey and see which
-              costs have already been debited.<br />
-              This way, you're always in the know and in control.
+              Im nächsten Schritt begann die Entwicklung der Benutzeroberfläche
+              und der App-Funktionalitäten. Zunächst wurden Wireframes und
+              Design-Dummies in Figma erstellt, um die Nutzerführung zu
+              visualisieren und sicherzustellen, dass die App eine intuitive und
+              leicht verständliche Bedienung bietet. Die Erstellung der
+              Wireframes war entscheidend, um die Benutzererfahrung im Vorfeld
+              genau zu planen und potenzielle Schwachstellen im Design
+              frühzeitig zu identifizieren. In dieser Phase lag der Fokus
+              darauf, die Nutzerführung so einfach wie möglich zu gestalten und
+              unnötige Komplexität zu vermeiden. Basierend auf diesen Wireframes
+              wurde die mobile App mit React Native umgesetzt, um eine
+              plattformübergreifende Nutzung zu ermöglichen. Die Wahl von React
+              Native erfolgte bewusst, da es ermöglichte, die App über BLE
+              tatsächlich mit den Beacons kommunizieren zu lassen. Der
+              Schwerpunkt lag darauf, die Kernfunktionen – wie die automatische
+              Erkennung des Beacons, das Erfassen der Fahrtdaten und die
+              Hintergrundprozesse – stabil und performant zu implementieren. Der
+              Softwareentwicklungsprozess war stark iterativ geprägt: Nachdem
+              die ersten funktionalen Prototypen entwickelt waren, wurden
+              mehrere Runden von Nutzertests durchgeführt, um Feedback zu
+              sammeln und die App sowie die darin enthaltenen Features basierend
+              auf den Erfahrungen der Tester kontinuierlich zu verbessern.
+              Besonders wichtig war es, direktes Feedback zur Nutzerführung und
+              zum Komfort der App zu erhalten, um sicherzustellen, dass die
+              Interaktionen so verständlich und umkompliziert wie möglich sind.
+              Ein zentraler Aspekt bei der Konzeption der App war, dass der
+              Einrichtungsprozess für den Nutzer einfach und schnell ablaufen
+              sollte. Nach der einmaligen Einrichtung ist die Nutzung der App
+              vollständig automatisiert, sodass sie im Alltag nicht mehr aktiv
+              geöffnet werden muss. Die App läuft im Hintergrund und erledigt
+              alle notwendigen Schritte, um die Busfahrten zu erfassen und die
+              Abrechnung zu organisieren. Dennoch bietet die App die
+              Möglichkeit, während der Fahrt jederzeit zu überwachen, wo man
+              sich gerade befindet und welche Kosten bereits abgebucht wurden.
+              So bleibt der Nutzer, wenn gewünscht, immer informiert und behält
+              die volle Kontrolle.
             </div>
           </div>
         </div>
@@ -166,19 +180,14 @@
           <div class="text">
             <div class="paragraph">
               <h3>Hardware Process</h3>
-              The hardware process was all about choosing the right technical
-              components to make the beacon technology work. It was crucial that
-              the beacons were energy efficient, cost-effective, and easily
-              retrofittable in buses to make it easy to roll out across the
-              entire fleet. After quickly thinking through what the hardware
-              needed to do, we decided on an ESP32 LilyGO, which has both BLE
-              and GPS capabilities, covering all of our functional requirements.
-              To keep costs down and make it simple to retrofit, we designed a
-              plastic housing and 3D printed it. We also added a strap with a
-              buckle to the housing so it can be mounted on various poles.
-              <br /><br />This was a smaller step than the software development,
-              but it was crucial to create the technical basis for the entire
-              system and ensure smooth functionality in everyday use.
+              Der Hardwareprozess umfasste die Auswahl der technischen
+              Komponenten, die für die Umsetzung der Beacon-Technologie
+              erforderlich waren. Es war wichtig, dass die Beacons kostengünstig
+              und leicht in Bussen nachrüstbar sind, um eine breite
+              Implementierung zu ermöglichen. Nachdem schnell überlegt wurde,
+              welche Funktionen die Hardware erfüllen muss, fiel die Wahl auf
+              einen ESP32 LilyGO, der sowohl BLE- als auch GPS-Fähigkeiten
+              bietet und somit alle funktionalen Anforderungen abdeckt.
             </div>
           </div>
         </div>
@@ -189,30 +198,39 @@
           <div class="text">
             <SplitFlapText :texts="['          [SOLUTION]          ']" />
             <div class="paragraph">
-              GoEase is an innovative system that's set to transform bus travel.
-              GoEase brings together an easy-to-install beacon system and a
-              user-friendly mobile app to create a fully automated and
-              convenient way to use public transport. <br />Once you set up the
-              app, it does all the heavy lifting in the background, making bus
-              travel as easy and carefree as possible. The beacon, which is
-              based on an ESP32 LilyGO, is designed to be integrated into
-              existing buses and uses BLE to communicate with the app. This
-              hardware is affordable, simple to install, and can be mounted in
-              different ways on the bus to make it easy to use. With GoEase, you
-              can buy tickets without even having to tap in. The app detects
-              when you board, records the distance traveled, and calculates the
-              fare—all without you having to do a thing.<br />
-              While you're on your journey, you can check in on your progress
-              and see what your costs are. For passengers, this means maximum
-              convenience and transparency. <br />The idea behind GoEase is to
-              make things simple.<br />
-              We've got rid of all the unnecessary steps that often make public
-              transport complicated and unattractive. No complex fare systems or
-              unreliable ticket machines—just a simple, intuitive solution that
-              makes public transport more accessible and lowers barriers to
-              entry. GoEase is a great way to use public transport, especially
-              for people who don't use it all the time. It's also a better, more
-              future-proof alternative to existing systems.
+              GoEase ist ein innovatives System, das das Busfahren
+              revolutionieren soll. Durch die Kombination aus einem leicht
+              nachrüstbaren Beacon-System und einer benutzerfreundlichen mobilen
+              App bietet GoEase eine vollständig automatisierte und komfortable
+              Möglichkeit, öffentliche Verkehrsmittel zu nutzen. Die App muss
+              nur einmal eingerichtet werden und fungiert danach im Hintergrund
+              – so wird das Busfahren so einfach und unbeschwert wie möglich
+              gestaltet. Das Beacon, basierend auf einem ESP32 LilyGO, ist
+              speziell für die Integration in bestehende Busse konzipiert und
+              verwendet BLE, um mit der App zu kommunizieren. Diese Hardware ist
+              kostengünstig, leicht nachrüstbar und kann flexibel im Bus
+              montiert werden, um eine flächendeckende Nutzung sicherzustellen.
+              Mit GoEase wird der gesamte Prozess der Ticketbeschaffung
+              automatisiert: Die App erkennt automatisch den Einstieg in den
+              Bus, erfasst die gefahrene Strecke und kalkuliert den
+              entsprechenden Fahrpreis – ohne dass der Nutzer aktiv eingreifen
+              muss. Während der Fahrt kann der Nutzer auf Wunsch überwachen, wo
+              er sich gerade befindet und welche Kosten anfallen. Für die
+              Fahrgäste bedeutet das ein Höchstmaß an Komfort und Transparenz.
+              Das Herzstück von GoEase ist die Einfachheit. Alle unnötigen
+              Schritte, die den öffentlichen Nahverkehr oft kompliziert und
+              unattraktiv machen, werden eliminiert. Keine komplexen
+              Tarifsysteme, keine unzuverlässigen Ticketautomaten – stattdessen
+              eine klare, intuitive Lösung, die den Nahverkehr zugänglicher
+              macht und die Eintrittsbarrieren senkt. GoEase bietet insbesondere
+              für Gelegenheitsnutzer eine stressfreie Möglichkeit, den
+              öffentlichen Nahverkehr zu nutzen, und stellt eine zukunftsfähige
+              Alternative zu bestehenden Systemen dar. Mit GoEase wird die
+              Interaktion zwischen Menschen und öffentlichen Verkehrsmitteln
+              durch den Einsatz moderner Technologie verbessert und erleichtert.
+              Das Ergebnis ist ein System, das die Anforderungen der Nutzer in
+              den Mittelpunkt stellt und so den Nahverkehr für alle zugänglicher
+              macht.
             </div>
           </div>
           <div class="image medium">
@@ -289,36 +307,41 @@
           <div class="text">
             <SplitFlapText :texts="['             [PROCESS]             ']" />
             <div class="paragraph">
-              We kicked things off with an intensive brainstorming session,
-              where we chatted through all the ideas and came up with some
-              initial concepts.<br />
-              Our initial vision was pretty ambitious. We wanted to create a box
-              that integrated all kinds of functions. We wanted to use GPS to
-              record the location, BLE to detect which cell phones were
-              currently boarding, and a light barrier to check the number of
-              people boarding. We also planned to create three different user
-              interfaces—one for the end user and two for the public transport
-              companies that send fare evasion figures and help set up the
-              system. The system should be able to be used on all public
-              transport, not just buses. <br />That means trains, buses, planes
-              and ships too. <br /><br />This first idea included lots of
-              different features and was meant to be a complete solution for the
-              whole transportation industry. As the project went on, though, we
-              realized that trying to implement all these features would not
-              only take longer than we thought, but it would also get in the way
-              of the core idea.<br />
-              All these planned features made the project look more like a bunch
-              of random functions than a focused idea. So we decided to go back
-              to the drawing board and focus on the essentials. We trimmed the
-              features down to just the essentials so we could zero in on the
-              core idea: making bus travel easier and more convenient. The new
-              plan was to have a box that works with just one app and is only
-              for buses at first. This made things simpler and let us focus on
-              one API, for example, without having to think about other
-              interfaces.<br />
-              This focus helped us make the core idea work well and get it off
-              the ground, and create a solid MVP (Minimum Viable Product) that
-              we could build on later.
+              Der allgemeine Prozess begann mit einer intensiven
+              Brainstorming-Phase, in der verschiedene Ideen diskutiert und
+              erste Konzepte entwickelt wurden. Die anfängliche Vision war sehr
+              ambitioniert: Eine Box sollte geschaffen werden, die zahlreiche
+              Funktionen integriert. Sie sollte mithilfe von GPS den Standort
+              erfassen, mit BLE erkennen, welche Handys gerade einsteigen, und
+              mittels einer Lichtschranke die Anzahl der eingestiegenen Personen
+              überprüfen. Zudem sollten drei unterschiedliche Schnittstellen und
+              Nutzeroberflächen entwickelt werden – eine für die Endnutzer und
+              zwei für die ÖPNV-Unternehmen, die Schwarzfahrerzahlen übermitteln
+              und die Einrichtung des Systems ermöglichen. Das System sollte
+              nicht nur auf Busse beschränkt sein, sondern eine universelle
+              Lösung für den gesamten öffentlichen Verkehr darstellen,
+              einschließlich Zügen, Bussen, Flugzeugen und Schiffen. Dieses
+              erste grobe Konzept beinhaltete eine Vielzahl an Features und
+              sollte eine umfassende Lösung für den gesamten Transportsektor
+              bieten. Im Laufe des Projekts wurde jedoch klar, dass die
+              Umsetzung all dieser Funktionen nicht nur den zeitlichen Rahmen
+              sprengen würde, sondern auch vom eigentlichen Kern der Idee
+              ablenkte. Die vielen geplanten Features führten dazu, dass das
+              Projekt eher wie eine unzusammenhängende Sammlung von Funktionen
+              wirkte, anstatt sich fokussiert dem Grundgedanken zu widmen.
+              Deshalb wurde beschlossen, das Konzept zu überarbeiten und sich
+              auf das Wesentliche zu konzentrieren. Die Features wurden auf ein
+              Minimum reduziert, sodass ausschließlich auf die Kernidee – das
+              Busfahren einfacher und komfortabler zu machen – fokussiert werden
+              konnte. Das überarbeitete Konzept bestand aus einer Box, die
+              zusammen mit nur einer App arbeitet und sich zunächst
+              ausschließlich auf Busse beschränkt. Diese Reduzierung ermöglichte
+              es, die Komplexität zu senken und sich beispielsweise nur auf eine
+              API zu konzentrieren, ohne weitere Schnittstellen berücksichtigen
+              zu müssen. Durch diese Fokussierung konnte die Kernidee effizient
+              und umsetzbar gestaltet und ein solides MVP (Minimum Viable
+              Product) geschaffen werden, auf dem später weiter aufgebaut werden
+              kann.
             </div>
           </div>
           <div class="image large">
@@ -332,33 +355,42 @@
           <div class="text">
             <div class="paragraph">
               <h3>Software Process</h3>
-              Next, we started working on the user interface and app features.
-              First, we put together some wireframes and design dummies in Figma
-              to get a feel for the user experience and make sure the app would
-              be simple to use. The wireframes were really important for
-              planning the user experience in advance and spotting any potential
-              design issues early on. During this phase, we made sure the user
-              experience was simple and straightforward. We used these
-              wireframes to build the mobile app with React Native, which lets
-              us use it on different platforms.<br />
-              <br />We chose React Native because it lets the app talk to the
-              beacons via BLE. <br />We made sure to get the core functions up
-              and running smoothly and efficiently, including things like
-              automatic beacon detection, trip data collection, and background
-              processes. The software development process was very iterative.<br />
-              Once we had the first functional prototypes up and running, we did
-              a few rounds of user testing to get feedback and make sure we were
-              constantly improving the app and the features it had based on what
-              the testers had to say. It was really important for us to get
-              direct feedback on how easy the app was to use and what we could
-              do to make it even better. One of the most important things we
-              wanted to get right with the app was the setup process. We wanted
-              it to be quick and easy for the user. <br />Once you've set up the
-              app, it's basically ready to go. It runs in the background and
-              takes care of all the steps needed to record bus journeys and
-              organize billing. You can also monitor your journey and see which
-              costs have already been debited.<br />
-              This way, you're always in the know and in control.
+              Im nächsten Schritt begann die Entwicklung der Benutzeroberfläche
+              und der App-Funktionalitäten. Zunächst wurden Wireframes und
+              Design-Dummies in Figma erstellt, um die Nutzerführung zu
+              visualisieren und sicherzustellen, dass die App eine intuitive und
+              leicht verständliche Bedienung bietet. Die Erstellung der
+              Wireframes war entscheidend, um die Benutzererfahrung im Vorfeld
+              genau zu planen und potenzielle Schwachstellen im Design
+              frühzeitig zu identifizieren. In dieser Phase lag der Fokus
+              darauf, die Nutzerführung so einfach wie möglich zu gestalten und
+              unnötige Komplexität zu vermeiden. Basierend auf diesen Wireframes
+              wurde die mobile App mit React Native umgesetzt, um eine
+              plattformübergreifende Nutzung zu ermöglichen. Die Wahl von React
+              Native erfolgte bewusst, da es ermöglichte, die App über BLE
+              tatsächlich mit den Beacons kommunizieren zu lassen. Der
+              Schwerpunkt lag darauf, die Kernfunktionen – wie die automatische
+              Erkennung des Beacons, das Erfassen der Fahrtdaten und die
+              Hintergrundprozesse – stabil und performant zu implementieren. Der
+              Softwareentwicklungsprozess war stark iterativ geprägt: Nachdem
+              die ersten funktionalen Prototypen entwickelt waren, wurden
+              mehrere Runden von Nutzertests durchgeführt, um Feedback zu
+              sammeln und die App sowie die darin enthaltenen Features basierend
+              auf den Erfahrungen der Tester kontinuierlich zu verbessern.
+              Besonders wichtig war es, direktes Feedback zur Nutzerführung und
+              zum Komfort der App zu erhalten, um sicherzustellen, dass die
+              Interaktionen so verständlich und umkompliziert wie möglich sind.
+              Ein zentraler Aspekt bei der Konzeption der App war, dass der
+              Einrichtungsprozess für den Nutzer einfach und schnell ablaufen
+              sollte. Nach der einmaligen Einrichtung ist die Nutzung der App
+              vollständig automatisiert, sodass sie im Alltag nicht mehr aktiv
+              geöffnet werden muss. Die App läuft im Hintergrund und erledigt
+              alle notwendigen Schritte, um die Busfahrten zu erfassen und die
+              Abrechnung zu organisieren. Dennoch bietet die App die
+              Möglichkeit, während der Fahrt jederzeit zu überwachen, wo man
+              sich gerade befindet und welche Kosten bereits abgebucht wurden.
+              So bleibt der Nutzer, wenn gewünscht, immer informiert und behält
+              die volle Kontrolle.
             </div>
           </div>
           <div class="image large">
@@ -372,19 +404,6 @@
           <div class="text">
             <div class="paragraph">
               <h3>Hardware Process</h3>
-              The hardware process was all about choosing the right technical
-              components to make the beacon technology work. It was crucial that
-              the beacons were energy efficient, cost-effective, and easily
-              retrofittable in buses to make it easy to roll out across the
-              entire fleet. After quickly thinking through what the hardware
-              needed to do, we decided on an ESP32 LilyGO, which has both BLE
-              and GPS capabilities, covering all of our functional requirements.
-              To keep costs down and make it simple to retrofit, we designed a
-              plastic housing and 3D printed it. We also added a strap with a
-              buckle to the housing so it can be mounted on various poles.
-              <br /><br />This was a smaller step than the software development,
-              but it was crucial to create the technical basis for the entire
-              system and ensure smooth functionality in everyday use.
             </div>
           </div>
           <div class="image small">
@@ -398,30 +417,39 @@
           <div class="text">
             <SplitFlapText :texts="['             [SOLUTION]            ']" />
             <div class="paragraph">
-              GoEase is an innovative system that's set to transform bus travel.
-              GoEase brings together an easy-to-install beacon system and a
-              user-friendly mobile app to create a fully automated and
-              convenient way to use public transport. <br />Once you set up the
-              app, it does all the heavy lifting in the background, making bus
-              travel as easy and carefree as possible. The beacon, which is
-              based on an ESP32 LilyGO, is designed to be integrated into
-              existing buses and uses BLE to communicate with the app. This
-              hardware is affordable, simple to install, and can be mounted in
-              different ways on the bus to make it easy to use. With GoEase, you
-              can buy tickets without even having to tap in. The app detects
-              when you board, records the distance traveled, and calculates the
-              fare—all without you having to do a thing.<br />
-              While you're on your journey, you can check in on your progress
-              and see what your costs are. For passengers, this means maximum
-              convenience and transparency. <br />The idea behind GoEase is to
-              make things simple.<br />
-              We've got rid of all the unnecessary steps that often make public
-              transport complicated and unattractive. No complex fare systems or
-              unreliable ticket machines—just a simple, intuitive solution that
-              makes public transport more accessible and lowers barriers to
-              entry. GoEase is a great way to use public transport, especially
-              for people who don't use it all the time. It's also a better, more
-              future-proof alternative to existing systems.
+              GoEase ist ein innovatives System, das das Busfahren
+              revolutionieren soll. Durch die Kombination aus einem leicht
+              nachrüstbaren Beacon-System und einer benutzerfreundlichen mobilen
+              App bietet GoEase eine vollständig automatisierte und komfortable
+              Möglichkeit, öffentliche Verkehrsmittel zu nutzen. Die App muss
+              nur einmal eingerichtet werden und fungiert danach im Hintergrund
+              – so wird das Busfahren so einfach und unbeschwert wie möglich
+              gestaltet. Das Beacon, basierend auf einem ESP32 LilyGO, ist
+              speziell für die Integration in bestehende Busse konzipiert und
+              verwendet BLE, um mit der App zu kommunizieren. Diese Hardware ist
+              kostengünstig, leicht nachrüstbar und kann flexibel im Bus
+              montiert werden, um eine flächendeckende Nutzung sicherzustellen.
+              Mit GoEase wird der gesamte Prozess der Ticketbeschaffung
+              automatisiert: Die App erkennt automatisch den Einstieg in den
+              Bus, erfasst die gefahrene Strecke und kalkuliert den
+              entsprechenden Fahrpreis – ohne dass der Nutzer aktiv eingreifen
+              muss. Während der Fahrt kann der Nutzer auf Wunsch überwachen, wo
+              er sich gerade befindet und welche Kosten anfallen. Für die
+              Fahrgäste bedeutet das ein Höchstmaß an Komfort und Transparenz.
+              Das Herzstück von GoEase ist die Einfachheit. Alle unnötigen
+              Schritte, die den öffentlichen Nahverkehr oft kompliziert und
+              unattraktiv machen, werden eliminiert. Keine komplexen
+              Tarifsysteme, keine unzuverlässigen Ticketautomaten – stattdessen
+              eine klare, intuitive Lösung, die den Nahverkehr zugänglicher
+              macht und die Eintrittsbarrieren senkt. GoEase bietet insbesondere
+              für Gelegenheitsnutzer eine stressfreie Möglichkeit, den
+              öffentlichen Nahverkehr zu nutzen, und stellt eine zukunftsfähige
+              Alternative zu bestehenden Systemen dar. Mit GoEase wird die
+              Interaktion zwischen Menschen und öffentlichen Verkehrsmitteln
+              durch den Einsatz moderner Technologie verbessert und erleichtert.
+              Das Ergebnis ist ein System, das die Anforderungen der Nutzer in
+              den Mittelpunkt stellt und so den Nahverkehr für alle zugänglicher
+              macht.
             </div>
           </div>
           <div class="image medium">
@@ -498,36 +526,41 @@
           <div class="text">
             <SplitFlapText :texts="['        [PROCESS]         ']" />
             <div class="paragraph">
-              We kicked things off with an intensive brainstorming session,
-              where we chatted through all the ideas and came up with some
-              initial concepts.<br />
-              Our initial vision was pretty ambitious. We wanted to create a box
-              that integrated all kinds of functions. We wanted to use GPS to
-              record the location, BLE to detect which cell phones were
-              currently boarding, and a light barrier to check the number of
-              people boarding. We also planned to create three different user
-              interfaces—one for the end user and two for the public transport
-              companies that send fare evasion figures and help set up the
-              system. The system should be able to be used on all public
-              transport, not just buses. <br />That means trains, buses, planes
-              and ships too. <br /><br />This first idea included lots of
-              different features and was meant to be a complete solution for the
-              whole transportation industry. As the project went on, though, we
-              realized that trying to implement all these features would not
-              only take longer than we thought, but it would also get in the way
-              of the core idea.<br />
-              All these planned features made the project look more like a bunch
-              of random functions than a focused idea. So we decided to go back
-              to the drawing board and focus on the essentials. We trimmed the
-              features down to just the essentials so we could zero in on the
-              core idea: making bus travel easier and more convenient. The new
-              plan was to have a box that works with just one app and is only
-              for buses at first. This made things simpler and let us focus on
-              one API, for example, without having to think about other
-              interfaces.<br />
-              This focus helped us make the core idea work well and get it off
-              the ground, and create a solid MVP (Minimum Viable Product) that
-              we could build on later.
+              Der allgemeine Prozess begann mit einer intensiven
+              Brainstorming-Phase, in der verschiedene Ideen diskutiert und
+              erste Konzepte entwickelt wurden. Die anfängliche Vision war sehr
+              ambitioniert: Eine Box sollte geschaffen werden, die zahlreiche
+              Funktionen integriert. Sie sollte mithilfe von GPS den Standort
+              erfassen, mit BLE erkennen, welche Handys gerade einsteigen, und
+              mittels einer Lichtschranke die Anzahl der eingestiegenen Personen
+              überprüfen. Zudem sollten drei unterschiedliche Schnittstellen und
+              Nutzeroberflächen entwickelt werden – eine für die Endnutzer und
+              zwei für die ÖPNV-Unternehmen, die Schwarzfahrerzahlen übermitteln
+              und die Einrichtung des Systems ermöglichen. Das System sollte
+              nicht nur auf Busse beschränkt sein, sondern eine universelle
+              Lösung für den gesamten öffentlichen Verkehr darstellen,
+              einschließlich Zügen, Bussen, Flugzeugen und Schiffen. Dieses
+              erste grobe Konzept beinhaltete eine Vielzahl an Features und
+              sollte eine umfassende Lösung für den gesamten Transportsektor
+              bieten. Im Laufe des Projekts wurde jedoch klar, dass die
+              Umsetzung all dieser Funktionen nicht nur den zeitlichen Rahmen
+              sprengen würde, sondern auch vom eigentlichen Kern der Idee
+              ablenkte. Die vielen geplanten Features führten dazu, dass das
+              Projekt eher wie eine unzusammenhängende Sammlung von Funktionen
+              wirkte, anstatt sich fokussiert dem Grundgedanken zu widmen.
+              Deshalb wurde beschlossen, das Konzept zu überarbeiten und sich
+              auf das Wesentliche zu konzentrieren. Die Features wurden auf ein
+              Minimum reduziert, sodass ausschließlich auf die Kernidee – das
+              Busfahren einfacher und komfortabler zu machen – fokussiert werden
+              konnte. Das überarbeitete Konzept bestand aus einer Box, die
+              zusammen mit nur einer App arbeitet und sich zunächst
+              ausschließlich auf Busse beschränkt. Diese Reduzierung ermöglichte
+              es, die Komplexität zu senken und sich beispielsweise nur auf eine
+              API zu konzentrieren, ohne weitere Schnittstellen berücksichtigen
+              zu müssen. Durch diese Fokussierung konnte die Kernidee effizient
+              und umsetzbar gestaltet und ein solides MVP (Minimum Viable
+              Product) geschaffen werden, auf dem später weiter aufgebaut werden
+              kann.
             </div>
           </div>
           <div class="image large">
@@ -541,33 +574,42 @@
           <div class="text">
             <div class="paragraph">
               <h3>Software Process</h3>
-              Next, we started working on the user interface and app features.
-              First, we put together some wireframes and design dummies in Figma
-              to get a feel for the user experience and make sure the app would
-              be simple to use. The wireframes were really important for
-              planning the user experience in advance and spotting any potential
-              design issues early on. During this phase, we made sure the user
-              experience was simple and straightforward. We used these
-              wireframes to build the mobile app with React Native, which lets
-              us use it on different platforms.<br />
-              <br />We chose React Native because it lets the app talk to the
-              beacons via BLE. <br />We made sure to get the core functions up
-              and running smoothly and efficiently, including things like
-              automatic beacon detection, trip data collection, and background
-              processes. The software development process was very iterative.<br />
-              Once we had the first functional prototypes up and running, we did
-              a few rounds of user testing to get feedback and make sure we were
-              constantly improving the app and the features it had based on what
-              the testers had to say. It was really important for us to get
-              direct feedback on how easy the app was to use and what we could
-              do to make it even better. One of the most important things we
-              wanted to get right with the app was the setup process. We wanted
-              it to be quick and easy for the user. <br />Once you've set up the
-              app, it's basically ready to go. It runs in the background and
-              takes care of all the steps needed to record bus journeys and
-              organize billing. You can also monitor your journey and see which
-              costs have already been debited.<br />
-              This way, you're always in the know and in control.
+              Im nächsten Schritt begann die Entwicklung der Benutzeroberfläche
+              und der App-Funktionalitäten. Zunächst wurden Wireframes und
+              Design-Dummies in Figma erstellt, um die Nutzerführung zu
+              visualisieren und sicherzustellen, dass die App eine intuitive und
+              leicht verständliche Bedienung bietet. Die Erstellung der
+              Wireframes war entscheidend, um die Benutzererfahrung im Vorfeld
+              genau zu planen und potenzielle Schwachstellen im Design
+              frühzeitig zu identifizieren. In dieser Phase lag der Fokus
+              darauf, die Nutzerführung so einfach wie möglich zu gestalten und
+              unnötige Komplexität zu vermeiden. Basierend auf diesen Wireframes
+              wurde die mobile App mit React Native umgesetzt, um eine
+              plattformübergreifende Nutzung zu ermöglichen. Die Wahl von React
+              Native erfolgte bewusst, da es ermöglichte, die App über BLE
+              tatsächlich mit den Beacons kommunizieren zu lassen. Der
+              Schwerpunkt lag darauf, die Kernfunktionen – wie die automatische
+              Erkennung des Beacons, das Erfassen der Fahrtdaten und die
+              Hintergrundprozesse – stabil und performant zu implementieren. Der
+              Softwareentwicklungsprozess war stark iterativ geprägt: Nachdem
+              die ersten funktionalen Prototypen entwickelt waren, wurden
+              mehrere Runden von Nutzertests durchgeführt, um Feedback zu
+              sammeln und die App sowie die darin enthaltenen Features basierend
+              auf den Erfahrungen der Tester kontinuierlich zu verbessern.
+              Besonders wichtig war es, direktes Feedback zur Nutzerführung und
+              zum Komfort der App zu erhalten, um sicherzustellen, dass die
+              Interaktionen so verständlich und umkompliziert wie möglich sind.
+              Ein zentraler Aspekt bei der Konzeption der App war, dass der
+              Einrichtungsprozess für den Nutzer einfach und schnell ablaufen
+              sollte. Nach der einmaligen Einrichtung ist die Nutzung der App
+              vollständig automatisiert, sodass sie im Alltag nicht mehr aktiv
+              geöffnet werden muss. Die App läuft im Hintergrund und erledigt
+              alle notwendigen Schritte, um die Busfahrten zu erfassen und die
+              Abrechnung zu organisieren. Dennoch bietet die App die
+              Möglichkeit, während der Fahrt jederzeit zu überwachen, wo man
+              sich gerade befindet und welche Kosten bereits abgebucht wurden.
+              So bleibt der Nutzer, wenn gewünscht, immer informiert und behält
+              die volle Kontrolle.
             </div>
           </div>
           <div class="image large">
@@ -584,19 +626,15 @@
           <div class="text">
             <div class="paragraph">
               <h3>Hardware Process</h3>
-              The hardware process was all about choosing the right technical
-              components to make the beacon technology work. It was crucial that
-              the beacons were energy efficient, cost-effective, and easily
-              retrofittable in buses to make it easy to roll out across the
-              entire fleet. After quickly thinking through what the hardware
-              needed to do, we decided on an ESP32 LilyGO, which has both BLE
-              and GPS capabilities, covering all of our functional requirements.
-              To keep costs down and make it simple to retrofit, we designed a
-              plastic housing and 3D printed it. We also added a strap with a
-              buckle to the housing so it can be mounted on various poles.
-              <br /><br />This was a smaller step than the software development,
-              but it was crucial to create the technical basis for the entire
-              system and ensure smooth functionality in everyday use.
+              Um sicherzustellen, dass der Beacon insgesamt kostengünstig und
+              einfach nachrüstbar ist, wurde ein Gehäuse aus Kunststoff
+              konzipiert und mittels 3D-Druck gefertigt. Zur einfachen
+              Befestigung im Bus wurde ein Band mit einer Schnalle am Gehäuse
+              angebracht, sodass es flexibel an verschiedenen Stangen montiert
+              werden kann. Dieser Prozessschritt war zwar im Vergleich zur
+              Softwareentwicklung kleiner, jedoch entscheidend, um die
+              technische Basis für das gesamte System zu schaffen und eine
+              reibungslose Funktionalität im Alltag zu gewährleisten.
             </div>
           </div>
         </div>
@@ -607,30 +645,39 @@
           <div class="text">
             <SplitFlapText :texts="['         [SOLUTION]        ']" />
             <div class="paragraph">
-              GoEase is an innovative system that's set to transform bus travel.
-              GoEase brings together an easy-to-install beacon system and a
-              user-friendly mobile app to create a fully automated and
-              convenient way to use public transport. <br />Once you set up the
-              app, it does all the heavy lifting in the background, making bus
-              travel as easy and carefree as possible. The beacon, which is
-              based on an ESP32 LilyGO, is designed to be integrated into
-              existing buses and uses BLE to communicate with the app. This
-              hardware is affordable, simple to install, and can be mounted in
-              different ways on the bus to make it easy to use. With GoEase, you
-              can buy tickets without even having to tap in. The app detects
-              when you board, records the distance traveled, and calculates the
-              fare—all without you having to do a thing.<br />
-              While you're on your journey, you can check in on your progress
-              and see what your costs are. For passengers, this means maximum
-              convenience and transparency. <br />The idea behind GoEase is to
-              make things simple.<br />
-              We've got rid of all the unnecessary steps that often make public
-              transport complicated and unattractive. No complex fare systems or
-              unreliable ticket machines—just a simple, intuitive solution that
-              makes public transport more accessible and lowers barriers to
-              entry. GoEase is a great way to use public transport, especially
-              for people who don't use it all the time. It's also a better, more
-              future-proof alternative to existing systems.
+              GoEase ist ein innovatives System, das das Busfahren
+              revolutionieren soll. Durch die Kombination aus einem leicht
+              nachrüstbaren Beacon-System und einer benutzerfreundlichen mobilen
+              App bietet GoEase eine vollständig automatisierte und komfortable
+              Möglichkeit, öffentliche Verkehrsmittel zu nutzen. Die App muss
+              nur einmal eingerichtet werden und fungiert danach im Hintergrund
+              – so wird das Busfahren so einfach und unbeschwert wie möglich
+              gestaltet. Das Beacon, basierend auf einem ESP32 LilyGO, ist
+              speziell für die Integration in bestehende Busse konzipiert und
+              verwendet BLE, um mit der App zu kommunizieren. Diese Hardware ist
+              kostengünstig, leicht nachrüstbar und kann flexibel im Bus
+              montiert werden, um eine flächendeckende Nutzung sicherzustellen.
+              Mit GoEase wird der gesamte Prozess der Ticketbeschaffung
+              automatisiert: Die App erkennt automatisch den Einstieg in den
+              Bus, erfasst die gefahrene Strecke und kalkuliert den
+              entsprechenden Fahrpreis – ohne dass der Nutzer aktiv eingreifen
+              muss. Während der Fahrt kann der Nutzer auf Wunsch überwachen, wo
+              er sich gerade befindet und welche Kosten anfallen. Für die
+              Fahrgäste bedeutet das ein Höchstmaß an Komfort und Transparenz.
+              Das Herzstück von GoEase ist die Einfachheit. Alle unnötigen
+              Schritte, die den öffentlichen Nahverkehr oft kompliziert und
+              unattraktiv machen, werden eliminiert. Keine komplexen
+              Tarifsysteme, keine unzuverlässigen Ticketautomaten – stattdessen
+              eine klare, intuitive Lösung, die den Nahverkehr zugänglicher
+              macht und die Eintrittsbarrieren senkt. GoEase bietet insbesondere
+              für Gelegenheitsnutzer eine stressfreie Möglichkeit, den
+              öffentlichen Nahverkehr zu nutzen, und stellt eine zukunftsfähige
+              Alternative zu bestehenden Systemen dar. Mit GoEase wird die
+              Interaktion zwischen Menschen und öffentlichen Verkehrsmitteln
+              durch den Einsatz moderner Technologie verbessert und erleichtert.
+              Das Ergebnis ist ein System, das die Anforderungen der Nutzer in
+              den Mittelpunkt stellt und so den Nahverkehr für alle zugänglicher
+              macht.
             </div>
           </div>
           <div class="image medium">

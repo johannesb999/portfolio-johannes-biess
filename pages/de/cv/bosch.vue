@@ -35,7 +35,16 @@
               habe ich tiefgehende Kenntnisse in als JIRA Administrator erlangt
               und konnte so helfen Prozesse in Teams und arbeitsbereichen in
               methodeische bahnen zu lenken oder bestehende Arbeitsabläufe zu
-              optimieren.
+              optimieren. Ein weiteren
+              Einblick in meine Leistungen und Tätigkeiten während der
+              Ausbildung findet sich in meinem
+              <a
+                href="/docs/ArbeitszeugnisBosch.pdf"
+                download="Arbeitszeugnis.pdf"
+                class="custom-link"
+                style="text-decoration: underline"
+                >Arbeitszeugnis.pdf</a
+              >
             </div>
           </div>
 

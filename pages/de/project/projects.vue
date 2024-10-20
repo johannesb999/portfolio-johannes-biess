@@ -69,22 +69,25 @@
           <div class="text">
             <SplitFlapText :texts="['           [PROCESS]           ']" />
             <div class="paragraph">
-              At the start of the project, we did a bit of research to see what
-              other solutions were already out there on the market. We wanted to
-              see which functions were already up to scratch and where there was
-              room for improvement. This analysis helped us see where we could
-              make improvements and focus our solution on those areas.Next, we
-              put together a detailed persona to clearly define what our target
-              group needed. From this work, we realized that our goal was to
-              create a solution that would make it possible to care for plants
-              in a minimal amount of time—and appeal to both hobby gardeners and
-              experienced plant lovers alike.At the same time, we also designed
-              a user journey that covers the whole process of using the app,
-              from installation to everyday use. By creating detailed user
-              paths, we made sure that the user experience was smooth and
-              intuitive. Along with user testing, this resulted in a thoughtful
-              and user-friendly setup process that helped us identify potential
-              issues early on and make user-friendliness more targeted.
+              Zu Beginn des Projekts wurde eine Wettbewerbsanalyse durchgeführt,
+              um bestehende Lösungen auf dem Markt zu evaluieren. Ziel war es,
+              herauszufinden, welche Funktionen bereits gut umgesetzt sind und
+              wo noch Verbesserungspotenzial besteht. Diese Analyse half dabei,
+              ungenutzte Potenziale zu identifizieren und die eigene Lösung
+              gezielt darauf auszurichten. Im Anschluss wurde eine detaillierte
+              Persona entwickelt, um die Bedürfnisse der Zielgruppe klar zu
+              definieren. Dabei stellte sich heraus, dass das Ziel darin
+              besteht, eine Lösung zu schaffen, die es ermöglicht, Pflanzen mit
+              minimalem Zeitaufwand zu pflegen und sowohl Hobbygärtner als auch
+              erfahrene Pflanzenliebhaber anzusprechen. Parallel zur
+              Persona-Entwicklung wurde eine User Journey gestaltet, die den
+              gesamten Nutzungsprozess der App abdeckt – von der Installation
+              bis hin zur täglichen Nutzung. Durch die Erstellung detaillierter
+              Nutzerpfade wurde sichergestellt, dass die Benutzerführung nahtlos
+              und intuitiv ist. Kombiniert mit iterativen User-Testings entstand
+              so ein durchdachter und benutzerfreundlicher Einrichtungsprozess,
+              durch den mögliche Hürden frühzeitig erkannt und die
+              Nutzerfreundlichkeit gezielt verbessert werden konnte.
             </div>
           </div>
         </div>
@@ -97,18 +100,19 @@
           </div>
           <div class="text">
             <div class="paragraph">
-                <h3>Software Process</h3>
-              We started with the software process by creating low-fi, mid-fi,
-              and high-fi wireframes to plan the structure and user experience
-              of the application. This process was very iterative, with a big
-              focus on the user experience. Each version was optimized through
-              user feedback. We used the high-fi Figma click dummy to test the
-              user experience and make sure everything was seamless and
-              intuitive. Once we got good feedback on the Figma dummy and were
-              happy with the design, we started implementing the web app with
-              Svelte. Our focus was on implementing the functions from the Figma
-              dummy in detail and making sure the user experience was smooth and
-              high-performance.
+              <h3>Software Process</h3>
+              Der Softwareprozess startete mit der ausführlichen Erstellung von
+              Low-Fi, Mid-Fi und High-Fi Wireframes, um die Struktur und die
+              Benutzerführung der Anwendung zu planen. Dieser Prozess war stark
+              iterativ und legte den Fokus klar auf die User Experience, sodass
+              jede Version durch Nutzerfeedback optimiert wurde. Der High-Fi
+              Figma-Klickdummy ermöglichte umfassende User Tests, um
+              sicherzustellen, dass die Benutzerführung nahtlos und intuitiv
+              ist. Nachdem der Figma-Dummy positives Feedback erhalten hatte und
+              das Design zufriedenstellte, begann die Umsetzung der Web-App mit
+              Svelte. Dabei lag der Schwerpunkt darauf, die im Figma-Dummy
+              erarbeiteten Funktionen detailgetreu umzusetzen und eine
+              reibungslose, performante Nutzererfahrung zu gewährleisten.
             </div>
           </div>
         </div>
@@ -122,18 +126,25 @@
           <div class="text">
             <div class="paragraph">
               <h3>Hardware Process</h3>
-              We started with an analysis of what hardware we needed. We figured
-              out what our smart tool needed to do and then picked the right
-              parts, like an ESP32 as a microcontroller and different sensors
-              for tracking environmental data. We put the components together in
-              a way that met the system requirements. Next, we built a
-              prototype. We used the principle of rapid prototyping to quickly
-              get a clear picture of our design. We used Fusion360 to print a
-              housing for the selected components. This let us integrate them
-              quickly and identify problems early on. Once the housing was
-              printed, we connected all the hardware components and installed
-              them in it. This let us ensure that the hardware was not only
-              functional but also practical for final use.
+              Der Hardwareprozess begann mit einer Anforderungsanalyse der
+              benötigten Hardware. Es wurde ermittelt, welche Funktionen das
+              Smart Tool erfüllen muss, und daraufhin geeignete Komponenten
+              ausgewählt, wie etwa ein ESP32 als Mikrocontroller sowie
+              verschiedene Sensoren zur Erfassung von Umgebungsdaten. Die
+              Zusammenstellung der Komponenten erfolgte gezielt, um den
+              Systemanforderungen gerecht zu werden. Im nächsten Schritt ging es
+              an den Aufbau des Prototyps. Dabei kam das Prinzip des Rapid
+              Prototyping zum Einsatz, um schnell ein klares Bild des Designs zu
+              erhalten. Rapid Prototyping ermöglichte es, mittels 3D-Druck ein
+              Gehäuse herzustellen, in das die ausgewählten Komponenten
+              integriert werden konnten. Durch diesen schnellen iterativen
+              Prozess konnten frühzeitig Probleme erkannt und entsprechende
+              Anpassungen vorgenommen werden. Nach der Fertigung des Gehäuses
+              erfolgte die Integration der Hardwarekomponenten. Alle Elemente
+              wurden verbunden und im gedruckten Gehäuse eingebaut. Dadurch
+              konnte sichergestellt werden, dass die Anordnung der Hardware
+              nicht nur funktional, sondern auch praktikabel für den finalen
+              Einsatz ist.
             </div>
           </div>
         </div>
@@ -144,25 +155,32 @@
           <div class="text">
             <SplitFlapText :texts="['         [SOULUITON]         ']" />
             <div class="paragraph">
-              Through this structured, methodical approach, we developed a
-              product that meets our target audience's needs and significantly
-              simplifies plant care. PlantMonit combines cutting-edge technology
-              with a user-friendly design to ensure optimal plant maintenance.
-              <br />
-              Key Features of PlantMonit: Automatic Plant Monitoring: Sensors
-              for soil moisture, humidity, temperature, and light continuously
-              monitor the vital data of plants. Advanced Image Analysis: The use
-              of the OpenAI Vision API allows for detailed analysis of plant
-              images, contributing to early problem detection. Intuitive User
-              Interface: A user-friendly app that presents all collected data
-              clearly and provides personalized care tips. Seamless Integration:
-              Efficient communication between hardware components via Websockets
-              ensures reliable data transmission and easy setup. Scalable
-              Database: A robust backend structure with MongoDB and Mongoose
-              ensures efficient data storage and management. By combining these
-              elements, we created an innovative solution that revolutionizes
-              plant care and helps both beginners and experienced gardeaners
-              keep their plants healthy.
+              Das Ergebnis des Projekts ist PlantMonit – ein intelligentes Smart
+              Tool, das die Pflanzenpflege vereinfacht und optimiert. Ziel war
+              es, eine Lösung zu entwickeln, die sowohl Hobbygärtner als auch
+              erfahrene Pflanzenliebhaber unterstützt, indem sie die Pflege mit
+              minimalem Aufwand ermöglicht. Das Kernfeature von PlantMonit ist
+              die automatische Pflanzenüberwachung. Eine integrierte Kamera,
+              kombiniert mit Sensoren für Bodenfeuchtigkeit, Luftfeuchtigkeit,
+              Temperatur und Licht, sammelt kontinuierlich alle wichtigen Daten
+              der Pflanzen. Mithilfe der OpenAI Vision API ermöglicht PlantMonit
+              eine detaillierte Analyse von Pflanzenbildern, was zur
+              Früherkennung von Problemen wie Schädlingen, Fäule oder
+              Verletzungen beiträgt. Die Nutzer erhalten direkt personalisierte
+              Pflegehinweise, ohne selbst Expertenwissen zu benötigen. Die
+              Software wurde mit einem starken Fokus auf Benutzerfreundlichkeit
+              entwickelt, von iterativen Wireframes bis hin zur finalen App in
+              Svelte. Die intuitive Benutzeroberfläche präsentiert alle
+              gesammelten Daten übersichtlich und erleichtert die Pflege für den
+              Nutzer. Dank effizienter Kommunikation zwischen den
+              Hardware-Komponenten via Websockets sowie einer skalierbaren
+              Datenbankstruktur mit MongoDB gewährleistet PlantMonit eine
+              zuverlässige Datenerfassung und -übertragung. Durch diesen
+              methodischen Ansatz entstand ein Produkt, das die Bedürfnisse der
+              Zielgruppe erfüllt und die Pflanzenpflege erheblich vereinfacht.
+              PlantMonit verbindet modernste Technologie mit
+              benutzerfreundlichem Design und sorgt so für gesunde Pflanzen –
+              sowohl für Einsteiger als auch für erfahrene Gärtner.
             </div>
           </div>
           <div class="image medium">
@@ -225,22 +243,25 @@
           <div class="text">
             <SplitFlapText :texts="['             [PROCESS]             ']" />
             <div class="paragraph">
-              At the start of the project, we did a bit of research to see what
-              other solutions were already out there on the market. We wanted to
-              see which functions were already up to scratch and where there was
-              room for improvement. This analysis helped us see where we could
-              make improvements and focus our solution on those areas.Next, we
-              put together a detailed persona to clearly define what our target
-              group needed. From this work, we realized that our goal was to
-              create a solution that would make it possible to care for plants
-              in a minimal amount of time—and appeal to both hobby gardeners and
-              experienced plant lovers alike.At the same time, we also designed
-              a user journey that covers the whole process of using the app,
-              from installation to everyday use. By creating detailed user
-              paths, we made sure that the user experience was smooth and
-              intuitive. Along with user testing, this resulted in a thoughtful
-              and user-friendly setup process that helped us identify potential
-              issues early on and make user-friendliness more targeted.
+              Zu Beginn des Projekts wurde eine Wettbewerbsanalyse durchgeführt,
+              um bestehende Lösungen auf dem Markt zu evaluieren. Ziel war es,
+              herauszufinden, welche Funktionen bereits gut umgesetzt sind und
+              wo noch Verbesserungspotenzial besteht. Diese Analyse half dabei,
+              ungenutzte Potenziale zu identifizieren und die eigene Lösung
+              gezielt darauf auszurichten. Im Anschluss wurde eine detaillierte
+              Persona entwickelt, um die Bedürfnisse der Zielgruppe klar zu
+              definieren. Dabei stellte sich heraus, dass das Ziel darin
+              besteht, eine Lösung zu schaffen, die es ermöglicht, Pflanzen mit
+              minimalem Zeitaufwand zu pflegen und sowohl Hobbygärtner als auch
+              erfahrene Pflanzenliebhaber anzusprechen. Parallel zur
+              Persona-Entwicklung wurde eine User Journey gestaltet, die den
+              gesamten Nutzungsprozess der App abdeckt – von der Installation
+              bis hin zur täglichen Nutzung. Durch die Erstellung detaillierter
+              Nutzerpfade wurde sichergestellt, dass die Benutzerführung nahtlos
+              und intuitiv ist. Kombiniert mit iterativen User-Testings entstand
+              so ein durchdachter und benutzerfreundlicher Einrichtungsprozess,
+              durch den mögliche Hürden frühzeitig erkannt und die
+              Nutzerfreundlichkeit gezielt verbessert werden konnte.
             </div>
           </div>
           <div class="image medium">
@@ -255,17 +276,18 @@
             <div class="paragraph">
               <h3>Software Process</h3>
 
-              We started with the software process by creating low-fi, mid-fi,
-              and high-fi wireframes to plan the structure and user experience
-              of the application. This process was very iterative, with a big
-              focus on the user experience. Each version was optimized through
-              user feedback. We used the high-fi Figma click dummy to test the
-              user experience and make sure everything was seamless and
-              intuitive. Once we got good feedback on the Figma dummy and were
-              happy with the design, we started implementing the web app with
-              Svelte. Our focus was on implementing the functions from the Figma
-              dummy in detail and making sure the user experience was smooth and
-              high-performance.
+              Der Softwareprozess startete mit der ausführlichen Erstellung von
+              Low-Fi, Mid-Fi und High-Fi Wireframes, um die Struktur und die
+              Benutzerführung der Anwendung zu planen. Dieser Prozess war stark
+              iterativ und legte den Fokus klar auf die User Experience, sodass
+              jede Version durch Nutzerfeedback optimiert wurde. Der High-Fi
+              Figma-Klickdummy ermöglichte umfassende User Tests, um
+              sicherzustellen, dass die Benutzerführung nahtlos und intuitiv
+              ist. Nachdem der Figma-Dummy positives Feedback erhalten hatte und
+              das Design zufriedenstellte, begann die Umsetzung der Web-App mit
+              Svelte. Dabei lag der Schwerpunkt darauf, die im Figma-Dummy
+              erarbeiteten Funktionen detailgetreu umzusetzen und eine
+              reibungslose, performante Nutzererfahrung zu gewährleisten.
             </div>
           </div>
           <div class="image small">
@@ -279,18 +301,25 @@
           <div class="text">
             <div class="paragraph">
               <h3>Hardware Process</h3>
-              We started with an analysis of what hardware we needed. We figured
-              out what our smart tool needed to do and then picked the right
-              parts, like an ESP32 as a microcontroller and different sensors
-              for tracking environmental data. We put the components together in
-              a way that met the system requirements. Next, we built a
-              prototype. We used the principle of rapid prototyping to quickly
-              get a clear picture of our design. We used Fusion360 to print a
-              housing for the selected components. This let us integrate them
-              quickly and identify problems early on. Once the housing was
-              printed, we connected all the hardware components and installed
-              them in it. This let us ensure that the hardware was not only
-              functional but also practical for final use.
+              Der Hardwareprozess begann mit einer Anforderungsanalyse der
+              benötigten Hardware. Es wurde ermittelt, welche Funktionen das
+              Smart Tool erfüllen muss, und daraufhin geeignete Komponenten
+              ausgewählt, wie etwa ein ESP32 als Mikrocontroller sowie
+              verschiedene Sensoren zur Erfassung von Umgebungsdaten. Die
+              Zusammenstellung der Komponenten erfolgte gezielt, um den
+              Systemanforderungen gerecht zu werden. Im nächsten Schritt ging es
+              an den Aufbau des Prototyps. Dabei kam das Prinzip des Rapid
+              Prototyping zum Einsatz, um schnell ein klares Bild des Designs zu
+              erhalten. Rapid Prototyping ermöglichte es, mittels 3D-Druck ein
+              Gehäuse herzustellen, in das die ausgewählten Komponenten
+              integriert werden konnten. Durch diesen schnellen iterativen
+              Prozess konnten frühzeitig Probleme erkannt und entsprechende
+              Anpassungen vorgenommen werden. Nach der Fertigung des Gehäuses
+              erfolgte die Integration der Hardwarekomponenten. Alle Elemente
+              wurden verbunden und im gedruckten Gehäuse eingebaut. Dadurch
+              konnte sichergestellt werden, dass die Anordnung der Hardware
+              nicht nur funktional, sondern auch praktikabel für den finalen
+              Einsatz ist.
             </div>
           </div>
           <div class="image medium">
@@ -304,25 +333,32 @@
           <div class="text">
             <SplitFlapText :texts="['             [SOLUTION]            ']" />
             <div class="paragraph">
-              Through this structured, methodical approach, we developed a
-              product that meets our target audience's needs and significantly
-              simplifies plant care. PlantMonit combines cutting-edge technology
-              with a user-friendly design to ensure optimal plant maintenance.
-              <br />
-              Key Features of PlantMonit: Automatic Plant Monitoring: Sensors
-              for soil moisture, humidity, temperature, and light continuously
-              monitor the vital data of plants. Advanced Image Analysis: The use
-              of the OpenAI Vision API allows for detailed analysis of plant
-              images, contributing to early problem detection. Intuitive User
-              Interface: A user-friendly app that presents all collected data
-              clearly and provides personalized care tips. Seamless Integration:
-              Efficient communication between hardware components via Websockets
-              ensures reliable data transmission and easy setup. Scalable
-              Database: A robust backend structure with MongoDB and Mongoose
-              ensures efficient data storage and management. By combining these
-              elements, we created an innovative solution that revolutionizes
-              plant care and helps both beginners and experienced gardeaners
-              keep their plants healthy.
+              Das Ergebnis des Projekts ist PlantMonit – ein intelligentes Smart
+              Tool, das die Pflanzenpflege vereinfacht und optimiert. Ziel war
+              es, eine Lösung zu entwickeln, die sowohl Hobbygärtner als auch
+              erfahrene Pflanzenliebhaber unterstützt, indem sie die Pflege mit
+              minimalem Aufwand ermöglicht. Das Kernfeature von PlantMonit ist
+              die automatische Pflanzenüberwachung. Eine integrierte Kamera,
+              kombiniert mit Sensoren für Bodenfeuchtigkeit, Luftfeuchtigkeit,
+              Temperatur und Licht, sammelt kontinuierlich alle wichtigen Daten
+              der Pflanzen. Mithilfe der OpenAI Vision API ermöglicht PlantMonit
+              eine detaillierte Analyse von Pflanzenbildern, was zur
+              Früherkennung von Problemen wie Schädlingen, Fäule oder
+              Verletzungen beiträgt. Die Nutzer erhalten direkt personalisierte
+              Pflegehinweise, ohne selbst Expertenwissen zu benötigen. Die
+              Software wurde mit einem starken Fokus auf Benutzerfreundlichkeit
+              entwickelt, von iterativen Wireframes bis hin zur finalen App in
+              Svelte. Die intuitive Benutzeroberfläche präsentiert alle
+              gesammelten Daten übersichtlich und erleichtert die Pflege für den
+              Nutzer. Dank effizienter Kommunikation zwischen den
+              Hardware-Komponenten via Websockets sowie einer skalierbaren
+              Datenbankstruktur mit MongoDB gewährleistet PlantMonit eine
+              zuverlässige Datenerfassung und -übertragung. Durch diesen
+              methodischen Ansatz entstand ein Produkt, das die Bedürfnisse der
+              Zielgruppe erfüllt und die Pflanzenpflege erheblich vereinfacht.
+              PlantMonit verbindet modernste Technologie mit
+              benutzerfreundlichem Design und sorgt so für gesunde Pflanzen –
+              sowohl für Einsteiger als auch für erfahrene Gärtner.
             </div>
           </div>
           <div class="image medium">
@@ -385,22 +421,25 @@
           <div class="text">
             <SplitFlapText :texts="['      [PROCESS]       ']" />
             <div class="paragraph">
-              At the start of the project, we did a bit of research to see what
-              other solutions were already out there on the market. We wanted to
-              see which functions were already up to scratch and where there was
-              room for improvement. This analysis helped us see where we could
-              make improvements and focus our solution on those areas.Next, we
-              put together a detailed persona to clearly define what our target
-              group needed. From this work, we realized that our goal was to
-              create a solution that would make it possible to care for plants
-              in a minimal amount of time—and appeal to both hobby gardeners and
-              experienced plant lovers alike.At the same time, we also designed
-              a user journey that covers the whole process of using the app,
-              from installation to everyday use. By creating detailed user
-              paths, we made sure that the user experience was smooth and
-              intuitive. Along with user testing, this resulted in a thoughtful
-              and user-friendly setup process that helped us identify potential
-              issues early on and make user-friendliness more targeted.
+              Zu Beginn des Projekts wurde eine Wettbewerbsanalyse durchgeführt,
+              um bestehende Lösungen auf dem Markt zu evaluieren. Ziel war es,
+              herauszufinden, welche Funktionen bereits gut umgesetzt sind und
+              wo noch Verbesserungspotenzial besteht. Diese Analyse half dabei,
+              ungenutzte Potenziale zu identifizieren und die eigene Lösung
+              gezielt darauf auszurichten. Im Anschluss wurde eine detaillierte
+              Persona entwickelt, um die Bedürfnisse der Zielgruppe klar zu
+              definieren. Dabei stellte sich heraus, dass das Ziel darin
+              besteht, eine Lösung zu schaffen, die es ermöglicht, Pflanzen mit
+              minimalem Zeitaufwand zu pflegen und sowohl Hobbygärtner als auch
+              erfahrene Pflanzenliebhaber anzusprechen. Parallel zur
+              Persona-Entwicklung wurde eine User Journey gestaltet, die den
+              gesamten Nutzungsprozess der App abdeckt – von der Installation
+              bis hin zur täglichen Nutzung. Durch die Erstellung detaillierter
+              Nutzerpfade wurde sichergestellt, dass die Benutzerführung nahtlos
+              und intuitiv ist. Kombiniert mit iterativen User-Testings entstand
+              so ein durchdachter und benutzerfreundlicher Einrichtungsprozess,
+              durch den mögliche Hürden frühzeitig erkannt und die
+              Nutzerfreundlichkeit gezielt verbessert werden konnte.
             </div>
           </div>
           <div class="image medium">
@@ -415,17 +454,18 @@
             <div class="paragraph">
               <h3>Software Process</h3>
 
-              We started with the software process by creating low-fi, mid-fi,
-              and high-fi wireframes to plan the structure and user experience
-              of the application. This process was very iterative, with a big
-              focus on the user experience. Each version was optimized through
-              user feedback. We used the high-fi Figma click dummy to test the
-              user experience and make sure everything was seamless and
-              intuitive. Once we got good feedback on the Figma dummy and were
-              happy with the design, we started implementing the web app with
-              Svelte. Our focus was on implementing the functions from the Figma
-              dummy in detail and making sure the user experience was smooth and
-              high-performance.
+              Der Softwareprozess startete mit der ausführlichen Erstellung von
+              Low-Fi, Mid-Fi und High-Fi Wireframes, um die Struktur und die
+              Benutzerführung der Anwendung zu planen. Dieser Prozess war stark
+              iterativ und legte den Fokus klar auf die User Experience, sodass
+              jede Version durch Nutzerfeedback optimiert wurde. Der High-Fi
+              Figma-Klickdummy ermöglichte umfassende User Tests, um
+              sicherzustellen, dass die Benutzerführung nahtlos und intuitiv
+              ist. Nachdem der Figma-Dummy positives Feedback erhalten hatte und
+              das Design zufriedenstellte, begann die Umsetzung der Web-App mit
+              Svelte. Dabei lag der Schwerpunkt darauf, die im Figma-Dummy
+              erarbeiteten Funktionen detailgetreu umzusetzen und eine
+              reibungslose, performante Nutzererfahrung zu gewährleisten.
             </div>
           </div>
           <div class="image small">
@@ -439,18 +479,25 @@
           <div class="text">
             <div class="paragraph">
               <h3>Hardware Process</h3>
-              We started with an analysis of what hardware we needed. We figured
-              out what our smart tool needed to do and then picked the right
-              parts, like an ESP32 as a microcontroller and different sensors
-              for tracking environmental data. We put the components together in
-              a way that met the system requirements. Next, we built a
-              prototype. We used the principle of rapid prototyping to quickly
-              get a clear picture of our design. We used Fusion360 to print a
-              housing for the selected components. This let us integrate them
-              quickly and identify problems early on. Once the housing was
-              printed, we connected all the hardware components and installed
-              them in it. This let us ensure that the hardware was not only
-              functional but also practical for final use.
+              Der Hardwareprozess begann mit einer Anforderungsanalyse der
+              benötigten Hardware. Es wurde ermittelt, welche Funktionen das
+              Smart Tool erfüllen muss, und daraufhin geeignete Komponenten
+              ausgewählt, wie etwa ein ESP32 als Mikrocontroller sowie
+              verschiedene Sensoren zur Erfassung von Umgebungsdaten. Die
+              Zusammenstellung der Komponenten erfolgte gezielt, um den
+              Systemanforderungen gerecht zu werden. Im nächsten Schritt ging es
+              an den Aufbau des Prototyps. Dabei kam das Prinzip des Rapid
+              Prototyping zum Einsatz, um schnell ein klares Bild des Designs zu
+              erhalten. Rapid Prototyping ermöglichte es, mittels 3D-Druck ein
+              Gehäuse herzustellen, in das die ausgewählten Komponenten
+              integriert werden konnten. Durch diesen schnellen iterativen
+              Prozess konnten frühzeitig Probleme erkannt und entsprechende
+              Anpassungen vorgenommen werden. Nach der Fertigung des Gehäuses
+              erfolgte die Integration der Hardwarekomponenten. Alle Elemente
+              wurden verbunden und im gedruckten Gehäuse eingebaut. Dadurch
+              konnte sichergestellt werden, dass die Anordnung der Hardware
+              nicht nur funktional, sondern auch praktikabel für den finalen
+              Einsatz ist.
             </div>
           </div>
           <div class="image medium">
@@ -464,25 +511,32 @@
           <div class="text">
             <SplitFlapText :texts="['      [SOLUTION]      ']" />
             <div class="paragraph">
-              Through this structured, methodical approach, we developed a
-              product that meets our target audience's needs and significantly
-              simplifies plant care. PlantMonit combines cutting-edge technology
-              with a user-friendly design to ensure optimal plant maintenance.
-              <br />
-              Key Features of PlantMonit: Automatic Plant Monitoring: Sensors
-              for soil moisture, humidity, temperature, and light continuously
-              monitor the vital data of plants. Advanced Image Analysis: The use
-              of the OpenAI Vision API allows for detailed analysis of plant
-              images, contributing to early problem detection. Intuitive User
-              Interface: A user-friendly app that presents all collected data
-              clearly and provides personalized care tips. Seamless Integration:
-              Efficient communication between hardware components via Websockets
-              ensures reliable data transmission and easy setup. Scalable
-              Database: A robust backend structure with MongoDB and Mongoose
-              ensures efficient data storage and management. By combining these
-              elements, we created an innovative solution that revolutionizes
-              plant care and helps both beginners and experienced gardeaners
-              keep their plants healthy.
+              Das Ergebnis des Projekts ist PlantMonit – ein intelligentes Smart
+              Tool, das die Pflanzenpflege vereinfacht und optimiert. Ziel war
+              es, eine Lösung zu entwickeln, die sowohl Hobbygärtner als auch
+              erfahrene Pflanzenliebhaber unterstützt, indem sie die Pflege mit
+              minimalem Aufwand ermöglicht. Das Kernfeature von PlantMonit ist
+              die automatische Pflanzenüberwachung. Eine integrierte Kamera,
+              kombiniert mit Sensoren für Bodenfeuchtigkeit, Luftfeuchtigkeit,
+              Temperatur und Licht, sammelt kontinuierlich alle wichtigen Daten
+              der Pflanzen. Mithilfe der OpenAI Vision API ermöglicht PlantMonit
+              eine detaillierte Analyse von Pflanzenbildern, was zur
+              Früherkennung von Problemen wie Schädlingen, Fäule oder
+              Verletzungen beiträgt. Die Nutzer erhalten direkt personalisierte
+              Pflegehinweise, ohne selbst Expertenwissen zu benötigen. Die
+              Software wurde mit einem starken Fokus auf Benutzerfreundlichkeit
+              entwickelt, von iterativen Wireframes bis hin zur finalen App in
+              Svelte. Die intuitive Benutzeroberfläche präsentiert alle
+              gesammelten Daten übersichtlich und erleichtert die Pflege für den
+              Nutzer. Dank effizienter Kommunikation zwischen den
+              Hardware-Komponenten via Websockets sowie einer skalierbaren
+              Datenbankstruktur mit MongoDB gewährleistet PlantMonit eine
+              zuverlässige Datenerfassung und -übertragung. Durch diesen
+              methodischen Ansatz entstand ein Produkt, das die Bedürfnisse der
+              Zielgruppe erfüllt und die Pflanzenpflege erheblich vereinfacht.
+              PlantMonit verbindet modernste Technologie mit
+              benutzerfreundlichem Design und sorgt so für gesunde Pflanzen –
+              sowohl für Einsteiger als auch für erfahrene Gärtner.
             </div>
           </div>
           <div class="image medium">
