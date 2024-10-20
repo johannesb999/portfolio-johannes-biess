@@ -64,10 +64,10 @@
 
     <div id="title">
       <a
-        href="docs/CuriculumVitae.pdf"
-        download="CVJohannesBiess.pdf"
+        href="/docs/ResumeEn.pdf"
+        download="ResumeJohannesBiess.pdf"
         class="custom-link"
-        >DOWNLOAD FULL CV.pdf</a
+        >Download Full Resume.pdf</a
       >
     </div>
   </main>

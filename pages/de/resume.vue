@@ -62,7 +62,14 @@
           <div style="clear: both"></div>
         </ul>
       </div>
-      <div id="title">LEBENSLAUF.pdf HERUNTERLADEN</div>
+      <div id="title">
+        <a
+          href="/docs/Resume.pdf"
+          download="ResumeJohannesBiess.pdf"
+          class="custom-link"
+          >Resume.pdf herunterladen</a
+        >
+      </div>
     </main>
   </html>
 </template>
