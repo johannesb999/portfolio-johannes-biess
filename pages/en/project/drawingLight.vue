@@ -43,23 +43,23 @@
             <div class="paragraph">
               DrawingLight was born out of a desire to reinterpret traditional
               art through the creative use of modern technology. Instead of
-              simply developing a machine that moves a pen across paper, we
-              wanted to create a tool that opens up a whole new dimension of
-              artistic possibilities and rethinks classic <br />drawing machines
-              in an innovative way. <br /><br />In photography, the combination
-              of light, movement and time creates impressive works of art that
-              capture fleeting movements and traces of light and outlast the
-              moment. This is exactly where DrawingLight comes in, taking this
-              concept to an interactive dimension. <br />It allows users not
-              only to view light painting, but also to actively experience and
-              create it. This offers a unique opportunity to merge art and
-              technology in a dynamic way. DrawingLight not only opens up
-              artistic freedom to create individual works of light art, but also
-              offers great potential for interactive installations and events in
-              which light is used as a living means of expression. <br />By
-              combining innovative technologies and creative approaches, we show
-              how technical solutions can expand the boundaries of art and
-              unleash creative potential that goes far beyond its original use.
+              developing a simple machine that moves a pen across paper, the
+              goal was to create a tool that opens up a new dimension of
+              artistic possibilities and rethinks classic drawing machines in an
+              innovative way. In photography, the combination of light,
+              movement, and time creates impressive works of art that capture
+              fleeting movements and traces of light, preserving them beyond the
+              moment. DrawingLight builds on this concept, taking it into an
+              interactive dimension. It allows users not only to observe light
+              painting but to actively experience and create it. This opens up a
+              unique opportunity to merge art and technology dynamically.
+              DrawingLight not only provides artistic freedom to create
+              individual works of light art, but also holds great potential for
+              interactive installations and events where light becomes a living
+              means of expression. By combining innovative technologies and
+              creative approaches, it demonstrates how technical solutions can
+              expand the boundaries of art and unleash creative potential that
+              goes far beyond their original purpose.
             </div>
           </div>
           <div class="image medium">
@@ -76,27 +76,26 @@
           <div class="text">
             <SplitFlapText :texts="['           [PROCESS]           ']" />
             <div class="paragraph">
-              The process began by interpreting the generic task - developing a
-              mechanical drawing device to create lines and shapes - in a way
-              that goes beyond the obvious. My aim is always to turn every task
-              into something special, to think outside the box and not in a
-              straight line. <br />This is how the idea of light painting came
-              about, inspired by my interest in photography. Next step was to
-              select the appropriate technology. <br />We needed a light source
+              The process began by interpreting the generic task of developing a
+              mechanical drawing device to create lines and shapes in a way that
+              goes beyond the obvious. My aim is always to turn each task into
+              something special, thinking outside the box rather than in a
+              straight line. This is how the idea of light painting emerged,
+              inspired by an interest in photography. The next step was
+              selecting the appropriate technology. A light source was needed
               that was flexible enough to create interesting and dynamic light
-              patterns, but not too bright to ensure a pleasant visual
-              experience. We also looked at how the control of the system could
-              best be implemented. <br />The requirements for the input method
-              were that it should be intuitive, easily accessible and novel for
-              every user, regardless of their previous experience.<br />
-              We considered various options - such as using a stylus on a
-              tablet, controlling it with a mouse or recognizing hand gestures
-              with modern tracking technologies such as Google MediaPipe. This
-              exploratory phase helped us to evaluate the different
-              possibilities and assess the potential of each option for our
-              concept. During prototyping, we continuously tested and improved
-              the components to ensure they met our requirements and could
-              support the vision of a <br />creative, interactive installation.
+              patterns, yet not too bright to ensure a pleasant visual
+              experience. The focus was also on how best to implement the
+              system's control. The input method needed to be intuitive, easily
+              accessible, and novel for any user, regardless of previous
+              experience. Various options were explored—such as using a stylus
+              on a tablet, controlling it with a mouse, or recognizing hand
+              gestures using modern tracking technologies like Google MediaPipe.
+              This exploratory phase allowed for the evaluation of different
+              possibilities and an assessment of the potential of each option
+              for the concept. During prototyping, components were continuously
+              tested and improved to ensure they met the requirements and
+              supported the vision of a creative, interactive installation.
             </div>
           </div>
         </div>
@@ -107,30 +106,29 @@
           <div class="text">
             <SplitFlapText :texts="['        [IMPLEMENTATION]       ']" />
             <div class="paragraph">
-              The implementation proved to be a challenge in the details.<br />
-              Due to the dispersion of the light source, we decided to build a
-              relatively large machine in order to obtain a detailed image.
-              After comparing various mechanical options for realizing a
-              movement in the coordinate system, the choice fell on a system
-              with two stepper motors. <br />These motors were attached to
-              tripods and moved a string by winding and unwinding it. In order
-              to optimally adjust the rollers that were attached to the motors,
-              we modeled our own 3D parts in Fusion 360. <br />This solution
-              enabled us to draw an image of almost any size with comparatively
-              few resources - unlike a conventional rail system. For the input,
-              we opted for innovative control via hand gesture recognition using
-              Google MediaPipe.<br />
-              This was implemented with a Node.js script via the laptop webcam,
-              enabling intuitive control of the light source. In addition, a
-              NeoPixel was used whose light color could be controlled via a
-              joystick. This combination created a dynamic and interactive
-              control where users could directly influence the result. <br />The
-              light painting process was structured as follows: Users initially
-              had 10 seconds to paint a figure in the air. The hand movements
-              were recorded via the laptop webcam and the coordinates of the
-              palm were tracked. The machine then took these coordinates to
-              recreate the movement within 30 seconds, while the camera took a
-              long exposure of the resulting artwork.
+              The implementation presented challenges in the finer details. Due
+              to the dispersion of the light source, a relatively large machine
+              was built to achieve a detailed image. After comparing various
+              mechanical options for creating movement within a coordinate
+              system, the decision was made to use a system with two stepper
+              motors. These motors were mounted on tripods and moved a string by
+              winding and unwinding it. To optimize the rollers attached to the
+              motors, custom 3D parts were modeled in Fusion 360. This solution
+              allowed for the creation of images in almost any size with
+              relatively few resources, unlike a conventional rail system. For
+              the input, innovative control was achieved through hand gesture
+              recognition using Google MediaPipe. This was implemented via a
+              Node.js script using the laptop's webcam, enabling intuitive
+              control of the light source. Additionally, a NeoPixel was used,
+              allowing users to control the light color through a joystick. This
+              combination provided a dynamic and interactive control, where
+              users could directly influence the final result. The light
+              painting process was structured as follows: Users had 10 seconds
+              to paint a figure in the air, with hand movements recorded via the
+              laptop's webcam, tracking the palm's coordinates. The machine then
+              used these coordinates to recreate the movement within 30 seconds,
+              while the camera captured a long exposure of the resulting
+              artwork.
             </div>
           </div>
           <div class="image large">
@@ -156,7 +154,11 @@
         </div>
 
         <div class="project-section">
-          <SplitFlapText :texts="['          [PROJECT] [VIDEO]          ']" />
+          <SplitFlapText
+            :texts="[
+              '                        [PROJECT] [VIDEO]                       ',
+            ]"
+          />
         </div>
         <div class="project-section">
           <div class="project-video">
@@ -191,23 +193,23 @@
             <div class="paragraph">
               DrawingLight was born out of a desire to reinterpret traditional
               art through the creative use of modern technology. Instead of
-              simply developing a machine that moves a pen across paper, we
-              wanted to create a tool that opens up a whole new dimension of
-              artistic possibilities and rethinks classic <br />drawing machines
-              in an innovative way. <br /><br />In photography, the combination
-              of light, movement and time creates impressive works of art that
-              capture fleeting movements and traces of light and outlast the
-              moment. This is exactly where DrawingLight comes in, taking this
-              concept to an interactive dimension. <br />It allows users not
-              only to view light painting, but also to actively experience and
-              create it. This offers a unique opportunity to merge art and
-              technology in a dynamic way. DrawingLight not only opens up
-              artistic freedom to create individual works of light art, but also
-              offers great potential for interactive installations and events in
-              which light is used as a living means of expression. <br />By
-              combining innovative technologies and creative approaches, we show
-              how technical solutions can expand the boundaries of art and
-              unleash creative potential that goes far beyond its original use.
+              developing a simple machine that moves a pen across paper, the
+              goal was to create a tool that opens up a new dimension of
+              artistic possibilities and rethinks classic drawing machines in an
+              innovative way. In photography, the combination of light,
+              movement, and time creates impressive works of art that capture
+              fleeting movements and traces of light, preserving them beyond the
+              moment. DrawingLight builds on this concept, taking it into an
+              interactive dimension. It allows users not only to observe light
+              painting but to actively experience and create it. This opens up a
+              unique opportunity to merge art and technology dynamically.
+              DrawingLight not only provides artistic freedom to create
+              individual works of light art, but also holds great potential for
+              interactive installations and events where light becomes a living
+              means of expression. By combining innovative technologies and
+              creative approaches, it demonstrates how technical solutions can
+              expand the boundaries of art and unleash creative potential that
+              goes far beyond their original purpose.
             </div>
           </div>
           <div class="image medium">
@@ -221,27 +223,26 @@
           <div class="text">
             <SplitFlapText :texts="['              [PROCESS]            ']" />
             <div class="paragraph">
-              The process began by interpreting the generic task - developing a
-              mechanical drawing device to create lines and shapes - in a way
-              that goes beyond the obvious. My aim is always to turn every task
-              into something special, to think outside the box and not in a
-              straight line. <br />This is how the idea of light painting came
-              about, inspired by my interest in photography. Next step was to
-              select the appropriate technology. <br />We needed a light source
+              The process began by interpreting the generic task of developing a
+              mechanical drawing device to create lines and shapes in a way that
+              goes beyond the obvious. My aim is always to turn each task into
+              something special, thinking outside the box rather than in a
+              straight line. This is how the idea of light painting emerged,
+              inspired by an interest in photography. The next step was
+              selecting the appropriate technology. A light source was needed
               that was flexible enough to create interesting and dynamic light
-              patterns, but not too bright to ensure a pleasant visual
-              experience. We also looked at how the control of the system could
-              best be implemented. <br />The requirements for the input method
-              were that it should be intuitive, easily accessible and novel for
-              every user, regardless of their previous experience.<br />
-              We considered various options - such as using a stylus on a
-              tablet, controlling it with a mouse or recognizing hand gestures
-              with modern tracking technologies such as Google MediaPipe. This
-              exploratory phase helped us to evaluate the different
-              possibilities and assess the potential of each option for our
-              concept. During prototyping, we continuously tested and improved
-              the components to ensure they met our requirements and could
-              support the vision of a <br />creative, interactive installation.
+              patterns, yet not too bright to ensure a pleasant visual
+              experience. The focus was also on how best to implement the
+              system's control. The input method needed to be intuitive, easily
+              accessible, and novel for any user, regardless of previous
+              experience. Various options were explored—such as using a stylus
+              on a tablet, controlling it with a mouse, or recognizing hand
+              gestures using modern tracking technologies like Google MediaPipe.
+              This exploratory phase allowed for the evaluation of different
+              possibilities and an assessment of the potential of each option
+              for the concept. During prototyping, components were continuously
+              tested and improved to ensure they met the requirements and
+              supported the vision of a creative, interactive installation.
             </div>
           </div>
           <div class="image medium">
@@ -255,30 +256,29 @@
           <div class="text">
             <SplitFlapText :texts="['          [IMPLEMENTATION]         ']" />
             <div class="paragraph">
-              The implementation proved to be a challenge in the details.<br />
-              Due to the dispersion of the light source, we decided to build a
-              relatively large machine in order to obtain a detailed image.
-              After comparing various mechanical options for realizing a
-              movement in the coordinate system, the choice fell on a system
-              with two stepper motors. <br />These motors were attached to
-              tripods and moved a string by winding and unwinding it. In order
-              to optimally adjust the rollers that were attached to the motors,
-              we modeled our own 3D parts in Fusion 360. <br />This solution
-              enabled us to draw an image of almost any size with comparatively
-              few resources - unlike a conventional rail system. For the input,
-              we opted for innovative control via hand gesture recognition using
-              Google MediaPipe.<br />
-              This was implemented with a Node.js script via the laptop webcam,
-              enabling intuitive control of the light source. In addition, a
-              NeoPixel was used whose light color could be controlled via a
-              joystick. This combination created a dynamic and interactive
-              control where users could directly influence the result. <br />The
-              light painting process was structured as follows: Users initially
-              had 10 seconds to paint a figure in the air. The hand movements
-              were recorded via the laptop webcam and the coordinates of the
-              palm were tracked. The machine then took these coordinates to
-              recreate the movement within 30 seconds, while the camera took a
-              long exposure of the resulting artwork.
+              The implementation presented challenges in the finer details. Due
+              to the dispersion of the light source, a relatively large machine
+              was built to achieve a detailed image. After comparing various
+              mechanical options for creating movement within a coordinate
+              system, the decision was made to use a system with two stepper
+              motors. These motors were mounted on tripods and moved a string by
+              winding and unwinding it. To optimize the rollers attached to the
+              motors, custom 3D parts were modeled in Fusion 360. This solution
+              allowed for the creation of images in almost any size with
+              relatively few resources, unlike a conventional rail system. For
+              the input, innovative control was achieved through hand gesture
+              recognition using Google MediaPipe. This was implemented via a
+              Node.js script using the laptop's webcam, enabling intuitive
+              control of the light source. Additionally, a NeoPixel was used,
+              allowing users to control the light color through a joystick. This
+              combination provided a dynamic and interactive control, where
+              users could directly influence the final result. The light
+              painting process was structured as follows: Users had 10 seconds
+              to paint a figure in the air, with hand movements recorded via the
+              laptop's webcam, tracking the palm's coordinates. The machine then
+              used these coordinates to recreate the movement within 30 seconds,
+              while the camera captured a long exposure of the resulting
+              artwork.
             </div>
           </div>
           <div class="image large">
@@ -339,23 +339,23 @@
             <div class="paragraph">
               DrawingLight was born out of a desire to reinterpret traditional
               art through the creative use of modern technology. Instead of
-              simply developing a machine that moves a pen across paper, we
-              wanted to create a tool that opens up a whole new dimension of
-              artistic possibilities and rethinks classic <br />drawing machines
-              in an innovative way. <br /><br />In photography, the combination
-              of light, movement and time creates impressive works of art that
-              capture fleeting movements and traces of light and outlast the
-              moment. This is exactly where DrawingLight comes in, taking this
-              concept to an interactive dimension. <br />It allows users not
-              only to view light painting, but also to actively experience and
-              create it. This offers a unique opportunity to merge art and
-              technology in a dynamic way. DrawingLight not only opens up
-              artistic freedom to create individual works of light art, but also
-              offers great potential for interactive installations and events in
-              which light is used as a living means of expression. <br />By
-              combining innovative technologies and creative approaches, we show
-              how technical solutions can expand the boundaries of art and
-              unleash creative potential that goes far beyond its original use.
+              developing a simple machine that moves a pen across paper, the
+              goal was to create a tool that opens up a new dimension of
+              artistic possibilities and rethinks classic drawing machines in an
+              innovative way. In photography, the combination of light,
+              movement, and time creates impressive works of art that capture
+              fleeting movements and traces of light, preserving them beyond the
+              moment. DrawingLight builds on this concept, taking it into an
+              interactive dimension. It allows users not only to observe light
+              painting but to actively experience and create it. This opens up a
+              unique opportunity to merge art and technology dynamically.
+              DrawingLight not only provides artistic freedom to create
+              individual works of light art, but also holds great potential for
+              interactive installations and events where light becomes a living
+              means of expression. By combining innovative technologies and
+              creative approaches, it demonstrates how technical solutions can
+              expand the boundaries of art and unleash creative potential that
+              goes far beyond their original purpose.
             </div>
           </div>
           <div class="image medium">
@@ -369,27 +369,26 @@
           <div class="text">
             <SplitFlapText :texts="['         [PROCESS]        ']" />
             <div class="paragraph">
-              The process began by interpreting the generic task - developing a
-              mechanical drawing device to create lines and shapes - in a way
-              that goes beyond the obvious. My aim is always to turn every task
-              into something special, to think outside the box and not in a
-              straight line. <br />This is how the idea of light painting came
-              about, inspired by my interest in photography. Next step was to
-              select the appropriate technology. <br />We needed a light source
+              The process began by interpreting the generic task of developing a
+              mechanical drawing device to create lines and shapes in a way that
+              goes beyond the obvious. My aim is always to turn each task into
+              something special, thinking outside the box rather than in a
+              straight line. This is how the idea of light painting emerged,
+              inspired by an interest in photography. The next step was
+              selecting the appropriate technology. A light source was needed
               that was flexible enough to create interesting and dynamic light
-              patterns, but not too bright to ensure a pleasant visual
-              experience. We also looked at how the control of the system could
-              best be implemented. <br />The requirements for the input method
-              were that it should be intuitive, easily accessible and novel for
-              every user, regardless of their previous experience.<br />
-              We considered various options - such as using a stylus on a
-              tablet, controlling it with a mouse or recognizing hand gestures
-              with modern tracking technologies such as Google MediaPipe. This
-              exploratory phase helped us to evaluate the different
-              possibilities and assess the potential of each option for our
-              concept. During prototyping, we continuously tested and improved
-              the components to ensure they met our requirements and could
-              support the vision of a <br />creative, interactive installation.
+              patterns, yet not too bright to ensure a pleasant visual
+              experience. The focus was also on how best to implement the
+              system's control. The input method needed to be intuitive, easily
+              accessible, and novel for any user, regardless of previous
+              experience. Various options were explored—such as using a stylus
+              on a tablet, controlling it with a mouse, or recognizing hand
+              gestures using modern tracking technologies like Google MediaPipe.
+              This exploratory phase allowed for the evaluation of different
+              possibilities and an assessment of the potential of each option
+              for the concept. During prototyping, components were continuously
+              tested and improved to ensure they met the requirements and
+              supported the vision of a creative, interactive installation.
             </div>
           </div>
           <div class="image medium">
@@ -403,30 +402,29 @@
           <div class="text">
             <SplitFlapText :texts="['     [IMPLEMENTATION]      ']" />
             <div class="paragraph">
-              The implementation proved to be a challenge in the details.<br />
-              Due to the dispersion of the light source, we decided to build a
-              relatively large machine in order to obtain a detailed image.
-              After comparing various mechanical options for realizing a
-              movement in the coordinate system, the choice fell on a system
-              with two stepper motors. <br />These motors were attached to
-              tripods and moved a string by winding and unwinding it. In order
-              to optimally adjust the rollers that were attached to the motors,
-              we modeled our own 3D parts in Fusion 360. <br />This solution
-              enabled us to draw an image of almost any size with comparatively
-              few resources - unlike a conventional rail system. For the input,
-              we opted for innovative control via hand gesture recognition using
-              Google MediaPipe.<br />
-              This was implemented with a Node.js script via the laptop webcam,
-              enabling intuitive control of the light source. In addition, a
-              NeoPixel was used whose light color could be controlled via a
-              joystick. This combination created a dynamic and interactive
-              control where users could directly influence the result. <br />The
-              light painting process was structured as follows: Users initially
-              had 10 seconds to paint a figure in the air. The hand movements
-              were recorded via the laptop webcam and the coordinates of the
-              palm were tracked. The machine then took these coordinates to
-              recreate the movement within 30 seconds, while the camera took a
-              long exposure of the resulting artwork.
+              The implementation presented challenges in the finer details. Due
+              to the dispersion of the light source, a relatively large machine
+              was built to achieve a detailed image. After comparing various
+              mechanical options for creating movement within a coordinate
+              system, the decision was made to use a system with two stepper
+              motors. These motors were mounted on tripods and moved a string by
+              winding and unwinding it. To optimize the rollers attached to the
+              motors, custom 3D parts were modeled in Fusion 360. This solution
+              allowed for the creation of images in almost any size with
+              relatively few resources, unlike a conventional rail system. For
+              the input, innovative control was achieved through hand gesture
+              recognition using Google MediaPipe. This was implemented via a
+              Node.js script using the laptop's webcam, enabling intuitive
+              control of the light source. Additionally, a NeoPixel was used,
+              allowing users to control the light color through a joystick. This
+              combination provided a dynamic and interactive control, where
+              users could directly influence the final result. The light
+              painting process was structured as follows: Users had 10 seconds
+              to paint a figure in the air, with hand movements recorded via the
+              laptop's webcam, tracking the palm's coordinates. The machine then
+              used these coordinates to recreate the movement within 30 seconds,
+              while the camera captured a long exposure of the resulting
+              artwork.
             </div>
           </div>
           <div class="image large">

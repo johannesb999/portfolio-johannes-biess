@@ -66,18 +66,17 @@
           <div class="text">
             <SplitFlapText :texts="['          [PROCESS]          ']" />
             <div class="paragraph">
-              To get a feel for what users need, we started by taking a look at
-              what other platforms are out there. We used user research methods
-              like user interviews and analyzing what customers want to really
-              understand what the target group needs. We used these findings to
-              put together a rough prototype, which we then made some more
-              improvements to. As we went along, we kept making changes based on
-              tests with potential users to make it even more user-friendly. We
-              used the low- and mid-fidelity prototypes we made in Figma as a
-              starting point for regular user tests. We used an iterative
-              approach and took user feedback into account to create a platform
-              that's both functional and intuitive. This effectively simplifies
-              the complexity of the many functions.
+              To get a feel for what users need, the process began by exploring
+              other platforms. User research methods like user interviews and
+              analyzing customer needs were used to gain a deep understanding of
+              the target group. These insights were used to create a rough
+              prototype, which was then gradually improved. As development
+              continued, changes were made based on tests with potential users
+              to enhance user-friendliness. The low- and mid-fidelity prototypes
+              created in Figma served as a foundation for regular user tests. An
+              iterative approach, incorporating user feedback, led to the
+              development of a platform that is both functional and intuitive,
+              simplifying the complexity of its many features.
             </div>
           </div>
         </div>
@@ -168,18 +167,17 @@
           <div class="text">
             <SplitFlapText :texts="['              [PROCESS]            ']" />
             <div class="paragraph">
-              To get a feel for what users need, we started by taking a look at
-              what other platforms are out there. We used user research methods
-              like user interviews and analyzing what customers want to really
-              understand what the target group needs. We used these findings to
-              put together a rough prototype, which we then made some more
-              improvements to. As we went along, we kept making changes based on
-              tests with potential users to make it even more user-friendly. We
-              used the low- and mid-fidelity prototypes we made in Figma as a
-              starting point for regular user tests. We used an iterative
-              approach and took user feedback into account to create a platform
-              that's both functional and intuitive. This effectively simplifies
-              the complexity of the many functions.
+              To get a feel for what users need, the process began by exploring
+              other platforms. User research methods like user interviews and
+              analyzing customer needs were used to gain a deep understanding of
+              the target group. These insights were used to create a rough
+              prototype, which was then gradually improved. As development
+              continued, changes were made based on tests with potential users
+              to enhance user-friendliness. The low- and mid-fidelity prototypes
+              created in Figma served as a foundation for regular user tests. An
+              iterative approach, incorporating user feedback, led to the
+              development of a platform that is both functional and intuitive,
+              simplifying the complexity of its many features.
             </div>
           </div>
           <div class="image small">
@@ -273,18 +271,17 @@
           <div class="text">
             <SplitFlapText :texts="['         [PROCESS]         ']" />
             <div class="paragraph">
-              To get a feel for what users need, we started by taking a look at
-              what other platforms are out there. We used user research methods
-              like user interviews and analyzing what customers want to really
-              understand what the target group needs. We used these findings to
-              put together a rough prototype, which we then made some more
-              improvements to. As we went along, we kept making changes based on
-              tests with potential users to make it even more user-friendly. We
-              used the low- and mid-fidelity prototypes we made in Figma as a
-              starting point for regular user tests. We used an iterative
-              approach and took user feedback into account to create a platform
-              that's both functional and intuitive. This effectively simplifies
-              the complexity of the many functions.
+              To get a feel for what users need, the process began by exploring
+              other platforms. User research methods like user interviews and
+              analyzing customer needs were used to gain a deep understanding of
+              the target group. These insights were used to create a rough
+              prototype, which was then gradually improved. As development
+              continued, changes were made based on tests with potential users
+              to enhance user-friendliness. The low- and mid-fidelity prototypes
+              created in Figma served as a foundation for regular user tests. An
+              iterative approach, incorporating user feedback, led to the
+              development of a platform that is both functional and intuitive,
+              simplifying the complexity of its many features.
             </div>
           </div>
           <div class="image small">

@@ -68,22 +68,22 @@
           <div class="text">
             <SplitFlapText :texts="['           [PROCESS]           ']" />
             <div class="paragraph">
-              At the start of the project, we did a bit of research to see what
-              other solutions were already out there on the market. We wanted to
-              see which functions were already up to scratch and where there was
-              room for improvement. This analysis helped us see where we could
-              make improvements and focus our solution on those areas.Next, we
-              put together a detailed persona to clearly define what our target
-              group needed. From this work, we realized that our goal was to
-              create a solution that would make it possible to care for plants
-              in a minimal amount of time—and appeal to both hobby gardeners and
-              experienced plant lovers alike.At the same time, we also designed
-              a user journey that covers the whole process of using the app,
-              from installation to everyday use. By creating detailed user
-              paths, we made sure that the user experience was smooth and
-              intuitive. Along with user testing, this resulted in a thoughtful
-              and user-friendly setup process that helped us identify potential
-              issues early on and make user-friendliness more targeted.
+              At the start of the project, research was conducted to explore
+              existing solutions on the market. The aim was to assess which
+              functions were already well-implemented and where there was room
+              for improvement. This analysis provided insights into areas that
+              could be enhanced, allowing the solution to focus on those
+              specific aspects. A detailed persona was then created to clearly
+              define the needs of the target group. From this, it became evident
+              that the goal was to develop a solution enabling minimal time
+              commitment for plant care, appealing to both hobby gardeners and
+              experienced plant enthusiasts. Simultaneously, a user journey was
+              designed to cover the entire app experience, from installation to
+              daily use. By mapping out detailed user paths, a smooth and
+              intuitive user experience was ensured. Combined with user testing,
+              this resulted in a well-thought-out and user-friendly setup
+              process that helped identify potential issues early and enhanced
+              overall usability.
             </div>
           </div>
         </div>
@@ -98,17 +98,16 @@
             <div class="paragraph">
               <h3>Software Process</h3>
 
-              We started with the software process by creating low-fi, mid-fi,
-              and high-fi wireframes to plan the structure and user experience
-              of the application. This process was very iterative, with a big
-              focus on the user experience. Each version was optimized through
-              user feedback. We used the high-fi Figma click dummy to test the
-              user experience and make sure everything was seamless and
-              intuitive. Once we got good feedback on the Figma dummy and were
-              happy with the design, we started implementing the web app with
-              Svelte. Our focus was on implementing the functions from the Figma
-              dummy in detail and making sure the user experience was smooth and
-              high-performance.
+              The software process started with creating low-fi, mid-fi, and
+              high-fi wireframes to plan the structure and user experience of
+              the application. It was an iterative process, with a strong focus
+              on refining the user experience at every stage. Each version was
+              improved based on user feedback. The high-fi Figma click dummy was
+              used to test the user flow and ensure everything felt smooth and
+              intuitive. After receiving positive feedback and being satisfied
+              with the design, the web app was implemented using Svelte. The
+              focus was on carefully translating the Figma prototype’s features
+              and ensuring that the user experience remained smooth and fast.
             </div>
           </div>
         </div>
@@ -122,18 +121,17 @@
           <div class="text">
             <div class="paragraph">
               <h3>Hardware Process</h3>
-              We started with an analysis of what hardware we needed. We figured
-              out what our smart tool needed to do and then picked the right
-              parts, like an ESP32 as a microcontroller and different sensors
-              for tracking environmental data. We put the components together in
-              a way that met the system requirements. Next, we built a
-              prototype. We used the principle of rapid prototyping to quickly
-              get a clear picture of our design. We used Fusion360 to print a
-              housing for the selected components. This let us integrate them
-              quickly and identify problems early on. Once the housing was
-              printed, we connected all the hardware components and installed
-              them in it. This let us ensure that the hardware was not only
-              functional but also practical for final use.
+              The process started with an analysis of the necessary hardware.
+              The functions of the smart tool were identified, leading to the
+              selection of components such as an ESP32 microcontroller and
+              various sensors for tracking environmental data. The components
+              were chosen and assembled to meet the system's requirements. A
+              prototype was then built using rapid prototyping to quickly
+              visualize the design. Fusion360 was used to 3D print a housing for
+              the selected components, allowing for quick integration and early
+              problem identification. After the housing was printed, all
+              hardware components were connected and installed, ensuring that
+              the hardware was both functional and practical for final use.
             </div>
           </div>
         </div>
@@ -144,25 +142,24 @@
           <div class="text">
             <SplitFlapText :texts="['          [SOLUTION]           ']" />
             <div class="paragraph">
-              Through this structured, methodical approach, we developed a
-              product that meets our target audience's needs and significantly
-              simplifies plant care. PlantMonit combines cutting-edge technology
-              with a user-friendly design to ensure optimal plant maintenance.
-              <br />
-              Key Features of PlantMonit: Automatic Plant Monitoring: Sensors
-              for soil moisture, humidity, temperature, and light continuously
-              monitor the vital data of plants. Advanced Image Analysis: The use
-              of the OpenAI Vision API allows for detailed analysis of plant
-              images, contributing to early problem detection. Intuitive User
-              Interface: A user-friendly app that presents all collected data
-              clearly and provides personalized care tips. Seamless Integration:
-              Efficient communication between hardware components via Websockets
-              ensures reliable data transmission and easy setup. Scalable
-              Database: A robust backend structure with MongoDB and Mongoose
-              ensures efficient data storage and management. By combining these
-              elements, we created an innovative solution that revolutionizes
-              plant care and helps both beginners and experienced gardeaners
-              keep their plants healthy.
+              Through a structured, methodical approach, a product was developed
+              that effectively addresses the needs of the target audience and
+              simplifies plant care significantly. PlantMonit merges advanced
+              technology with a design focused on user-friendliness to guarantee
+              optimal plant maintenance. The product features automatic plant
+              monitoring, where sensors continuously track crucial data such as
+              soil moisture, humidity, temperature, and light. With advanced
+              image analysis, powered by the OpenAI Vision API, plant images are
+              thoroughly examined, allowing for early detection of potential
+              problems. The user-friendly app organizes all collected data
+              clearly and offers personalized care tips. Seamless integration
+              ensures smooth communication between hardware components through
+              Websockets, ensuring reliable data transmission and an easy setup
+              process. The backend is supported by a scalable database built
+              with MongoDB and Mongoose, enabling efficient data storage and
+              management. Together, these components create an innovative
+              solution that transforms plant care and supports both novice and
+              seasoned gardeners in maintaining healthy plants.
             </div>
           </div>
           <div class="image large">
@@ -198,21 +195,23 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['              [PROBLEM]            ']" />
+            <SplitFlapText
+              :texts="['                  [PROBLEM]                  ']"
+            />
             <div class="paragraph">
               In the rush of everyday life, there's often not much time left for
               caring for indoor and garden plants. Many people, especially those
               with stressful jobs or time-consuming commitments, often forget to
               water, fertilize, or position their plants correctly. <br />
               <br />This often results in plants withering, being over- or
-              under-watered, or generally not receiving the care they need.<br />
+              under-watered, or generally not receiving the care they need.
               According to the latest stats, 37% of amateur gardeners lose one
               or two houseplants every year. Millennials in particular seem to
               have more problems with this, with an average of around seven
               houseplants dying each year.
             </div>
           </div>
-          <div class="image small">
+          <div class="image medium">
             <img src="public\img\pm\problem.svg" alt="plantmonit" />
           </div>
         </div>
@@ -221,27 +220,29 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['             [PROCESS]             ']" />
+            <SplitFlapText
+              :texts="['                  [PROCESS]                  ']"
+            />
             <div class="paragraph">
-              At the start of the project, we did a bit of research to see what
-              other solutions were already out there on the market. We wanted to
-              see which functions were already up to scratch and where there was
-              room for improvement. This analysis helped us see where we could
-              make improvements and focus our solution on those areas.Next, we
-              put together a detailed persona to clearly define what our target
-              group needed. From this work, we realized that our goal was to
-              create a solution that would make it possible to care for plants
-              in a minimal amount of time—and appeal to both hobby gardeners and
-              experienced plant lovers alike.At the same time, we also designed
-              a user journey that covers the whole process of using the app,
-              from installation to everyday use. By creating detailed user
-              paths, we made sure that the user experience was smooth and
-              intuitive. Along with user testing, this resulted in a thoughtful
-              and user-friendly setup process that helped us identify potential
-              issues early on and make user-friendliness more targeted.
+              At the start of the project, research was conducted to explore
+              existing solutions on the market. The aim was to assess which
+              functions were already well-implemented and where there was room
+              for improvement. This analysis provided insights into areas that
+              could be enhanced, allowing the solution to focus on those
+              specific aspects. A detailed persona was then created to clearly
+              define the needs of the target group. From this, it became evident
+              that the goal was to develop a solution enabling minimal time
+              commitment for plant care, appealing to both hobby gardeners and
+              experienced plant enthusiasts. Simultaneously, a user journey was
+              designed to cover the entire app experience, from installation to
+              daily use. By mapping out detailed user paths, a smooth and
+              intuitive user experience was ensured. Combined with user testing,
+              this resulted in a well-thought-out and user-friendly setup
+              process that helped identify potential issues early and enhanced
+              overall usability.
             </div>
           </div>
-          <div class="image medium">
+          <div class="image small">
             <img src="public\img\pm\process.svg" alt="plantmonit" />
           </div>
         </div>
@@ -253,17 +254,16 @@
             <div class="paragraph">
               <h3>Software Process</h3>
 
-              We started with the software process by creating low-fi, mid-fi,
-              and high-fi wireframes to plan the structure and user experience
-              of the application. This process was very iterative, with a big
-              focus on the user experience. Each version was optimized through
-              user feedback. We used the high-fi Figma click dummy to test the
-              user experience and make sure everything was seamless and
-              intuitive. Once we got good feedback on the Figma dummy and were
-              happy with the design, we started implementing the web app with
-              Svelte. Our focus was on implementing the functions from the Figma
-              dummy in detail and making sure the user experience was smooth and
-              high-performance.
+              The software process started with creating low-fi, mid-fi, and
+              high-fi wireframes to plan the structure and user experience of
+              the application. It was an iterative process, with a strong focus
+              on refining the user experience at every stage. Each version was
+              improved based on user feedback. The high-fi Figma click dummy was
+              used to test the user flow and ensure everything felt smooth and
+              intuitive. After receiving positive feedback and being satisfied
+              with the design, the web app was implemented using Svelte. The
+              focus was on carefully translating the Figma prototype’s features
+              and ensuring that the user experience remained smooth and fast.
             </div>
           </div>
           <div class="image small">
@@ -277,18 +277,17 @@
           <div class="text">
             <div class="paragraph">
               <h3>Hardware Process</h3>
-              We started with an analysis of what hardware we needed. We figured
-              out what our smart tool needed to do and then picked the right
-              parts, like an ESP32 as a microcontroller and different sensors
-              for tracking environmental data. We put the components together in
-              a way that met the system requirements. Next, we built a
-              prototype. We used the principle of rapid prototyping to quickly
-              get a clear picture of our design. We used Fusion360 to print a
-              housing for the selected components. This let us integrate them
-              quickly and identify problems early on. Once the housing was
-              printed, we connected all the hardware components and installed
-              them in it. This let us ensure that the hardware was not only
-              functional but also practical for final use.
+              The process started with an analysis of the necessary hardware.
+              The functions of the smart tool were identified, leading to the
+              selection of components such as an ESP32 microcontroller and
+              various sensors for tracking environmental data. The components
+              were chosen and assembled to meet the system's requirements. A
+              prototype was then built using rapid prototyping to quickly
+              visualize the design. Fusion360 was used to 3D print a housing for
+              the selected components, allowing for quick integration and early
+              problem identification. After the housing was printed, all
+              hardware components were connected and installed, ensuring that
+              the hardware was both functional and practical for final use.
             </div>
           </div>
           <div class="image medium">
@@ -300,27 +299,28 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['             [SOLUTION]            ']" />
+            <SplitFlapText
+              :texts="['                  [SOLUTION]                 ']"
+            />
             <div class="paragraph">
-              Through this structured, methodical approach, we developed a
-              product that meets our target audience's needs and significantly
-              simplifies plant care. PlantMonit combines cutting-edge technology
-              with a user-friendly design to ensure optimal plant maintenance.
-              <br />
-              Key Features of PlantMonit: Automatic Plant Monitoring: Sensors
-              for soil moisture, humidity, temperature, and light continuously
-              monitor the vital data of plants. Advanced Image Analysis: The use
-              of the OpenAI Vision API allows for detailed analysis of plant
-              images, contributing to early problem detection. Intuitive User
-              Interface: A user-friendly app that presents all collected data
-              clearly and provides personalized care tips. Seamless Integration:
-              Efficient communication between hardware components via Websockets
-              ensures reliable data transmission and easy setup. Scalable
-              Database: A robust backend structure with MongoDB and Mongoose
-              ensures efficient data storage and management. By combining these
-              elements, we created an innovative solution that revolutionizes
-              plant care and helps both beginners and experienced gardeaners
-              keep their plants healthy.
+              Through a structured, methodical approach, a product was developed
+              that effectively addresses the needs of the target audience and
+              simplifies plant care significantly. PlantMonit merges advanced
+              technology with a design focused on user-friendliness to guarantee
+              optimal plant maintenance. The product features automatic plant
+              monitoring, where sensors continuously track crucial data such as
+              soil moisture, humidity, temperature, and light. With advanced
+              image analysis, powered by the OpenAI Vision API, plant images are
+              thoroughly examined, allowing for early detection of potential
+              problems. The user-friendly app organizes all collected data
+              clearly and offers personalized care tips. Seamless integration
+              ensures smooth communication between hardware components through
+              Websockets, ensuring reliable data transmission and an easy setup
+              process. The backend is supported by a scalable database built
+              with MongoDB and Mongoose, enabling efficient data storage and
+              management. Together, these components create an innovative
+              solution that transforms plant care and supports both novice and
+              seasoned gardeners in maintaining healthy plants.
             </div>
           </div>
           <div class="image large">
@@ -329,7 +329,9 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="['            [PROJECT] [VIDEO]            ']" />
+        <SplitFlapText
+          :texts="['               [PROJECT] [VIDEO]               ']"
+        />
         <div class="project-video">
           <iframe
             src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
@@ -382,22 +384,22 @@
           <div class="text">
             <SplitFlapText :texts="['         [PROCESS]         ']" />
             <div class="paragraph">
-              At the start of the project, we did a bit of research to see what
-              other solutions were already out there on the market. We wanted to
-              see which functions were already up to scratch and where there was
-              room for improvement. This analysis helped us see where we could
-              make improvements and focus our solution on those areas.Next, we
-              put together a detailed persona to clearly define what our target
-              group needed. From this work, we realized that our goal was to
-              create a solution that would make it possible to care for plants
-              in a minimal amount of time—and appeal to both hobby gardeners and
-              experienced plant lovers alike.At the same time, we also designed
-              a user journey that covers the whole process of using the app,
-              from installation to everyday use. By creating detailed user
-              paths, we made sure that the user experience was smooth and
-              intuitive. Along with user testing, this resulted in a thoughtful
-              and user-friendly setup process that helped us identify potential
-              issues early on and make user-friendliness more targeted.
+              At the start of the project, research was conducted to explore
+              existing solutions on the market. The aim was to assess which
+              functions were already well-implemented and where there was room
+              for improvement. This analysis provided insights into areas that
+              could be enhanced, allowing the solution to focus on those
+              specific aspects. A detailed persona was then created to clearly
+              define the needs of the target group. From this, it became evident
+              that the goal was to develop a solution enabling minimal time
+              commitment for plant care, appealing to both hobby gardeners and
+              experienced plant enthusiasts. Simultaneously, a user journey was
+              designed to cover the entire app experience, from installation to
+              daily use. By mapping out detailed user paths, a smooth and
+              intuitive user experience was ensured. Combined with user testing,
+              this resulted in a well-thought-out and user-friendly setup
+              process that helped identify potential issues early and enhanced
+              overall usability.
             </div>
           </div>
           <div class="image medium">
@@ -412,17 +414,16 @@
             <div class="paragraph">
               <h3>Software Process</h3>
 
-              We started with the software process by creating low-fi, mid-fi,
-              and high-fi wireframes to plan the structure and user experience
-              of the application. This process was very iterative, with a big
-              focus on the user experience. Each version was optimized through
-              user feedback. We used the high-fi Figma click dummy to test the
-              user experience and make sure everything was seamless and
-              intuitive. Once we got good feedback on the Figma dummy and were
-              happy with the design, we started implementing the web app with
-              Svelte. Our focus was on implementing the functions from the Figma
-              dummy in detail and making sure the user experience was smooth and
-              high-performance.
+              The software process started with creating low-fi, mid-fi, and
+              high-fi wireframes to plan the structure and user experience of
+              the application. It was an iterative process, with a strong focus
+              on refining the user experience at every stage. Each version was
+              improved based on user feedback. The high-fi Figma click dummy was
+              used to test the user flow and ensure everything felt smooth and
+              intuitive. After receiving positive feedback and being satisfied
+              with the design, the web app was implemented using Svelte. The
+              focus was on carefully translating the Figma prototype’s features
+              and ensuring that the user experience remained smooth and fast.
             </div>
           </div>
           <div class="image small">
@@ -436,18 +437,17 @@
           <div class="text">
             <div class="paragraph">
               <h3>Hardware Process</h3>
-              We started with an analysis of what hardware we needed. We figured
-              out what our smart tool needed to do and then picked the right
-              parts, like an ESP32 as a microcontroller and different sensors
-              for tracking environmental data. We put the components together in
-              a way that met the system requirements. Next, we built a
-              prototype. We used the principle of rapid prototyping to quickly
-              get a clear picture of our design. We used Fusion360 to print a
-              housing for the selected components. This let us integrate them
-              quickly and identify problems early on. Once the housing was
-              printed, we connected all the hardware components and installed
-              them in it. This let us ensure that the hardware was not only
-              functional but also practical for final use.
+              The process started with an analysis of the necessary hardware.
+              The functions of the smart tool were identified, leading to the
+              selection of components such as an ESP32 microcontroller and
+              various sensors for tracking environmental data. The components
+              were chosen and assembled to meet the system's requirements. A
+              prototype was then built using rapid prototyping to quickly
+              visualize the design. Fusion360 was used to 3D print a housing for
+              the selected components, allowing for quick integration and early
+              problem identification. After the housing was printed, all
+              hardware components were connected and installed, ensuring that
+              the hardware was both functional and practical for final use.
             </div>
           </div>
           <div class="image medium">
@@ -461,25 +461,24 @@
           <div class="text">
             <SplitFlapText :texts="['         [SOLUTION]        ']" />
             <div class="paragraph">
-              Through this structured, methodical approach, we developed a
-              product that meets our target audience's needs and significantly
-              simplifies plant care. PlantMonit combines cutting-edge technology
-              with a user-friendly design to ensure optimal plant maintenance.
-              <br />
-              Key Features of PlantMonit: Automatic Plant Monitoring: Sensors
-              for soil moisture, humidity, temperature, and light continuously
-              monitor the vital data of plants. Advanced Image Analysis: The use
-              of the OpenAI Vision API allows for detailed analysis of plant
-              images, contributing to early problem detection. Intuitive User
-              Interface: A user-friendly app that presents all collected data
-              clearly and provides personalized care tips. Seamless Integration:
-              Efficient communication between hardware components via Websockets
-              ensures reliable data transmission and easy setup. Scalable
-              Database: A robust backend structure with MongoDB and Mongoose
-              ensures efficient data storage and management. By combining these
-              elements, we created an innovative solution that revolutionizes
-              plant care and helps both beginners and experienced gardeaners
-              keep their plants healthy.
+              Through a structured, methodical approach, a product was developed
+              that effectively addresses the needs of the target audience and
+              simplifies plant care significantly. PlantMonit merges advanced
+              technology with a design focused on user-friendliness to guarantee
+              optimal plant maintenance. The product features automatic plant
+              monitoring, where sensors continuously track crucial data such as
+              soil moisture, humidity, temperature, and light. With advanced
+              image analysis, powered by the OpenAI Vision API, plant images are
+              thoroughly examined, allowing for early detection of potential
+              problems. The user-friendly app organizes all collected data
+              clearly and offers personalized care tips. Seamless integration
+              ensures smooth communication between hardware components through
+              Websockets, ensuring reliable data transmission and an easy setup
+              process. The backend is supported by a scalable database built
+              with MongoDB and Mongoose, enabling efficient data storage and
+              management. Together, these components create an innovative
+              solution that transforms plant care and supports both novice and
+              seasoned gardeners in maintaining healthy plants.
             </div>
           </div>
           <div class="image medium">

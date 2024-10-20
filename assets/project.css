@@ -336,10 +336,11 @@ h3 {
   .picture {
     height: 40vh;
     max-height: fit-content;
-    overflow: hidden;
     border: var(--border-size) solid var(--border-color-black);
     border-radius: var(--border-radius);
-    max-width: 50vw;
+    max-width: 40vw;
+    object-fit: contain;
+    object-position: center;
   }
 
   .project-details {
@@ -587,6 +588,8 @@ h3 {
     border: var(--border-size) solid var(--border-color-black);
     border-radius: var(--border-radius);
     max-width: 65vw;
+    object-fit: contain;
+    object-position: center;
   }
 
 
