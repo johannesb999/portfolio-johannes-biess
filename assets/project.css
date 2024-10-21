@@ -85,8 +85,8 @@ html {
 
 .wrapper {
   top: 50vh;
-  left: 65vw;
-  max-width: 35rem;
+  left: 67vw;
+  max-width: 30rem;
   transform: translate(-50%, -50%);
   flex-direction: row;
 }
@@ -94,7 +94,6 @@ html {
 .picture {
   display: flex;
   flex-direction: column;
-  width: 80vw;
   height: var(--img-height-md);
   max-height: fit-content;
   overflow: hidden;

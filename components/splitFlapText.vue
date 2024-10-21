@@ -522,7 +522,7 @@ a.custom-link.hitbox::after {
   .custom-style {
     font-weight: var(--font-weight-bold);
     color: var(--color-black);
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxxxl);
   }
 
   .link-style {

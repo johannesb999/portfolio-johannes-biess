@@ -40,7 +40,7 @@
               first time. You can find out more about what I learned and did
               during my apprenticeship in my
               <a
-                href="/public/docs/EmploymentReferenceDtack.pdf"
+                href="/docs/EmploymentReferenceDtack.pdf"
                 download="EmploymentReferenceDtack.pdf"
                 class="custom-link"
                 style="text-decoration: underline"
