@@ -160,6 +160,8 @@ html {
   text-decoration: none;
   left: 50%;
   position: relative;
+  text-decoration: underline;
+
 }
 
 .tryOutLink:hover {
@@ -176,7 +178,7 @@ html {
 }
 
 .project-video iframe {
-  border: var(--border-size) solid var(--color-black);
+  border: var(--border-size) solid var(--color-background);
   border-radius: var(--radius-md);
   width: 82rem;
   height: 50rem;
@@ -678,7 +680,7 @@ h3 {
   }
 
   .project-video iframe {
-    border: var(--border-size) solid var(--color-black);
+    border: var(--border-size) solid var(--color-gray-light);
     border-radius: var(--radius-md);
     width: 25rem;
     height: 15rem;
