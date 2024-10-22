@@ -42,14 +42,14 @@
           <div class="text">
             <SplitFlapText :texts="['            [IDEA]             ']" />
             <div class="paragraph">
-              The course asked to do something with stars. <br />A link to a CSV
-              file containing around 340,000 stars and their <br />data was
-              provided. The focus of the course was more on learning the
-              deployment pipeline than on developing unique content.<br />
+              The course asked to do something with stars. A link to a CSV file
+              containing around 340,000 stars and their data was provided. The
+              focus of the course was more on learning the deployment pipeline
+              than on developing unique content.<br />
               Despite this, My intention was to create a website that doesn't
               already exist in this form. Many people believe that the
-              constellation of the stars at the time of their birth has special
-              significance for their lives.<br />
+              constellation of the stars <br />at the time of their birth has
+              special significance for their lives.<br />
               This belief influences choices and attitudes in everyday life,
               from horoscopes to astrological predictions. The website was
               designed to demonstrate, in a fun way, that constellations are
@@ -379,10 +379,10 @@
                 angles can make the constellations appear less ordered.
                 <br />Users can see firsthand how random the arrangement of
                 celestial bodies really is—through their own discovery and
-                experience rather than direct instruction. <br />The website is built
-                using the Svelte framework, <br />with THREE.js managing the 3D
-                environment. Star data is stored in a MongoDB database, hosted
-                on a personal server along with the backend. Docker and
+                experience rather than direct instruction. <br />The website is
+                built using the Svelte framework, <br />with THREE.js managing
+                the 3D environment. Star data is stored in a MongoDB database,
+                hosted on a personal server along with the backend. Docker and
                 Portainer are used to manage the infrastructure, and GitHub
                 Actions provides an almost automated deployment pipeline,
                 facilitating easy application deployment.

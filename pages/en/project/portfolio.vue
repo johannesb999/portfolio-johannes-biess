@@ -44,29 +44,30 @@
           <div class="text">
             <SplitFlapText :texts="['          [PROBLEM]            ']" />
             <div class="paragraph">
-              How do i represent myself in a way that is both professional and
-              engaging? How do i showcase my skills and experience in a visually
-              appealing manner that is simple and established but in some way
-              new and modern. How do i make sure that my portfolio is not only a
-              reflection of my work but also a reflection of my personality and
-              my values? These are the questions that i asked myself when i
-              started working on my portfolio. I wanted to create a website that
-              would not only present my work but also show who i am and what i
-              stand for. I wanted to create a platform that would be both
-              informative and engaging, a place where people could inform
-              themeselves about my skills and experience but also get to know my
-              personality and my design philosophy.
+              How can I present myself in a way that is both professional and
+              engaging? How do I showcase my skills and experience in a way
+              that’s simple, yet modern and innovative? <br /><br />These were
+              the questions I asked myself when I started working on my
+              portfolio. My goal was to create a website that not only showcases
+              my work but also gives an authentic representation of my
+              personality and values. I wanted it to be a place where visitors
+              could not only learn about my skills and experience but also get a
+              sense of my design philosophy and creative approach.
             </div>
           </div>
-          <div class="image small">
-            <img src="public\img\po\problem.svg" alt="plantmonit" />
+          <div class="image medium">
+            <img
+              src="public\img\po\problem.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image small">
+          <div class="image medium">
             <img src="public\img\po\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
@@ -89,23 +90,27 @@
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image small">
-            <img src="public\img\po\softwarepro.svg" alt="plantmonit" />
+          <div class="image medium">
+            <img
+              src="public\img\po\softwarepro.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
           <div class="text">
             <div class="paragraph">
               <h3>Software Process</h3>
               Once I had a solid concept in Figma, it was time to turn it into a
-              functional website.<br />
-              I'd already worked with React, Next.js, and Svelte on other
-              projects, but I decided to use Nuxt 3 to learn more and get to
-              know another framework.<br />
+              functional website. I'd already worked with React, Next.js, and
+              Svelte on other projects, but I decided to use Nuxt 3 to learn
+              more and get to know another framework.<br /><br />
               This choice let me explore the Vue ecosystem more deeply while
               using the latest features of Nuxt to build a fast website.<br />
               I concentrated on making the code modular so that the website
-              would be easy to maintain and future updates would be simple. I
-              automated the deployment process using GitHub Actions to make sure
-              that I could keep developing the website without any breaks.
+              would be easy to maintain and future updates would be simple.
+              <br />I automated the deployment process using GitHub Actions to
+              make sure that I could keep developing the website without any
+              breaks.
             </div>
           </div>
         </div>
@@ -120,7 +125,11 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\po\implementation.svg" alt="plantmonit" />
+            <img
+              src="public\img\po\implementation.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -140,24 +149,27 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['             [PROBLEM]             ']" />
+            <SplitFlapText
+              :texts="['                  [PROBLEM]                  ']"
+            />
             <div class="paragraph">
-              How do i represent myself in a way that is both professional and
-              engaging? How do i showcase my skills and experience in a visually
-              appealing manner that is simple and established but in some way
-              new and modern. How do i make sure that my portfolio is not only a
-              reflection of my work but also a reflection of my personality and
-              my values? These are the questions that i asked myself when i
-              started working on my portfolio. I wanted to create a website that
-              would not only present my work but also show who i am and what i
-              stand for. I wanted to create a platform that would be both
-              informative and engaging, a place where people could inform
-              themeselves about my skills and experience but also get to know my
-              personality and my design philosophy.
+              How can I present myself in a way that is both professional and
+              engaging? <br />How do I showcase my skills and experience in a
+              way that’s simple, yet modern and innovative? These were the
+              questions I asked myself when I started working on my portfolio.
+              <br /><br />My goal was to create a website that not only
+              showcases my work but also gives an authentic representation of my
+              personality and values. I wanted it to be a place where visitors
+              could not only learn about my skills and experience but also get a
+              sense of my design philosophy and creative approach.
             </div>
           </div>
-          <div class="image small">
-            <img src="public\img\po\problem.svg" alt="plantmonit" />
+          <div class="image medium">
+            <img
+              src="public\img\po\problem.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -165,7 +177,9 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['             [PROCESS]             ']" />
+            <SplitFlapText
+              :texts="['                  [PROCESS]                  ']"
+            />
             <div class="paragraph">
               I started with a concept phase, where I thought through different
               layout options and design approaches for my portfolio website.
@@ -173,13 +187,13 @@
               would serve as an application, reflect my personality, follow the
               conventions of web design, and still look modern, unique, and
               individual. I wanted a design that would look clean and show off
-              my projects in a way that also reflected my personal values.<br />
-              After testing out different designs and making lots of changes, I
+              my projects in a way that also reflected my personal values. After
+              testing out different designs and making lots of changes, I
               finally found a solution that works well and I'm happy with. It
               looks great and it's also functional.
             </div>
           </div>
-          <div class="image small">
+          <div class="image medium">
             <img src="public\img\po\process.svg" alt="plantmonit" />
           </div>
         </div>
@@ -193,18 +207,22 @@
               Once I had a solid concept in Figma, it was time to turn it into a
               functional website.<br />
               I'd already worked with React, Next.js, and Svelte on other
-              projects, but I decided to use Nuxt 3 to learn more and get to
-              know another framework.<br />
-              This choice let me explore the Vue ecosystem more deeply while
-              using the latest features of Nuxt to build a fast website.<br />
+              projects, but I decided to use <br />Nuxt 3 to learn more and get
+              to know another framework. This choice let me explore the Vue
+              ecosystem more deeply while using the latest features of Nuxt to
+              build a fast website.<br />
               I concentrated on making the code modular so that the website
               would be easy to maintain and future updates would be simple. I
               automated the deployment process using GitHub Actions to make sure
               that I could keep developing the website without any breaks.
             </div>
           </div>
-          <div class="image small">
-            <img src="public\img\po\softwarepro.svg" alt="plantmonit" />
+          <div class="image medium">
+            <img
+              src="public\img\po\softwarepro.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -212,7 +230,9 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [IMPLEMENTATION]       ']" />
+            <SplitFlapText
+              :texts="['               [IMPLEMENTATION]             ']"
+            />
             <div class="paragraph">
               Well I guess you are already seeing it and I hope you like it ; )
             </div>
@@ -225,10 +245,10 @@
       <div class="projectDetailsFlap">
         <SplitFlapText
           :texts="[
-            '         [KEYDATA]          ',
-            '        ONE MONTH         ',
-            '     SEMESTER BREAK       ',
-            '    GRADE: YOU DECIDE     ',
+            '          [KEYDATA]          ',
+            '         ONE MONTH         ',
+            '      SEMESTER BREAK       ',
+            '     GRADE: YOU DECIDE     ',
           ]"
         />
       </div>
@@ -240,22 +260,24 @@
           <div class="text">
             <SplitFlapText :texts="['         [PROBLEM]         ']" />
             <div class="paragraph">
-              How do i represent myself in a way that is both professional and
-              engaging? How do i showcase my skills and experience in a visually
-              appealing manner that is simple and established but in some way
-              new and modern. How do i make sure that my portfolio is not only a
-              reflection of my work but also a reflection of my personality and
-              my values? These are the questions that i asked myself when i
-              started working on my portfolio. I wanted to create a website that
-              would not only present my work but also show who i am and what i
-              stand for. I wanted to create a platform that would be both
-              informative and engaging, a place where people could inform
-              themeselves about my skills and experience but also get to know my
-              personality and my design philosophy.
+              How can I present myself in a way that is both professional and
+              engaging? <br />How do I showcase my skills and experience in a
+              way that’s simple, yet modern and innovative? <br />These were the
+              questions I asked myself when I started working on my portfolio.
+              <br /><br />My goal was to create a website that not only
+              showcases my work but also gives an authentic representation of my
+              personality and values.<br />
+              I wanted it to be a place where visitors could not only learn
+              about my skills and experience but also get a sense of my design
+              philosophy and creative approach.
             </div>
           </div>
-          <div class="image small">
-            <img src="public\img\po\problem.svg" alt="plantmonit" />
+          <div class="image smedi">
+            <img
+              src="public\img\po\problem.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -277,7 +299,7 @@
               looks great and it's also functional.
             </div>
           </div>
-          <div class="image small">
+          <div class="image large">
             <img src="public\img\po\process.svg" alt="plantmonit" />
           </div>
         </div>
@@ -290,19 +312,23 @@
               <h3>Software Process</h3>
               Once I had a solid concept in Figma, it was time to turn it into a
               functional website.<br />
-              I'd already worked with React, Next.js, and Svelte on other
+              I'd already worked with React, Next.js, and <br />Svelte on other
               projects, but I decided to use Nuxt 3 to learn more and get to
               know another framework.<br />
               This choice let me explore the Vue ecosystem more deeply while
-              using the latest features of Nuxt to build a fast website.<br />
-              I concentrated on making the code modular so that the website
-              would be easy to maintain and future updates would be simple. I
+              using the latest features of Nuxt to build a fast website. I
+              concentrated on making the code modular so that the website would
+              be easy to maintain and future updates would be simple. I
               automated the deployment process using GitHub Actions to make sure
               that I could keep developing the website without any breaks.
             </div>
           </div>
-          <div class="image small">
-            <img src="public\img\po\softwarepro.svg" alt="plantmonit" />
+          <div class="image smedi">
+            <img
+              src="public\img\po\softwarepro.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -323,10 +349,10 @@
       <div class="projectDetailsFlap">
         <SplitFlapText
           :texts="[
-            '         [KEYDATA]         ',
-            '       ONE MONTH         ',
-            '     SEMESTER BREAK      ',
-            '    GRADE: YOU DECIDE     ',
+            '          [KEYDATA]        ',
+            '        ONE MONTH        ',
+            '      SEMESTER BREAK     ',
+            '     GRADE: YOU DECIDE    ',
           ]"
         />
       </div>

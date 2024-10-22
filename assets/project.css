@@ -178,11 +178,12 @@ html {
 }
 
 .project-video iframe {
-  border: var(--border-size) solid var(--color-background);
+  border: var(--border-size) solid var(--color-gray-light);
   border-radius: var(--radius-md);
-  width: 82rem;
-  height: 50rem;
+  width: 71dvw;
+  height: 78dvh;
   margin-top: var(--spacing-xl);
+
 }
 
 .project-image,
@@ -424,10 +425,10 @@ h3 {
   }
 
   .project-video iframe {
-    border: var(--border-size) solid var(--color-black);
+    border: var(--border-size) solid var(--color-gray-light);
     border-radius: var(--radius-md);
     width: 70vw;
-    height: 45vh;
+    height: 50vh;
     margin-top: var(--spacing-xl);
   }
 
@@ -682,8 +683,8 @@ h3 {
   .project-video iframe {
     border: var(--border-size) solid var(--color-gray-light);
     border-radius: var(--radius-md);
-    width: 25rem;
-    height: 15rem;
+    width: 70vw;
+    height: 29vh;
     margin-top: var(--spacing-xl);
   }
 

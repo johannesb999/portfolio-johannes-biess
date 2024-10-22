@@ -122,7 +122,7 @@
         </div>
       </div>
       <a
-        href="https://trickyTowers.johannes-biess.com/"
+        href="https://trick.johannes-biess.com/"
         target="_blank"
         rel="noopener noreferrer"
         class="tryOutLink custom-link"
@@ -229,7 +229,7 @@
         </div>
       </div>
       <a
-        href="https://trickyTowers.johannes-biess.com/"
+        href="https://tricky.johannes-biess.com/"
         target="_blank"
         rel="noopener noreferrer"
         class="tryOutLink custom-link"
