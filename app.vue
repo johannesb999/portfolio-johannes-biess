@@ -214,9 +214,11 @@ onMounted(() => {
   --box-shadow-light: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
 
   /* Bildhöhen */
-  --img-height-md: 50dvh;
-  --img-height-sm: 40dvh;
-  --img-height-lg: 70dvh;
+  --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
+  --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
+  --img-height-md: 40vh; /* 40% der Viewport-Höhe */
+  --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
+  --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
 
   --img-width-sm: 40dvw;
   --img-width-md: 50dvw;
@@ -239,11 +241,11 @@ html {
 
 img {
   max-width: 100%;
-  height: auto;
+  height: fit-content;
   border: var(--border-size) solid var(--border-color-black);
   border-radius: var(--border-radius);
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -544,7 +546,9 @@ button {
 
     /* Bildhöhen */
     --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
+    --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
     --img-height-md: 40vh; /* 40% der Viewport-Höhe */
+    --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
     --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
   }
 
@@ -567,7 +571,7 @@ button {
     height: auto;
     border: var(--border-size) solid var(--border-color-black);
     border-radius: var(--border-radius);
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
   }
 
@@ -782,9 +786,11 @@ button {
     --line-height-larger: 1.76; /* 1.6 */
 
     /* Bildhöhen */
-    --img-height-sm: 30vh; /* 20vh */
-    --img-height-md: 48vh; /* 40vh */
-    --img-height-lg: 76vh; /* 60vh */
+    --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
+    --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
+    --img-height-md: 40vh; /* 40% der Viewport-Höhe */
+    --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
+    --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
   }
 
   html {
@@ -960,7 +966,7 @@ button {
 }
 
 /* Mittlere Geräte (Laptops und kleinere Bildschirme, 769px bis 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   :root {
     --border-color-black: #171717;
     --border-size: 0.088rem; /* 0.08rem, um 10% erhöht */
@@ -1019,9 +1025,11 @@ button {
     --line-height-larger: 1.76; /* 1.6 */
 
     /* Bildhöhen */
-    --img-height-sm: 30vh; /* 20vh */
-    --img-height-md: 48vh; /* 40vh */
-    --img-height-lg: 76vh; /* 60vh */
+    --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
+    --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
+    --img-height-md: 40vh; /* 40% der Viewport-Höhe */
+    --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
+    --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
   }
 
   html {
@@ -1041,7 +1049,7 @@ button {
     height: auto;
     border: var(--border-size) solid var(--border-color-black);
     border-radius: var(--border-radius);
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
   }
 

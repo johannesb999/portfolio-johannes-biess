@@ -46,16 +46,16 @@
   .wrapper {
     display: flex;
     flex-direction: column;
-    position: absolute;
     top: 70dvh;
-    left: 50dvw;
-    transform: translate(-50%, -50%);
-    font-size: var(--font-size-xl);
+    left: 55dvw;
     font-weight: var(--font-weight-thin);
-    font-style: italic;
-    max-width: 30rem;
   }
 
+  #quote {
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-thin);
+    padding-right: 8vw;
+  }
 }
 
 
@@ -80,6 +80,14 @@
     font-weight: var(--font-weight-thin);
     font-style: italic;
     max-width: 50rem;
+  }
+
+  #quote {
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-thin);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+    padding: var(--spacing-xl);
   }
 
 }

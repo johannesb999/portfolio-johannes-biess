@@ -92,13 +92,8 @@ html {
 }
 
 .picture {
-  display: flex;
-  flex-direction: column;
-  height: var(--img-height-md);
-  max-height: fit-content;
-  overflow: hidden;
-  border: var(--border-size) solid var(--border-color-black);
-  border-radius: var(--border-radius);
+  object-fit: cover;
+  object-position: center;
 }
 
 
@@ -223,13 +218,23 @@ h3 {
   /* 300px */
 }
 
+.image.smedi img {
+  max-height: var(--img-height-smedi);
+  /* 375px */
+}
+
 .image.medium img {
   max-height: var(--img-height-md);
   /* 450px */
 }
 
+.image.mela img {
+  max-height: var(--img-height-mela);
+  /* 600px */
+}
+
 .image.large img {
-  max-height: var(--img-height-lg);
+  height: fit-content;
   /* 600px */
 }
 
@@ -327,18 +332,13 @@ h3 {
 
   .wrapper {
     top: 67vh;
-    left: 50vw;
+    left: 55vw;
     transform: translate(-50%, -50%);
     flex-direction: row;
   }
 
   .picture {
-    height: 40vh;
-    max-height: fit-content;
-    border: var(--border-size) solid var(--border-color-black);
-    border-radius: var(--border-radius);
-    max-width: 40vw;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
   }
 
@@ -417,7 +417,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-self: center;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
   }
 
   .project-video iframe {
@@ -431,7 +432,7 @@ h3 {
   .project-image,
   .image {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     align-self: center;
   }
@@ -466,13 +467,25 @@ h3 {
 
   }
 
+  .image.smedi img {
+    max-height: var(--img-height-smedi);
+    max-width: var(--img-width-lg);
+
+  }
+
   .image.medium img {
     max-height: var(--img-height-md);
     max-width: var(--img-width-lg);
   }
 
+  .image.mela img {
+    max-height: var(--img-height-mela);
+    max-width: var(--img-width-lg);
+
+  }
+
   .image.large img {
-    max-height: var(--img-height-lg);
+    height: fit-content;
     max-width: var(--img-width-lg);
 
   }
@@ -572,22 +585,14 @@ h3 {
   }
 
   .wrapper {
-    top: 67vh;
-    left: 50vw;
+    top: 67dvh;
+    left: 50dvw;
     transform: translate(-50%, -50%);
     flex-direction: row;
   }
 
   .picture {
-    display: flex;
-    flex-direction: column;
-    height: var(--img-height-md);
-    max-height: fit-content;
-    overflow: hidden;
-    border: var(--border-size) solid var(--border-color-black);
-    border-radius: var(--border-radius);
-    max-width: 65vw;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
   }
 
@@ -668,7 +673,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-self: center;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
   }
 
   .project-video iframe {
@@ -717,9 +723,21 @@ h3 {
 
   }
 
+  .image.smedi img {
+    max-height: var(--img-height-smedi);
+    max-width: var(--img-width-lg);
+
+  }
+
   .image.medium img {
     max-height: var(--img-height-md);
     max-width: var(--img-width-lg);
+  }
+
+  .image.mela img {
+    max-height: var(--img-height-mela);
+    max-width: var(--img-width-lg);
+
   }
 
   .image.large img {
