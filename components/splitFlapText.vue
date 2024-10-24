@@ -316,7 +316,7 @@ watch(
 
 <style scoped>
 .mainText {
-  margin: var(--spacing-sm) 0;
+  margin-top: var(--spacing-sm) 0;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-extra-light);
   text-align: left;
@@ -333,15 +333,18 @@ watch(
   text-align: center;
   vertical-align: bottom;
   color: var(--color-primary);
+  font-optical-sizing: auto;
 }
 
 .separator {
   color: var(--color-gray-light);
+  font-optical-sizing: auto;
 }
 
 .normal {
-  color: var(--color-primary-translucent);
+  color: var(--color-black);
   padding-left: 1px;
+  font-optical-sizing: auto;
 }
 
 .custom-style {
@@ -349,6 +352,7 @@ watch(
   padding-left: 1px;
   color: var(--color-black);
   font-size: var(--font-size-xxxxl);
+  font-optical-sizing: auto;
 }
 
 .link-style {
@@ -407,7 +411,7 @@ a.custom-link.hitbox::after {
 
 @media (max-width: 480px) {
   .mainText {
-    margin: var(--spacing-sm) 0;
+    margin-top: var(--spacing-sm) 0;
     text-align: center;
     min-width: 100%;
   }
@@ -421,6 +425,7 @@ a.custom-link.hitbox::after {
     text-align: center;
     vertical-align: bottom;
     color: var(--color-primary);
+    font-optical-sizing: auto;
   }
 
   .separator {
@@ -428,7 +433,7 @@ a.custom-link.hitbox::after {
   }
 
   .normal {
-    color: var(--color-primary-translucent);
+    color: var(--color-black);
   }
 
   .custom-style {
@@ -494,7 +499,7 @@ a.custom-link.hitbox::after {
 
 @media (max-width: 320px) {
   .mainText {
-    margin: var(--spacing-sm) 0;
+    margin-top: var(--spacing-sm) 0;
     text-align: center;
     min-width: 100%;
   }
@@ -508,6 +513,7 @@ a.custom-link.hitbox::after {
     text-align: center;
     vertical-align: bottom;
     color: var(--color-primary);
+    font-optical-sizing: auto;
   }
 
   .separator {
@@ -581,7 +587,7 @@ a.custom-link.hitbox::after {
 
 @media (min-width: 481px) and (max-width: 768px) {
   .mainText {
-    margin: var(--spacing-sm) 0;
+    margin-top: var(--spacing-sm) 0;
     text-align: center;
     align-content: center;
     min-width: 100%;
@@ -603,7 +609,7 @@ a.custom-link.hitbox::after {
   }
 
   .normal {
-    color: var(--color-primary-translucent);
+    color: var(--color-black);
   }
 
   .custom-style {
@@ -669,7 +675,7 @@ a.custom-link.hitbox::after {
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .mainText {
-    margin: var(--spacing-sm) 0;
+    margin-top: var(--spacing-sm) 0;
     text-align: center;
     align-content: center;
     min-width: 100%;
@@ -691,7 +697,7 @@ a.custom-link.hitbox::after {
   }
 
   .normal {
-    color: var(--color-primary-translucent);
+    color: var(--color-black);
   }
 
   .custom-style {

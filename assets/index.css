@@ -33,7 +33,7 @@ body {
 }
 
 .normal {
-  color: var(--color-primary-translucent);
+  color: var(--color-black);
   padding-left: 1px;
 }
 
@@ -128,7 +128,7 @@ body {
   }
 
   .normal {
-    color: var(--color-primary-translucent);
+    color: var(--color-black);
     padding-left: 1px;
   }
 
@@ -227,7 +227,7 @@ body {
   }
 
   .normal {
-    color: var(--color-primary-translucent);
+    color: var(--color-black);
     padding-left: 1px;
   }
 

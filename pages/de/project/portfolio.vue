@@ -21,10 +21,10 @@
       <SplitFlapText
         :texts="[
           '        [PORTFOLIO]        ',
-          '      THIS WEBSITE       ',
+          '      DIESE WEBSITE      ',
           '   NUXT3    WIREFRAMES   ',
-          '    GITHUB  USER TESTING ',
-          ' FIGMA        UI  UX     ',
+          ' GITHUB   NUTZER TESTING ',
+          '   FIGMA   UI     UX     ',
           'DOCKER       DEPLOYMENT  ',
         ]"
       />
@@ -47,9 +47,10 @@
               Wie präsentiere ich mich auf eine Weise, die sowohl professionell
               als auch ansprechend ist? Wie stelle ich meine Fähigkeiten und
               Erfahrungen auf eine visuell ansprechende Weise dar, die einfach
-              und etabliert, aber irgendwie neu und modern ist? Wie stelle ich
-              sicher, dass mein Portfolio nicht nur eine Reflexion meiner
-              Arbeit, sondern auch meiner Persönlichkeit und meiner Werte ist?
+              und etabliert, aber irgendwie neu und modern ist? <br />Wie stelle
+              ich sicher, dass mein Portfolio nicht nur eine Reflexion meiner
+              Arbeit, sondern auch meiner Persönlichkeit und meiner Werte
+              ist?<br /><br />
               Diese Fragen habe ich mir gestellt, als ich anfing, an meinem
               Portfolio zu arbeiten. Ich wollte eine Website erstellen, die
               nicht nur meine Arbeit präsentiert, sondern auch zeigt, wer ich
@@ -60,7 +61,7 @@
               können.
             </div>
           </div>
-          <div class="image small">
+          <div class="image large">
             <img src="public\img\po\problem.svg" alt="plantmonit" />
           </div>
         </div>
@@ -68,7 +69,7 @@
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image small">
+          <div class="image mela">
             <img src="public\img\po\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
@@ -94,17 +95,17 @@
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image small">
+          <div class="image large">
             <img src="public\img\po\softwarepro.svg" alt="plantmonit" />
           </div>
           <div class="text">
             <div class="paragraph">
               <h3>Software Process</h3>
               Nachdem ich mit Figma ein ausgearbeitetes Konzept erstellt hatte,
-              ging es daran, dieses in eine funktionale Website umzusetzen. In
-              vorherigen Projekten hatte ich bereits mit React, Next.js und
-              Svelte gearbeitet, entschied mich jedoch bewusst dafür, Nuxt 3 zu
-              nutzen, um meine Kenntnisse zu erweitern und ein weiteres
+              ging es daran, dieses in eine funktionale Website umzusetzen.
+              <br />In vorherigen Projekten hatte ich bereits mit React, Next.js
+              und Svelte gearbeitet, entschied mich jedoch bewusst dafür, Nuxt 3
+              zu nutzen, um meine Kenntnisse zu erweitern und ein weiteres
               Framework kennenzulernen. Diese Entscheidung ermöglichte es mir,
               mich intensiver mit dem Vue-Ökosystem auseinanderzusetzen und
               gleichzeitig die modernen Features von Nuxt zu nutzen, um eine
@@ -124,7 +125,10 @@
           <div class="text">
             <SplitFlapText :texts="['        [IMPLEMENTATION]       ']" />
             <div class="paragraph">
-              Well I guess you are already seeing it and i hope you like it ; )
+              Ich bin derzeit mit meinem Portfolio zufrieden. Natürlich gibt es
+              hier und da noch Kleinigkeiten, die man mit mehr Zeit verbessern
+              kann und das werde ich mit der Zeit auch tun, aber für den Moment
+              hoffe ich, dass es dir auch gefällt.
             </div>
           </div>
           <div class="image medium">
@@ -148,26 +152,33 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['              [PROBLEM]            ']" />
+            <SplitFlapText
+              :texts="['                    [PROBLEM]                    ']"
+            />
             <div class="paragraph">
               Wie präsentiere ich mich auf eine Weise, die sowohl professionell
-              als auch ansprechend ist? Wie stelle ich meine Fähigkeiten und
-              Erfahrungen auf eine visuell ansprechende Weise dar, die einfach
-              und etabliert, aber irgendwie neu und modern ist? Wie stelle ich
-              sicher, dass mein Portfolio nicht nur eine Reflexion meiner
-              Arbeit, sondern auch meiner Persönlichkeit und meiner Werte ist?
+              als auch ansprechend ist? <br />Wie stelle ich meine Fähigkeiten
+              und Erfahrungen auf eine visuell ansprechende Weise dar, die
+              einfach und etabliert, aber irgendwie neu und modern ist? Wie
+              stelle ich sicher, dass mein Portfolio nicht nur eine Reflexion
+              meiner Arbeit, sondern auch meiner Persönlichkeit und meiner Werte
+              ist?<br /><br />
               Diese Fragen habe ich mir gestellt, als ich anfing, an meinem
               Portfolio zu arbeiten. Ich wollte eine Website erstellen, die
               nicht nur meine Arbeit präsentiert, sondern auch zeigt, wer ich
-              bin und wofür ich stehe. Ich wollte eine Plattform schaffen, die
-              sowohl informativ als auch ansprechend ist, einen Ort, an dem sich
-              Menschen über meine Fähigkeiten und Erfahrungen informieren, aber
-              auch meine Persönlichkeit und meine Designphilosophie kennenlernen
-              können.
+              bin und wofür ich stehe.<br />
+              Ich wollte eine Plattform schaffen, die sowohl informativ als auch
+              ansprechend ist, einen Ort, an dem sich Menschen über meine
+              Fähigkeiten und Erfahrungen informieren, aber auch meine
+              Persönlichkeit und meine Designphilosophie kennenlernen können.
             </div>
           </div>
-          <div class="image small">
-            <img src="public\img\po\problem.svg" alt="plantmonit" />
+          <div class="image smedi">
+            <img
+              src="public\img\po\problem.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -175,7 +186,9 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['             [PROCESS]             ']" />
+            <SplitFlapText
+              :texts="['                     [PROZESS]                      ']"
+            />
             <div class="paragraph">
               Der Entwicklungsprozess meiner Portfolio-Website begann mit einer
               Konzeptionsphase, in der ich verschiedene Layout-Varianten und
@@ -192,7 +205,7 @@
               authentische Weise vermittelt.
             </div>
           </div>
-          <div class="image small">
+          <div class="image medium">
             <img src="public\img\po\process.svg" alt="plantmonit" />
           </div>
         </div>
@@ -202,7 +215,7 @@
         <div class="project-content">
           <div class="text">
             <div class="paragraph">
-              <h3>Software Process</h3>
+              <h3>Software Prozess</h3>
               Nachdem ich mit Figma ein ausgearbeitetes Konzept erstellt hatte,
               ging es daran, dieses in eine funktionale Website umzusetzen. In
               vorherigen Projekten hatte ich bereits mit React, Next.js und
@@ -219,8 +232,12 @@
               sicherzustellen.
             </div>
           </div>
-          <div class="image small">
-            <img src="public\img\po\softwarepro.svg" alt="plantmonit" />
+          <div class="image medium">
+            <img
+              src="public\img\po\softwarepro.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -228,9 +245,14 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [IMPLEMENTATION]        ']" />
+            <SplitFlapText
+              :texts="['                  [IMPLEMENTATION]                 ']"
+            />
             <div class="paragraph">
-              Well I guess you are already seeing it and i hope you like it ; )
+              Ich bin derzeit mit meinem Portfolio zufrieden. Natürlich gibt es
+              hier und da noch Kleinigkeiten, die man mit mehr Zeit verbessern
+              kann und das werde ich mit der Zeit auch tun, aber für den Moment
+              hoffe ich, dass es dir auch gefällt.
             </div>
           </div>
           <div class="image medium">
@@ -273,7 +295,11 @@
             </div>
           </div>
           <div class="image small">
-            <img src="public\img\po\problem.svg" alt="plantmonit" />
+            <img
+              src="public\img\po\problem.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -326,7 +352,11 @@
             </div>
           </div>
           <div class="image small">
-            <img src="public\img\po\softwarepro.svg" alt="plantmonit" />
+            <img
+              src="public\img\po\softwarepro.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -334,9 +364,12 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['     [IMPLEMENTATION]      ']" />
+            <SplitFlapText :texts="['       [IMPLEMENTATION]       ']" />
             <div class="paragraph">
-              Well I guess you are already seeing it and i hope you like it ; )
+              Ich bin derzeit mit meinem Portfolio zufrieden. Natürlich gibt es
+              hier und da noch Kleinigkeiten, die man mit mehr Zeit verbessern
+              kann und das werde ich mit der Zeit auch tun, aber für den Moment
+              hoffe ich, dass es dir auch gefällt.
             </div>
           </div>
           <div class="image medium">

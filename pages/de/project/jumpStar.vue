@@ -31,7 +31,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\js\thumbnail.svg" alt="plantmonit" />
+        <img src="public/img/js/thumbnail.svg" alt="plantmonit" />
       </div>
     </div>
     <DetailsScroll />
@@ -40,57 +40,58 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['            [IDEA]             ']" />
+            <SplitFlapText :texts="['            [IDEE]             ']" />
             <div class="paragraph">
               Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
               wurde ein Link zu einer CSV-Datei mit etwa 340.000 Sternendaten
               bereitgestellt. Der Schwerpunkt des Kurses lag auf dem Erlernen
               der Deployment Pipeline und weniger auf dem Nutzen der Inhalte.
               Trotzdem sollte eine Website entwickelt werden, die in dieser Form
-              nicht schon weit verbreitet ist. Viele Menschen glauben, dass die
-              Konstellation der Sterne zum Zeitpunkt ihrer Geburt eine besondere
-              Bedeutung für ihr Leben hat. Dieser Glaube beeinflusst
-              Entscheidungen und Einstellungen im Alltag, sei es durch Horoskope
-              oder astrologische Vorhersagen. Mit der Website sollte auf
-              spielerische Weise gezeigt werden, dass Sternbilder letztlich
-              nichts anderes als eine zufällige Anordnung von Himmelskörpern
-              sind, die nur durch unsere Perspektive als zusammenhängend
-              erscheinen. Ziel war es, den Menschen eine neue Sichtweise auf das
-              Universum zu eröffnen und die vermeintliche Bedeutung der
-              Sternbilder als Fiktion darzustellen.
+              nicht schon existiert.<br /><br />
+              Viele Menschen glauben, dass die Konstellation der Sterne zum
+              Zeitpunkt ihrer Geburt eine besondere Bedeutung für ihr Leben
+              hat.<br />
+              Dieser Glaube beeinflusst Entscheidungen und Einstellungen im
+              Alltag, sei es durch Horoskope oder astrologische Vorhersagen.<br />
+              Mit der Website sollte auf spielerische Weise gezeigt werden, dass
+              Sternbilder letztlich nichts anderes als eine zufällige Anordnung
+              von Himmelskörpern sind, die nur durch unsere Perspektive als
+              zusammenhängend erscheinen. Ziel war es, den Menschen eine neue
+              Sichtweise auf das Universum zu eröffnen und die vermeintliche
+              Bedeutung der Sternbilder als Fiktion darzustellen.
             </div>
           </div>
-          <div class="image medium">
-            <img src="public\img\js\js.png" alt="plantmonit" />
+          <div class="image large">
+            <img src="public/img/js/js.png" alt="plantmonit" />
           </div>
         </div>
       </div>
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image medium">
-            <img src="public\img\js\Process.svg" alt="concept work in figma" />
+          <div class="image large">
+            <img src="public/img/js/Process.svg" alt="concept work in figma" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['           [PROCESS]           ']" />
+            <SplitFlapText :texts="['           [PROZESS]           ']" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt
               werden sollten. Schnell fiel die Entscheidung, eine spielerische
-              Komponente einzubringen, indem ein Raumschiff simuliert wird, das
+              Komponente einzubringen, indem ein Raumschiff simuliert wird, das,
               durch das Weltall fliegt. Diese Herangehensweise ermöglicht es,
               Sterne und Konstellationen aus verschiedenen Perspektiven zu
               betrachten und so die Zufälligkeit der Anordnungen zu
               verdeutlichen. Die Idee, wissenschaftliche Daten aktiv anzuzeigen,
               wurde nach einigen Feedbackgesprächen in den Hintergrund gerückt,
-              um den Fokus stärker auf das visuelle Erleben zu legen. Dezente
-              Linien, die die Sterne so verbinden, dass Sternkonstellationen
-              erkennbar werden, verzerren sich im Laufe der Reise zunehmend.
-              Dadurch wird den Nutzern klar, dass schon eine kleine Veränderung
-              der Perspektive ausreicht, um die vermeintlichen Sternbilder
-              aufzulösen. Um die Immersion zu verstärken, wurde ein schlankes,
-              unauffälliges Design für die Navigationstools gewählt, das sich
-              dezent in den Hintergrund einfügt und den visuellen Fokus auf die
-              Sterne nicht stört.
+              um den Fokus stärker auf das visuelle Erleben zu legen.
+              <br />Dezente Linien, die die Sterne so verbinden, dass
+              Sternkonstellationen erkennbar werden, verzerren sich im Laufe der
+              Reise zunehmend. <br />Dadurch wird den Nutzern klar, dass schon
+              eine kleine Veränderung der Perspektive ausreicht, um die
+              vermeintlichen Sternbilder aufzulösen. <br />Um die Immersion zu
+              verstärken, wurde ein schlankes, unauffälliges Design für die
+              Navigationstools gewählt, das sich dezent in den Hintergrund
+              einfügt und den visuellen Fokus auf die Sterne nicht stört.
             </div>
           </div>
         </div>
@@ -111,19 +112,19 @@
                 Anordnung der Himmelskörper wirklich ist – nicht durch
                 Belehrung, sondern durch eigenes Entdecken und Erleben. Die
                 Website basiert auf dem Framework Svelte, während THREE.js die
-                3D-Umgebung realisiert. Die Sternendaten werden in einer
-                MongoDB-Datenbank gespeichert, die zusammen mit dem Backend auf
-                einem eigenen Server gehostet wird. Mithilfe von Docker und
-                Portainer wird die Infrastruktur verwaltet, und GitHub Actions
-                sorgt für eine nahezu automatisierte Deployment Pipeline. So
-                wird eine effiziente und zuverlässige Bereitstellung der
-                Anwendung gewährleistet.
+                3D-Umgebung realisiert.<br />
+                Die Sternendaten werden in einer MongoDB-Datenbank gespeichert,
+                die zusammen mit dem Backend auf einem eigenen Server gehostet
+                wird. Mithilfe von Docker und Portainer wird die Infrastruktur
+                verwaltet, und GitHub Actions sorgt für eine nahezu
+                automatisierte Deployment Pipeline. So wird eine effiziente und
+                zuverlässige Bereitstellung der Anwendung gewährleistet.
               </div>
             </div>
-            <div class="image medium">
+            <div class="image large">
               <img
-                src="public\img\js\Implementaion.svg"
-                alt="a moitor displaying jumpstar"
+                src="public/img/js/Implementaion.svg"
+                alt="a monitor displaying jumpstar"
               />
             </div>
           </div>
@@ -160,6 +161,7 @@
               '        TWO MONTHS      ',
               '     THIRD SEMESTER     ',
               '       GRADE: 1.0       ',
+              '        TEAMWORK        ',
             ]"
           />
         </div>
@@ -170,28 +172,34 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['               [IDEA]              ']" />
+            <SplitFlapText
+              :texts="['                       [IDEE]                      ']"
+            />
             <div class="paragraph">
               Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
               wurde ein Link zu einer CSV-Datei mit etwa 340.000 Sternendaten
               bereitgestellt. Der Schwerpunkt des Kurses lag auf dem Erlernen
               der Deployment Pipeline und weniger auf dem Nutzen der Inhalte.
               Trotzdem sollte eine Website entwickelt werden, die in dieser Form
-              nicht schon weit verbreitet ist. Viele Menschen glauben, dass die
+              nicht schon existiert. Viele Menschen glauben, dass die
               Konstellation der Sterne zum Zeitpunkt ihrer Geburt eine besondere
-              Bedeutung für ihr Leben hat. Dieser Glaube beeinflusst
-              Entscheidungen und Einstellungen im Alltag, sei es durch Horoskope
-              oder astrologische Vorhersagen. Mit der Website sollte auf
-              spielerische Weise gezeigt werden, dass Sternbilder letztlich
-              nichts anderes als eine zufällige Anordnung von Himmelskörpern
-              sind, die nur durch unsere Perspektive als zusammenhängend
-              erscheinen. Ziel war es, den Menschen eine neue Sichtweise auf das
-              Universum zu eröffnen und die vermeintliche Bedeutung der
-              Sternbilder als Fiktion darzustellen.
+              Bedeutung für ihr Leben hat.<br />
+              Dieser Glaube beeinflusst Entscheidungen und Einstellungen im
+              Alltag, sei es durch Horoskope oder astrologische Vorhersagen. Mit
+              der Website sollte auf spielerische Weise gezeigt werden, dass
+              Sternbilder letztlich nichts anderes als eine zufällige Anordnung
+              von Himmelskörpern sind, die nur durch unsere Perspektive als
+              zusammenhängend erscheinen. Ziel war es, den Menschen eine neue
+              Sichtweise auf das Universum zu eröffnen und die vermeintliche
+              Bedeutung der Sternbilder als Fiktion darzustellen.
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\js\js.png" alt="plantmonit" />
+            <img
+              src="public\img\js\js.png"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -199,29 +207,36 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['             [PROCESS]             ']" />
+            <SplitFlapText
+              :texts="['                     [PROZESS]                      ']"
+            />
             <div class="paragraph">
               Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt
               werden sollten. Schnell fiel die Entscheidung, eine spielerische
-              Komponente einzubringen, indem ein Raumschiff simuliert wird, das
+              Komponente einzubringen, indem ein Raumschiff simuliert wird, das,
               durch das Weltall fliegt. Diese Herangehensweise ermöglicht es,
               Sterne und Konstellationen aus verschiedenen Perspektiven zu
               betrachten und so die Zufälligkeit der Anordnungen zu
-              verdeutlichen. Die Idee, wissenschaftliche Daten aktiv anzuzeigen,
-              wurde nach einigen Feedbackgesprächen in den Hintergrund gerückt,
-              um den Fokus stärker auf das visuelle Erleben zu legen. Dezente
-              Linien, die die Sterne so verbinden, dass Sternkonstellationen
-              erkennbar werden, verzerren sich im Laufe der Reise zunehmend.
-              Dadurch wird den Nutzern klar, dass schon eine kleine Veränderung
-              der Perspektive ausreicht, um die vermeintlichen Sternbilder
-              aufzulösen. Um die Immersion zu verstärken, wurde ein schlankes,
-              unauffälliges Design für die Navigationstools gewählt, das sich
-              dezent in den Hintergrund einfügt und den visuellen Fokus auf die
-              Sterne nicht stört.
+              verdeutlichen.<br /><br />
+              Die Idee, wissenschaftliche Daten aktiv anzuzeigen, wurde nach
+              einigen Feedbackgesprächen in den Hintergrund gerückt, um den
+              Fokus stärker auf das visuelle Erleben zu legen.<br />
+              Dezente Linien, die die Sterne so verbinden, dass
+              Sternkonstellationen erkennbar werden, verzerren sich<br />
+              im Laufe der Reise zunehmend. Dadurch wird den Nutzern klar, dass
+              schon eine kleine Veränderung der Perspektive ausreicht, um die
+              vermeintlichen Sternbilder aufzulösen. Um die Immersion zu
+              verstärken, wurde ein schlankes, unauffälliges Design für die
+              Navigationstools gewählt, das sich dezent in den Hintergrund
+              einfügt und den visuellen Fokus auf die Sterne nicht stört.
             </div>
           </div>
-          <div class="image medium">
-            <img src="public\img\js\Process.svg" alt="concept work in figma" />
+          <div class="image mela">
+            <img
+              src="public\img\js\Process.svg"
+              alt="concept work in figma"
+              style="object-fit: contain"
+            />
           </div>
         </div>
 
@@ -239,21 +254,22 @@
                 kleinste Veränderungen im Blickwinkel die scheinbare Ordnung der
                 Sternbilder auflösen. Die Nutzer erleben so, wie zufällig die
                 Anordnung der Himmelskörper wirklich ist – nicht durch
-                Belehrung, sondern durch eigenes Entdecken und Erleben. Die
-                Website basiert auf dem Framework Svelte, während THREE.js die
-                3D-Umgebung realisiert. Die Sternendaten werden in einer
+                Belehrung, sondern durch eigenes Entdecken und Erleben.<br /><br />
+                Die Website basiert auf dem Framework Svelte, während THREE.js
+                die 3D-Umgebung realisiert. Die Sternendaten werden in einer
                 MongoDB-Datenbank gespeichert, die zusammen mit dem Backend auf
                 einem eigenen Server gehostet wird. Mithilfe von Docker und
-                Portainer wird die Infrastruktur verwaltet, und GitHub Actions
-                sorgt für eine nahezu automatisierte Deployment Pipeline. So
-                wird eine effiziente und zuverlässige Bereitstellung der
-                Anwendung gewährleistet.
+                Portainer Portainer wird die Infrastruktur verwaltet, und GitHub
+                Actions sorgt für eine nahezu automatisierte Deployment
+                Pipeline. So wird eine effiziente und zuverlässige
+                Bereitstellung der Anwendung gewährleistet.
               </div>
             </div>
-            <div class="image medium">
+            <div class="image mela">
               <img
                 src="public\img\js\Implementaion.svg"
                 alt="a moitor displaying jumpstar"
+                style="object-fit: contain"
               />
             </div>
           </div>
@@ -288,6 +304,7 @@
               '        TWO MONTHS      ',
               '     THIRD SEMESTER     ',
               '       GRADE: 1.0       ',
+              '        TEAMWORK        ',
             ]"
           />
         </div>
@@ -305,17 +322,17 @@
               bereitgestellt. Der Schwerpunkt des Kurses lag auf dem Erlernen
               der Deployment Pipeline und weniger auf dem Nutzen der Inhalte.
               Trotzdem sollte eine Website entwickelt werden, die in dieser Form
-              nicht schon weit verbreitet ist. Viele Menschen glauben, dass die
-              Konstellation der Sterne zum Zeitpunkt ihrer Geburt eine besondere
-              Bedeutung für ihr Leben hat. Dieser Glaube beeinflusst
-              Entscheidungen und Einstellungen im Alltag, sei es durch Horoskope
-              oder astrologische Vorhersagen. Mit der Website sollte auf
-              spielerische Weise gezeigt werden, dass Sternbilder letztlich
-              nichts anderes als eine zufällige Anordnung von Himmelskörpern
-              sind, die nur durch unsere Perspektive als zusammenhängend
-              erscheinen. Ziel war es, den Menschen eine neue Sichtweise auf das
-              Universum zu eröffnen und die vermeintliche Bedeutung der
-              Sternbilder als Fiktion darzustellen.
+              nicht schon existiert.<br />
+              Viele Menschen glauben, dass die Konstellation der Sterne zum
+              Zeitpunkt ihrer Geburt eine besondere Bedeutung für ihr Leben hat.
+              Dieser Glaube beeinflusst Entscheidungen und Einstellungen im
+              Alltag, sei es durch Horoskope oder astrologische Vorhersagen. Mit
+              der Website sollte auf spielerische Weise gezeigt werden, dass
+              Sternbilder letztlich nichts anderes als eine zufällige Anordnung
+              von Himmelskörpern sind, die nur durch unsere Perspektive als
+              zusammenhängend erscheinen. Ziel war es, den Menschen eine neue
+              Sichtweise auf das Universum zu eröffnen und die vermeintliche
+              Bedeutung der Sternbilder als Fiktion darzustellen.
             </div>
           </div>
           <div class="image medium">
@@ -337,7 +354,9 @@
               betrachten und so die Zufälligkeit der Anordnungen zu
               verdeutlichen. Die Idee, wissenschaftliche Daten aktiv anzuzeigen,
               wurde nach einigen Feedbackgesprächen in den Hintergrund gerückt,
-              um den Fokus stärker auf das visuelle Erleben zu legen. Dezente
+              um den Fokus stärker auf das visuelle Erleben zu legen, Dezente
+              Linien, die die Sterne so verbinden, dass Sternkonstellationen
+              erkennbar werden, verzerren sich im Laufe der Reise zunehmend.
               Linien, die die Sterne so verbinden, dass Sternkonstellationen
               erkennbar werden, verzerren sich im Laufe der Reise zunehmend.
               Dadurch wird den Nutzern klar, dass schon eine kleine Veränderung

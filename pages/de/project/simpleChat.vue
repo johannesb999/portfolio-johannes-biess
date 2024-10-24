@@ -22,9 +22,9 @@
         :texts="[
           '        [SIMPLECHAT]        ',
           '       CHAT PLATFORM      ',
-          'WIREFRAMES   USERCENTERED ',
+          'WIREFRAMES   NUTZERFOKUS  ',
           '   DESIGN THINKING        ',
-          '         USER INTERVIEWS  ',
+          '       NUTZER INTERVIEWS  ',
           '  FIGMA PROTOTYPE         ',
         ]"
       />
@@ -53,7 +53,7 @@
               halten.
             </div>
           </div>
-          <div class="image small">
+          <div class="image smedi">
             <img src="public\img\sc\problem.svg" alt="plantmonit" />
           </div>
         </div>
@@ -61,25 +61,25 @@
 
       <div class="project-section-reverse">
         <div class="project-content">
-          <div class="image small">
+          <div class="image large">
             <img src="public\img\sc\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['          [PROCESS]          ']" />
+            <SplitFlapText :texts="['          [PROZESS]          ']" />
             <div class="paragraph">
               Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
-              Umfrage zu bereits existierenden Plattformen durchgeführt. Durch
-              Methoden des User Research wie Nutzerinterviews und die Analyse
-              der "Voice of the Customer" wurde ein tiefes Verständnis für die
-              Anforderungen der Zielgruppe entwickelt. Diese Erkenntnisse wurden
-              genutzt, um einen Low-Fidelity-Prototyp zu erstellen, der iterativ
-              weiterentwickelt wurde. In Testphasen mit potenziellen Nutzern
-              wurden kontinuierlich Anpassungen vorgenommen, um die
-              Benutzerfreundlichkeit weiter zu optimieren. Die in Figma
-              entwickelten Low-, Mid- und High-Fidelity-Prototypen dienten als
-              Grundlage für regelmäßige Nutzertests. Das iterative Vorgehen und
-              die Berücksichtigung des Nutzerfeedbacks ermöglichten die
-              Entwicklung einer Plattform, die sowohl funktional als auch
+              Umfrage zu bereits existierenden Plattformen durchgeführt.<br />
+              Durch Methoden des User Research wie Nutzerinterviews und die
+              Analyse der "Voice of the Customer" wurde ein tiefes Verständnis
+              für die Anforderungen der Zielgruppe entwickelt. Diese
+              Erkenntnisse wurden genutzt, um einen Low-Fidelity-Prototyp zu
+              erstellen, der iterativ weiterentwickelt wurde. In Testphasen mit
+              potenziellen Nutzern wurden kontinuierlich Anpassungen
+              vorgenommen, um die Benutzerfreundlichkeit weiter zu optimieren.
+              Die in Figma entwickelten Low-, Mid- und High-Fidelity-Prototypen
+              dienten als Grundlage für regelmäßige Nutzertests. Das iterative
+              Vorgehen und die Berücksichtigung des Nutzerfeedbacks ermöglichten
+              die Entwicklung einer Plattform, die sowohl funktional als auch
               intuitiv ist und die Komplexität der vielen Funktionen effektiv
               vereinfacht darstellt.
             </div>
@@ -90,7 +90,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [SOULUTION]           ']" />
+            <SplitFlapText :texts="['           [ERGEBNIS]          ']" />
             <div class="paragraph">
               Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
               nur das Chatten ermöglicht, sondern auch eine Vielzahl
@@ -101,15 +101,15 @@
               sichtbare Timeline zu finden, in der Praktika, Auslandsaufenthalte
               und andere wichtige Meilensteine dokumentiert sind. Zusätzlich
               ermöglicht ein Tag-System, Interessen und relevante Fakten zur
-              Person zu hinterlegen. Diese Funktionen erlauben es anderen
-              Nutzern, gezielt nach Personen mit spezifischen Erfahrungen oder
-              Interessen zu suchen – zum Beispiel für Informationen zu einem
-              Auslandsaufenthalt in Costa Rica. Neben den Studierenden sind auch
-              die Hochschule selbst und Unternehmen auf der Plattform vertreten.
-              Die Hochschule kann ein Schwarzes Brett führen, Noten und
-              Bescheide direkt accountbezogen bereitstellen und somit
-              verschiedene Plattformen miteinander verknüpfen. Kurse und
-              Teamkanäle sind ebenfalls Teil von SimpleChat, sodass
+              Person zu hinterlegen. <br /><br />Diese Funktionen erlauben es
+              anderen Nutzern, gezielt nach Personen mit spezifischen
+              Erfahrungen oder Interessen zu suchen – zum Beispiel für
+              Informationen zu einem Auslandsaufenthalt in Costa Rica. Neben den
+              Studierenden sind auch die Hochschule selbst und Unternehmen auf
+              der Plattform vertreten. Die Hochschule kann ein Schwarzes Brett
+              führen, Noten und Bescheide direkt account bezogen bereitstellen
+              und somit verschiedene Plattformen miteinander verknüpfen. Kurse
+              und Teamkanäle sind ebenfalls Teil von SimpleChat, sodass
               Unterrichtsmaterialien leicht geteilt werden können. Unternehmen
               erhalten eingeschränkte Accounts und haben die Möglichkeit,
               Stellenangebote zu veröffentlichen oder gezielt nach Personen mit
@@ -119,7 +119,7 @@
               Hochschullebens und der Berufsplanung der Studierenden.
             </div>
           </div>
-          <div class="image medium">
+          <div class="image large">
             <img src="public\img\sc\solution.svg" alt="plantmonit" />
           </div>
         </div>
@@ -146,6 +146,7 @@
             '       TWO WEEKS       ',
             '    THIRD SEMESTER     ',
             '      GRADE: 1.7        ',
+            '       TEAMWORK         ',
           ]"
         />
       </div>
@@ -155,7 +156,9 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['              [PROBLEM]            ']" />
+            <SplitFlapText
+              :texts="['                     [PROBLEM]                     ']"
+            />
             <div class="paragraph">
               Die derzeitige Kommunikationsplattform der Universität, Slack,
               wird durch eine neue dedizierte Plattform ersetzt, die es der
@@ -176,7 +179,9 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['             [PROCESS]             ']" />
+            <SplitFlapText
+              :texts="['                    [PROZESS]                    ']"
+            />
             <div class="paragraph">
               Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
               Umfrage zu bereits existierenden Plattformen durchgeführt. Durch
@@ -195,8 +200,12 @@
               vereinfacht darstellt.
             </div>
           </div>
-          <div class="image small">
-            <img src="public\img\sc\process.svg" alt="plantmonit" />
+          <div class="image medium">
+            <img
+              src="public\img\sc\process.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -204,37 +213,44 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['             [SOLUTION]            ']" />
+            <SplitFlapText
+              :texts="['                    [ERGEBNIS]                    ']"
+            />
             <div class="paragraph">
               Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
               nur das Chatten ermöglicht, sondern auch eine Vielzahl
               zusätzlicher Funktionen bietet, um die Hochschule und die
-              Studierenden besser zu vernetzen. Ein zentrales Element der
-              Plattform sind die Profile, die die Nutzer selbst pflegen. In
-              diesen Profilen sind wichtige Informationen wie eine öffentlich
-              sichtbare Timeline zu finden, in der Praktika, Auslandsaufenthalte
-              und andere wichtige Meilensteine dokumentiert sind. Zusätzlich
-              ermöglicht ein Tag-System, Interessen und relevante Fakten zur
-              Person zu hinterlegen. Diese Funktionen erlauben es anderen
-              Nutzern, gezielt nach Personen mit spezifischen Erfahrungen oder
-              Interessen zu suchen – zum Beispiel für Informationen zu einem
-              Auslandsaufenthalt in Costa Rica. Neben den Studierenden sind auch
-              die Hochschule selbst und Unternehmen auf der Plattform vertreten.
-              Die Hochschule kann ein Schwarzes Brett führen, Noten und
-              Bescheide direkt accountbezogen bereitstellen und somit
-              verschiedene Plattformen miteinander verknüpfen. Kurse und
-              Teamkanäle sind ebenfalls Teil von SimpleChat, sodass
-              Unterrichtsmaterialien leicht geteilt werden können. Unternehmen
-              erhalten eingeschränkte Accounts und haben die Möglichkeit,
-              Stellenangebote zu veröffentlichen oder gezielt nach Personen mit
-              bestimmten Fähigkeiten zu suchen, die für sie von Interesse sind.
+              Studierenden besser zu vernetzen.<br />
+              Ein zentrales Element der Plattform sind die Profile, die die
+              Nutzer selbst pflegen. In diesen Profilen sind wichtige
+              Informationen wie eine öffentlich sichtbare Timeline zu finden, in
+              der Praktika, Auslandsaufenthalte und andere wichtige Meilensteine
+              dokumentiert sind. Zusätzlich ermöglicht ein Tag-System,
+              Interessen und relevante Fakten zur Person zu hinterlegen.<br /><br />
+              Diese Funktionen erlauben es anderen Nutzern, gezielt nach
+              Personen mit spezifischen Erfahrungen oder Interessen zu suchen –
+              zum Beispiel für Informationen zu einem Auslandsaufenthalt in
+              Costa Rica. Neben den Studierenden sind auch die Hochschule selbst
+              und Unternehmen auf der Plattform vertreten. Die Hochschule kann
+              ein Schwarzes Brett führen, Noten und Bescheide direkt
+              accountbezogen bereitstellen und somit verschiedene Plattformen
+              miteinander verknüpfen. Kurse und Teamkanäle sind ebenfalls Teil
+              von SimpleChat, sodass Unterrichtsmaterialien leicht geteilt
+              werden können. Unternehmen erhalten eingeschränkte Accounts und
+              haben die Möglichkeit, Stellenangebote zu veröffentlichen oder
+              gezielt nach Personen mit bestimmten Fähigkeiten zu suchen, die
+              für sie von Interesse sind.<br />
               SimpleChat bietet somit nicht nur eine Lösung für eine bessere
               Kommunikation, sondern wird zu einem integralen Bestandteil des
               Hochschullebens und der Berufsplanung der Studierenden.
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\sc\solution.svg" alt="plantmonit" />
+            <img
+              src="public\img\sc\solution.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -260,6 +276,7 @@
             '       TWO WEEKS       ',
             '    THIRD SEMESTER     ',
             '      GRADE: 1.7        ',
+            '       TEAMWORK         ',
           ]"
         />
       </div>
@@ -269,7 +286,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]         ']" />
+            <SplitFlapText :texts="['           [PROBLEM]            ']" />
             <div class="paragraph">
               Die derzeitige Kommunikationsplattform der Universität, Slack,
               wird durch eine neue dedizierte Plattform ersetzt, die es der
@@ -290,7 +307,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROCESS]         ']" />
+            <SplitFlapText :texts="['          [PROZESS]           ']" />
             <div class="paragraph">
               Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
               Umfrage zu bereits existierenden Plattformen durchgeführt. Durch
@@ -309,8 +326,12 @@
               vereinfacht darstellt.
             </div>
           </div>
-          <div class="image small">
-            <img src="public\img\sc\process.svg" alt="plantmonit" />
+          <div class="image medium">
+            <img
+              src="public\img\sc\process.svg"
+              alt="plantmonit"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -318,7 +339,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [SOLUTION]        ']" />
+            <SplitFlapText :texts="['          [ERGEBNIS]         ']" />
             <div class="paragraph">
               Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
               nur das Chatten ermöglicht, sondern auch eine Vielzahl
@@ -335,7 +356,7 @@
               Auslandsaufenthalt in Costa Rica. Neben den Studierenden sind auch
               die Hochschule selbst und Unternehmen auf der Plattform vertreten.
               Die Hochschule kann ein Schwarzes Brett führen, Noten und
-              Bescheide direkt accountbezogen bereitstellen und somit
+              Bescheide direkt account bezogen bereitstellen und somit
               verschiedene Plattformen miteinander verknüpfen. Kurse und
               Teamkanäle sind ebenfalls Teil von SimpleChat, sodass
               Unterrichtsmaterialien leicht geteilt werden können. Unternehmen
@@ -372,8 +393,9 @@
           :texts="[
             '        [KEYDATA]         ',
             '       TWO WEEKS       ',
-            '    THIRD SEMESTER     ',
+            '     THIRD SEMESTER     ',
             '      GRADE: 1.7        ',
+            '       TEAMWORK         ',
           ]"
         />
       </div>

@@ -121,7 +121,9 @@
           <div class="text">
             <SplitFlapText :texts="['        [IMPLEMENTATION]       ']" />
             <div class="paragraph">
-              Well I guess you are already seeing it and I hope you like it ; )
+              I am currently happy with my portfolio. Of course there are still
+              little things here and there that can be improved with more time
+              and I will do that over time, but for now I hope you like it too.
             </div>
           </div>
           <div class="image medium">
@@ -234,7 +236,9 @@
               :texts="['               [IMPLEMENTATION]             ']"
             />
             <div class="paragraph">
-              Well I guess you are already seeing it and I hope you like it ; )
+              I am currently happy with my portfolio. Of course there are still
+              little things here and there that can be improved with more time
+              and I will do that over time, but for now I hope you like it too.
             </div>
           </div>
           <div class="image medium">
@@ -338,7 +342,9 @@
           <div class="text">
             <SplitFlapText :texts="['      [IMPLEMENTATION]     ']" />
             <div class="paragraph">
-              Well I guess you are already seeing it and I hope you like it ; )
+              I am currently happy with my portfolio. Of course there are still
+              little things here and there that can be improved with more time
+              and I will do that over time, but for now I hope you like it too.
             </div>
           </div>
           <div class="image medium">

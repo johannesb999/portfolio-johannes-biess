@@ -3,8 +3,8 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
 }
 
 .detailsLink-container {
@@ -92,14 +92,8 @@ html {
 }
 
 .picture {
-  display: flex;
-  flex-direction: column;
-  width: 70vw;
-  height: var(--img-height-sm);
-  max-height: fit-content;
-  overflow: hidden;
-  border: var(--border-size) solid var(--border-color-black);
-  border-radius: var(--border-radius);
+  object-fit: cover;
+  object-position: center;
 }
 
 
@@ -157,11 +151,6 @@ html {
 
 }
 
-
-
-
-
-
 .project-image {
   width: 100%;
   text-align: center;
@@ -184,9 +173,6 @@ h3 {
   justify-content: center;
   align-self: center;
 }
-
-
-
 
 /* Kleine Geräte (Tablets und Handys im Querformat, 481px bis 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
@@ -271,7 +257,7 @@ h3 {
   }
 
   .projectFlap {
-    top: 28vh;
+    top: 30vh;
     left: 50vw;
     transform: translate(-50%, -50%);
     font-size: var(--font-size-xl);
@@ -280,18 +266,15 @@ h3 {
 
   .wrapper {
     top: 67vh;
-    left: 50vw;
+    left: 55vw;
     transform: translate(-50%, -50%);
     flex-direction: row;
+
   }
 
   .picture {
-    height: 40vh;
-    max-height: fit-content;
-    overflow: hidden;
-    border: var(--border-size) solid var(--border-color-black);
-    border-radius: var(--border-radius);
-    max-width: 50vw;
+    object-fit: cover;
+    object-position: center;
   }
 
   .project-details {
@@ -348,10 +331,8 @@ h3 {
     font-optical-sizing: auto;
     font-family: var(--font-family-alt);
     padding-top: var(--spacing-md);
-    
+
   }
-
-
 
   .project-image,
   .image {
@@ -486,20 +467,13 @@ h3 {
     left: 50vw;
     transform: translate(-50%, -50%);
     flex-direction: row;
+
   }
 
   .picture {
-    display: flex;
-    flex-direction: column;
-    height: var(--img-height-md);
-    max-height: fit-content;
-    overflow: hidden;
-    border: var(--border-size) solid var(--border-color-black);
-    border-radius: var(--border-radius);
-    max-width: 65vw;
+    object-fit: cover;
+    object-position: center;
   }
-
-
 
   .project-details {
     max-width: 80vw;
@@ -554,10 +528,8 @@ h3 {
     font-optical-sizing: auto;
     font-family: var(--font-family-alt);
     padding-top: var(--spacing-md);
-    
+
   }
-
-
 
   .image {
     flex: 1;
@@ -566,6 +538,7 @@ h3 {
     justify-content: center;
     align-self: center;
     object-fit: contain;
+
   }
 
   .project-video iframe {
@@ -605,7 +578,6 @@ h3 {
     align-items: center;
     justify-content: center;
     align-self: center;
-
   }
 
   .image.small img {
@@ -628,12 +600,206 @@ h3 {
 
 
 
-
-
-
 /* Mittlere Geräte (Laptops und kleinere Bildschirme, 769px bis 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* Stile für kleine Bildschirme und Laptops */
+  html {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .detailsLink-container {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: var(--spacing-lg);
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-normal);
+  }
+
+  .detailsLink {
+    color: var(--color-black);
+    text-decoration: none;
+  }
+
+  #projectLinkStart {
+    position: fixed;
+    top: 0;
+    padding-top: var(--spacing-lg);
+    left: 50vw;
+    transform: translateX(-50%);
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    background-color: var(--color-background);
+  }
+
+  .background {
+    position: fixed;
+    height: 9vh;
+    width: 100vw;
+    top: 0;
+    z-index: var(--z-index-high);
+    background-color: var(--color-background);
+  }
+
+  #projectLinkNext {
+    position: fixed;
+    top: 50vh;
+    right: var(--side-percentage);
+    transform: translateY(-50%);
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-bold);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  #projectLinkBefore {
+    position: fixed;
+    top: 50vh;
+    left: var(--side-percentage);
+    transform: translateY(-50%) rotate(180deg);
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-bold);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .projectFlap,
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-size: var(--font-size-xxxxl);
+    font-weight: var(--font-weight-extra-light);
+    text-align: left;
+  }
+
+  .projectFlap {
+    top: 36vh;
+    left: 29vw;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-xl);
+  }
+
+  .wrapper {
+    top: 35dvh;
+    left: 72dvw;
+    max-width: 40rem;
+    transform: translate(-50%, -50%);
+    flex-direction: row;
+
+  }
+
+  .picture {
+    object-fit: cover;
+    object-position: center;
+
+  }
+
+
+
+  .project-details {
+    max-width: 87.5rem;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    padding-top: 55vh;
+    letter-spacing: 0.3px;
+  }
+
+
+  .project-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .project-section.reverse .project-content {
+    flex-direction: row-reverse;
+  }
+
+  .projectDetailsFlap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: var(--spacing-bigger);
+    padding-top: var(--spacing-big);
+  }
+
+  .text {
+    flex: 1;
+    padding: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-light);
+    line-height: var(--line-height-big);
+  }
+
+  .paragraph {
+    font-optical-sizing: auto;
+    font-family: var(--font-family-alt);
+  }
+
+
+  .image {
+    flex: 1;
+    padding: var(--spacing-lg);
+    display: flex;
+    align-items: flex-start;
+    object-fit: contain;
+    width: 100%;
+
+  }
+
+
+
+  .project-image,
+  .image {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .project-image {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 31.25rem;
+    height: 18.75rem;
+  }
+
+  .project-section h2 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+  }
+
+  h3 {
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-xs);
+    margin-top: var(--spacing-xs);
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+
+
 }
 
 /* Große Geräte (Desktops und größere Bildschirme, 1025px bis 1200px) */

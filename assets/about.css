@@ -38,7 +38,7 @@
 @media (min-width: 481px) and (max-width: 768px) {
   .aboutMeText {
     position: absolute;
-    top: 25dvh;
+    top: 37dvh;
     left: 50dvw;
     min-width: 62%;
   }
@@ -58,6 +58,36 @@
   }
 }
 
+/* Mittlere Geräte (Laptops und kleinere Bildschirme, 769px bis 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .aboutMeText {
+    position: absolute;
+    top: 35dvh;
+    left: 50dvw;
+    min-width: 90%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 65dvh;
+    left: 50dvw;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-thin);
+    font-style: italic;
+    max-width: 30rem;
+  }
+
+  #quote {
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-thin);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+    padding: var(--spacing-xl);
+  }
+}
 
 /* Extra kleine Geräte (Handys im Hochformat, 320px bis 480px) */
 @media (max-width: 480px) {
