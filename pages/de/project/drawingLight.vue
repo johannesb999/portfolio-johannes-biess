@@ -171,7 +171,7 @@
         <div class="project-section">
           <SplitFlapText
             :texts="[
-              '                          [PROJECT] [VIDEO]                        ',
+              '                          [PROJEKT] [VIDEO]                        ',
             ]"
           />
         </div>
@@ -332,7 +332,7 @@
       <div class="project-section-reverse">
         <div class="project-section">
           <SplitFlapText
-            :texts="['               [PROJECT] [VIDEO]               ']"
+            :texts="['               [PROJEKT] [VIDEO]               ']"
           />
         </div>
         <div class="project-section">
@@ -378,7 +378,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['            [IDEE]            ']" />
+            <SplitFlapText :texts="['          [IDEE]          ']" />
             <div class="paragraph">
               DrawingLight entstand aus dem Wunsch, traditionelle Kunst durch
               den kreativen Einsatz moderner Technologie neu zu interpretieren.
@@ -413,7 +413,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [PROZESS]           ']" />
+            <SplitFlapText :texts="['         [PROZESS]        ']" />
             <div class="paragraph">
               Der Prozess begann damit, die allgemeine Aufgabe – die Entwicklung
               eines mechanischen Zeichenapparats zur Erstellung von Linien und
@@ -453,7 +453,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['     [IMPLEMENTATION]      ']" />
+            <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" />
             <div class="paragraph">
               Die Umsetzung stellte sich in den Details als Herausforderung
               heraus. Aufgrund der Streuung der Lichtquelle wurde entschieden,
@@ -490,7 +490,7 @@
       </div>
 
       <div class="project-section">
-        <SplitFlapText :texts="['     [PROJECT] [VIDEO]      ']" />
+        <SplitFlapText :texts="['      [PROJEKT] [VIDEO]       ']" />
       </div>
       <div class="project-section">
         <div class="project-video">
@@ -511,6 +511,7 @@
             '        1 WEEK          ',
             '    SECOND SEMESTER     ',
             '      GRADE: 1.0        ',
+            '        TEAMWORK        ',
           ]"
         />
       </div>

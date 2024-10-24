@@ -262,7 +262,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]         ']" />
+            <SplitFlapText :texts="['         [PROBLEM]        ']" />
             <div class="paragraph">
               How can I present myself in a way that is both professional and
               engaging? <br />How do I showcase my skills and experience in a
@@ -289,7 +289,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROCESS]         ']" />
+            <SplitFlapText :texts="['         [PROCESS]        ']" />
             <div class="paragraph">
               I started with a concept phase, where I thought through different
               layout options and design approaches for my portfolio website.
@@ -340,7 +340,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['      [IMPLEMENTATION]     ']" />
+            <SplitFlapText :texts="['      [IMPLEMENTATION]    ']" />
             <div class="paragraph">
               I am currently happy with my portfolio. Of course there are still
               little things here and there that can be improved with more time

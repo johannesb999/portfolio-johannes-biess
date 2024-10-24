@@ -236,7 +236,7 @@
       <div class="project-section">
         <SplitFlapText
           :texts="[
-            '                       [PROJECT] [VIDEO]                        ',
+            '                       [PROJEKT] [VIDEO]                        ',
           ]"
         />
         <div class="project-video">
@@ -466,7 +466,7 @@
       </div>
       <div class="project-section">
         <SplitFlapText
-          :texts="['              [PROJECT] [VIDEO]              ']"
+          :texts="['              [PROJEKT] [VIDEO]              ']"
         />
         <div class="project-video">
           <iframe
@@ -495,7 +495,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]         ']" />
+            <SplitFlapText :texts="['        [PROBLEM]         ']" />
             <div class="paragraph">
               Der öffentliche Nahverkehr in Deutschland steht vor großen
               Herausforderungen.<br />
@@ -648,7 +648,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [ERGEBNIS]        ']" />
+            <SplitFlapText :texts="['        [ERGEBNIS]        ']" />
             <div class="paragraph">
               GoEase ist ein innovatives System, das das Busfahren
               revolutionieren soll. Durch die Kombination aus einem leicht
@@ -692,7 +692,7 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="['     [PROJECT] [VIDEO]      ']" />
+        <SplitFlapText :texts="['     [PROJEKT] [VIDEO]      ']" />
         <div class="project-video">
           <iframe
             src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
@@ -706,10 +706,10 @@
           <SplitFlapText
             :texts="[
               '        [KEYDATA]         ',
-              '        TWO MONTHS      ',
+              '       TWO MONTHS       ',
               '     THIRD SEMESTER     ',
-              '      GRADE: 1.3        ',
-              '      TEAMWORK          ',
+              '       GRADE: 1.3       ',
+              '        TEAMWORK        ',
             ]"
           />
         </div>

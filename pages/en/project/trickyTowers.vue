@@ -230,7 +230,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]         ']" />
+            <SplitFlapText :texts="['        [PROBLEM]         ']" />
             <div class="paragraph">
               The concept was to design an installation that <br />captures
               attention and sparks curiosity <br />about the university.<br /><br />
@@ -249,7 +249,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROCESS]         ']" />
+            <SplitFlapText :texts="['        [PROCESS]         ']" />
             <div class="paragraph">
               The project began with an extensive brainstorming<br />
               and research phase.<br />
@@ -279,7 +279,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [SOLUTION]         ']" />
+            <SplitFlapText :texts="['       [SOLUTION]         ']" />
             <div class="paragraph">
               TrickyTowers is an interactive shop window that attracts
               passers-by in a playful manner and offers an extraordinary

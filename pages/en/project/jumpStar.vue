@@ -310,7 +310,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['            [IDEA]            ']" />
+            <SplitFlapText :texts="['          [IDEA]          ']" />
             <div class="paragraph">
               The course asked to do something with stars. <br />A link to a CSV
               file containing around 340,000 stars and their data was provided.
@@ -341,7 +341,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [PROCESS]          ']" />
+            <SplitFlapText :texts="['        [PROCESS]         ']" />
             <div class="paragraph">
               The project began with a discussion on how to portray the stars. A
               decision was quickly made to add a fun element by simulating a
@@ -368,7 +368,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText :texts="['       [IMPLEMENTATION]       ']" />
+              <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" />
               <div class="paragraph">
                 The result is an interactive website that allows exploration of
                 space in an engaging way. Stars and constellations can be viewed
@@ -406,7 +406,7 @@
         >
 
         <div class="project-section" style="padding-top: 2rem">
-          <SplitFlapText :texts="['      [PROJECT] [VIDEO]       ']" />
+          <SplitFlapText :texts="['       [PROJECT] [VIDEO]       ']" />
           <div class="project-video">
             <iframe
               src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
@@ -424,7 +424,7 @@
               '       TWO MONTHS       ',
               '     THIRD SEMESTER     ',
               '      GRADE: 1.0        ',
-              '       TEAMWORK         ',
+              '        TEAMWORK        ',
             ]"
           />
         </div>

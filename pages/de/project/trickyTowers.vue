@@ -18,11 +18,11 @@
     <div class="projectFlap">
       <SplitFlapText
         :texts="[
-          '      [TRICKYTOWERS]        ',
-          '   INTERACTIVE WINDOW     ',
-          'HTML   CSS  JAVASCRIPT    ',
-          '  FIGMA        WEBCAM     ',
-          ' GOOGLE MEDIA PIPE        ',
+          '      [TRICKYTOWERS]       ',
+          '   INTERACTIVE WINDOW    ',
+          'HTML   CSS  JAVASCRIPT   ',
+          '  FIGMA        WEBCAM    ',
+          ' GOOGLE MEDIA PIPE       ',
         ]"
       />
     </div>
@@ -128,8 +128,9 @@
           :texts="[
             '        [KEYDATA]         ',
             '        ONE WEEK        ',
-            '    SECOND SEMESTER      ',
+            '     SECOND SEMESTER      ',
             '      GRADE: 1.0        ',
+            '        TEAMWORK        ',
           ]"
         />
       </div>
@@ -244,7 +245,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]         ']" />
+            <SplitFlapText :texts="['        [PROBLEM]         ']" />
             <div class="paragraph">
               Das Projekt befasste sich mit der Frage: Wie zieht man
               Aufmerksamkeit auf ein Schaufenster oder Gebäude? In diesem Fall
@@ -264,7 +265,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['      [PROZESS]       ']" />
+            <SplitFlapText :texts="['       [PROZESS]        ']" />
             <div class="paragraph">
               Das Projekt begann mit einer intensiven Phase von Brainstorming
               und Recherche. Es sollte herausgefunden werden, wie am besten
@@ -296,7 +297,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['      [ERGEBNIS]      ']" />
+            <SplitFlapText :texts="['        [ERGEBNIS]        ']" />
             <div class="paragraph">
               TrickyTowers ist ein interaktives Schaufenster, das Passanten auf
               spielerische Weise anzieht und ein außergewöhnliches Erlebnis
@@ -333,8 +334,9 @@
           :texts="[
             '        [KEYDATA]         ',
             '        ONE WEEK        ',
-            '    SECOND SEMESTER      ',
-            '      GRADE: 1.0        ',
+            '    SECOND SEMESTER     ',
+            '       GRADE: 1.0       ',
+            '        TEAMWORK        ',
           ]"
         />
       </div>

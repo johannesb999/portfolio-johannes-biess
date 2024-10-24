@@ -286,7 +286,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [PROBLEM]            ']" />
+            <SplitFlapText :texts="['        [PROBLEM]         ']" />
             <div class="paragraph">
               Die derzeitige Kommunikationsplattform der Universität, Slack,
               wird durch eine neue dedizierte Plattform ersetzt, die es der
@@ -307,7 +307,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [PROZESS]           ']" />
+            <SplitFlapText :texts="['        [PROZESS]         ']" />
             <div class="paragraph">
               Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
               Umfrage zu bereits existierenden Plattformen durchgeführt. Durch
@@ -339,7 +339,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [ERGEBNIS]         ']" />
+            <SplitFlapText :texts="['       [ERGEBNIS]         ']" />
             <div class="paragraph">
               Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
               nur das Chatten ermöglicht, sondern auch eine Vielzahl
@@ -391,11 +391,11 @@
       <div class="projectDetailsFlap">
         <SplitFlapText
           :texts="[
-            '        [KEYDATA]         ',
+            '        [KEYDATA]        ',
             '       TWO WEEKS       ',
-            '     THIRD SEMESTER     ',
-            '      GRADE: 1.7        ',
-            '       TEAMWORK         ',
+            '     THIRD SEMESTER    ',
+            '      GRADE: 1.7       ',
+            '        TEAMWORK       ',
           ]"
         />
       </div>

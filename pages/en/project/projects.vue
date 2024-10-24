@@ -379,7 +379,6 @@
       </div>
     </div>
 
-    <!-- responsive for mobile -->
     <div v-else-if="isMobile" class="project-details">
       <div class="project-section" id="details-section">
         <div class="project-content">

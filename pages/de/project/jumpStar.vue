@@ -141,7 +141,7 @@
         <div class="project-section" style="padding-top: 2rem">
           <SplitFlapText
             :texts="[
-              '                       [PROJECT] [VIDEO]                       ',
+              '                       [PROJEKT] [VIDEO]                       ',
             ]"
           />
           <div class="project-video">
@@ -173,7 +173,7 @@
         <div class="project-content">
           <div class="text">
             <SplitFlapText
-              :texts="['                       [IDEE]                      ']"
+              :texts="['                      [IDEE]                       ']"
             />
             <div class="paragraph">
               Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
@@ -231,7 +231,7 @@
               einfügt und den visuellen Fokus auf die Sterne nicht stört.
             </div>
           </div>
-          <div class="image mela">
+          <div class="image medium">
             <img
               src="public\img\js\Process.svg"
               alt="concept work in figma"
@@ -265,7 +265,7 @@
                 Bereitstellung der Anwendung gewährleistet.
               </div>
             </div>
-            <div class="image mela">
+            <div class="image medium">
               <img
                 src="public\img\js\Implementaion.svg"
                 alt="a moitor displaying jumpstar"
@@ -285,7 +285,7 @@
 
         <div class="project-section" style="padding-top: 2rem">
           <SplitFlapText
-            :texts="['             [PROJECT] [VIDEO]            ']"
+            :texts="['             [PROJEKT] [VIDEO]            ']"
           />
           <div class="project-video">
             <iframe
@@ -315,7 +315,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [IDEA]           ']" />
+            <SplitFlapText :texts="['          [IDEE]          ']" />
             <div class="paragraph">
               Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
               wurde ein Link zu einer CSV-Datei mit etwa 340.000 Sternendaten
@@ -344,7 +344,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['      [PROCESS]       ']" />
+            <SplitFlapText :texts="['       [PROZESS]        ']" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt
               werden sollten. Schnell fiel die Entscheidung, eine spielerische
@@ -375,7 +375,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText :texts="['      [IMPLEMENTATION]      ']" />
+              <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" />
               <div class="paragraph">
                 Das Resultat ist eine interaktive Website, die den Nutzern eine
                 spielerische Reise durch das Weltall ermöglicht. Mithilfe eines
@@ -415,7 +415,7 @@
         >
 
         <div class="project-section" style="padding-top: 2rem">
-          <SplitFlapText :texts="['     [PROJECT] [VIDEO]      ']" />
+          <SplitFlapText :texts="['     [PROJEKT] [VIDEO]      ']" />
 
           <div class="project-video">
             <iframe
@@ -430,10 +430,11 @@
         <div class="projectDetailsFlap">
           <SplitFlapText
             :texts="[
-              '        [KEYDATA]         ',
-              '        TWO MONTHS      ',
-              '    THIRD SEMESTER      ',
-              '      GRADE: 1.0        ',
+              '        [KEYDATA]        ',
+              '        TWO MONTHS     ',
+              '    THIRD SEMESTER     ',
+              '      GRADE: 1.0       ',
+              '        TEAMWORK       ',
             ]"
           />
         </div>

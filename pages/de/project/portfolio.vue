@@ -73,7 +73,7 @@
             <img src="public\img\po\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['           [PROCESS]           ']" />
+            <SplitFlapText :texts="['           [PROZESS]           ']" />
             <div class="paragraph">
               Der Entwicklungsprozess meiner Portfolio-Website begann mit einer
               Konzeptionsphase, in der ich verschiedene Layout-Varianten und
@@ -142,7 +142,7 @@
             '         [KEYDATA]          ',
             '        ONE MONTH         ',
             '     SEMESTER BREAK       ',
-            '    GRADE: YOU DECIDE     ',
+            '  GRADE: DU ENTSCHEIDEST  ',
           ]"
         />
       </div>
@@ -266,7 +266,7 @@
             '         [KEYDATA]          ',
             '        ONE MONTH         ',
             '     SEMESTER BREAK       ',
-            '    GRADE: YOU DECIDE     ',
+            '  GRADE: DU ENTSCHEIDEST  ',
           ]"
         />
       </div>
@@ -276,7 +276,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]         ']" />
+            <SplitFlapText :texts="['        [PROBLEM]         ']" />
             <div class="paragraph">
               Wie präsentiere ich mich auf eine Weise, die sowohl professionell
               als auch ansprechend ist? Wie stelle ich meine Fähigkeiten und
@@ -307,7 +307,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROCESS]          ']" />
+            <SplitFlapText :texts="['        [PROZESS]         ']" />
             <div class="paragraph">
               Der Entwicklungsprozess meiner Portfolio-Website begann mit einer
               Konzeptionsphase, in der ich verschiedene Layout-Varianten und
@@ -364,7 +364,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [IMPLEMENTATION]       ']" />
+            <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" />
             <div class="paragraph">
               Ich bin derzeit mit meinem Portfolio zufrieden. Natürlich gibt es
               hier und da noch Kleinigkeiten, die man mit mehr Zeit verbessern
@@ -380,10 +380,10 @@
       <div class="projectDetailsFlap">
         <SplitFlapText
           :texts="[
-            '         [KEYDATA]          ',
-            '        ONE MONTH         ',
-            '     SEMESTER BREAK       ',
-            '    GRADE: YOU DECIDE     ',
+            '         [KEYDATA]         ',
+            '        ONE MONTH        ',
+            '     SEMESTER BREAK      ',
+            '  GRADE: DU ENTSCHEIDEST ',
           ]"
         />
       </div>

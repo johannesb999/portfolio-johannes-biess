@@ -355,12 +355,11 @@
       </div>
     </div>
 
-    <!-- responsive for mobile -->
     <div v-else-if="isMobile" class="project-details">
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['            [IDEA]            ']" />
+            <SplitFlapText :texts="['          [IDEA]          ']" />
             <div class="paragraph">
               DrawingLight was born out of a desire to reinterpret traditional
               art through the creative use of modern technology. <br />Instead
@@ -393,7 +392,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [PROCESS]           ']" />
+            <SplitFlapText :texts="['         [PROCESS]        ']" />
             <div class="paragraph">
               The process began by interpreting the generic task of developing a
               mechanical drawing device to create lines and shapes in a way that
@@ -428,7 +427,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [IMPLEMENTATION]       ']" />
+            <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" />
             <div class="paragraph">
               The implementation presented challenges in the finer details. Due
               to the dispersion of the light source, a relatively large machine

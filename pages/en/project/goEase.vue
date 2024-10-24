@@ -439,7 +439,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [PROBLEM]          ']" />
+            <SplitFlapText :texts="['        [PROBLEM]         ']" />
             <div class="paragraph">
               The idea for GoEase emerged from thinking about how to make local
               public transport more accessible and convenient.<br />
@@ -460,7 +460,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [PROCESS]           ']" />
+            <SplitFlapText :texts="['        [PROCESS]         ']" />
             <div class="paragraph">
               The project began with an intensive brainstorming session, where
               various ideas were discussed, and some initial concepts were
@@ -566,7 +566,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [SOLUTION]          ']" />
+            <SplitFlapText :texts="['        [SOLUTION]        ']" />
             <div class="paragraph">
               During the journey, users can check their progress and see their
               costs, offering maximum convenience and transparency. GoEase is

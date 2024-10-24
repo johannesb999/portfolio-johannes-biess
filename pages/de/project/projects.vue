@@ -71,7 +71,7 @@
             />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['           [PROCESS]           ']" />
+            <SplitFlapText :texts="['           [PROZESS]           ']" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde eine Wettbewerbsanalyse
               durchgeführt,<br />
@@ -200,7 +200,7 @@
       <div class="project-section">
         <SplitFlapText
           :texts="[
-            '                         [PROJECT] [VIDEO]                          ',
+            '                         [PROJEKT] [VIDEO]                          ',
           ]"
         />
         <div class="project-video">
@@ -258,7 +258,7 @@
         <div class="project-content">
           <div class="text">
             <SplitFlapText
-              :texts="['                  [PROCESS]                  ']"
+              :texts="['                  [PROZESS]                  ']"
             />
             <div class="paragraph">
               Zu Beginn des Projekts wurde eine Wettbewerbsanalyse durchgeführt,
@@ -397,7 +397,7 @@
       </div>
       <div class="project-section">
         <SplitFlapText
-          :texts="['               [PROJECT] [VIDEO]               ']"
+          :texts="['               [PROJEKT] [VIDEO]               ']"
         />
         <div class="project-video">
           <iframe
@@ -426,7 +426,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]         ']" />
+            <SplitFlapText :texts="['        [PROBLEM]         ']" />
             <div class="paragraph">
               Im hektischen Alltag bleibt oft wenig Zeit für die Pflege von
               Zimmer- und Gartenpflanzen. Viele Menschen, insbesondere
@@ -451,7 +451,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROCESS]         ']" />
+            <SplitFlapText :texts="['        [PROZESS]         ']" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde eine Wettbewerbsanalyse durchgeführt,
               um bestehende Lösungen auf dem Markt zu evaluieren. Ziel war es,
@@ -547,7 +547,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [SOLUTION]          ']" />
+            <SplitFlapText :texts="['        [ERGEBNIS]        ']" />
             <div class="paragraph">
               Das Ergebnis des Projekts ist PlantMonit – ein intelligentes Smart
               Tool, das die Pflanzenpflege vereinfacht und optimiert. Ziel war
@@ -583,7 +583,7 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="['       [PROJECT] [VIDEO]        ']" />
+        <SplitFlapText :texts="['       [PROJEKT] [VIDEO]        ']" />
         <div class="project-video">
           <iframe
             src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
