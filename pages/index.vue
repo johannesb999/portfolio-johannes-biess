@@ -257,7 +257,7 @@ onUnmounted(() => {
 
   50% {
     font-size: 1.17em;
-    color: #c9c9c9dd;
+    color: var(--color-secondary);
     text-decoration: none;
   }
   100% {
