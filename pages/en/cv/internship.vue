@@ -46,7 +46,7 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['          [INTERNSHIP]         ']" />
+            <SplitFlapText :texts="['         [INTERNSHIP]         ']" />
             <div class="paragraph">
               I'm hoping the company I'm doing my internship with has an open
               and innovative corporate culture that encourages creativity and

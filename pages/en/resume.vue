@@ -29,7 +29,7 @@
         </li>
         <li>
           <NuxtLink to="/en/cv/bosch" class="content custom-link">
-            <h2>BOSCH AS</h2>
+            <h2>BOSCH LLC</h2>
             <p>WORKING STUDENT</p>
             <p class="location">SCHWÄBISCH GMÜND, GERMANY</p>
           </NuxtLink>
@@ -39,7 +39,7 @@
         </li>
         <li>
           <NuxtLink to="/en/cv/kbsz" class="content custom-link">
-            <h2>KBSZ</h2>
+            <h2>VOCATIONAL SCHOOL</h2>
             <p>DIPLOMA OF VOCATIONAL EDUCATION (BUSINESS)</p>
             <p class="location">ELLWANGEN, GERMANY</p>
           </NuxtLink>
@@ -67,7 +67,7 @@
         href="/docs/ResumeEn.pdf"
         download="ResumeJohannesBiess.pdf"
         class="custom-link"
-        >Download Full Resume.pdf</a
+        >Download Resume.pdf</a
       >
     </div>
   </main>

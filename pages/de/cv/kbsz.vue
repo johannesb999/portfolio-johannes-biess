@@ -8,13 +8,13 @@
 
     <div class="projectFlap">
       <SplitFlapText
-      :texts="[
-        'MATHEMATIK    WIRTSCHAFT  ',
-        '        INFORMATIK        ',
-        '   WIRTSCHAFT    DEUTSCH  ',
-        '   ENGLISCH    GESCHICHTE ',
-      ]"
-    />
+        :texts="[
+          'MATHEMATIK    WIRTSCHAFT  ',
+          '        INFORMATIK        ',
+          '   WIRTSCHAFT    DEUTSCH  ',
+          '   ENGLISCH    GESCHICHTE ',
+        ]"
+      />
     </div>
 
     <div class="wrapper">
@@ -30,7 +30,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [LEARNINGS]          ']" />
+            <SplitFlapText :texts="['          [LEARNINGS]         ']" />
             <div class="paragraph">
               Während meiner Zeit in der KBSZ habe ich das <br />
               Baden-Würtenbergische Abitur mit schwerpunkt auf Wirtschaft und
@@ -42,7 +42,7 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [ABOUT] [DIPLOMA]      ']" />
+            <SplitFlapText :texts="['       [ABOUT] [ABSCHLUSS]     ']" />
             <div class="paragraph">
               Das Kaufmännische Berufs- und Schulzentrum (KBSZ) in Ellwangen
               bietet unter anderem das fachgebundene Fachabitur im Bereich

@@ -30,7 +30,7 @@
           </li>
           <li>
             <NuxtLink to="/de/cv/bosch" class="content custom-link">
-              <h2>BOSCH AS</h2>
+              <h2>BOSCH GMBH</h2>
               <p>WERKSTUDENT</p>
               <p class="location">SCHWÄBISCH GMÜND, GERMANY</p>
             </NuxtLink>
@@ -40,7 +40,7 @@
           </li>
           <li>
             <NuxtLink to="/de/cv/kbsz" class="content custom-link">
-              <h2>KBSZ</h2>
+              <h2>BERUFSSCHULE</h2>
               <p>FACHGEBUNDENE FACHHOCHSCHULREIFE <br />(WIRTSCHAFT)</p>
               <p class="location">ELLWANGEN, GERMANY</p>
             </NuxtLink>

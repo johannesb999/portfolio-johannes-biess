@@ -31,7 +31,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [LEARNINGS]          ']" />
+            <SplitFlapText :texts="['          [LEARNINGS]         ']" />
             <div class="paragraph">
               Während meiner Zeit an der HfG arbeitete ich an
               <NuxtLink
@@ -55,7 +55,7 @@
                 class="custom-link"
                 style="text-decoration: underline"
                 >Leistungsbescheinigung.pdf</a
-              >
+              >.
             </div>
           </div>
 
@@ -86,7 +86,7 @@
                 class="custom-link"
                 style="text-decoration: underline"
                 >Modulhandbuch.pdf</a
-              >
+              >.
             </div>
           </div>
         </div>

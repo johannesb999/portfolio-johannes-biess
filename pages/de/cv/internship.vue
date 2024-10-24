@@ -48,7 +48,7 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['          [INTERNSHIP]         ']" />
+            <SplitFlapText :texts="['         [INTERNSHIP]         ']" />
             <div class="paragraph">
               Von dem Unternehmen, in dem ich mein Praktikum absolviere, erhoffe
               ich mir eine offene und innovative Unternehmenskultur, die
@@ -68,8 +68,10 @@
   </main>
 </template>
 
-<script setup>import { useDeviceType } from "~/assets/composables/useDeviceType.js";
+<script setup>
+import { useDeviceType } from "~/assets/composables/useDeviceType.js";
 
-const { isMobile, isTablet, isDesktop } = useDeviceType();</script>
+const { isMobile, isTablet, isDesktop } = useDeviceType();
+</script>
 
 <style src="assets/cv.css" scoped></style>

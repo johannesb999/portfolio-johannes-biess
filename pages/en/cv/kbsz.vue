@@ -40,7 +40,7 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [ABOUT] [DIPLOMA]      ']" />
+            <SplitFlapText :texts="['        [ABOUT] [DIPLOMA]      ']" />
             <div class="paragraph">
               The "Fachgebundene Fachhochschulreife" is a school qualification
               in Germany that enables students to study all courses at

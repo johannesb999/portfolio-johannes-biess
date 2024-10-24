@@ -28,7 +28,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [LEARNINGS]          ']" />
+            <SplitFlapText :texts="['          [LEARNINGS]         ']" />
             <div class="paragraph">
               Während meiner Ausbildung zum Kaufmann im Groß- und Außenhandel
               bei D-TACK und der IHK Deutschland durchlief ich innerhalb von
@@ -51,7 +51,7 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['          [ABOUT] [D-TACK]       ']" />
+            <SplitFlapText :texts="['         [ABOUT] [D-TACK]       ']" />
             <div class="paragraph">
               D-TACK ist ein Unternehmen, das sich auf die Entwicklung und den
               Vertrieb von Klebebändern für verschiedene Industrieanwendungen
