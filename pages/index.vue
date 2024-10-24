@@ -1,50 +1,52 @@
 <template>
-  <div class="container">
-    <div id="leftLink" ref="leftLink">
-      <nuxt-link to="/en/about" class="custom-link">
-        <span class="link-content">ABOUT ME</span>
-      </nuxt-link>
-    </div>
-    <div id="rightLink" ref="rightLink">
-      <nuxt-link to="/en/contact" class="custom-link">
-        <span class="link-content">CONTACT</span>
-      </nuxt-link>
-    </div>
-    <div id="bottomLink" ref="bottomLink">
-      <nuxt-link to="/en/project/projects" class="custom-link">
-        <span class="link-content">
-          <span
-            v-for="(char, index) in 'PROJECTS'.split('')"
-            :key="index"
-            class="project-char"
-          >
-            {{ char }}
+  <html>
+    <div class="container">
+      <div id="leftLink" ref="leftLink">
+        <nuxt-link to="/en/about" class="custom-link">
+          <span class="link-content">ABOUT ME</span>
+        </nuxt-link>
+      </div>
+      <div id="rightLink" ref="rightLink">
+        <nuxt-link to="/en/contact" class="custom-link">
+          <span class="link-content">CONTACT</span>
+        </nuxt-link>
+      </div>
+      <div id="bottomLink" ref="bottomLink">
+        <nuxt-link to="/en/project/projects" class="custom-link">
+          <span class="link-content">
+            <span
+              v-for="(char, index) in 'PROJECTS'.split('')"
+              :key="index"
+              class="project-char"
+            >
+              {{ char }}
+            </span>
           </span>
-        </span>
-      </nuxt-link>
-    </div>
+        </nuxt-link>
+      </div>
 
-    <div
-      v-for="(textArray, idx) in textArrays"
-      :key="idx"
-      class="mainText"
-      @click="() => animate(idx)"
-    >
-      <div>
-        <span
-          v-for="(letter, index) in textArray"
-          :key="index"
-          :class="[
-            'char',
-            { separator: letter.isSeparator, normal: !letter.isSeparator },
-            letter.styleClass,
-          ]"
-        >
-          {{ letter.current }}
-        </span>
+      <div
+        v-for="(textArray, idx) in textArrays"
+        :key="idx"
+        class="mainText"
+        @click="() => animate(idx)"
+      >
+        <div>
+          <span
+            v-for="(letter, index) in textArray"
+            :key="index"
+            :class="[
+              'char',
+              { separator: letter.isSeparator, normal: !letter.isSeparator },
+              letter.styleClass,
+            ]"
+          >
+            {{ letter.current }}
+          </span>
+        </div>
       </div>
     </div>
-  </div>
+  </html>
 </template>
 
 <script setup>
@@ -249,13 +251,19 @@ onUnmounted(() => {
 @keyframes fontSizeUpDown {
   0% {
     font-size: 1em;
+    color: var(--color-primary);
+    text-decoration: none;
   }
 
   50% {
     font-size: 1.17em;
+    color: #c9c9c9dd;
+    text-decoration: none;
   }
   100% {
     font-size: 1em;
+    color: var(--color-primary);
+    text-decoration: none;
   }
 }
 </style>
