@@ -1,14 +1,18 @@
 <template>
-  <html>
-    <div class="container">
-      <div id="leftLink">
-        <nuxt-link to="/en/about" class="custom-link">ABOUT ME</nuxt-link>
-      </div>
-      <div id="rightLink">
-        <nuxt-link to="/en/contact" class="custom-link">CONTACT</nuxt-link>
-      </div>
-      <div id="bottomLink">
-        <nuxt-link to="/en/project/projects" class="custom-link">
+  <div class="container">
+    <div id="leftLink" ref="leftLink">
+      <nuxt-link to="/en/about" class="custom-link">
+        <span class="link-content">ABOUT ME</span>
+      </nuxt-link>
+    </div>
+    <div id="rightLink" ref="rightLink">
+      <nuxt-link to="/en/contact" class="custom-link">
+        <span class="link-content">CONTACT</span>
+      </nuxt-link>
+    </div>
+    <div id="bottomLink" ref="bottomLink">
+      <nuxt-link to="/en/project/projects" class="custom-link">
+        <span class="link-content">
           <span
             v-for="(char, index) in 'PROJECTS'.split('')"
             :key="index"
@@ -16,31 +20,31 @@
           >
             {{ char }}
           </span>
-        </nuxt-link>
-      </div>
+        </span>
+      </nuxt-link>
+    </div>
 
-      <div
-        v-for="(textArray, idx) in textArrays"
-        :key="idx"
-        class="mainText"
-        @click="() => animate(idx)"
-      >
-        <div>
-          <span
-            v-for="(letter, index) in textArray"
-            :key="index"
-            :class="[
-              'char',
-              { separator: letter.isSeparator, normal: !letter.isSeparator },
-              letter.styleClass,
-            ]"
-          >
-            {{ letter.current }}
-          </span>
-        </div>
+    <div
+      v-for="(textArray, idx) in textArrays"
+      :key="idx"
+      class="mainText"
+      @click="() => animate(idx)"
+    >
+      <div>
+        <span
+          v-for="(letter, index) in textArray"
+          :key="index"
+          :class="[
+            'char',
+            { separator: letter.isSeparator, normal: !letter.isSeparator },
+            letter.styleClass,
+          ]"
+        >
+          {{ letter.current }}
+        </span>
       </div>
     </div>
-  </html>
+  </div>
 </template>
 
 <script setup>
@@ -55,6 +59,10 @@ const switchLanguage = (lang) => {
   currentLocale.value = lang;
   router.push({ path: `/${lang}` });
 };
+
+const leftLink = ref(null);
+const rightLink = ref(null);
+const bottomLink = ref(null);
 
 const texts = [
   "HI MY NAME IS   ",
@@ -100,7 +108,6 @@ function createTextArray(text, maxLength) {
   return result;
 }
 
-// Funktion zur Berechnung der Länge des Textes ohne Klammern
 const getTextLengthWithoutBrackets = (text) =>
   text.replace(/\[|\]/g, "").length;
 
@@ -200,6 +207,16 @@ onMounted(() => {
   }, 3000);
 
   window.addEventListener("wheel", handleWheel);
+
+  // Fügen Sie die Animation zu den .link-content-Elementen hinzu
+  [leftLink.value, rightLink.value, bottomLink.value].forEach((element) => {
+    if (element) {
+      const linkContent = element.querySelector(".link-content");
+      if (linkContent) {
+        linkContent.classList.add("animate-scale");
+      }
+    }
+  });
 });
 
 onUnmounted(() => {
@@ -221,6 +238,24 @@ onUnmounted(() => {
   }
   100% {
     transform: rotateX(0);
+  }
+}
+
+:deep(.link-content.animate-scale) {
+  animation: fontSizeUpDown 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation-delay: 4s;
+}
+
+@keyframes fontSizeUpDown {
+  0% {
+    font-size: 1em;
+  }
+
+  50% {
+    font-size: 1.17em;
+  }
+  100% {
+    font-size: 1em;
   }
 }
 </style>
