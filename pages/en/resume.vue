@@ -11,7 +11,7 @@
           <NuxtLink to="/en/cv/hfg" class="content custom-link">
             <h2>HOCHSCHULE <br />FÜR GESTALTUNG</h2>
             <p>BACHELOR OF ARTS</p>
-            <p class="location">SCHWÄBISCH GÜND, GERMANY</p>
+            <p class="location">SCHWÄBISCH GMÜND, GERMANY</p>
           </NuxtLink>
           <div class="date">
             <h3>2026</h3>
@@ -31,7 +31,7 @@
           <NuxtLink to="/en/cv/bosch" class="content custom-link">
             <h2>BOSCH AS</h2>
             <p>WORKING STUDENT</p>
-            <p class="location">SCHWÄBISCH GÜND, GERMANY</p>
+            <p class="location">SCHWÄBISCH GMÜND, GERMANY</p>
           </NuxtLink>
           <div class="date">
             <h3>2024</h3>

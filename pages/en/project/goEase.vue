@@ -113,7 +113,7 @@
             <img
               style="object-fit: contain; height: 70vh"
               src="public\img\ge\softwareProcess.svg"
-              alt="figma mobile screens in diffrent fidelitys"
+              alt="figma mobile screens in different fidelitys"
             />
           </div>
           <div class="text">

@@ -30,7 +30,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\dl\thumbnail.svg" alt="plantmonit" />
+        <img src="public\img\dl\thumbnail.svg" alt="book with pictures" />
       </div>
     </div>
     <DetailsScroll />
@@ -64,7 +64,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\dl\idea.svg" alt="plantmonit" />
+            <img src="public\img\dl\idea.svg" alt="wikipedia page " />
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img src="public\img\dl\process.svg" alt="plantmonit" />
+            <img src="public\img\dl\process.svg" alt="scribble tablet" />
           </div>
           <div class="text">
             <SplitFlapText :texts="['           [PROCESS]           ']" />

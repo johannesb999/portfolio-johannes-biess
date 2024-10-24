@@ -726,6 +726,169 @@ button {
   }
 }
 
+@media (max-width: 310px) {
+  :root {
+    --border-color-black: #171717;
+    --border-size: 0.08rem; /* 0.1rem  */
+    --border-radius: 0.56rem; /* 0.7rem  */
+
+    /* Schriftgrößen */
+    --font-size-base: 0.6rem; /* 0.625rem  */
+    --font-size-sm: 0.6rem; /* 0.75rem  */
+    --font-size-md: 0.64rem; /* 0.8rem  */
+    --font-size-lg: 0.8rem; /* 1rem  */
+    --font-size-xl: 0.96rem; /* 1.2rem  */
+    --font-size-xxl: 1.02rem; /* 1.28rem  */
+    --font-size-xxxl: 1.1rem; /* 1.4rem  */
+    --font-size-xxxxl: 1.28rem; /* 1.6rem  */
+    --font-size-big: 1.6rem; /* 2rem  */
+    --font-size-bigger: 1.92rem; /* 2.4rem  */
+    --font-size-huge: 2.56rem; /* 3.2rem  */
+
+    /* Schriftgewichte */
+    --font-weight-thin: 100;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* Abstände */
+    --spacing-none: 0;
+    --spacing-xxs: 0.192rem; /* 0.24rem  */
+    --spacing-xs: 0.3rem; /* 0.5rem  */
+    --spacing-sm: 0.5rem; /* 0.8rem  */
+    --spacing-sm-md: 0.52rem; /* 1rem  */
+    --spacing-md: 0.75rem; /* 1rem  */
+    --spacing-lg: 0.9rem; /* 1.5rem  */
+    --spacing-xl: 1.28rem; /* 1.6rem  */
+    --spacing-xxl: 1.92rem; /* 2.4rem  */
+    --spacing-xxxl: 2.56rem; /* 3.2rem  */
+    --spacing-big: 3.84rem; /* 4.8rem  */
+    --spacing-bigger: 5.12rem; /* 6.4rem  */
+
+    --radius-xxs: 0.192rem; /* 0.24rem  */
+    --radius-xs: 0.4rem; /* 0.5rem  */
+    --radius-sm: 0.64rem; /* 0.8rem  */
+    --radius-md: 0.8rem; /* 1rem  */
+
+    /* Positionierung */
+    --top-spacing: 1.04rem; /* 1.3rem  */
+    --side-percentage: 1.5%;
+    --z-index-high: 100;
+    --z-index-alert: 1000;
+
+    /* Sonstiges */
+    --letter-spacing-base: 0.04rem; /* 0.05rem  */
+    --line-height-small: 1;
+    --line-height-normal: normal;
+    --line-height-big: 1.2; /* 1.5  */
+    --line-height-normal: 1.6; /* 2  */
+
+    /* Bildhöhen */
+    --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
+    --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
+    --img-height-md: 40vh; /* 40% der Viewport-Höhe */
+    --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
+    --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
+  }
+
+  html {
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-main);
+    background-color: var(--color-background);
+    margin: var(--spacing-none);
+    padding: var(--spacing-none);
+    letter-spacing: var(--letter-spacing-base);
+    scroll-behavior: smooth;
+    font-optical-sizing: auto;
+    height: 100dvh;
+    width: 100dvw;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border: var(--border-size) solid var(--border-color-black);
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    object-position: center;
+  }
+
+  ::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    background-color: var(--color-background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-background);
+    border: var(--spacing-none) solid var(--color-background);
+  }
+
+  .returnHome {
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-bigger);
+    color: var(--color-primary);
+    text-decoration: none;
+    position: fixed;
+    left: var(--side-percentage);
+    padding-left: var(--spacing-xs);
+    z-index: var(--z-index-high);
+    top: var(--side-percentage);
+  }
+
+  .language-switch {
+    position: fixed;
+    top: var(--side-percentage);
+    right: var(--side-percentage);
+    display: flex;
+    align-items: center;
+    z-index: var(--z-index-high);
+  }
+
+  #en,
+  #de,
+  #line {
+    font-weight: var(--font-weight-thin);
+    font-size: var(--font-size-big);
+  }
+
+  #line {
+    margin: var(--spacing-none);
+  }
+
+  button {
+    background-color: transparent;
+  }
+
+  .language-switch button {
+    color: var(--color-secondary);
+    border: none;
+  }
+
+  .language-switch button:disabled {
+    color: var(--color-primary);
+  }
+
+  .language-switch button:not(:disabled):hover {
+    color: var(--color-primary);
+  }
+
+  /* Theme Switcher Button */
+  .theme-switcher {
+    position: fixed;
+    bottom: var(--top-spacing);
+    right: var(--side-percentage);
+    font-size: var(--font-size-xxxxl);
+    font-weight: var(--font-weight-normal);
+    background-color: transparent;
+    cursor: pointer;
+    z-index: var(--z-index-high);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+}
+
 /* Kleine Geräte (Tablets und Handys im Querformat, 481px bis 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   :root {
@@ -966,14 +1129,14 @@ button {
 }
 
 /* Mittlere Geräte (Laptops und kleinere Bildschirme, 769px bis 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   :root {
     --border-color-black: #171717;
     --border-size: 0.088rem; /* 0.08rem, um 10% erhöht */
     --border-radius: 0.616rem; /* 0.56rem, um 10% erhöht */
 
     /* Schriftgrößen */
-    --font-size-base: 0.715rem; /* 0.65rem */
+    --font-size-base: 0.615rem; /* 0.65rem */
     --font-size-sm: 0.66rem; /* 0.6rem */
     --font-size-md: 0.704rem; /* 0.64rem */
     --font-size-lg: 0.88rem; /* 0.8rem */
@@ -1205,8 +1368,81 @@ button {
 }
 
 /* Große Geräte (Desktops und größere Bildschirme, 1025px bis 1200px) */
-@media (min-width: 1025px) and (max-width: 1200px) {
-  /* Stile für Desktops und größere Bildschirme */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  :root {
+    --border-color-black: #171717;
+    --border-size: 0.088rem; /* 0.08rem, um 10% erhöht */
+    --border-radius: 0.616rem; /* 0.56rem, um 10% erhöht */
+
+    /* Schriftgrößen */
+    --font-size-base: 0.65rem; /* 0.65rem */
+    --font-size-sm: 0.66rem; /* 0.6rem */
+    --font-size-md: 0.704rem; /* 0.64rem */
+    --font-size-lg: 0.88rem; /* 0.8rem */
+    --font-size-xl: 1.056rem; /* 0.96rem */
+    --font-size-xxl: 1.122rem; /* 1.02rem */
+    --font-size-xxxl: 1.21rem; /* 1.1rem */
+    --font-size-xxxxl: 1.408rem; /* 1.28rem */
+    --font-size-big: 1.76rem; /* 1.6rem */
+    --font-size-bigger: 2.112rem; /* 1.92rem */
+    --font-size-huge: 2.816rem; /* 2.56rem */
+
+    /* Schriftgewichte */
+    --font-weight-thin: 100;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* Abstände */
+    --spacing-none: 0;
+    --spacing-xxs: 0.2112rem; /* 0.192rem */
+    --spacing-xs: 0.33rem; /* 0.3rem */
+    --spacing-sm: 0.55rem; /* 0.5rem */
+    --spacing-sm-md: 0.572rem; /* 0.52rem */
+    --spacing-md: 0.9rem; /* 0.75rem */
+    --spacing-lg: 1.1rem; /* 0.9rem */
+    --spacing-xl: 1.508rem; /* 1.28rem */
+    --spacing-xxl: 2.312rem; /* 1.92rem */
+    --spacing-xxxl: 2.916rem; /* 2.56rem */
+    --spacing-big: 4.224rem; /* 3.84rem */
+    --spacing-bigger: 5.632rem; /* 5.12rem */
+
+    --radius-xxs: 0.2112rem; /* 0.192rem */
+    --radius-xs: 0.44rem; /* 0.4rem */
+    --radius-sm: 0.704rem; /* 0.64rem */
+    --radius-md: 0.88rem; /* 0.8rem */
+
+    /* Positionierung */
+    --top-spacing: 1.144rem; /* 1.04rem */
+    --side-percentage: 1.65%; /* 1.5% */
+    --z-index-high: 100;
+    --z-index-alert: 1000;
+
+    /* Sonstiges */
+    --letter-spacing-base: 0.044rem; /* 0.04rem */
+    --line-height-small: 1.1; /* 1 */
+    --line-height-normal: normal; /* Bleibt unverändert */
+    --line-height-big: 1.32; /* 1.2 */
+    --line-height-larger: 1.76; /* 1.6 */
+
+    /* Bildhöhen */
+    --img-height-sm: 15vh; /* 20% der Viewport-Höhe */
+    --img-height-smedi: 25vh; /* 30% der Viewport-Höhe */
+    --img-height-md: 35vh; /* 40% der Viewport-Höhe */
+    --img-height-mela: 45vh; /* 50% der Viewport-Höhe */
+    --img-height-lg: 55vh; /* 60% der Viewport-Höhe */
+  }
+
+  img {
+    max-width: 100%;
+    height: fit-content;
+    border: var(--border-size) solid var(--border-color-black);
+    border-radius: var(--border-radius);
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 /* Extra große Geräte (Sehr große Bildschirme, ab 1201px) */
