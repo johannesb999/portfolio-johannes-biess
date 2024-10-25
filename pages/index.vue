@@ -1,5 +1,5 @@
 <template>
-  <html>
+  <html lang="eng">
     <div class="container">
       <div id="leftLink" ref="leftLink">
         <nuxt-link to="/en/about" class="custom-link">
@@ -68,16 +68,16 @@ const bottomLink = ref(null);
 
 const texts = [
   "HI MY NAME IS   ",
-  "[JOHANNES] [BIESS]  ",
+  "[JOHANNES] [BIESS]    ",
   "AND I AM        ",
-  "DEVELOPER       ",
+  "A DEVELOPER       ",
 ];
 const newWords = [
-  "DESIGNER",
+  "A DESIGNER",
   "A PROBLEMSOLVER",
-  "PROTOTYPER",
+  "A PROTOTYPER",
   "YOUR NEXT INTERN",
-  "DEVELOPER",
+  "A DEVELOPER",
 ];
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

@@ -1,5 +1,5 @@
 <template>
-  <html>
+  <html lang="de">
     <div class="container">
       <div id="leftLink">
         <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>

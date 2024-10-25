@@ -1,5 +1,4 @@
 <template>
-  
   <main>
     <div id="rightLink">
       <nuxt-link to="/de" class="custom-link">START</nuxt-link>
@@ -16,18 +15,15 @@
           '         [ÜBER] [MICH]          ',
           '   FLEXIBEL  AGIL  NEUGIERIG',
           'ANPASSUNGSFÄHIG      GENAU  ',
-          'PÜNKTLICHKEIT   FAIRNESS    ',
+          'PÜNKTLICHK      FAIR        ',
           ' KREATIV   ENTSCHDIUNGSSTARK',
         ]"
       />
     </div>
     <div class="wrapper">
-        <img
-          src="public\profilepicture.svg"
-          alt="profilepicture"
-        />
-        <div id="quote">“Es gibt nicht<br />- zu viel Käse.”</div>
-      </div>
+      <img src="public\profilepicture.svg" alt="profilepicture" />
+      <div id="quote">“Es gibt nicht<br />- zu viel Käse.”</div>
+    </div>
   </main>
 </template>
 
