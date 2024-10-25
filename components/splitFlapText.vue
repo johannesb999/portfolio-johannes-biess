@@ -119,7 +119,7 @@ function createTextArray(text) {
         inLink = true;
         switch (char) {
           case "|":
-            linkTarget = "https://de.linkedin.com/in/johannes-biess-8464a21bb";
+            linkTarget = "https://de.linkedin.com/in/johannes-biess";
             break;
           case "@":
             linkTarget = "mailto:biessjohannes@gmail.com";
