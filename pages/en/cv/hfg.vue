@@ -48,7 +48,7 @@
               where I could not only build my design and technical skills, but
               also learn how to apply them in real projects. Take a look at my
               <a
-                href="/docs/TransscriptOfRecords.pdf"
+                href="/docs/transciptOfRecords.pdf"
                 download="transcriptOfRecords.pdf"
                 class="custom-link"
                 style="text-decoration: underline"

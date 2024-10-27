@@ -15,7 +15,7 @@ html {
   justify-content: center;
   padding-bottom: var(--spacing-lg);
   font-size: var(--font-size-big);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
 }
 
 .detailsLink {
@@ -104,6 +104,7 @@ html {
   padding: var(--spacing-lg);
   padding-top: 100vh;
   letter-spacing: 0.3px;
+
 }
 
 
@@ -261,7 +262,7 @@ h3 {
     justify-content: center;
     padding-bottom: var(--spacing-lg);
     font-size: var(--font-size-big);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
   }
 
   .detailsLink {
@@ -513,7 +514,7 @@ h3 {
     justify-content: center;
     padding-bottom: var(--spacing-lg);
     font-size: var(--font-size-big);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
   }
 
   .detailsLink {
@@ -761,7 +762,7 @@ h3 {
     justify-content: center;
     padding-bottom: var(--spacing-lg);
     font-size: var(--font-size-big);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
   }
 
   .detailsLink {

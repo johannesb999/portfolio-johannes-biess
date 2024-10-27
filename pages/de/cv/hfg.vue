@@ -50,7 +50,7 @@
               sie in realen Projekten anwenden kann. Wie ich mich dabei
               geschlagen habe in meiner
               <a
-                href="/docs/TransscriptOfRecords.pdf"
+                href="/docs/Leistungsbescheinigung.pdf"
                 download="Leistungsbescheinigung.pdf"
                 class="custom-link"
                 style="text-decoration: underline"
