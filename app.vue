@@ -347,7 +347,6 @@ button {
 }
 
 #bottomLink {
-  color: var(--color-primary);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-big);
   position: absolute;
@@ -401,6 +400,7 @@ button {
 
 .custom-link:hover {
   transform: scale(1.1);
+  color: #0081fb;
 }
 
 /* Transition Klassen hier unverändert belassen, falls keine Variablen benötigt werden */
