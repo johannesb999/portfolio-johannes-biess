@@ -192,7 +192,7 @@ onMounted(() => {
   --spacing-xxl: 2.4rem; /* 38.4px */
   --spacing-xxxl: 3.2rem; /* 51.2px */
   --spacing-big: 4.8rem; /* 76.8px */
-  --spacing-bigger: 6.4rem; /* 102.4px */
+  --spacing-bigger: 6.4rem;
 
   --radius-xxs: 0.24rem; /* 3.84px */
   --radius-xs: 0.5rem; /* 8px */
