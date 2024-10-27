@@ -15,7 +15,7 @@ name: prod docker ci (@itmr.dev/bump)
 on:
   push:
     branches:
-      - meta
+      - microsoft
 
 jobs:
   build_and_deploy:
@@ -33,7 +33,7 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:meta
+            ghcr.io/${{ github.repository }}:microsoft
             ghcr.io/${{ github.repository }}:${{ github.ref_name }}
             ghcr.io/${{ github.repository }}:run-${{ github.run_id }}-${{ github.run_attempt }}
             ghcr.io/${{ github.repository }}:sha-${{ github.sha }}

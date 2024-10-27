@@ -400,7 +400,7 @@ button {
 
 .custom-link:hover {
   transform: scale(1.1);
-  color: #0081fb;
+  color: red;
 }
 
 /* Transition Klassen hier unverändert belassen, falls keine Variablen benötigt werden */
