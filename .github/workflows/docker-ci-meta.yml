@@ -15,7 +15,7 @@ name: prod docker ci (@itmr.dev/bump)
 on:
   push:
     branches:
-      - meta   *
+      - meta
 
 jobs:
   build_and_deploy:
