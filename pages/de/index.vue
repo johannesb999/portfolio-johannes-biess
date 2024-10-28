@@ -223,4 +223,58 @@ onUnmounted(() => {
     transform: rotateX(0);
   }
 }
+
+/* Grundstil für .project-char */
+.project-char {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Standardfarbe */
+#bottomLink .project-char {
+  color: var(--color-black);
+}
+
+/* Hover-Effekt */
+#bottomLink:hover .project-char {
+  color: transparent;
+  background-image: linear-gradient(
+    150deg,
+    #f25022 25%,
+    #7fba00 25%,
+    #7fba00 50%,
+    #00a4ef 50%,
+    #00a4ef 75%,
+    #ffb900 75%
+  );
+  background-size: calc(100% * 8) 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Hintergrundposition für jedes Zeichen */
+#bottomLink .project-char:nth-child(1) {
+  background-position: calc(0 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(2) {
+  background-position: calc(1 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(3) {
+  background-position: calc(2 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(4) {
+  background-position: calc(3 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(5) {
+  background-position: calc(4 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(6) {
+  background-position: calc(5 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(7) {
+  background-position: calc(6 / 6 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(8) {
+  background-position: calc(7 / 7 * 100%) 0;
+}
 </style>

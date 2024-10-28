@@ -48,14 +48,15 @@
           <div class="text">
             <SplitFlapText :texts="['         [INTERNSHIP]         ']" />
             <div class="paragraph">
-              I'm hoping the company I'm doing my internship with has an open
-              and innovative corporate culture that encourages creativity and
-              initiative. A philosophy based on collaboration, mutual respect,
-              and a dynamic way of working is particularly important to me. In a
-              determined and agile environment, I want to actively contribute to
-              success by developing my skills while working efficiently and
-              solution-oriented. My goal is to be part of a team that works
-              together on exciting, forward-looking projects.
+              I am confident that an internship at Microsoft will offer the
+              opportunity to work within an open and innovative corporate
+              culture that fosters creativity and initiative. Microsoft's
+              philosophy of collaboration, mutual respect, and dynamic working
+              methods aligns closely with my values. In a determined and agile
+              environment like this, I aim to actively contribute to the team’s
+              success by honing my skills while working efficiently and in a
+              solution-oriented manner. My goal is to be part of a team that
+              collaborates on exciting and forward-thinking projects.
             </div>
           </div>
         </div>

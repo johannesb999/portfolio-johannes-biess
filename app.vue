@@ -148,7 +148,7 @@ onMounted(() => {
 
   /* Farben */
   --color-primary: #171717;
-  --color-background: #fbfbfb;
+  --color-background: #dfdfdf;
   --color-secondary: #d3d1d1;
   --color-gray-light: #0000002d;
   --color-primary-translucent: #171717b0;
@@ -309,7 +309,6 @@ button {
   color: var(--color-primary);
 }
 
-/* Theme Switcher Button */
 .theme-switcher {
   position: fixed;
   bottom: var(--top-spacing);
@@ -326,9 +325,8 @@ button {
   outline: none;
 }
 
-/* Transition für Theme-Wechsel */
 .theme-transition {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 2s ease, color 2s ease;
 }
 
 .theme-transition,
@@ -394,13 +392,30 @@ button {
   color: var(--color-black);
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease; /* Füge eine sanfte Übergangsanimation für die Farbe hinzu */
   margin: var(--spacing-xxs);
+  background-image: linear-gradient(
+    150deg,
+    #f25022 25%,
+    #7fba00 25%,
+    #7fba00 50%,
+    #00a4ef 50%,
+    #00a4ef 75%,
+    #ffb900 75%
+  );
+
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: var(--color-black); /* Standardfarbe bleibt schwarz */
 }
 
 .custom-link:hover {
-  transform: scale(1.1);
-  color: red;
+  transform: scale(1.1); /* Beibehalten der ursprünglichen Skalierung */
+  color: transparent; /* Text wird transparent, um den Farbverlauf sichtbar zu machen */
+  background-position: 100%; /* Die Position des Hintergrunds verschiebt sich */
+  -webkit-background-clip: text;
+  background-clip: text; /* Clip der Farben auf den Text */
 }
 
 /* Transition Klassen hier unverändert belassen, falls keine Variablen benötigt werden */
@@ -675,14 +690,12 @@ button {
   }
 
   #bottomLink {
-    color: var(--color-primary);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-big);
     position: absolute;
     bottom: var(--side-percentage);
     left: 50dvw;
     transform: translateX(-50%);
-    font-style: normal;
     line-height: var(--line-height-normal);
   }
 

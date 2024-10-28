@@ -229,6 +229,9 @@ onUnmounted(() => {
 <style scoped>
 .project-flip {
   animation: flip 0.6s forwards;
+  color: var(--color-black);
+  text-decoration: none;
+  display: inline-block;
 }
 
 @keyframes flip {
@@ -243,6 +246,11 @@ onUnmounted(() => {
   }
 }
 
+.project-flip.custom-link:hover {
+  transform: scale(1.1);
+  color: var(--color-hover); /* Die Farbe beim Hover bleibt erhalten */
+}
+
 :deep(.link-content.animate-scale) {
   animation: fontSizeUpDown 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   animation-delay: 4s;
@@ -251,7 +259,6 @@ onUnmounted(() => {
 @keyframes fontSizeUpDown {
   0% {
     font-size: 1em;
-    color: var(--color-primary);
     text-decoration: none;
   }
 
@@ -262,8 +269,59 @@ onUnmounted(() => {
   }
   100% {
     font-size: 1em;
-    color: var(--color-primary);
     text-decoration: none;
   }
+}
+
+/* Grundstil für .project-char */
+.project-char {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Standardfarbe */
+#bottomLink .project-char {
+  color: var(--color-black);
+}
+
+#bottomLink:hover .project-char {
+  color: transparent;
+  background-image: linear-gradient(
+    150deg,
+    #f25022 25%,
+    #7fba00 25%,
+    #7fba00 50%,
+    #00a4ef 50%,
+    #00a4ef 75%,
+    #ffb900 75%
+  );
+  background-size: calc(100% * 8) 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+#bottomLink .project-char:nth-child(1) {
+  background-position: calc(0 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(2) {
+  background-position: calc(1 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(3) {
+  background-position: calc(2 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(4) {
+  background-position: calc(3 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(5) {
+  background-position: calc(4 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(6) {
+  background-position: calc(5 / 8 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(7) {
+  background-position: calc(6 / 6 * 100%) 0;
+}
+#bottomLink .project-char:nth-child(8) {
+  background-position: calc(7 / 7 * 100%) 0;
 }
 </style>

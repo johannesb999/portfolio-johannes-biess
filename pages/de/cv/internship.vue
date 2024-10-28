@@ -32,7 +32,7 @@
         <div class="project-content">
           <div class="text">
             <SplitFlapText
-              :texts="['    [WHAT] [I] [HOPE] [TO] [LEARN]    ']"
+              :texts="['   [WAS] [ICH] [HOFFE] [ZU] [LERNEN]   ']"
             />
             <div class="paragraph">
               In einem Praktikum erhoffe ich mir die Chance, meine bisherigen
@@ -48,18 +48,19 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [INTERNSHIP]         ']" />
+            <SplitFlapText :texts="['          [PRAKTIKUM]        ']" />
             <div class="paragraph">
-              Von dem Unternehmen, in dem ich mein Praktikum absolviere, erhoffe
-              ich mir eine offene und innovative Unternehmenskultur, die
-              Kreativität und Eigeninitiative fördert. Besonders wichtig ist mir
-              eine Philosophie, die auf Zusammenarbeit, gegenseitigem Respekt
-              und einer dynamischen Arbeitsweise basiert. In einem zielstrebigen
-              und agilen Umfeld möchte ich aktiv zum Erfolg beitragen, indem ich
-              meine Fähigkeiten weiterentwickle und dabei effizient und
-              lösungsorientiert arbeite. Mein Ziel ist es, Teil eines Teams zu
-              sein, das gemeinsam an spannenden, zukunftsweisenden Projekten
-              arbeitet.
+              Ich bin überzeugt, dass ein Praktikum bei Microsoft die
+              Möglichkeit bietet, in einer offenen und innovativen
+              Unternehmenskultur zu arbeiten, die Kreativität und
+              Eigeninitiative fördert. Microsofts Philosophie der
+              Zusammenarbeit, des gegenseitigen Respekts und dynamischer
+              Arbeitsweisen passt gut zu meinen Werten. In einem solch
+              entschlossenen und agilen Umfeld möchte ich aktiv zum Erfolg des
+              Teams beitragen, indem ich meine Fähigkeiten weiterentwickle und
+              dabei effizient sowie lösungsorientiert arbeite. Mein Ziel ist es,
+              Teil eines Teams zu sein, das an spannenden und zukunftsweisenden
+              Projekten zusammenarbeitet.
             </div>
           </div>
         </div>
