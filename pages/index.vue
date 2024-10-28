@@ -251,7 +251,6 @@ onUnmounted(() => {
 @keyframes fontSizeUpDown {
   0% {
     font-size: 1em;
-    color: var(--color-primary);
     text-decoration: none;
   }
 
@@ -262,7 +261,6 @@ onUnmounted(() => {
   }
   100% {
     font-size: 1em;
-    color: var(--color-primary);
     text-decoration: none;
   }
 }
