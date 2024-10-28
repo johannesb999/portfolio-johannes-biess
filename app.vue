@@ -148,7 +148,7 @@ onMounted(() => {
 
   /* Farben */
   --color-primary: #171717;
-  --color-background: #dfdfdf;
+  --color-background: #fbfbfb;
   --color-secondary: #d3d1d1;
   --color-gray-light: #0000002d;
   --color-primary-translucent: #171717b0;
