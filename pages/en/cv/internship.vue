@@ -48,9 +48,9 @@
           <div class="text">
             <SplitFlapText :texts="['         [INTERNSHIP]         ']" />
             <div class="paragraph">
-              I am confident that an internship at Microsoft will offer the
+              I am confident that an internship at Google will offer the
               opportunity to work within an open and innovative corporate
-              culture that fosters creativity and initiative. Microsoft's
+              culture that fosters creativity and initiative. Google's
               philosophy of collaboration, mutual respect, and dynamic working
               methods aligns closely with my values. In a determined and agile
               environment like this, I aim to actively contribute to the team’s

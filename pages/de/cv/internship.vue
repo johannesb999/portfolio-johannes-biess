@@ -50,17 +50,16 @@
           <div class="text">
             <SplitFlapText :texts="['          [PRAKTIKUM]        ']" />
             <div class="paragraph">
-              Ich bin überzeugt, dass ein Praktikum bei Microsoft die
-              Möglichkeit bietet, in einer offenen und innovativen
-              Unternehmenskultur zu arbeiten, die Kreativität und
-              Eigeninitiative fördert. Microsofts Philosophie der
-              Zusammenarbeit, des gegenseitigen Respekts und dynamischer
-              Arbeitsweisen passt gut zu meinen Werten. In einem solch
-              entschlossenen und agilen Umfeld möchte ich aktiv zum Erfolg des
-              Teams beitragen, indem ich meine Fähigkeiten weiterentwickle und
-              dabei effizient sowie lösungsorientiert arbeite. Mein Ziel ist es,
-              Teil eines Teams zu sein, das an spannenden und zukunftsweisenden
-              Projekten zusammenarbeitet.
+              Ich bin überzeugt, dass ein Praktikum bei Google die Möglichkeit
+              bietet, in einer offenen und innovativen Unternehmenskultur zu
+              arbeiten, die Kreativität und Eigeninitiative fördert. Googles
+              Philosophie der Zusammenarbeit, des gegenseitigen Respekts und
+              dynamischer Arbeitsweisen passt gut zu meinen Werten. In einem
+              solch entschlossenen und agilen Umfeld möchte ich aktiv zum Erfolg
+              des Teams beitragen, indem ich meine Fähigkeiten weiterentwickle
+              und dabei effizient sowie lösungsorientiert arbeite. Mein Ziel ist
+              es, Teil eines Teams zu sein, das an spannenden und
+              zukunftsweisenden Projekten zusammenarbeitet.
             </div>
           </div>
         </div>
