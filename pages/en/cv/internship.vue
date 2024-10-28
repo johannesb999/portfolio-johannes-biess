@@ -35,27 +35,28 @@
               :texts="['    [WHAT] [I] [HOPE] [TO] [LEARN]    ']"
             />
             <div class="paragraph">
-              I'm hoping an internship will let me put my previous knowledge to
-              use and learn new skills. I'd like to get hands-on with projects,
-              tackle problems on my own, and gain valuable experience. It's
-              especially important to me to deepen my skills in design and
-              programming and to grow both professionally and personally in the
-              process. My goal is to build on my existing strengths by actively
-              working on projects and taking on new challenges.
+              I hope that an internship at Meta will allow me to apply my
+              existing knowledge while also learning new skills. I'm eager to
+              get involved in projects, solve challenges independently, and gain
+              valuable hands-on experience. It's especially important for me to
+              enhance my abilities in both design and programming, while growing
+              personally and professionally. My objective is to build on my
+              current strengths by actively contributing to projects and
+              embracing new challenges.
             </div>
           </div>
 
           <div class="text">
             <SplitFlapText :texts="['         [INTERNSHIP]         ']" />
             <div class="paragraph">
-              I'm hoping the company I'm doing my internship with has an open
-              and innovative corporate culture that encourages creativity and
-              initiative. A philosophy based on collaboration, mutual respect,
-              and a dynamic way of working is particularly important to me. In a
-              determined and agile environment, I want to actively contribute to
-              success by developing my skills while working efficiently and
-              solution-oriented. My goal is to be part of a team that works
-              together on exciting, forward-looking projects.
+              I think that Meta has an open and innovative corporate culture
+              that fosters creativity and initiative. A philosophy centered on
+              collaboration, mutual respect, and dynamic working methods is
+              particularly important to me. In a driven and agile environment, I
+              aim to actively contribute to success by developing my skills
+              while working efficiently and in a solution-oriented way. My goal
+              is to be part of a team that collaborates on exciting and
+              forward-thinking projects.
             </div>
           </div>
         </div>

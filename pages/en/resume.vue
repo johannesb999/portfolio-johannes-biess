@@ -19,7 +19,7 @@
         </li>
         <li class="current">
           <NuxtLink to="/en/cv/internship" class="content custom-link">
-            <h2>HOPEFULLY YOUR COMPANY!</h2>
+            <h2>HOPEFULLY META!</h2>
             <p>INTERNSHIP</p>
             <p class="location">ANYWHERE WORLDWIDE</p>
           </NuxtLink>

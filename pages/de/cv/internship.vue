@@ -32,34 +32,34 @@
         <div class="project-content">
           <div class="text">
             <SplitFlapText
-              :texts="['    [WHAT] [I] [HOPE] [TO] [LEARN]    ']"
+              :texts="['   [WAS] [ICH] [HOFFE] [ZU] [LERNEN]   ']"
             />
             <div class="paragraph">
-              In einem Praktikum erhoffe ich mir die Chance, meine bisherigen
-              Kenntnisse praktisch anzuwenden und neue Fähigkeiten zu erlernen.
-              Ich möchte mich aktiv in Projekte einbringen, eigenständig
-              Probleme lösen und wertvolle praktische Erfahrungen sammeln.
-              Besonders wichtig ist mir, meine Fähigkeiten in Design und
-              Programmierung zu vertiefen und dabei sowohl fachlich als auch
-              persönlich zu wachsen. Mein Ziel ist es, durch die aktive
-              Mitarbeit an Projekten meine bisherigen Stärken weiter auszubauen
-              und mich gleichzeitig neuen Herausforderungen zu stellen.
+              Ich hoffe, dass mir ein Praktikum bei Meta die Möglichkeit bietet,
+              mein vorhandenes Wissen anzuwenden und gleichzeitig neue
+              Fähigkeiten zu erlernen. Ich freue mich darauf, mich in Projekte
+              einzubringen, eigenständig Herausforderungen zu lösen und
+              wertvolle praktische Erfahrungen zu sammeln. Besonders wichtig ist
+              es mir, meine Fähigkeiten in Design und Programmierung weiter zu
+              vertiefen und mich sowohl persönlich als auch beruflich
+              weiterzuentwickeln. Mein Ziel ist es, auf meinen bestehenden
+              Stärken aufzubauen, indem ich aktiv an Projekten mitarbeite und
+              neue Herausforderungen annehme.
             </div>
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [INTERNSHIP]         ']" />
+            <SplitFlapText :texts="['          [PRAKTIKUM]        ']" />
             <div class="paragraph">
-              Von dem Unternehmen, in dem ich mein Praktikum absolviere, erhoffe
-              ich mir eine offene und innovative Unternehmenskultur, die
-              Kreativität und Eigeninitiative fördert. Besonders wichtig ist mir
-              eine Philosophie, die auf Zusammenarbeit, gegenseitigem Respekt
-              und einer dynamischen Arbeitsweise basiert. In einem zielstrebigen
-              und agilen Umfeld möchte ich aktiv zum Erfolg beitragen, indem ich
-              meine Fähigkeiten weiterentwickle und dabei effizient und
-              lösungsorientiert arbeite. Mein Ziel ist es, Teil eines Teams zu
-              sein, das gemeinsam an spannenden, zukunftsweisenden Projekten
-              arbeitet.
+              Ich hoffe, dass Meta eine offene und innovative Unternehmenskultur
+              pflegt, die Kreativität und Eigeninitiative fördert. Eine
+              Philosophie, die auf Zusammenarbeit, gegenseitigem Respekt und
+              dynamischen Arbeitsweisen basiert, ist mir besonders wichtig. In
+              einem entschlossenen und agilen Umfeld möchte ich aktiv zum Erfolg
+              beitragen, indem ich meine Fähigkeiten weiterentwickle und dabei
+              effizient sowie lösungsorientiert arbeite. Mein Ziel ist es, Teil
+              eines Teams zu sein, das gemeinsam an spannenden und
+              zukunftsweisenden Projekten arbeitet.
             </div>
           </div>
         </div>
