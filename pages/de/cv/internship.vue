@@ -32,7 +32,7 @@
         <div class="project-content">
           <div class="text">
             <SplitFlapText
-              :texts="['    [WHAT] [I] [HOPE] [TO] [LEARN]    ']"
+              :texts="['   [WAS] [ICH] [HOFFE] [ZU] [LERNEN]   ']"
             />
             <div class="paragraph">
               In einem Praktikum erhoffe ich mir die Chance, meine bisherigen
@@ -48,7 +48,7 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [INTERNSHIP]         ']" />
+            <SplitFlapText :texts="['          [PRAKTIKUM]        ']" />
             <div class="paragraph">
               Von dem Unternehmen, in dem ich mein Praktikum absolviere, erhoffe
               ich mir eine offene und innovative Unternehmenskultur, die
