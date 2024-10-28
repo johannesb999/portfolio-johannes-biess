@@ -396,12 +396,12 @@ button {
   margin: var(--spacing-xxs);
   background-image: linear-gradient(
     150deg,
-    #f25022 25%,
-    #7fba00 25%,
-    #7fba00 50%,
-    #00a4ef 50%,
-    #00a4ef 75%,
-    #ffb900 75%
+    #db4437 25%,
+    #0f9d58 25%,
+    #0f9d58 50%,
+    #4285f4 50%,
+    #4285f4 75%,
+    #f4b400 75%
   );
 
   background-size: 100%;
