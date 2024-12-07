@@ -185,12 +185,12 @@
   overflow-y: auto;
   text-align: left;
   padding: 20px;
-  color: #000;
+    color: var(--color-primary);
 
 }
 
 #dsgvo {
-  color: #000;
+    color: var(--color-primary);
 
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
@@ -212,6 +212,6 @@
 }
 
 a {
-  color: #000;
+    color: var(--color-primary);
 }
 </style>
