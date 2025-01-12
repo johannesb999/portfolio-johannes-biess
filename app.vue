@@ -1,34 +1,20 @@
 <template>
   <div>
-    <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet"
-      />
 
+    <head>
       <title>Johannes Biess</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <NuxtPage />
 
     <!-- Language Switch -->
     <header class="language-switch">
-      <button
-        class="custom-link"
-        id="en"
-        @click="switchLanguage('en')"
-        :disabled="currentLocale === 'en'"
-      >
+      <button class="custom-link" id="en" @click="switchLanguage('en')" :disabled="currentLocale === 'en'">
         EN
       </button>
       <div id="line" class="custom-link">|</div>
-      <button
-        class="custom-link"
-        id="de"
-        @click="switchLanguage('de')"
-        :disabled="currentLocale === 'de'"
-      >
+      <button class="custom-link" id="de" @click="switchLanguage('de')" :disabled="currentLocale === 'de'">
         DE
       </button>
     </header>
@@ -39,11 +25,7 @@
     </button>
 
     <!-- Home Link -->
-    <nuxt-link
-      :to="currentLocale === 'de' ? '/de' : '/'"
-      class="returnHome custom-link"
-      >JB</nuxt-link
-    >
+    <nuxt-link :to="currentLocale === 'de' ? '/de' : '/'" class="returnHome custom-link">JB</nuxt-link>
     <!-- <CustomCursor /> -->
   </div>
 </template>
@@ -139,6 +121,8 @@ onMounted(() => {
 </script>
 
 <style>
+@import url("assets/font.css");
+
 :root {
   --color-picker: #171717b0;
 
@@ -161,17 +145,28 @@ onMounted(() => {
   --border-radius: 0.7rem;
 
   /* Schriftgrößen */
-  --font-size-base: 0.8rem; /* 12.8px */
-  --font-size-sm: 0.75rem; /* 12px */
-  --font-size-md: 0.8rem; /* 12.8px */
-  --font-size-lg: 1rem; /* 16px */
-  --font-size-xl: 1.2rem; /* 19.2px */
-  --font-size-xxl: 1.28rem; /* 20.48px */
-  --font-size-xxxl: 1.4rem; /* 22.4px */
-  --font-size-xxxxl: 1.6rem; /* 25.6px */
-  --font-size-big: 2rem; /* 32px */
-  --font-size-bigger: 2.4rem; /* 38.4px */
-  --font-size-huge: 3.2rem; /* 51.2px */
+  --font-size-base: 0.8rem;
+  /* 12.8px */
+  --font-size-sm: 0.75rem;
+  /* 12px */
+  --font-size-md: 0.8rem;
+  /* 12.8px */
+  --font-size-lg: 1rem;
+  /* 16px */
+  --font-size-xl: 1.2rem;
+  /* 19.2px */
+  --font-size-xxl: 1.28rem;
+  /* 20.48px */
+  --font-size-xxxl: 1.4rem;
+  /* 22.4px */
+  --font-size-xxxxl: 1.6rem;
+  /* 25.6px */
+  --font-size-big: 2rem;
+  /* 32px */
+  --font-size-bigger: 2.4rem;
+  /* 38.4px */
+  --font-size-huge: 3.2rem;
+  /* 51.2px */
 
   /* Schriftgewichte */
   --font-weight-thin: 100;
@@ -182,45 +177,67 @@ onMounted(() => {
 
   /* Abstände */
   --spacing-none: 0;
-  --spacing-xxs: 0.24rem; /* 3.84px */
-  --spacing-xs: 0.5rem; /* 8px */
-  --spacing-sm: 0.8rem; /* 12.8px */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-md-lg: 1.3rem; /* 20.8px */
-  --spacing-lg: 1.5rem; /* 24px */
-  --spacing-xl: 1.6rem; /* 25.6px */
-  --spacing-xxl: 2.4rem; /* 38.4px */
-  --spacing-xxxl: 3.2rem; /* 51.2px */
-  --spacing-big: 4.8rem; /* 76.8px */
-  --spacing-bigger: 6.4rem; /* 102.4px */
+  --spacing-xxs: 0.24rem;
+  /* 3.84px */
+  --spacing-xs: 0.5rem;
+  /* 8px */
+  --spacing-sm: 0.8rem;
+  /* 12.8px */
+  --spacing-md: 1rem;
+  /* 16px */
+  --spacing-md-lg: 1.3rem;
+  /* 20.8px */
+  --spacing-lg: 1.5rem;
+  /* 24px */
+  --spacing-xl: 1.6rem;
+  /* 25.6px */
+  --spacing-xxl: 2.4rem;
+  /* 38.4px */
+  --spacing-xxxl: 3.2rem;
+  /* 51.2px */
+  --spacing-big: 4.8rem;
+  /* 76.8px */
+  --spacing-bigger: 6.4rem;
 
-  --radius-xxs: 0.24rem; /* 3.84px */
-  --radius-xs: 0.5rem; /* 8px */
-  --radius-sm: 0.8rem; /* 12.8px */
-  --radius-md: 1rem; /* 16px */
+  --radius-xxs: 0.24rem;
+  /* 3.84px */
+  --radius-xs: 0.5rem;
+  /* 8px */
+  --radius-sm: 0.8rem;
+  /* 12.8px */
+  --radius-md: 1rem;
+  /* 16px */
 
   /* Positionierung */
-  --top-spacing: 1.3rem; /* 25.6px */
+  --top-spacing: 1.3rem;
+  /* 25.6px */
   --side-percentage: 1.3%;
   --z-index-high: 100;
   --z-index-alert: 1000;
 
   /* Sonstiges */
-  --letter-spacing-base: 0.05rem; /* 0.8px */
+  --letter-spacing-base: 0.05rem;
+  /* 0.8px */
   --line-height-small: 1;
   --line-height-normal: normal;
   --line-height-big: 1.5;
   --line-height-normal: 2;
   --color-white-transition: rgba(146, 146, 146, 0.3);
-  --scrollbar-width: 0.01rem; /* 0.8px */
+  --scrollbar-width: 0.01rem;
+  /* 0.8px */
   --box-shadow-light: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
 
   /* Bildhöhen */
-  --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
-  --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
-  --img-height-md: 40vh; /* 40% der Viewport-Höhe */
-  --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
-  --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
+  --img-height-sm: 20vh;
+  /* 20% der Viewport-Höhe */
+  --img-height-smedi: 30vh;
+  /* 30% der Viewport-Höhe */
+  --img-height-md: 40vh;
+  /* 40% der Viewport-Höhe */
+  --img-height-mela: 50vh;
+  /* 50% der Viewport-Höhe */
+  --img-height-lg: 60vh;
+  /* 60% der Viewport-Höhe */
 
   --img-width-sm: 40dvw;
   --img-width-md: 50dvw;
@@ -339,6 +356,7 @@ button {
 .fade-leave-active {
   transition: opacity 0.6s ease-out;
 }
+
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
@@ -495,6 +513,7 @@ button {
 .fade-leave-active {
   transition: opacity 0.6s ease-out;
 }
+
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
@@ -506,21 +525,34 @@ button {
 @media (max-width: 480px) {
   :root {
     --border-color-black: #171717;
-    --border-size: 0.08rem; /* 0.1rem  */
-    --border-radius: 0.56rem; /* 0.7rem  */
+    --border-size: 0.08rem;
+    /* 0.1rem  */
+    --border-radius: 0.56rem;
+    /* 0.7rem  */
 
     /* Schriftgrößen */
-    --font-size-base: 0.65rem; /* 0.625rem  */
-    --font-size-sm: 0.6rem; /* 0.75rem  */
-    --font-size-md: 0.64rem; /* 0.8rem  */
-    --font-size-lg: 0.8rem; /* 1rem  */
-    --font-size-xl: 0.96rem; /* 1.2rem  */
-    --font-size-xxl: 1.02rem; /* 1.28rem  */
-    --font-size-xxxl: 1.1rem; /* 1.4rem  */
-    --font-size-xxxxl: 1.28rem; /* 1.6rem  */
-    --font-size-big: 1.6rem; /* 2rem  */
-    --font-size-bigger: 1.92rem; /* 2.4rem  */
-    --font-size-huge: 2.56rem; /* 3.2rem  */
+    --font-size-base: 0.65rem;
+    /* 0.625rem  */
+    --font-size-sm: 0.6rem;
+    /* 0.75rem  */
+    --font-size-md: 0.64rem;
+    /* 0.8rem  */
+    --font-size-lg: 0.8rem;
+    /* 1rem  */
+    --font-size-xl: 0.96rem;
+    /* 1.2rem  */
+    --font-size-xxl: 1.02rem;
+    /* 1.28rem  */
+    --font-size-xxxl: 1.1rem;
+    /* 1.4rem  */
+    --font-size-xxxxl: 1.28rem;
+    /* 1.6rem  */
+    --font-size-big: 1.6rem;
+    /* 2rem  */
+    --font-size-bigger: 1.92rem;
+    /* 2.4rem  */
+    --font-size-huge: 2.56rem;
+    /* 3.2rem  */
 
     /* Schriftgewichte */
     --font-weight-thin: 100;
@@ -531,42 +563,66 @@ button {
 
     /* Abstände */
     --spacing-none: 0;
-    --spacing-xxs: 0.192rem; /* 0.24rem  */
-    --spacing-xs: 0.3rem; /* 0.5rem  */
-    --spacing-sm: 0.5rem; /* 0.8rem  */
-    --spacing-sm-md: 0.52rem; /* 1rem  */
-    --spacing-md: 0.75rem; /* 1rem  */
-    --spacing-lg: 0.9rem; /* 1.5rem  */
-    --spacing-xl: 1.28rem; /* 1.6rem  */
-    --spacing-xxl: 1.92rem; /* 2.4rem  */
-    --spacing-xxxl: 2.56rem; /* 3.2rem  */
-    --spacing-big: 3.84rem; /* 4.8rem  */
-    --spacing-bigger: 5.12rem; /* 6.4rem  */
+    --spacing-xxs: 0.192rem;
+    /* 0.24rem  */
+    --spacing-xs: 0.3rem;
+    /* 0.5rem  */
+    --spacing-sm: 0.5rem;
+    /* 0.8rem  */
+    --spacing-sm-md: 0.52rem;
+    /* 1rem  */
+    --spacing-md: 0.75rem;
+    /* 1rem  */
+    --spacing-lg: 0.9rem;
+    /* 1.5rem  */
+    --spacing-xl: 1.28rem;
+    /* 1.6rem  */
+    --spacing-xxl: 1.92rem;
+    /* 2.4rem  */
+    --spacing-xxxl: 2.56rem;
+    /* 3.2rem  */
+    --spacing-big: 3.84rem;
+    /* 4.8rem  */
+    --spacing-bigger: 5.12rem;
+    /* 6.4rem  */
 
-    --radius-xxs: 0.192rem; /* 0.24rem  */
-    --radius-xs: 0.4rem; /* 0.5rem  */
-    --radius-sm: 0.64rem; /* 0.8rem  */
-    --radius-md: 0.8rem; /* 1rem  */
+    --radius-xxs: 0.192rem;
+    /* 0.24rem  */
+    --radius-xs: 0.4rem;
+    /* 0.5rem  */
+    --radius-sm: 0.64rem;
+    /* 0.8rem  */
+    --radius-md: 0.8rem;
+    /* 1rem  */
 
     /* Positionierung */
-    --top-spacing: 1.04rem; /* 1.3rem  */
+    --top-spacing: 1.04rem;
+    /* 1.3rem  */
     --side-percentage: 1.5%;
     --z-index-high: 100;
     --z-index-alert: 1000;
 
     /* Sonstiges */
-    --letter-spacing-base: 0.04rem; /* 0.05rem  */
+    --letter-spacing-base: 0.04rem;
+    /* 0.05rem  */
     --line-height-small: 1;
     --line-height-normal: normal;
-    --line-height-big: 1.2; /* 1.5  */
-    --line-height-normal: 1.6; /* 2  */
+    --line-height-big: 1.2;
+    /* 1.5  */
+    --line-height-normal: 1.6;
+    /* 2  */
 
     /* Bildhöhen */
-    --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
-    --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
-    --img-height-md: 40vh; /* 40% der Viewport-Höhe */
-    --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
-    --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
+    --img-height-sm: 20vh;
+    /* 20% der Viewport-Höhe */
+    --img-height-smedi: 30vh;
+    /* 30% der Viewport-Höhe */
+    --img-height-md: 40vh;
+    /* 40% der Viewport-Höhe */
+    --img-height-mela: 50vh;
+    /* 50% der Viewport-Höhe */
+    --img-height-lg: 60vh;
+    /* 60% der Viewport-Höhe */
   }
 
   html {
@@ -684,6 +740,7 @@ button {
   .fade-leave-active {
     transition: opacity 0.6s ease-out;
   }
+
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
@@ -744,21 +801,34 @@ button {
 @media (max-width: 310px) {
   :root {
     --border-color-black: #171717;
-    --border-size: 0.08rem; /* 0.1rem  */
-    --border-radius: 0.56rem; /* 0.7rem  */
+    --border-size: 0.08rem;
+    /* 0.1rem  */
+    --border-radius: 0.56rem;
+    /* 0.7rem  */
 
     /* Schriftgrößen */
-    --font-size-base: 0.6rem; /* 0.625rem  */
-    --font-size-sm: 0.6rem; /* 0.75rem  */
-    --font-size-md: 0.64rem; /* 0.8rem  */
-    --font-size-lg: 0.8rem; /* 1rem  */
-    --font-size-xl: 0.96rem; /* 1.2rem  */
-    --font-size-xxl: 1.02rem; /* 1.28rem  */
-    --font-size-xxxl: 1.1rem; /* 1.4rem  */
-    --font-size-xxxxl: 1.28rem; /* 1.6rem  */
-    --font-size-big: 1.6rem; /* 2rem  */
-    --font-size-bigger: 1.92rem; /* 2.4rem  */
-    --font-size-huge: 2.56rem; /* 3.2rem  */
+    --font-size-base: 0.6rem;
+    /* 0.625rem  */
+    --font-size-sm: 0.6rem;
+    /* 0.75rem  */
+    --font-size-md: 0.64rem;
+    /* 0.8rem  */
+    --font-size-lg: 0.8rem;
+    /* 1rem  */
+    --font-size-xl: 0.96rem;
+    /* 1.2rem  */
+    --font-size-xxl: 1.02rem;
+    /* 1.28rem  */
+    --font-size-xxxl: 1.1rem;
+    /* 1.4rem  */
+    --font-size-xxxxl: 1.28rem;
+    /* 1.6rem  */
+    --font-size-big: 1.6rem;
+    /* 2rem  */
+    --font-size-bigger: 1.92rem;
+    /* 2.4rem  */
+    --font-size-huge: 2.56rem;
+    /* 3.2rem  */
 
     /* Schriftgewichte */
     --font-weight-thin: 100;
@@ -769,42 +839,66 @@ button {
 
     /* Abstände */
     --spacing-none: 0;
-    --spacing-xxs: 0.192rem; /* 0.24rem  */
-    --spacing-xs: 0.3rem; /* 0.5rem  */
-    --spacing-sm: 0.5rem; /* 0.8rem  */
-    --spacing-sm-md: 0.52rem; /* 1rem  */
-    --spacing-md: 0.75rem; /* 1rem  */
-    --spacing-lg: 0.9rem; /* 1.5rem  */
-    --spacing-xl: 1.28rem; /* 1.6rem  */
-    --spacing-xxl: 1.92rem; /* 2.4rem  */
-    --spacing-xxxl: 2.56rem; /* 3.2rem  */
-    --spacing-big: 3.84rem; /* 4.8rem  */
-    --spacing-bigger: 5.12rem; /* 6.4rem  */
+    --spacing-xxs: 0.192rem;
+    /* 0.24rem  */
+    --spacing-xs: 0.3rem;
+    /* 0.5rem  */
+    --spacing-sm: 0.5rem;
+    /* 0.8rem  */
+    --spacing-sm-md: 0.52rem;
+    /* 1rem  */
+    --spacing-md: 0.75rem;
+    /* 1rem  */
+    --spacing-lg: 0.9rem;
+    /* 1.5rem  */
+    --spacing-xl: 1.28rem;
+    /* 1.6rem  */
+    --spacing-xxl: 1.92rem;
+    /* 2.4rem  */
+    --spacing-xxxl: 2.56rem;
+    /* 3.2rem  */
+    --spacing-big: 3.84rem;
+    /* 4.8rem  */
+    --spacing-bigger: 5.12rem;
+    /* 6.4rem  */
 
-    --radius-xxs: 0.192rem; /* 0.24rem  */
-    --radius-xs: 0.4rem; /* 0.5rem  */
-    --radius-sm: 0.64rem; /* 0.8rem  */
-    --radius-md: 0.8rem; /* 1rem  */
+    --radius-xxs: 0.192rem;
+    /* 0.24rem  */
+    --radius-xs: 0.4rem;
+    /* 0.5rem  */
+    --radius-sm: 0.64rem;
+    /* 0.8rem  */
+    --radius-md: 0.8rem;
+    /* 1rem  */
 
     /* Positionierung */
-    --top-spacing: 1.04rem; /* 1.3rem  */
+    --top-spacing: 1.04rem;
+    /* 1.3rem  */
     --side-percentage: 1.5%;
     --z-index-high: 100;
     --z-index-alert: 1000;
 
     /* Sonstiges */
-    --letter-spacing-base: 0.04rem; /* 0.05rem  */
+    --letter-spacing-base: 0.04rem;
+    /* 0.05rem  */
     --line-height-small: 1;
     --line-height-normal: normal;
-    --line-height-big: 1.2; /* 1.5  */
-    --line-height-normal: 1.6; /* 2  */
+    --line-height-big: 1.2;
+    /* 1.5  */
+    --line-height-normal: 1.6;
+    /* 2  */
 
     /* Bildhöhen */
-    --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
-    --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
-    --img-height-md: 40vh; /* 40% der Viewport-Höhe */
-    --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
-    --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
+    --img-height-sm: 20vh;
+    /* 20% der Viewport-Höhe */
+    --img-height-smedi: 30vh;
+    /* 30% der Viewport-Höhe */
+    --img-height-md: 40vh;
+    /* 40% der Viewport-Höhe */
+    --img-height-mela: 50vh;
+    /* 50% der Viewport-Höhe */
+    --img-height-lg: 60vh;
+    /* 60% der Viewport-Höhe */
   }
 
   html {
@@ -908,21 +1002,34 @@ button {
 @media (min-width: 481px) and (max-width: 768px) {
   :root {
     --border-color-black: #171717;
-    --border-size: 0.088rem; /* 0.08rem, um 10% erhöht */
-    --border-radius: 0.616rem; /* 0.56rem, um 10% erhöht */
+    --border-size: 0.088rem;
+    /* 0.08rem, um 10% erhöht */
+    --border-radius: 0.616rem;
+    /* 0.56rem, um 10% erhöht */
 
     /* Schriftgrößen */
-    --font-size-base: 0.715rem; /* 0.65rem */
-    --font-size-sm: 0.66rem; /* 0.6rem */
-    --font-size-md: 0.704rem; /* 0.64rem */
-    --font-size-lg: 0.88rem; /* 0.8rem */
-    --font-size-xl: 1.056rem; /* 0.96rem */
-    --font-size-xxl: 1.122rem; /* 1.02rem */
-    --font-size-xxxl: 1.21rem; /* 1.1rem */
-    --font-size-xxxxl: 1.408rem; /* 1.28rem */
-    --font-size-big: 1.76rem; /* 1.6rem */
-    --font-size-bigger: 2.112rem; /* 1.92rem */
-    --font-size-huge: 2.816rem; /* 2.56rem */
+    --font-size-base: 0.715rem;
+    /* 0.65rem */
+    --font-size-sm: 0.66rem;
+    /* 0.6rem */
+    --font-size-md: 0.704rem;
+    /* 0.64rem */
+    --font-size-lg: 0.88rem;
+    /* 0.8rem */
+    --font-size-xl: 1.056rem;
+    /* 0.96rem */
+    --font-size-xxl: 1.122rem;
+    /* 1.02rem */
+    --font-size-xxxl: 1.21rem;
+    /* 1.1rem */
+    --font-size-xxxxl: 1.408rem;
+    /* 1.28rem */
+    --font-size-big: 1.76rem;
+    /* 1.6rem */
+    --font-size-bigger: 2.112rem;
+    /* 1.92rem */
+    --font-size-huge: 2.816rem;
+    /* 2.56rem */
 
     /* Schriftgewichte */
     --font-weight-thin: 100;
@@ -933,42 +1040,69 @@ button {
 
     /* Abstände */
     --spacing-none: 0;
-    --spacing-xxs: 0.2112rem; /* 0.192rem */
-    --spacing-xs: 0.33rem; /* 0.3rem */
-    --spacing-sm: 0.55rem; /* 0.5rem */
-    --spacing-sm-md: 0.572rem; /* 0.52rem */
-    --spacing-md: 0.825rem; /* 0.75rem */
-    --spacing-lg: 0.99rem; /* 0.9rem */
-    --spacing-xl: 1.408rem; /* 1.28rem */
-    --spacing-xxl: 2.112rem; /* 1.92rem */
-    --spacing-xxxl: 2.816rem; /* 2.56rem */
-    --spacing-big: 4.224rem; /* 3.84rem */
-    --spacing-bigger: 5.632rem; /* 5.12rem */
+    --spacing-xxs: 0.2112rem;
+    /* 0.192rem */
+    --spacing-xs: 0.33rem;
+    /* 0.3rem */
+    --spacing-sm: 0.55rem;
+    /* 0.5rem */
+    --spacing-sm-md: 0.572rem;
+    /* 0.52rem */
+    --spacing-md: 0.825rem;
+    /* 0.75rem */
+    --spacing-lg: 0.99rem;
+    /* 0.9rem */
+    --spacing-xl: 1.408rem;
+    /* 1.28rem */
+    --spacing-xxl: 2.112rem;
+    /* 1.92rem */
+    --spacing-xxxl: 2.816rem;
+    /* 2.56rem */
+    --spacing-big: 4.224rem;
+    /* 3.84rem */
+    --spacing-bigger: 5.632rem;
+    /* 5.12rem */
 
-    --radius-xxs: 0.2112rem; /* 0.192rem */
-    --radius-xs: 0.44rem; /* 0.4rem */
-    --radius-sm: 0.704rem; /* 0.64rem */
-    --radius-md: 0.88rem; /* 0.8rem */
+    --radius-xxs: 0.2112rem;
+    /* 0.192rem */
+    --radius-xs: 0.44rem;
+    /* 0.4rem */
+    --radius-sm: 0.704rem;
+    /* 0.64rem */
+    --radius-md: 0.88rem;
+    /* 0.8rem */
 
     /* Positionierung */
-    --top-spacing: 1.144rem; /* 1.04rem */
-    --side-percentage: 1.65%; /* 1.5% */
+    --top-spacing: 1.144rem;
+    /* 1.04rem */
+    --side-percentage: 1.65%;
+    /* 1.5% */
     --z-index-high: 100;
     --z-index-alert: 1000;
 
     /* Sonstiges */
-    --letter-spacing-base: 0.044rem; /* 0.04rem */
-    --line-height-small: 1.1; /* 1 */
-    --line-height-normal: normal; /* Bleibt unverändert */
-    --line-height-big: 1.32; /* 1.2 */
-    --line-height-larger: 1.76; /* 1.6 */
+    --letter-spacing-base: 0.044rem;
+    /* 0.04rem */
+    --line-height-small: 1.1;
+    /* 1 */
+    --line-height-normal: normal;
+    /* Bleibt unverändert */
+    --line-height-big: 1.32;
+    /* 1.2 */
+    --line-height-larger: 1.76;
+    /* 1.6 */
 
     /* Bildhöhen */
-    --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
-    --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
-    --img-height-md: 40vh; /* 40% der Viewport-Höhe */
-    --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
-    --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
+    --img-height-sm: 20vh;
+    /* 20% der Viewport-Höhe */
+    --img-height-smedi: 30vh;
+    /* 30% der Viewport-Höhe */
+    --img-height-md: 40vh;
+    /* 40% der Viewport-Höhe */
+    --img-height-mela: 50vh;
+    /* 50% der Viewport-Höhe */
+    --img-height-lg: 60vh;
+    /* 60% der Viewport-Höhe */
   }
 
   html {
@@ -1084,6 +1218,7 @@ button {
   .fade-leave-active {
     transition: opacity 0.6s ease-out;
   }
+
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
@@ -1147,21 +1282,34 @@ button {
 @media (min-width: 768px) and (max-width: 1023px) {
   :root {
     --border-color-black: #171717;
-    --border-size: 0.088rem; /* 0.08rem, um 10% erhöht */
-    --border-radius: 0.616rem; /* 0.56rem, um 10% erhöht */
+    --border-size: 0.088rem;
+    /* 0.08rem, um 10% erhöht */
+    --border-radius: 0.616rem;
+    /* 0.56rem, um 10% erhöht */
 
     /* Schriftgrößen */
-    --font-size-base: 0.615rem; /* 0.65rem */
-    --font-size-sm: 0.66rem; /* 0.6rem */
-    --font-size-md: 0.704rem; /* 0.64rem */
-    --font-size-lg: 0.88rem; /* 0.8rem */
-    --font-size-xl: 1.056rem; /* 0.96rem */
-    --font-size-xxl: 1.122rem; /* 1.02rem */
-    --font-size-xxxl: 1.21rem; /* 1.1rem */
-    --font-size-xxxxl: 1.408rem; /* 1.28rem */
-    --font-size-big: 1.76rem; /* 1.6rem */
-    --font-size-bigger: 2.112rem; /* 1.92rem */
-    --font-size-huge: 2.816rem; /* 2.56rem */
+    --font-size-base: 0.615rem;
+    /* 0.65rem */
+    --font-size-sm: 0.66rem;
+    /* 0.6rem */
+    --font-size-md: 0.704rem;
+    /* 0.64rem */
+    --font-size-lg: 0.88rem;
+    /* 0.8rem */
+    --font-size-xl: 1.056rem;
+    /* 0.96rem */
+    --font-size-xxl: 1.122rem;
+    /* 1.02rem */
+    --font-size-xxxl: 1.21rem;
+    /* 1.1rem */
+    --font-size-xxxxl: 1.408rem;
+    /* 1.28rem */
+    --font-size-big: 1.76rem;
+    /* 1.6rem */
+    --font-size-bigger: 2.112rem;
+    /* 1.92rem */
+    --font-size-huge: 2.816rem;
+    /* 2.56rem */
 
     /* Schriftgewichte */
     --font-weight-thin: 100;
@@ -1172,42 +1320,69 @@ button {
 
     /* Abstände */
     --spacing-none: 0;
-    --spacing-xxs: 0.2112rem; /* 0.192rem */
-    --spacing-xs: 0.33rem; /* 0.3rem */
-    --spacing-sm: 0.55rem; /* 0.5rem */
-    --spacing-sm-md: 0.572rem; /* 0.52rem */
-    --spacing-md: 0.825rem; /* 0.75rem */
-    --spacing-lg: 0.99rem; /* 0.9rem */
-    --spacing-xl: 1.408rem; /* 1.28rem */
-    --spacing-xxl: 2.112rem; /* 1.92rem */
-    --spacing-xxxl: 2.816rem; /* 2.56rem */
-    --spacing-big: 4.224rem; /* 3.84rem */
-    --spacing-bigger: 5.632rem; /* 5.12rem */
+    --spacing-xxs: 0.2112rem;
+    /* 0.192rem */
+    --spacing-xs: 0.33rem;
+    /* 0.3rem */
+    --spacing-sm: 0.55rem;
+    /* 0.5rem */
+    --spacing-sm-md: 0.572rem;
+    /* 0.52rem */
+    --spacing-md: 0.825rem;
+    /* 0.75rem */
+    --spacing-lg: 0.99rem;
+    /* 0.9rem */
+    --spacing-xl: 1.408rem;
+    /* 1.28rem */
+    --spacing-xxl: 2.112rem;
+    /* 1.92rem */
+    --spacing-xxxl: 2.816rem;
+    /* 2.56rem */
+    --spacing-big: 4.224rem;
+    /* 3.84rem */
+    --spacing-bigger: 5.632rem;
+    /* 5.12rem */
 
-    --radius-xxs: 0.2112rem; /* 0.192rem */
-    --radius-xs: 0.44rem; /* 0.4rem */
-    --radius-sm: 0.704rem; /* 0.64rem */
-    --radius-md: 0.88rem; /* 0.8rem */
+    --radius-xxs: 0.2112rem;
+    /* 0.192rem */
+    --radius-xs: 0.44rem;
+    /* 0.4rem */
+    --radius-sm: 0.704rem;
+    /* 0.64rem */
+    --radius-md: 0.88rem;
+    /* 0.8rem */
 
     /* Positionierung */
-    --top-spacing: 1.144rem; /* 1.04rem */
-    --side-percentage: 1.65%; /* 1.5% */
+    --top-spacing: 1.144rem;
+    /* 1.04rem */
+    --side-percentage: 1.65%;
+    /* 1.5% */
     --z-index-high: 100;
     --z-index-alert: 1000;
 
     /* Sonstiges */
-    --letter-spacing-base: 0.044rem; /* 0.04rem */
-    --line-height-small: 1.1; /* 1 */
-    --line-height-normal: normal; /* Bleibt unverändert */
-    --line-height-big: 1.32; /* 1.2 */
-    --line-height-larger: 1.76; /* 1.6 */
+    --letter-spacing-base: 0.044rem;
+    /* 0.04rem */
+    --line-height-small: 1.1;
+    /* 1 */
+    --line-height-normal: normal;
+    /* Bleibt unverändert */
+    --line-height-big: 1.32;
+    /* 1.2 */
+    --line-height-larger: 1.76;
+    /* 1.6 */
 
     /* Bildhöhen */
-    --img-height-sm: 20vh; /* 20% der Viewport-Höhe */
-    --img-height-smedi: 30vh; /* 30% der Viewport-Höhe */
-    --img-height-md: 40vh; /* 40% der Viewport-Höhe */
-    --img-height-mela: 50vh; /* 50% der Viewport-Höhe */
-    --img-height-lg: 60vh; /* 60% der Viewport-Höhe */
+    --img-height-sm: 20vh;
+    /* 20% der Viewport-Höhe */
+    --img-height-smedi: 30vh;
+    /* 30% der Viewport-Höhe */
+    --img-height-md: 40vh;
+    /* 40% der Viewport-Höhe */
+    --img-height-mela: 50vh;
+    /* 50% der Viewport-Höhe */
+    --img-height-lg: 60vh;
+    /* 60% der Viewport-Höhe */
   }
 
   html {
@@ -1323,6 +1498,7 @@ button {
   .fade-leave-active {
     transition: opacity 0.6s ease-out;
   }
+
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
@@ -1386,21 +1562,34 @@ button {
 @media (min-width: 1024px) and (max-width: 1200px) {
   :root {
     --border-color-black: #171717;
-    --border-size: 0.088rem; /* 0.08rem, um 10% erhöht */
-    --border-radius: 0.616rem; /* 0.56rem, um 10% erhöht */
+    --border-size: 0.088rem;
+    /* 0.08rem, um 10% erhöht */
+    --border-radius: 0.616rem;
+    /* 0.56rem, um 10% erhöht */
 
     /* Schriftgrößen */
-    --font-size-base: 0.65rem; /* 0.65rem */
-    --font-size-sm: 0.66rem; /* 0.6rem */
-    --font-size-md: 0.704rem; /* 0.64rem */
-    --font-size-lg: 0.88rem; /* 0.8rem */
-    --font-size-xl: 1.056rem; /* 0.96rem */
-    --font-size-xxl: 1.122rem; /* 1.02rem */
-    --font-size-xxxl: 1.21rem; /* 1.1rem */
-    --font-size-xxxxl: 1.408rem; /* 1.28rem */
-    --font-size-big: 1.76rem; /* 1.6rem */
-    --font-size-bigger: 2.112rem; /* 1.92rem */
-    --font-size-huge: 2.816rem; /* 2.56rem */
+    --font-size-base: 0.65rem;
+    /* 0.65rem */
+    --font-size-sm: 0.66rem;
+    /* 0.6rem */
+    --font-size-md: 0.704rem;
+    /* 0.64rem */
+    --font-size-lg: 0.88rem;
+    /* 0.8rem */
+    --font-size-xl: 1.056rem;
+    /* 0.96rem */
+    --font-size-xxl: 1.122rem;
+    /* 1.02rem */
+    --font-size-xxxl: 1.21rem;
+    /* 1.1rem */
+    --font-size-xxxxl: 1.408rem;
+    /* 1.28rem */
+    --font-size-big: 1.76rem;
+    /* 1.6rem */
+    --font-size-bigger: 2.112rem;
+    /* 1.92rem */
+    --font-size-huge: 2.816rem;
+    /* 2.56rem */
 
     /* Schriftgewichte */
     --font-weight-thin: 100;
@@ -1411,42 +1600,69 @@ button {
 
     /* Abstände */
     --spacing-none: 0;
-    --spacing-xxs: 0.2112rem; /* 0.192rem */
-    --spacing-xs: 0.33rem; /* 0.3rem */
-    --spacing-sm: 0.55rem; /* 0.5rem */
-    --spacing-sm-md: 0.572rem; /* 0.52rem */
-    --spacing-md: 0.9rem; /* 0.75rem */
-    --spacing-lg: 1.1rem; /* 0.9rem */
-    --spacing-xl: 1.508rem; /* 1.28rem */
-    --spacing-xxl: 2.312rem; /* 1.92rem */
-    --spacing-xxxl: 2.916rem; /* 2.56rem */
-    --spacing-big: 4.224rem; /* 3.84rem */
-    --spacing-bigger: 5.632rem; /* 5.12rem */
+    --spacing-xxs: 0.2112rem;
+    /* 0.192rem */
+    --spacing-xs: 0.33rem;
+    /* 0.3rem */
+    --spacing-sm: 0.55rem;
+    /* 0.5rem */
+    --spacing-sm-md: 0.572rem;
+    /* 0.52rem */
+    --spacing-md: 0.9rem;
+    /* 0.75rem */
+    --spacing-lg: 1.1rem;
+    /* 0.9rem */
+    --spacing-xl: 1.508rem;
+    /* 1.28rem */
+    --spacing-xxl: 2.312rem;
+    /* 1.92rem */
+    --spacing-xxxl: 2.916rem;
+    /* 2.56rem */
+    --spacing-big: 4.224rem;
+    /* 3.84rem */
+    --spacing-bigger: 5.632rem;
+    /* 5.12rem */
 
-    --radius-xxs: 0.2112rem; /* 0.192rem */
-    --radius-xs: 0.44rem; /* 0.4rem */
-    --radius-sm: 0.704rem; /* 0.64rem */
-    --radius-md: 0.88rem; /* 0.8rem */
+    --radius-xxs: 0.2112rem;
+    /* 0.192rem */
+    --radius-xs: 0.44rem;
+    /* 0.4rem */
+    --radius-sm: 0.704rem;
+    /* 0.64rem */
+    --radius-md: 0.88rem;
+    /* 0.8rem */
 
     /* Positionierung */
-    --top-spacing: 1.144rem; /* 1.04rem */
-    --side-percentage: 1.65%; /* 1.5% */
+    --top-spacing: 1.144rem;
+    /* 1.04rem */
+    --side-percentage: 1.65%;
+    /* 1.5% */
     --z-index-high: 100;
     --z-index-alert: 1000;
 
     /* Sonstiges */
-    --letter-spacing-base: 0.044rem; /* 0.04rem */
-    --line-height-small: 1.1; /* 1 */
-    --line-height-normal: normal; /* Bleibt unverändert */
-    --line-height-big: 1.32; /* 1.2 */
-    --line-height-larger: 1.76; /* 1.6 */
+    --letter-spacing-base: 0.044rem;
+    /* 0.04rem */
+    --line-height-small: 1.1;
+    /* 1 */
+    --line-height-normal: normal;
+    /* Bleibt unverändert */
+    --line-height-big: 1.32;
+    /* 1.2 */
+    --line-height-larger: 1.76;
+    /* 1.6 */
 
     /* Bildhöhen */
-    --img-height-sm: 15vh; /* 20% der Viewport-Höhe */
-    --img-height-smedi: 25vh; /* 30% der Viewport-Höhe */
-    --img-height-md: 35vh; /* 40% der Viewport-Höhe */
-    --img-height-mela: 45vh; /* 50% der Viewport-Höhe */
-    --img-height-lg: 55vh; /* 60% der Viewport-Höhe */
+    --img-height-sm: 15vh;
+    /* 20% der Viewport-Höhe */
+    --img-height-smedi: 25vh;
+    /* 30% der Viewport-Höhe */
+    --img-height-md: 35vh;
+    /* 40% der Viewport-Höhe */
+    --img-height-mela: 45vh;
+    /* 50% der Viewport-Höhe */
+    --img-height-lg: 55vh;
+    /* 60% der Viewport-Höhe */
   }
 
   img {
