@@ -8,15 +8,13 @@
     </div>
 
     <div class="aboutMeText">
-      <SplitFlapText
-        :texts="[
-          '         [ABOUT] [ME]          ',
-          '  DECISIVE   AGILE  CURIOUS',
-          '      ADAPTILITY   ACCURACY',
-          'PUNCTUALITY   FAIRNESS     ',
-          '     CREATIVITY     TRUST  ',
-        ]"
-      />
+      <SplitFlapText :texts="[
+        '         [ABOUT] [ME]          ',
+        '  DECISIVE   AGILE  CURIOUS',
+        '    ADAPTABILITY   ACCURACY',
+        'PUNCTUALITY   FAIRNESS     ',
+        '     CREATIVITY     TRUST  ',
+      ]" />
     </div>
     <div class="wrapper">
       <img src="public\profilepicture.svg" alt="profilepicture" />
