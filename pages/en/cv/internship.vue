@@ -7,23 +7,18 @@
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '        PRDUCT DESIGN    ',
-          '  PROTOTYPING            ',
-          '      WEBDEVELOPMENT     ',
-          ' CONCEPT DEVELPMENT      ',
-          '    FULLSTACK DEVELOPMENT ',
-        ]"
-      />
+      <SplitFlapText :texts="[
+        '        UX DESIGN        ',
+        '  WIREFRAMING            ',
+        '     CUSTOMER CONTACT    ',
+        ' CONCEPT DEVELPMENT      ',
+        '    ITERATIVE DESIGN     ',
+      ]" />
     </div>
 
     <div class="wrapper">
       <div class="picture">
-        <img
-          src="public\img\cv\intern.svg"
-          alt="Picture of me in front of goldengate bridge"
-        />
+        <img src="public\img\cv\intern.svg" alt="musecase logo" />
       </div>
     </div>
 
@@ -31,31 +26,27 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['    [WHAT] [I] [HOPE] [TO] [LEARN]    ']"
-            />
+            <SplitFlapText :texts="['     [WHAT] [I] [HAVE] [LEARNED]     ']" />
             <div class="paragraph">
-              I'm hoping an internship will let me put my previous knowledge to
-              use and learn new skills. I'd like to get hands-on with projects,
-              tackle problems on my own, and gain valuable experience. It's
-              especially important to me to deepen my skills in design and
-              programming and to grow both professionally and personally in the
-              process. My goal is to build on my existing strengths by actively
-              working on projects and taking on new challenges.
+              In my internship, I gained a much deeper understanding of **design tools like Figma**. I learned not only
+              to understand design systems, but also to create and use them efficiently. At the same time, I developed a
+              clearer understanding of the work methods of UX/UI designers and learned how to significantly improve a
+              product's usability by analyzing user flows and best practices. In addition to these technical skills, it
+              was particularly important to learn how to deal with clients professionally—to understand their needs,
+              manage expectations, and accept constructive feedback.
             </div>
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [INTERNSHIP]         ']" />
+            <SplitFlapText :texts="['   [INTERNSHIP] [AT] [MUSECASE]    ']" />
             <div class="paragraph">
-              I'm hoping the company I'm doing my internship with has an open
-              and innovative corporate culture that encourages creativity and
-              initiative. A philosophy based on collaboration, mutual respect,
-              and a dynamic way of working is particularly important to me. In a
-              determined and agile environment, I want to actively contribute to
-              success by developing my skills while working efficiently and
-              solution-oriented. My goal is to be part of a team that works
-              together on exciting, forward-looking projects.
+              Working in an agency was an interesting and, above all, a new experience for me. Design methods that are
+              given much less time in my studies are suddenly very useful, and you have to pay attention to details that
+              didn't play a role in university. The internship and, above all, the employees at musecase showed me how
+              work is sensibly structured and divided in a professional environment. I realized how essential clear
+              communication within the team is for the success of a project. I learned to actively contribute to
+              teamwork, take responsibility, and learn from mistakes to continuously optimize the workflow.
+
             </div>
           </div>
         </div>

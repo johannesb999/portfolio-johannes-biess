@@ -7,23 +7,18 @@
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '        PRDUCT DESIGN    ',
-          '  PROTOTYPING            ',
-          '      WEBDEVELOPMENT     ',
-          ' CONCEPT DEVELPMENT      ',
-          '    FULLSTACK DEVELOPMENT ',
-        ]"
-      />
+      <SplitFlapText :texts="[
+        '        UX DESIGN        ',
+        '  WIREFRAMING            ',
+        '       KUNDENKOTAKT      ',
+        ' CONCEPT DEVELPMENT      ',
+        '    ITERATIVE DESIGN     ',
+      ]" />
     </div>
 
     <div class="wrapper">
       <div class="picture">
-        <img
-          src="public\img\cv\intern.svg"
-          alt="Picture of me in front of goldengate bridge"
-        />
+        <img src="public\img\cv\intern.svg" alt="Picture of me in front of goldengate bridge" />
       </div>
     </div>
 
@@ -31,35 +26,30 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['   [WAS] [ICH] [HOFFE] [ZU] [LERNEN]   ']"
-            />
+            <SplitFlapText :texts="['   [WAS] [ICH] [GELERNT] [HABE]    ']" />
             <div class="paragraph">
-              In einem Praktikum erhoffe ich mir die Chance, meine bisherigen
-              Kenntnisse praktisch anzuwenden und neue Fähigkeiten zu erlernen.
-              Ich möchte mich aktiv in Projekte einbringen, eigenständig
-              Probleme lösen und wertvolle praktische Erfahrungen sammeln.
-              Besonders wichtig ist mir, meine Fähigkeiten in Design und
-              Programmierung zu vertiefen und dabei sowohl fachlich als auch
-              persönlich zu wachsen. Mein Ziel ist es, durch die aktive
-              Mitarbeit an Projekten meine bisherigen Stärken weiter auszubauen
-              und mich gleichzeitig neuen Herausforderungen zu stellen.
+              In meinem Praktikum habe ich ein sehr viel tieferes Verständnis für Design-Tools wie Figma erlangt. Ich
+              habe gelernt, Design-Systeme nicht nur zu verstehen, sondern auch selbst zu erstellen und effizient zu
+              nutzen. Gleichzeitig habe ich ein klareres Verständnis für die Arbeitsweise von UX/UI-Designern entwickelt
+              und gelernt, wie man durch das Analysieren von User Flows und Best Practices die Usability eines Produktes
+              signifikant verbessert. Neben diesen fachlichen Kompetenzen war es besonders wichtig, den professionellen
+              Umgang mit Kunden zu lernen—ihre Bedürfnisse zu erfassen, Erwartungen zu managen und konstruktives
+              Feedback entgegenzunehmen.
             </div>
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['          [PRAKTIKUM]        ']" />
+            <SplitFlapText :texts="['    [PRAKTIKUM] [BEI] [MUSECASE]   ']" />
             <div class="paragraph">
-              Von dem Unternehmen, in dem ich mein Praktikum absolviere, erhoffe
-              ich mir eine offene und innovative Unternehmenskultur, die
-              Kreativität und Eigeninitiative fördert. Besonders wichtig ist mir
-              eine Philosophie, die auf Zusammenarbeit, gegenseitigem Respekt
-              und einer dynamischen Arbeitsweise basiert. In einem zielstrebigen
-              und agilen Umfeld möchte ich aktiv zum Erfolg beitragen, indem ich
-              meine Fähigkeiten weiterentwickle und dabei effizient und
-              lösungsorientiert arbeite. Mein Ziel ist es, Teil eines Teams zu
-              sein, das gemeinsam an spannenden, zukunftsweisenden Projekten
-              arbeitet.
+              In einer Agentur zu arbeiten war für mich eine interessante und vor allem neue Erfahrung. Design-Methoden,
+              denen im Studium sehr
+              viel weniger Zeit gewidmet wird, sind plötzlich richtig sinnvoll und man muss auf Details achten, die im
+              Studium keine Rolle spielten. Das Praktikum und vor allem die Mitarbeiter bei musecase haben mir gezeigt,
+              wie in einem professionellen Umfeld Arbeit sinnvoll strukturiert und aufgeteilt wird. Dabei wurde mir
+              klar, wie essenziell eine klare Kommunikation innerhalb des Teams für den Erfolg eines Projektes ist. Ich
+              habe gelernt, mich aktiv in die Teamarbeit einzubringen, Verantwortung zu übernehmen und aus Fehlern zu
+              lernen, um den Arbeitsfluss kontinuierlich zu optimieren.
+
             </div>
           </div>
         </div>
