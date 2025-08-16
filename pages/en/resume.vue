@@ -63,7 +63,7 @@
     </div>
 
     <div id="title">
-      <a href="/docs/ResumEng.pdf" download="ResumeJohannesBiess.pdf" class="custom-link">Download Resume.pdf</a>
+      <a href="/docs/Resume.pdf" download="ResumeJohannesBiess.pdf" class="custom-link">Download Resume.pdf</a>
     </div>
   </main>
 </template>
