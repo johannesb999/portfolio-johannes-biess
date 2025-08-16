@@ -7,7 +7,7 @@
     </div>
     <div class="timeline">
       <ul>
-        <li>
+        <li class="current">
           <NuxtLink to="/en/cv/hfg" class="content custom-link">
             <h2>HOCHSCHULE <br />FÜR GESTALTUNG</h2>
             <p>BACHELOR OF ARTS</p>
@@ -17,11 +17,11 @@
             <h3>2026</h3>
           </div>
         </li>
-        <li class="current">
+        <li>
           <NuxtLink to="/en/cv/internship" class="content custom-link">
-            <h2>HOPEFULLY YOUR COMPANY!</h2>
+            <h2>MUSECASE GMBH</h2>
             <p>INTERNSHIP</p>
-            <p class="location">ANYWHERE WORLDWIDE</p>
+            <p class="location">Stuttgart</p>
           </NuxtLink>
           <div class="date">
             <h3>2025</h3>
@@ -63,12 +63,7 @@
     </div>
 
     <div id="title">
-      <a
-        href="/docs/ResumEng.pdf"
-        download="ResumeJohannesBiess.pdf"
-        class="custom-link"
-        >Download Resume.pdf</a
-      >
+      <a href="/docs/ResumEng.pdf" download="ResumeJohannesBiess.pdf" class="custom-link">Download Resume.pdf</a>
     </div>
   </main>
 </template>

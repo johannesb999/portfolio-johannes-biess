@@ -18,7 +18,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\cv\intern.svg" alt="musecase logo" />
+        <img src="public\img\cv\musecase2.png" alt="musecase logo" />
       </div>
     </div>
 
@@ -28,7 +28,7 @@
           <div class="text">
             <SplitFlapText :texts="['     [WHAT] [I] [HAVE] [LEARNED]     ']" />
             <div class="paragraph">
-              In my internship, I gained a much deeper understanding of **design tools like Figma**. I learned not only
+              In my internship, I gained a much deeper understanding of design tools like Figma. I learned not only
               to understand design systems, but also to create and use them efficiently. At the same time, I developed a
               clearer understanding of the work methods of UX/UI designers and learned how to significantly improve a
               product's usability by analyzing user flows and best practices. In addition to these technical skills, it
