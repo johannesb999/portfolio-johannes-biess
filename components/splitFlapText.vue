@@ -1,71 +1,44 @@
 <template>
   <div>
-    <div
-      v-for="(textArray, idx) in textArrays"
-      :key="idx"
-      class="mainText"
-      @click="() => animate(idx)"
-    >
+    <div v-for="(textArray, idx) in textArrays" :key="idx" class="mainText" @click="() => animate(idx)">
       <span v-for="(segment, segmentIdx) in textArray" :key="segmentIdx">
-        <template
-          v-if="segment.isLink && segment.linkTarget.includes('mailto')"
-        >
-          <a
-            href="#"
-            class="custom-link hitbox"
-            @click.prevent="copyEmailToClipboard"
-          >
-            <span
-              v-for="(letter, index) in segment.letters"
-              :key="index"
-              :class="[
-                'char',
-                {
-                  separator: letter.isSeparator,
-                  normal: !letter.isSeparator && !letter.isLink,
-                },
-                letter.styleClass,
-              ]"
-            >
-              {{ letter.current }}
-            </span>
-          </a>
-        </template>
-        <template v-else-if="segment.isLink">
-          <a
-            :href="segment.linkTarget"
-            class="custom-link hitbox"
-            target="_blank"
-          >
-            <span
-              v-for="(letter, index) in segment.letters"
-              :key="index"
-              :class="[
-                'char',
-                {
-                  separator: letter.isSeparator,
-                  normal: !letter.isSeparator && !letter.isLink,
-                },
-                letter.styleClass,
-              ]"
-            >
-              {{ letter.current }}
-            </span>
-          </a>
-        </template>
-        <template v-else>
-          <span
-            v-for="(letter, index) in segment.letters"
-            :key="index"
-            :class="[
+        <template v-if="segment.isLink && segment.linkTarget.includes('mailto')">
+          <a href="#" class="custom-link hitbox" @click.prevent="copyEmailToClipboard">
+            <span v-for="(letter, index) in segment.letters" :key="index" :class="[
               'char',
               {
                 separator: letter.isSeparator,
                 normal: !letter.isSeparator && !letter.isLink,
               },
               letter.styleClass,
-            ]"
-          >
+            ]">
+              {{ letter.current }}
+            </span>
+          </a>
+        </template>
+        <template v-else-if="segment.isLink">
+          <a :href="segment.linkTarget" class="custom-link hitbox" target="_blank">
+            <span v-for="(letter, index) in segment.letters" :key="index" :class="[
+              'char',
+              {
+                separator: letter.isSeparator,
+                normal: !letter.isSeparator && !letter.isLink,
+              },
+              letter.styleClass,
+            ]">
+              {{ letter.current }}
+            </span>
+          </a>
+        </template>
+        <template v-else>
+          <span v-for="(letter, index) in segment.letters" :key="index" :class="[
+            'char',
+            {
+              separator: letter.isSeparator,
+              normal: !letter.isSeparator && !letter.isLink,
+            },
+            letter.styleClass,
+          ]">
             {{ letter.current }}
           </span>
         </template>
@@ -142,10 +115,10 @@ function createTextArray(text) {
             inLink && inStyledWord
               ? "link-style custom-style"
               : inLink
-              ? "link-style"
-              : inStyledWord
-              ? "custom-style"
-              : "",
+                ? "link-style"
+                : inStyledWord
+                  ? "custom-style"
+                  : "",
         };
       }
       return;
@@ -163,10 +136,10 @@ function createTextArray(text) {
           inLink && inStyledWord
             ? "link-style custom-style"
             : inLink
-            ? "link-style"
-            : inStyledWord
-            ? "custom-style"
-            : "",
+              ? "link-style"
+              : inStyledWord
+                ? "custom-style"
+                : "",
       };
     }
 
@@ -180,10 +153,10 @@ function createTextArray(text) {
         inLink && inStyledWord
           ? "link-style custom-style"
           : inLink
-          ? "link-style"
-          : inStyledWord
-          ? "custom-style"
-          : "",
+            ? "link-style"
+            : inStyledWord
+              ? "custom-style"
+              : "",
     };
     currentSegment.letters.push(letterObj);
   });
@@ -380,10 +353,12 @@ a.custom-link.hitbox::after {
 }
 
 @keyframes flap {
+
   0%,
   100% {
     transform: rotateX(0deg);
   }
+
   50% {
     transform: rotateX(360deg);
   }
@@ -418,7 +393,7 @@ a.custom-link.hitbox::after {
 
   .char {
     display: inline-block;
-    width: var(--spacing-lg);
+    width: var(--spacing-md);
     height: var(--spacing-xxl);
     overflow: hidden;
     font-size: var(--font-size-xxxxl);
@@ -467,10 +442,12 @@ a.custom-link.hitbox::after {
   }
 
   @keyframes flap {
+
     0%,
     100% {
       transform: rotateX(0deg);
     }
+
     50% {
       transform: rotateX(360deg);
     }
@@ -555,10 +532,12 @@ a.custom-link.hitbox::after {
   }
 
   @keyframes flap {
+
     0%,
     100% {
       transform: rotateX(0deg);
     }
+
     50% {
       transform: rotateX(360deg);
     }
@@ -643,10 +622,12 @@ a.custom-link.hitbox::after {
   }
 
   @keyframes flap {
+
     0%,
     100% {
       transform: rotateX(0deg);
     }
+
     50% {
       transform: rotateX(360deg);
     }
@@ -731,10 +712,12 @@ a.custom-link.hitbox::after {
   }
 
   @keyframes flap {
+
     0%,
     100% {
       transform: rotateX(0deg);
     }
+
     50% {
       transform: rotateX(360deg);
     }

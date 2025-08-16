@@ -239,7 +239,6 @@ h3 {
 
 .image.large img {
   height: fit-content;
-  /* 600px */
 }
 
 /* Kleine Geräte (Tablets und Handys im Querformat, 481px bis 768px) */

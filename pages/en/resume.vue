@@ -21,7 +21,7 @@
           <NuxtLink to="/en/cv/internship" class="content custom-link">
             <h2>MUSECASE GMBH</h2>
             <p>INTERNSHIP</p>
-            <p class="location">Stuttgart</p>
+            <p class="location">STUTTGART, GERMANY</p>
           </NuxtLink>
           <div class="date">
             <h3>2025</h3>

@@ -1,5 +1,11 @@
 <template>
   <div>
+
+    <head>
+      <title>Johannes Biess</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
     <NuxtPage />
 
     <!-- Language Switch -->
@@ -97,7 +103,7 @@ const applyLightTheme = () => {
   root.style.setProperty("--color-primary-translucent", "#171717b0");
   root.style.setProperty("--color-black", "#171717");
   root.style.setProperty("--color-accent", "#afafaf");
-  root.style.setProperty("--border-color-black", "#171717");
+  root.style.setProperty("--border-color-black", "#d3d1d1");
   root.style.setProperty("--color-gray", "#bfbfbf");
 };
 
@@ -134,7 +140,7 @@ onMounted(() => {
   --color-accent: #afafaf;
   --color-gray: #bfbfbf;
 
-  --border-color-black: #171717;
+  --border-color-black: #d3d1d1;
   --border-size: 0.1rem;
   --border-radius: 0.7rem;
 
@@ -295,8 +301,10 @@ img {
 #en,
 #de,
 #line {
-  font-weight: var(--font-weight-thin);
-  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-extra-light);
+  font-size: var(--font-size-xxxxl);
+  font-family: var(--font-family-mono);
+  align-content: baseline;
 }
 
 #line {
