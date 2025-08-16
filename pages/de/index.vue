@@ -1,45 +1,33 @@
 <template>
   <html lang="de">
-    <div class="container">
-      <div id="leftLink">
-        <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>
-      </div>
-      <div id="rightLink">
-        <nuxt-link to="/de/contact" class="custom-link">KONTAKT</nuxt-link>
-      </div>
-      <div id="bottomLink">
-        <nuxt-link to="/de/project/projects" class="custom-link">
-          <span
-            v-for="(char, index) in 'PROJEKTE'.split('')"
-            :key="index"
-            class="project-char"
-          >
-            {{ char }}
-          </span>
-        </nuxt-link>
-      </div>
+  <div class="container">
+    <div id="leftLink">
+      <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>
+    </div>
+    <div id="rightLink">
+      <nuxt-link to="/de/contact" class="custom-link">KONTAKT</nuxt-link>
+    </div>
+    <div id="bottomLink">
+      <nuxt-link to="/de/project/projects" class="custom-link">
+        <span v-for="(char, index) in 'PROJEKTE'.split('')" :key="index" class="project-char">
+          {{ char }}
+        </span>
+      </nuxt-link>
+    </div>
 
-      <div
-        v-for="(textArray, idx) in textArrays"
-        :key="idx"
-        class="mainText"
-        @click="() => animate(idx)"
-      >
-        <div>
-          <span
-            v-for="(letter, index) in textArray"
-            :key="index"
-            :class="[
-              'char',
-              { separator: letter.isSeparator, normal: !letter.isSeparator },
-              letter.styleClass,
-            ]"
-          >
-            {{ letter.current }}
-          </span>
-        </div>
+    <div v-for="(textArray, idx) in textArrays" :key="idx" class="mainText" @click="() => animate(idx)">
+      <div>
+        <span v-for="(letter, index) in textArray" :key="index" :class="[
+          'char',
+          { separator: letter.isSeparator, normal: !letter.isSeparator },
+          letter.styleClass,
+        ]">
+          {{ letter.current }}
+        </span>
       </div>
     </div>
+  </div>
+
   </html>
 </template>
 
@@ -57,16 +45,16 @@ const switchLanguage = (lang) => {
 };
 
 const texts = [
-  "HI MEIN NAME IST    ",
-  "[JOHANNES] [BIESS]      ",
-  "UND ICH BIN        ",
-  "ENTWICKLER       ",
+  "HI MEIN NAME IST      ",
+  "[JOHANNES] [BIESS]        ",
+  "UND ICH BIN           ",
+  "ENTWICKLER        ",
 ];
 const newWords = [
   "DESIGNER",
   "EIN PROBLEMLÖSER",
   "PROTOTYPER",
-  "IHR NEUER PRAKTIKANT",
+  "IHR NEUER WERKSTUDENT",
   "ENTWICKLER",
 ];
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÖÄ";
@@ -216,9 +204,11 @@ onUnmounted(() => {
   0% {
     transform: rotateX(0);
   }
+
   50% {
     transform: rotateX(180deg);
   }
+
   100% {
     transform: rotateX(0);
   }

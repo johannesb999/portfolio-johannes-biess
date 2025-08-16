@@ -86,7 +86,7 @@ const applyDarkTheme = () => {
   root.style.setProperty("--color-primary", "#fbfbfb");
   root.style.setProperty("--color-background", "#171717");
   root.style.setProperty("--color-secondary", "#707070");
-  root.style.setProperty("--color-gray-light", "#e0e0e02a");
+  root.style.setProperty("--color-gray-light", "#b3b3b32a");
   root.style.setProperty("--color-primary-translucent", "#eeeeeedc");
   root.style.setProperty("--color-black", "#fbfbfb");
   root.style.setProperty("--color-accent", "#d4d4d4");
@@ -99,7 +99,7 @@ const applyLightTheme = () => {
   root.style.setProperty("--color-primary", "#171717");
   root.style.setProperty("--color-background", "#fbfbfb");
   root.style.setProperty("--color-secondary", "#d3d1d1");
-  root.style.setProperty("--color-gray-light", "#0000002d");
+  root.style.setProperty("--color-gray-light", "#0000001d");
   root.style.setProperty("--color-primary-translucent", "#171717b0");
   root.style.setProperty("--color-black", "#171717");
   root.style.setProperty("--color-accent", "#afafaf");
@@ -134,7 +134,8 @@ onMounted(() => {
   --color-primary: #171717;
   --color-background: #fbfbfb;
   --color-secondary: #d3d1d1;
-  --color-gray-light: #0000002d;
+  --color-gray-light: #0000001d;
+  --color-gray-light-dark: #b3b3b32a;
   --color-primary-translucent: #171717b0;
   --color-black: #000000;
   --color-accent: #afafaf;
@@ -305,6 +306,11 @@ img {
   font-size: var(--font-size-xxxxl);
   font-family: var(--font-family-mono);
   align-content: baseline;
+}
+
+#en:hover,
+#de:hover {
+  cursor: pointer;
 }
 
 #line {

@@ -1,51 +1,39 @@
 <template>
   <html lang="eng">
-    <div class="container">
-      <div id="leftLink" ref="leftLink">
-        <nuxt-link to="/en/about" class="custom-link">
-          <span class="link-content">ABOUT ME</span>
-        </nuxt-link>
-      </div>
-      <div id="rightLink" ref="rightLink">
-        <nuxt-link to="/en/contact" class="custom-link">
-          <span class="link-content">CONTACT</span>
-        </nuxt-link>
-      </div>
-      <div id="bottomLink" ref="bottomLink">
-        <nuxt-link to="/en/project/projects" class="custom-link">
-          <span class="link-content">
-            <span
-              v-for="(char, index) in 'PROJECTS'.split('')"
-              :key="index"
-              class="project-char"
-            >
-              {{ char }}
-            </span>
+  <div class="container">
+    <div id="leftLink" ref="leftLink">
+      <nuxt-link to="/en/about" class="custom-link">
+        <span class="link-content">ABOUT ME</span>
+      </nuxt-link>
+    </div>
+    <div id="rightLink" ref="rightLink">
+      <nuxt-link to="/en/contact" class="custom-link">
+        <span class="link-content">CONTACT</span>
+      </nuxt-link>
+    </div>
+    <div id="bottomLink" ref="bottomLink">
+      <nuxt-link to="/en/project/projects" class="custom-link">
+        <span class="link-content">
+          <span v-for="(char, index) in 'PROJECTS'.split('')" :key="index" class="project-char">
+            {{ char }}
           </span>
-        </nuxt-link>
-      </div>
+        </span>
+      </nuxt-link>
+    </div>
 
-      <div
-        v-for="(textArray, idx) in textArrays"
-        :key="idx"
-        class="mainText"
-        @click="() => animate(idx)"
-      >
-        <div>
-          <span
-            v-for="(letter, index) in textArray"
-            :key="index"
-            :class="[
-              'char',
-              { separator: letter.isSeparator, normal: !letter.isSeparator },
-              letter.styleClass,
-            ]"
-          >
-            {{ letter.current }}
-          </span>
-        </div>
+    <div v-for="(textArray, idx) in textArrays" :key="idx" class="mainText" @click="() => animate(idx)">
+      <div>
+        <span v-for="(letter, index) in textArray" :key="index" :class="[
+          'char',
+          { separator: letter.isSeparator, normal: !letter.isSeparator },
+          letter.styleClass,
+        ]">
+          {{ letter.current }}
+        </span>
       </div>
     </div>
+  </div>
+
   </html>
 </template>
 
@@ -67,16 +55,16 @@ const rightLink = ref(null);
 const bottomLink = ref(null);
 
 const texts = [
-  "HI MY NAME IS   ",
-  "[JOHANNES] [BIESS]    ",
-  "AND I AM        ",
-  "A DEVELOPER       ",
+  "HI MY NAME IS          ",
+  "[JOHANNES] [BIESS]           ",
+  "AND I AM               ",
+  "A DEVELOPER            ",
 ];
 const newWords = [
   "A DESIGNER",
   "A PROBLEMSOLVER",
   "A PROTOTYPER",
-  "YOUR NEXT INTERN",
+  "YOUR NEXT WORKING STUDENT",
   "A DEVELOPER",
 ];
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -235,9 +223,11 @@ onUnmounted(() => {
   0% {
     transform: rotateX(0);
   }
+
   50% {
     transform: rotateX(180deg);
   }
+
   100% {
     transform: rotateX(0);
   }
@@ -260,6 +250,7 @@ onUnmounted(() => {
     color: var(--color-secondary);
     text-decoration: none;
   }
+
   100% {
     font-size: 1em;
     color: var(--color-primary);

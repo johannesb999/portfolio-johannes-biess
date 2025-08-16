@@ -35,6 +35,7 @@ body {
 .normal {
   color: var(--color-black);
   padding-left: 1px;
+  font-weight: var(font-weight-light);
 }
 
 .custom-style {
