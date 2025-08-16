@@ -8,17 +8,17 @@
 
     <div class="projectFlap">
       <SplitFlapText :texts="[
-        '        UX DESIGN        ',
-        '  WIREFRAMING            ',
-        '       KUNDENKOTAKT      ',
-        ' CONCEPT DEVELPMENT      ',
-        '    ITERATIVE DESIGN     ',
+        '        UX DESIGN         ',
+        '  WIREFRAMING             ',
+        '       KUNDENKOTAKT       ',
+        ' Konzept Entwicklung      ',
+        '    ITERATIVES ARBEITEN   ',
       ]" />
     </div>
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\cv\intern.svg" alt="Picture of me in front of goldengate bridge" />
+        <img src="public\img\cv\musecase2.png" alt="Picture of me in front of goldengate bridge" />
       </div>
     </div>
 
