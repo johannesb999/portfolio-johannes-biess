@@ -1,0 +1,118 @@
+@media (min-width: 1024px) and (max-width: 1200px) {
+  :root {
+    --border-color-black: #171717;
+    --border-size: 0.088rem;
+    /* 0.08rem, um 10% erhöht */
+    --border-radius: 0.616rem;
+    /* 0.56rem, um 10% erhöht */
+
+    /* Schriftgrößen */
+    --font-size-base: 0.65rem;
+    /* 0.65rem */
+    --font-size-sm: 0.66rem;
+    /* 0.6rem */
+    --font-size-md: 0.704rem;
+    /* 0.64rem */
+    --font-size-lg: 0.88rem;
+    /* 0.8rem */
+    --font-size-xl: 1.056rem;
+    /* 0.96rem */
+    --font-size-xxl: 1.122rem;
+    /* 1.02rem */
+    --font-size-xxxl: 1.21rem;
+    /* 1.1rem */
+    --font-size-xxxxl: 1.408rem;
+    /* 1.28rem */
+    --font-size-big: 1.76rem;
+    /* 1.6rem */
+    --font-size-bigger: 2.112rem;
+    /* 1.92rem */
+    --font-size-huge: 2.816rem;
+    /* 2.56rem */
+
+    /* Schriftgewichte */
+    --font-weight-thin: 100;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* Abstände */
+    --spacing-none: 0;
+    --spacing-xxs: 0.2112rem;
+    /* 0.192rem */
+    --spacing-xs: 0.33rem;
+    /* 0.3rem */
+    --spacing-sm: 0.55rem;
+    /* 0.5rem */
+    --spacing-sm-md: 0.572rem;
+    /* 0.52rem */
+    --spacing-md: 0.9rem;
+    /* 0.75rem */
+    --spacing-lg: 1.1rem;
+    /* 0.9rem */
+    --spacing-xl: 1.508rem;
+    /* 1.28rem */
+    --spacing-xxl: 2.312rem;
+    /* 1.92rem */
+    --spacing-xxxl: 2.916rem;
+    /* 2.56rem */
+    --spacing-big: 4.224rem;
+    /* 3.84rem */
+    --spacing-bigger: 5.632rem;
+    /* 5.12rem */
+
+    --radius-xxs: 0.2112rem;
+    /* 0.192rem */
+    --radius-xs: 0.44rem;
+    /* 0.4rem */
+    --radius-sm: 0.704rem;
+    /* 0.64rem */
+    --radius-md: 0.88rem;
+    /* 0.8rem */
+
+    /* Positionierung */
+    --top-spacing: 1.144rem;
+    /* 1.04rem */
+    --side-percentage: 1.65%;
+    /* 1.5% */
+    --z-index-high: 100;
+    --z-index-alert: 1000;
+
+    /* Sonstiges */
+    --letter-spacing-base: 0.044rem;
+    /* 0.04rem */
+    --line-height-small: 1.1;
+    /* 1 */
+    --line-height-normal: normal;
+    /* Bleibt unverändert */
+    --line-height-big: 1.32;
+    /* 1.2 */
+    --line-height-larger: 1.76;
+    /* 1.6 */
+
+    /* Bildhöhen */
+    --img-height-sm: 15vh;
+    /* 20% der Viewport-Höhe */
+    --img-height-smedi: 25vh;
+    /* 30% der Viewport-Höhe */
+    --img-height-md: 35vh;
+    /* 40% der Viewport-Höhe */
+    --img-height-mela: 45vh;
+    /* 50% der Viewport-Höhe */
+    --img-height-lg: 55vh;
+    /* 60% der Viewport-Höhe */
+  }
+
+  img {
+    max-width: 100%;
+    height: fit-content;
+    border: var(--border-size) solid var(--border-color-black);
+    border-radius: var(--border-radius);
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Extra große Geräte (Sehr große Bildschirme, ab 1201px) */
