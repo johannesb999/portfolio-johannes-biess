@@ -70,4 +70,4 @@
 
 <script setup></script>
 
-<style src="assets/resume.css" scoped></style>
+<style lang="scss" src="assets/resume.scss" scoped></style>

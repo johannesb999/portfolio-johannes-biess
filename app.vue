@@ -120,8 +120,7 @@ onMounted(() => {
 });
 </script>
 
-<style>
-@import url("assets/font.css");
+<style lang="scss">
 
 :root {
   --color-picker: #171717b0;
