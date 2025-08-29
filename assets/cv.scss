@@ -1,3 +1,5 @@
+@use "@/assets/styles/type.scss" as type;
+
 html {
   top: 0;
   left: 0;
@@ -14,8 +16,7 @@ html {
   display: flex;
   justify-content: center;
   padding-bottom: var(--spacing-lg);
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-normal);
+  @include type.L-Heading-Style();
 }
 
 .detailsLink {
@@ -29,8 +30,7 @@ html {
   padding-top: var(--spacing-lg);
   left: 50vw;
   transform: translateX(-50%);
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-bold);
+  @include type.L-Heading-Style('-bold');
   text-align: center;
   background-color: var(--color-background);
 }
@@ -49,8 +49,7 @@ html {
   top: 50vh;
   right: var(--side-percentage);
   transform: translateY(-50%);
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-bold);
+  @include type.L-Heading-Style('-bold');
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
@@ -60,8 +59,7 @@ html {
   top: 50vh;
   left: var(--side-percentage);
   transform: translateY(-50%) rotate(180deg);
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-bold);
+  @include type.L-Heading-Style('-bold');
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
@@ -71,8 +69,7 @@ html {
   display: flex;
   flex-direction: column;
   position: absolute;
-  font-size: var(--font-size-xxxxl);
-  font-weight: var(--font-weight-extra-light);
+  @include type.L-XXXXL-Style('-extra-light');
   text-align: left;
 }
 
@@ -140,8 +137,7 @@ html {
   flex: 1;
   padding: var(--spacing-lg);
   padding-top: var(--spacing-md);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-light);
+  @include type.L-Button-Style('-light');
   line-height: var(--line-height-big);
 }
 
@@ -159,14 +155,12 @@ html {
 }
 
 .project-section h2 {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+  @include type.L-Button-Style('-bold');
   margin-bottom: var(--spacing-md);
 }
 
 h3 {
-  font-size: var(--font-size-xxl);
-  font-weight: var(--font-weight-bold);
+  @include type.L-XXL-Style('-bold');
   margin-bottom: var(--spacing-xs);
   margin-top: var(--spacing-xs);
   align-items: center;
@@ -192,8 +186,7 @@ h3 {
     display: flex;
     justify-content: center;
     padding-bottom: var(--spacing-lg);
-    font-size: var(--font-size-big);
-    font-weight: var(--font-weight-normal);
+    @include type.L-Heading-Style();
   }
 
   .detailsLink {
@@ -207,8 +200,7 @@ h3 {
     padding-top: var(--spacing-lg);
     left: 50vw;
     transform: translateX(-50%);
-    font-size: var(--font-size-big);
-    font-weight: var(--font-weight-bold);
+    @include type.L-Heading-Style('-bold');
     text-align: center;
     background-color: var(--color-background);
   }
@@ -227,8 +219,7 @@ h3 {
     top: 50vh;
     right: var(--side-percentage);
     transform: translateY(-50%);
-    font-size: var(--font-size-big);
-    font-weight: var(--font-weight-bold);
+    @include type.L-Heading-Style('-bold');
     writing-mode: vertical-rl;
     text-orientation: mixed;
   }
@@ -238,8 +229,7 @@ h3 {
     top: 50vh;
     left: var(--side-percentage);
     transform: translateY(-50%) rotate(180deg);
-    font-size: var(--font-size-big);
-    font-weight: var(--font-weight-bold);
+    @include type.L-Heading-Style('-bold');
     writing-mode: vertical-rl;
     text-orientation: mixed;
   }
@@ -249,8 +239,7 @@ h3 {
     display: flex;
     flex-direction: column;
     position: absolute;
-    font-size: var(--font-size-xxxxl);
-    font-weight: var(--font-weight-extra-light);
+    @include type.L-XXXXL-Style('-extra-light');
     text-align: left;
     align-items: center;
     justify-content: center;
@@ -724,8 +713,7 @@ h3 {
     flex: 1;
     padding: var(--spacing-lg);
     padding-top: var(--spacing-md);
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-light);
+    @include type.L-Button-Style('-light');
     line-height: var(--line-height-big);
   }
 
@@ -762,14 +750,12 @@ h3 {
   }
 
   .project-section h2 {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
+    @include type.L-Button-Style('-bold');
     margin-bottom: var(--spacing-md);
   }
 
   h3 {
-    font-size: var(--font-size-xxl);
-    font-weight: var(--font-weight-bold);
+    @include type.L-XXL-Style('-bold');
     margin-bottom: var(--spacing-xs);
     margin-top: var(--spacing-xs);
     align-items: center;

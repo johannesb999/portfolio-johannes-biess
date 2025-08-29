@@ -1,7 +1,8 @@
+@use "@/assets/styles/type.scss" as type;
+
 #contact {
   color: var(--color-primary);
-  font-weight: var(--font-weight-light);
-  font-size: var(--font-size-xxxxl);
+  @include type.L-XXXXL-Style('-light');
   text-align: center;
   font-style: normal;
   line-height: var(--line-height-normal);
@@ -9,8 +10,7 @@
 
 #impressum {
   color: var(--color-gray);
-  font-weight: var(--font-weight-thin);
-  font-size: var(--font-size-lg);
+  @include type.L-Body-Large-Style('-thin');
   position: absolute;
   bottom: var(--spacing-lg);
   left: 50dvw;
@@ -30,8 +30,7 @@
 
   #contact {
     color: var(--color-primary);
-    font-weight: var(--font-weight-light);
-    font-size: var(--font-size-xxxxl);
+    @include type.L-XXXXL-Style('-light');
     text-align: center;
     font-style: normal;
     line-height: var(--line-height-normal);
@@ -39,8 +38,7 @@
 
   #impressum {
     color: var(--color-gray);
-    font-weight: var(--font-weight-thin);
-    font-size: var(--font-size-xl);
+    @include type.L-Button-Style('-thin');
     position: absolute;
     bottom: var(--spacing-lg);
     left: 50vw;
@@ -58,4 +56,3 @@
 
   }
 }
-

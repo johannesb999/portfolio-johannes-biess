@@ -82,6 +82,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
+@use "@/assets/styles/type.scss" as type;
 :root {
   --color-picker: #171717b0;
 
@@ -276,15 +277,12 @@ button {
   /* fade transition moved to PageTransitions component */
 
 #bottomLink {
+  @include type.L-Heading-Style('-bold');
   color: var(--color-primary);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-big);
   position: absolute;
   bottom: var(--side-percentage);
   left: 50dvw;
   transform: translateX(-50%);
-  font-style: normal;
-  line-height: var(--line-height-normal);
 }
 
 #topLink {
@@ -293,8 +291,7 @@ button {
   padding-top: var(--side-percentage);
   left: 50dvw;
   transform: translateX(-50%);
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-bold);
+  @include type.L-Heading-Style('-bold');
   text-align: center;
 }
 
@@ -303,8 +300,7 @@ button {
   right: var(--side-percentage);
   transform: translateY(-50%);
   position: absolute;
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-bold);
+  @include type.L-Heading-Style('-bold');
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
@@ -316,8 +312,7 @@ button {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   position: absolute;
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-bold);
+  @include type.L-Heading-Style('-bold');
 }
 
 .custom-link {

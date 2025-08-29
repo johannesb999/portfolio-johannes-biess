@@ -1,3 +1,5 @@
+@use "@/assets/styles/type.scss" as type;
+
 html,
 body {
   margin: var(--spacing-none);
@@ -61,8 +63,7 @@ body {
 
 .mainText {
   margin: var(--spacing-sm) 0;
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-extra-light);
+  @include type.L-Button-Style('-extra-light');
   text-align: center;
 
 }
@@ -156,8 +157,7 @@ body {
 
   .mainText {
     margin: var(--spacing-sm) 0;
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-extra-light);
+    @include type.L-Button-Style('-extra-light');
     text-align: center;
 
   }
@@ -255,8 +255,7 @@ body {
 
   .mainText {
     margin: var(--spacing-sm) 0;
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-extra-light);
+    @include type.L-Button-Style('-extra-light');
     text-align: center;
     align-self: center;
 

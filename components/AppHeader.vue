@@ -49,10 +49,10 @@ watch(route, (newRoute) => {
 </script>
 
 <style lang="scss">
+@use "@/assets/styles/type.scss" as type;
 /* Header styles moved from app.vue */
 .returnHome {
-  font-weight: var(--font-weight-thin);
-  font-size: var(--font-size-bigger);
+  @include type.L-Title-Style('-thin');
   color: var(--color-primary);
   text-decoration: none;
   position: fixed;
@@ -73,9 +73,7 @@ watch(route, (newRoute) => {
 #en,
 #de,
 #line {
-  font-weight: var(--font-weight-extra-light);
-  font-size: var(--font-size-xxxxl);
-  font-family: var(--font-family-mono);
+  @include type.L-XXXXL-Style('-extra-light');
   align-content: baseline;
 }
 
