@@ -334,11 +334,11 @@ button {
 
 <style lang="scss">
 /* Responsive imports (order matters) */
-@use "@/assets/responsive/max-480-mobile.scss" as *;
-@use "@/assets/responsive/max-310-mobile.scss" as *;
-@use "@/assets/responsive/min-481-max-768-tablet.scss" as *;
-@use "@/assets/responsive/min-768-max-1023-tablet.scss" as *;
-@use "@/assets/responsive/min-1024-max-1200-desktop.scss" as *;
-@use "@/assets/responsive/min-1201-desktop.scss" as *;
-@use "@/assets/responsive/min-1600-desktop-xl.scss" as *;
+@use "@/assets/styles/responsive/max-480-mobile.scss" as *;
+@use "@/assets/styles/responsive/max-310-mobile.scss" as *;
+@use "@/assets/styles/responsive/min-481-max-768-tablet.scss" as *;
+@use "@/assets/styles/responsive/min-768-max-1023-tablet.scss" as *;
+@use "@/assets/styles/responsive/min-1024-max-1200-desktop.scss" as *;
+@use "@/assets/styles/responsive/min-1201-desktop.scss" as *;
+@use "@/assets/styles/responsive/min-1600-desktop-xl.scss" as *;
 </style>

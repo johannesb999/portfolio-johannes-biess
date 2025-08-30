@@ -69,4 +69,4 @@
 
 const { isMobile, isTablet, isDesktop } = useDeviceType();</script>
 
-<style lang="scss" src="assets/cv.scss" scoped></style>
+<style lang="scss" src="assets/styles/cv.scss" scoped></style>

@@ -1,6 +1,6 @@
 @use "@/assets/styles/type.scss" as type;
 
-@media (max-width: 310px) {
+@media (max-width: 480px) {
   :root {
     --border-color-black: #171717;
     --border-size: 0.08rem;
@@ -9,7 +9,7 @@
     /* 0.7rem  */
 
     /* Schriftgrößen */
-    --font-size-base: 0.6rem;
+    --font-size-base: 0.65rem;
     /* 0.625rem  */
     --font-size-sm: 0.6rem;
     /* 0.75rem  */
@@ -195,6 +195,79 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
   }
-}
 
-/* Kleine Geräte (Tablets und Handys im Querformat, 481px bis 768px) */
+  .theme-switcher:focus {
+    outline: none;
+  }
+
+  /* Transition für Theme-Wechsel */
+  .theme-transition {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  .theme-transition,
+  .theme-transition * {
+    transition: color 0.5s ease, background-color 0.5s ease,
+      border-color 0.5s ease;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.6s ease-out;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  #bottomLink {
+    color: var(--color-primary);
+    @include type.L-Heading-Style('-bold');
+    position: absolute;
+    bottom: var(--side-percentage);
+    left: 50dvw;
+    transform: translateX(-50%);
+    font-style: normal;
+    line-height: var(--line-height-normal);
+  }
+
+  #topLink {
+    position: absolute;
+    top: 0;
+    padding-top: var(--side-percentage);
+    left: 50dvw;
+    transform: translateX(-50%);
+    @include type.L-Heading-Style('-bold');
+    text-align: center;
+  }
+
+  #rightLink {
+    top: 50dvh;
+    right: var(--side-percentage);
+    transform: translateY(-50%);
+    position: absolute;
+    @include type.L-Heading-Style('-bold');
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  #leftLink {
+    top: 50dvh;
+    left: var(--side-percentage);
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    @include type.L-Heading-Style('-bold');
+  }
+
+  .custom-link {
+    color: var(--color-black);
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin: var(--spacing-xxs);
+  }
+}
+//

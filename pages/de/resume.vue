@@ -83,4 +83,4 @@
 
 <script setup></script>
 
-<style lang="scss" src="assets/resume.scss" scoped></style>
+<style lang="scss" src="assets/styles/resume.scss" scoped></style>

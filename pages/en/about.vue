@@ -27,4 +27,4 @@
 import SplitFlapText from "@/components/splitFlapText.vue";
 </script>
 
-<style lang="scss" src="assets/about.scss" scoped></style>
+<style lang="scss" src="assets/styles/about.scss" scoped></style>

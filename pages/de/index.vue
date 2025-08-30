@@ -34,7 +34,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
-import "assets/index.scss";
+import "assets/styles/index.scss";
 
 const router = useRouter();
 const currentLocale = ref("en");

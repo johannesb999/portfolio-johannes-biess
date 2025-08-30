@@ -33,4 +33,4 @@
 
 <script setup></script>
 
-<style lang="scss" src="assets/contact.scss" scoped></style>
+<style lang="scss" src="assets/styles/contact.scss" scoped></style>
