@@ -83,12 +83,14 @@ onMounted(() => {
 
 <style lang="scss">
 @use "@/assets/styles/type.scss" as type;
+
 :root {
   --color-picker: #171717b0;
 
   /* Schriftarten */
   --font-family-main: "Roboto Mono", monospace;
   --font-family-alt: "Inter Tight", sans-serif;
+  --font-family-legal: "Roboto", sans-serif;
 
   /* Farben */
   --color-primary: #171717;
@@ -244,7 +246,7 @@ button {
   background-color: transparent;
 }
 
- 
+
 
 /* Theme Switcher Button */
 .theme-switcher {
@@ -274,7 +276,7 @@ button {
     border-color 0.5s ease;
 }
 
-  /* fade transition moved to PageTransitions component */
+/* fade transition moved to PageTransitions component */
 
 #bottomLink {
   @include type.L-Heading-Style('-bold');

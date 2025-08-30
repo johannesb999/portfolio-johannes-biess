@@ -163,20 +163,21 @@
 
 <script setup></script>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "@/assets/styles/type.scss" as type;
+
 #projectLinkStart {
   position: absolute;
   top: 0;
   padding-top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2rem;
-  font-weight: 700;
+  @include type.L-Heading-Style('-bold');
   text-align: center;
 }
 
 #impressum {
-  font-family: "Roboto", sans-serif;
+  @include type.L-Body-Legal-Style('-thin');
   letter-spacing: 1px;
   display: flex;
   flex-direction: column;
@@ -186,8 +187,6 @@
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
-  font-size: 16px;
-  font-weight: 100;
   max-width: 560px;
   height: 80%;
   overflow-y: auto;
@@ -196,11 +195,9 @@
   color: var(--color-primary);
 
 }
-
 #dsgvo {
   color: var(--color-primary);
-
-  font-family: "Roboto", sans-serif;
+  @include type.L-Body-Legal-Style('-thin');
   letter-spacing: 1px;
   display: flex;
   flex-direction: column;
@@ -210,8 +207,6 @@
   top: 50%;
   left: 75%;
   transform: translate(-50%, -50%);
-  font-size: 16px;
-  font-weight: 100;
   max-width: 560px;
   height: 80%;
   overflow-y: auto;

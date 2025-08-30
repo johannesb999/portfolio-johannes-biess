@@ -95,11 +95,27 @@
   @include _type-base(font-size-md, font-family-alt, line-height-normal, letter-spacing-base, $variant);
 }
 
+// Legal body text using a dedicated family
+@mixin L-Body-Legal-Style($variant: null) {
+  @include _type-base(font-size-md, font-family-legal, line-height-normal, letter-spacing-base, $variant);
+}
+
 // Extra size-specific utilities to cover tokens used throughout the project
-@mixin L-XXL-Style($variant: null) { // maps to --font-size-xxl
+@mixin L-XXL-Style($variant: null) {
+  // maps to --font-size-xxl
   @include _type-base(font-size-xxl, font-family-main, line-height-normal, letter-spacing-base, $variant);
 }
 
-@mixin L-XXXXL-Style($variant: null) { // maps to --font-size-xxxxl
+@mixin L-XXXXL-Style($variant: null) {
+  // maps to --font-size-xxxxl
   @include _type-base(font-size-xxxxl, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+// Family-only utilities (do not alter size/spacing)
+@mixin L-Family-Main() {
+  font-family: theme.token(font-family-main);
+}
+
+@mixin L-Family-Alt() {
+  font-family: theme.token(font-family-alt);
 }

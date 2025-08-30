@@ -144,7 +144,7 @@ html {
 
 .paragraph {
   font-optical-sizing: auto;
-  font-family: var(--font-family-alt);
+  @include type.L-Family-Alt();
   display: flex;
   flex-direction: column;
 }
@@ -384,7 +384,7 @@ h3 {
 
   .paragraph {
     font-optical-sizing: auto;
-    font-family: var(--font-family-alt);
+    @include type.L-Family-Alt();
     padding-top: var(--spacing-md);
     display: flex;
     flex-direction: column;
@@ -623,7 +623,7 @@ h3 {
 
   .paragraph {
     font-optical-sizing: auto;
-    font-family: var(--font-family-alt);
+    @include type.L-Family-Alt();
     display: flex;
     flex-direction: column;
   }
@@ -867,7 +867,7 @@ h3 {
 
   .paragraph {
     font-optical-sizing: auto;
-    font-family: var(--font-family-alt);
+    @include type.L-Family-Alt();
     padding-top: var(--spacing-md);
     display: flex;
     flex-direction: column;

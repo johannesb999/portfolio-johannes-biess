@@ -1,3 +1,5 @@
+@use "@/assets/styles/type.scss" as type;
+
 @media (max-width: 310px) {
   :root {
     --border-color-black: #171717;
@@ -135,8 +137,7 @@
   }
 
   .returnHome {
-    font-weight: var(--font-weight-light);
-    font-size: var(--font-size-bigger);
+    @include type.L-Title-Style('-light');
     color: var(--color-primary);
     text-decoration: none;
     position: fixed;
@@ -158,8 +159,7 @@
   #en,
   #de,
   #line {
-    font-weight: var(--font-weight-thin);
-    font-size: var(--font-size-big);
+    @include type.L-Heading-Style('-thin');
   }
 
   #line {
@@ -188,8 +188,7 @@
     position: fixed;
     bottom: var(--top-spacing);
     right: var(--side-percentage);
-    font-size: var(--font-size-xxxxl);
-    font-weight: var(--font-weight-normal);
+    @include type.L-XXXXL-Style();
     background-color: transparent;
     cursor: pointer;
     z-index: var(--z-index-high);

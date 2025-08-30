@@ -1,3 +1,5 @@
+@use "@/assets/styles/type.scss" as type;
+
 @media (min-width: 768px) and (max-width: 1023px) {
   :root {
     --border-color-black: #171717;
@@ -136,8 +138,7 @@
   }
 
   .returnHome {
-    font-weight: var(--font-weight-light);
-    font-size: var(--font-size-bigger);
+    @include type.L-Title-Style('-light');
     color: var(--color-primary);
     text-decoration: none;
     position: fixed;
@@ -159,8 +160,7 @@
   #en,
   #de,
   #line {
-    font-weight: var(--font-weight-thin);
-    font-size: var(--font-size-big);
+    @include type.L-Heading-Style('-thin');
   }
 
   #line {
@@ -189,8 +189,7 @@
     position: fixed;
     bottom: var(--top-spacing);
     right: var(--side-percentage);
-    font-size: var(--font-size-xxxxl);
-    font-weight: var(--font-weight-normal);
+    @include type.L-XXXXL-Style();
     background-color: transparent;
     cursor: pointer;
     z-index: var(--z-index-high);
@@ -225,8 +224,7 @@
 
   #bottomLink {
     color: var(--color-primary);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-big);
+    @include type.L-Heading-Style('-bold');
     position: absolute;
     bottom: var(--side-percentage);
     left: 50vw;
@@ -241,8 +239,7 @@
     padding-top: var(--side-percentage);
     left: 50vw;
     transform: translateX(-50%);
-    font-size: var(--font-size-big);
-    font-weight: var(--font-weight-bold);
+    @include type.L-Heading-Style('-bold');
     text-align: center;
   }
 
@@ -251,8 +248,7 @@
     right: var(--side-percentage);
     transform: translateY(-50%);
     position: absolute;
-    font-size: var(--font-size-big);
-    font-weight: var(--font-weight-bold);
+    @include type.L-Heading-Style('-bold');
     writing-mode: vertical-rl;
     text-orientation: mixed;
   }
@@ -264,8 +260,7 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
     position: absolute;
-    font-size: var(--font-size-big);
-    font-weight: var(--font-weight-bold);
+    @include type.L-Heading-Style('-bold');
   }
 
   .custom-link {

@@ -25,8 +25,8 @@
 
 
 #quote {
+  @include type.L-Body-Style('-thin');
   font-size: 1.3rem;
-  font-weight: var(--font-weight-thin);
   margin-bottom: var(--spacing-xl);
   text-align: center;
   padding: var(--spacing-xl);
@@ -51,8 +51,8 @@
   }
 
   #quote {
+    @include type.L-Body-Style('-thin');
     font-size: 1.3rem;
-    font-weight: var(--font-weight-thin);
     padding-right: 8vw;
   }
 }
@@ -79,8 +79,8 @@
   }
 
   #quote {
+    @include type.L-Body-Style('-thin');
     font-size: 1.3rem;
-    font-weight: var(--font-weight-thin);
     margin-bottom: var(--spacing-xl);
     text-align: center;
     padding: var(--spacing-xl);
@@ -110,8 +110,8 @@
   }
 
   #quote {
+    @include type.L-Body-Style('-thin');
     font-size: 1.3rem;
-    font-weight: var(--font-weight-thin);
     margin-bottom: var(--spacing-xl);
     text-align: center;
     padding: var(--spacing-xl);

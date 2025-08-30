@@ -31,6 +31,7 @@ $tokens: (
   // families
   font-family-main: var(--font-family-main),
   font-family-alt: var(--font-family-alt),
+  font-family-legal: var(--font-family-legal),
 
   // letter-spacing / line-height
   letter-spacing-base: var(--letter-spacing-base),
@@ -46,4 +47,3 @@ $tokens: (
   // Default fallback to CSS custom property with same name
   @return var(--#{$name});
 }
-

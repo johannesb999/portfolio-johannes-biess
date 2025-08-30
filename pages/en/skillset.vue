@@ -193,7 +193,8 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "@/assets/styles/type.scss" as type;
 html {
   position: absolute;
   top: 0;
@@ -221,8 +222,7 @@ html {
 
 #aboutMe {
   color: black;
-  font-weight: 100;
-  font-size: 2rem;
+  @include type.L-Title-Style('-thin');
   text-align: center;
   margin-top: 50px;
   font-style: normal;
@@ -231,8 +231,7 @@ html {
 
 #resumeLink {
   color: #171717;
-  font-weight: 700;
-  font-size: 2rem;
+  @include type.L-Title-Style('-bold');
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -245,8 +244,7 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem;
-  font-weight: 700;
+  @include type.L-Title-Style('-bold');
   right: 0;
   padding-right: 20px;
 }
@@ -302,7 +300,7 @@ html {
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
+  @include type.L-Body-Style();
   z-index: 1000;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
