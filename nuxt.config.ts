@@ -3,6 +3,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ["@nuxt/image-edge"],
+  css: [
+    "~/assets/font.scss",
+  ],
 
   compatibilityDate: "2024-08-27",
 

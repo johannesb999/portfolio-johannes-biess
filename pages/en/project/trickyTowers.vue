@@ -330,4 +330,4 @@ import { useDeviceType } from "~/assets/composables/useDeviceType.js";
 
 const { isMobile, isTablet, isDesktop } = useDeviceType();
 </script>
-<style src="assets/project.css" scoped></style>
+<style lang="scss" src="assets/project.scss" scoped></style>

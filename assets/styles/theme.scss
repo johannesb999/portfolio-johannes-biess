@@ -1,0 +1,49 @@
+@use "sass:map";
+
+// Lightweight design token shim to mirror theme.token(...) usage
+// Maps to existing CSS custom properties defined in :root (app.vue)
+
+$tokens: (
+  // font sizes
+  font-size-base: var(--font-size-base),
+  font-size-sm: var(--font-size-sm),
+  font-size-md: var(--font-size-md),
+  font-size-lg: var(--font-size-lg),
+  font-size-xl: var(--font-size-xl),
+  font-size-xxl: var(--font-size-xxl),
+  font-size-xxxl: var(--font-size-xxxl),
+  font-size-xxxxl: var(--font-size-xxxxl),
+  font-size-big: var(--font-size-big),
+  font-size-bigger: var(--font-size-bigger),
+  font-size-huge: var(--font-size-huge),
+
+  // font weights
+  font-weight-thin: var(--font-weight-thin),
+  font-weight-extra-light: var(--font-weight-extra-light),
+  font-weight-light: var(--font-weight-light),
+  // alias regular to normal to match existing variables
+  font-weight-regular: var(--font-weight-normal),
+  font-weight-normal: var(--font-weight-normal),
+  // semibold is available in fonts; provide a numeric fallback
+  font-weight-semibold: 600,
+  font-weight-bold: var(--font-weight-bold),
+
+  // families
+  font-family-main: var(--font-family-main),
+  font-family-alt: var(--font-family-alt),
+  font-family-legal: var(--font-family-legal),
+
+  // letter-spacing / line-height
+  letter-spacing-base: var(--letter-spacing-base),
+  line-height-small: var(--line-height-small),
+  line-height-normal: var(--line-height-normal),
+  line-height-big: var(--line-height-big)
+);
+
+@function token($name) {
+  @if map.has-key($tokens, $name) {
+    @return map.get($tokens, $name);
+  }
+  // Default fallback to CSS custom property with same name
+  @return var(--#{$name});
+}

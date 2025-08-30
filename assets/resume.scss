@@ -1,11 +1,12 @@
+@use "@/assets/styles/type.scss" as type;
+
 main {
   font-family: var(--font-family-main);
 }
 
 #title {
   color: var(--color-black);
-  font-weight: var(--font-weight-extra-light);
-  font-size: var(--font-size-xl);
+  @include type.L-Button-Style('-extra-light');
   text-align: center;
   position: relative;
   bottom: 0;
@@ -30,8 +31,7 @@ main {
   padding-top: var(--spacing-lg);
   left: 50%;
   transform: translateX(-50%);
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-bold);
+  @include type.L-Heading-Style('-bold');
   text-align: center;
 }
 
@@ -50,13 +50,11 @@ main {
 }
 
 h2 {
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-extra-light);
+  @include type.L-Heading-Style('-extra-light');
 }
 
 h3 {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-thin);
+  @include type.L-Button-Style('-thin');
   letter-spacing: 0.4375rem;
 }
 
@@ -68,8 +66,7 @@ p {
 
 .location {
   margin-top: var(--spacing-xs);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-thin);
+  @include type.L-Button-Style('-thin');
 }
 
 .timeline:before {

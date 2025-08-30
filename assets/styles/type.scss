@@ -1,0 +1,121 @@
+@use "./theme" as theme;
+
+// Helper: map variant string to font-weight token
+@function _weight-for($variant) {
+  @if $variant =='-thin' {
+    @return theme.token(font-weight-thin);
+  }
+
+  @else if $variant =='-extra-light' or $variant =='-extralight' {
+    @return theme.token(font-weight-extra-light);
+  }
+
+  @else if $variant =='-light' {
+    @return theme.token(font-weight-light);
+  }
+
+  @else if $variant =='-semibold' or $variant =='-semi-bold' {
+    @return theme.token(font-weight-semibold);
+  }
+
+  @else if $variant =='-bold' {
+    @return theme.token(font-weight-bold);
+  }
+
+  @else {
+    @return theme.token(font-weight-regular);
+  }
+}
+
+// Internal base mixin used by the public type mixins
+@mixin _type-base($size-token, $family-token: font-family-main, $line-height-token: line-height-normal, $letter-spacing-token: letter-spacing-base, $variant: null) {
+  font-family: theme.token($family-token);
+  font-size: theme.token($size-token);
+  font-style: normal;
+  line-height: theme.token($line-height-token);
+  letter-spacing: theme.token($letter-spacing-token);
+  font-weight: _weight-for($variant);
+}
+
+// Display / Titles
+@mixin L-Display-Style($variant: null) {
+  // Largest hero text
+  @include _type-base(font-size-huge, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+@mixin L-Title-Style($variant: null) {
+  // Page titles
+  @include _type-base(font-size-bigger, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+@mixin L-Heading-Style($variant: null) {
+  // Section headings
+  @include _type-base(font-size-big, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+@mixin L-Subheading-Style($variant: null) {
+  // Subheadings
+  @include _type-base(font-size-xxxl, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+// Body / Paragraphs
+@mixin L-Body-Style($variant: null) {
+  // Default body
+  @include _type-base(font-size-md, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+@mixin L-Body-Large-Style($variant: null) {
+  @include _type-base(font-size-lg, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+@mixin L-Body-Small-Style($variant: null) {
+  @include _type-base(font-size-sm, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+// Label / Caption
+@mixin L-Label-Style($variant: null) {
+  @include _type-base(font-size-sm, font-family-main, line-height-small, letter-spacing-base, $variant);
+}
+
+@mixin L-Caption-Style($variant: null) {
+  @include _type-base(font-size-sm, font-family-main, line-height-small, letter-spacing-base, $variant);
+}
+
+// Buttons / Links
+@mixin L-Button-Style($variant: null) {
+  @include _type-base(font-size-xl, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+// Alternative family variants (using alt font family)
+@mixin L-Heading-Alt-Style($variant: null) {
+  @include _type-base(font-size-big, font-family-alt, line-height-normal, letter-spacing-base, $variant);
+}
+
+@mixin L-Body-Alt-Style($variant: null) {
+  @include _type-base(font-size-md, font-family-alt, line-height-normal, letter-spacing-base, $variant);
+}
+
+// Legal body text using a dedicated family
+@mixin L-Body-Legal-Style($variant: null) {
+  @include _type-base(font-size-md, font-family-legal, line-height-normal, letter-spacing-base, $variant);
+}
+
+// Extra size-specific utilities to cover tokens used throughout the project
+@mixin L-XXL-Style($variant: null) {
+  // maps to --font-size-xxl
+  @include _type-base(font-size-xxl, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+@mixin L-XXXXL-Style($variant: null) {
+  // maps to --font-size-xxxxl
+  @include _type-base(font-size-xxxxl, font-family-main, line-height-normal, letter-spacing-base, $variant);
+}
+
+// Family-only utilities (do not alter size/spacing)
+@mixin L-Family-Main() {
+  font-family: theme.token(font-family-main);
+}
+
+@mixin L-Family-Alt() {
+  font-family: theme.token(font-family-alt);
+}

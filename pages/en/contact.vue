@@ -24,4 +24,4 @@
 
 <script setup></script>
 
-<style src="assets/contact.css" scoped></style>
+<style lang="scss" src="assets/contact.scss" scoped></style>
