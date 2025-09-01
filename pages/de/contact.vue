@@ -1,5 +1,5 @@
 <template>
-  
+
   <main>
     <!-- <div id="contact">CONTACT ME</div> -->
     <div id="leftLink">
@@ -8,14 +8,12 @@
     <div id="resumeLink"></div>
 
     <div class="contactMeText">
-      <SplitFlapText
-        :texts="[
-          '        [KONTAKT]       ',
-          '            $GITHUB$    ',
-          '  @EMAIL@               ',
-          '         |LINKEDIN|     ',
-        ]"
-      />
+      <SplitFlapText :align="'center'" :preset="'heroFlap'" :texts="[
+        '[KONTAKT]',
+        '$GITHUB$',
+        '@EMAIL@',
+        '|LINKEDIN|',
+      ]" />
     </div>
 
     <!-- <div id="quote">
