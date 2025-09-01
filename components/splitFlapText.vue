@@ -301,7 +301,15 @@ function createSeparatorLetters(count) {
   }));
 }
 
-function fitSegmentsToColumns(segments, targetColumns, align = "center") {
+const mountSeed = ref(Math.floor(Math.random() * 2147483647));
+function seededRand(lineIdx, maxExclusive) {
+  let h = (mountSeed.value ^ (lineIdx * 1103515245 + 12345)) >>> 0;
+  // LCG step
+  h = (h * 1664525 + 1013904223) >>> 0;
+  return maxExclusive > 0 ? (h % maxExclusive) : 0;
+}
+
+function fitSegmentsToColumns(segments, targetColumns, align = "center", lineIdx = 0) {
   if (!targetColumns || targetColumns <= 0) return segments;
 
   // flatten letters preserving link grouping info
@@ -322,6 +330,22 @@ function fitSegmentsToColumns(segments, targetColumns, align = "center") {
     let start = 0;
     if (align === 'right') start = extra;
     else if (align === 'center') start = Math.floor(extra / 2);
+    else if (align === 'random') {
+      // choose a start that doesn't split words (avoid cutting inside non-separator runs)
+      const validStarts = [];
+      for (let s = 0; s <= extra; s++) {
+        const leftOk = s === 0 || letters[s - 1].isSeparator === true;
+        const end = s + targetColumns;
+        const rightOk = end === currentLen || letters[end].isSeparator === true;
+        if (leftOk && rightOk) validStarts.push(s);
+      }
+      if (validStarts.length > 0) {
+        start = validStarts[seededRand(lineIdx, validStarts.length)];
+      } else {
+        // fallback: center
+        start = Math.floor(extra / 2);
+      }
+    }
     // left align keeps start=0
     result = letters.slice(start, start + targetColumns);
     currentLen = targetColumns;
@@ -330,7 +354,10 @@ function fitSegmentsToColumns(segments, targetColumns, align = "center") {
     let left = 0, right = 0;
     if (align === 'left') right = diff;
     else if (align === 'right') left = diff;
-    else { left = Math.floor(diff / 2); right = diff - left; }
+    else if (align === 'random') {
+      left = seededRand(lineIdx, diff + 1);
+      right = diff - left;
+    } else { left = Math.floor(diff / 2); right = diff - left; }
     const leftSep = createSeparatorLetters(left);
     const rightSep = createSeparatorLetters(right);
     result = [...leftSep, ...letters, ...rightSep];
@@ -356,7 +383,7 @@ function fitSegmentsToColumns(segments, targetColumns, align = "center") {
 
 function rebuildPaddedArrays() {
   const source = textArrays.value && textArrays.value.length ? textArrays.value : rawArrays.value;
-  textArrays.value = source.map((segments) => fitSegmentsToColumns(segments, currentColumns.value, props.align));
+  textArrays.value = source.map((segments, i) => fitSegmentsToColumns(segments, currentColumns.value, props.align, i));
 }
 
 function reanimateAll() {
@@ -545,8 +572,8 @@ function padOrTrim(text, targetCols, align='center'){
 function rebuildFromTexts(newTexts){
   const normalized = newTexts.map(normalizeInput);
   const cols = resolveColumnsSimple(normalized);
-  const padded = normalized.map((t)=>padOrTrim(t, cols, props.align));
-  textArrays.value = padded.map(createTextArray);
+  const segs = normalized.map(createTextArray);
+  textArrays.value = segs.map((segments, i) => fitSegmentsToColumns(segments, cols, props.align, i));
 }
 
 onMounted(() => {

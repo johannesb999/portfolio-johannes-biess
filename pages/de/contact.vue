@@ -8,7 +8,7 @@
     <div id="resumeLink"></div>
 
     <div class="contactMeText">
-      <SplitFlapText :align="'center'" :preset="'heroFlap'" :texts="[
+      <SplitFlapText preset="heroFlap" :align="'random'" :texts="[
         '[KONTAKT]',
         '$GITHUB$',
         '@EMAIL@',

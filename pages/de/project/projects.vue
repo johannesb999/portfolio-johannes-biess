@@ -15,6 +15,8 @@
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
         '[PLANTMONIT]',
+      ]" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
         'PLANTS SMART TOOL',
         'SVELTE FIGMA',
         'ESP32   WIREFRAMES',
