@@ -6,26 +6,20 @@
       </client-only>
     </div>
     <div id="projectLinkNext">
-      <nuxt-link to="/en/project/TrickyTowers" class="custom-link"
-        >TRICKYTOWERS</nuxt-link
-      >
+      <nuxt-link to="/en/project/TrickyTowers" class="custom-link">TRICKYTOWERS</nuxt-link>
     </div>
     <div id="projectLinkBefore">
-      <nuxt-link to="/en/project/portfolio" class="custom-link"
-        >THIS WEBSITE</nuxt-link
-      >
+      <nuxt-link to="/en/project/portfolio" class="custom-link">THIS WEBSITE</nuxt-link>
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '      [DRAWINGLIGHT]      ',
-          '      MECHATRONICS      ',
-          'TEAMWORK   PHOTOGRAPHY  ',
-          '    ARDUINO   FUSION360 ',
-          '      LIGHTDRAWING      ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['      [DRAWINGLIGHT]      ']" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '      MECHATRONICS      ',
+        'TEAMWORK   PHOTOGRAPHY  ',
+        '    ARDUINO   FUSION360 ',
+        '      LIGHTDRAWING      ',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -39,7 +33,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['            [IDEA]             ']" />
+            <SplitFlapText :texts="['            [IDEA]             ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               DrawingLight was born out of a desire to reinterpret traditional
               art through the creative use of modern technology. Instead of
@@ -75,7 +69,7 @@
             <img src="public\img\dl\process.svg" alt="scribble tablet" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['           [PROCESS]           ']" />
+            <SplitFlapText :texts="['           [PROCESS]           ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               The process began by interpreting the generic task of developing a
               mechanical drawing device to create lines and shapes in a way that
@@ -106,7 +100,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [IMPLEMENTATION]       ']" />
+            <SplitFlapText :texts="['        [IMPLEMENTATION]       ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               The implementation presented challenges in the finer details.<br />
               Due to the dispersion of the light source, a relatively large
@@ -156,35 +150,28 @@
         </div>
 
         <div class="project-section">
-          <SplitFlapText
-            :texts="[
-              '                        [PROJECT] [VIDEO]                       ',
-            ]"
-          />
+          <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+            '                        [PROJECT] [VIDEO]                       ',
+          ]" />
         </div>
         <div class="project-section">
           <div class="project-video">
-            <iframe
-              src="https://www.youtube.com/embed/k3CHPyc4J4M?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-              title="YouTube video player"
-              frameborder="1"
+            <iframe src="https://www.youtube.com/embed/k3CHPyc4J4M?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+              title="YouTube video player" frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '        ONE WEEK          ',
-            '    SECOND SEMESTER     ',
-            '      GRADE: 1.0        ',
-            '       TEAMWORK         ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
+          '        [KEYDATA]         ',
+          '        ONE WEEK          ',
+          '    SECOND SEMESTER     ',
+          '      GRADE: 1.0        ',
+          '       TEAMWORK         ',
+        ]" />
       </div>
     </div>
 
@@ -192,9 +179,8 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                   [IDEA]                    ']"
-            />
+            <SplitFlapText preset="sectionFlapTablet" :align="'center'"
+              :texts="['                   [IDEA]                    ']" />
             <div class="paragraph">
               DrawingLight was born out of a desire to reinterpret traditional
               art through the creative use of modern technology. Instead of
@@ -218,11 +204,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\dl\idea.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\dl\idea.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -230,9 +212,8 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                  [PROCESS]                  ']"
-            />
+            <SplitFlapText preset="sectionFlapTablet" :align="'center'"
+              :texts="['                  [PROCESS]                  ']" />
             <div class="paragraph">
               The process began by interpreting the generic task of developing a
               mechanical drawing device to create lines and shapes in a way that
@@ -261,11 +242,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\dl\process.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\dl\process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -273,9 +250,8 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['              [IMPLEMENTATION]               ']"
-            />
+            <SplitFlapText preset="sectionFlapTablet" :align="'center'"
+              :texts="['              [IMPLEMENTATION]               ']" />
             <div class="paragraph">
               The implementation presented challenges in the finer details. Due
               to the dispersion of the light source, a relatively large machine
@@ -310,32 +286,26 @@
       </div>
 
       <div class="project-section">
-        <SplitFlapText
-          :texts="['              [PROJECT] [VIDEO]               ']"
-        />
+        <SplitFlapText preset="bannerFlapTablet" :align="'center'"
+          :texts="['              [PROJECT] [VIDEO]               ']" />
       </div>
       <div class="project-section">
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/k3CHPyc4J4M?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/k3CHPyc4J4M?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '        ONE WEEK          ',
-            '    SECOND SEMESTER     ',
-            '      GRADE: 1.0        ',
-            '       TEAMWORK         ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
+          '        [KEYDATA]         ',
+          '        ONE WEEK          ',
+          '    SECOND SEMESTER     ',
+          '      GRADE: 1.0        ',
+          '       TEAMWORK         ',
+        ]" />
       </div>
       <div class="project-section-reverse">
         <div class="project-content">
@@ -359,7 +329,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [IDEA]          ']" />
+            <SplitFlapText :texts="['          [IDEA]          ']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               DrawingLight was born out of a desire to reinterpret traditional
               art through the creative use of modern technology. <br />Instead
@@ -392,7 +362,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROCESS]        ']" />
+            <SplitFlapText :texts="['         [PROCESS]        ']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               The process began by interpreting the generic task of developing a
               mechanical drawing device to create lines and shapes in a way that
@@ -427,7 +397,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" />
+            <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               The implementation presented challenges in the finer details. Due
               to the dispersion of the light source, a relatively large machine
@@ -461,29 +431,24 @@
       </div>
 
       <div class="project-section">
-        <SplitFlapText :texts="['       [PROJECT] [VIDEO]        ']" />
+        <SplitFlapText :texts="['       [PROJECT] [VIDEO]        ']" preset="bannerFlapMobile" :align="'center'" />
       </div>
       <div class="project-section">
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/k3CHPyc4J4M?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/k3CHPyc4J4M?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '         [KEYDATA]         ',
-            '        ONE WEEK        ',
-            '     SECOND SEMESTER    ',
-            '       GRADE: 1.0       ',
-            '        TEAMWORK        ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
+          '         [KEYDATA]         ',
+          '        ONE WEEK        ',
+          '     SECOND SEMESTER    ',
+          '       GRADE: 1.0       ',
+          '        TEAMWORK        ',
+        ]" />
       </div>
       <div class="project-section-reverse">
         <div class="project-content">

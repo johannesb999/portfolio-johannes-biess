@@ -7,26 +7,20 @@
     </div>
 
     <div id="projectLinkNext">
-      <nuxt-link to="/en/project/simpleChat" class="custom-link"
-        >SIMPLECHAT</nuxt-link
-      >
+      <nuxt-link to="/en/project/simpleChat" class="custom-link">SIMPLECHAT</nuxt-link>
     </div>
     <div id="projectLinkBefore">
-      <nuxt-link to="/en/project/projects" class="custom-link"
-        >PLANTMONIT</nuxt-link
-      >
+      <nuxt-link to="/en/project/projects" class="custom-link">PLANTMONIT</nuxt-link>
     </div>
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '         [JUMPSTAR]         ',
-          '  WEB DEPLOYMENT PIPELINE ',
-          'THREEJS     SERVERHOSTING ',
-          '      DOCKER   SVELTE     ',
-          ' CLOUDFLARE      PORTAINER',
-          'MONGOOSE    GITHUB ACTIONS',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['         [JUMPSTAR]         ']" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '  WEB DEPLOYMENT PIPELINE ',
+        'THREEJS     SERVERHOSTING ',
+        '      DOCKER   SVELTE     ',
+        ' CLOUDFLARE      PORTAINER',
+        'MONGOOSE    GITHUB ACTIONS',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -40,7 +34,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['            [IDEA]             ']" />
+            <SplitFlapText :texts="['[IDEA]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               The course asked to do something with stars. A link to a CSV file
               containing around 340,000 stars and their data was provided. The
@@ -60,11 +54,7 @@
             </div>
           </div>
           <div class="image mela">
-            <img
-              src="public\img\js\js.png"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\js\js.png" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -75,7 +65,7 @@
             <img src="public\img\js\Process.svg" alt="concept work in figma" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['           [PROCESS]           ']" />
+            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               The project began with a discussion on how to portray the
               stars.<br />
@@ -100,7 +90,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText :texts="['      [IMPLEMENTATION]       ']" />
+              <SplitFlapText :texts="['[IMPLEMENTATION]']" preset="sectionFlap" :align="'center'" />
               <div class="paragraph">
                 The result is an interactive website that allows exploration of
                 space in an engaging way. Stars and constellations can be viewed
@@ -121,48 +111,33 @@
               </div>
             </div>
             <div class="image large">
-              <img
-                src="public\img\js\Implementaion.svg"
-                alt="a moitor displaying jumpstar"
-              />
+              <img src="public\img\js\Implementaion.svg" alt="a moitor displaying jumpstar" />
             </div>
           </div>
         </div>
 
-        <a
-          href="https://starsapp.johannes-biess.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="tryOutLink custom-link"
-          >TRY IT OUT LIVE</a
-        >
+        <a href="https://starsapp.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
+          class="tryOutLink custom-link">TRY IT OUT LIVE</a>
 
         <div class="project-section" style="padding-top: 2rem">
-          <SplitFlapText
-            :texts="[
-              '                       [PROJECT] [VIDEO]                       ',
-            ]"
-          />
+          <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+            '                       [PROJECT] [VIDEO]                       ',
+          ]" />
           <div class="project-video">
-            <iframe
-              src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-              title="YouTube video player"
-              frameborder="1"
+            <iframe src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+              title="YouTube video player" frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen></iframe>
           </div>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]        ',
-              '       TWO MONTHS      ',
-              '     THIRD SEMESTER    ',
-              '      GRADE: 1.0       ',
-              '       TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
+            '[KEYDATA]',
+            'TWO MONTHS',
+            'THIRD SEMESTER',
+            'GRADE: 1.0',
+            'TEAMWORK',
+          ]" />
         </div>
       </div>
     </div>
@@ -171,9 +146,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                   [IDEA]                    ']"
-            />
+            <SplitFlapText :texts="['[IDEA]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               The course asked to do something with stars.<br />
               A link to a CSV file containing around 340,000 stars and their
@@ -193,11 +166,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\js\js.png"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\js\js.png" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -205,9 +174,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                  [PROCESS]                  ']"
-            />
+            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               The project began with a discussion on how to portray the stars.
               <br />A decision was quickly made to add a fun element by
@@ -228,20 +195,14 @@
             </div>
           </div>
           <div class="image mela">
-            <img
-              src="public\img\js\Process.svg"
-              alt="concept work in figma"
-              style="object-fit: contain"
-            />
+            <img src="public\img\js\Process.svg" alt="concept work in figma" style="object-fit: contain" />
           </div>
         </div>
 
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText
-                :texts="['              [IMPLEMENTATION]               ']"
-              />
+              <SplitFlapText :texts="['[IMPLEMENTATION]']" preset="sectionFlapTablet" :align="'center'" />
               <div class="paragraph">
                 The result is an interactive website that allows exploration of
                 space in an engaging way. <br />Stars and constellations can be
@@ -261,47 +222,34 @@
               </div>
             </div>
             <div class="image medium">
-              <img
-                style="object-fit: contain"
-                src="public\img\js\Implementaion.svg "
-                alt="a moitor displaying jumpstar"
-              />
+              <img style="object-fit: contain" src="public\img\js\Implementaion.svg "
+                alt="a moitor displaying jumpstar" />
             </div>
           </div>
         </div>
 
-        <a
-          href="https://starsapp.johannes-biess.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="tryOutLink custom-link"
-          >TRY IT OUT LIVE</a
-        >
+        <a href="https://starsapp.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
+          class="tryOutLink custom-link">TRY IT OUT LIVE</a>
 
         <div class="project-section" style="padding-top: 2rem">
-          <SplitFlapText
-            :texts="['               [PROJECT] [VIDEO]               ']"
-          />
+          <SplitFlapText preset="bannerFlapTablet" :align="'center'" :texts="[
+            '                          [PROJECT] [VIDEO]                        ',
+          ]" />
           <div class="project-video">
-            <iframe
-              src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-              title="YouTube video player"
-              frameborder="1"
+            <iframe src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+              title="YouTube video player" frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen></iframe>
           </div>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]        ',
-              '       TWO MONTHS      ',
-              '     THIRD SEMESTER    ',
-              '      GRADE: 1.0       ',
-              '       TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
+            '[KEYDATA]',
+            'TWO MONTHS',
+            'THIRD SEMESTER',
+            'GRADE: 1.0',
+            'TEAMWORK',
+          ]" />
         </div>
       </div>
     </div>
@@ -310,7 +258,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [IDEA]          ']" />
+            <SplitFlapText :texts="['[IDEA]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               The course asked to do something with stars. <br />A link to a CSV
               file containing around 340,000 stars and their data was provided.
@@ -329,11 +277,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img
-              src="public\img\js\js.png"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\js\js.png" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -341,7 +285,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROCESS]         ']" />
+            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               The project began with a discussion on how to portray the stars. A
               decision was quickly made to add a fun element by simulating a
@@ -368,7 +312,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" />
+              <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" preset="sectionFlapMobile" :align="'center'" />
               <div class="paragraph">
                 The result is an interactive website that allows exploration of
                 space in an engaging way. Stars and constellations can be viewed
@@ -389,44 +333,31 @@
               </div>
             </div>
             <div class="image medium">
-              <img
-                src="public\img\js\Implementaion.svg"
-                alt="a moitor displaying jumpstar"
-              />
+              <img src="public\img\js\Implementaion.svg" alt="a moitor displaying jumpstar" />
             </div>
           </div>
         </div>
 
-        <a
-          href="https://starsapp.johannes-biess.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="tryOutLink custom-link"
-          >TRY IT OUT LIVE</a
-        >
+        <a href="https://starsapp.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
+          class="tryOutLink custom-link">TRY IT OUT LIVE</a>
 
         <div class="project-section" style="padding-top: 2rem">
-          <SplitFlapText :texts="['       [PROJECT] [VIDEO]       ']" />
+          <SplitFlapText :texts="['       [PROJECT] [VIDEO]       ']" preset="bannerFlapMobile" :align="'center'" />
           <div class="project-video">
-            <iframe
-              src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-              title="YouTube video player"
-              frameborder="1"
+            <iframe src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+              title="YouTube video player" frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen></iframe>
           </div>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]         ',
-              '       TWO MONTHS       ',
-              '     THIRD SEMESTER     ',
-              '      GRADE: 1.0        ',
-              '        TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
+            '        [KEYDATA]         ',
+            '       TWO MONTHS       ',
+            '     THIRD SEMESTER     ',
+            '      GRADE: 1.0        ',
+            '        TEAMWORK        ',
+          ]" />
         </div>
       </div>
     </div>

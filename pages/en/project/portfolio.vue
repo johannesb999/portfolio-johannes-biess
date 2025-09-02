@@ -7,27 +7,21 @@
     </div>
 
     <div id="projectLinkNext">
-      <nuxt-link to="/en/project/drawingLight" class="custom-link"
-        >DRAWINGLIGHT</nuxt-link
-      >
+      <nuxt-link to="/en/project/drawingLight" class="custom-link">DRAWINGLIGHT</nuxt-link>
     </div>
     <div id="projectLinkBefore">
-      <nuxt-link to="/en/project/simpleChat" class="custom-link"
-        >SIMPLECHAT</nuxt-link
-      >
+      <nuxt-link to="/en/project/simpleChat" class="custom-link">SIMPLECHAT</nuxt-link>
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '        [PORTFOLIO]        ',
-          '      THIS WEBSITE       ',
-          '   NUXT3    WIREFRAMES   ',
-          '    GITHUB  USER TESTING ',
-          ' FIGMA        UI  UX     ',
-          'DOCKER       DEPLOYMENT  ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['        [PORTFOLIO]        ']" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '      THIS WEBSITE       ',
+        '   NUXT3    WIREFRAMES   ',
+        '    GITHUB  USER TESTING ',
+        ' FIGMA        UI  UX     ',
+        'DOCKER       DEPLOYMENT  ',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -42,7 +36,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [PROBLEM]            ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               How can I present myself in a way that is both professional and
               engaging? How do I showcase my skills and experience in a way
@@ -56,11 +50,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\po\problem.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\po\problem.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -71,7 +61,7 @@
             <img src="public\img\po\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['           [PROCESS]           ']" />
+            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               I started with a concept phase, where I thought through different
               layout options and design approaches for my portfolio website.
@@ -91,11 +81,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image medium">
-            <img
-              src="public\img\po\softwarepro.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\po\softwarepro.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
           <div class="text">
             <div class="paragraph">
@@ -119,7 +105,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [IMPLEMENTATION]       ']" />
+            <SplitFlapText :texts="['[IMPLEMENTATION]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               I am currently happy with my portfolio. Of course there are still
               little things here and there that can be improved with more time
@@ -127,23 +113,17 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\po\implementation.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\po\implementation.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '         [KEYDATA]          ',
-            '        ONE MONTH         ',
-            '     SEMESTER BREAK       ',
-            '    GRADE: YOU DECIDE     ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'ONE MONTH',
+          'SEMESTER BREAK',
+          'GRADE: YOU DECIDE',
+        ]" />
       </div>
     </div>
 
@@ -151,9 +131,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                  [PROBLEM]                  ']"
-            />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               How can I present myself in a way that is both professional and
               engaging? <br />How do I showcase my skills and experience in a
@@ -167,11 +145,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\po\problem.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\po\problem.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -179,9 +153,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                  [PROCESS]                  ']"
-            />
+            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               I started with a concept phase, where I thought through different
               layout options and design approaches for my portfolio website.
@@ -220,11 +192,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\po\softwarepro.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\po\softwarepro.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -232,9 +200,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['               [IMPLEMENTATION]             ']"
-            />
+            <SplitFlapText :texts="['[IMPLEMENTATION]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               I am currently happy with my portfolio. Of course there are still
               little things here and there that can be improved with more time
@@ -247,14 +213,12 @@
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '          [KEYDATA]          ',
-            '         ONE MONTH         ',
-            '      SEMESTER BREAK       ',
-            '     GRADE: YOU DECIDE     ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'ONE MONTH',
+          'SEMESTER BREAK',
+          'GRADE: YOU DECIDE',
+        ]" />
       </div>
     </div>
 
@@ -262,7 +226,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]        ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               How can I present myself in a way that is both professional and
               engaging? <br />How do I showcase my skills and experience in a
@@ -277,11 +241,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img
-              src="public\img\po\problem.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\po\problem.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -289,7 +249,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROCESS]        ']" />
+            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               I started with a concept phase, where I thought through different
               layout options and design approaches for my portfolio website.
@@ -328,11 +288,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img
-              src="public\img\po\softwarepro.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\po\softwarepro.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -340,7 +296,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['      [IMPLEMENTATION]    ']" />
+            <SplitFlapText :texts="['[IMPLEMENTATION]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               I am currently happy with my portfolio. Of course there are still
               little things here and there that can be improved with more time
@@ -353,14 +309,12 @@
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '          [KEYDATA]        ',
-            '        ONE MONTH        ',
-            '      SEMESTER BREAK     ',
-            '     GRADE: YOU DECIDE    ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'ONE MONTH',
+          'SEMESTER BREAK',
+          'GRADE: YOU DECIDE',
+        ]" />
       </div>
     </div>
   </main>

@@ -6,25 +6,19 @@
       </client-only>
     </div>
     <div id="projectLinkNext">
-      <nuxt-link to="/en/project/projects" class="custom-link"
-        >PLANTMONIT</nuxt-link
-      >
+      <nuxt-link to="/en/project/projects" class="custom-link">PLANTMONIT</nuxt-link>
     </div>
     <div id="projectLinkBefore">
-      <nuxt-link to="/en/project/trickyTowers" class="custom-link"
-        >TRICKYTOWERS</nuxt-link
-      >
+      <nuxt-link to="/en/project/trickyTowers" class="custom-link">TRICKYTOWERS</nuxt-link>
     </div>
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '          [GOEASE]          ',
-          '       SMART SYSTEM       ',
-          '  REACT NATIVE      GPS   ',
-          '     ESP32   ANDROIDSDK   ',
-          ' BLE     OPENMAPBOX       ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['          [GOEASE]          ']" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '       SMART SYSTEM       ',
+        '  REACT NATIVE      GPS   ',
+        '     ESP32   ANDROIDSDK   ',
+        ' BLE     OPENMAPBOX       ',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -39,7 +33,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [PROBLEM]          ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Local public transportation in Germany is facing some significant
               challenges. There are many different bus companies and
@@ -66,14 +60,11 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img
-              src="public\img\ge\process.svg"
-              style="object-position: center; object-fit: cover; height: 80vh"
-              alt="concept change over project time "
-            />
+            <img src="public\img\ge\process.svg" style="object-position: center; object-fit: cover; height: 80vh"
+              alt="concept change over project time " />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['          [PROCESS]          ']" />
+            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               The project began with an intensive brainstorming session, where
               various ideas were discussed, and some initial concepts were
@@ -110,11 +101,8 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img
-              style="object-fit: contain; height: 70vh"
-              src="public\img\ge\softwareProcess.svg"
-              alt="figma mobile screens in different fidelitys"
-            />
+            <img style="object-fit: contain; height: 70vh" src="public\img\ge\softwareProcess.svg"
+              alt="figma mobile screens in different fidelitys" />
           </div>
           <div class="text">
             <div class="paragraph">
@@ -152,11 +140,8 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image medium">
-            <img
-              style="object-fit: contain"
-              src="public\img\ge\hardwareProcess.svg"
-              alt="GoEase hardware with bus modell"
-            />
+            <img style="object-fit: contain" src="public\img\ge\hardwareProcess.svg"
+              alt="GoEase hardware with bus modell" />
           </div>
           <div class="text">
             <div class="paragraph">
@@ -180,7 +165,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [SOLUTION]          ']" />
+            <SplitFlapText :texts="['[SOLUTION]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               GoEase is an innovative system designed to transform bus
               travel.<br />
@@ -199,39 +184,28 @@
             </div>
           </div>
           <div class="image mela">
-            <img
-              src="public\img\ge\solution.svg"
-              alt="final app mockup"
-              style="object-fit: contain"
-            />
+            <img src="public\img\ge\solution.svg" alt="final app mockup" style="object-fit: contain" />
           </div>
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText
-          :texts="[
-            '                         [PROJECT] [VIDEO]                        ',
-          ]"
-        />
+        <SplitFlapText :texts="[
+          '                         [PROJECT] [VIDEO]                        ',
+        ]" />
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]         ',
-              '        TWO MONTHS      ',
-              '     THIRD SEMESTER     ',
-              '       GRADE: 1.3       ',
-              '        TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText :texts="[
+            '        [KEYDATA]         ',
+            '        TWO MONTHS      ',
+            '     THIRD SEMESTER     ',
+            '       GRADE: 1.3       ',
+            '        TEAMWORK        ',
+          ]" />
         </div>
       </div>
     </div>
@@ -240,9 +214,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                  [PROBLEM]                  ']"
-            />
+            <SplitFlapText :texts="['                  [PROBLEM]                  ']" />
             <div class="paragraph">
               Local public transportation in Germany is facing some significant
               challenges. <br />There are many different bus companies and
@@ -269,9 +241,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                  [PROCESS]                  ']"
-            />
+            <SplitFlapText :texts="['                  [PROCESS]                  ']" />
             <div class="paragraph">
               The project began with an intensive brainstorming session, where
               various ideas were discussed, and some initial concepts were
@@ -340,11 +310,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\ge\softwareProcess.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\ge\softwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -368,11 +334,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img
-              src="public\img\ge\hardwareProcess.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\ge\hardwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -380,9 +342,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                 [SOLUTION]                  ']"
-            />
+            <SplitFlapText :texts="['                 [SOLUTION]                  ']" />
             <div class="paragraph">
               GoEase is an innovative system designed to transform bus travel.
               It combines an easy-to-install beacon system with a user-friendly
@@ -400,37 +360,26 @@
             </div>
           </div>
           <div class="image mela">
-            <img
-              src="public\img\ge\solution.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\ge\solution.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText
-          :texts="['               [PROJECT] [VIDEO]                ']"
-        />
+        <SplitFlapText :texts="['               [PROJECT] [VIDEO]                ']" />
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]         ',
-              '        TWO MONTHS      ',
-              '     THIRD SEMESTER     ',
-              '       GRADE: 1.3       ',
-              '        TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText :texts="[
+            '        [KEYDATA]         ',
+            '        TWO MONTHS      ',
+            '     THIRD SEMESTER     ',
+            '       GRADE: 1.3       ',
+            '        TEAMWORK        ',
+          ]" />
         </div>
       </div>
     </div>
@@ -554,11 +503,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img
-              src="public\img\ge\hardwareProcess.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\ge\hardwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -587,24 +532,19 @@
       <div class="project-section">
         <SplitFlapText :texts="['       [PROJECT] [VIDEO]        ']" />
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]         ',
-              '        TWO MONTHS      ',
-              '     THIRD SEMESTER     ',
-              '      GRADE: 1.3        ',
-              '        TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText :texts="[
+            '        [KEYDATA]         ',
+            '        TWO MONTHS      ',
+            '     THIRD SEMESTER     ',
+            '      GRADE: 1.3        ',
+            '        TEAMWORK        ',
+          ]" />
         </div>
       </div>
     </div>

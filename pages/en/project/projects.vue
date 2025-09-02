@@ -38,7 +38,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['[PROBLEM]']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               In the rush of everyday life, there's often not much time left for
               caring for indoor and garden plants. Many people, especially those
@@ -194,7 +194,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['[PROBLEM]']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               In the rush of everyday life, there's often not much time left for
               caring for indoor and garden plants. Many people, especially those
@@ -217,7 +217,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['[PROCESS]']" />
+            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               At the start of the project, research was conducted to explore
               existing solutions on the market. The aim was to assess which
@@ -297,7 +297,8 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['                  [SOLUTION]                 ']" />
+            <SplitFlapText :texts="['                  [SOLUTION]                 ']" preset="sectionFlapTablet"
+              :align="'center'" />
             <div class="paragraph">
               Through a structured, methodical approach, a product was developed
               that effectively addresses the needs of the target audience and
@@ -326,7 +327,8 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="['               [PROJECT] [VIDEO]               ']" />
+        <SplitFlapText :texts="['               [PROJECT] [VIDEO]               ']" preset="bannerFlapTablet"
+          :align="'center'" />
         <div class="project-video">
           <iframe src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
             title="YouTube video player" frameborder="1"
@@ -335,7 +337,7 @@
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText :texts="[
+        <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
           '        [KEYDATA]         ',
           '      THREE MONTHS      ',
           '    SECOND SEMESTER     ',
@@ -349,7 +351,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]         ']" />
+            <SplitFlapText :texts="['         [PROBLEM]         ']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               In the rush of everyday life, there's often not much time left for
               caring for indoor and garden plants. <br />Many people, especially
@@ -373,7 +375,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [PROCESS]         ']" />
+            <SplitFlapText :texts="['         [PROCESS]         ']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               At the start of the project, research was conducted to explore
               existing solutions on the market. <br />The aim was to assess
@@ -455,7 +457,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [SOLUTION]        ']" />
+            <SplitFlapText :texts="['         [SOLUTION]        ']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Through a structured, methodical approach, a product was developed
               that effectively addresses the needs <br />of the target audience
@@ -484,7 +486,7 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="['      [PROJECT] [VIDEO]       ']" />
+        <SplitFlapText :texts="['      [PROJECT] [VIDEO]       ']" preset="bannerFlapMobile" :align="'center'" />
         <div class="project-video">
           <iframe src="https://www.youtube.com/embed/bKC-N5-m5u0?rel=0&modestbranding=1&showinfo=0"
             title="YouTube video player" frameborder="1"
@@ -493,7 +495,7 @@
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText :texts="[
+        <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
           '        [KEYDATA]        ',
           '      THREE MONTHS     ',
           '    SECOND SEMESTER    ',
