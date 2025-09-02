@@ -7,24 +7,22 @@
     </div>
 
     <div id="projectLinkNext">
-      <nuxt-link to="/de/project/jumpStar" class="custom-link"
-        >JUMPSTAR</nuxt-link
-      >
+      <nuxt-link to="/de/project/jumpStar" class="custom-link">JUMPSTAR</nuxt-link>
     </div>
     <div id="projectLinkBefore">
       <nuxt-link to="/de/project/goEase" class="custom-link">GOEASE</nuxt-link>
     </div>
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '        [PLANTMONIT]       ',
-          '   PLANTS SMART TOOL     ',
-          '       SVELTE FIGMA      ',
-          '   ESP32   WIREFRAMES    ',
-          '   FUSION360  UI  UX     ',
-          'OPENAI   MQTT    MONGODB ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        '[PLANTMONIT]',
+      ]" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        'PLANTS SMART TOOL',
+        'SVELTE FIGMA',
+        'ESP32   WIREFRAMES',
+        'FUSION360  UI  UX',
+        'OPENAI   MQTT    MONGODB ',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -39,7 +37,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [PROBLEM]            ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Im hektischen Alltag bleibt oft wenig Zeit für die Pflege von
               Zimmer- und Gartenpflanzen. Viele Menschen, insbesondere
@@ -64,14 +62,10 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image mela">
-            <img
-              src="public\img\pm\process.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\pm\process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['           [PROZESS]           ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde eine Wettbewerbsanalyse
               durchgeführt,<br />
@@ -160,7 +154,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [ERGEBNIS]          ']" />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Das Ergebnis des Projekts ist PlantMonit – ein intelligentes Smart
               Tool, das die Pflanzenpflege vereinfacht und optimiert. <br />Ziel
@@ -198,31 +192,24 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText
-          :texts="[
-            '                         [PROJEKT] [VIDEO]                          ',
-          ]"
-        />
+        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+          '                         [PROJEKT] [VIDEO]                          ',
+        ]" />
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '      THREE MONTHS      ',
-            '    SECOND SEMESTER     ',
-            '      GRADE: 1.0        ',
-            '       TEAMWORK         ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
+          '        [KEYDATA]         ',
+          '      THREE MONTHS      ',
+          '    SECOND SEMESTER     ',
+          '      GRADE: 1.0        ',
+          '       TEAMWORK         ',
+        ]" />
       </div>
     </div>
 
@@ -230,9 +217,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                 [PROBLEM]                  ']"
-            />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Im hektischen Alltag bleibt oft wenig Zeit für die Pflege von
               Zimmer- und Gartenpflanzen. Viele Menschen, insbesondere
@@ -257,9 +242,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                  [PROZESS]                  ']"
-            />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde eine Wettbewerbsanalyse durchgeführt,
               um bestehende Lösungen auf dem Markt zu evaluieren. Ziel war es,
@@ -283,11 +266,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img
-              src="public\img\pm\process.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\pm\process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -314,11 +293,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\pm\software.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\pm\software.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -358,9 +333,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                 [ERGEBNIS]                 ']"
-            />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Das Ergebnis des Projekts ist PlantMonit – ein intelligentes Smart
               Tool, das die Pflanzenpflege vereinfacht und optimiert. Ziel war
@@ -396,29 +369,22 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText
-          :texts="['               [PROJEKT] [VIDEO]               ']"
-        />
+        <SplitFlapText preset="bannerFlapTablet" :align="'center'" :texts="['[PROJEKT] [VIDEO]']" />
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '      THREE MONTHS      ',
-            '    SECOND SEMESTER     ',
-            '      GRADE: 1.0        ',
-            '       TEAMWORK         ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'THREE MONTHS',
+          'SECOND SEMESTER',
+          'GRADE: 1.0',
+          'TEAMWORK',
+        ]" />
       </div>
     </div>
 
@@ -426,7 +392,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROBLEM]         ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Im hektischen Alltag bleibt oft wenig Zeit für die Pflege von
               Zimmer- und Gartenpflanzen. Viele Menschen, insbesondere
@@ -451,7 +417,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROZESS]         ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde eine Wettbewerbsanalyse durchgeführt,
               um bestehende Lösungen auf dem Markt zu evaluieren. Ziel war es,
@@ -475,11 +441,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img
-              src="public\img\pm\process.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\pm\process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -547,7 +509,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [ERGEBNIS]        ']" />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Das Ergebnis des Projekts ist PlantMonit – ein intelligentes Smart
               Tool, das die Pflanzenpflege vereinfacht und optimiert. Ziel war
@@ -583,27 +545,22 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="['       [PROJEKT] [VIDEO]        ']" />
+        <SplitFlapText :texts="['[PROJEKT] [VIDEO]']" preset="bannerFlapMobile" :align="'center'" />
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '      THREE MONTHS      ',
-            '    SECOND SEMESTER     ',
-            '      GRADE: 1.0        ',
-            '       TEAMWORK         ',
-          ]"
-        />
+        <SplitFlapText :texts="[
+          '[KEYDATA]',
+          'THREE MONTHS',
+          'SECOND SEMESTER',
+          'GRADE: 1.0',
+          'TEAMWORK',
+        ]" preset="keydataFlapMobile" />
       </div>
     </div>
   </main>

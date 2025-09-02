@@ -6,14 +6,14 @@
     <div id="resumeLink"></div>
 
     <div class="contactMeText">
-      <SplitFlapText
-        :texts="[
-          '        [CONTACT]       ',
-          '            $GITHUB$    ',
-          '  @EMAIL@               ',
-          '         |LINKEDIN|     ',
-        ]"
-      />
+      <SplitFlapText preset="heroFlap" :align="'center'" :texts="[
+        '[CONTACT]',
+      ]" />
+      <SplitFlapText preset="heroFlap" :align="'random'" :texts="[
+        '$GITHUB$',
+        '@EMAIL@',
+        '|LINKEDIN|',
+      ]" />
     </div>
 
     <div id="impressum">
