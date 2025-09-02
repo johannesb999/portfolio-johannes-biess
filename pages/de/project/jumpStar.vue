@@ -7,26 +7,22 @@
     </div>
 
     <div id="projectLinkNext">
-      <nuxt-link to="/de/project/simpleChat" class="custom-link"
-        >SIMPLECHAT</nuxt-link
-      >
+      <nuxt-link to="/de/project/simpleChat" class="custom-link">SIMPLECHAT</nuxt-link>
     </div>
     <div id="projectLinkBefore">
-      <nuxt-link to="/de/project/projects" class="custom-link"
-        >PLANTMONIT</nuxt-link
-      >
+      <nuxt-link to="/de/project/projects" class="custom-link">PLANTMONIT</nuxt-link>
     </div>
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '        [JUMPSTAR]          ',
-          '  WEB DEPLOYMENT PIPELINE ',
-          'THREEJS     SERVERHOSTING ',
-          '      DOCKER   SVELTE     ',
-          ' CLOUDFLARE      PORTAINER',
-          'MONGOOSE    GITHUB ACTIONS',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        '        [JUMPSTAR]          ',
+      ]" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '  WEB DEPLOYMENT PIPELINE ',
+        'THREEJS     SERVERHOSTING ',
+        '      DOCKER   SVELTE     ',
+        ' CLOUDFLARE      PORTAINER',
+        'MONGOOSE    GITHUB ACTIONS',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -40,7 +36,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['            [IDEE]             ']" />
+            <SplitFlapText :texts="['[IDEE]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
               wurde ein Link zu einer CSV-Datei mit etwa 340.000 Sternendaten
@@ -73,7 +69,7 @@
             <img src="public/img/js/Process.svg" alt="concept work in figma" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['           [PROZESS]           ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt
               werden sollten. Schnell fiel die Entscheidung, eine spielerische
@@ -99,7 +95,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText :texts="['      [IMPLEMENTATION]       ']" />
+              <SplitFlapText :texts="['[IMPLEMENTATION]']" preset="sectionFlap" :align="'center'" />
               <div class="paragraph">
                 Das Resultat ist eine interaktive Website, die den Nutzern eine
                 spielerische Reise durch das Weltall ermöglicht. Mithilfe eines
@@ -122,48 +118,33 @@
               </div>
             </div>
             <div class="image large">
-              <img
-                src="public/img/js/Implementaion.svg"
-                alt="a monitor displaying jumpstar"
-              />
+              <img src="public/img/js/Implementaion.svg" alt="a monitor displaying jumpstar" />
             </div>
           </div>
         </div>
 
-        <a
-          href="https://starsapp.johannes-biess.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="tryOutLink custom-link"
-          >TRY IT OUT LIVE</a
-        >
+        <a href="https://starsapp.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
+          class="tryOutLink custom-link">TRY IT OUT LIVE</a>
 
         <div class="project-section" style="padding-top: 2rem">
-          <SplitFlapText
-            :texts="[
-              '                       [PROJEKT] [VIDEO]                       ',
-            ]"
-          />
+          <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+            '                       [PROJEKT] [VIDEO]                       ',
+          ]" />
           <div class="project-video">
-            <iframe
-              src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-              title="YouTube video player"
-              frameborder="1"
+            <iframe src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+              title="YouTube video player" frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen></iframe>
           </div>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]         ',
-              '        TWO MONTHS      ',
-              '     THIRD SEMESTER     ',
-              '       GRADE: 1.0       ',
-              '        TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
+            '[KEYDATA]',
+            'TWO MONTHS',
+            'THIRD SEMESTER',
+            'GRADE: 1.0',
+            'TEAMWORK',
+          ]" />
         </div>
       </div>
     </div>
@@ -172,9 +153,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                      [IDEE]                       ']"
-            />
+            <SplitFlapText :texts="['[IDEE]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
               wurde ein Link zu einer CSV-Datei mit etwa 340.000 Sternendaten
@@ -195,11 +174,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\js\js.png"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\js\js.png" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -207,9 +182,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                     [PROZESS]                      ']"
-            />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt
               werden sollten. Schnell fiel die Entscheidung, eine spielerische
@@ -232,18 +205,14 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\js\Process.svg"
-              alt="concept work in figma"
-              style="object-fit: contain"
-            />
+            <img src="public\img\js\Process.svg" alt="concept work in figma" style="object-fit: contain" />
           </div>
         </div>
 
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText :texts="['           [IMPLEMENTATION]        ']" />
+              <SplitFlapText :texts="['[IMPLEMENTATION]']" preset="sectionFlapTablet" :align="'center'" />
               <div class="paragraph">
                 Das Resultat ist eine interaktive Website, die den Nutzern eine
                 spielerische Reise durch das Weltall ermöglicht. Mithilfe eines
@@ -266,47 +235,34 @@
               </div>
             </div>
             <div class="image medium">
-              <img
-                src="public\img\js\Implementaion.svg"
-                alt="a moitor displaying jumpstar"
-                style="object-fit: contain"
-              />
+              <img src="public\img\js\Implementaion.svg" alt="a moitor displaying jumpstar"
+                style="object-fit: contain" />
             </div>
           </div>
         </div>
 
-        <a
-          href="https://starsapp.johannes-biess.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="tryOutLink custom-link"
-          >TRY IT OUT LIVE</a
-        >
+        <a href="https://starsapp.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
+          class="tryOutLink custom-link">TRY IT OUT LIVE</a>
 
         <div class="project-section" style="padding-top: 2rem">
-          <SplitFlapText
-            :texts="['             [PROJEKT] [VIDEO]            ']"
-          />
+          <SplitFlapText preset="bannerFlapTablet" :align="'center'" :texts="[
+            '                          [PROJEKT] [VIDEO]                        ',
+          ]" />
           <div class="project-video">
-            <iframe
-              src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-              title="YouTube video player"
-              frameborder="1"
+            <iframe src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+              title="YouTube video player" frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen></iframe>
           </div>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]         ',
-              '        TWO MONTHS      ',
-              '     THIRD SEMESTER     ',
-              '       GRADE: 1.0       ',
-              '        TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText :texts="[
+            '        [KEYDATA]         ',
+            '        TWO MONTHS      ',
+            '     THIRD SEMESTER     ',
+            '       GRADE: 1.0       ',
+            '        TEAMWORK        ',
+          ]" />
         </div>
       </div>
     </div>
@@ -315,7 +271,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [IDEE]          ']" />
+            <SplitFlapText :texts="['[IDEE]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu
               wurde ein Link zu einer CSV-Datei mit etwa 340.000 Sternendaten
@@ -344,7 +300,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [PROZESS]        ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt
               werden sollten. Schnell fiel die Entscheidung, eine spielerische
@@ -375,7 +331,7 @@
         <div class="project-section">
           <div class="project-content">
             <div class="text">
-              <SplitFlapText :texts="['     [IMPLEMENTATION]     ']" />
+              <SplitFlapText :texts="['[IMPLEMENTATION]']" preset="sectionFlapMobile" :align="'center'" />
               <div class="paragraph">
                 Das Resultat ist eine interaktive Website, die den Nutzern eine
                 spielerische Reise durch das Weltall ermöglicht. Mithilfe eines
@@ -398,45 +354,34 @@
               </div>
             </div>
             <div class="image medium">
-              <img
-                src="public\img\js\Implementaion.svg"
-                alt="a moitor displaying jumpstar"
-              />
+              <img src="public\img\js\Implementaion.svg" alt="a moitor displaying jumpstar" />
             </div>
           </div>
         </div>
 
-        <a
-          href="https://starsapp.johannes-biess.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="tryOutLink custom-link"
-          >TRY IT OUT LIVE</a
-        >
+        <a href="https://starsapp.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
+          class="tryOutLink custom-link">TRY IT OUT LIVE</a>
 
         <div class="project-section" style="padding-top: 2rem">
-          <SplitFlapText :texts="['     [PROJEKT] [VIDEO]      ']" />
+          <SplitFlapText preset="bannerFlapMobile" :align="'center'" :texts="[
+            '                          [PROJEKT] [VIDEO]                        ',
+          ]" />
 
           <div class="project-video">
-            <iframe
-              src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-              title="YouTube video player"
-              frameborder="1"
+            <iframe src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+              title="YouTube video player" frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen></iframe>
           </div>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]        ',
-              '        TWO MONTHS     ',
-              '    THIRD SEMESTER     ',
-              '      GRADE: 1.0       ',
-              '        TEAMWORK       ',
-            ]"
-          />
+          <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
+            '[KEYDATA]',
+            'TWO MONTHS',
+            'THIRD SEMESTER',
+            'GRADE: 1.0',
+            'TEAMWORK',
+          ]" />
         </div>
       </div>
     </div>

@@ -10,21 +10,19 @@
       <nuxt-link to="/de/project/goEase" class="custom-link">GOEASE</nuxt-link>
     </div>
     <div id="projectLinkBefore">
-      <nuxt-link to="/de/project/drawingLight" class="custom-link"
-        >DRAWINGLIGHT</nuxt-link
-      >
+      <nuxt-link to="/de/project/drawingLight" class="custom-link">DRAWINGLIGHT</nuxt-link>
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '      [TRICKYTOWERS]       ',
-          '   INTERACTIVE WINDOW    ',
-          'HTML   CSS  JAVASCRIPT   ',
-          '  FIGMA        WEBCAM    ',
-          ' GOOGLE MEDIA PIPE       ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        '      [TRICKYTOWERS]       ',
+      ]" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '   INTERACTIVE WINDOW    ',
+        'HTML   CSS  JAVASCRIPT   ',
+        '  FIGMA        WEBCAM    ',
+        ' GOOGLE MEDIA PIPE       ',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -38,7 +36,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [PROBLEM]           ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Das Projekt befasste sich mit der Frage: Wie zieht man
               Aufmerksamkeit auf ein Schaufenster oder Gebäude? In diesem Fall
@@ -61,7 +59,7 @@
             <img src="public\img\tt\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['           [PROZESS]          ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Das Projekt begann mit einer intensiven Phase von Brainstorming
               und Recherche. Es sollte herausgefunden werden, wie am besten
@@ -90,7 +88,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [ERGEBNIS]           ']" />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               TrickyTowers ist ein interaktives Schaufenster, das Passanten auf
               spielerische Weise anzieht und ein außergewöhnliches Erlebnis
@@ -115,24 +113,17 @@
           </div>
         </div>
       </div>
-      <a
-        href="https://tricky.johannes-biess.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="tryOutLink custom-link"
-        >TRY IT OUT LIVE</a
-      >
+      <a href="https://tricky.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
+        class="tryOutLink custom-link">TRY IT OUT LIVE</a>
 
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '        ONE WEEK        ',
-            '     SECOND SEMESTER      ',
-            '      GRADE: 1.0        ',
-            '        TEAMWORK        ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'ONE WEEK',
+          'SECOND SEMESTER',
+          'GRADE: 1.0',
+          'TEAMWORK',
+        ]" />
       </div>
     </div>
 
@@ -140,7 +131,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [PROBLEM]           ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Das Projekt befasste sich mit der Frage: Wie zieht man
               Aufmerksamkeit auf ein Schaufenster oder Gebäude? In diesem Fall
@@ -160,7 +151,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['            [PROZESS]          ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Das Projekt begann mit einer intensiven Phase von Brainstorming
               und Recherche. Es sollte herausgefunden werden, wie am besten
@@ -184,11 +175,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img
-              src="public\img\tt\process.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\tt\process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -196,7 +183,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [ERGEBNIS]           ']" />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               TrickyTowers ist ein interaktives Schaufenster, das Passanten auf
               spielerische Weise anzieht und ein außergewöhnliches Erlebnis
@@ -220,24 +207,17 @@
           </div>
         </div>
       </div>
-      <a
-        href="https://tricky.johannes-biess.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="tryOutLink custom-link"
-        >TRY IT OUT LIVE</a
-      >
+      <a href="https://tricky.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
+        class="tryOutLink custom-link">TRY IT OUT LIVE</a>
 
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '        ONE WEEK        ',
-            '     SECOND SEMESTER    ',
-            '       GRADE: 1.0        ',
-            '        TEAMWORK        ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'ONE WEEK',
+          'SECOND SEMESTER',
+          'GRADE: 1.0',
+          'TEAMWORK',
+        ]" />
       </div>
     </div>
 
@@ -245,7 +225,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROBLEM]         ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Das Projekt befasste sich mit der Frage: Wie zieht man
               Aufmerksamkeit auf ein Schaufenster oder Gebäude? In diesem Fall
@@ -265,7 +245,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [PROZESS]        ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Das Projekt begann mit einer intensiven Phase von Brainstorming
               und Recherche. Es sollte herausgefunden werden, wie am besten
@@ -297,7 +277,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [ERGEBNIS]        ']" />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               TrickyTowers ist ein interaktives Schaufenster, das Passanten auf
               spielerische Weise anzieht und ein außergewöhnliches Erlebnis
@@ -321,24 +301,17 @@
           </div>
         </div>
       </div>
-      <a
-        href="https://tricky.johannes-biess.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="tryOutLink custom-link"
-        >TRY IT OUT LIVE</a
-      >
+      <a href="https://tricky.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
+        class="tryOutLink custom-link">TRY IT OUT LIVE</a>
 
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '        ONE WEEK        ',
-            '    SECOND SEMESTER     ',
-            '       GRADE: 1.0       ',
-            '        TEAMWORK        ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'ONE WEEK',
+          'SECOND SEMESTER',
+          'GRADE: 1.0',
+          'TEAMWORK',
+        ]" />
       </div>
     </div>
   </main>

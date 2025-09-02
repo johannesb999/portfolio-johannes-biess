@@ -7,27 +7,25 @@
     </div>
 
     <div id="projectLinkNext">
-      <nuxt-link to="/de/project/portfolio" class="custom-link"
-        >THIS WEBSITE
+      <nuxt-link to="/de/project/portfolio" class="custom-link">THIS WEBSITE
       </nuxt-link>
     </div>
     <div id="projectLinkBefore">
-      <nuxt-link to="/de/project/jumpStar" class="custom-link"
-        >JUMPSTAR
+      <nuxt-link to="/de/project/jumpStar" class="custom-link">JUMPSTAR
       </nuxt-link>
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '        [SIMPLECHAT]        ',
-          '       CHAT PLATFORM      ',
-          'WIREFRAMES   NUTZERFOKUS  ',
-          '   DESIGN THINKING        ',
-          '       NUTZER INTERVIEWS  ',
-          '  FIGMA PROTOTYPE         ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        '        [SIMPLECHAT]        ',
+      ]" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '       CHAT PLATFORM      ',
+        'WIREFRAMES   NUTZERFOKUS  ',
+        '   DESIGN THINKING        ',
+        '       NUTZER INTERVIEWS  ',
+        '  FIGMA PROTOTYPE         ',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -41,7 +39,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [PROBLEM]          ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Die derzeitige Kommunikationsplattform der Universität, Slack,
               wird durch eine neue dedizierte Plattform ersetzt, die es der
@@ -65,7 +63,7 @@
             <img src="public\img\sc\process.svg" alt="plantmonit" />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['          [PROZESS]          ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
               Umfrage zu bereits existierenden Plattformen durchgeführt.<br />
@@ -90,7 +88,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['           [ERGEBNIS]          ']" />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
               nur das Chatten ermöglicht, sondern auch eine Vielzahl
@@ -125,30 +123,22 @@
         </div>
       </div>
 
-      <a class="tryOutLink custom-link" style="text-decoration: none"
-        >TRY IT OUT LIVE</a
-      >
+      <a class="tryOutLink custom-link" style="text-decoration: none">TRY IT OUT LIVE</a>
       <div class="project-section">
         <div class="project-video">
-          <iframe
-            style="border: 1px solid #171717"
-            width="800"
-            height="450"
+          <iframe style="border: 1px solid #171717" width="800" height="450"
             src="https://embed.figma.com/proto/lAaQo23W7BEgJGwKB9lQD8/Designmethoden-USerresearch?page-id=0%3A1&node-id=213-2808&node-type=frame&viewport=-2921%2C-796%2C0.15&scaling=scale-down&content-scaling=fixed&starting-point-node-id=213%3A2808&embed-host=share"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '       TWO WEEKS       ',
-            '    THIRD SEMESTER     ',
-            '      GRADE: 1.7        ',
-            '       TEAMWORK         ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'TWO WEEKS',
+          'THIRD SEMESTER',
+          'GRADE: 1.7',
+          'TEAMWORK',
+        ]" />
       </div>
     </div>
 
@@ -156,9 +146,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                     [PROBLEM]                     ']"
-            />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Die derzeitige Kommunikationsplattform der Universität, Slack,
               wird durch eine neue dedizierte Plattform ersetzt, die es der
@@ -179,9 +167,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                    [PROZESS]                    ']"
-            />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
               Umfrage zu bereits existierenden Plattformen durchgeführt. Durch
@@ -201,11 +187,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\sc\process.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\sc\process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -213,9 +195,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                    [ERGEBNIS]                    ']"
-            />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
               nur das Chatten ermöglicht, sondern auch eine Vielzahl
@@ -246,39 +226,27 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\sc\solution.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\sc\solution.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
 
-      <a class="tryOutLink custom-link" style="text-decoration: none"
-        >TRY IT OUT LIVE</a
-      >
+      <a class="tryOutLink custom-link" style="text-decoration: none">TRY IT OUT LIVE</a>
       <div class="project-section">
         <div class="project-video">
-          <iframe
-            style="border: 1px solid #171717"
-            width="800"
-            height="450"
+          <iframe style="border: 1px solid #171717" width="800" height="450"
             src="https://embed.figma.com/proto/lAaQo23W7BEgJGwKB9lQD8/Designmethoden-USerresearch?page-id=0%3A1&node-id=213-2808&node-type=frame&viewport=-2921%2C-796%2C0.15&scaling=scale-down&content-scaling=fixed&starting-point-node-id=213%3A2808&embed-host=share"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]         ',
-            '       TWO WEEKS       ',
-            '    THIRD SEMESTER     ',
-            '      GRADE: 1.7        ',
-            '       TEAMWORK         ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'TWO WEEKS',
+          'THIRD SEMESTER',
+          'GRADE: 1.7',
+          'TEAMWORK',
+        ]" />
       </div>
     </div>
 
@@ -286,7 +254,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROBLEM]         ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Die derzeitige Kommunikationsplattform der Universität, Slack,
               wird durch eine neue dedizierte Plattform ersetzt, die es der
@@ -307,7 +275,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROZESS]         ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Um die Bedürfnisse der Nutzer zu verstehen, wurde zu Beginn eine
               Umfrage zu bereits existierenden Plattformen durchgeführt. Durch
@@ -327,11 +295,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img
-              src="public\img\sc\process.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\sc\process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -339,7 +303,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['       [ERGEBNIS]         ']" />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Das Ergebnis ist SimpleChat – eine umfassende Plattform, die nicht
               nur das Chatten ermöglicht, sondern auch eine Vielzahl
@@ -374,30 +338,22 @@
         </div>
       </div>
 
-      <a class="tryOutLink custom-link" style="text-decoration: none"
-        >TRY IT OUT LIVE</a
-      >
+      <a class="tryOutLink custom-link" style="text-decoration: none">TRY IT OUT LIVE</a>
       <div class="project-section">
         <div class="project-video">
-          <iframe
-            style="border: 1px solid #171717"
-            width="800"
-            height="450"
+          <iframe style="border: 1px solid #171717" width="800" height="450"
             src="https://embed.figma.com/proto/lAaQo23W7BEgJGwKB9lQD8/Designmethoden-USerresearch?page-id=0%3A1&node-id=213-2808&node-type=frame&viewport=-2921%2C-796%2C0.15&scaling=scale-down&content-scaling=fixed&starting-point-node-id=213%3A2808&embed-host=share"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
       <div class="projectDetailsFlap">
-        <SplitFlapText
-          :texts="[
-            '        [KEYDATA]        ',
-            '       TWO WEEKS       ',
-            '     THIRD SEMESTER    ',
-            '      GRADE: 1.7       ',
-            '        TEAMWORK       ',
-          ]"
-        />
+        <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
+          '[KEYDATA]',
+          'TWO WEEKS',
+          'THIRD SEMESTER',
+          'GRADE: 1.7',
+          'TEAMWORK',
+        ]" />
       </div>
     </div>
   </main>

@@ -6,7 +6,7 @@ export default {
   detailsFlap: { columns: 27 },
   sectionFlap: { columns: 29 },
   bannerFlap: { columns: 60 },
-  keydataFlap: { columns: 20 },
+  keydataFlap: { columns: 24 },
 
   // Tablet presets usually need fewer columns due to smaller screen width
 

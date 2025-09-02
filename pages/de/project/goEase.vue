@@ -6,25 +6,21 @@
       </client-only>
     </div>
     <div id="projectLinkNext">
-      <nuxt-link to="/de/project/projects" class="custom-link"
-        >PLANTMONIT</nuxt-link
-      >
+      <nuxt-link to="/de/project/projects" class="custom-link">PLANTMONIT</nuxt-link>
     </div>
     <div id="projectLinkBefore">
-      <nuxt-link to="/de/project/trickyTowers" class="custom-link"
-        >TRICKYTOWERS</nuxt-link
-      >
+      <nuxt-link to="/de/project/trickyTowers" class="custom-link">TRICKYTOWERS</nuxt-link>
     </div>
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '          [GOEASE]          ',
-          '       SMART SYSTEM       ',
-          '  REACT NATIVE      GPS   ',
-          '     ESP32   ANDROIDSDK   ',
-          ' BLE     OPENMAPBOX       ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        '          [GOEASE]          ',
+      ]" />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '       SMART SYSTEM       ',
+        '  REACT NATIVE      GPS   ',
+        '     ESP32   ANDROIDSDK   ',
+        ' BLE     OPENMAPBOX       ',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -39,7 +35,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [PROBLEM]          ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Der öffentliche Nahverkehr in Deutschland steht vor großen
               Herausforderungen. Es gibt viele verschiedene Busunternehmen und
@@ -71,7 +67,7 @@
             <img src="public\img\ge\process.svg" alt="plantmonit " />
           </div>
           <div class="text">
-            <SplitFlapText :texts="['            [PROZESS]          ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Der allgemeine Prozess begann mit einer intensiven
               Brainstorming-Phase, in der verschiedene Ideen diskutiert und
@@ -165,11 +161,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image smedi">
-            <img
-              src="public\img\ge\hardwareProcess.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\ge\hardwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
           <div class="text">
             <div class="paragraph">
@@ -190,7 +182,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [ERGEBNIS]          ']" />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               GoEase ist ein innovatives System, das das Busfahren
               revolutionieren soll. Durch die Kombination aus einem leicht
@@ -234,30 +226,23 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText
-          :texts="[
-            '                       [PROJEKT] [VIDEO]                        ',
-          ]"
-        />
+        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+          '                       [PROJEKT] [VIDEO]                        ',
+        ]" />
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]         ',
-              '        TWO MONTHS      ',
-              '      THIRD SEMESTER    ',
-              '       GRADE: 1.3       ',
-              '        TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
+            '[KEYDATA]',
+            'TWO MONTHS',
+            'THIRD SEMESTER',
+            'GRADE: 1.3',
+            'TEAMWORK',
+          ]" />
         </div>
       </div>
     </div>
@@ -266,9 +251,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                 [PROBLEM]                 ']"
-            />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Der öffentliche Nahverkehr in Deutschland steht vor großen
               Herausforderungen.<br />
@@ -298,9 +281,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                  [PROZESS]                  ']"
-            />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Der allgemeine Prozess begann mit einer intensiven
               Brainstorming-Phase, in der verschiedene Ideen diskutiert und
@@ -419,9 +400,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText
-              :texts="['                  [ERGEBNIS]                 ']"
-            />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               GoEase ist ein innovatives System, das das Busfahren
               revolutionieren soll. Durch die Kombination aus einem leicht
@@ -465,28 +444,21 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText
-          :texts="['              [PROJEKT] [VIDEO]              ']"
-        />
+        <SplitFlapText preset="bannerFlapTablet" :align="'center'" :texts="['[PROJEKT] [VIDEO]']" />
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]        ',
-              '        TWO MONTHS     ',
-              '    THIRD SEMESTER     ',
-              '      GRADE: 1.3       ',
-              '        TEAMWORK       ',
-            ]"
-          />
+          <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
+            '[KEYDATA]',
+            'TWO MONTHS',
+            'THIRD SEMESTER',
+            'GRADE: 1.3',
+            'TEAMWORK',
+          ]" />
         </div>
       </div>
     </div>
@@ -495,7 +467,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROBLEM]         ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Der öffentliche Nahverkehr in Deutschland steht vor großen
               Herausforderungen.<br />
@@ -525,7 +497,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROZESS]         ']" />
+            <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               Der allgemeine Prozess begann mit einer intensiven
               Brainstorming-Phase, in der verschiedene Ideen diskutiert und
@@ -636,11 +608,7 @@
             </div>
           </div>
           <div class="image small">
-            <img
-              src="public\img\ge\hardwareProcess.svg"
-              alt="plantmonit"
-              style="object-fit: contain"
-            />
+            <img src="public\img\ge\hardwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -648,7 +616,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [ERGEBNIS]        ']" />
+            <SplitFlapText :texts="['[ERGEBNIS]']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               GoEase ist ein innovatives System, das das Busfahren
               revolutionieren soll. Durch die Kombination aus einem leicht
@@ -692,26 +660,21 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="['     [PROJEKT] [VIDEO]      ']" />
+        <SplitFlapText :texts="['[PROJEKT] [VIDEO]']" preset="bannerFlapMobile" :align="'center'" />
         <div class="project-video">
-          <iframe
-            src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player"
-            frameborder="1"
+          <iframe src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
+            title="YouTube video player" frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText
-            :texts="[
-              '        [KEYDATA]         ',
-              '       TWO MONTHS       ',
-              '     THIRD SEMESTER     ',
-              '       GRADE: 1.3       ',
-              '        TEAMWORK        ',
-            ]"
-          />
+          <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
+            '[KEYDATA]',
+            'TWO MONTHS',
+            'THIRD SEMESTER',
+            'GRADE: 1.3',
+            'TEAMWORK',
+          ]" />
         </div>
       </div>
     </div>
