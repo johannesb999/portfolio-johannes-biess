@@ -7,7 +7,7 @@
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText :align="'center'" preset="heroFlap" :texts="[
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
         'UX DESIGN',
         'WIREFRAMING',
         'KUNDENKOTAKT',
@@ -26,7 +26,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['[WAS] [ICH] [GELERNT] [HABE]']" preset="sectionFlap" />
+            <SplitFlapText :texts="['[WAS] [ICH] [GELERNT] [HABE]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               In meinem Praktikum habe ich ein sehr viel tieferes Verständnis für Design-Tools wie Figma erlangt. Ich
               habe gelernt, Design-Systeme nicht nur zu verstehen, sondern auch selbst zu erstellen und effizient zu
@@ -39,7 +39,7 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['[PRAKTIKUM] [BEI] [MUSECASE]']" preset="sectionFlap" />
+            <SplitFlapText :texts="['[PRAKTIKUM] [BEI] [MUSECASE]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               In einer Agentur zu arbeiten war für mich eine interessante und vor allem neue Erfahrung. Design-Methoden,
               denen im Studium sehr

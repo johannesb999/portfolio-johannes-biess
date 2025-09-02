@@ -7,14 +7,12 @@
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '  SCRUM       CONFLUENCE  ',
-          '       JIRA      AGILE    ',
-          '     SOFTWARE ENTWICKLUNG ',
-          '  PROCESS OPTIMIERUNG     ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '´SCRUM       CONFLUENCE  ',
+        '´JIRA      AGILE',
+        'SOFTWARE ENTWICKLUNG ',
+        '  PROCESS OPTIMIERUNG',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -27,7 +25,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [LEARNINGS]        ']" />
+            <SplitFlapText preset="sectionFlap" :align="'center'" :texts="['[LEARNINGS]']" />
             <div class="paragraph">
               Als Werkstudent bei Bosch Automotive Steering GmbH konnte ich ein
               Jahr lang meine Kenntnisse in der Softwareentwicklung und im
@@ -38,18 +36,13 @@
               optimieren. Ein weiteren
               Einblick in meine Leistungen und Tätigkeiten während der
               Ausbildung findet sich in meinem
-              <a
-                href="/docs/ArbeitszeugnisBosch.pdf"
-                download="Arbeitszeugnis.pdf"
-                class="custom-link"
-                style="text-decoration: underline"
-                >Arbeitszeugnis.pdf</a
-              >
+              <a href="/docs/ArbeitszeugnisBosch.pdf" download="Arbeitszeugnis.pdf" class="custom-link"
+                style="text-decoration: underline">Arbeitszeugnis.pdf</a>
             </div>
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [ABOUT] [BOSCH]       ']" />
+            <SplitFlapText preset="sectionFlap" :align="'center'" :texts="['[ABOUT] [BOSCH]']" />
             <div class="paragraph">
               Der Standort Schwäbisch Gmünd ist das Leitwerk des
               Unternehmensbereichs Vehicle Motion Vehicle Motion und umfasst das

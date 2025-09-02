@@ -7,14 +7,12 @@
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '  SCRUM       CONFLUENCE  ',
-          '       JIRA      AGILE    ',
-          '     SOFTWARE DEVELOPMENT ',
-          '  PROCESS OPTIMIZATION    ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '  SCRUM       CONFLUENCE  ',
+        '       JIRA      AGILE    ',
+        '     SOFTWARE DEVELOPMENT ',
+        '  PROCESS OPTIMIZATION    ',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -27,7 +25,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [LEARNINGS]        ']" />
+            <SplitFlapText :texts="['          [LEARNINGS]        ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               I spent a year at Bosch Automotive Steering GmbH, where I got to
               deepen my knowledge of software development and agile project
@@ -35,18 +33,13 @@
               guiding teams and work areas towards more methodical processes and
               making existing workflows more efficient. You can find out more about what I learned and did
               during my apprenticeship in my
-              <a
-                href="/docs/EmploymentReferenceBosch.pdf"
-                download="EmploymentReferenceBosch.pdf"
-                class="custom-link"
-                style="text-decoration: underline"
-                >Employment Reference.pdf</a
-              >
+              <a href="/docs/EmploymentReferenceBosch.pdf" download="EmploymentReferenceBosch.pdf" class="custom-link"
+                style="text-decoration: underline">Employment Reference.pdf</a>
             </div>
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [ABOUT] [BOSCH]       ']" />
+            <SplitFlapText :texts="['         [ABOUT] [BOSCH]       ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               The Schwäbisch Gmünd site is the lead plant of the Vehicle Motion
               Vehicle Motion Vehicle Motion division and comprises the

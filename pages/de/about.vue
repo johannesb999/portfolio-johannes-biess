@@ -10,8 +10,8 @@
       <nuxt-link to="/en/skillset" class="custom-link">SKILLSET</nuxt-link>
     </div> -->
     <div class="aboutMeText">
-      <SplitFlapText :align="'center'" :preset="'heroFlap'" :texts="[
-        '[ÜBER] [MICH]',
+      <SplitFlapText preset="heroFlap" :align="'center'" :texts="['[ÜBER] [MICH]']" />
+      <SplitFlapText preset="heroFlap" :align="'random'" :texts="[
         'FLEXIBEL  AGIL  NEUGIERIG',
         'ANPASSUNGSFÄHIG      GENAU',
         'PÜNKTLICHK      FAIR',

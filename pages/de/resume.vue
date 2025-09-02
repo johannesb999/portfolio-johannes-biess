@@ -10,7 +10,7 @@
       <ul>
         <li class="current">
           <NuxtLink to="/de/cv/hfg" class="content custom-link">
-            <h2>HOCHSCHULE <br />FÜR GESTALTUNG</h2>
+            <h2>HFG (HOCHSCHULE <br />FÜR GESTALTUNG)</h2>
             <p>BACHELOR OF ARTS</p>
             <p class="location">SCHWÄBISCH GMÜND, DEUTSCHLAND</p>
           </NuxtLink>
@@ -61,7 +61,7 @@
         </li>
         <li>
           <NuxtLink to="/de/cv/dtack" class="content custom-link">
-            <h2>D-TACK</h2>
+            <h2>D-TACK GMBH</h2>
             <p>KAUFMANN IM GROß- UND AUßENHANDEL</p>
             <p class="location">HÜTTLINGEN, DEUTSCHLAND</p>
           </NuxtLink>

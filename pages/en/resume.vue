@@ -9,7 +9,7 @@
       <ul>
         <li class="current">
           <NuxtLink to="/en/cv/hfg" class="content custom-link">
-            <h2>HOCHSCHULE <br />FÜR GESTALTUNG</h2>
+            <h2>HFG (HOCHSCHULE <br />FÜR GESTALTUNG)</h2>
             <p>BACHELOR OF ARTS</p>
             <p class="location">SCHWÄBISCH GMÜND, GERMANY</p>
           </NuxtLink>
@@ -29,7 +29,7 @@
         </li>
         <li>
           <NuxtLink to="/en/cv/bosch" class="content custom-link">
-            <h2>BOSCH LLC</h2>
+            <h2>BOSCH GMBH</h2>
             <p>WORKING STUDENT</p>
             <p class="location">SCHWÄBISCH GMÜND, GERMANY</p>
           </NuxtLink>
@@ -49,7 +49,7 @@
         </li>
         <li>
           <NuxtLink to="/en/cv/dtack" class="content custom-link">
-            <h2>D-TACK</h2>
+            <h2>D-TACK GMBH</h2>
             <p>BUSINESS ADMINISTRATION IN WHOLESALE & FOREIGN TRADE</p>
             <p class="location">HÜTTLINGEN, GERMANY</p>
           </NuxtLink>

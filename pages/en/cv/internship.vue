@@ -7,7 +7,7 @@
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText :texts="[
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
         '        UX DESIGN        ',
         '  WIREFRAMING            ',
         '     CUSTOMER CONTACT    ',
@@ -26,7 +26,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['     [WHAT] [I] [HAVE] [LEARNED]     ']" />
+            <SplitFlapText :texts="['     [WHAT] [I] [HAVE] [LEARNED]     ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               In my internship, I gained a much deeper understanding of design tools like Figma. I learned not only
               to understand design systems, but also to create and use them efficiently. At the same time, I developed a
@@ -38,7 +38,7 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['   [INTERNSHIP] [AT] [MUSECASE]    ']" />
+            <SplitFlapText :texts="['   [INTERNSHIP] [AT] [MUSECASE]    ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Working in an agency was an interesting and, above all, a new experience for me. Design methods that are
               given much less time in my studies are suddenly very useful, and you have to pay attention to details that

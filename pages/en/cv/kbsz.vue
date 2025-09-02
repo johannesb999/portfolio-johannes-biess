@@ -7,22 +7,17 @@
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          'MATHEMATICS    ECONOMICS  ',
-          '     COMPUTER SCIENCE     ',
-          '             HISTORY      ',
-          '    ENGLISH      GERMAN   ',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        'MATHEMATICS    ECONOMICS  ',
+        '     COMPUTER SCIENCE     ',
+        '             HISTORY      ',
+        '    ENGLISH      GERMAN   ',
+      ]" />
     </div>
 
     <div class="wrapper">
       <div class="picture">
-        <img
-          src="public\img\cv\kbsz.svg"
-          alt="Picture of KBSZ Building in Ellwangen"
-        />
+        <img src="public\img\cv\kbsz.svg" alt="Picture of KBSZ Building in Ellwangen" />
       </div>
     </div>
 
@@ -30,7 +25,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [LEARNINGS]          ']" />
+            <SplitFlapText :texts="['          [LEARNINGS]          ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               During my time at the KBSZ, I obtained the Baden-Würtenberg Abitur
               with a focus on economics and English. The decision not to go into
@@ -40,7 +35,7 @@
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['        [ABOUT] [DIPLOMA]      ']" />
+            <SplitFlapText :texts="['        [ABOUT] [DIPLOMA]      ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               The "Fachgebundene Fachhochschulreife" is a school qualification
               in Germany that enables students to study all courses at

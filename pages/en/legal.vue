@@ -7,8 +7,8 @@
       <h1>Imprint</h1>
       <h2 id="m46">Service Provider</h2>
       <p>Johannes Biess</p>
-      <p>Wehrleshalde 1</p>
-      <p>73434 Aalen</p>
+      <p>Goethestraße 35</p>
+      <p>73525 Schwäbisch Gmünd</p>
       <p>Germany</p>
 
       <h2 id="m56">Contact Information</h2>
@@ -53,7 +53,8 @@
       <p>The controller responsible for processing personal data on this website is:</p>
       <p>
         Johannes Biess<br>
-        Wehrleshalde 1<br>
+        Goethestraße 35<br>
+        73525 Schwäbisch Gmünd<br>
         contact@johannes-biess.com<br>
         +49 176 41107111<br>
       </p>
@@ -195,6 +196,7 @@
   color: var(--color-primary);
 
 }
+
 #dsgvo {
   color: var(--color-primary);
   @include type.L-Body-Legal-Style('-thin');

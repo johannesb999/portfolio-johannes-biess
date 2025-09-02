@@ -7,15 +7,13 @@
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '   GROßHANDEL  WIRTSCHAFT ',
-          '      MARKTFORSCHUNG      ',
-          ' FINANZEN     BUCHHALTUNG ',
-          ' VERTRAGSRECHT    VERKAUF ',
-          'MARKETING      DISPOSITION',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '   GROßHANDEL  WIRTSCHAFT ',
+        '      MARKTFORSCHUNG      ',
+        ' FINANZEN     BUCHHALTUNG ',
+        ' VERTRAGSRECHT    VERKAUF ',
+        'MARKETING      DISPOSITION',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -28,7 +26,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['          [LEARNINGS]         ']" />
+            <SplitFlapText :texts="['          [LEARNINGS]         ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Während meiner Ausbildung zum Kaufmann im Groß- und Außenhandel
               bei D-TACK und der IHK Deutschland durchlief ich innerhalb von
@@ -40,18 +38,13 @@
               einem professionellen Umfeld geschult und gefördert. Ein weiteren
               Einblick in meine Leistungen und Tätigkeiten während der
               Ausbildung findet sich in meinem
-              <a
-                href="/docs/ArbeitszeugnisDtack.pdf"
-                download="ArbeitszeugnisDtack.pdf"
-                class="custom-link"
-                style="text-decoration: underline"
-                >Arbeitszeugnis.pdf</a
-              >
+              <a href="/docs/ArbeitszeugnisDtack.pdf" download="ArbeitszeugnisDtack.pdf" class="custom-link"
+                style="text-decoration: underline">Arbeitszeugnis.pdf</a>
             </div>
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [ABOUT] [D-TACK]       ']" />
+            <SplitFlapText :texts="['         [ABOUT] [D-TACK]       ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               D-TACK ist ein Unternehmen, das sich auf die Entwicklung und den
               Vertrieb von Klebebändern für verschiedene Industrieanwendungen
@@ -65,11 +58,7 @@
               Ausbildungsinhalten auf ihrer
               <nuxt-link
                 to="https://www.d-tack.de/ausbildung?srsltid=AfmBOor2XUpCV5NFF_DtUYp2PfYXWaT6FYBF1oI200zuMLlf_o3gj6WG"
-                class="custom-link"
-                style="text-decoration: underline"
-                target="_blank"
-                >Website.</nuxt-link
-              >
+                class="custom-link" style="text-decoration: underline" target="_blank">Website.</nuxt-link>
             </div>
           </div>
         </div>

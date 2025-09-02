@@ -7,15 +7,13 @@
     </div>
 
     <div class="projectFlap">
-      <SplitFlapText
-        :texts="[
-          '   WHOLESALE     ECONOMICS ',
-          '      MARCET RESEARCH      ',
-          ' FINANCE        ACCOUNTING ',
-          ' CONTRACT LAW        SALES ',
-          'MARKETING      DISPOSITION',
-        ]"
-      />
+      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+        '   WHOLESALE     ECONOMICS ',
+        '      MARCET RESEARCH      ',
+        ' FINANCE        ACCOUNTING ',
+        ' CONTRACT LAW        SALES ',
+        'MARKETING      DISPOSITION',
+      ]" />
     </div>
 
     <div class="wrapper">
@@ -28,7 +26,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['         [LEARNINGS]          ']" />
+            <SplitFlapText :texts="['         [LEARNINGS]          ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               While I was training as a wholesale and foreign trade merchant at
               D-TACK and the German Chamber of Industry and Commerce (IHK), I
@@ -39,18 +37,13 @@
               communication and organisation, in a professional setting for the
               first time. You can find out more about what I learned and did
               during my apprenticeship in my
-              <a
-                href="/docs/EmploymentReferenceDtack.pdf"
-                download="EmploymentReferenceDtack.pdf"
-                class="custom-link"
-                style="text-decoration: underline"
-                >Employment Reference.pdf</a
-              >
+              <a href="/docs/EmploymentReferenceDtack.pdf" download="EmploymentReferenceDtack.pdf" class="custom-link"
+                style="text-decoration: underline">Employment Reference.pdf</a>
             </div>
           </div>
 
           <div class="text">
-            <SplitFlapText :texts="['         [ABOUT] [D-TACK]       ']" />
+            <SplitFlapText :texts="['         [ABOUT] [D-TACK]       ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               D-TACK is a company that develops and sells adhesive tapes for all
               kinds of industrial uses. During their training at D-TACK,
@@ -63,11 +56,7 @@
               their
               <nuxt-link
                 to="https://www.d-tack.de/ausbildung?srsltid=AfmBOor2XUpCV5NFF_DtUYp2PfYXWaT6FYBF1oI200zuMLlf_o3gj6WG"
-                class="custom-link"
-                style="text-decoration: underline"
-                target="_blank"
-                >website.</nuxt-link
-              >
+                class="custom-link" style="text-decoration: underline" target="_blank">website.</nuxt-link>
             </div>
           </div>
         </div>

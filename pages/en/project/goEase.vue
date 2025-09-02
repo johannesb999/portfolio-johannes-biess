@@ -189,7 +189,7 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="[
+        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
           '                         [PROJECT] [VIDEO]                        ',
         ]" />
         <div class="project-video">
@@ -199,12 +199,12 @@
             allowfullscreen></iframe>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText :texts="[
-            '        [KEYDATA]         ',
-            '        TWO MONTHS      ',
-            '     THIRD SEMESTER     ',
-            '       GRADE: 1.3       ',
-            '        TEAMWORK        ',
+          <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
+            '[KEYDATA]',
+            'TWO MONTHS',
+            'THIRD SEMESTER',
+            'GRADE: 1.3',
+            'TEAMWORK',
           ]" />
         </div>
       </div>
@@ -214,7 +214,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['                  [PROBLEM]                  ']" />
+            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               Local public transportation in Germany is facing some significant
               challenges. <br />There are many different bus companies and
@@ -241,7 +241,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['                  [PROCESS]                  ']" />
+            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlapTablet" :align="'center'" />
             <div class="paragraph">
               The project began with an intensive brainstorming session, where
               various ideas were discussed, and some initial concepts were
@@ -342,7 +342,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['                 [SOLUTION]                  ']" />
+            <SplitFlapText preset="sectionFlapTablet" :align="'center'" :texts="['[SOLUTION]']" />
             <div class="paragraph">
               GoEase is an innovative system designed to transform bus travel.
               It combines an easy-to-install beacon system with a user-friendly
@@ -365,7 +365,7 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="['               [PROJECT] [VIDEO]                ']" />
+        <SplitFlapText :texts="['[PROJECT] [VIDEO]']" preset="bannerFlapTablet" :align="'center'" />
         <div class="project-video">
           <iframe src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
             title="YouTube video player" frameborder="1"
@@ -373,7 +373,7 @@
             allowfullscreen></iframe>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText :texts="[
+          <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
             '        [KEYDATA]         ',
             '        TWO MONTHS      ',
             '     THIRD SEMESTER     ',
@@ -388,7 +388,7 @@
       <div class="project-section" id="details-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROBLEM]         ']" />
+            <SplitFlapText :texts="['        [PROBLEM]         ']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               The idea for GoEase emerged from thinking about how to make local
               public transport more accessible and convenient.<br />
@@ -409,7 +409,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [PROCESS]         ']" />
+            <SplitFlapText :texts="['        [PROCESS]         ']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               The project began with an intensive brainstorming session, where
               various ideas were discussed, and some initial concepts were
@@ -511,7 +511,7 @@
       <div class="project-section">
         <div class="project-content">
           <div class="text">
-            <SplitFlapText :texts="['        [SOLUTION]        ']" />
+            <SplitFlapText :texts="['        [SOLUTION]        ']" preset="sectionFlapMobile" :align="'center'" />
             <div class="paragraph">
               During the journey, users can check their progress and see their
               costs, offering maximum convenience and transparency. GoEase is
@@ -530,7 +530,7 @@
         </div>
       </div>
       <div class="project-section">
-        <SplitFlapText :texts="['       [PROJECT] [VIDEO]        ']" />
+        <SplitFlapText :texts="['       [PROJECT] [VIDEO]        ']" preset="bannerFlapMobile" :align="'center'" />
         <div class="project-video">
           <iframe src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
             title="YouTube video player" frameborder="1"
@@ -538,7 +538,7 @@
             allowfullscreen></iframe>
         </div>
         <div class="projectDetailsFlap">
-          <SplitFlapText :texts="[
+          <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
             '        [KEYDATA]         ',
             '        TWO MONTHS      ',
             '     THIRD SEMESTER     ',
