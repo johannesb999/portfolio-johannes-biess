@@ -11,19 +11,19 @@ export default {
   // Tablet presets usually need fewer columns due to smaller screen width
 
 
-  heroFlapTablet: { columns: 29 },
-  detailsFlapTablet: { columns: 27 },
+  heroFlapTablet: { columns: 33 },
+  detailsFlapTablet: { columns: 31 },
   sectionFlapTablet: { columns: 50 },
   bannerFlapTablet: { columns: 50 },
-  keydataFlapTablet: { columns: 20 },
+  keydataFlapTablet: { columns: 25 },
 
   // Mobile presets usually need fewer columns due to smaller screen width
 
 
   heroFlapMobile: { columns: 29 },
   detailsFlapMobile: { columns: 27 },
-  sectionFlapMobile: { columns: 34 },
+  sectionFlapMobile: { columns: 30 },
   bannerFlapMobile: { columns: 20 },
-  keydataFlapMobile: { columns: 15 },
+  keydataFlapMobile: { columns: 25 },
 };
 
