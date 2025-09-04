@@ -42,6 +42,76 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import "assets/styles/index.scss";
 
+// Hint the browser to prefetch images at very low priority.
+// Prefetch downloads bytes only (no decode), minimizing main-thread work.
+const imagePrefetchUrls = [
+  "/img/pm/software.svg",
+  "/img/pm/process.svg",
+  "/img/pm/solution.svg",
+  "/img/pm/problem.svg",
+  "/img/pm/hardware.svg",
+  "/img/pm/thumbnail.svg",
+  "/img/sc/process.svg",
+  "/img/sc/solution.svg",
+  "/img/sc/problem.svg",
+  "/img/sc/thumbnail.svg",
+  "/img/js/starsapp.svg",
+  "/img/js/js.png",
+  "/img/js/Process.svg",
+  "/img/js/thumbnail.svg",
+  "/img/js/Implementaion.svg",
+  "/img/po/process.svg",
+  "/img/po/problem.svg",
+  "/img/po/implementation.svg",
+  "/img/po/softwarepro.svg",
+  "/img/po/thumbnail.svg",
+  "/img/ge/KonzeptPlakatProtosvg 1.png",
+  "/img/ge/hardwareProcess.svg",
+  "/img/ge/process.svg",
+  "/img/ge/solution.svg",
+  "/img/ge/problem.svg",
+  "/img/ge/thumbnail.svg",
+  "/img/ge/softwareProcess.svg",
+  "/img/dl/dl12.svg",
+  "/img/dl/drawingLight (13).svg",
+  "/img/dl/process.svg",
+  "/img/dl/dl6.svg",
+  "/img/dl/dl7.svg",
+  "/img/dl/dl5.svg",
+  "/img/dl/idea.svg",
+  "/img/dl/implementation.svg",
+  "/img/dl/thumbnail.svg",
+  "/img/cv/hfgbuilding.svg",
+  "/img/cv/intern 1.svg",
+  "/img/cv/bosch.svg",
+  "/img/cv/bosch.jpg",
+  "/img/cv/intern.svg",
+  "/img/cv/musecase3.png",
+  "/img/cv/musecase2.png",
+  "/img/cv/hfgbuilding.jpg",
+  "/img/cv/musecase1.png",
+  "/img/cv/kbsz.svg",
+  "/img/cv/dtack.svg",
+  "/img/cv/dtack.jpg",
+  "/img/tt/tt (4).svg",
+  "/img/tt/tt (2).svg",
+  "/img/tt/tt (3).svg",
+  "/img/tt/process.svg",
+  "/img/tt/solution.svg",
+  "/img/tt/tt (1).svg",
+  "/img/tt/idea.svg",
+  "/img/ws/wb1.png",
+  "/img/ws/wb2.png",
+];
+
+useHead({
+  link: imagePrefetchUrls.map((href) => ({
+    rel: "prefetch",
+    as: "image",
+    href,
+  })),
+});
+
 const router = useRouter();
 const currentLocale = ref("en");
 
