@@ -323,6 +323,8 @@ button {
   display: inline-block;
   transition: transform 0.3s ease;
   margin: var(--spacing-xxs);
+  position: relative;
+  z-index: 100;
 }
 
 .custom-link:hover {
