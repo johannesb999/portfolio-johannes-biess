@@ -1,6 +1,16 @@
 @use "@/assets/styles/type.scss" as type;
 
 .aboutMeText {
+  /* existing rules */
+}
+
+/* Ensure the About-page bottom link sits above any overlay */
+#bottomLink {
+  z-index: var(--z-index-alert);
+  pointer-events: auto;
+}
+
+.aboutMeText {
   display: flex;
   flex-direction: column;
   position: absolute;
