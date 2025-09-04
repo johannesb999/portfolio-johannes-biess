@@ -8,8 +8,8 @@
     </div>
 
     <div class="aboutMeText">
-      <SplitFlapText preset="heroFlap" :align="'center'" :texts="['         [ABOUT] [ME]          ']" />
-      <SplitFlapText preset="heroFlap" :align="'random'" :texts="[
+      <SplitFlapText preset="heroFlap" :align="'center'" :texts="[
+        '         [ABOUT] [ME]          ',
         '  DECISIVE   AGILE  CURIOUS',
         '    ADAPTABILITY   ACCURACY',
         'PUNCTUALITY   FAIRNESS     ',
