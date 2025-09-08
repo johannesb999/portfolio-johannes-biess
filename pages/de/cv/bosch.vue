@@ -32,7 +32,7 @@
               agilen Projektmanagement vertiefen. Während meiner Zeit bei Bosch
               habe ich tiefgehende Kenntnisse in als JIRA Administrator erlangt
               und konnte so helfen Prozesse in Teams und arbeitsbereichen in
-              methodeische bahnen zu lenken oder bestehende Arbeitsabläufe zu
+              methodische bahnen zu lenken oder bestehende Arbeitsabläufe zu
               optimieren. Ein weiteren
               Einblick in meine Leistungen und Tätigkeiten während der
               Ausbildung findet sich in meinem
@@ -46,7 +46,7 @@
             <div class="paragraph">
               Der Standort Schwäbisch Gmünd ist das Leitwerk des
               Unternehmensbereichs Vehicle Motion Vehicle Motion und umfasst das
-              Kompetenzzentrum für Entwicklung zentrum für Entwicklung,
+              Kompetenzzentrum für Entwicklung Zentrum für Entwicklung,
               Zentralfunktionen und Produktion. Produktion. Die Leidenschaft
               fürs Lenken vereint rund 4.000 Mitarbeiter Mitarbeiter aus
               verschiedenen Nationen in unterschiedlichen Tätigkeitsfeldern und
