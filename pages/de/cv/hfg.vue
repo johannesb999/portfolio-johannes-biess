@@ -39,7 +39,7 @@
               Lernumgebung, in der ich nicht nur meine Design- und
               Technikfähigkeiten aufbauen konnte, sondern auch lernte, wie ich
               sie in realen Projekten anwenden kann. Wie ich mich dabei
-              geschlagen habe in meiner
+              geschlagen habe hier in meiner
               <a href="/docs/Leistungsbescheinigung.pdf" download="Leistungsbescheinigung.pdf" class="custom-link"
                 style="text-decoration: underline">Leistungsbescheinigung.pdf</a>.
             </div>

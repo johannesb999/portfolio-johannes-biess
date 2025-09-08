@@ -19,7 +19,7 @@
       ]" />
     </div>
     <div class="wrapper">
-      <img src="public\profilepicture.svg" alt="profilepicture" />
+      <img src="/profilepicture.svg" alt="profilepicture" />
       <div id="quote">“There is never<br />- too much cheese.”</div>
     </div>
   </main>

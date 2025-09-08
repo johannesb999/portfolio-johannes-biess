@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+// Allow deploying under a subpath by honoring NUXT_APP_BASE_URL (e.g. "/portfolio-johannes-biess/")
+const base = process.env.NUXT_APP_BASE_URL || "/";
+
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ["@nuxt/image-edge"],
@@ -18,6 +21,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-08-27",
 
   app: {
+    baseURL: base,
     head: {
       title: "Johannes Biess",
       meta: [
@@ -25,11 +29,11 @@ export default defineNuxtConfig({
         { name: "viewport", content: "width=device-width, initial-scale=1" },
       ],
       link: [
-        // Preload critical fonts to minimize layout shift when navigating
-        { rel: 'preload', href: '/fonts/roboto-mono-v23-latin-regular.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts/roboto-mono-v23-latin-700.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts/inter-tight-v7-latin-regular.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts/inter-tight-v7-latin-700.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        // Preload critical fonts to minimize layout shift; prefix with baseURL and omit crossorigin to avoid cache mismatch
+        { rel: 'preload', href: `${base}fonts/roboto-mono-v23-latin-regular.woff2`, as: 'font', type: 'font/woff2' },
+        { rel: 'preload', href: `${base}fonts/roboto-mono-v23-latin-700.woff2`, as: 'font', type: 'font/woff2' },
+        { rel: 'preload', href: `${base}fonts/inter-tight-v7-latin-regular.woff2`, as: 'font', type: 'font/woff2' },
+        { rel: 'preload', href: `${base}fonts/inter-tight-v7-latin-700.woff2`, as: 'font', type: 'font/woff2' },
       ],
     },
   },

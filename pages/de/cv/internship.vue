@@ -34,7 +34,10 @@
               und gelernt, wie man durch das Analysieren von User Flows und Best Practices die Usability eines Produktes
               signifikant verbessert. Neben diesen fachlichen Kompetenzen war es besonders wichtig, den professionellen
               Umgang mit Kunden zu lernen—ihre Bedürfnisse zu erfassen, Erwartungen zu managen und konstruktives
-              Feedback entgegenzunehmen.
+              Feedback entgegenzunehmen. Hier mein detaillierter
+              <a href="/docs/Praxissemester-Bericht-Johannes-Biess.pdf"
+                download="Praxissemester-Bericht-Johannes-Biess.pdf" class="custom-link"
+                style="text-decoration: underline">Bericht und meine Learnings</a>.
             </div>
           </div>
 
@@ -42,14 +45,16 @@
             <SplitFlapText :texts="['[PRAKTIKUM] [BEI] [MUSECASE]']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               In einer Agentur zu arbeiten war für mich eine interessante und vor allem neue Erfahrung. Design-Methoden,
-              denen im Studium sehr
-              viel weniger Zeit gewidmet wird, sind plötzlich richtig sinnvoll und man muss auf Details achten, die im
-              Studium keine Rolle spielten. Das Praktikum und vor allem die Mitarbeiter bei musecase haben mir gezeigt,
-              wie in einem professionellen Umfeld Arbeit sinnvoll strukturiert und aufgeteilt wird. Dabei wurde mir
-              klar, wie essenziell eine klare Kommunikation innerhalb des Teams für den Erfolg eines Projektes ist. Ich
-              habe gelernt, mich aktiv in die Teamarbeit einzubringen, Verantwortung zu übernehmen und aus Fehlern zu
-              lernen, um den Arbeitsfluss kontinuierlich zu optimieren.
-
+              denen im Studium sehr viel weniger Zeit gewidmet wird, sind plötzlich richtig sinnvoll und man muss auf
+              Details achten, die im Studium keine Rolle spielten. Das Praktikum und vor allem die Mitarbeiter bei
+              musecase haben mir gezeigt, wie in einem professionellen Umfeld Arbeit sinnvoll strukturiert und
+              aufgeteilt wird. Dabei wurde mir klar, wie essenziell eine klare Kommunikation innerhalb des Teams für den
+              Erfolg eines Projektes ist. Ich habe gelernt, mich aktiv in die Teamarbeit einzubringen, Verantwortung zu
+              übernehmen und aus Fehlern zu lernen, um den Arbeitsfluss kontinuierlich zu optimieren. Was musecase über
+              mich sagt findest du in meinem:
+              <a href="/docs/Praxissemester-Zeugnis-Johannes-Biess.pdf"
+                download="Praxissemester-Zeugnis-Johannes-Biess.pdf" class="custom-link"
+                style="text-decoration: underline">Arbeitszeugnis</a>.
             </div>
           </div>
         </div>

@@ -33,7 +33,10 @@
               clearer understanding of the work methods of UX/UI designers and learned how to significantly improve a
               product's usability by analyzing user flows and best practices. In addition to these technical skills, it
               was particularly important to learn how to deal with clients professionally—to understand their needs,
-              manage expectations, and accept constructive feedback.
+              manage expectations, and accept constructive feedback. Here is my detailed <a
+                href="/docs/Praxissemester-Bericht-Johannes-Biess-EN.pdf"
+                download="Praxissemester-Bericht-Johannes-Biess.pdf" class="custom-link"
+                style="text-decoration: underline">Report and my learnings</a>.
             </div>
           </div>
 
@@ -45,8 +48,11 @@
               didn't play a role in university. The internship and, above all, the employees at musecase showed me how
               work is sensibly structured and divided in a professional environment. I realized how essential clear
               communication within the team is for the success of a project. I learned to actively contribute to
-              teamwork, take responsibility, and learn from mistakes to continuously optimize the workflow.
-
+              teamwork, take responsibility, and learn from mistakes to continuously optimize the workflow.What musecase
+              says about me can be found in my:
+              <a href="/docs/Praxissemester-Zeugnis-Johannes-Biess-EN.pdf"
+                download="Praxissemester-Zeugnis-Johannes-Biess.pdf" class="custom-link"
+                style="text-decoration: underline">Employment reference</a>.
             </div>
           </div>
         </div>
