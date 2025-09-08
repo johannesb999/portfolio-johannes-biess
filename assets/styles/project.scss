@@ -149,8 +149,7 @@ html {
 .paragraph {
   font-optical-sizing: auto;
   @include type.L-Family-Alt();
-  display: flex;
-  flex-direction: column;
+  display: block; /* allow inline text + links to flow naturally */
 }
 
 .tryOutLink {
@@ -390,8 +389,7 @@ h3 {
     font-optical-sizing: auto;
     @include type.L-Family-Alt();
     padding-top: var(--spacing-md);
-    display: flex;
-    flex-direction: column;
+    display: block; /* no flex here to keep inline flow */
   }
 
   .tryOutLink {
@@ -629,8 +627,7 @@ h3 {
   .paragraph {
     font-optical-sizing: auto;
     @include type.L-Family-Alt();
-    display: flex;
-    flex-direction: column;
+    display: block; /* no flex here to keep inline flow */
   }
 
   .tryOutLink {

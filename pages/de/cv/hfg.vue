@@ -40,7 +40,7 @@
               Technikfähigkeiten aufbauen konnte, sondern auch lernte, wie ich
               sie in realen Projekten anwenden kann. Wie ich mich dabei
               geschlagen habe hier in meiner
-              <a href="/docs/hfg/Leistungsbescheinigung.pdf" download="Leistungsbescheinigung.pdf" class="custom-link"
+              <a href="/docs/hfg/leistungsbescheinigung-de.pdf" download="Leistungsbescheinigung.pdf" class="custom-link"
                 style="text-decoration: underline">Leistungsbescheinigung.pdf</a>.
             </div>
           </div>
@@ -62,7 +62,7 @@
               Lernmethoden und einen starken Bezug zur Praxis lernen die
               Studierenden alle Schritte von der Konzeptentwicklung bis hin zum
               fertigen Prototypen kennen. Für mehr Informationen
-              <a href="/docs/hfg/moduleManual.pdf" download="Modulhandbuch.pdf" class="custom-link"
+              <a href="/docs/hfg/module-manual-en.pdf" download="Modulhandbuch.pdf" class="custom-link"
                 style="text-decoration: underline">Modulhandbuch.pdf</a>.
             </div>
           </div>

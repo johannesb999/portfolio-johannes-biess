@@ -38,7 +38,7 @@
               einem professionellen Umfeld geschult und gefördert. Ein weiteren
               Einblick in meine Leistungen und Tätigkeiten während der
               Ausbildung findet sich in meinem
-              <a href="/docs/dtack/ArbeitszeugnisDtack.pdf" download="ArbeitszeugnisDtack.pdf" class="custom-link"
+              <a href="/docs/dtack/arbeitszeugnis-dtack-de.pdf" download="ArbeitszeugnisDtack.pdf" class="custom-link"
                 style="text-decoration: underline">Arbeitszeugnis.pdf</a>
             </div>
           </div>
