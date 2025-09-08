@@ -8,14 +8,10 @@ export default defineNuxtConfig({
   modules: ["@nuxt/image-edge"],
   css: [
     "~/assets/font.scss",
-    // Load route-level styles globally to avoid FOUC/relayout when navigating
+    // Base styles that are used across pages
     "~/assets/styles/index.scss",
-    "~/assets/styles/about.scss",
-    "~/assets/styles/contact.scss",
-    "~/assets/styles/project.scss",
-    "~/assets/styles/cv.scss",
-    "~/assets/styles/resume.scss",
-    "~/assets/styles/skillset.scss",
+    // Ensure page transition animations are always available (no code-split)
+    "~/assets/styles/transitions.scss",
   ],
 
   compatibilityDate: "2024-08-27",

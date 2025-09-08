@@ -74,11 +74,29 @@ export default defineNuxtRouteMiddleware((to, from) => {
   const toLang = to.path.match(/\/(de|en)\//);
   const languageChanged = fromLang && toLang && fromLang[1] !== toLang[1];
 
+  // (Hinweis) Spezifische Regeln für Start <-> About wurden entfernt, um ursprüngliche Richtungslogik zu bewahren
+
   // 1. Priorität: Sprachwechsel
   if (languageChanged) {
     to.meta.pageTransition = { name: "fade" };
     from.meta.pageTransition = { name: "fade" };
     // console.log("Transition name: fade");
+    return;
+  }
+
+  // 1.5 Start <-> About: erzwinge eindeutige Richtung (Home -> About: left, About -> Home: right)
+  const isHome = (p: string) => p === "/" || /^\/(de|en)\/?$/.test(p);
+  const isAboutRoute = (p: string) => /^(?:\/(de|en))\/about\/?$/.test(p);
+  if (isHome(from.path) && isAboutRoute(to.path)) {
+    const t = { name: "page-right" };
+    to.meta.pageTransition = t;
+    from.meta.pageTransition = t;
+    return;
+  }
+  if (isAboutRoute(from.path) && isHome(to.path)) {
+    const t = { name: "page-left" };
+    to.meta.pageTransition = t;
+    from.meta.pageTransition = t;
     return;
   }
 

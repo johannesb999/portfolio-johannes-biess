@@ -114,7 +114,8 @@
     margin: var(--spacing-none);
     padding: var(--spacing-none);
     letter-spacing: var(--letter-spacing-base);
-    scroll-behavior: smooth;
+    /* Avoid smooth scroll during route transitions to prevent Y-jank */
+    scroll-behavior: auto;
     font-optical-sizing: auto;
   }
 

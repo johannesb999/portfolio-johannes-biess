@@ -1,11 +1,7 @@
 <template>
   <div>
 
-    <head>
-      <title>Johannes Biess</title>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
+    <!-- Head tags are managed by nuxt.config.ts (app.head) -->
     <NuxtPage />
 
     <!-- Theme Switcher Button -->
@@ -16,7 +12,6 @@
     <!-- Header (Language + Home) -->
     <AppHeader />
     <!-- <CustomCursor /> -->
-    <PageTransitions />
   </div>
 </template>
 
@@ -218,9 +213,13 @@ html {
   width: 100%;
   scrollbar-gutter: stable both-edges;
   letter-spacing: var(--letter-spacing-base);
-  scroll-behavior: smooth;
+  /* Avoid CSS-driven smooth scrolling during route changes to prevent Y-jank */
+  scroll-behavior: auto;
   font-optical-sizing: auto;
 }
+
+/* Restrict horizontal overflow but don't force full-height layout */
+html, body { overflow-x: hidden; }
 
 body {
   /* Always reserve vertical scrollbar to avoid width/layout jumps between pages */
@@ -282,7 +281,7 @@ button {
     border-color 0.5s ease;
 }
 
-/* fade transition moved to PageTransitions component */
+/* Transitions are provided globally via assets/styles/transitions.scss */
 
 #bottomLink {
   @include type.L-Heading-Style('-bold');
@@ -339,7 +338,7 @@ button {
   transform: scale(1.1);
 }
 
-/* Page transitions moved to PageTransitions component */
+/* Page transitions provided globally */
 </style>
 
 <style lang="scss">

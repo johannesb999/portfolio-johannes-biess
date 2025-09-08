@@ -1,7 +1,4 @@
-<template />
-
-<style lang="scss">
-/* Global page transition styles */
+/* Global page transition styles (loaded globally to avoid code-split issues) */
 .page-left-enter-active,
 .page-left-leave-active,
 .page-right-enter-active,
@@ -10,15 +7,17 @@
 .page-up-leave-active,
 .page-down-enter-active,
 .page-down-leave-active {
-  position: fixed;
+  position: fixed; /* pin to viewport to avoid scroll-induced Y-movement */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: hidden;
   transition: transform 700ms cubic-bezier(0.77, 0, 0.175, 1),
     box-shadow 500ms cubic-bezier(0.77, 0, 0.175, 1);
   z-index: 100;
   width: 100%;
+  height: 100%;
   box-shadow: 0 0 40px var(--color-black, rgba(0, 0, 0, 0));
   pointer-events: none;
   will-change: transform;
@@ -49,22 +48,22 @@
   box-shadow: -10px 0 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
 }
 
-.page-down-enter-from {
+.page-down-enter-from { /* slide new page from top */
   transform: translateY(-100%);
   box-shadow: 0 10px 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
 }
 
-.page-down-leave-to {
+.page-down-leave-to { /* slide old page to bottom */
   transform: translateY(100%);
   box-shadow: 0 -10px 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
 }
 
-.page-up-enter-from {
+.page-up-enter-from { /* slide new page from bottom */
   transform: translateY(100%);
   box-shadow: 0 -10px 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
 }
 
-.page-up-leave-to {
+.page-up-leave-to { /* slide old page to top */
   transform: translateY(-100%);
   box-shadow: 0 10px 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
 }
@@ -86,4 +85,3 @@
 .fade-leave-to {
   opacity: 0;
 }
-</style>
