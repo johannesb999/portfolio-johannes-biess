@@ -38,7 +38,7 @@
               effectively? The HfG created an inspiring learning environment
               where I could not only build my design and technical skills, but
               also learn how to apply them in real projects. Take a look at my
-              <a href="/docs/transciptOfRecords.pdf" download="transcriptOfRecords.pdf" class="custom-link"
+              <a href="/docs/hfg/transciptOfRecords.pdf" download="transcriptOfRecords.pdf" class="custom-link"
                 style="text-decoration: underline">transcriptOfRecords.pdf</a>for more details.
             </div>
           </div>
@@ -59,7 +59,7 @@
               combination of hands-on learning and a strong link to practice,
               students learn all the steps from concept development to the
               finished prototype. Take a look at the
-              <a href="/docs/moduleManual.pdf" download="moduleManual.pdf" class="custom-link"
+              <a href="/docs/hfg/moduleManual.pdf" download="moduleManual.pdf" class="custom-link"
                 style="text-decoration: underline">moduleManual.pdf</a>for more details.
             </div>
           </div>
