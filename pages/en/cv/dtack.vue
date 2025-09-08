@@ -37,8 +37,8 @@
               communication and organisation, in a professional setting for the
               first time. You can find out more about what I learned and did
               during my apprenticeship in my
-              <a href="/docs/dtack/employment-reference-dtack-en.pdf" download="EmploymentReferenceDtack.pdf" class="custom-link"
-                style="text-decoration: underline">Employment Reference.pdf</a>
+              <a href="/docs/dtack/employment-reference-dtack-en.pdf" target="_blank" rel="noopener" class="custom-link"
+                style="text-decoration: underline">Employment Reference</a>
             </div>
           </div>
 

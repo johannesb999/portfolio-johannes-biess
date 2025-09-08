@@ -36,8 +36,8 @@
               optimieren. Ein weiteren
               Einblick in meine Leistungen und Tätigkeiten während der
               Ausbildung findet sich in meinem
-              <a href="/docs/bosch/arbeitszeugnis-bosch-de.pdf" download="Arbeitszeugnis.pdf" class="custom-link"
-                style="text-decoration: underline">Arbeitszeugnis.pdf</a>
+              <a href="/docs/bosch/arbeitszeugnis-bosch-de.pdf" target="_blank" rel="noopener" class="custom-link"
+                style="text-decoration: underline">Arbeitszeugnis</a>
             </div>
           </div>
 

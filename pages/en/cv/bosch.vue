@@ -33,8 +33,8 @@
               guiding teams and work areas towards more methodical processes and
               making existing workflows more efficient. You can find out more about what I learned and did
               during my apprenticeship in my
-              <a href="/docs/bosch/employment-reference-bosch-en.pdf" download="EmploymentReferenceBosch.pdf" class="custom-link"
-                style="text-decoration: underline">Employment Reference.pdf</a>
+              <a href="/docs/bosch/employment-reference-bosch-en.pdf" target="_blank" rel="noopener" class="custom-link"
+                style="text-decoration: underline">Employment Reference</a>
             </div>
           </div>
 

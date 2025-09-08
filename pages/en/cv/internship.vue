@@ -34,9 +34,8 @@
               product's usability by analyzing user flows and best practices. In addition to these technical skills, it
               was particularly important to learn how to deal with clients professionally—to understand their needs,
               manage expectations, and accept constructive feedback. Here is my detailed <a
-                href="/docs/internship/praxissemester-bericht-johannes-biess-en.pdf"
-                download="Praxissemester-Bericht-Johannes-Biess.pdf" class="custom-link"
-                style="text-decoration: underline">Report and my learnings</a>.
+                href="/docs/internship/praxissemester-bericht-johannes-biess-en.pdf" target="_blank" rel="noopener"
+                class="custom-link" style="text-decoration: underline">Report and my learnings</a>.
             </div>
           </div>
 
@@ -50,9 +49,8 @@
               communication within the team is for the success of a project. I learned to actively contribute to
               teamwork, take responsibility, and learn from mistakes to continuously optimize the workflow.What musecase
               says about me can be found in my:
-              <a href="/docs/internship/praxissemester-zeugnis-johannes-biess-en.pdf"
-                download="Praxissemester-Zeugnis-Johannes-Biess.pdf" class="custom-link"
-                style="text-decoration: underline">Employment reference</a>.
+              <a href="/docs/internship/praxissemester-zeugnis-johannes-biess-en.pdf" target="_blank" rel="noopener"
+                class="custom-link" style="text-decoration: underline">Employment reference</a>.
             </div>
           </div>
         </div>

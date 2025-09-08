@@ -63,7 +63,7 @@
     </div>
 
     <div id="title">
-      <a href="/docs/resume/johannes-biess-lebenslauf-en.pdf" download="Johannes-Biess-Resume.pdf" class="custom-link">Download
+      <a href="/docs/resume/johannes-biess-lebenslauf-en.pdf" target="_blank" rel="noopener" class="custom-link">open
         Resume</a>
     </div>
   </main>
