@@ -33,6 +33,7 @@ html {
   @include type.L-Heading-Style('-bold');
   text-align: center;
   background-color: var(--color-background);
+  z-index: var(--z-index-high);
 }
 
 .background {
@@ -52,6 +53,7 @@ html {
   @include type.L-Heading-Style('-bold');
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  z-index: var(--z-index-high);
 }
 
 #projectLinkBefore {
@@ -62,6 +64,7 @@ html {
   @include type.L-Heading-Style('-bold');
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  z-index: var(--z-index-high);
 }
 
 .projectFlap,

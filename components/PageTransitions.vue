@@ -20,6 +20,9 @@
   z-index: 100;
   width: 100%;
   box-shadow: 0 0 40px var(--color-black, rgba(0, 0, 0, 0));
+  pointer-events: none;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .page-left-enter-from,
@@ -84,4 +87,3 @@
   opacity: 0;
 }
 </style>
-

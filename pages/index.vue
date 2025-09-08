@@ -1,5 +1,4 @@
 <template>
-  <html lang="eng">
   <div class="container">
     <div id="leftLink" ref="leftLink">
       <nuxt-link to="/en/about" class="custom-link">
@@ -33,14 +32,20 @@
       </div>
     </div>
   </div>
-
-  </html>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from "vue";
+import { useHead } from "#imports";
 import { useRouter } from "vue-router";
 import "assets/styles/index.scss";
+
+type Letter = {
+  target: string;
+  current: string;
+  isSeparator: boolean;
+  styleClass: string;
+};
 
 // Reactive list of image URLs (filled from server route)
 const prefetchUrls = ref<string[]>([]);
@@ -57,25 +62,30 @@ useHead({
   ),
 });
 
+// Also serve this page at "/en" so both "/" and "/en" show the same landing view.
+definePageMeta({
+  alias: ["/en"],
+});
+
 const router = useRouter();
 const currentLocale = ref("en");
 
-const switchLanguage = (lang) => {
+const switchLanguage = (lang: string) => {
   currentLocale.value = lang;
   router.push({ path: `/${lang}` });
 };
 
-const leftLink = ref(null);
-const rightLink = ref(null);
-const bottomLink = ref(null);
+const leftLink = ref<HTMLElement | null>(null);
+const rightLink = ref<HTMLElement | null>(null);
+const bottomLink = ref<HTMLElement | null>(null);
 
-const texts = [
+const texts: string[] = [
   "HI MY NAME IS          ",
   "[JOHANNES] [BIESS]           ",
   "AND I AM               ",
   "A DEVELOPER            ",
 ];
-const newWords = [
+const newWords: string[] = [
   "A DESIGNER",
   "A PROBLEMSOLVER",
   "A PROTOTYPER",
@@ -84,12 +94,12 @@ const newWords = [
 ];
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-function getRandomChar() {
+function getRandomChar(): string {
   return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
 
-function createTextArray(text, maxLength) {
-  const result = [];
+function createTextArray(text: string, maxLength: number): Letter[] {
+  const result: Letter[] = [];
   let inStyledWord = false;
 
   for (let char of text.padEnd(maxLength, " ")) {
@@ -113,16 +123,18 @@ function createTextArray(text, maxLength) {
   return result;
 }
 
-const getTextLengthWithoutBrackets = (text) =>
+const getTextLengthWithoutBrackets = (text: string) =>
   text.replace(/\[|\]/g, "").length;
 
 const maxLength = Math.max(...texts.map(getTextLengthWithoutBrackets));
-const textArrays = ref(texts.map((text) => createTextArray(text, maxLength)));
-const hasAnimated = ref(new Array(texts.length).fill(false));
+const textArrays = ref<Letter[][]>(
+  texts.map((text: string) => createTextArray(text, maxLength))
+);
+const hasAnimated = ref<boolean[]>(new Array(texts.length).fill(false));
 
-const animate = (index) => {
+const animate = (index: number) => {
   const maxSteps = 13;
-  textArrays.value[index].forEach((item, idx) => {
+  textArrays.value[index].forEach((item: Letter, idx: number) => {
     let currentStep = 0;
 
     const step = () => {
@@ -138,13 +150,13 @@ const animate = (index) => {
   });
 };
 
-const animateBottomLineNewWord = () => {
+const animateBottomLineNewWord = (): void => {
   const bottomIndex = textArrays.value.length - 1;
   const word = newWords.shift();
   newWords.push(word);
-  textArrays.value[bottomIndex] = createTextArray(word, maxLength);
+  textArrays.value[bottomIndex] = createTextArray(word as string, maxLength);
 
-  textArrays.value[bottomIndex].forEach((item, idx) => {
+  textArrays.value[bottomIndex].forEach((item: Letter, idx: number) => {
     let currentStep = 0;
     const maxSteps = 12;
 
@@ -161,21 +173,21 @@ const animateBottomLineNewWord = () => {
   });
 };
 
-const debounce = (func, wait) => {
-  let timeout;
-  return function executedFunction(...args) {
+const debounce = <T extends (...args: any[]) => void>(func: T, wait: number) => {
+  let timeout: ReturnType<typeof setTimeout> | undefined;
+  return function executedFunction(...args: Parameters<T>) {
     const later = () => {
-      clearTimeout(timeout);
+      if (timeout) clearTimeout(timeout);
       func(...args);
     };
-    clearTimeout(timeout);
+    if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
   };
 };
 
 const isAnimating = ref(false);
 
-const handleWheel = debounce((event) => {
+const handleWheel = debounce((event: WheelEvent) => {
   if (event.deltaY > 0 && !isAnimating.value) {
     isAnimating.value = true;
     triggerSplitFlapAnimation();
@@ -185,17 +197,17 @@ const handleWheel = debounce((event) => {
   }
 }, 200);
 
-const triggerSplitFlapAnimation = () => {
-  const projectLinkCharacters = document.querySelectorAll(
+const triggerSplitFlapAnimation = (): void => {
+  const projectLinkCharacters: NodeListOf<Element> = document.querySelectorAll(
     "#bottomLink .project-char"
   );
 
   animateCharacters(projectLinkCharacters);
-  textArrays.value.forEach((textArray, index) => animate(index));
+  textArrays.value.forEach((textArray: Letter[], index: number) => animate(index));
 };
 
-const animateCharacters = (characters) => {
-  characters.forEach((char, index) => {
+const animateCharacters = (characters: NodeListOf<Element>) => {
+  characters.forEach((char: Element, index: number) => {
     setTimeout(() => {
       char.classList.add("project-flip");
       setTimeout(() => {
@@ -214,9 +226,9 @@ onMounted(() => {
   window.addEventListener("wheel", handleWheel);
 
   // Fügen Sie die Animation zu den .link-content-Elementen hinzu
-  [leftLink.value, rightLink.value, bottomLink.value].forEach((element) => {
+  [leftLink.value, rightLink.value, bottomLink.value].forEach((element: HTMLElement | null) => {
     if (element) {
-      const linkContent = element.querySelector(".link-content");
+      const linkContent = element.querySelector(".link-content") as HTMLElement | null;
       if (linkContent) {
         linkContent.classList.add("animate-scale");
       }

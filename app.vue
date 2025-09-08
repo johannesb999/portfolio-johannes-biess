@@ -214,11 +214,17 @@ html {
   background-color: var(--color-background);
   margin: var(--spacing-none);
   padding: var(--spacing-none);
-  height: 100dvh;
-  width: 100dvw;
+  min-height: 100dvh;
+  width: 100%;
+  scrollbar-gutter: stable both-edges;
   letter-spacing: var(--letter-spacing-base);
   scroll-behavior: smooth;
   font-optical-sizing: auto;
+}
+
+body {
+  /* Always reserve vertical scrollbar to avoid width/layout jumps between pages */
+  overflow-y: scroll;
 }
 
 img {
@@ -285,6 +291,7 @@ button {
   bottom: var(--side-percentage);
   left: 50dvw;
   transform: translateX(-50%);
+  z-index: var(--z-index-high);
 }
 
 #topLink {
@@ -295,6 +302,7 @@ button {
   transform: translateX(-50%);
   @include type.L-Heading-Style('-bold');
   text-align: center;
+  z-index: var(--z-index-high);
 }
 
 #rightLink {
@@ -305,6 +313,7 @@ button {
   @include type.L-Heading-Style('-bold');
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  z-index: var(--z-index-high);
 }
 
 #leftLink {
@@ -315,6 +324,7 @@ button {
   text-orientation: mixed;
   position: absolute;
   @include type.L-Heading-Style('-bold');
+  z-index: var(--z-index-high);
 }
 
 .custom-link {
@@ -323,8 +333,6 @@ button {
   display: inline-block;
   transition: transform 0.3s ease;
   margin: var(--spacing-xxs);
-  position: relative;
-  z-index: 100;
 }
 
 .custom-link:hover {
