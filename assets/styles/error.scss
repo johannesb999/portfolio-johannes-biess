@@ -6,7 +6,7 @@
   display: grid;
   place-items: center;
   background: var(--color-background);
-  color: var(--color-primary);
+  color: #000000;
   padding: var(--spacing-lg);
   overflow: hidden;
 }
@@ -16,4 +16,24 @@
   gap: var(--spacing-sm);
   justify-items: center;
   text-align: center;
+  /* Gray only SplitFlap content inside center */
+  --color-primary: #c3c3c3;
+  --color-black: #c3c3c3;
+  --color-accent: #c3c3c3;
+}
+
+.center .primary-line {
+  /* Keep the first (404/ERROR/OFFLINE) line black */
+  --color-primary: var(--color-black);
+  --color-black: var(--color-black);
+  --color-accent: var(--color-accent);
+}
+
+.customlink {
+  color: var(--color-primary);
+
+
+  &:hover {
+    color: var(--color-accent);
+  }
 }

@@ -11,7 +11,9 @@
     </div>
 
     <div class="center">
-      <SplitFlapText preset="heroFlap" :align="'center'" :texts="[heroLine1]" />
+      <div class="primary-line">
+        <SplitFlapText preset="heroFlap" :align="'center'" :texts="[heroLine1]" />
+      </div>
       <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[heroLine2]" />
       <SplitFlapText v-for="(line, idx) in detailLines" :key="'dl-'+idx" preset="sectionFlap" :align="'center'" :texts="[line]" />
     </div>
