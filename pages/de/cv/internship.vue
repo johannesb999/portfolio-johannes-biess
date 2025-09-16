@@ -18,7 +18,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\cv\musecase2.png" alt="Picture of me in front of goldengate bridge" />
+        <img src="/img/cv/musecase2.png" alt="Picture of me in front of goldengate bridge" />
       </div>
     </div>
 
@@ -35,8 +35,8 @@
               signifikant verbessert. Neben diesen fachlichen Kompetenzen war es besonders wichtig, den professionellen
               Umgang mit Kunden zu lernen—ihre Bedürfnisse zu erfassen, Erwartungen zu managen und konstruktives
               Feedback entgegenzunehmen. Hier mein detaillierter
-              <a href="/docs/internship/praxissemester-bericht-johannes-biess-de.pdf" target="_blank" rel="noopener"
-                class="custom-link" style="text-decoration: underline">Bericht und meine Learnings</a>.
+              <NuxtLink to="/docs/internship/praxissemester-bericht-johannes-biess-de.pdf" target="_blank" rel="noopener"
+                class="custom-link" style="text-decoration: underline">Bericht und meine Learnings</NuxtLink>.
             </div>
           </div>
 
@@ -51,8 +51,8 @@
               Erfolg eines Projektes ist. Ich habe gelernt, mich aktiv in die Teamarbeit einzubringen, Verantwortung zu
               übernehmen und aus Fehlern zu lernen, um den Arbeitsfluss kontinuierlich zu optimieren. Was muse case über
               mich sagt findest du in meinem:
-              <a href="/docs/internship/praxissemester-zeugnis-johannes-biess-de.pdf" target="_blank" rel="noopener"
-                class="custom-link" style="text-decoration: underline">Arbeitszeugnis</a>.
+              <NuxtLink to="/docs/internship/praxissemester-zeugnis-johannes-biess-de.pdf" target="_blank" rel="noopener"
+                class="custom-link" style="text-decoration: underline">Arbeitszeugnis</NuxtLink>.
             </div>
           </div>
         </div>
