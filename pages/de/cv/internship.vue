@@ -46,10 +46,10 @@
               In einer Agentur zu arbeiten war für mich eine interessante und vor allem neue Erfahrung. Design-Methoden,
               denen im Studium sehr viel weniger Zeit gewidmet wird, sind plötzlich richtig sinnvoll und man muss auf
               Details achten, die im Studium keine Rolle spielten. Das Praktikum und vor allem die Mitarbeiter bei
-              musecase haben mir gezeigt, wie in einem professionellen Umfeld Arbeit sinnvoll strukturiert und
+              muse case haben mir gezeigt, wie in einem professionellen Umfeld Arbeit sinnvoll strukturiert und
               aufgeteilt wird. Dabei wurde mir klar, wie essenziell eine klare Kommunikation innerhalb des Teams für den
               Erfolg eines Projektes ist. Ich habe gelernt, mich aktiv in die Teamarbeit einzubringen, Verantwortung zu
-              übernehmen und aus Fehlern zu lernen, um den Arbeitsfluss kontinuierlich zu optimieren. Was musecase über
+              übernehmen und aus Fehlern zu lernen, um den Arbeitsfluss kontinuierlich zu optimieren. Was muse case über
               mich sagt findest du in meinem:
               <a href="/docs/internship/praxissemester-zeugnis-johannes-biess-de.pdf" target="_blank" rel="noopener"
                 class="custom-link" style="text-decoration: underline">Arbeitszeugnis</a>.

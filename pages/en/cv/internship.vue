@@ -44,10 +44,11 @@
             <div class="paragraph">
               Working in an agency was an interesting and, above all, a new experience for me. Design methods that are
               given much less time in my studies are suddenly very useful, and you have to pay attention to details that
-              didn't play a role in university. The internship and, above all, the employees at musecase showed me how
+              didn't play a role in university. The internship and, above all, the employees at muse case showed me how
               work is sensibly structured and divided in a professional environment. I realized how essential clear
               communication within the team is for the success of a project. I learned to actively contribute to
-              teamwork, take responsibility, and learn from mistakes to continuously optimize the workflow.What musecase
+              teamwork, take responsibility, and learn from mistakes to continuously optimize the workflow.What muse
+              case
               says about me can be found in my:
               <a href="/docs/internship/praxissemester-zeugnis-johannes-biess-en.pdf" target="_blank" rel="noopener"
                 class="custom-link" style="text-decoration: underline">Employment reference</a>.

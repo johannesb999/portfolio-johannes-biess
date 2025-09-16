@@ -219,7 +219,10 @@ html {
 }
 
 /* Restrict horizontal overflow but don't force full-height layout */
-html, body { overflow-x: hidden; }
+html,
+body {
+  overflow-x: hidden;
+}
 
 body {
   /* Always reserve vertical scrollbar to avoid width/layout jumps between pages */
