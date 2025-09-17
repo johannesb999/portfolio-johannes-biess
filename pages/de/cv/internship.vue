@@ -51,8 +51,8 @@
               Erfolg eines Projektes ist. Ich habe gelernt, mich aktiv in die Teamarbeit einzubringen, Verantwortung zu
               übernehmen und aus Fehlern zu lernen, um den Arbeitsfluss kontinuierlich zu optimieren. Was muse case über
               mich sagt findest du in meinem:
-              <NuxtLink to="/docs/internship/praxissemester-zeugnis-johannes-biess-de.pdf" target="_blank"
-                rel="noopener" class="custom-link" style="text-decoration: underline">Arbeitszeugnis</NuxtLink>.
+              <NuxtLink to="/docs/internship/praxissemester-zeugnis-johannes-biess-d.pdf" target="_blank" rel="noopener"
+                class="custom-link" style="text-decoration: underline">Arbeitszeugnis</NuxtLink>.
             </div>
           </div>
         </div>

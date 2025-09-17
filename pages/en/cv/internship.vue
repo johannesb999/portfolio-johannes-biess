@@ -34,8 +34,8 @@
               product's usability by analyzing user flows and best practices. In addition to these technical skills, it
               was particularly important to learn how to deal with clients professionally—to understand their needs,
               manage expectations, and accept constructive feedback. Here is my detailed
-              <NuxtLink to="/docs/internship/praxissemester-bericht-johannes-biess-en.pdf" target="_blank"
-                rel="noopener" class="custom-link" style="text-decoration: underline">Report and my learnings</NuxtLink>
+              <NuxtLink to="/docs/internship/praxissemester-bericht-johannes-biess-e.pdf" target="_blank" rel="noopener"
+                class="custom-link" style="text-decoration: underline">Report and my learnings</NuxtLink>
               .
             </div>
           </div>
