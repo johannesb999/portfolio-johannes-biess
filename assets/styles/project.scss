@@ -5,18 +5,18 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  min-height: 100dvh;
-  width: 100%;
-  scrollbar-gutter: stable both-edges;
+  height: 100vh;
+  width: 100vw;
 }
 
-.detailsLink-container {
+:deep(.detailsLink-container) {
   position: absolute;
   bottom: 0;
   width: 100vw;
   display: flex;
   justify-content: center;
   padding-bottom: var(--spacing-lg);
+  z-index: var(--z-index-alert);
   @include type.L-Heading-Style('-bold');
 }
 
@@ -68,6 +68,11 @@ html {
   z-index: var(--z-index-high);
 }
 
+.project-hero {
+  position: relative;
+  min-height: 100vh;
+}
+
 .projectFlap,
 .wrapper {
   display: flex;
@@ -115,6 +120,10 @@ html {
   justify-content: center;
   align-items: center;
   margin-bottom: var(--spacing-lg);
+}
+
+#details-section {
+  scroll-margin-top: calc(8vh + var(--spacing-lg));
 }
 
 .project-content {
@@ -250,12 +259,19 @@ h3 {
   }
 
 
-  .detailsLink-container {
+  .project-hero {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  :deep(.detailsLink-container) {
     position: absolute;
     bottom: 0;
+    width: 100vw;
     display: flex;
     justify-content: center;
     padding-bottom: var(--spacing-lg);
+    z-index: var(--z-index-alert);
     @include type.L-Heading-Style('-bold');
   }
 
@@ -389,7 +405,8 @@ h3 {
     font-optical-sizing: auto;
     @include type.L-Family-Alt();
     padding-top: var(--spacing-md);
-    display: block; /* no flex here to keep inline flow */
+    display: flex;
+    flex-direction: column;
   }
 
   .tryOutLink {
@@ -499,6 +516,7 @@ h3 {
     display: flex;
     justify-content: center;
     padding-bottom: var(--spacing-lg);
+    z-index: var(--z-index-high);
     @include type.L-Heading-Style('-bold');
   }
 
@@ -731,12 +749,19 @@ h3 {
   }
 
 
-  .detailsLink-container {
+  .project-hero {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  :deep(.detailsLink-container) {
     position: absolute;
     bottom: 0;
+    width: 100vw;
     display: flex;
     justify-content: center;
     padding-bottom: var(--spacing-lg);
+    z-index: var(--z-index-alert);
     @include type.L-Heading-Style('-bold');
   }
 
@@ -816,9 +841,6 @@ h3 {
     object-fit: cover;
     object-position: center;
   }
-
-
-
   .project-details {
     max-width: 80vw;
     margin: 0 auto;

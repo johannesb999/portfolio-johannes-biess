@@ -13,26 +13,28 @@
       <nuxt-link to="/en/project/goEase" class="custom-link">GOEASE</nuxt-link>
     </div>
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
-        '[PLANTMONIT]',
-      ]" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        'PLANTS  SMART TOOL',
-        'SVELTE FIGMA',
-        'ESP32   WIREFRAMES',
-        'FUSION360  UI  UX',
-        'OPENAI   MQTT    MONGODB ',
-      ]" />
-    </div>
-
-    <div class="wrapper">
-      <div class="picture">
-        <img src="public\img\pm\thumbnail.svg" alt="plantmonit" />
+    <section class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+          '[PLANTMONIT]',
+        ]" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          'PLANTS  SMART TOOL',
+          'SVELTE FIGMA',
+          'ESP32   WIREFRAMES',
+          'FUSION360  UI  UX',
+          'OPENAI   MQTT    MONGODB ',
+        ]" />
       </div>
-    </div>
 
-    <DetailsScroll />
+      <div class="wrapper">
+        <div class="picture">
+          <img src="public\img\pm\thumbnail.svg" alt="plantmonit" />
+        </div>
+      </div>
+
+      <DetailsScroll />
+    </section>
 
     <div v-if="isDesktop" class="project-details">
       <div class="project-section" id="details-section">

@@ -14,29 +14,42 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 const isScrolled = ref(false);
+const thresholdPx = 10;
+const route = useRoute();
 
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 10;
+const getScrollY = () => (
+  window.pageYOffset ||
+  document.documentElement.scrollTop ||
+  document.body.scrollTop ||
+  0
+);
+
+const updateFromScroll = (source = 'unknown') => {
+  const y = getScrollY();
+  const next = y > thresholdPx;
+  if (isScrolled.value !== next) {
+    console.log('[ScrollLink] toggle', { from: isScrolled.value, to: next, y, source });
+    isScrolled.value = next;
+  }
 };
 
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-};
+const onWinScroll = () => updateFromScroll('window:scroll');
+const onDocScroll = () => updateFromScroll('document:scroll');
+const onTouchMove = () => updateFromScroll('document:touchmove');
 
 onMounted(() => {
-  handleScroll(); // Initialize `isScrolled` when mounting
-  window.addEventListener('scroll', handleScroll);
+  console.log('[ScrollLink] mounted', { path: route.path, thresholdPx });
+  updateFromScroll('init');
+  window.addEventListener('scroll', onWinScroll, { passive: true });
+  document.addEventListener('scroll', onDocScroll, { passive: true });
+  document.addEventListener('touchmove', onTouchMove, { passive: true });
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener('scroll', onWinScroll);
+  document.removeEventListener('scroll', onDocScroll);
+  document.removeEventListener('touchmove', onTouchMove);
 });
-
-// Access the current route
-const route = useRoute();
 
 // Compute the current locale based on the route path
 const currentLocale = computed(() => {
