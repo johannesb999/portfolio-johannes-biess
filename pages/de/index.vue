@@ -42,10 +42,10 @@ const switchLanguage = (lang) => {
 };
 
 const texts = [
-  "HI MEIN NAME IST      ",
-  "[JOHANNES] [BIESS]        ",
-  "UND ICH BIN           ",
-  "DESIGNER        ",
+  "HI MEIN NAME IST   ",
+  "[JOHANNES] [BIESS]     ",
+  "UND ICH BIN        ",
+  "DESIGNER     ",
 ];
 const newWords = [
   "ENTWICKLER",

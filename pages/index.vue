@@ -80,10 +80,10 @@ const rightLink = ref<HTMLElement | null>(null);
 const bottomLink = ref<HTMLElement | null>(null);
 
 const texts: string[] = [
-  "HI MY NAME IS          ",
-  "[JOHANNES] [BIESS]           ",
-  "AND I AM               ",
-  "A DESIGNER        ",
+  "HI MY NAME IS    ",
+  "[JOHANNES] [BIESS]     ",
+  "AND I AM         ",
+  "A DESIGNER   ",
 ];
 const newWords: string[] = [
   "DEVELOPER",

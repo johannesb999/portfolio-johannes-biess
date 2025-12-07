@@ -17,6 +17,7 @@ html {
   display: flex;
   justify-content: center;
   padding-bottom: var(--spacing-lg);
+  z-index: var(--z-index-high);
   @include type.L-Heading-Style('-bold');
 }
 
@@ -237,6 +238,10 @@ h3 {
   height: fit-content;
 }
 
+#details-section {
+  scroll-margin-top: calc(var(--spacing-bigger) + var(--spacing-lg));
+}
+
 /* Kleine Geräte (Tablets und Handys im Querformat, 481px bis 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   html {
@@ -249,6 +254,14 @@ h3 {
     scrollbar-gutter: stable both-edges;
   }
 
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+    min-height: 100vh;
+  }
 
   .detailsLink-container {
     position: absolute;
@@ -309,26 +322,28 @@ h3 {
   .wrapper {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
     @include type.L-XXXXL-Style('-extra-light');
-    text-align: left;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .projectFlap {
-    top: 35vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    margin: 20vh auto var(--spacing-bigger);
     font-size: var(--font-size-xl);
-    min-width: 80%;
+    min-width: 90%;
   }
 
   .wrapper {
-    top: 67vh;
-    left: 55vw;
-    transform: translate(-50%, -50%);
+    margin: 0 auto var(--spacing-bigger);
     flex-direction: row;
+    width: min(85vw, 28rem);
+    justify-content: center;
   }
 
   .picture {
@@ -340,7 +355,7 @@ h3 {
     max-width: 80vw;
     margin: 0 auto;
     padding: var(--spacing-lg);
-    padding-top: 100vh;
+    padding-top: var(--spacing-xxl);
     letter-spacing: 0.3px;
   }
 
@@ -477,6 +492,10 @@ h3 {
     height: fit-content;
     max-width: var(--img-width-lg);
 
+  }
+
+  #details-section {
+    scroll-margin-top: calc(var(--spacing-big) + var(--spacing-xl));
   }
 }
 
@@ -715,6 +734,10 @@ h3 {
     height: fit-content;
     /* 600px */
   }
+
+  #details-section {
+    scroll-margin-top: calc(var(--spacing-big) + var(--spacing-xl));
+  }
 }
 
 /* Extra kleine Geräte (Handys im Hochformat, 320px bis 480px) */
@@ -730,6 +753,13 @@ h3 {
     width: 100vw;
   }
 
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+    min-height: 100vh;
+  }
 
   .detailsLink-container {
     position: absolute;
@@ -790,26 +820,28 @@ h3 {
   .wrapper {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
     @include type.L-XXXXL-Style('-extra-light');
-    text-align: left;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .projectFlap {
-    top: 35vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    margin: 20vh auto var(--spacing-bigger);
     font-size: var(--font-size-xl);
-    min-width: 80%;
+    min-width: 95%;
   }
 
   .wrapper {
-    top: 67dvh;
-    left: 50dvw;
-    transform: translate(-50%, -50%);
+    margin: 0 auto var(--spacing-big);
     flex-direction: row;
+    width: min(90vw, 22rem);
+    justify-content: center;
   }
 
   .picture {
@@ -823,7 +855,7 @@ h3 {
     max-width: 80vw;
     margin: 0 auto;
     padding: var(--spacing-lg);
-    padding-top: 100vh;
+    padding-top: var(--spacing-xxl);
     letter-spacing: 0.3px;
   }
 
@@ -961,6 +993,10 @@ h3 {
     max-height: var(--img-height-lg);
     max-width: var(--img-width-lg);
 
+  }
+
+  #details-section {
+    scroll-margin-top: calc(var(--spacing-big) + var(--spacing-xl));
   }
 }
 //
