@@ -238,30 +238,40 @@ h3 {
     text-orientation: mixed;
   }
 
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+    min-height: 100vh;
+  }
+
   .projectFlap,
   .wrapper {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
     @include type.L-XXXXL-Style('-extra-light');
-    text-align: left;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .projectFlap {
-    top: 18vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    margin: 18vh auto var(--spacing-big);
     font-size: var(--font-size-xl);
-    min-width: 80%;
+    min-width: 90%;
   }
 
   .wrapper {
-    top: 40vh;
-    left: 55vw;
-    transform: translate(-50%, -50%);
+    margin: 0 auto var(--spacing-bigger);
     flex-direction: row;
+    width: min(85vw, 28rem);
+    justify-content: center;
 
   }
 
@@ -274,7 +284,7 @@ h3 {
     max-width: 80vw;
     margin: 0 auto;
     padding: var(--spacing-lg);
-    padding-top: 57vh;
+    padding-top: var(--spacing-xxl);
     letter-spacing: 0.3px;
   }
 
@@ -428,30 +438,40 @@ h3 {
     text-orientation: mixed;
   }
 
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+    min-height: 100vh;
+  }
+
   .projectFlap,
   .wrapper {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
     @include type.L-XXXXL-Style('-extra-light');
-    text-align: left;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .projectFlap {
-    top: 17vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    margin: 18vh auto var(--spacing-big);
     font-size: var(--font-size-xl);
-    min-width: 80%;
+    min-width: 95%;
   }
 
   .wrapper {
-    top: 37dvh;
-    left: 50dvw;
-    transform: translate(-50%, -50%);
+    margin: 0 auto var(--spacing-big);
     flex-direction: row;
+    width: min(90vw, 22rem);
+    justify-content: center;
 
   }
 
@@ -465,7 +485,7 @@ h3 {
     max-width: 80dvw;
     margin: 0 auto;
     padding: var(--spacing-lg);
-    padding-top: 48dvh;
+    padding-top: var(--spacing-xxl);
     letter-spacing: 0.3px;
   }
 
