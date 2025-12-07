@@ -45,14 +45,13 @@ const texts = [
   "HI MEIN NAME IST      ",
   "[JOHANNES] [BIESS]        ",
   "UND ICH BIN           ",
-  "ENTWICKLER        ",
+  "DESIGNER        ",
 ];
 const newWords = [
-  "DESIGNER",
+  "ENTWICKLER",
   "EIN PROBLEMLÖSER",
   "PROTOTYPER",
-  "IHR NEUER WERKSTUDENT",
-  "ENTWICKLER",
+  "DESIGNER",
 ];
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÖÄ";
 

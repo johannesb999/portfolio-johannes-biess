@@ -83,14 +83,13 @@ const texts: string[] = [
   "HI MY NAME IS          ",
   "[JOHANNES] [BIESS]           ",
   "AND I AM               ",
-  "A DEVELOPER            ",
+  "A DESIGNER        ",
 ];
 const newWords: string[] = [
-  "A DESIGNER",
+  "DEVELOPER",
   "A PROBLEMSOLVER",
   "A PROTOTYPER",
-  "YOUR NEXT WORKING STUDENT",
-  "A DEVELOPER",
+  "A DESIGNER",
 ];
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
