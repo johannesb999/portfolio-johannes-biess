@@ -13,6 +13,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 
+// Oben: Link zurück zur Startseite. Gescrollt: "HOCH"/"UP" zum Seitenanfang.
 const isScrolled = ref(false);
 
 const handleScroll = () => {
@@ -27,37 +28,17 @@ const scrollToTop = () => {
 };
 
 onMounted(() => {
-  handleScroll(); // Initialize `isScrolled` when mounting
-  window.addEventListener('scroll', handleScroll);
+  handleScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
-// Access the current route
 const route = useRoute();
-
-// Compute the current locale based on the route path
-const currentLocale = computed(() => {
-  return route.path.startsWith('/de') ? 'de' : 'en';
-});
-
-// Determine the correct path to navigate to
-const startPath = computed(() => {
-  return currentLocale.value === 'de' ? '/de' : '/';
-});
-
-// Adjust the label for the start link based on the language
-const startLabel = computed(() => {
-  return currentLocale.value === 'de' ? 'STARTSEITE' : 'START';
-});
-
-// Adjust the label for the scroll link based on the language
-const upLabel = computed(() => {
-  return currentLocale.value === 'de' ? 'HOCH' : 'UP';
-});
+const isGerman = computed(() => route.path.startsWith('/de'));
+const startPath = computed(() => (isGerman.value ? '/de' : '/'));
+const startLabel = computed(() => (isGerman.value ? 'STARTSEITE' : 'START'));
+const upLabel = computed(() => (isGerman.value ? 'HOCH' : 'UP'));
 </script>
-
-<style scoped>
-</style>

@@ -23,6 +23,7 @@
 - SCSS: keep page-specific styles in `assets/styles/<page>.scss`; use shared mixins from `assets/styles/type.scss`.
 - Breakpoints: never write raw `@media` queries — use the mixins from `assets/styles/_breakpoints.scss` (`bp.mobile`, `bp.tablet`, `bp.laptop`, `bp.desktop`, `bp.stacked`, `bp.side-by-side`, ...). Media-query blocks contain only the *differences* from the base rules, never full copies.
 - Project/CV detail pages share `assets/styles/_project-layout.scss` (`@include layout.page`); page-specific values are set via CSS custom properties on `main` (`--hero-top`, `--hero-image-max`, `--details-offset`).
+- Project detail content uses the `ProjectAccordion` component (`components/ProjectAccordion.vue`): one data-driven accordion (`items: [{ title, body, images? }]`) instead of device-specific template copies. New/updated project pages should follow `pages/de/project/goEase.vue` as the reference structure.
 - Design tokens live in `:root` in `app.vue`; responsive token overrides in `assets/styles/responsive.scss` (only values that actually differ from the base).
 
 ## Testing Guidelines

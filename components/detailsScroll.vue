@@ -1,30 +1,25 @@
 <template>
   <div class="detailsLink-container">
-    <a href="#details-section" class="detailsLink custom-link" @click="scrollToDetails">DETAILS</a>
+    <a href="#details-section" class="detailsLink custom-link" @click="scrollToDetails">{{ label }}</a>
   </div>
 </template>
 
-  
-  <script setup>
-  import { onMounted } from 'vue';
-  
-  function scrollToDetails(event) {
-    const element = document.getElementById('details-section');
-    if (!element) return;
+<script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 
-    event?.preventDefault();
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
-  }
-  
-  onMounted(() => {
+function scrollToDetails(event) {
+  const element = document.getElementById('details-section');
+  if (!element) return;
+
+  event?.preventDefault();
+  element.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+    inline: 'nearest',
   });
-  </script>
-  
-  <style scoped>
-  
-  </style>
-  
+}
+
+const route = useRoute();
+const label = computed(() => (route.path.startsWith('/de') ? 'IM DETAIL' : 'IN DETAIL'));
+</script>

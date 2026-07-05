@@ -22,6 +22,9 @@ $content-max-width: 87.5rem;
   }
 
   /* ---------- Navigation ---------- */
+  // "IM DETAIL"-Link am unteren Rand des Heros. Bewusst OHNE z-index:
+  // beim Scrollen gleitet er hinter die fixe Top-Leiste (.background,
+  // z-index 100) statt sich über den STARTSEITE/HOCH-Link zu legen.
   .detailsLink-container {
     position: absolute;
     bottom: 0;
@@ -29,7 +32,6 @@ $content-max-width: 87.5rem;
     display: flex;
     justify-content: center;
     padding-bottom: var(--spacing-lg);
-    z-index: var(--z-index-high);
     @include type.L-Heading-Style('-bold');
   }
 
@@ -119,6 +121,29 @@ $content-max-width: 87.5rem;
     padding: var(--spacing-lg);
     padding-top: var(--details-offset, 55vh);
     letter-spacing: 0.3px;
+  }
+
+  .section {
+    width: 100%;
+  }
+
+  .section__inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section__inner--max {
+    max-width: 100%;
+  }
+
+  // Kurzbeschreibung über dem Akkordeon
+  .project-intro {
+    margin: 0 0 var(--spacing-xxl);
+    @include type.L-Button-Style('-light');
+    font-family: var(--font-family-alt);
+    font-optical-sizing: auto;
+    line-height: var(--line-height-big);
+    max-width: 75ch;
   }
 
   .project-section,

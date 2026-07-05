@@ -28,149 +28,29 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="/img/pm/thumbnail.svg" alt="plantmonit" />
+        <img src="/img/pm/thumbnail.svg" alt="PlantMonit thumbnail" />
       </div>
     </div>
 
     <DetailsScroll />
 
-    <div v-if="isDesktop" class="project-details">
-      <div class="project-section" id="details-section">
-        <div class="project-content">
-          <div class="text">
-            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlap" :align="'center'" />
-            <div class="paragraph">
-              In the rush of everyday life, there's often not much time left for
-              caring for indoor and garden plants. Many people, especially those
-              with stressful jobs or time-consuming commitments, often forget to
-              water, fertilize, or position their plants correctly. <br />
-              <br />This often results in plants withering, being over- or
-              under-watered, or generally not receiving the care they need.<br />
-              According to the latest stats, 37% of amateur gardeners lose one
-              or two houseplants every year. Millennials in particular seem to
-              have more problems with this, with an average of around
-              <br />seven houseplants dying each year.
-            </div>
-          </div>
-          <div class="image large">
-            <img src="/img/pm/problem.svg" alt="plantmonit" />
-          </div>
+    <div class="project-details">
+      <section id="details-section" class="section">
+        <div class="section__inner section__inner--max">
+          <p class="project-intro">
+            PlantMonit is a system of sensors and software for monitoring houseplants. The target
+            group includes people with little time or prior knowledge. The device measures
+            moisture, temperature, and light. A camera visually analyzes the plant's condition
+            using artificial intelligence. All data is bundled in a digital application, where
+            users receive clear recommendations to avoid care mistakes.
+          </p>
+          <ProjectAccordion :items="accordionItems" id-prefix="plantmonit" />
         </div>
-      </div>
+      </section>
 
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image mela">
-            <img src="/img/pm/process.svg" alt="plantmonit" style="object-fit: contain" />
-          </div>
-          <div class="text">
-            <SplitFlapText preset="sectionFlap" :align="`center`" :texts="['[PROCESS]']" />
-            <div class="paragraph">
-              At the start of the project, research was conducted to explore
-              existing solutions on the market. The aim was to assess which
-              functions were already well-implemented and where there was room
-              for improvement. This analysis provided insights into areas that
-              could be enhanced, allowing the solution to focus on those
-              specific aspects. <br />A detailed persona was then created to
-              clearly define the needs of the target group. From this, it became
-              evident that the goal was to develop a solution enabling minimal
-              time commitment for plant care, appealing to both hobby gardeners
-              and experienced plant enthusiasts. Simultaneously, a user journey
-              was designed to cover the entire app experience, from installation
-              to daily use. By mapping out detailed user paths, a smooth and
-              intuitive user experience was ensured. Combined with user testing,
-              this resulted in a well-thought-out and user-friendly setup
-              process that helped identify potential issues early and enhanced
-              overall usability.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image mela">
-            <img src="/img/pm/software.svg" alt="plantmonit" />
-          </div>
-          <div class="text">
-            <div class="paragraph">
-              <h3>Software Process</h3>
-
-              The software process started with creating low-fi,<br />
-              mid-fi, and high-fi wireframes to plan the structure and user<br />
-              experience of the application. <br />It was an iterative process,
-              with a strong focus on refining the user experience at every
-              stage. Each version was improved based on user feedback.
-              <br /><br />The high-fi Figma click dummy was used to test the
-              user flow and ensure everything felt smooth and intuitive. After
-              receiving positive feedback and being satisfied with the design,
-              the web app was implemented using Svelte. The focus was on
-              carefully translating the Figma prototype’s features and ensuring
-              that the user experience remained smooth and fast.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="image mela">
-            <img src="/img/pm/hardware.svg" alt="plantmonit" />
-          </div>
-          <div class="text">
-            <div class="paragraph">
-              <h3>Hardware Process</h3>
-              The process started with an analysis of the necessary hardware.<br />
-              The functions of the smart tool were identified, leading to the
-              selection of components such as an ESP32 microcontroller and
-              various sensors for tracking environmental data.<br />
-              The components were chosen and assembled to meet the system's
-              requirements. A prototype was then built using rapid prototyping
-              to quickly visualize the design. Fusion360 was used to 3D print a
-              housing for the selected components, allowing for quick
-              integration and early problem identification. After the housing
-              was printed, all hardware components were connected and installed,
-              ensuring that the hardware was both functional and practical for
-              final use.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <div class="project-content">
-          <div class="text">
-            <SplitFlapText preset="sectionFlap" :align="'center'" :texts="['[SOLUTION]']" />
-            <div class="paragraph">
-              Through a structured, methodical approach, a product was developed
-              that effectively addresses the needs of the target audience and
-              simplifies <br />plant care significantly.<br />
-              PlantMonit merges advanced technology with a design focused on
-              user-friendliness to guarantee optimal plant maintenance.<br />
-              The product features automatic plant monitoring, where sensors
-              continuously track crucial data such as soil moisture, humidity,
-              temperature, and light. With advanced image analysis, powered by
-              the OpenAI Vision API, plant images are thoroughly examined,
-              allowing for early detection of potential problems. The
-              user-friendly app organizes all collected data clearly and offers
-              personalized care tips. <br />Seamless integration ensures smooth
-              communication between hardware components through Websockets,
-              ensuring reliable data transmission and an easy setup process. The
-              backend is supported by a scalable database built with MongoDB and
-              Mongoose, enabling efficient data storage and management.
-              Together, these components create an innovative solution that
-              transforms plant care and supports both novice and seasoned
-              gardeners in maintaining healthy plants.
-            </div>
-          </div>
-          <div class="image large">
-            <img src="/img/pm/solution.svg" alt="plantmonit" />
-          </div>
-        </div>
-      </div>
       <div class="project-section">
         <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
-          '[PROJECT] [VIDEO]',
+          '                         [PROJECT] [VIDEO]                          ',
         ]" />
         <div class="project-video">
           <iframe src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
@@ -189,328 +69,108 @@
         ]" />
       </div>
     </div>
-
-    <div v-else-if="isTablet" class="project-details">
-      <div class="project-section" id="details-section">
-        <div class="project-content">
-          <div class="text">
-            <SplitFlapText :texts="['[PROBLEM]']" preset="sectionFlapTablet" :align="'center'" />
-            <div class="paragraph">
-              In the rush of everyday life, there's often not much time left for
-              caring for indoor and garden plants. Many people, especially those
-              with stressful jobs or time-consuming commitments, often forget to
-              water, fertilize, or position their plants correctly. <br />
-              <br />This often results in plants withering, being over- or
-              under-watered, or generally not receiving the care they need.
-              According to the latest stats, 37% of amateur gardeners lose one
-              or two houseplants every year. Millennials in particular seem to
-              have more problems with this, with an average of around seven
-              houseplants dying each year.
-            </div>
-          </div>
-          <div class="image medium">
-            <img src="/img/pm/problem.svg" alt="plantmonit" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="text">
-            <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlapTablet" :align="'center'" />
-            <div class="paragraph">
-              At the start of the project, research was conducted to explore
-              existing solutions on the market. The aim was to assess which
-              functions were already well-implemented and where there was room
-              for improvement.<br />
-              This analysis provided insights into areas that could be enhanced,
-              allowing the solution to focus on those specific aspects. A
-              detailed persona was then created to clearly define the needs of
-              the target group. From this, it became evident that the goal was
-              to develop a solution enabling minimal time commitment for plant
-              care, appealing to both hobby gardeners and experienced plant
-              enthusiasts. <br />Simultaneously, a user journey was designed to
-              cover the entire app experience, from installation to daily use.
-              By mapping out detailed user paths, a smooth and intuitive user
-              experience was ensured. Combined with user testing, this resulted
-              in a well-thought-out and user-friendly setup process that helped
-              identify potential issues <br />early and enhanced overall
-              usability.
-            </div>
-          </div>
-          <div class="image smedi">
-            <img src="/img/pm/process.svg" alt="plantmonit" style="object-fit: contain" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="text">
-            <div class="paragraph">
-              <h3>Software Process</h3>
-              The software process started with creating low-fi,<br />
-              mid-fi, and high-fi wireframes to plan the structure and user
-              experience of the application. <br />It was an iterative process,
-              with a strong focus on refining the user experience at every
-              stage. Each version was improved based on user feedback.
-              <br /><br />The high-fi Figma click dummy was used to test the
-              user flow and ensure everything felt smooth and intuitive. After
-              receiving positive feedback and being satisfied with the design,
-              the web app was implemented using Svelte. The focus was on
-              carefully translating the Figma prototype’s features and ensuring
-              that the user experience remained smooth and fast.
-            </div>
-          </div>
-          <div class="image medium">
-            <img src="/img/pm/software.svg" alt="plantmonit" style="object-fit: contain" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="text">
-            <div class="paragraph">
-              <h3>Hardware Process</h3>
-              The process started with an analysis of the necessary hardware.<br />
-              The functions of the smart tool were identified, leading to the
-              selection of components such as an ESP32 microcontroller and
-              various sensors for tracking environmental data. <br /><br />The
-              components were chosen and assembled to meet the system's
-              requirements.<br />
-              A prototype was then built using rapid prototyping to quickly
-              visualize the design. <br />Fusion360 was used to 3D print a
-              housing for the selected components, allowing for quick
-              integration and early problem identification. After the housing
-              was printed, all hardware components were connected and installed,
-              ensuring that the hardware was both <br />functional and practical
-              for final use.
-            </div>
-          </div>
-          <div class="image medium">
-            <img src="/img/pm/hardware.svg" alt="plantmonit" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <div class="project-content">
-          <div class="text">
-            <SplitFlapText :texts="['                  [SOLUTION]                 ']" preset="sectionFlapTablet"
-              :align="'center'" />
-            <div class="paragraph">
-              Through a structured, methodical approach, a product was developed
-              that effectively addresses the needs of the target audience and
-              simplifies plant care significantly.<br />
-              PlantMonit merges advanced technology with a design focused on
-              user-friendliness to guarantee optimal plant maintenance. The
-              product features automatic plant monitoring, where sensors
-              continuously track crucial data such as soil moisture, humidity,
-              temperature, and light. With advanced image analysis, powered by
-              the OpenAI Vision API, plant images are thoroughly examined,
-              allowing for early detection of potential problems. The
-              user-friendly app organizes all collected data clearly and offers
-              personalized care tips. Seamless integration ensures smooth
-              communication between hardware components through Websockets,
-              ensuring reliable data transmission and an easy setup process.<br />
-              The backend is supported by a scalable database built with MongoDB
-              and Mongoose, enabling efficient data storage and management.
-              Together, these components create an innovative solution that
-              transforms plant care and supports both novice and seasoned
-              gardeners in maintaining healthy plants.
-            </div>
-          </div>
-          <div class="image large">
-            <img src="/img/pm/solution.svg" alt="plantmonit" />
-          </div>
-        </div>
-      </div>
-      <div class="project-section">
-        <SplitFlapText :texts="['               [PROJECT] [VIDEO]               ']" preset="bannerFlapTablet"
-          :align="'center'" />
-        <div class="project-video">
-          <iframe src="https://www.youtube.com/embed/bKC-N5-m5u0?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player" frameborder="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="projectDetailsFlap">
-        <SplitFlapText preset="keydataFlapTablet" :align="'center'" :texts="[
-          '        [KEYDATA]         ',
-          '      THREE MONTHS      ',
-          '    SECOND SEMESTER     ',
-          '      GRADE: 1.0        ',
-          '       TEAMWORK         ',
-        ]" />
-      </div>
-    </div>
-
-    <div v-else-if="isMobile" class="project-details">
-      <div class="project-section" id="details-section">
-        <div class="project-content">
-          <div class="text">
-            <SplitFlapText :texts="['         [PROBLEM]         ']" preset="sectionFlapMobile" :align="'center'" />
-            <div class="paragraph">
-              In the rush of everyday life, there's often not much time left for
-              caring for indoor and garden plants. <br />Many people, especially
-              those with stressful jobs or time-consuming commitments, often
-              forget to water, fertilize, or position their plants correctly.
-              <br />
-              <br />This often results in plants withering, being over- or
-              under-watered, or generally not receiving the<br />
-              care they need. According to the latest stats, 37% of amateur
-              gardeners lose one or two houseplants <br />every year.
-              Millennials in particular seem to have more problems with this,
-              with an average of around seven houseplants dying each year.
-            </div>
-          </div>
-          <div class="image small">
-            <img src="/img/pm/problem.svg" alt="plantmonit" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="text">
-            <SplitFlapText :texts="['         [PROCESS]         ']" preset="sectionFlapMobile" :align="'center'" />
-            <div class="paragraph">
-              At the start of the project, research was conducted to explore
-              existing solutions on the market. <br />The aim was to assess
-              which functions were <br />already well-implemented and where
-              there was <br />room for improvement.<br />
-              This analysis provided insights into areas that could be enhanced,
-              allowing the solution to focus on those specific aspects.<br /><br />
-              A detailed persona was then created to clearly define the needs of
-              the target group. From this, it became evident that the goal was
-              to develop a solution enabling minimal time commitment for plant
-              care, appealing to both hobby gardeners and experienced plant
-              enthusiasts. Simultaneously, a user journey was designed to cover
-              the entire app experience, from installation to daily use. By
-              mapping out detailed user paths, a smooth and intuitive user
-              experience was ensured. Combined with user testing, this resulted
-              in a well-thought-out and user-friendly setup process that helped
-              identify potential issues early and enhanced overall usability.
-            </div>
-          </div>
-          <div class="image smedi">
-            <img src="/img/pm/process.svg" alt="plantmonit" style="object-fit: contain" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="text">
-            <div class="paragraph">
-              <h3>Software Process</h3>
-
-              The software process started with creating low-fi,<br />
-              mid-fi, and high-fi wireframes to plan the structure and user
-              experience of the application. <br />It was an iterative process,
-              with a strong focus on refining the user experience at every
-              stage.<br />
-              Each version was improved based on user feedback. The high-fi
-              Figma click dummy was used to test the user flow and ensure
-              everything felt smooth and intuitive. <br /><br />After receiving
-              positive feedback and being satisfied with the design, the web app
-              was implemented using Svelte. The focus was on carefully
-              translating the<br />
-              Figma prototype’s features and ensuring that the user experience
-              remained smooth and fast.
-            </div>
-          </div>
-          <div class="image medium">
-            <img src="/img/pm/software.svg" alt="plantmonit" style="object-fit: contain" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section-reverse">
-        <div class="project-content">
-          <div class="text">
-            <div class="paragraph">
-              <h3>Hardware Process</h3>
-              The process started with an analysis of the <br />necessary
-              hardware. <br />The functions of the smart tool were identified,
-              leading to the selection of components such as an ESP32
-              microcontroller and various sensors for tracking environmental
-              data. The components were chosen and assembled to meet the
-              system's requirements.<br />
-              A prototype was then built using rapid prototyping to quickly
-              visualize the design.<br /><br />
-              Fusion360 was used to 3D print a housing for the selected
-              components, allowing for quick integration and early problem
-              identification. After the housing was printed, all hardware
-              components were connected and installed, ensuring that the
-              hardware was both functional and practical for final use.
-            </div>
-          </div>
-          <div class="image medium">
-            <img src="/img/pm/hardware.svg" alt="plantmonit" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <div class="project-content">
-          <div class="text">
-            <SplitFlapText :texts="['         [SOLUTION]        ']" preset="sectionFlapMobile" :align="'center'" />
-            <div class="paragraph">
-              Through a structured, methodical approach, a product was developed
-              that effectively addresses the needs <br />of the target audience
-              and simplifies plant care significantly. PlantMonit merges
-              advanced technology with a design focused on user-friendliness to
-              guarantee optimal plant maintenance.<br /><br />
-              The product features automatic plant monitoring, where sensors
-              continuously track crucial data such as soil moisture, humidity,
-              temperature, and light. <br />With advanced image analysis,
-              powered by the OpenAI Vision API, plant images are thoroughly
-              examined, allowing for early detection of potential problems.<br />
-              The user-friendly app organizes all collected data clearly and
-              offers personalized care tips. Seamless integration ensures smooth
-              communication between hardware components through Websockets,
-              ensuring reliable data transmission and an easy setup process.
-              <br /><br />The backend is supported by a scalable database built
-              with MongoDB and Mongoose, enabling efficient data storage and
-              management. Together, these components create an innovative
-              solution that transforms plant care and supports both novice and
-              seasoned gardeners in maintaining healthy plants.
-            </div>
-          </div>
-          <div class="image medium">
-            <img src="/img/pm/solution.svg" alt="plantmonit" />
-          </div>
-        </div>
-      </div>
-      <div class="project-section">
-        <SplitFlapText :texts="['      [PROJECT] [VIDEO]       ']" preset="bannerFlapMobile" :align="'center'" />
-        <div class="project-video">
-          <iframe src="https://www.youtube.com/embed/bKC-N5-m5u0?rel=0&modestbranding=1&showinfo=0"
-            title="YouTube video player" frameborder="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="projectDetailsFlap">
-        <SplitFlapText preset="keydataFlapMobile" :align="'center'" :texts="[
-          '        [KEYDATA]        ',
-          '      THREE MONTHS     ',
-          '    SECOND SEMESTER    ',
-          '      GRADE: 1.0       ',
-          '       TEAMWORK        ',
-        ]" />
-      </div>
-    </div>
   </main>
 </template>
 
 <script setup>
-import { useDeviceType } from "~/assets/composables/useDeviceType.js";
-
-const { isMobile, isTablet, isDesktop } = useDeviceType();
+const accordionItems = [
+  {
+    title: 'Core Idea',
+    body:
+      'The core idea of the project is an intelligent tool for monitoring plants. The solution ' +
+      'automatically collects data and provides care advice. This matters because many people ' +
+      'forget about plant care in their hectic everyday lives or lack the necessary knowledge. ' +
+      'Incorrect care often leads to plants dying.',
+  },
+  {
+    title: 'Users & Challenge',
+    body:
+      'The target group includes people with demanding jobs and numerous commitments, as well as ' +
+      'the millennial generation. These people often have little time and experience in plant ' +
+      'care. They usually notice diseases or incorrect watering too late. This leads to ' +
+      'frustration and the loss of houseplants.',
+  },
+  {
+    title: 'Context & User Journey',
+    body:
+      'The use case covers everyday plant care. A defined user journey describes the path from ' +
+      'installing the application to daily use. This journey was optimized through user testing ' +
+      'to ensure a seamless flow and to remove hurdles during setup early on.',
+  },
+  {
+    title: 'User-Centered Research & Process',
+    body:
+      'The process began with a competitor analysis to identify potential for improvement. This ' +
+      'was followed by defining a typical user group and designing the usage process in detail. ' +
+      'Software development started with drafts at various levels of fidelity and resulted in a ' +
+      'clickable prototype for user testing. Hardware development included a requirements ' +
+      'analysis, the selection of components, and rapid prototyping using 3D printing.',
+  },
+  {
+    title: 'Insights Shaping the Solution',
+    body:
+      'The findings from the market analysis flowed directly into the focus of the features. ' +
+      'Testing with the clickable prototype revealed potential improvements in the user flow. ' +
+      'This feedback was used to optimize the usability of the application.',
+  },
+  {
+    title: 'Purpose, Approach & Benefits',
+    body:
+      'The purpose of the system is to make plant care possible with minimal time investment. It ' +
+      'addresses hobby gardeners and experienced plant lovers alike. An integrated camera and ' +
+      'various sensors continuously record environmental data. As a result, users receive clear ' +
+      'and personalized recommendations.',
+  },
+  {
+    title: 'Innovation',
+    body:
+      'The solution uses artificial intelligence for the visual analysis of plant images. This ' +
+      'technology enables the early detection of pests or rot. The combination of sensor-based ' +
+      'data collection and image analysis represents an innovation. Data transmission is highly ' +
+      'efficient via a dedicated network interface.',
+  },
+  {
+    title: 'Outcome & Business Value',
+    body:
+      'The application is expected to succeed through high usability and reliable technology. ' +
+      'The target group consists of hobby gardeners and plant lovers.',
+  },
+  {
+    title: 'Competition & USP',
+    body:
+      'Competitors offer solutions that still leave potential untapped. The unique selling point ' +
+      'of this development is the combination of automatic sensor-based monitoring and ' +
+      'image-based diagnosis. As a result, users do not need any expert knowledge of their own.',
+  },
+  {
+    title: 'Accessibility, Responsibility & Trust',
+    body:
+      'The application has a highly intuitive user interface. Complex data is presented clearly. ' +
+      'This lowers the barrier for people without prior knowledge of plant care.',
+  },
+  {
+    title: 'Social & Ecological Values',
+    body:
+      'The product helps keep plants alive. This reduces the need for replacements and prevents ' +
+      'frustration.',
+  },
+  {
+    title: 'Additional Information',
+    body:
+      'The software was implemented with a modern framework and a scalable database structure. ' +
+      'The hardware consists of a microcontroller and sensors for soil moisture, humidity, ' +
+      'temperature, and light. The housing for these components was developed and printed ' +
+      'iteratively.',
+    // Existing project images — parked here for now
+    images: [
+      '/img/pm/problem.svg',
+      '/img/pm/process.svg',
+      '/img/pm/software.svg',
+      '/img/pm/hardware.svg',
+      '/img/pm/solution.svg',
+    ],
+  },
+];
 </script>
 
 <style lang="scss" src="assets/styles/project.scss" scoped></style>
