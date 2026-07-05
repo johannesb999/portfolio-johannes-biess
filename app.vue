@@ -80,8 +80,6 @@ onMounted(() => {
 @use "@/assets/styles/type.scss" as type;
 
 :root {
-  --color-picker: #171717b0;
-
   /* Schriftarten */
   --font-family-main: "Roboto Mono", monospace;
   --font-family-alt: "Inter Tight", sans-serif;
@@ -92,7 +90,6 @@ onMounted(() => {
   --color-background: #fbfbfb;
   --color-secondary: #d3d1d1;
   --color-gray-light: #0000001d;
-  --color-gray-light-dark: #b3b3b32a;
   --color-primary-translucent: #171717b0;
   --color-black: #000000;
   --color-accent: #afafaf;
@@ -177,9 +174,8 @@ onMounted(() => {
   --letter-spacing-base: 0.05rem;
   /* 0.8px */
   --line-height-small: 1;
-  --line-height-normal: normal;
-  --line-height-big: 1.5;
   --line-height-normal: 2;
+  --line-height-big: 1.5;
   --color-white-transition: rgba(146, 146, 146, 0.3);
   --scrollbar-width: 0.01rem;
   /* 0.8px */
@@ -197,8 +193,6 @@ onMounted(() => {
   --img-height-lg: 60vh;
   /* 60% der Viewport-Höhe */
 
-  --img-width-sm: 40dvw;
-  --img-width-md: 50dvw;
   --img-width-lg: 70dvw;
 }
 
@@ -345,12 +339,6 @@ button {
 </style>
 
 <style lang="scss">
-/* Responsive imports (order matters) */
-@use "@/assets/styles/responsive/max-480-mobile.scss" as *;
-@use "@/assets/styles/responsive/max-310-mobile.scss" as *;
-@use "@/assets/styles/responsive/min-481-max-768-tablet.scss" as *;
-@use "@/assets/styles/responsive/min-768-max-1023-tablet.scss" as *;
-@use "@/assets/styles/responsive/min-1024-max-1200-desktop.scss" as *;
-@use "@/assets/styles/responsive/min-1201-desktop.scss" as *;
-@use "@/assets/styles/responsive/min-1600-desktop-xl.scss" as *;
+/* Responsive Token-Overrides und globale UI-Anpassungen */
+@use "@/assets/styles/responsive.scss" as *;
 </style>

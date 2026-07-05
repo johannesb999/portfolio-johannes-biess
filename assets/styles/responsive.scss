@@ -1,0 +1,174 @@
+@use "./type" as type;
+@use "./breakpoints" as bp;
+
+// Responsive Token-Overrides und globale UI-Anpassungen.
+// Enthält NUR Abweichungen von den Basiswerten in app.vue (:root) —
+// identische Werte werden nicht wiederholt.
+
+/* ---------- Tablet bis Desktop (481–1200px): gemeinsame skalierte Token ---------- */
+@include bp.scaled-tokens {
+  :root {
+    --border-color-black: #171717;
+    --border-size: 0.088rem;
+    --border-radius: 0.616rem;
+
+    --font-size-sm: 0.66rem;
+    --font-size-md: 0.704rem;
+    --font-size-lg: 0.88rem;
+    --font-size-xl: 1.056rem;
+    --font-size-xxl: 1.122rem;
+    --font-size-xxxl: 1.21rem;
+    --font-size-xxxxl: 1.408rem;
+    --font-size-big: 1.76rem;
+    --font-size-bigger: 2.112rem;
+    --font-size-huge: 2.816rem;
+
+    --spacing-xxs: 0.2112rem;
+    --spacing-xs: 0.33rem;
+    --spacing-sm: 0.55rem;
+    --spacing-md: 0.825rem;
+    --spacing-lg: 0.99rem;
+    --spacing-xl: 1.408rem;
+    --spacing-xxl: 2.112rem;
+    --spacing-xxxl: 2.816rem;
+    --spacing-big: 4.224rem;
+    --spacing-bigger: 5.632rem;
+
+    --radius-xxs: 0.2112rem;
+    --radius-xs: 0.44rem;
+    --radius-sm: 0.704rem;
+    --radius-md: 0.88rem;
+
+    --top-spacing: 1.144rem;
+    --side-percentage: 1.65%;
+
+    --letter-spacing-base: 0.044rem;
+    --line-height-small: 1.1;
+    --line-height-normal: normal;
+    --line-height-big: 1.32;
+  }
+}
+
+@include bp.tablet {
+  :root {
+    --font-size-base: 0.715rem;
+  }
+
+  img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@include bp.laptop {
+  :root {
+    --font-size-base: 0.615rem;
+  }
+
+  img {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+@include bp.desktop {
+  :root {
+    --font-size-base: 0.65rem;
+
+    --spacing-md: 0.9rem;
+    --spacing-lg: 1.1rem;
+    --spacing-xl: 1.508rem;
+    --spacing-xxl: 2.312rem;
+    --spacing-xxxl: 2.916rem;
+
+    --img-height-sm: 15vh;
+    --img-height-smedi: 25vh;
+    --img-height-md: 35vh;
+    --img-height-mela: 45vh;
+    --img-height-lg: 55vh;
+  }
+}
+
+/* ---------- Mobile (≤480px) ---------- */
+@include bp.mobile {
+  :root {
+    --border-color-black: #171717;
+    --border-size: 0.08rem;
+    --border-radius: 0.56rem;
+
+    --font-size-base: 0.65rem;
+    --font-size-sm: 0.6rem;
+    --font-size-md: 0.64rem;
+    --font-size-lg: 0.8rem;
+    --font-size-xl: 0.96rem;
+    --font-size-xxl: 1.02rem;
+    --font-size-xxxl: 1.1rem;
+    --font-size-xxxxl: 1.28rem;
+    --font-size-big: 1.6rem;
+    --font-size-bigger: 1.92rem;
+    --font-size-huge: 2.56rem;
+
+    --spacing-xxs: 0.192rem;
+    --spacing-xs: 0.3rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 0.75rem;
+    --spacing-lg: 0.9rem;
+    --spacing-xl: 1.28rem;
+    --spacing-xxl: 1.92rem;
+    --spacing-xxxl: 2.56rem;
+    --spacing-big: 3.84rem;
+    --spacing-bigger: 5.12rem;
+
+    --radius-xxs: 0.192rem;
+    --radius-xs: 0.4rem;
+    --radius-sm: 0.64rem;
+    --radius-md: 0.8rem;
+
+    --top-spacing: 1.04rem;
+    --side-percentage: 1.5%;
+
+    --letter-spacing-base: 0.04rem;
+    --line-height-normal: 1.6;
+    --line-height-big: 1.2;
+  }
+
+  html {
+    height: 100dvh;
+    width: 100dvw;
+  }
+
+  img {
+    height: auto;
+  }
+}
+
+@include bp.mobile-xs {
+  :root {
+    --font-size-base: 0.6rem;
+  }
+}
+
+/* ---------- Header, Sprach- und Theme-Umschalter (unterhalb Desktop) ---------- */
+@include bp.below-desktop {
+  .returnHome {
+    @include type.L-Title-Style('-light');
+    top: var(--side-percentage);
+    padding-left: var(--spacing-xs);
+  }
+
+  .language-switch {
+    top: var(--side-percentage);
+  }
+
+  #en,
+  #de,
+  #line {
+    @include type.L-Heading-Style('-thin');
+  }
+
+  .theme-switcher {
+    @include type.L-XXXXL-Style();
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+}

@@ -61,10 +61,5 @@
   </main>
 </template>
 
-<script setup>
-import { useDeviceType } from "~/assets/composables/useDeviceType.js";
-
-const { isMobile, isTablet, isDesktop } = useDeviceType();
-</script>
 
 <style lang="scss" src="assets/styles/cv.scss" scoped></style>

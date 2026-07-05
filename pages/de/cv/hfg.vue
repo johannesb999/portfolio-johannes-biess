@@ -18,7 +18,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\cv\hfgbuilding.svg" alt="Picture of HFG Building" />
+        <img src="/img/cv/hfgbuilding.svg" alt="Picture of HFG Building" />
       </div>
     </div>
 
@@ -72,10 +72,5 @@
   </main>
 </template>
 
-<script setup>
-import { useDeviceType } from "~/assets/composables/useDeviceType.js";
-
-const { isMobile, isTablet, isDesktop } = useDeviceType();
-</script>
 
 <style lang="scss" src="assets/styles/cv.scss" scoped></style>

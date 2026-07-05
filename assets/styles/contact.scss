@@ -1,4 +1,5 @@
-@use "@/assets/styles/type.scss" as type;
+@use "./type" as type;
+@use "./breakpoints" as bp;
 
 #contact {
   color: var(--color-primary);
@@ -26,34 +27,12 @@
   transform: translate(-50%, -50%);
 }
 
-@media (max-width: 480px) {
-
-  #contact {
-    color: var(--color-primary);
-    @include type.L-XXXXL-Style('-light');
-    text-align: center;
-    font-style: normal;
-    line-height: var(--line-height-normal);
-  }
-
+@include bp.mobile {
   #impressum {
-    color: var(--color-gray);
     @include type.L-Button-Style('-thin');
-    position: absolute;
-    bottom: var(--spacing-lg);
-    left: 50vw;
-    transform: translateX(-50%);
   }
 
   .contactMeText {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50dvh;
-    left: 50dvw;
-    transform: translate(-50%, -50%);
     min-width: 80%;
-
   }
 }
-//

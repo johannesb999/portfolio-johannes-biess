@@ -18,7 +18,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\cv\dtack.svg" alt="Picture of D-TACK Building" />
+        <img src="/img/cv/dtack.svg" alt="Picture of D-TACK Building" />
       </div>
     </div>
 
@@ -65,10 +65,5 @@
   </main>
 </template>
 
-<script setup>
-import { useDeviceType } from "~/assets/composables/useDeviceType.js";
-
-const { isMobile, isTablet, isDesktop } = useDeviceType();
-</script>
 
 <style lang="scss" src="assets/styles/cv.scss" scoped></style>

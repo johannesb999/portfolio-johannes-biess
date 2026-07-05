@@ -25,7 +25,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\tt\tt (1).svg" alt="plantmonit" />
+        <img src="/img/tt/tt (1).svg" alt="plantmonit" />
       </div>
     </div>
     <DetailsScroll />
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\tt\idea.svg" alt="plantmonit" />
+            <img src="/img/tt/idea.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image medium">
-            <img src="public\img\tt\process.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/tt/process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
           <div class="text">
             <SplitFlapText :texts="['[PROCESS]']" preset="sectionFlap" :align="'center'" />
@@ -99,7 +99,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\tt/solution.svg" alt="plantmonit" />
+            <img src="/img/tt/solution.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
             <div class="paragraph"></div>
           </div>
           <div class="image medium">
-            <img src="public\img\tt\idea.svg" alt="plantmonit" />
+            <img src="/img/tt/idea.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img src="public\img\tt\process.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/tt/process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -176,7 +176,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\tt/solution.svg" alt="plantmonit" />
+            <img src="/img/tt/solution.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -209,7 +209,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\tt\idea.svg" alt="plantmonit" />
+            <img src="/img/tt/idea.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -235,7 +235,7 @@
             </div>
           </div>
           <div class="image small">
-            <img src="public\img\tt\process.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/tt/process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -262,7 +262,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\tt/solution.svg" alt="plantmonit" />
+            <img src="/img/tt/solution.svg" alt="plantmonit" />
           </div>
         </div>
       </div>

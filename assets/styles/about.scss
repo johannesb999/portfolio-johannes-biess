@@ -1,10 +1,7 @@
-@use "@/assets/styles/type.scss" as type;
+@use "./type" as type;
+@use "./breakpoints" as bp;
 
-.aboutMeText {
-  /* existing rules */
-}
-
-/* Ensure the About-page bottom link sits above any overlay */
+// Der Bottom-Link muss über dem Präsentations-Overlay liegen
 #bottomLink {
   z-index: var(--z-index-alert);
   pointer-events: auto;
@@ -33,7 +30,6 @@
   max-width: 35rem;
 }
 
-
 #quote {
   @include type.L-Body-Style('-thin');
   font-size: 1.3rem;
@@ -42,90 +38,47 @@
   padding: var(--spacing-xl);
 }
 
-
-
-@media (min-width: 481px) and (max-width: 768px) {
+@include bp.tablet {
   .aboutMeText {
-    position: absolute;
     top: 37dvh;
     left: 50dvw;
     min-width: 62%;
   }
 
   .wrapper {
-    display: flex;
-    flex-direction: column;
     top: 70dvh;
     left: 55dvw;
-    @include type.L-Button-Style('-thin');
   }
 
   #quote {
-    @include type.L-Body-Style('-thin');
-    font-size: 1.3rem;
     padding-right: 8vw;
   }
 }
 
-/* Mittlere Geräte (Laptops und kleinere Bildschirme, 769px bis 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@include bp.laptop {
   .aboutMeText {
-    position: absolute;
     top: 35dvh;
     left: 50dvw;
     min-width: 90%;
   }
 
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
     top: 65dvh;
     left: 50dvw;
-    transform: translate(-50%, -50%);
-    @include type.L-Button-Style('-thin');
-    font-style: italic;
     max-width: 30rem;
   }
-
-  #quote {
-    @include type.L-Body-Style('-thin');
-    font-size: 1.3rem;
-    margin-bottom: var(--spacing-xl);
-    text-align: center;
-    padding: var(--spacing-xl);
-  }
 }
 
-/* Extra kleine Geräte (Handys im Hochformat, 320px bis 480px) */
-@media (max-width: 480px) {
-
+@include bp.mobile {
   .aboutMeText {
-    position: absolute;
     top: 35dvh;
     left: 50dvw;
     min-width: 90%;
   }
 
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
     top: 65dvh;
     left: 50dvw;
-    transform: translate(-50%, -50%);
-    @include type.L-Button-Style('-thin');
-    font-style: italic;
     max-width: 50rem;
   }
-
-  #quote {
-    @include type.L-Body-Style('-thin');
-    font-size: 1.3rem;
-    margin-bottom: var(--spacing-xl);
-    text-align: center;
-    padding: var(--spacing-xl);
-  }
-
 }
-//

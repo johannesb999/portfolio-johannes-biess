@@ -26,7 +26,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\dl\thumbnail.svg" alt="plantmonit" />
+        <img src="/img/dl/thumbnail.svg" alt="plantmonit" />
       </div>
     </div>
     <DetailsScroll />
@@ -63,7 +63,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\dl\idea.svg" alt="plantmonit" />
+            <img src="/img/dl/idea.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img src="public\img\dl\process.svg" alt="plantmonit" />
+            <img src="/img/dl/process.svg" alt="plantmonit" />
           </div>
           <div class="text">
             <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlap" :align="'center'" />
@@ -143,7 +143,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\dl\implementation.svg" alt="plantmonit" />
+            <img src="/img/dl/implementation.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -151,16 +151,16 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image medium">
-            <img src="public\img\dl\dl5.svg" alt="plantmonit" />
+            <img src="/img/dl/dl5.svg" alt="plantmonit" />
           </div>
           <div class="image medium">
-            <img src="public\img\dl\dl6.svg" alt="plantmonit" />
+            <img src="/img/dl/dl6.svg" alt="plantmonit" />
           </div>
           <div class="image medium">
-            <img src="public\img\dl\dl7.svg" alt="plantmonit" />
+            <img src="/img/dl/dl7.svg" alt="plantmonit" />
           </div>
           <div class="image medium">
-            <img src="public\img\dl\dl12.svg" alt="plantmonit" />
+            <img src="/img/dl/dl12.svg" alt="plantmonit" />
           </div>
         </div>
 
@@ -221,7 +221,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\dl\idea.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/dl/idea.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -260,7 +260,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\dl\process.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/dl/process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -299,7 +299,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\dl\implementation.svg" alt="plantmonit" />
+            <img src="/img/dl/implementation.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -331,16 +331,16 @@
       </div>
       <div class="project-content">
         <div class="image mela">
-          <img src="public\img\dl\dl5.svg" alt="plantmonit" />
+          <img src="/img/dl/dl5.svg" alt="plantmonit" />
         </div>
         <div class="image mela">
-          <img src="public\img\dl\dl6.svg" alt="plantmonit" />
+          <img src="/img/dl/dl6.svg" alt="plantmonit" />
         </div>
         <div class="image mela">
-          <img src="public\img\dl\dl7.svg" alt="plantmonit" />
+          <img src="/img/dl/dl7.svg" alt="plantmonit" />
         </div>
         <div class="image mela">
-          <img src="public\img\dl\dl12.svg" alt="plantmonit" />
+          <img src="/img/dl/dl12.svg" alt="plantmonit" />
         </div>
       </div>
     </div>
@@ -376,7 +376,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\dl\idea.svg" alt="plantmonit" />
+            <img src="/img/dl/idea.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -416,7 +416,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\dl\process.svg" alt="plantmonit" />
+            <img src="/img/dl/process.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -455,7 +455,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\dl\implementation.svg" alt="plantmonit" />
+            <img src="/img/dl/implementation.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -487,16 +487,16 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image medium">
-            <img src="public\img\dl\dl5.svg" alt="plantmonit" />
+            <img src="/img/dl/dl5.svg" alt="plantmonit" />
           </div>
           <div class="image medium">
-            <img src="public\img\dl\dl6.svg" alt="plantmonit" />
+            <img src="/img/dl/dl6.svg" alt="plantmonit" />
           </div>
           <div class="image medium">
-            <img src="public\img\dl\dl7.svg" alt="plantmonit" />
+            <img src="/img/dl/dl7.svg" alt="plantmonit" />
           </div>
           <div class="image medium">
-            <img src="public\img\dl\dl12.svg" alt="plantmonit" />
+            <img src="/img/dl/dl12.svg" alt="plantmonit" />
           </div>
         </div>
       </div>

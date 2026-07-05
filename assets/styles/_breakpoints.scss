@@ -1,0 +1,92 @@
+// Zentrale Breakpoints für das gesamte Projekt.
+// Raster (lückenlos, keine Überlappung):
+//   mobile-xs   ≤ 310px
+//   mobile      ≤ 480px
+//   tablet      481–768px
+//   laptop      769–1023px
+//   desktop     1024–1200px
+//   desktop-lg  1201–1599px
+//   desktop-xl  ≥ 1600px
+// JS-Pendant: assets/composables/useDeviceType.js (mobile ≤480, tablet 481–768, desktop >768)
+
+$mobile-xs-max: 310px;
+$mobile-max: 480px;
+$tablet-min: 481px;
+$tablet-max: 768px;
+$laptop-min: 769px;
+$laptop-max: 1023px;
+$desktop-min: 1024px;
+$desktop-max: 1200px;
+$desktop-lg-min: 1201px;
+$desktop-xl-min: 1600px;
+
+@mixin mobile-xs {
+  @media (max-width: $mobile-xs-max) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-max) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop-min) and (max-width: $laptop-max) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-min) and (max-width: $desktop-max) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (min-width: $desktop-lg-min) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media (min-width: $desktop-xl-min) {
+    @content;
+  }
+}
+
+// Sammelbereiche
+// Alles unterhalb der Desktop-Token (Mobile + Tablet + Laptop)
+@mixin below-desktop {
+  @media (max-width: $laptop-max) {
+    @content;
+  }
+}
+
+// Gestapeltes Layout (Mobile + Tablet): Hero und Inhalte untereinander
+@mixin stacked {
+  @media (max-width: $tablet-max) {
+    @content;
+  }
+}
+
+// Nebeneinander-Layout ab Laptop aufwärts
+@mixin side-by-side {
+  @media (min-width: $laptop-min) {
+    @content;
+  }
+}
+
+// Bereich mit skalierten Design-Token (Tablet bis Desktop 1200)
+@mixin scaled-tokens {
+  @media (min-width: $tablet-min) and (max-width: $desktop-max) {
+    @content;
+  }
+}

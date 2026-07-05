@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div ref="containerEl" :style="styleVars">
     <div v-for="(textArray, idx) in textArrays" :key="idx" class="mainText" @click="() => animate(idx)">
       <span v-for="(segment, segmentIdx) in textArray" :key="segmentIdx">
@@ -68,7 +68,8 @@ const props = defineProps({
   align: {
     type: String,
     default: "center",
-    validator: (v) => ["left", "center", "right"].includes(v),
+    // "random" wird von den Seiten verwendet und verhält sich wie "center"
+    validator: (v) => ["left", "center", "right", "random"].includes(v),
   },
   preset: {
     type: String,
@@ -613,9 +614,10 @@ onBeforeUnmount(() => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@use "@/assets/styles/breakpoints" as bp;
+
 .mainText {
-  margin-top: var(--spacing-sm) 0;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-extra-light);
   text-align: left;
@@ -630,7 +632,6 @@ onBeforeUnmount(() => {
   height: 1.9rem;
   overflow: hidden;
   font-size: calc(var(--font-size-xxxl) * var(--tile-scale, 1));
-  line-height: line-height-normal;
   text-align: center;
   vertical-align: bottom;
   color: var(--color-primary);
@@ -712,119 +713,24 @@ a.custom-link.hitbox::after {
   opacity: 0.9;
 }
 
-@media (max-width: 480px) {
+/* Responsive Abweichungen (nur Diffs zur Basis) */
+@include bp.mobile {
   .mainText {
-    margin-top: var(--spacing-sm) 0;
     text-align: center;
     min-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
   }
 
   .char {
-    display: inline-block;
     width: var(--tile-width, var(--spacing-md));
     height: var(--spacing-xxl);
-    overflow: hidden;
     font-size: calc(var(--font-size-xxxxl) * var(--tile-scale, 1));
-    text-align: center;
-    vertical-align: bottom;
-    color: var(--color-primary);
-    font-optical-sizing: auto;
-  }
-
-  .separator {
-    color: var(--color-gray-light);
-  }
-
-  .normal {
-    color: var(--color-black);
-  }
-
-  .custom-style {
-    font-weight: var(--font-weight-bold);
-    color: var(--color-black);
-    font-size: calc(var(--font-size-xxxxl) * var(--tile-scale, 1));
-  }
-
-  .link-style {
-    color: var(--color-primary);
-    text-decoration-color: var(--color-accent);
-  }
-
-  a.custom-link.hitbox {
-    position: relative;
-    text-decoration: none;
-  }
-
-  a.custom-link.hitbox::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: var(--color-accent);
-    bottom: 0em;
-  }
-
-  .char.flip {
-    animation: flap 1s ease-in-out forwards;
-  }
-
-  @keyframes flap {
-
-    0%,
-    100% {
-      transform: rotateX(0deg);
-    }
-
-    50% {
-      transform: rotateX(360deg);
-    }
-  }
-
-  .custom-alert {
-    position: fixed;
-    top: 22rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 5px;
-    box-shadow: var(--box-shadow-light);
-    font-size: var(--font-size-base);
-    z-index: var(--z-index-alert);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-
-  .custom-alert.show {
-    opacity: 0.9;
   }
 }
 
 @media (max-width: 320px) {
-  .mainText {
-    margin-top: var(--spacing-sm) 0;
-    text-align: center;
-    min-width: 100%;
-  }
-
   .char {
-    display: inline-block;
     width: var(--spacing-md);
-    height: var(--spacing-xxl);
-    overflow: hidden;
     font-size: var(--font-size-xxl);
-    text-align: center;
-    vertical-align: bottom;
-    color: var(--color-primary);
-    font-optical-sizing: auto;
-  }
-
-  .separator {
-    color: var(--color-gray-light);
   }
 
   .normal {
@@ -832,245 +738,25 @@ a.custom-link.hitbox::after {
   }
 
   .custom-style {
-    font-weight: var(--font-weight-bold);
-    color: var(--color-black);
     font-size: var(--font-size-xxxxl);
-  }
-
-  .link-style {
-    color: var(--color-primary);
-    text-decoration-color: var(--color-accent);
-  }
-
-  a.custom-link.hitbox {
-    position: relative;
-    text-decoration: none;
-  }
-
-  a.custom-link.hitbox::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: var(--color-accent);
-    bottom: 0em;
-  }
-
-  .char.flip {
-    animation: flap 1s ease-in-out forwards;
-  }
-
-  @keyframes flap {
-
-    0%,
-    100% {
-      transform: rotateX(0deg);
-    }
-
-    50% {
-      transform: rotateX(360deg);
-    }
-  }
-
-  .custom-alert {
-    position: fixed;
-    top: 22rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 5px;
-    box-shadow: var(--box-shadow-light);
-    font-size: var(--font-size-base);
-    z-index: var(--z-index-alert);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-
-  .custom-alert.show {
-    opacity: 0.9;
   }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 1200px) {
   .mainText {
-    margin-top: var(--spacing-sm) 0;
     text-align: center;
     align-content: center;
     min-width: 100%;
   }
 
   .char {
-    display: inline-block;
     width: var(--spacing-lg);
     height: var(--spacing-xxl);
-    overflow: hidden;
     font-size: var(--font-size-xxxxl);
-    text-align: center;
-    vertical-align: bottom;
-    color: var(--color-primary);
-  }
-
-  .separator {
-    color: var(--color-gray-light);
-  }
-
-  .normal {
-    color: var(--color-black);
   }
 
   .custom-style {
-    font-weight: var(--font-weight-bold);
-    color: var(--color-black);
     font-size: var(--font-size-xxxxl);
-  }
-
-  .link-style {
-    color: var(--color-primary);
-    text-decoration-color: var(--color-accent);
-  }
-
-  a.custom-link.hitbox {
-    position: relative;
-    text-decoration: none;
-  }
-
-  a.custom-link.hitbox::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: var(--color-accent);
-    bottom: 0em;
-  }
-
-  .char.flip {
-    animation: flap 1s ease-in-out forwards;
-  }
-
-  @keyframes flap {
-
-    0%,
-    100% {
-      transform: rotateX(0deg);
-    }
-
-    50% {
-      transform: rotateX(360deg);
-    }
-  }
-
-  .custom-alert {
-    position: fixed;
-    top: 22rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 5px;
-    box-shadow: var(--box-shadow-light);
-    font-size: var(--font-size-base);
-    z-index: var(--z-index-alert);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-
-  .custom-alert.show {
-    opacity: 0.9;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .mainText {
-    margin-top: var(--spacing-sm) 0;
-    text-align: center;
-    align-content: center;
-    min-width: 100%;
-  }
-
-  .char {
-    display: inline-block;
-    width: var(--spacing-lg);
-    height: var(--spacing-xxl);
-    overflow: hidden;
-    font-size: var(--font-size-xxxxl);
-    text-align: center;
-    vertical-align: bottom;
-    color: var(--color-primary);
-  }
-
-  .separator {
-    color: var(--color-gray-light);
-  }
-
-  .normal {
-    color: var(--color-black);
-  }
-
-  .custom-style {
-    font-weight: var(--font-weight-bold);
-    color: var(--color-black);
-    font-size: var(--font-size-xxxxl);
-  }
-
-  .link-style {
-    color: var(--color-primary);
-    text-decoration-color: var(--color-accent);
-  }
-
-  a.custom-link.hitbox {
-    position: relative;
-    text-decoration: none;
-  }
-
-  a.custom-link.hitbox::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: var(--color-accent);
-    bottom: 0em;
-  }
-
-  .char.flip {
-    animation: flap 1s ease-in-out forwards;
-  }
-
-  @keyframes flap {
-
-    0%,
-    100% {
-      transform: rotateX(0deg);
-    }
-
-    50% {
-      transform: rotateX(360deg);
-    }
-  }
-
-  .custom-alert {
-    position: fixed;
-    top: 22rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 5px;
-    box-shadow: var(--box-shadow-light);
-    font-size: var(--font-size-base);
-    z-index: var(--z-index-alert);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-
-  .custom-alert.show {
-    opacity: 0.9;
   }
 }
 </style>

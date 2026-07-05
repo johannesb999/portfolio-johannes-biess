@@ -27,7 +27,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public/img/js/thumbnail.svg" alt="plantmonit" />
+        <img src="/img/js/thumbnail.svg" alt="plantmonit" />
       </div>
     </div>
     <DetailsScroll />
@@ -58,7 +58,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public/img/js/js.png" alt="plantmonit" />
+            <img src="/img/js/js.png" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img src="public/img/js/Process.svg" alt="concept work in figma" />
+            <img src="/img/js/Process.svg" alt="concept work in figma" />
           </div>
           <div class="text">
             <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlap" :align="'center'" />
@@ -118,7 +118,7 @@
               </div>
             </div>
             <div class="image large">
-              <img src="public/img/js/Implementaion.svg" alt="a monitor displaying jumpstar" />
+              <img src="/img/js/Implementaion.svg" alt="a monitor displaying jumpstar" />
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\js\js.png" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/js/js.png" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -205,7 +205,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\js\Process.svg" alt="concept work in figma" style="object-fit: contain" />
+            <img src="/img/js/Process.svg" alt="concept work in figma" style="object-fit: contain" />
           </div>
         </div>
 
@@ -235,7 +235,7 @@
               </div>
             </div>
             <div class="image medium">
-              <img src="public\img\js\Implementaion.svg" alt="a moitor displaying jumpstar"
+              <img src="/img/js/Implementaion.svg" alt="a moitor displaying jumpstar"
                 style="object-fit: contain" />
             </div>
           </div>
@@ -292,7 +292,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\js\js.png" alt="plantmonit" />
+            <img src="/img/js/js.png" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -324,7 +324,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\js\Process.svg" alt="concept work in figma" />
+            <img src="/img/js/Process.svg" alt="concept work in figma" />
           </div>
         </div>
 
@@ -354,7 +354,7 @@
               </div>
             </div>
             <div class="image medium">
-              <img src="public\img\js\Implementaion.svg" alt="a moitor displaying jumpstar" />
+              <img src="/img/js/Implementaion.svg" alt="a moitor displaying jumpstar" />
             </div>
           </div>
         </div>

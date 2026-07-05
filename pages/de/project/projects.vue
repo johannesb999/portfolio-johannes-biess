@@ -27,7 +27,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\pm\thumbnail.svg" alt="plantmonit" />
+        <img src="/img/pm/thumbnail.svg" alt="plantmonit" />
       </div>
     </div>
 
@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="image mela">
-            <img src="public\img\pm\problem.svg" alt="plantmonit" />
+            <img src="/img/pm/problem.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image mela">
-            <img src="public\img\pm\process.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/pm/process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
           <div class="text">
             <SplitFlapText :texts="['[PROZESS]']" preset="sectionFlap" :align="'center'" />
@@ -96,7 +96,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img src="public\img\pm\software.svg" alt="plantmonit" />
+            <img src="/img/pm/software.svg" alt="plantmonit" />
           </div>
           <div class="text">
             <div class="paragraph">
@@ -122,7 +122,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img src="public\img\pm\hardware.svg" alt="plantmonit" />
+            <img src="/img/pm/hardware.svg" alt="plantmonit" />
           </div>
           <div class="text">
             <div class="paragraph">
@@ -187,7 +187,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\pm\solution.svg" alt="plantmonit" />
+            <img src="/img/pm/solution.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -234,7 +234,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\pm\problem.svg" alt="plantmonit" />
+            <img src="/img/pm/problem.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -266,7 +266,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img src="public\img\pm\process.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/pm/process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -293,7 +293,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\pm\software.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/pm/software.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -325,7 +325,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\pm\hardware.svg" alt="plantmonit" />
+            <img src="/img/pm/hardware.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -364,7 +364,7 @@
             </div>
           </div>
           <div class="image mela">
-            <img src="public\img\pm\solution.svg" alt="plantmonit" />
+            <img src="/img/pm/solution.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -409,7 +409,7 @@
             </div>
           </div>
           <div class="image small">
-            <img src="public\img\pm\problem.svg" alt="plantmonit" />
+            <img src="/img/pm/problem.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -441,7 +441,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img src="public\img\pm\process.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/pm/process.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -468,7 +468,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\pm\software.svg" alt="plantmonit" />
+            <img src="/img/pm/software.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -501,7 +501,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\pm\hardware.svg" alt="plantmonit" />
+            <img src="/img/pm/hardware.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -540,7 +540,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\pm\solution.svg" alt="plantmonit" />
+            <img src="/img/pm/solution.svg" alt="plantmonit" />
           </div>
         </div>
       </div>

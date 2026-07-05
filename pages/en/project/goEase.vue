@@ -23,7 +23,7 @@
 
     <div class="wrapper">
       <div class="picture">
-        <img src="public\img\ge\thumbnail.svg" alt="plantmonit" />
+        <img src="/img/ge/thumbnail.svg" alt="plantmonit" />
       </div>
     </div>
 
@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\ge\problem.svg" alt="too many bus lines" />
+            <img src="/img/ge/problem.svg" alt="too many bus lines" />
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img src="public\img\ge\process.svg" style="object-position: center; object-fit: cover; height: 80vh"
+            <img src="/img/ge/process.svg" style="object-position: center; object-fit: cover; height: 80vh"
               alt="concept change over project time " />
           </div>
           <div class="text">
@@ -101,7 +101,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image large">
-            <img style="object-fit: contain; height: 70vh" src="public\img\ge\softwareProcess.svg"
+            <img style="object-fit: contain; height: 70vh" src="/img/ge/softwareProcess.svg"
               alt="figma mobile screens in different fidelitys" />
           </div>
           <div class="text">
@@ -140,7 +140,7 @@
       <div class="project-section-reverse">
         <div class="project-content">
           <div class="image medium">
-            <img style="object-fit: contain" src="public\img\ge\hardwareProcess.svg"
+            <img style="object-fit: contain" src="/img/ge/hardwareProcess.svg"
               alt="GoEase hardware with bus modell" />
           </div>
           <div class="text">
@@ -184,7 +184,7 @@
             </div>
           </div>
           <div class="image mela">
-            <img src="public\img\ge\solution.svg" alt="final app mockup" style="object-fit: contain" />
+            <img src="/img/ge/solution.svg" alt="final app mockup" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -233,7 +233,7 @@
             </div>
           </div>
           <div class="image mela">
-            <img src="public\img\ge\problem.svg" alt="plantmonit" />
+            <img src="/img/ge/problem.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -273,7 +273,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\ge\process.svg" alt="plantmonit " />
+            <img src="/img/ge/process.svg" alt="plantmonit " />
           </div>
         </div>
       </div>
@@ -310,7 +310,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\ge\softwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/ge/softwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -334,7 +334,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img src="public\img\ge\hardwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/ge/hardwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -360,7 +360,7 @@
             </div>
           </div>
           <div class="image mela">
-            <img src="public\img\ge\solution.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/ge/solution.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -401,7 +401,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\ge\problem.svg" alt="plantmonit" />
+            <img src="/img/ge/problem.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -442,7 +442,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\ge\process.svg" alt="plantmonit " />
+            <img src="/img/ge/process.svg" alt="plantmonit " />
           </div>
         </div>
       </div>
@@ -479,7 +479,7 @@
             </div>
           </div>
           <div class="image large">
-            <img src="public\img\ge\softwareProcess.svg" alt="plantmonit" />
+            <img src="/img/ge/softwareProcess.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
@@ -503,7 +503,7 @@
             </div>
           </div>
           <div class="image smedi">
-            <img src="public\img\ge\hardwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
+            <img src="/img/ge/hardwareProcess.svg" alt="plantmonit" style="object-fit: contain" />
           </div>
         </div>
       </div>
@@ -525,7 +525,7 @@
             </div>
           </div>
           <div class="image medium">
-            <img src="public\img\ge\solution.svg" alt="plantmonit" />
+            <img src="/img/ge/solution.svg" alt="plantmonit" />
           </div>
         </div>
       </div>
