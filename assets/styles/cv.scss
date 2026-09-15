@@ -12,6 +12,18 @@ main {
 
 @include layout.page;
 
+// Platzhalter für CV-Seiten, deren Inhalt noch folgt (z. B. Master).
+.cv-placeholder {
+  box-sizing: border-box;
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
 @include bp.mobile {
   .picture {
     width: 60dvw;

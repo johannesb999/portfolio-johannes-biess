@@ -8,6 +8,17 @@
     <div class="timeline">
       <ul>
         <li class="current">
+          <NuxtLink to="/en/cv/hfgMaster" class="content custom-link">
+            <h2>HFG (HOCHSCHULE <br />FÜR GESTALTUNG)</h2>
+            <p>MASTER OF ARTS</p>
+            <p class="location">SCHWÄBISCH GMÜND, GERMANY</p>
+          </NuxtLink>
+          <div class="date">
+            <h3>2026</h3>
+          </div>
+        </li>
+
+        <li>
           <NuxtLink to="/en/cv/hfg" class="content custom-link">
             <h2>HFG (HOCHSCHULE <br />FÜR GESTALTUNG)</h2>
             <p>BACHELOR OF ARTS</p>
