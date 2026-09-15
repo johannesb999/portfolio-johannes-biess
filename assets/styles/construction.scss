@@ -1,0 +1,36 @@
+@use "./breakpoints" as bp;
+@use "./project-layout" as layout;
+
+// Baustellen-Seite (pages/*/project/projects.vue).
+// Die einzelnen Projektseiten sind vorübergehend ausgeblendet; hier steht nur
+// die zentrierte Animation mit dem Hinweistext.
+
+@include layout.top-bar;
+
+main {
+  box-sizing: border-box;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-lg);
+}
+
+.construction-page {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing-xxl);
+  max-width: 100%;
+  text-align: center;
+}
+
+.construction-page__text {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing-xs);
+}
+
+@include bp.stacked {
+  .construction-page {
+    gap: var(--spacing-xl);
+  }
+}

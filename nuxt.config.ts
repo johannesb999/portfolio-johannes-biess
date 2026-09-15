@@ -3,6 +3,27 @@
 // Allow deploying under a subpath by honoring NUXT_APP_BASE_URL (e.g. "/portfolio-johannes-biess/")
 const base = process.env.NUXT_APP_BASE_URL || "/";
 
+// Die einzelnen Projektseiten sind vorübergehend ausgeblendet ("under construction").
+// Die Seiten bleiben im Repo; Direktaufrufe landen so lange auf der Baustellen-Seite.
+// Zum Wiederanzeigen: Eintrag hier entfernen und die Links in projects.vue zurückholen.
+const hiddenProjects = [
+  "jumpStar",
+  "simpleChat",
+  "portfolio",
+  "drawingLight",
+  "trickyTowers",
+  "goEase",
+];
+
+const hiddenProjectRoutes = Object.fromEntries(
+  ["de", "en"].flatMap((locale) =>
+    hiddenProjects.map((name) => [
+      `/${locale}/project/${name}`,
+      { redirect: { to: `/${locale}/project/projects`, statusCode: 302 } },
+    ])
+  )
+);
+
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ["@nuxt/image-edge"],
@@ -13,6 +34,8 @@ export default defineNuxtConfig({
     // Ensure page transition animations are always available (no code-split)
     "~/assets/styles/transitions.scss",
   ],
+
+  routeRules: hiddenProjectRoutes,
 
   compatibilityDate: "2024-08-27",
 

@@ -11,6 +11,37 @@
 
 $content-max-width: 87.5rem;
 
+// Fixe Kopfleiste (Zurueck-Link + abdeckender Balken). Wird von `page` und von
+// eigenstaendigen Seiten (z. B. der Baustellen-Seite) eingebunden.
+@mixin top-bar {
+  #projectLinkStart {
+    position: fixed;
+    top: 0;
+    padding-top: var(--spacing-lg);
+    left: 50vw;
+    transform: translateX(-50%);
+    @include type.L-Heading-Style('-bold');
+    text-align: center;
+    background-color: var(--color-background);
+    z-index: var(--z-index-high);
+  }
+
+  .background {
+    position: fixed;
+    height: 9vh;
+    width: 100vw;
+    top: 0;
+    z-index: var(--z-index-high);
+    background-color: var(--color-background);
+  }
+
+  @include bp.stacked {
+    .background {
+      height: 8vh;
+    }
+  }
+}
+
 @mixin page {
   main {
     // Kante der zentrierten Inhaltsspalte (identisch zu .project-details),
@@ -40,26 +71,7 @@ $content-max-width: 87.5rem;
     text-decoration: none;
   }
 
-  #projectLinkStart {
-    position: fixed;
-    top: 0;
-    padding-top: var(--spacing-lg);
-    left: 50vw;
-    transform: translateX(-50%);
-    @include type.L-Heading-Style('-bold');
-    text-align: center;
-    background-color: var(--color-background);
-    z-index: var(--z-index-high);
-  }
-
-  .background {
-    position: fixed;
-    height: 9vh;
-    width: 100vw;
-    top: 0;
-    z-index: var(--z-index-high);
-    background-color: var(--color-background);
-  }
+  @include top-bar;
 
   #projectLinkNext,
   #projectLinkBefore {
@@ -219,10 +231,6 @@ $content-max-width: 87.5rem;
       align-items: center;
       gap: var(--spacing-xl);
       min-height: 100vh;
-    }
-
-    .background {
-      height: 8vh;
     }
 
     .projectFlap,
