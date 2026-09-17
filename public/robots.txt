@@ -1,0 +1,80 @@
+# robots.txt — johannes-biess.com
+#
+# Haltung: Die Person und ihre Kontaktdaten sollen gefunden werden.
+# Die Projektinhalte sollen nicht in KI-Trainingsdaten oder KI-Antworten landen.
+#
+# Drei Ebenen, weil robots.txt allein nicht reicht:
+#   1. diese Datei                     — Bitte an die Crawler
+#   2. /.well-known/tdmrep.json        — maschinenlesbarer Vorbehalt gegen Text- und
+#                                        Data-Mining (Art. 4 Abs. 3 DSM-Richtlinie)
+#   3. server/middleware/ai-crawler-guard.ts
+#                                      — Durchsetzung per HTTP 403. Nötig, weil die
+#                                        nutzerausgelösten Abrufer (ChatGPT-User,
+#                                        Perplexity-User) robots.txt erklärtermaßen
+#                                        ignorieren.
+
+# ---------------------------------------------------------------------------
+# Alle übrigen Crawler: nichts gesperrt, damit Startseite, Über mich,
+# Kontakt, Lebenslauf und Impressum normal auffindbar bleiben.
+# ---------------------------------------------------------------------------
+User-agent: *
+Allow: /
+
+# ---------------------------------------------------------------------------
+# KI-Crawler und KI-Antwortmaschinen: Projektbereich und Projektmedien gesperrt.
+#
+# Googlebot steht bewusst mit in dieser Gruppe: er beliefert die klassische
+# Google-Suche UND die AI Overviews. Beides lässt sich nicht trennen. Wer die
+# Projekte aus KI-Antworten heraushalten will, nimmt sie damit auch aus den
+# normalen Google-Treffern. Person und Kontakt bleiben indexiert, weil nur die
+# Projektpfade gesperrt sind.
+# Soll umgekehrt entschieden werden: die Zeile "User-agent: Googlebot"
+# (und Bingbot/Applebot) aus dieser Gruppe entfernen — dann sind die Projekte
+# wieder in der Google-Suche, können aber in AI Overviews zitiert werden.
+# ---------------------------------------------------------------------------
+
+# OpenAI
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+# Anthropic
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+# Google (Google-Extended ist ein Steuer-Token für Gemini, kein eigener Crawler)
+User-agent: Googlebot
+User-agent: Google-Extended
+User-agent: GoogleOther
+# Apple (Applebot-Extended steuert nur die Verwertung)
+User-agent: Applebot
+User-agent: Applebot-Extended
+# Microsoft / Bing
+User-agent: Bingbot
+# Perplexity
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+# Meta
+User-agent: meta-externalagent
+User-agent: meta-externalfetcher
+User-agent: FacebookBot
+# Weitere Trainings- und Datensammler
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Amazonbot
+User-agent: Diffbot
+User-agent: omgili
+User-agent: omgilibot
+User-agent: ImagesiftBot
+User-agent: cohere-ai
+User-agent: AI2Bot
+User-agent: Timpibot
+User-agent: Kangaroo Bot
+User-agent: Scrapy
+Disallow: /de/project/
+Disallow: /en/project/
+Disallow: /img/
+Disallow: /docs/kai/
+# Portrait und Lebenslauf-Unterlagen bleiben erreichbar, damit die Person
+# auffindbar bleibt.
+Allow: /img/cv/
