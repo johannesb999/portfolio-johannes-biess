@@ -17,13 +17,17 @@
           'PLEASE COME BACK LATER',
         ]" />
       </div>
+
+      <ProjectLinks />
     </div>
   </main>
 </template>
 
 <script setup>
-// Die Projektseiten sind vorübergehend ausgeblendet (Weiterleitungen in
-// nuxt.config.ts). Hier steht so lange nur der Baustellen-Hinweis.
+// Eigenstaendige Baustellen-Seite: bewusst ohne Karussell-Links, sie fuehrt
+// nirgendwo weiter. Solange die Projektseiten online ausgeblendet sind, zeigen
+// der PROJEKTE-Link der Startseite und alle Weiterleitungen hierher.
+// Lokal blendet <ProjectLinks /> zusaetzlich die Projektliste ein.
 </script>
 
 <style lang="scss" src="assets/styles/construction.scss" scoped></style>

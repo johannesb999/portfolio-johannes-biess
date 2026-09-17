@@ -5,12 +5,7 @@
         <ScrollLink />
       </client-only>
     </div>
-    <div id="projectLinkNext">
-      <nuxt-link to="/en/project/trickyTowers" class="custom-link">TRICKYTOWERS</nuxt-link>
-    </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="/en/project/portfolio" class="custom-link">THIS WEBSITE</nuxt-link>
-    </div>
+    <ProjectNav current="drawingLight" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['      [DRAWINGLIGHT]      ']" />
@@ -23,29 +18,22 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/dl/thumbnail.svg" alt="DrawingLight thumbnail" />
-      </div>
+      <img src="/img/dl/thumbnail.svg" alt="DrawingLight thumbnail" />
     </div>
 
     <DetailsScroll />
 
     <div class="project-details">
-      <section id="details-section" class="section">
-        <div class="section__inner section__inner--max">
-          <ProjectAccordion :items="accordionItems" id-prefix="drawinglight" />
-        </div>
+      <section id="details-section">
+        <ProjectAccordion :items="accordionItems" id-prefix="drawinglight" />
       </section>
 
       <div class="project-section">
         <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
           '                        [PROJECT] [VIDEO]                       ',
         ]" />
-        <div class="project-video">
-          <iframe src="https://www.youtube.com/embed/k3CHPyc4J4M?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player" frameborder="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+        <div class="project-film">
+          <VideoEmbed id="k3CHPyc4J4M" title="DrawingLight — project video" />
         </div>
       </div>
 

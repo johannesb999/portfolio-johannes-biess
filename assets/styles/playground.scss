@@ -1,0 +1,53 @@
+@use "./breakpoints" as bp;
+@use "./project-layout" as layout;
+
+// Playground: Sammelseite der kleineren Arbeiten.
+// Anders als die Projektdetailseiten ohne Hero/Detail-Trennung — Flap und
+// Kacheln stehen zusammen auf einem Bildschirm, es gibt nichts nachzuladen.
+// Uebernommen wird nur die fixe Kopfleiste und die seitliche Navigation.
+
+@include layout.top-bar;
+
+#projectLinkNext,
+#projectLinkBefore {
+  position: fixed;
+  top: 50vh;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  z-index: var(--z--high);
+}
+
+.playground {
+  box-sizing: border-box;
+  min-height: 100dvh;
+  display: grid;
+  // Etwas oberhalb der Mitte: unten bleibt Luft, der Blick startet beim Flap
+  align-content: center;
+  justify-items: center;
+  gap: var(--spacing--bigger);
+  padding: 16vh var(--spacing--xxxl) var(--spacing--big);
+}
+
+.playground__content {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing--big);
+  width: min(85vw, 87.5rem);
+}
+
+.playground__flap {
+  display: grid;
+  justify-items: center;
+}
+
+@include bp.stacked {
+  .playground {
+    padding: 14vh var(--spacing--lg) var(--spacing--xxl);
+    gap: var(--spacing--xxl);
+  }
+
+  .playground__content {
+    width: 92vw;
+    gap: var(--spacing--xxl);
+  }
+}

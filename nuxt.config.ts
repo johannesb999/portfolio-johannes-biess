@@ -1,28 +1,39 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import {
+  constructionRoute,
+  entryProject,
+  hideableProjects,
+} from "./composables/projects";
 
 // Allow deploying under a subpath by honoring NUXT_APP_BASE_URL (e.g. "/portfolio-johannes-biess/")
 const base = process.env.NUXT_APP_BASE_URL || "/";
 
-// Die einzelnen Projektseiten sind vorübergehend ausgeblendet ("under construction").
-// Die Seiten bleiben im Repo; Direktaufrufe landen so lange auf der Baustellen-Seite.
-// Zum Wiederanzeigen: Eintrag hier entfernen und die Links in projects.vue zurückholen.
-const hiddenProjects = [
-  "jumpStar",
-  "simpleChat",
-  "portfolio",
-  "drawingLight",
-  "trickyTowers",
-  "goEase",
-];
+// Die einzelnen Projektseiten sind online ausgeblendet ("under construction"),
+// lokal aber erreichbar:
+//   npm run dev                  -> Projektseiten sichtbar
+//   npm run build / generate     -> Direktaufrufe landen auf der Baustellen-Seite
+//
+// Umschaltbar über SHOW_PROJECTS, um den jeweils anderen Zustand zu pruefen:
+//   SHOW_PROJECTS=false npm run dev       -> lokal wie online (Baustelle)
+//   SHOW_PROJECTS=true  npm run build     -> Projekte gehen online
+//
+// Der Wert steuert beides: die Weiterleitungen hier und die Projektliste auf der
+// Baustellen-Seite (ueber runtimeConfig.public.showProjects).
+const showProjects =
+  process.env.SHOW_PROJECTS !== undefined
+    ? process.env.SHOW_PROJECTS === "true"
+    : process.env.NODE_ENV === "development";
 
-const hiddenProjectRoutes = Object.fromEntries(
-  ["de", "en"].flatMap((locale) =>
-    hiddenProjects.map((name) => [
-      `/${locale}/project/${name}`,
-      { redirect: { to: `/${locale}/project/projects`, statusCode: 302 } },
-    ])
-  )
-);
+const hiddenProjectRoutes = showProjects
+  ? {}
+  : Object.fromEntries(
+      ["de", "en"].flatMap((locale) =>
+        hideableProjects.map((name) => [
+          `/${locale}/project/${name}`,
+          { redirect: { to: `/${locale}/project/${constructionRoute}`, statusCode: 302 } },
+        ])
+      )
+    );
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
@@ -37,6 +48,16 @@ export default defineNuxtConfig({
 
   routeRules: hiddenProjectRoutes,
 
+  runtimeConfig: {
+    public: {
+      // Zum Build-Zeitpunkt festgelegt, passend zu den routeRules oben
+      showProjects,
+      // Ziel des PROJEKTE-Links auf der Startseite: das erste Karussell-Projekt,
+      // solange die Projekte sichtbar sind — sonst die Baustellen-Seite.
+      projectsEntry: showProjects ? entryProject : constructionRoute,
+    },
+  },
+
   compatibilityDate: "2024-08-27",
 
   app: {
@@ -46,6 +67,14 @@ export default defineNuxtConfig({
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
+      ],
+      script: [
+        {
+          // Gespeichertes Theme setzen, bevor der Browser das erste Mal zeichnet —
+          // sonst blitzt die helle Variante kurz auf. Gegenstueck: app.vue.
+          innerHTML:
+            'try{document.documentElement.dataset.theme=localStorage.getItem("theme")==="dark"?"dark":"light"}catch(e){}',
+        },
       ],
       link: [
         // Preload critical fonts to minimize layout shift; prefix with baseURL and omit crossorigin to avoid cache mismatch

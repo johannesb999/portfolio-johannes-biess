@@ -5,12 +5,7 @@
         <ScrollLink />
       </client-only>
     </div>
-    <div id="projectLinkNext">
-      <nuxt-link to="/en/project/projects" class="custom-link">PLANTMONIT</nuxt-link>
-    </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="/en/project/trickyTowers" class="custom-link">TRICKYTOWERS</nuxt-link>
-    </div>
+    <ProjectNav current="goEase" />
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['          [GOEASE]          ']" />
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -22,35 +17,28 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/ge/thumbnail.svg" alt="GoEase thumbnail" />
-      </div>
+      <img src="/img/ge/thumbnail.svg" alt="GoEase thumbnail" />
     </div>
 
     <DetailsScroll />
 
     <div class="project-details">
-      <section id="details-section" class="section">
-        <div class="section__inner section__inner--max">
-          <p class="project-intro">
-            GoEase is a system for automating ticket purchases in public bus transport. The
-            solution connects small physical transmitters in the vehicles with a digital
-            application on the mobile phone. After a one-time setup, the system records journeys
-            in the background.
-          </p>
-          <ProjectAccordion :items="accordionItems" id-prefix="goease" />
-        </div>
+      <section id="details-section">
+        <p class="project-intro">
+          GoEase is a system for automating ticket purchases in public bus transport. The
+          solution connects small physical transmitters in the vehicles with a digital
+          application on the mobile phone. After a one-time setup, the system records journeys
+          in the background.
+        </p>
+        <ProjectAccordion :items="accordionItems" id-prefix="goease" />
       </section>
 
       <div class="project-section">
         <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
           '                       [PROJECT] [VIDEO]                        ',
         ]" />
-        <div class="project-video">
-          <iframe src="https://www.youtube.com/embed/_YpyL8_qQfw?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player" frameborder="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-            allowfullscreen></iframe>
+        <div class="project-film">
+          <VideoEmbed id="_YpyL8_qQfw" title="GoEase — project video" />
         </div>
         <div class="projectDetailsFlap">
           <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[

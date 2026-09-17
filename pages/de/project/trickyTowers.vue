@@ -6,12 +6,7 @@
       </client-only>
     </div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/de/project/goEase" class="custom-link">GOEASE</nuxt-link>
-    </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="/de/project/drawingLight" class="custom-link">DRAWINGLIGHT</nuxt-link>
-    </div>
+    <ProjectNav current="trickyTowers" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
@@ -26,22 +21,17 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/tt/tt (1).svg" alt="TrickyTowers Thumbnail" />
-      </div>
+      <img src="/img/tt/tt (1).svg" alt="TrickyTowers Thumbnail" />
     </div>
 
     <DetailsScroll />
 
     <div class="project-details">
-      <section id="details-section" class="section">
-        <div class="section__inner section__inner--max">
-          <ProjectAccordion :items="accordionItems" id-prefix="trickytowers" />
-        </div>
+      <section id="details-section">
+        <ProjectAccordion :items="accordionItems" id-prefix="trickytowers" />
       </section>
 
-      <a href="https://tricky.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
-        class="tryOutLink custom-link">TRY IT OUT LIVE</a>
+      <AppLink class="tryOutLink" href="https://tricky.johannes-biess.com/" label="TRY IT OUT LIVE" size="xxxxl" weight="bold" underline />
 
       <div class="projectDetailsFlap">
         <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[

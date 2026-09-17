@@ -6,12 +6,7 @@
       </client-only>
     </div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/de/project/drawingLight" class="custom-link">DRAWINGLIGHT</nuxt-link>
-    </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="/de/project/simpleChat" class="custom-link">SIMPLECHAT</nuxt-link>
-    </div>
+    <ProjectNav current="portfolio" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['        [PORTFOLIO]        ']" />
@@ -25,18 +20,14 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/po/thumbnail.svg" alt="Portfolio Thumbnail" />
-      </div>
+      <img src="/img/po/thumbnail.svg" alt="Portfolio Thumbnail" />
     </div>
 
     <DetailsScroll />
 
     <div class="project-details">
-      <section id="details-section" class="section">
-        <div class="section__inner section__inner--max">
-          <ProjectAccordion :items="accordionItems" id-prefix="portfolio" />
-        </div>
+      <section id="details-section">
+        <ProjectAccordion :items="accordionItems" id-prefix="portfolio" />
       </section>
 
       <div class="projectDetailsFlap">

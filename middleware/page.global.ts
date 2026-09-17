@@ -1,9 +1,10 @@
-export default defineNuxtRouteMiddleware((to, from) => {
-  const getDepth = (path: any) => {
-    return path.split("/").filter((seg: any) => seg.length > 0).length;
-  };
+import { mainProjects, playgroundProjects } from "~/composables/projects";
 
-  const checkSpecialRoutes = (path: any) => {
+export default defineNuxtRouteMiddleware((to, from) => {
+  const getDepth = (path: string) =>
+    path.split("/").filter((seg) => seg.length > 0).length;
+
+  const checkSpecialRoutes = (path: string) => {
     if (path.includes("/contact")) {
       return "contact";
     } else if (path.includes("/about")) {
@@ -12,15 +13,13 @@ export default defineNuxtRouteMiddleware((to, from) => {
       return "skillset";
     } else if (path.includes("/project") || path.includes("/resume")) {
       return "project-resume";
-    } else if (path.includes("/resume")) {
-      return "resume";
     } else if (path.includes("/legal")) {
       return "legal";
     }
     return null;
   };
 
-  const checkKeywords = (path: any) => {
+  const checkKeywords = (path: string) => {
     if (
       path.includes("bosch") ||
       path.includes("hfg") ||
@@ -33,21 +32,18 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return null;
   };
 
+  // Reihenfolge fuer die Richtung der Seitenuebergaenge — dieselbe Liste,
+  // die auch das Karussell bildet (composables/projects.ts)
   const projectPages = [
-    "projects",
-    "jumpStar",
-    "simpleChat",
-    "portfolio",
-    "drawingLight",
-    "trickyTowers",
-    "goEase",
+    ...mainProjects.map((p) => p.route),
+    ...playgroundProjects.map((p) => p.route),
   ];
 
-  const getPageName = (path: any) => {
+  const getPageName = (path: string) => {
     const segments = path
       .replace(/\/+$/, "")
       .split("/")
-      .filter((seg: string) => seg.length > 0);
+      .filter((seg) => seg.length > 0);
     return segments.pop() || "index";
   };
 
@@ -58,8 +54,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
     .map((page) => page.toLowerCase())
     .indexOf(getPageName(to.path).toLowerCase());
 
-  // console.log('from.path:', from.path, 'getPageName:', getPageName(from.path), 'fromIndex:', fromIndex);
-  // console.log('to.path:', to.path, 'getPageName:', getPageName(to.path), 'toIndex:', toIndex);
 
   const toDepth = getDepth(to.path);
   const fromDepth = getDepth(from.path);
@@ -80,7 +74,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
   if (languageChanged) {
     to.meta.pageTransition = { name: "fade" };
     from.meta.pageTransition = { name: "fade" };
-    // console.log("Transition name: fade");
     return;
   }
 
@@ -107,7 +100,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
         fromKeyword === "left" ? "page-right" : "page-left";
       to.meta.pageTransition = { name: transitionName };
       from.meta.pageTransition = { name: transitionName };
-      // console.log("Transition name:", transitionName);
       return;
     }
   }
@@ -117,7 +109,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
     const transitionName = toKeyword === "left" ? "page-left" : "page-right";
     to.meta.pageTransition = { name: transitionName };
     from.meta.pageTransition = { name: transitionName };
-    // console.log("Transition name:", transitionName);
     return;
   }
 
@@ -134,11 +125,9 @@ export default defineNuxtRouteMiddleware((to, from) => {
     if (forward) {
       to.meta.pageTransition = { name: "page-left" };
       from.meta.pageTransition = { name: "page-left" };
-      // console.log("Transition name: page-left");
     } else if (backward) {
       to.meta.pageTransition = { name: "page-right" };
       from.meta.pageTransition = { name: "page-right" };
-      // console.log("Transition name: page-right");
     }
     return;
   }
@@ -147,12 +136,10 @@ export default defineNuxtRouteMiddleware((to, from) => {
   if (from.path.includes("/project") && to.path.includes("/details")) {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
-    // console.log("Transition name: page-up");
     return;
   } else if (from.path.includes("/details") && to.path.includes("/project")) {
     to.meta.pageTransition = { name: "page-down" };
     from.meta.pageTransition = { name: "page-down" };
-    // console.log("Transition name: page-down");
     return;
   }
 
@@ -160,12 +147,10 @@ export default defineNuxtRouteMiddleware((to, from) => {
   if (fromSpecial === "contact" && toSpecial === "legal") {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
-    // console.log("Transition name: page-up");
     return;
   } else if (fromSpecial === "legal" && toSpecial === "contact") {
     to.meta.pageTransition = { name: "page-down" };
     from.meta.pageTransition = { name: "page-down" };
-    // console.log("Transition name: page-down");
     return;
   }
 
@@ -173,12 +158,10 @@ export default defineNuxtRouteMiddleware((to, from) => {
   if (fromSpecial === "about" && toSpecial === "skillset") {
     to.meta.pageTransition = { name: "page-right" };
     from.meta.pageTransition = { name: "page-right" };
-    // console.log("Transition name: page-right");
     return;
   } else if (fromSpecial === "skillset" && toSpecial === "about") {
     to.meta.pageTransition = { name: "page-left" };
     from.meta.pageTransition = { name: "page-left" };
-    // console.log("Transition name: page-left");
     return;
   }
 
@@ -186,7 +169,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
   if (toSpecial === "project-resume" && fromSpecial !== "project-resume") {
     to.meta.pageTransition = { name: "page-up" };
     from.meta.pageTransition = { name: "page-up" };
-    // console.log("Transition name: page-up");
     return;
   } else if (
     fromSpecial === "project-resume" &&
@@ -194,12 +176,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
   ) {
     to.meta.pageTransition = { name: "page-down" };
     from.meta.pageTransition = { name: "page-down" };
-    // console.log("Transition name: page-down");
-    return;
-  } else if (fromSpecial === "resume" && toSpecial === "about") {
-    to.meta.pageTransition = { name: "page-up" };
-    from.meta.pageTransition = { name: "page-up" };
-    // console.log("Transition name: page-up");
     return;
   } else if (
     toSpecial === "contact" ||
@@ -221,12 +197,10 @@ export default defineNuxtRouteMiddleware((to, from) => {
     from.meta.pageTransition = {
       name: toDepth > fromDepth ? reverseTransition : normalTransition,
     };
-    // console.log("Transition name:", to.meta.pageTransition.name);
     return;
   }
 
   // 6. Standard-Transition
   to.meta.pageTransition = { name: "fade" };
   from.meta.pageTransition = { name: "fade" };
-  // console.log("Transition name: fade");
 });

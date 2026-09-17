@@ -6,14 +6,7 @@
       </client-only>
     </div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/en/project/portfolio" class="custom-link">THIS WEBSITE
-      </nuxt-link>
-    </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="/en/project/jumpStar" class="custom-link">JUMPSTAR
-      </nuxt-link>
-    </div>
+    <ProjectNav current="simpleChat" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['        [SIMPLECHAT]        ']" />
@@ -27,26 +20,19 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/sc/thumbnail.svg" alt="SimpleChat thumbnail" />
-      </div>
+      <img src="/img/sc/thumbnail.svg" alt="SimpleChat thumbnail" />
     </div>
 
     <DetailsScroll />
 
     <div class="project-details">
-      <section id="details-section" class="section">
-        <div class="section__inner section__inner--max">
-          <ProjectAccordion :items="accordionItems" id-prefix="simplechat" />
-        </div>
+      <section id="details-section">
+        <ProjectAccordion :items="accordionItems" id-prefix="simplechat" />
       </section>
-
-      <a class="tryOutLink custom-link" style="text-decoration: none">TRY IT OUT LIVE</a>
       <div class="project-section">
-        <div class="project-video">
-          <iframe style="border: 1px solid #171717" width="800" height="450"
-            src="https://embed.figma.com/proto/lAaQo23W7BEgJGwKB9lQD8/Designmethoden-USerresearch?page-id=0%3A1&node-id=213-2808&node-type=frame&viewport=-2921%2C-796%2C0.15&scaling=scale-down&content-scaling=fixed&starting-point-node-id=213%3A2808&embed-host=share"
-            allowfullscreen></iframe>
+        <div class="project-film">
+          <iframe class="project-film__frame" src="https://embed.figma.com/proto/lAaQo23W7BEgJGwKB9lQD8/Designmethoden-USerresearch?page-id=0%3A1&node-id=213-2808&node-type=frame&viewport=-2921%2C-796%2C0.15&scaling=scale-down&content-scaling=fixed&starting-point-node-id=213%3A2808&embed-host=share"
+            title="SimpleChat — Figma prototype" loading="lazy" allowfullscreen></iframe>
         </div>
       </div>
       <div class="projectDetailsFlap">

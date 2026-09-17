@@ -6,12 +6,7 @@
       </client-only>
     </div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/de/project/simpleChat" class="custom-link">SIMPLECHAT</nuxt-link>
-    </div>
-    <div id="projectLinkBefore">
-      <nuxt-link to="/de/project/projects" class="custom-link">PLANTMONIT</nuxt-link>
-    </div>
+    <ProjectNav current="jumpStar" />
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
         '        [JUMPSTAR]          ',
@@ -26,32 +21,24 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/js/thumbnail.svg" alt="JumpStar Thumbnail" />
-      </div>
+      <img src="/img/js/thumbnail.svg" alt="JumpStar Thumbnail" />
     </div>
 
     <DetailsScroll />
 
     <div class="project-details">
-      <section id="details-section" class="section">
-        <div class="section__inner section__inner--max">
-          <ProjectAccordion :items="accordionItems" id-prefix="jumpstar" />
-        </div>
+      <section id="details-section">
+        <ProjectAccordion :items="accordionItems" id-prefix="jumpstar" />
       </section>
 
-      <a href="https://starsapp.johannes-biess.com/" target="_blank" rel="noopener noreferrer"
-        class="tryOutLink custom-link">TRY IT OUT LIVE</a>
+      <AppLink class="tryOutLink" href="https://starsapp.johannes-biess.com/" label="TRY IT OUT LIVE" size="xxxxl" weight="bold" underline />
 
       <div class="project-section" style="padding-top: 2rem">
         <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
           '                       [PROJEKT] [VIDEO]                       ',
         ]" />
-        <div class="project-video">
-          <iframe src="https://www.youtube.com/embed/5N_OzRcDetc?si=MtuP-8-eV4YISTo9=hd1080&rel=0"
-            title="YouTube video player" frameborder="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+        <div class="project-film">
+          <VideoEmbed id="5N_OzRcDetc" title="JumpStar — Projektvideo" />
         </div>
       </div>
       <div class="projectDetailsFlap">
