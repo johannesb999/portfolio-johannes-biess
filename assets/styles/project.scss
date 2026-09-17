@@ -1,70 +1,66 @@
-@use "./type" as type;
 @use "./breakpoints" as bp;
 @use "./project-layout" as layout;
+
+// Gemeinsame Breite der Seiten-Elemente (Video, Dokumentations-Reader)
+$media-width: 85vw;
 
 // Projekt-Detailseiten (trickyTowers, goEase, ...).
 // Gemeinsames Layout kommt aus _project-layout.scss.
 
 main {
-  --hero-top: 30vh;
-  --hero-image-max: 30rem;
-  --details-offset: 100vh;
+  --hero__top: 30vh;
+  --hero__image-max: 30rem;
+  --details__offset: 100vh;
 }
 
 @include layout.page;
 
+// Zentriert ohne transform: das kollidierte frueher mit dem Hover-Zoom,
+// wodurch der Link beim Ueberfahren nach rechts sprang.
 .tryOutLink {
-  color: var(--color-black);
-  @include type.L-XXXXL-Style('-bold');
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  text-decoration: underline;
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
 }
 
-.project-video iframe {
-  border: var(--border-size) solid var(--color-gray-light);
-  border-radius: var(--radius-md);
-  width: 71dvw;
-  height: 78dvh;
-  margin-top: var(--spacing-xl);
+// Projektvideo: eigenstaendiges, auf der Seite zentriertes Element. Bewusst
+// breiter als die Textspalte, sonst liest es sich wie ein Inhaltsblock.
+// Die Hoehe kommt aus dem 16:9 von VideoEmbed — der fruehere feste Rahmen
+// (71dvw x 78dvh) war rund 3:2 und hat das Video oben und unten geletterboxt.
+.project-film {
+  width: $media-width;
+  margin-inline: calc((100% - #{$media-width}) / 2);
+  margin-bottom: var(--spacing--xxl);
 }
 
-// Größenklassen für Bilder im Detailbereich
-$image-heights: (
-  small: var(--img-height-sm),
-  smedi: var(--img-height-smedi),
-  medium: var(--img-height-md),
-  mela: var(--img-height-mela),
-);
-
-@each $name, $height in $image-heights {
-  .image.#{$name} img {
-    max-height: #{$height};
-  }
+// Eingebettete Rahmen ohne eigene Komponente (z. B. Figma-Prototyp)
+.project-film__frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: var(--border__size) solid var(--border__color);
+  border-radius: var(--border__radius);
 }
 
-.image.large img {
-  height: fit-content;
+// Dokumentations-Reader unter dem Akkordeon.
+// Bricht aus der Inhaltsspalte aus: die Seiten sollen so gross wie moeglich
+// stehen, sonst ist eine 129-Seiten-Doku schlicht nicht lesbar.
+.project-doc {
+  display: grid;
+  // minmax(0, 1fr): sonst zieht die automatische Mindestbreite eines Grid-Items
+  // den Reader ueber die Elternbreite hinaus
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: var(--spacing--lg);
+  padding-top: var(--spacing--big);
+  width: $media-width;
+  margin-inline: calc((100% - #{$media-width}) / 2);
 }
 
 @include bp.stacked {
-  .project-video iframe {
-    width: 70vw;
-    height: 50vh;
-  }
-
-  .image img {
-    max-width: var(--img-width-lg);
+  .project-film {
+    width: 92vw;
+    margin-inline: calc((100% - 92vw) / 2);
   }
 }
 
-@include bp.mobile {
-  .project-video iframe {
-    height: 29vh;
-  }
-
-  .image.large img {
-    max-height: var(--img-height-lg);
-  }
-}

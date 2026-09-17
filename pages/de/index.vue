@@ -1,18 +1,8 @@
 <template>
   <div class="container">
-    <div id="leftLink">
-      <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>
-    </div>
-    <div id="rightLink">
-      <nuxt-link to="/de/contact" class="custom-link">KONTAKT</nuxt-link>
-    </div>
-    <div id="bottomLink">
-      <nuxt-link to="/de/project/projects" class="custom-link">
-        <span v-for="(char, index) in 'PROJEKTE'.split('')" :key="index" class="project-char">
-          {{ char }}
-        </span>
-      </nuxt-link>
-    </div>
+    <EdgeLink position="left" to="/de/about" label="ÜBER MICH" pulse />
+    <EdgeLink position="right" to="/de/contact" label="KONTAKT" pulse />
+    <EdgeLink ref="projectsLink" position="bottom" :to="projectsPath" label="PROJEKTE" flip pulse />
 
     <div v-for="(textArray, idx) in textArrays" :key="idx" class="mainText" @click="() => animate(idx)">
       <div>
@@ -30,16 +20,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { useRouter } from "vue-router";
 import "assets/styles/index.scss";
-
-const router = useRouter();
-const currentLocale = ref("en");
-
-const switchLanguage = (lang) => {
-  currentLocale.value = lang;
-  router.push({ path: `/${lang}` });
-};
 
 const texts = [
   "HI MEIN NAME IST   ",
@@ -90,7 +71,6 @@ const getTextLengthWithoutBrackets = (text) =>
 
 const maxLength = Math.max(...texts.map(getTextLengthWithoutBrackets));
 const textArrays = ref(texts.map((text) => createTextArray(text, maxLength)));
-const hasAnimated = ref(new Array(texts.length).fill(false));
 
 const animate = (index) => {
   const maxSteps = 13;
@@ -157,56 +137,29 @@ const handleWheel = debounce((event) => {
   }
 }, 200);
 
+// Der Projektlink klappt seine Buchstaben beim Scrollen um; die Komponente
+// stellt die Animation als Methode bereit.
+// Sichtbare Projekte -> erstes Karussell-Projekt, sonst die Baustellen-Seite
+const projectsPath = useProjectsEntry();
+
+const projectsLink = ref(null);
+
 const triggerSplitFlapAnimation = () => {
-  const projectLinkCharacters = document.querySelectorAll(
-    "#bottomLink .project-char"
-  );
-
-  animateCharacters(projectLinkCharacters);
-  textArrays.value.forEach((textArray, index) => animate(index));
+  projectsLink.value?.flipChars();
+  textArrays.value.forEach((_, index) => animate(index));
 };
 
-const animateCharacters = (characters) => {
-  characters.forEach((char, index) => {
-    setTimeout(() => {
-      char.classList.add("project-flip");
-      setTimeout(() => {
-        char.classList.remove("project-flip");
-      }, 600);
-    }, index * 100);
-  });
-};
+let rotateTimer;
 
 onMounted(() => {
   textArrays.value.forEach((_, index) => animate(index));
-  setInterval(() => {
-    animateBottomLineNewWord();
-  }, 3000);
+  rotateTimer = setInterval(animateBottomLineNewWord, 3000);
 
-  window.addEventListener("wheel", handleWheel);
+  window.addEventListener("wheel", handleWheel, { passive: true });
 });
 
 onUnmounted(() => {
   window.removeEventListener("wheel", handleWheel);
+  if (rotateTimer) clearInterval(rotateTimer);
 });
 </script>
-
-<style scoped>
-.project-flip {
-  animation: flip 0.6s forwards;
-}
-
-@keyframes flip {
-  0% {
-    transform: rotateX(0);
-  }
-
-  50% {
-    transform: rotateX(180deg);
-  }
-
-  100% {
-    transform: rotateX(0);
-  }
-}
-</style>

@@ -2,9 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/en/resume" class="custom-link">RESUME</nuxt-link>
-    </div>
+    <EdgeLink position="right" fixed to="/en/resume" label="RESUME" />
 
     <!--
       Placeholder: content follows. Structure mirrors pages/en/cv/hfg.vue

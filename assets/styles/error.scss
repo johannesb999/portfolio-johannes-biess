@@ -1,37 +1,41 @@
+// Fehlerseite: die Detailzeilen sind gedaempft, die erste Zeile
+// (404 / FEHLER / OFFLINE) bleibt in der Vordergrundfarbe.
+//
+// Vorher wurden die Farbtoken auf .center gedaempft und in .primary-line per
+// `--color--black: var(--color--black)` wieder "zurueckgesetzt". Das kann nicht
+// funktionieren: var() liest dort den bereits gedaempften, geerbten Wert —
+// die erste Zeile war also ebenfalls grau. Jetzt werden nur die Geschwister
+// der ersten Zeile gedaempft.
+$muted: #c3c3c3;
+
 .error-page {
   position: relative;
   min-height: 95dvh;
   display: grid;
   place-items: center;
-  background: var(--color-background);
-  color: var(--color-primary);
-  padding: var(--spacing-lg);
   overflow: hidden;
+  padding: var(--spacing--lg);
+  background: var(--color--background);
+  color: var(--color--primary);
 }
 
 .center {
   display: grid;
-  gap: var(--spacing-sm);
+  gap: var(--spacing--sm);
   justify-items: center;
   text-align: center;
-  /* Gray only SplitFlap content inside center */
-  --color-primary: #c3c3c3;
-  --color-black: #c3c3c3;
-  --color-accent: #c3c3c3;
 }
 
-.center .primary-line {
-  /* Keep the first (404/ERROR/OFFLINE) line black */
-  --color-primary: var(--color-black);
-  --color-black: var(--color-black);
-  --color-accent: var(--color-accent);
+.center > :not(.primary-line) {
+  --color--primary: #{$muted};
+  --color--black: #{$muted};
+  --color--accent: #{$muted};
 }
 
 .customlink {
-  color: var(--color-primary);
-
+  color: var(--color--primary);
 
   &:hover {
-    color: var(--color-accent);
+    color: var(--color--accent);
   }
 }

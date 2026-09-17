@@ -1,8 +1,6 @@
 <template>
   <main>
-    <div id="projectLinkStart">
-      <nuxt-link to="/en/contact" class="custom-link">CONTACT</nuxt-link>
-    </div>
+    <AppLink id="projectLinkStart" to="/en/contact" label="CONTACT" size="big" weight="bold" />
     <div id="impressum">
       <h1>Imprint</h1>
       <h2 id="m46">Service Provider</h2>
@@ -33,6 +31,21 @@
         protected by the respective intellectual property rights (copyrights,
         trademark rights). The use, reproduction, etc. are subject to our rights
         or the rights of the respective authors or rights holders.
+      </p>
+      <h2 id="m-tdm">Reservation of Rights for Text and Data Mining</h2>
+      <p>
+        For the content of the project section of this website — including the texts, images, designs,
+        concepts and documentation shown there — I expressly reserve the rights relating to text and data
+        mining pursuant to Section 44b(3) of the German Copyright Act and Article 4(3) of Directive (EU)
+        2019/790. Reproduction for the purpose of text and data mining, in particular for the training or
+        evaluation by artificial intelligence systems, is not permitted without my prior written consent.
+      </p>
+      <p>
+        This reservation is declared in machine-readable form at
+        <a href="/.well-known/tdmrep.json" target="_blank" rel="noopener noreferrer">/.well-known/tdmrep.json</a>
+        (TDM Reservation Protocol) and additionally in
+        <a href="/robots.txt" target="_blank" rel="noopener noreferrer">robots.txt</a>. Automated requests from
+        known AI crawlers to the project section are refused at the server level.
       </p>
       <p>
         Notices of Legal Violations: If you notice any legal violations within
@@ -165,58 +178,70 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@use "@/assets/styles/type.scss" as type;
+@use "@/assets/styles/type" as type;
+@use "@/assets/styles/breakpoints" as bp;
+
+// Zwei Spalten ab Desktop, darunter gestapelt.
+// Vorher: zwei absolut positionierte Bloecke mit festen Prozentwerten —
+// unterhalb Desktop lagen sie uebereinander.
+main {
+  box-sizing: border-box;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-areas:
+    "head"
+    "imprint"
+    "privacy";
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: var(--spacing--xxl);
+  padding: var(--spacing--bigger) var(--spacing--xxxl) var(--spacing--xxl);
+}
 
 #projectLinkStart {
-  position: absolute;
-  top: 0;
-  padding-top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  @include type.L-Heading-Style('-bold');
+  grid-area: head;
   text-align: center;
 }
 
-#impressum {
-  @include type.L-Body-Legal-Style('-thin');
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  max-width: 560px;
-  height: 80%;
-  overflow-y: auto;
+#impressum,
+#dsgvo {
+  display: grid;
+  align-content: start;
+  gap: var(--spacing--xs);
+  max-width: 35rem;
+  color: var(--color--primary);
   text-align: left;
-  padding: 20px;
-  color: var(--color-primary);
+  @include type.text(md, thin, legal);
+  letter-spacing: var(--letter-spacing--base);
+}
 
+#impressum {
+  grid-area: imprint;
 }
 
 #dsgvo {
-  color: var(--color-primary);
-  @include type.L-Body-Legal-Style('-thin');
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  position: absolute;
-  top: 50%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  max-width: 560px;
-  height: 80%;
-  overflow-y: auto;
-  text-align: right;
-  padding: 20px;
+  grid-area: privacy;
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color--primary);
+}
+
+@include bp.desktop-up {
+  main {
+    grid-template-areas:
+      "head    head"
+      "imprint privacy";
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  // Auf Desktop bekommen die Spalten eigene Scrollbereiche,
+  // damit die Seite selbst nicht endlos lang wird.
+  #impressum,
+  #dsgvo {
+    max-height: 70dvh;
+    overflow-y: auto;
+  }
 }
 </style>

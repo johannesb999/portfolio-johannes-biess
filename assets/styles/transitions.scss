@@ -18,7 +18,7 @@
   z-index: 100;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 40px var(--color-black, rgba(0, 0, 0, 0));
+  box-shadow: 0 0 40px var(--color--black, rgba(0, 0, 0, 0));
   pointer-events: none;
   will-change: transform;
   backface-visibility: hidden;
@@ -27,45 +27,45 @@
 .page-left-enter-from,
 .page-right-leave-to {
   transform: translateX(100%);
-  box-shadow: -10px 0 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
+  box-shadow: -10px 0 30px var(--color--transition, rgba(0, 0, 0, 0.3));
 }
 
 .page-left-leave-to,
 .page-right-enter-from {
   transform: translateX(-100%);
-  box-shadow: 10px 0 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
+  box-shadow: 10px 0 30px var(--color--transition, rgba(0, 0, 0, 0.3));
 }
 
 .page-right-enter-from,
 .page-left-leave-to {
   transform: translateX(-100%);
-  box-shadow: 10px 0 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
+  box-shadow: 10px 0 30px var(--color--transition, rgba(0, 0, 0, 0.3));
 }
 
 .page-right-leave-to,
 .page-left-enter-from {
   transform: translateX(100%);
-  box-shadow: -10px 0 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
+  box-shadow: -10px 0 30px var(--color--transition, rgba(0, 0, 0, 0.3));
 }
 
 .page-down-enter-from { /* slide new page from top */
   transform: translateY(-100%);
-  box-shadow: 0 10px 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
+  box-shadow: 0 10px 30px var(--color--transition, rgba(0, 0, 0, 0.3));
 }
 
 .page-down-leave-to { /* slide old page to bottom */
   transform: translateY(100%);
-  box-shadow: 0 -10px 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
+  box-shadow: 0 -10px 30px var(--color--transition, rgba(0, 0, 0, 0.3));
 }
 
 .page-up-enter-from { /* slide new page from bottom */
   transform: translateY(100%);
-  box-shadow: 0 -10px 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
+  box-shadow: 0 -10px 30px var(--color--transition, rgba(0, 0, 0, 0.3));
 }
 
 .page-up-leave-to { /* slide old page to top */
   transform: translateY(-100%);
-  box-shadow: 0 10px 30px var(--color-white-transition, rgba(0, 0, 0, 0.3));
+  box-shadow: 0 10px 30px var(--color--transition, rgba(0, 0, 0, 0.3));
 }
 
 .page-left-enter-to,
@@ -73,7 +73,7 @@
 .page-up-enter-to,
 .page-down-enter-to {
   transform: translateX(0) translateY(0);
-  box-shadow: 0 0 40px var(--color-white-transition, rgba(0, 0, 0, 0.3));
+  box-shadow: 0 0 40px var(--color--transition, rgba(0, 0, 0, 0.3));
 }
 
 .fade-enter-active,

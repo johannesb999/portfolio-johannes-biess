@@ -89,3 +89,10 @@ $desktop-xl-min: 1600px;
     @content;
   }
 }
+
+// Desktop und aufwärts (ab 1024px) — zweispaltige Layouts
+@mixin desktop-up {
+  @media (min-width: $desktop-min) {
+    @content;
+  }
+}

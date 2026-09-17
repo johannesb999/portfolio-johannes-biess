@@ -1,38 +1,41 @@
-@use "./type" as type;
 @use "./breakpoints" as bp;
 
-#contact {
-  color: var(--color-primary);
-  @include type.L-XXXXL-Style('-light');
-  text-align: center;
-  font-style: normal;
-  line-height: var(--line-height-normal);
-}
+// Kontaktseite: zentrierter Flap-Block, Impressum-Link am unteren Rand.
 
-#impressum {
-  color: var(--color-gray);
-  @include type.L-Body-Large-Style('-thin');
-  position: absolute;
-  bottom: var(--spacing-lg);
-  left: 50dvw;
-  transform: translateX(-50%);
+main {
+  box-sizing: border-box;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-areas:
+    "contact"
+    "legal";
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  padding: var(--spacing--bigger) var(--spacing--xxxl);
 }
 
 .contactMeText {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50dvh;
-  left: 50dvw;
-  transform: translate(-50%, -50%);
+  grid-area: contact;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+.contact__legal {
+  // Groesse per CSS, nicht per AppLink-Prop — sie aendert sich auf Mobile
+  --app-link__size: var(--font__size--lg);
+  --app-link__weight: var(--font__weight--thin);
+
+  grid-area: legal;
+  color: var(--color--gray);
 }
 
 @include bp.mobile {
-  #impressum {
-    @include type.L-Button-Style('-thin');
-  }
-
   .contactMeText {
     min-width: 80%;
+  }
+
+  .contact__legal {
+    --app-link__size: var(--font__size--xl);
   }
 }

@@ -1,13 +1,13 @@
 @use "./breakpoints" as bp;
 @use "./project-layout" as layout;
 
-// CV-Detailseiten (hfg, bosch, dtack, internship, kbsz).
+// CV-Detailseiten (hfg, hfgMaster, bosch, dtack, internship, kbsz).
 // Gemeinsames Layout kommt aus _project-layout.scss.
 
 main {
-  --hero-top: 15vh;
-  --hero-image-max: 35rem;
-  --details-offset: 55vh;
+  --hero__top: 15vh;
+  --hero__image-max: 35rem;
+  --details__offset: 55vh;
 }
 
 @include layout.page;
@@ -19,13 +19,13 @@ main {
   display: grid;
   place-content: center;
   justify-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-lg);
+  gap: var(--spacing--xs);
+  padding: var(--spacing--lg);
   text-align: center;
 }
 
 @include bp.mobile {
-  .picture {
+  .wrapper img {
     width: 60dvw;
   }
 }

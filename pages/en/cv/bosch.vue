@@ -2,9 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/en/resume" class="custom-link">RESUME</nuxt-link>
-    </div>
+    <EdgeLink position="right" fixed to="/en/resume" label="RESUME" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -16,9 +14,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/cv/bosch.svg" alt="Picture of Bosch Building" />
-      </div>
+      <img src="/img/cv/bosch.svg" alt="Picture of Bosch Building" />
     </div>
 
     <div class="project-details">
@@ -33,8 +29,7 @@
               guiding teams and work areas towards more methodical processes and
               making existing workflows more efficient. You can find out more about what I learned and did
               during my apprenticeship in my
-              <a href="/docs/bosch/employment-reference-bosch-en.pdf" target="_blank" rel="noopener" class="custom-link"
-                style="text-decoration: underline">Employment Reference</a>
+              <AppLink href="/docs/bosch/employment-reference-bosch-en.pdf" label="Employment Reference" underline :scale="false" />
             </div>
           </div>
 

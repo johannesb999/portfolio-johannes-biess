@@ -2,9 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <div id="projectLinkBefore">
-      <nuxt-link to="/en/resume" class="custom-link">RESUME</nuxt-link>
-    </div>
+    <EdgeLink position="left" fixed to="/en/resume" label="RESUME" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -17,9 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/cv/musecase2.png" alt="musecase logo" />
-      </div>
+      <img src="/img/cv/musecase2.png" alt="musecase logo" />
     </div>
 
     <div class="project-details">
@@ -34,8 +30,7 @@
               product's usability by analyzing user flows and best practices. In addition to these technical skills, it
               was particularly important to learn how to deal with clients professionally—to understand their needs,
               manage expectations, and accept constructive feedback. Here is my detailed
-              <NuxtLink to="/docs/internship/praxissemester-bericht-johannes-biess-e.pdf" target="_blank" rel="noopener"
-                class="custom-link" style="text-decoration: underline">Report and my learnings</NuxtLink>
+              <AppLink href="/docs/internship/praxissemester-bericht-johannes-biess-e.pdf" label="Report and my learnings" underline :scale="false" />
               .
             </div>
           </div>
@@ -51,8 +46,7 @@
               teamwork, take responsibility, and learn from mistakes to continuously optimize the workflow.What muse
               case
               says about me can be found in my:
-              <NuxtLink to="/docs/internship/praxissemester-zeugnis-johannes-biess-e.pdf" target="_blank" rel="noopener"
-                class="custom-link" style="text-decoration: underline">Employment reference</NuxtLink>.
+              <AppLink href="/docs/internship/praxissemester-zeugnis-johannes-biess-e.pdf" label="Employment reference" underline :scale="false" />.
             </div>
           </div>
         </div>

@@ -2,9 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/de/resume" class="custom-link">RESUME</nuxt-link>
-    </div>
+    <EdgeLink position="right" fixed to="/de/resume" label="RESUME" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -17,9 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/cv/dtack.svg" alt="Picture of D-TACK Building" />
-      </div>
+      <img src="/img/cv/dtack.svg" alt="Picture of D-TACK Building" />
     </div>
 
     <div class="project-details">
@@ -38,8 +34,7 @@
               einem professionellen Umfeld geschult und gefördert. Ein weiteren
               Einblick in meine Leistungen und Tätigkeiten während der
               Ausbildung findet sich in meinem
-              <a href="/docs/dtack/arbeitszeugnis-dtack-de.pdf" target="_blank" rel="noopener" class="custom-link"
-                style="text-decoration: underline">Arbeitszeugnis</a>
+              <AppLink href="/docs/dtack/arbeitszeugnis-dtack-de.pdf" label="Arbeitszeugnis" underline :scale="false" />
             </div>
           </div>
 
@@ -56,9 +51,7 @@
               besonderen Wert auf den Aufbau von Softskills wie Kommunikation,
               Teamarbeit und Organisation. Weitere Informationen zu den
               Ausbildungsinhalten auf ihrer
-              <nuxt-link
-                to="https://www.d-tack.de/ausbildung?srsltid=AfmBOor2XUpCV5NFF_DtUYp2PfYXWaT6FYBF1oI200zuMLlf_o3gj6WG"
-                class="custom-link" style="text-decoration: underline" target="_blank">Website.</nuxt-link>
+              <AppLink href="https://www.d-tack.de/ausbildung?srsltid=AfmBOor2XUpCV5NFF_DtUYp2PfYXWaT6FYBF1oI200zuMLlf_o3gj6WG" label="Website." underline :scale="false" />
             </div>
           </div>
         </div>

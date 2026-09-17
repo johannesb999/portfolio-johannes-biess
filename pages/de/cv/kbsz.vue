@@ -2,9 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <div id="projectLinkBefore">
-      <nuxt-link to="/de/resume" class="custom-link">RESUME</nuxt-link>
-    </div>
+    <EdgeLink position="left" fixed to="/de/resume" label="RESUME" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -16,9 +14,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/cv/kbsz.svg" alt="Picture of KBSZ Building in Ellwangen" />
-      </div>
+      <img src="/img/cv/kbsz.svg" alt="Picture of KBSZ Building in Ellwangen" />
     </div>
 
     <div class="project-details">

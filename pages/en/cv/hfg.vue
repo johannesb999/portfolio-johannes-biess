@@ -2,9 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/en/resume" class="custom-link">RESUME</nuxt-link>
-    </div>
+    <EdgeLink position="right" fixed to="/en/resume" label="RESUME" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -17,9 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/cv/hfgbuilding.svg" alt="Picture of HFG Building" />
-      </div>
+      <img src="/img/cv/hfgbuilding.svg" alt="Picture of HFG Building" />
     </div>
 
     <div class="project-details">
@@ -29,8 +25,7 @@
             <SplitFlapText :texts="['          [LEARNINGS]         ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               When I was at the HfG, I worked on
-              <NuxtLink to="/en/project/projects" class="custom-link" style="text-decoration: underline">projects
-              </NuxtLink>
+              <AppLink :to="projectsPath" label="projects" underline :scale="false" />
               that were very focused on getting hands-on experience right from
               the start. I learned to think deeply about fundamental questions
               like: What should I develop? How can I make sure it meets users'
@@ -38,8 +33,7 @@
               effectively? The HfG created an inspiring learning environment
               where I could not only build my design and technical skills, but
               also learn how to apply them in real projects. Take a look at my
-              <a href="/docs/hfg/transcript-of-records-en.pdf" target="_blank" rel="noopener" class="custom-link"
-                style="text-decoration: underline">Transcript of Records</a>for more details.
+              <AppLink href="/docs/hfg/transcript-of-records-en.pdf" label="Transcript of Records" underline :scale="false" />for more details.
             </div>
           </div>
 
@@ -47,9 +41,7 @@
             <SplitFlapText :texts="['         [ABOUT] [HFG]        ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               The
-              <nuxt-link to="https://www.hfg-gmuend.de/en/studium/digital-product-design-and-development"
-                class="custom-link" style="text-decoration: underline" target="_blank">Hochschule für Gestaltung
-                Schwäbisch Gmünd.</nuxt-link>
+              <AppLink href="https://www.hfg-gmuend.de/en/studium/digital-product-design-and-development" label="Hochschule für Gestaltung Schwäbisch Gmünd." underline :scale="false" />
               (HfG) is known for its real-world, project-based approach to
               training students. The school places a lot of emphasis on
               combining theory and practice, which gives students a good
@@ -59,8 +51,7 @@
               combination of hands-on learning and a strong link to practice,
               students learn all the steps from concept development to the
               finished prototype. Take a look at the
-              <a href="/docs/hfg/module-manual-en.pdf" target="_blank" rel="noopener" class="custom-link"
-                style="text-decoration: underline">Module Manual</a>for more details.
+              <AppLink href="/docs/hfg/module-manual-en.pdf" label="Module Manual" underline :scale="false" />for more details.
             </div>
           </div>
         </div>
@@ -68,6 +59,11 @@
     </div>
   </main>
 </template>
+
+<script setup>
+// Ziel richtet sich danach, ob die Projektseiten freigeschaltet sind
+const projectsPath = useProjectsEntry();
+</script>
 
 
 <style lang="scss" src="assets/styles/cv.scss" scoped></style>

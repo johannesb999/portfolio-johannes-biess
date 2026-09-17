@@ -2,9 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/en/resume" class="custom-link">RESUME</nuxt-link>
-    </div>
+    <EdgeLink position="right" fixed to="/en/resume" label="RESUME" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -17,9 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/cv/dtack.svg" alt="Picture of D-TACK Building" />
-      </div>
+      <img src="/img/cv/dtack.svg" alt="Picture of D-TACK Building" />
     </div>
 
     <div class="project-details">
@@ -37,8 +33,7 @@
               communication and organisation, in a professional setting for the
               first time. You can find out more about what I learned and did
               during my apprenticeship in my
-              <a href="/docs/dtack/employment-reference-dtack-en.pdf" target="_blank" rel="noopener" class="custom-link"
-                style="text-decoration: underline">Employment Reference</a>
+              <AppLink href="/docs/dtack/employment-reference-dtack-en.pdf" label="Employment Reference" underline :scale="false" />
             </div>
           </div>
 
@@ -54,9 +49,7 @@
               developing soft skills such as communication, teamwork and
               organisation. You can find out more about the training content on
               their
-              <nuxt-link
-                to="https://www.d-tack.de/ausbildung?srsltid=AfmBOor2XUpCV5NFF_DtUYp2PfYXWaT6FYBF1oI200zuMLlf_o3gj6WG"
-                class="custom-link" style="text-decoration: underline" target="_blank">website.</nuxt-link>
+              <AppLink href="https://www.d-tack.de/ausbildung?srsltid=AfmBOor2XUpCV5NFF_DtUYp2PfYXWaT6FYBF1oI200zuMLlf_o3gj6WG" label="website." underline :scale="false" />
             </div>
           </div>
         </div>

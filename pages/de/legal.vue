@@ -1,8 +1,6 @@
 <template>
   <main>
-    <div id="projectLinkStart">
-      <nuxt-link to="/de/contact" class="custom-link">KONTAKT</nuxt-link>
-    </div>
+    <AppLink id="projectLinkStart" to="/de/contact" label="KONTAKT" size="big" weight="bold" />
     <div id="impressum">
       <h1>Impressum</h1>
       <h2 id="m46">Diensteanbieter</h2>
@@ -31,6 +29,22 @@
         Marken und Handelsnamen, sind durch die jeweiligen Schutzrechte (Urheberrechte, Markenrechte) geschützt. Die
         Verwendung, Vervielfältigung, etc. unterliegt unseren Rechten oder den Rechten der jeweiligen Urheber oder
         Rechteinhaber.
+      </p>
+      <h2 id="m-tdm">Nutzungsvorbehalt für Text- und Data-Mining</h2>
+      <p>
+        Für die Inhalte des Projektbereichs dieser Website — einschließlich der dort gezeigten Texte,
+        Abbildungen, Entwürfe, Konzepte und Dokumentationen — behalte ich mir die Rechte in Bezug auf Text-
+        und Data-Mining nach § 44b Abs. 3 UrhG sowie Art. 4 Abs. 3 der Richtlinie (EU) 2019/790 ausdrücklich
+        vor. Eine Vervielfältigung zum Zweck des Text- und Data-Mining, insbesondere zum Training oder zur
+        Auswertung durch Systeme künstlicher Intelligenz, ist ohne meine vorherige schriftliche Zustimmung
+        nicht gestattet.
+      </p>
+      <p>
+        Dieser Vorbehalt ist maschinenlesbar hinterlegt unter
+        <a href="/.well-known/tdmrep.json" target="_blank" rel="noopener noreferrer">/.well-known/tdmrep.json</a>
+        (TDM Reservation Protocol) und zusätzlich in der
+        <a href="/robots.txt" target="_blank" rel="noopener noreferrer">robots.txt</a> erklärt. Automatisierte
+        Zugriffe bekannter KI-Crawler auf den Projektbereich werden serverseitig abgewiesen.
       </p>
       <p>
         Hinweise auf Rechtsverstöße: Sollten Sie innerhalb unseres Internetauftritts Rechtsverstöße bemerken, bitten wir
@@ -163,57 +177,70 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@use "@/assets/styles/type.scss" as type;
+@use "@/assets/styles/type" as type;
+@use "@/assets/styles/breakpoints" as bp;
+
+// Zwei Spalten ab Desktop, darunter gestapelt.
+// Vorher: zwei absolut positionierte Bloecke mit festen Prozentwerten —
+// unterhalb Desktop lagen sie uebereinander.
+main {
+  box-sizing: border-box;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-areas:
+    "head"
+    "imprint"
+    "privacy";
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: var(--spacing--xxl);
+  padding: var(--spacing--bigger) var(--spacing--xxxl) var(--spacing--xxl);
+}
 
 #projectLinkStart {
-  position: absolute;
-  top: 0;
-  padding-top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  @include type.L-Heading-Style('-bold');
+  grid-area: head;
   text-align: center;
 }
 
-#impressum {
-  @include type.L-Body-Legal-Style('-thin');
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  position: absolute;
-  top: 50%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  max-width: 560px;
-  height: 80%;
-  overflow-y: auto;
+#impressum,
+#dsgvo {
+  display: grid;
+  align-content: start;
+  gap: var(--spacing--xs);
+  max-width: 35rem;
+  color: var(--color--primary);
   text-align: left;
-  padding: 20px;
-  color: var(--color-primary);
+  @include type.text(md, thin, legal);
+  letter-spacing: var(--letter-spacing--base);
+}
+
+#impressum {
+  grid-area: imprint;
 }
 
 #dsgvo {
-  color: var(--color-primary);
-  @include type.L-Body-Legal-Style('-thin');
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  position: absolute;
-  top: 50%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  max-width: 560px;
-  height: 80%;
-  overflow-y: auto;
-  text-align: right;
-  padding: 20px;
+  grid-area: privacy;
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color--primary);
+}
+
+@include bp.desktop-up {
+  main {
+    grid-template-areas:
+      "head    head"
+      "imprint privacy";
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  // Auf Desktop bekommen die Spalten eigene Scrollbereiche,
+  // damit die Seite selbst nicht endlos lang wird.
+  #impressum,
+  #dsgvo {
+    max-height: 70dvh;
+    overflow-y: auto;
+  }
 }
 </style>

@@ -1,14 +1,8 @@
 <template>
   <main class="error-page">
-    <div id="topLink">
-      <NuxtLink :to="homePath" class="custom-link">{{ homeLabel }}</NuxtLink>
-    </div>
-    <div id="leftLink">
-      <a href="#" class="custom-link" @click.prevent="goBack">{{ backLabel }}</a>
-    </div>
-    <div id="bottomLink">
-      <a href="#" class="custom-link" @click.prevent="reload">{{ reloadLabel }}</a>
-    </div>
+    <EdgeLink position="top" :to="homePath" :label="homeLabel" />
+    <EdgeLink position="left" :label="backLabel" @click="goBack" />
+    <EdgeLink position="bottom" :label="reloadLabel" @click="reload" />
 
     <div class="center">
       <div class="primary-line">
@@ -18,7 +12,7 @@
       <SplitFlapText v-for="(line, idx) in detailLines" :key="'dl-'+idx" preset="sectionFlap" :align="'center'" :texts="[line]" />
     </div>
   </main>
-  </template>
+</template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
@@ -67,25 +61,7 @@ const detailLines = computed(() => {
   return lines;
 });
 
-const title = computed(() => {
-  if (isOffline.value) return isDE.value ? 'Offline' : 'Offline';
-  if (is404.value) return isDE.value ? 'Seite nicht gefunden' : 'Page not found';
-  return isDE.value ? 'Etwas ist schiefgelaufen' : 'Something went wrong';
-});
 
-const message = computed(() => {
-  if (isOffline.value)
-    return isDE.value
-      ? 'Du scheinst offline zu sein. Prüfe deine Internetverbindung und versuche es erneut.'
-      : 'You appear to be offline. Check your connection and try again.';
-  if (is404.value)
-    return isDE.value
-      ? 'Die angeforderte Seite konnte nicht gefunden werden.'
-      : 'The requested page could not be found.';
-  return isDE.value
-    ? 'Ein unerwarteter Fehler ist aufgetreten.'
-    : 'An unexpected error occurred.';
-});
 
 const homePath = computed(() => (isDE.value ? '/de' : '/en'));
 const homeLabel = computed(() => (isDE.value ? 'Zur Startseite' : 'Go Home'));

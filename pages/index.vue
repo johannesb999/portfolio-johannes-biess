@@ -1,24 +1,8 @@
 <template>
   <div class="container">
-    <div id="leftLink" ref="leftLink">
-      <nuxt-link to="/en/about" class="custom-link">
-        <span class="link-content">ABOUT ME</span>
-      </nuxt-link>
-    </div>
-    <div id="rightLink" ref="rightLink">
-      <nuxt-link to="/en/contact" class="custom-link">
-        <span class="link-content">CONTACT</span>
-      </nuxt-link>
-    </div>
-    <div id="bottomLink" ref="bottomLink">
-      <nuxt-link to="/en/project/projects" class="custom-link">
-        <span class="link-content">
-          <span v-for="(char, index) in 'PROJECTS'.split('')" :key="index" class="project-char">
-            {{ char }}
-          </span>
-        </span>
-      </nuxt-link>
-    </div>
+    <EdgeLink position="left" to="/en/about" label="ABOUT ME" pulse />
+    <EdgeLink position="right" to="/en/contact" label="CONTACT" pulse />
+    <EdgeLink ref="projectsLink" position="bottom" :to="projectsPath" label="PROJECTS" flip pulse />
 
     <div v-for="(textArray, idx) in textArrays" :key="idx" class="mainText" @click="() => animate(idx)">
       <div>
@@ -37,7 +21,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useHead } from "#imports";
-import { useRouter } from "vue-router";
 import "assets/styles/index.scss";
 
 type Letter = {
@@ -67,17 +50,12 @@ definePageMeta({
   alias: ["/en"],
 });
 
-const router = useRouter();
-const currentLocale = ref("en");
+// Der Projektlink klappt seine Buchstaben beim Scrollen um; die Komponente
+// stellt die Animation als Methode bereit.
+// Sichtbare Projekte -> erstes Karussell-Projekt, sonst die Baustellen-Seite
+const projectsPath = useProjectsEntry();
 
-const switchLanguage = (lang: string) => {
-  currentLocale.value = lang;
-  router.push({ path: `/${lang}` });
-};
-
-const leftLink = ref<HTMLElement | null>(null);
-const rightLink = ref<HTMLElement | null>(null);
-const bottomLink = ref<HTMLElement | null>(null);
+const projectsLink = ref<{ flipChars: () => void } | null>(null);
 
 const texts: string[] = [
   "HI MY NAME IS    ",
@@ -129,7 +107,6 @@ const maxLength = Math.max(...texts.map(getTextLengthWithoutBrackets));
 const textArrays = ref<Letter[][]>(
   texts.map((text: string) => createTextArray(text, maxLength))
 );
-const hasAnimated = ref<boolean[]>(new Array(texts.length).fill(false));
 
 const animate = (index: number) => {
   const maxSteps = 13;
@@ -197,42 +174,18 @@ const handleWheel = debounce((event: WheelEvent) => {
 }, 200);
 
 const triggerSplitFlapAnimation = (): void => {
-  const projectLinkCharacters: NodeListOf<Element> = document.querySelectorAll(
-    "#bottomLink .project-char"
-  );
-
-  animateCharacters(projectLinkCharacters);
-  textArrays.value.forEach((textArray: Letter[], index: number) => animate(index));
+  projectsLink.value?.flipChars();
+  textArrays.value.forEach((_: Letter[], index: number) => animate(index));
 };
 
-const animateCharacters = (characters: NodeListOf<Element>) => {
-  characters.forEach((char: Element, index: number) => {
-    setTimeout(() => {
-      char.classList.add("project-flip");
-      setTimeout(() => {
-        char.classList.remove("project-flip");
-      }, 600);
-    }, index * 100);
-  });
-};
+let rotateTimer: ReturnType<typeof setInterval> | undefined;
 
 onMounted(() => {
   textArrays.value.forEach((_, index) => animate(index));
-  setInterval(() => {
-    animateBottomLineNewWord();
-  }, 3000);
+  rotateTimer = setInterval(animateBottomLineNewWord, 3000);
 
-  window.addEventListener("wheel", handleWheel);
+  window.addEventListener("wheel", handleWheel, { passive: true });
 
-  // Fügen Sie die Animation zu den .link-content-Elementen hinzu
-  [leftLink.value, rightLink.value, bottomLink.value].forEach((element: HTMLElement | null) => {
-    if (element) {
-      const linkContent = element.querySelector(".link-content") as HTMLElement | null;
-      if (linkContent) {
-        linkContent.classList.add("animate-scale");
-      }
-    }
-  });
 
   // Fetch image list from server and trigger prefetch hints
   // Uses low-priority browser prefetch, does not block animation
@@ -247,50 +200,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener("wheel", handleWheel);
+  if (rotateTimer) clearInterval(rotateTimer);
 });
 </script>
 
-<style scoped>
-.project-flip {
-  animation: flip 0.6s forwards;
-}
-
-@keyframes flip {
-  0% {
-    transform: rotateX(0);
-  }
-
-  50% {
-    transform: rotateX(180deg);
-  }
-
-  100% {
-    transform: rotateX(0);
-  }
-}
-
-:deep(.link-content.animate-scale) {
-  animation: fontSizeUpDown 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-  animation-delay: 4s;
-}
-
-@keyframes fontSizeUpDown {
-  0% {
-    font-size: 1em;
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-
-  50% {
-    font-size: 1.17em;
-    color: var(--color-secondary);
-    text-decoration: none;
-  }
-
-  100% {
-    font-size: 1em;
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-}
-</style>

@@ -1,212 +1,179 @@
 @use "./type" as type;
 @use "./breakpoints" as bp;
 
+// Lebenslauf-Seite: alternierende Timeline.
+// Jeder Eintrag ist ein eigenes Grid über die volle Breite:
+//   "content marker date"  (ungerade Einträge)
+//   "date marker content"  (gerade Einträge)
+// Der Marker (::before) sitzt in der Mittelspalte und damit immer auf der Achse.
+
+$timeline-max-width: 93.75rem; // 1500px
+$timeline-marker-size: 1.5625rem;
+$timeline-axis-width: 0.25rem;
+
 main {
-  font-family: var(--font-family-main);
+  font-family: var(--font__family--main);
 }
 
-* {
-  margin: var(--spacing-none);
-  padding: var(--spacing-none);
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-#title {
-  color: var(--color-black);
-  @include type.L-Button-Style('-extra-light');
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  padding-bottom: var(--spacing-lg);
-  left: 50%;
-  transform: translateX(-50%);
+h2,
+h3,
+p,
+ul,
+li {
+  margin: var(--spacing--none);
+  padding: var(--spacing--none);
+  color: var(--color--primary);
 }
 
 .background {
   position: sticky;
-  height: 8vh;
-  width: 100vw;
   top: 0;
-  z-index: var(--z-index-high);
-  background-color: var(--color-background);
+  width: 100vw;
+  height: 8vh;
+  background-color: var(--color--background);
+  z-index: var(--z--high);
 }
 
 #projectLinkStart {
   position: absolute;
-  top: var(--side-percentage);
-  padding-top: var(--spacing-lg);
+  top: var(--layout__inset--side);
   left: 50%;
+  padding-top: var(--spacing--lg);
   transform: translateX(-50%);
-  @include type.L-Heading-Style('-bold');
   text-align: center;
 }
 
-.content-left {
-  display: flex;
-  flex-direction: column;
-  margin-top: var(--spacing-lg);
-}
+#title {
+  --app-link__size: var(--font__size--xl);
+  --app-link__weight: var(--font__weight--extra-light);
 
-h2 {
-  @include type.L-Heading-Style('-extra-light');
-}
-
-h3 {
-  @include type.L-Button-Style('-thin');
-  letter-spacing: 0.4375rem;
-}
-
-p {
-  font-size: 1.75rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.4375rem;
-}
-
-.location {
-  margin-top: var(--spacing-xs);
-  @include type.L-Button-Style('-thin');
-}
-
-.date {
-  padding-bottom: var(--spacing-lg);
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: var(--spacing--lg);
 }
 
 /* ---------- Timeline ---------- */
 .timeline {
   position: relative;
-  margin: var(--spacing-xl) auto;
-  margin-top: 10dvh;
-  width: 93.75rem;
-  /* 1500px */
-  padding: var(--spacing-xl) 0;
+  width: min(100%, #{$timeline-max-width});
+  margin: 10dvh auto var(--spacing--xl);
+  padding: var(--spacing--xl) 0;
 }
 
-.timeline:before {
+// Die Achse: schmaler Kasten mit Rahmen, liest sich als doppelte Leitlinie
+.timeline::before {
   content: "";
   position: absolute;
-  height: 100%;
+  top: calc(-1 * var(--spacing--md-lg));
   left: 50%;
-  width: 0.25rem;
-  top: -1.25rem;
-  transition: background-color 0.3s ease;
-  border: solid 1px var(--color-black);
-}
-
-.timeline ul li.current~li:before,
-.timeline ul li.current~li:nth-child(odd):before,
-.timeline ul li.current~li:nth-child(even):before {
-  background-color: var(--color-black);
+  width: $timeline-axis-width;
+  height: 100%;
+  border: var(--border__size) solid var(--color--black);
 }
 
 .timeline ul {
-  margin: var(--spacing-none);
-  padding: var(--spacing-none);
+  display: grid;
+  list-style: none;
 }
 
 .timeline ul li {
-  list-style: none;
+  display: grid;
+  grid-template-areas: "content marker date";
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: var(--spacing--big);
+  row-gap: var(--spacing--xs);
+  padding: var(--spacing--xxl) 0;
   box-sizing: border-box;
   line-height: normal;
-  position: relative;
-  width: 50%;
-  padding: 2.5rem 6.25rem;
-  /* 40px 100px */
-}
-
-.timeline ul li .content h2 {
-  color: var(--color-primary);
-  padding: 0px 2px 18px 0px;
-}
-
-.timeline ul li:nth-child(odd) {
-  float: left;
   text-align: right;
-  clear: both;
 }
 
 .timeline ul li:nth-child(even) {
-  float: right;
+  grid-template-areas: "date marker content";
   text-align: left;
-  clear: both;
 }
 
-.timeline ul li:nth-child(odd):before,
-.timeline ul li:nth-child(even):before {
+.timeline ul li .content {
+  grid-area: content;
+  color: var(--color--primary);
+}
+
+.timeline ul li .date {
+  grid-area: date;
+  // Das Datum steht auf der jeweils anderen Achsenseite
+  text-align: left;
+}
+
+.timeline ul li:nth-child(even) .date {
+  text-align: right;
+}
+
+// Marker auf der Achse
+.timeline ul li::before {
   content: "";
-  position: absolute;
-  width: 1.5625rem;
-  height: 1.5625rem;
-  border: 1px solid var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.2);
+  grid-area: marker;
+  align-self: start;
+  width: $timeline-marker-size;
+  height: $timeline-marker-size;
+  margin-top: var(--spacing--md);
+  border: var(--border__size) solid var(--color--primary);
   border-radius: 50%;
-  background-color: var(--color-background);
-  top: 1.5rem;
+  background-color: var(--color--background);
+  box-shadow: 0 0 0 3px var(--color--gray-light);
 }
 
-.timeline ul li:nth-child(odd):before {
-  right: -1rem;
+// Alles nach dem aktuellen Eintrag ist abgeschlossen: gefüllter Marker
+.timeline ul li.current ~ li::before {
+  background-color: var(--color--black);
 }
 
-.timeline ul li:nth-child(even):before {
-  left: -0.6875rem;
+.timeline ul li .content h2 {
+  padding-bottom: var(--spacing--md-lg);
+  @include type.text(big, extra-light);
 }
 
-.timeline ul li:nth-child(odd) .date,
-.timeline ul li:nth-child(even) .date {
-  position: absolute;
-  top: 0.75rem;
-  margin: var(--spacing-none);
-  padding: var(--spacing-md) 3px;
+.timeline ul li .content p {
+  font-size: var(--font__size--big);
+  font-weight: var(--font__weight--bold);
+  letter-spacing: var(--letter-spacing--wide);
 }
 
-.timeline ul li:nth-child(odd) .date {
-  right: -9.375rem;
+.timeline ul li .content .location {
+  margin-top: var(--spacing--xs);
+  font-size: var(--font__size--xl);
+  font-weight: var(--font__weight--thin);
+  letter-spacing: var(--letter-spacing--base);
 }
 
-.timeline ul li:nth-child(even) .date {
-  left: -9.375rem;
+.timeline ul li .date h3 {
+  @include type.text(xl, thin);
+  letter-spacing: var(--letter-spacing--wide);
 }
 
-/* Unterhalb 1000px: Timeline volle Breite, Hover-Skalierung aus */
-@media (max-width: 62.5rem) {
-  .timeline {
-    width: 100%;
+/* ---------- Einspaltig unterhalb Tablet: Achse links, Datum über dem Eintrag ---------- */
+@include bp.stacked {
+  .timeline::before {
+    left: var(--spacing--md-lg);
   }
 
-  .custom-link:hover {
-    transform: scale(1);
-  }
-}
-
-/* Unterhalb 767px: einspaltige Timeline */
-@media (max-width: 47.9375rem) {
-  .timeline {
-    width: 95vw;
-  }
-
-  .timeline:before {
-    left: 1.25rem;
-  }
-
-  .timeline ul li:nth-child(odd),
+  .timeline ul li,
   .timeline ul li:nth-child(even) {
-    width: 100%;
+    grid-template-areas:
+      "marker date"
+      "marker content";
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: var(--spacing--xl);
     text-align: left;
-    padding-left: 3.125rem;
   }
 
-  .timeline ul li:nth-child(odd):before,
-  .timeline ul li:nth-child(even):before {
-    top: -1.125rem;
-    left: 0.625rem;
-    right: auto;
-  }
-
-  .timeline ul li:nth-child(odd) .date,
+  .timeline ul li .date,
   .timeline ul li:nth-child(even) .date {
-    top: -1.875rem;
-    left: 3.125rem;
-    right: auto;
+    text-align: left;
+  }
+
+  .timeline ul li::before {
+    margin-top: var(--spacing--none);
   }
 }

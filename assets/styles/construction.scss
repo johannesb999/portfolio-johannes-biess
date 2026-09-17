@@ -12,13 +12,13 @@ main {
   min-height: 100dvh;
   display: grid;
   place-items: center;
-  padding: var(--spacing-lg);
+  padding: var(--spacing--lg);
 }
 
 .construction-page {
   display: grid;
   justify-items: center;
-  gap: var(--spacing-xxl);
+  gap: var(--spacing--xxl);
   max-width: 100%;
   text-align: center;
 }
@@ -26,11 +26,11 @@ main {
 .construction-page__text {
   display: grid;
   justify-items: center;
-  gap: var(--spacing-xs);
+  gap: var(--spacing--xs);
 }
 
 @include bp.stacked {
   .construction-page {
-    gap: var(--spacing-xl);
+    gap: var(--spacing--xl);
   }
 }

@@ -1,14 +1,7 @@
 <template>
   <main>
-    <div id="rightLink">
-      <nuxt-link to="/de" class="custom-link">START</nuxt-link>
-    </div>
-    <div id="bottomLink">
-      <nuxt-link to="resume" class="custom-link">LEBENSLAUF</nuxt-link>
-    </div>
-    <!-- <div id="leftLink">
-      <nuxt-link to="/en/skillset" class="custom-link">SKILLSET</nuxt-link>
-    </div> -->
+    <EdgeLink position="right" to="/de" label="START" />
+    <EdgeLink class="about__resume-link" position="bottom" to="resume" label="LEBENSLAUF" />
     <div class="aboutMeText">
       <SplitFlapText preset="heroFlap" :align="'center'" :texts="['[ÜBER] [MICH]']" />
       <SplitFlapText preset="heroFlap" :align="'random'" :texts="[

@@ -1,96 +1,86 @@
 <template>
-  <html>
   <main>
     <div class="background">
-      <div id="projectLinkStart">
-        <nuxt-link to="/de/about" class="custom-link">ÜBER MICH</nuxt-link>
-      </div>
+      <AppLink id="projectLinkStart" to="/de/about" label="ÜBER MICH" size="big" weight="bold" />
     </div>
     <div class="timeline">
       <ul>
         <li class="current">
-          <NuxtLink to="/de/cv/hfgMaster" class="content custom-link">
+          <AppLink class="content" to="/de/cv/hfgMaster" :scale="false">
             <h2>HFG (HOCHSCHULE <br />FÜR GESTALTUNG)</h2>
             <p>MASTER OF ARTS</p>
             <p class="location">SCHWÄBISCH GMÜND, DEUTSCHLAND</p>
-          </NuxtLink>
+          </AppLink>
           <div class="date">
             <h3>2026</h3>
           </div>
         </li>
 
         <li>
-          <NuxtLink to="/de/cv/hfg" class="content custom-link">
+          <AppLink class="content" to="/de/cv/hfg" :scale="false">
             <h2>HFG (HOCHSCHULE <br />FÜR GESTALTUNG)</h2>
             <p>BACHELOR OF ARTS</p>
             <p class="location">SCHWÄBISCH GMÜND, DEUTSCHLAND</p>
-          </NuxtLink>
+          </AppLink>
           <div class="date">
             <h3>2026</h3>
           </div>
         </li>
 
         <!-- <li class="current">
-            <NuxtLink to="/de/cv/internship" class="content custom-link">
+            <AppLink class="content" to="/de/cv/internship" :scale="false">
               <h2>HOFFENTLICH IHRE FIRMA!</h2>
               <p>PRAKTIKUM</p>
               <p class="location">GERNE WELTWEIT</p>
-            </NuxtLink>
+            </AppLink>
             <div class="date">
               <h3>2025</h3>
             </div>
           </li> -->
         <li>
-          <NuxtLink to="/de/cv/internship" class="content custom-link">
+          <AppLink class="content" to="/de/cv/internship" :scale="false">
             <h2>MUSE CASE GMBH</h2>
             <p>PRAKTIKUM</p>
             <p class="location">STUTTGART, DEUTSCHLAND</p>
-          </NuxtLink>
+          </AppLink>
           <div class="date">
             <h3>2025</h3>
           </div>
         </li>
         <li>
-          <NuxtLink to="/de/cv/bosch" class="content custom-link">
+          <AppLink class="content" to="/de/cv/bosch" :scale="false">
             <h2>BOSCH GMBH</h2>
             <p>WERKSTUDENT</p>
             <p class="location">SCHWÄBISCH GMÜND, DEUTSCHLAND</p>
-          </NuxtLink>
+          </AppLink>
           <div class="date">
             <h3>2024</h3>
           </div>
         </li>
         <li>
-          <NuxtLink to="/de/cv/kbsz" class="content custom-link">
+          <AppLink class="content" to="/de/cv/kbsz" :scale="false">
             <h2>BERUFSSCHULE</h2>
             <p>FACHGEBUNDENE FACHHOCHSCHULREIFE <br />(WIRTSCHAFT)</p>
             <p class="location">ELLWANGEN, DEUTSCHLAND</p>
-          </NuxtLink>
+          </AppLink>
           <div class="date">
             <h3>2020</h3>
           </div>
         </li>
         <li>
-          <NuxtLink to="/de/cv/dtack" class="content custom-link">
+          <AppLink class="content" to="/de/cv/dtack" :scale="false">
             <h2>D-TACK GMBH</h2>
             <p>KAUFMANN IM GROß- UND AUßENHANDEL</p>
             <p class="location">HÜTTLINGEN, DEUTSCHLAND</p>
-          </NuxtLink>
+          </AppLink>
           <div class="date">
             <h3>2019</h3>
           </div>
         </li>
-
-        <div style="clear: both"></div>
       </ul>
     </div>
-    <div id="title">
-      <a href="/docs/resume/johannes-biess-lebenslauf-de.pdf" target="_blank" rel="noopener" class="custom-link">Resume
-        anschauen</a>
-    </div>
+    <AppLink id="title" href="/docs/resume/johannes-biess-lebenslauf-de.pdf" label="Resume anschauen" />
   </main>
-
-  </html>
 </template>
 
 <script setup></script>

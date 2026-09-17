@@ -4,7 +4,6 @@
       <div v-if="isOpen" ref="overlayRef" class="presentation-overlay" tabindex="-1" role="dialog" aria-modal="true"
         aria-label="Selbstpräsentation">
         <iframe class="presentation-overlay__frame" :src="presentationSrc" title="Selbstpräsentation" allowfullscreen />
-        <div class="presentation-overlay__mask" aria-hidden="true" />
       </div>
     </transition>
   </Teleport>
@@ -150,6 +149,8 @@ const handleKeyDown = (event: KeyboardEvent) => {
   const code = event.code as KeyCode;
 
   if (code === 'Escape' && isOpen.value) {
+    event.preventDefault();
+    closePresentation();
     return;
   }
 

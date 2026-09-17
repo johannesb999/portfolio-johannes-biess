@@ -2,9 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <div id="projectLinkNext">
-      <nuxt-link to="/de/resume" class="custom-link">RESUME</nuxt-link>
-    </div>
+    <EdgeLink position="right" fixed to="/de/resume" label="RESUME" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -16,9 +14,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/cv/bosch.svg" alt="Picture of Bosch Building" />
-      </div>
+      <img src="/img/cv/bosch.svg" alt="Picture of Bosch Building" />
     </div>
 
     <div class="project-details">
@@ -36,8 +32,7 @@
               optimieren. Ein weiteren
               Einblick in meine Leistungen und Tätigkeiten während der
               Ausbildung findet sich in meinem
-              <a href="/docs/bosch/arbeitszeugnis-bosch-de.pdf" target="_blank" rel="noopener" class="custom-link"
-                style="text-decoration: underline">Arbeitszeugnis</a>
+              <AppLink href="/docs/bosch/arbeitszeugnis-bosch-de.pdf" label="Arbeitszeugnis" underline :scale="false" />
             </div>
           </div>
 

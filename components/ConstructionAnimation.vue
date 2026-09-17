@@ -107,17 +107,17 @@ const stripeStart = (i) => -30 + (i - 1) * stripePeriod;
 
 .construction__svg :where(line, polyline, rect, circle) {
   fill: none;
-  stroke: var(--color-primary);
+  stroke: var(--color--primary);
   stroke-width: 2;
 }
 
 .construction__svg :where(rect) {
-  fill: var(--color-background);
+  fill: var(--color--background);
 }
 
 .construction__solid,
 .construction__beacon {
-  fill: var(--color-primary);
+  fill: var(--color--primary);
 }
 
 .construction__trolley {

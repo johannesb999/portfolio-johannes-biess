@@ -2,9 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <div id="projectLinkBefore">
-      <nuxt-link to="/de/resume" class="custom-link">RESUME</nuxt-link>
-    </div>
+    <EdgeLink position="left" fixed to="/de/resume" label="RESUME" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -17,9 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <div class="picture">
-        <img src="/img/cv/musecase2.png" alt="Picture of me in front of goldengate bridge" />
-      </div>
+      <img src="/img/cv/musecase2.png" alt="Picture of me in front of goldengate bridge" />
     </div>
 
     <div class="project-details">
@@ -35,8 +31,7 @@
               signifikant verbessert. Neben diesen fachlichen Kompetenzen war es besonders wichtig, den professionellen
               Umgang mit Kunden zu lernen—ihre Bedürfnisse zu erfassen, Erwartungen zu managen und konstruktives
               Feedback entgegenzunehmen. Hier mein detaillierter
-              <NuxtLink to="/docs/internship/praxissemester-bericht-johannes-biess-d.pdf" target="_blank" rel="noopener"
-                class="custom-link" style="text-decoration: underline">Bericht und meine Learnings</NuxtLink>.
+              <AppLink href="/docs/internship/praxissemester-bericht-johannes-biess-d.pdf" label="Bericht und meine Learnings" underline :scale="false" />.
             </div>
           </div>
 
@@ -51,8 +46,7 @@
               Erfolg eines Projektes ist. Ich habe gelernt, mich aktiv in die Teamarbeit einzubringen, Verantwortung zu
               übernehmen und aus Fehlern zu lernen, um den Arbeitsfluss kontinuierlich zu optimieren. Was muse case über
               mich sagt findest du in meinem:
-              <NuxtLink to="/docs/internship/praxissemester-zeugnis-johannes-biess-d.pdf" target="_blank" rel="noopener"
-                class="custom-link" style="text-decoration: underline">Arbeitszeugnis</NuxtLink>.
+              <AppLink href="/docs/internship/praxissemester-zeugnis-johannes-biess-d.pdf" label="Arbeitszeugnis" underline :scale="false" />.
             </div>
           </div>
         </div>

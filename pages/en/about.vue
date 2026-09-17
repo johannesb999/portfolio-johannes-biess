@@ -1,11 +1,7 @@
 <template>
   <main>
-    <div id="rightLink">
-      <Nuxt-link to="/" class="custom-link">START</Nuxt-link>
-    </div>
-    <div id="bottomLink">
-      <Nuxt-link to="resume" class="custom-link">PERSONAL RESUME</Nuxt-link>
-    </div>
+    <EdgeLink position="right" to="/" label="START" />
+    <EdgeLink class="about__resume-link" position="bottom" to="resume" label="PERSONAL RESUME" />
 
     <div class="aboutMeText">
       <SplitFlapText preset="heroFlap" :align="'center'" :texts="[

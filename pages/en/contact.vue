@@ -1,9 +1,6 @@
 <template>
   <main>
-    <div id="leftLink">
-      <nuxt-link to="/" class="custom-link">START</nuxt-link>
-    </div>
-    <div id="resumeLink"></div>
+    <EdgeLink position="left" to="/" label="START" />
 
     <div class="contactMeText">
       <SplitFlapText preset="heroFlap" :align="'center'" :texts="[
@@ -16,9 +13,7 @@
       ]" />
     </div>
 
-    <div id="impressum">
-      <nuxt-link to="legal" class="custom-link">LEGAL INFORMATION</nuxt-link>
-    </div>
+    <AppLink class="contact__legal" to="legal" label="LEGAL INFORMATION" />
   </main>
 </template>
 

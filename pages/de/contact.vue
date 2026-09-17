@@ -2,10 +2,7 @@
 
   <main>
     <!-- <div id="contact">CONTACT ME</div> -->
-    <div id="leftLink">
-      <nuxt-link to="/de" class="custom-link">START</nuxt-link>
-    </div>
-    <div id="resumeLink"></div>
+    <EdgeLink position="left" to="/de" label="START" />
 
     <div class="contactMeText">
       <SplitFlapText preset="heroFlap" :align="'center'" :texts="[
@@ -25,9 +22,7 @@
     <!-- 'I  WOULD  LOVE  TO     ',
     'HEAR  FROM YOU VIA     ', -->
 
-    <div id="impressum">
-      <nuxt-link to="legal" class="custom-link">IMPRESSUM</nuxt-link>
-    </div>
+    <AppLink class="contact__legal" to="legal" label="IMPRESSUM" />
   </main>
 </template>
 

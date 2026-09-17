@@ -1,341 +1,173 @@
 <template>
   <div>
-
-    <!-- Head tags are managed by nuxt.config.ts (app.head) -->
+    <!-- Head-Tags werden in nuxt.config.ts (app.head) gesetzt -->
     <NuxtPage />
 
-    <!-- Theme Switcher Button -->
-    <button class="theme-switcher custom-link" @click="toggleTheme">
-      {{ currentThemeText }}
-    </button>
-
-    <!-- Header (Language + Home) -->
+    <ThemeSwitch />
     <AppHeader />
-    <!-- <CustomCursor /> -->
   </div>
 </template>
 
-<script setup>
-import { ref, onMounted, computed } from "vue";
-
-// Theme Switcher
-const currentTheme = ref("light");
-
-const currentThemeText = computed(() => {
-  return currentTheme.value === "light" ? "DARK" : "LIGHT";
-});
-
-const toggleTheme = () => {
-  if (currentTheme.value === "light") {
-    currentTheme.value = "dark";
-    applyDarkTheme();
-  } else {
-    currentTheme.value = "light";
-    applyLightTheme();
-  }
-  // Speichere die Einstellung in localStorage
-  localStorage.setItem("theme", currentTheme.value);
-};
-
-const applyDarkTheme = () => {
-  const root = document.documentElement;
-  root.style.setProperty("--color-primary", "#fbfbfb");
-  root.style.setProperty("--color-background", "#171717");
-  root.style.setProperty("--color-secondary", "#707070");
-  root.style.setProperty("--color-gray-light", "#b3b3b32a");
-  root.style.setProperty("--color-primary-translucent", "#eeeeeedc");
-  root.style.setProperty("--color-black", "#fbfbfb");
-  root.style.setProperty("--color-accent", "#d4d4d4");
-  root.style.setProperty("--border-color-black", "#444444dc");
-  root.style.setProperty("--color-gray", "#bfbfbf");
-};
-
-const applyLightTheme = () => {
-  const root = document.documentElement;
-  root.style.setProperty("--color-primary", "#171717");
-  root.style.setProperty("--color-background", "#fbfbfb");
-  root.style.setProperty("--color-secondary", "#d3d1d1");
-  root.style.setProperty("--color-gray-light", "#0000001d");
-  root.style.setProperty("--color-primary-translucent", "#171717b0");
-  root.style.setProperty("--color-black", "#171717");
-  root.style.setProperty("--color-accent", "#afafaf");
-  root.style.setProperty("--border-color-black", "#d3d1d1");
-  root.style.setProperty("--color-gray", "#bfbfbf");
-};
-
-// Beim Laden der Seite das Theme aus localStorage laden
-onMounted(() => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    currentTheme.value = "dark";
-    applyDarkTheme();
-  } else {
-    currentTheme.value = "light";
-    applyLightTheme();
-  }
-});
-</script>
-
 <style lang="scss">
-@use "@/assets/styles/type.scss" as type;
-
+/* ---------------------------------------------------------------------------
+   Design-Token in BEM-Schreibweise: --block__element--modifier
+   Beispiel: --font__size--lg, --color--primary, --spacing--md
+   Responsive Abweichungen stehen in assets/styles/responsive.scss.
+   --------------------------------------------------------------------------- */
 :root {
-  /* Schriftarten */
-  --font-family-main: "Roboto Mono", monospace;
-  --font-family-alt: "Inter Tight", sans-serif;
-  --font-family-legal: "Roboto", sans-serif;
-
   /* Farben */
-  --color-primary: #171717;
-  --color-background: #fbfbfb;
-  --color-secondary: #d3d1d1;
-  --color-gray-light: #0000001d;
-  --color-primary-translucent: #171717b0;
-  --color-black: #000000;
-  --color-accent: #afafaf;
-  --color-gray: #bfbfbf;
+  --color--primary: #171717;
+  --color--background: #fbfbfb;
+  --color--secondary: #d3d1d1;
+  --color--accent: #afafaf;
+  --color--gray: #bfbfbf;
+  --color--gray-light: #0000001d;
+  --color--black: #171717;
+  --color--primary-translucent: #171717b0;
+  --color--transition: rgba(146, 146, 146, 0.3);
 
-  --border-color-black: #d3d1d1;
-  --border-size: 0.1rem;
-  --border-radius: 0.7rem;
+  /* Rahmen */
+  --border__size: 0.1rem;
+  --border__radius: 0.7rem;
+  --border__color: #d3d1d1;
 
-  /* Schriftgrößen */
-  --font-size-base: 0.8rem;
-  /* 12.8px */
-  --font-size-sm: 0.75rem;
-  /* 12px */
-  --font-size-md: 0.8rem;
-  /* 12.8px */
-  --font-size-lg: 1rem;
-  /* 16px */
-  --font-size-xl: 1.2rem;
-  /* 19.2px */
-  --font-size-xxl: 1.28rem;
-  /* 20.48px */
-  --font-size-xxxl: 1.4rem;
-  /* 22.4px */
-  --font-size-xxxxl: 1.6rem;
-  /* 25.6px */
-  --font-size-big: 2rem;
-  /* 32px */
-  --font-size-bigger: 2.4rem;
-  /* 38.4px */
-  --font-size-huge: 3.2rem;
-  /* 51.2px */
+  /* Schriftfamilien */
+  --font__family--main: "Roboto Mono", monospace;
+  --font__family--alt: "Inter Tight", sans-serif;
+  --font__family--legal: "Roboto", sans-serif;
+
+  /* Schriftgrößen (Basis 0.8rem = 12.8px) */
+  --font__size--base: 0.8rem;
+  --font__size--sm: 0.75rem;
+  --font__size--md: 0.8rem;
+  --font__size--lg: 1rem;
+  --font__size--xl: 1.2rem;
+  --font__size--xxl: 1.28rem;
+  --font__size--xxxl: 1.4rem;
+  --font__size--xxxxl: 1.6rem;
+  --font__size--big: 2rem;
+  --font__size--bigger: 2.4rem;
+  --font__size--huge: 3.2rem;
 
   /* Schriftgewichte */
-  --font-weight-thin: 100;
-  --font-weight-extra-light: 200;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
+  --font__weight--thin: 100;
+  --font__weight--extra-light: 200;
+  --font__weight--light: 300;
+  --font__weight--normal: 400;
+  --font__weight--bold: 700;
+
+  /* Zeilen- und Zeichenabstand */
+  --letter-spacing--base: 0.05rem;
+  --letter-spacing--wide: 0.4375rem;
+  --line-height--small: 1;
+  --line-height--normal: 2;
+  --line-height--big: 1.5;
 
   /* Abstände */
-  --spacing-none: 0;
-  --spacing-xxs: 0.24rem;
-  /* 3.84px */
-  --spacing-xs: 0.5rem;
-  /* 8px */
-  --spacing-sm: 0.8rem;
-  /* 12.8px */
-  --spacing-md: 1rem;
-  /* 16px */
-  --spacing-md-lg: 1.3rem;
-  /* 20.8px */
-  --spacing-lg: 1.5rem;
-  /* 24px */
-  --spacing-xl: 1.6rem;
-  /* 25.6px */
-  --spacing-xxl: 2.4rem;
-  /* 38.4px */
-  --spacing-xxxl: 3.2rem;
-  /* 51.2px */
-  --spacing-big: 4.8rem;
-  /* 76.8px */
-  --spacing-bigger: 6.4rem;
+  --spacing--none: 0;
+  --spacing--xxs: 0.24rem;
+  --spacing--xs: 0.5rem;
+  --spacing--sm: 0.8rem;
+  --spacing--md: 1rem;
+  --spacing--md-lg: 1.3rem;
+  --spacing--lg: 1.5rem;
+  --spacing--xl: 1.6rem;
+  --spacing--xxl: 2.4rem;
+  --spacing--xxxl: 3.2rem;
+  --spacing--big: 4.8rem;
+  --spacing--bigger: 6.4rem;
 
-  --radius-xxs: 0.24rem;
-  /* 3.84px */
-  --radius-xs: 0.5rem;
-  /* 8px */
-  --radius-sm: 0.8rem;
-  /* 12.8px */
-  --radius-md: 1rem;
-  /* 16px */
+  /* Radien */
+  --radius--xxs: 0.24rem;
+  --radius--xs: 0.5rem;
+  --radius--sm: 0.8rem;
+  --radius--md: 1rem;
 
-  /* Positionierung */
-  --top-spacing: 1.3rem;
-  /* 25.6px */
-  --side-percentage: 1.3%;
-  --z-index-high: 100;
-  --z-index-alert: 1000;
+  /* Layout */
+  --layout__inset--top: 1.3rem;
+  --layout__inset--side: 1.3%;
+  --layout__scrollbar-width: 0.01rem;
+  --z--high: 100;
+  --z--alert: 1000;
+  --shadow--light: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+}
 
-  /* Sonstiges */
-  --letter-spacing-base: 0.05rem;
-  /* 0.8px */
-  --line-height-small: 1;
-  --line-height-normal: 2;
-  --line-height-big: 1.5;
-  --color-white-transition: rgba(146, 146, 146, 0.3);
-  --scrollbar-width: 0.01rem;
-  /* 0.8px */
-  --box-shadow-light: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
-
-  /* Bildhöhen */
-  --img-height-sm: 20vh;
-  /* 20% der Viewport-Höhe */
-  --img-height-smedi: 30vh;
-  /* 30% der Viewport-Höhe */
-  --img-height-md: 40vh;
-  /* 40% der Viewport-Höhe */
-  --img-height-mela: 50vh;
-  /* 50% der Viewport-Höhe */
-  --img-height-lg: 60vh;
-  /* 60% der Viewport-Höhe */
-
-  --img-width-lg: 70dvw;
+:root[data-theme="dark"] {
+  --color--primary: #fbfbfb;
+  --color--background: #171717;
+  --color--secondary: #707070;
+  --color--accent: #d4d4d4;
+  --color--gray: #bfbfbf;
+  --color--gray-light: #b3b3b32a;
+  --color--black: #fbfbfb;
+  --color--primary-translucent: #eeeeeedc;
+  --border__color: #444444dc;
 }
 
 html {
-  color: var(--color-primary);
-  font-size: var(--font-size-base);
-  font-family: var(--font-family-main);
-  background-color: var(--color-background);
-  margin: var(--spacing-none);
-  padding: var(--spacing-none);
+  margin: var(--spacing--none);
+  padding: var(--spacing--none);
   min-height: 100dvh;
   width: 100%;
-  scrollbar-gutter: stable both-edges;
-  letter-spacing: var(--letter-spacing-base);
-  /* Avoid CSS-driven smooth scrolling during route changes to prevent Y-jank */
-  scroll-behavior: auto;
+  color: var(--color--primary);
+  background-color: var(--color--background);
+  font-family: var(--font__family--main);
+  font-size: var(--font__size--base);
   font-optical-sizing: auto;
+  letter-spacing: var(--letter-spacing--base);
+  scrollbar-gutter: stable both-edges;
+  /* Kein CSS-Smooth-Scrolling beim Routenwechsel — sonst ruckelt die Y-Position */
+  scroll-behavior: auto;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Restrict horizontal overflow but don't force full-height layout */
 html,
 body {
   overflow-x: hidden;
 }
 
 body {
-  /* Always reserve vertical scrollbar to avoid width/layout jumps between pages */
+  /* Scrollbar dauerhaft reservieren, damit die Breite zwischen Seiten nicht springt */
   overflow-y: scroll;
 }
 
 img {
+  width: 100%;
   max-width: 100%;
   height: fit-content;
-  border: var(--border-size) solid var(--border-color-black);
-  border-radius: var(--border-radius);
-  width: 100%;
+  border: var(--border__size) solid var(--border__color);
+  border-radius: var(--border__radius);
   object-fit: cover;
   object-position: center;
 }
-
-::-webkit-scrollbar {
-  width: var(--scrollbar-width);
-  background-color: var(--color-background);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-background);
-  border: var(--spacing-none) solid var(--color-background);
-}
-
 
 button {
   background-color: transparent;
 }
 
-
-
-/* Theme Switcher Button */
-.theme-switcher {
-  position: fixed;
-  bottom: var(--top-spacing);
-  right: var(--side-percentage);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-normal);
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: var(--z-index-high);
+::-webkit-scrollbar {
+  width: var(--layout__scrollbar-width);
+  background-color: var(--color--background);
 }
 
-.theme-switcher:focus {
-  outline: none;
+::-webkit-scrollbar-thumb {
+  background-color: var(--color--background);
+  border: var(--spacing--none) solid var(--color--background);
 }
 
-/* Transition für Theme-Wechsel */
-.theme-transition {
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.theme-transition,
-.theme-transition * {
-  transition: color 0.5s ease, background-color 0.5s ease,
-    border-color 0.5s ease;
-}
-
-/* Transitions are provided globally via assets/styles/transitions.scss */
-
-#bottomLink {
-  @include type.L-Heading-Style('-bold');
-  color: var(--color-primary);
-  position: absolute;
-  bottom: var(--side-percentage);
-  left: 50dvw;
-  transform: translateX(-50%);
-  z-index: var(--z-index-high);
-}
-
-#topLink {
-  position: absolute;
-  top: 0;
-  padding-top: var(--side-percentage);
-  left: 50dvw;
-  transform: translateX(-50%);
-  @include type.L-Heading-Style('-bold');
-  text-align: center;
-  z-index: var(--z-index-high);
-}
-
-#rightLink {
-  top: 50dvh;
-  right: var(--side-percentage);
-  transform: translateY(-50%);
-  position: absolute;
-  @include type.L-Heading-Style('-bold');
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  z-index: var(--z-index-high);
-}
-
-#leftLink {
-  top: 50dvh;
-  left: var(--side-percentage);
-  transform: translateY(-50%) rotate(180deg);
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  position: absolute;
-  @include type.L-Heading-Style('-bold');
-  z-index: var(--z-index-high);
-}
-
+/* Basisklasse fuer Links ausserhalb von AppLink (ScrollLink, DetailsScroll).
+   AppLink setzt sie zusaetzlich, damit seitenspezifische Overrides weiter greifen. */
 .custom-link {
-  color: var(--color-black);
-  text-decoration: none;
   display: inline-block;
+  margin: var(--spacing--xxs);
+  color: var(--color--black);
+  text-decoration: none;
   transition: transform 0.3s ease;
-  margin: var(--spacing-xxs);
-}
 
-.custom-link:hover {
-  transform: scale(1.1);
+  &:hover {
+    transform: scale(1.1);
+  }
 }
-
-/* Page transitions provided globally */
 </style>
 
 <style lang="scss">
