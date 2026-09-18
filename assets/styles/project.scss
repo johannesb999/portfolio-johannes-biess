@@ -1,7 +1,7 @@
 @use "./breakpoints" as bp;
 @use "./project-layout" as layout;
 
-// Gemeinsame Breite der Seiten-Elemente (Video, Dokumentations-Reader)
+// Breite der eingebetteten Medien (Video, Prototyp)
 $media-width: 85vw;
 
 // Projekt-Detailseiten (trickyTowers, goEase, ...).
@@ -40,21 +40,6 @@ main {
   aspect-ratio: 16 / 9;
   border: var(--border__size) solid var(--border__color);
   border-radius: var(--border__radius);
-}
-
-// Dokumentations-Reader unter dem Akkordeon.
-// Bricht aus der Inhaltsspalte aus: die Seiten sollen so gross wie moeglich
-// stehen, sonst ist eine 129-Seiten-Doku schlicht nicht lesbar.
-.project-doc {
-  display: grid;
-  // minmax(0, 1fr): sonst zieht die automatische Mindestbreite eines Grid-Items
-  // den Reader ueber die Elternbreite hinaus
-  grid-template-columns: minmax(0, 1fr);
-  justify-items: center;
-  gap: var(--spacing--lg);
-  padding-top: var(--spacing--big);
-  width: $media-width;
-  margin-inline: calc((100% - #{$media-width}) / 2);
 }
 
 @include bp.stacked {

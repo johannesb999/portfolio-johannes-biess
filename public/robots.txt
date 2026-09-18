@@ -75,6 +75,7 @@ Disallow: /de/project/
 Disallow: /en/project/
 Disallow: /img/
 Disallow: /docs/kai/
+Disallow: /docs/beacon/
 # Portrait und Lebenslauf-Unterlagen bleiben erreichbar, damit die Person
 # auffindbar bleibt.
 Allow: /img/cv/

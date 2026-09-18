@@ -38,18 +38,7 @@
         <ProjectAccordion :items="accordionItems" id-prefix="beacon" />
       </section>
 
-      <section class="project-doc">
-        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
-          '                       [PROJECT] [DOCUMENTATION]                        ',
-        ]" />
-        <DocumentReader
-          base="/docs/beacon/pages/de"
-          :pages="129"
-          :ratio="0.7083"
-          download="/docs/beacon/beacon-dokumentation-de.pdf"
-          label="Beacon documentation"
-        />
-      </section>
+      <AppLink class="tryOutLink" href="/docs/beacon/beacon-dokumentation-de.pdf" label="VIEW DOCUMENTATION (DE)" hreflang="de" size="xxxxl" weight="bold" underline />
 
       <div class="projectDetailsFlap">
         <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[

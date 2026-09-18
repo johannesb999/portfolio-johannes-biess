@@ -14,5 +14,9 @@
   {
     "location": "/docs/kai/",
     "tdm-reservation": 1
+  },
+  {
+    "location": "/docs/beacon/",
+    "tdm-reservation": 1
   }
 ]

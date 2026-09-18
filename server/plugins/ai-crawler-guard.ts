@@ -50,7 +50,7 @@ const AI_USER_AGENTS = [
 ];
 
 // Pfade, für die der Vorbehalt gilt
-const RESERVED = [/^\/(de|en)\/project(\/|$)/, /^\/docs\/kai(\/|$)/, /^\/img(\/|$)/];
+const RESERVED = [/^\/(de|en)\/project(\/|$)/, /^\/docs\/(kai|beacon)(\/|$)/, /^\/img(\/|$)/];
 
 // Ausnahmen: sollen auffindbar bleiben, damit die Person gefunden wird
 const EXEMPT = [/^\/img\/cv(\/|$)/];

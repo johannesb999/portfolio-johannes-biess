@@ -23,5 +23,3 @@ logs
 .env
 .env.*
 !.env.example
-# Dokumentationsseiten, entstehen per `npm run docs` aus den PDFs
-public/docs/*/pages/

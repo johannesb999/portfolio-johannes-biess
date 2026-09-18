@@ -44,18 +44,7 @@
         <ProjectAccordion :items="accordionItems" id-prefix="kai" />
       </section>
 
-      <section class="project-doc">
-        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
-          '                       [PROJEKT] [DOKUMENTATION]                        ',
-        ]" />
-        <DocumentReader
-          base="/docs/kai/pages/de"
-          :pages="135"
-          :ratio="1.4151"
-          download="/docs/kai/kai-dokumentation-de.pdf"
-          label="KAI Dokumentation"
-        />
-      </section>
+      <AppLink class="tryOutLink" href="/docs/kai/kai-dokumentation-de.pdf" label="DOKU ANSEHEN" size="xxxxl" weight="bold" underline />
 
       <div class="projectDetailsFlap">
         <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
