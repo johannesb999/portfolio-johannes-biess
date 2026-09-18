@@ -38,9 +38,10 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue"
 import { useRoute } from "vue-router";
 import AppLink from "./AppLink.vue";
 
-// Liest ein Dokument, das vorab als Einzelbilder exportiert wurde
-// (public/docs/<projekt>/pages/<locale>/NNN.webp). Der Besucher laedt nur, was
-// er ansieht, statt der kompletten Datei.
+// Liest ein Dokument als Einzelbilder (public/docs/<projekt>/pages/<locale>/NNN.webp).
+// Die Bilder entstehen beim Bauen aus der PDF (scripts/render-docs.mjs) und
+// liegen nicht im Repo. Der Besucher laedt nur, was er ansieht, statt der
+// kompletten Datei.
 //
 // Zwei Modi, beide in einem Rahmen fester Hoehe:
 //   scroll — eine Seite breit, im Rahmen nach unten durchscrollen
