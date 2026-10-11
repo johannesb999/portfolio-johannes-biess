@@ -10,7 +10,7 @@
 
 @mixin text($size, $weight: normal, $family: main, $line-height: normal) {
   font-family: var(--font__family--#{$family});
-  font-size: var(--font__size--#{$size});
+  font-size: max(var(--font__size--minimum), var(--font__size--#{$size}));
   font-weight: var(--font__weight--#{$weight});
   line-height: var(--line-height--#{$line-height});
   letter-spacing: var(--letter-spacing--base);

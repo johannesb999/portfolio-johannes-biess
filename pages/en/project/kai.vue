@@ -8,30 +8,32 @@
 
     <ProjectNav current="kai" />
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
-        '[KAI]',
-      ]" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        'SERVICE ASSISTANT',
-        'GPT4O   REALTIME API',
-        'SPEECH   FIGMA   UI UX',
-        'DESIGN SPRINT   TESTING',
-        'INDOOR NAVIGATION',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+          '[KAI]',
+        ]" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          'SERVICE ASSISTANT',
+          'GPT4O   REALTIME API',
+          'SPEECH   FIGMA   UI UX',
+          'DESIGN SPRINT   TESTING',
+          'INDOOR NAVIGATION',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/kai/thumbnail.webp" alt="KAI in use on a service employee's smartphone" />
+      <div class="wrapper">
+        <img src="/img/kai/thumbnail.webp" alt="KAI in use on a service employee's smartphone" />
+      </div>
     </div>
 
     <DetailsScroll />
 
     <div class="project-details">
       <section id="details-section">
-        <!-- Erstes im Detailbereich: das Projektvideo in voller Breite -->
+        <!-- Erstes im Detailbereich: das Projektvideo mit eigener Vorschau -->
         <div class="project-film">
-          <VideoEmbed id="8NNzapVb-Tk" title="KAI — project video" />
+          <VideoEmbed id="8NNzapVb-Tk" title="KAI — project video" poster="/img/kai/navigation.webp" />
         </div>
 
         <p class="project-intro">
@@ -49,6 +51,7 @@
         <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
           '[KEYDATA]',
           'SIXTH SEMESTER',
+          'GRADE: 1.3',
           'TEAMWORK',
         ]" />
       </div>
@@ -60,13 +63,26 @@
 // Sixth-semester project. Aufbau wie pages/en/project/goEase.vue.
 const accordionItems = [
   {
+    title: 'Purpose, Approach & Benefits',
+    alwaysOpen: true,
+    body:
+      'The application serves as a digital mentor designed to empower untrained service personnel. It ' +
+      'addresses the challenge of high cognitive load by dynamically adapting its interface to the ' +
+      'specific experience level of the user. Beginners receive detailed guidance, while experienced ' +
+      'staff experience minimal interruptions. This approach minimizes operational errors and allows ' +
+      'employees to maintain focus on personal and social interactions with the guests.',
+    images: [
+      '/img/kai/onboarding.webp',
+    ],
+  },
+  {
     title: 'Core Idea',
     body:
       'KAI is an artificial intelligence assistance application designed for restaurant service staff. It ' +
       'actively listens during order taking and provides situational guidance. This approach aims to ' +
       'reduce cognitive load and improve overall operational efficiency.',
     images: [
-      '/img/kai/thumbnail.webp',
+      '/img/kai/core-idea.webp',
     ],
   },
   {
@@ -107,18 +123,6 @@ const accordionItems = [
       'Furthermore, interviews revealed that abstract table numbers cause confusion, leading to the ' +
       'development of a visual spatial map. Observations of staff guessing critical allergen information ' +
       'resulted in the integration of mandatory automated warning prompts.',
-  },
-  {
-    title: 'Purpose, Approach & Benefits',
-    body:
-      'The application serves as a digital mentor designed to empower untrained service personnel. It ' +
-      'addresses the challenge of high cognitive load by dynamically adapting its interface to the ' +
-      'specific experience level of the user. Beginners receive detailed guidance, while experienced ' +
-      'staff experience minimal interruptions. This approach minimizes operational errors and allows ' +
-      'employees to maintain focus on personal and social interactions with the guests.',
-    images: [
-      '/img/kai/onboarding.webp',
-    ],
   },
   {
     title: 'Innovation',

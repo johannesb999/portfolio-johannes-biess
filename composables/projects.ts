@@ -31,8 +31,12 @@ export const mainProjects: ProjectEntry[] = [
 export const playgroundProjects: ProjectEntry[] = [
   { route: "trickyTowers", label: "TRICKYTOWERS", thumb: "/img/tt/tt (1).svg" },
   { route: "jumpStar", label: "JUMPSTAR", thumb: "/img/js/thumbnail.svg" },
-  { route: "simpleChat", label: "SIMPLECHAT", thumb: "/img/sc/thumbnail.svg" },
   { route: "drawingLight", label: "DRAWINGLIGHT", thumb: "/img/dl/thumbnail.svg" },
+];
+
+/** Archivierte Arbeiten bleiben mit ihren Metadaten erhalten, sind aber nicht Teil der Navigation. */
+export const archivedProjects: ProjectEntry[] = [
+  { route: "simpleChat", label: "SIMPLECHAT", thumb: "/img/sc/thumbnail.svg" },
   { route: "portfolio", label: "THIS WEBSITE", thumb: "/img/po/thumbnail.svg" },
 ];
 
@@ -42,10 +46,16 @@ export const constructionRoute = "construction";
 /** Erste Station des Karussells; Ziel des PROJEKTE-Links auf der Startseite. */
 export const entryProject = mainProjects[0].route;
 
-/** Alle Projektseiten, die online ausgeblendet werden. */
-export const hideableProjects: string[] = [
+/** Aktive Projektseiten, die in der lokalen Baustellenliste angeboten werden. */
+export const visibleProjectRoutes: string[] = [
   ...mainProjects.map((p) => p.route),
   ...playgroundProjects.map((p) => p.route),
+];
+
+/** Alle Projektseiten, die online ausgeblendet werden. */
+export const hideableProjects: string[] = [
+  ...visibleProjectRoutes,
+  ...archivedProjects.map((p) => p.route),
 ];
 
 /**
@@ -70,6 +80,21 @@ export function projectNeighbours(current: string): { prev: ProjectEntry; next: 
       next: playgroundProjects[smallIdx + 1] ?? playground,
     };
   }
+
+  return null;
+}
+
+/** Richtung eines direkten Projektwechsels, passend zu den Seitenlinks. */
+export function projectNavigationSide(from: string, to: string): "left" | "right" | null {
+  const fromNeighbours = projectNeighbours(from);
+  if (fromNeighbours?.prev.route === to) return "left";
+  if (fromNeighbours?.next.route === to) return "right";
+
+  // Vom Playground aus fuehren Kacheln auch in die kleinere Projektkette.
+  // Dort sind die Ruecklinks eindeutig; ihre Gegenrichtung gilt beim Einstieg.
+  const toNeighbours = projectNeighbours(to);
+  if (toNeighbours?.prev.route === from) return "right";
+  if (toNeighbours?.next.route === from) return "left";
 
   return null;
 }

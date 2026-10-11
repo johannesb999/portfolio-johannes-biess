@@ -3,13 +3,10 @@
 
 // Lebenslauf-Seite: alternierende Timeline.
 // Jeder Eintrag ist ein eigenes Grid über die volle Breite:
-//   "content marker date"  (ungerade Einträge)
-//   "date marker content"  (gerade Einträge)
+//   "content marker date"  (links liegende Stationen)
+//   "date marker content"  (rechts liegende Stationen)
+// Die Seite stammt wie Animation und Rücklink aus composables/resume.ts.
 // Der Marker (::before) sitzt in der Mittelspalte und damit immer auf der Achse.
-
-$timeline-max-width: 93.75rem; // 1500px
-$timeline-marker-size: 1.5625rem;
-$timeline-axis-width: 0.25rem;
 
 main {
   font-family: var(--font__family--main);
@@ -55,21 +52,24 @@ li {
 
 /* ---------- Timeline ---------- */
 .timeline {
+  --timeline__axis--position: 50%;
+
   position: relative;
-  width: min(100%, #{$timeline-max-width});
+  width: min(calc(100% - var(--spacing--big) * 2), var(--timeline__width--max));
   margin: 10dvh auto var(--spacing--xl);
   padding: var(--spacing--xl) 0;
 }
 
-// Die Achse: schmaler Kasten mit Rahmen, liest sich als doppelte Leitlinie
+// Linie und Marker verwenden dieselbe Achse, auch im einspaltigen Layout.
 .timeline::before {
   content: "";
   position: absolute;
   top: calc(-1 * var(--spacing--md-lg));
-  left: 50%;
-  width: $timeline-axis-width;
+  left: var(--timeline__axis--position);
+  transform: translateX(-50%);
+  width: var(--timeline__axis--width);
   height: 100%;
-  border: var(--border__size) solid var(--color--black);
+  background-color: var(--color--primary);
 }
 
 .timeline ul {
@@ -80,7 +80,7 @@ li {
 .timeline ul li {
   display: grid;
   grid-template-areas: "content marker date";
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) var(--timeline__marker--size) minmax(0, 1fr);
   align-items: start;
   column-gap: var(--spacing--big);
   row-gap: var(--spacing--xs);
@@ -90,7 +90,7 @@ li {
   text-align: right;
 }
 
-.timeline ul li:nth-child(even) {
+.timeline ul li[data-side='right'] {
   grid-template-areas: "date marker content";
   text-align: left;
 }
@@ -98,6 +98,9 @@ li {
 .timeline ul li .content {
   grid-area: content;
   color: var(--color--primary);
+  min-width: 0;
+  margin: var(--spacing--none);
+  overflow-wrap: anywhere;
 }
 
 .timeline ul li .date {
@@ -106,22 +109,24 @@ li {
   text-align: left;
 }
 
-.timeline ul li:nth-child(even) .date {
+.timeline ul li[data-side='right'] .date {
   text-align: right;
 }
 
 // Marker auf der Achse
 .timeline ul li::before {
   content: "";
+  position: relative;
   grid-area: marker;
   align-self: start;
-  width: $timeline-marker-size;
-  height: $timeline-marker-size;
+  box-sizing: border-box;
+  width: var(--timeline__marker--size);
+  height: var(--timeline__marker--size);
   margin-top: var(--spacing--md);
   border: var(--border__size) solid var(--color--primary);
   border-radius: 50%;
   background-color: var(--color--background);
-  box-shadow: 0 0 0 3px var(--color--gray-light);
+  box-shadow: 0 0 0 var(--timeline__marker--ring) var(--color--gray-light);
 }
 
 // Alles nach dem aktuellen Eintrag ist abgeschlossen: gefüllter Marker
@@ -135,14 +140,14 @@ li {
 }
 
 .timeline ul li .content p {
-  font-size: var(--font__size--big);
+  font-size: max(var(--font__size--minimum), var(--font__size--big));
   font-weight: var(--font__weight--bold);
   letter-spacing: var(--letter-spacing--wide);
 }
 
 .timeline ul li .content .location {
   margin-top: var(--spacing--xs);
-  font-size: var(--font__size--xl);
+  font-size: max(var(--font__size--minimum), var(--font__size--xl));
   font-weight: var(--font__weight--thin);
   letter-spacing: var(--letter-spacing--base);
 }
@@ -154,22 +159,22 @@ li {
 
 /* ---------- Einspaltig unterhalb Tablet: Achse links, Datum über dem Eintrag ---------- */
 @include bp.stacked {
-  .timeline::before {
-    left: var(--spacing--md-lg);
+  .timeline {
+    --timeline__axis--position: calc(var(--timeline__marker--size) / 2);
   }
 
   .timeline ul li,
-  .timeline ul li:nth-child(even) {
+  .timeline ul li[data-side='right'] {
     grid-template-areas:
       "marker date"
       "marker content";
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: var(--timeline__marker--size) minmax(0, 1fr);
     column-gap: var(--spacing--xl);
     text-align: left;
   }
 
   .timeline ul li .date,
-  .timeline ul li:nth-child(even) .date {
+  .timeline ul li[data-side='right'] .date {
     text-align: left;
   }
 

@@ -8,21 +8,23 @@
 
     <ProjectNav current="beacon" />
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
-        '[BEACON]',
-      ]" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        'HELP NETWORK',
-        'BACHELOR THESIS',
-        'FIGMA   UI   UX',
-        'RESEARCH   PROTOTYPING',
-        'BRANDING   CAMPAIGN',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+          '[BEACON]',
+        ]" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          'HELP NETWORK',
+          'BACHELOR THESIS',
+          'FIGMA   UI   UX',
+          'RESEARCH   PROTOTYPING',
+          'BRANDING   CAMPAIGN',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/beacon/thumbnail.webp" alt="Beacon in use on the way home at night" />
+      <div class="wrapper">
+        <img src="/img/beacon/thumbnail.webp" alt="Beacon in use on the way home at night" />
+      </div>
     </div>
 
     <DetailsScroll />
@@ -45,6 +47,7 @@
           '[KEYDATA]',
           'BACHELOR THESIS',
           'SEVENTH SEMESTER',
+          'GRADE: 1.7',
           'TEAMWORK',
         ]" />
       </div>
@@ -56,6 +59,15 @@
 // Bachelorarbeit, Team Biess / Flaig / Kling. Aufbau wie pages/en/project/goEase.vue.
 // Die Doku liegt nur auf Deutsch vor, deshalb verweisen beide Sprachen auf dieselbe Datei.
 const accordionItems = [
+  {
+    title: 'The Solution',
+    alwaysOpen: true,
+    body:
+      'Beacon makes the help that is present visible on the map, lets it be requested silently and ' +
+      'reversibly by holding a button, guides the person along a route to the nearest safe place, and ' +
+      'addresses helpers nearby individually with a clear task. Every challenge gets a concrete answer.',
+    images: ['/img/beacon/overview.webp'],
+  },
   {
     title: 'The Problem',
     body:
@@ -75,9 +87,6 @@ const accordionItems = [
       'helpers and safe places nearby. Passers-by who would otherwise wait become individually addressed ' +
       'helpers with a clear task. An uncertain walk becomes a navigable route to the nearest safe place. ' +
       'The person stays able to act at every stage, from the first uneasy feeling to an actual emergency.',
-    images: [
-      '/img/beacon/overview.webp',
-    ],
   },
   {
     title: 'Research',
@@ -160,13 +169,6 @@ const accordionItems = [
       'Trust before the encounter: strangers only help each other where trust exists. And that trust has ' +
       'to exist before the situation arises, not only within it.',
     ],
-  },
-  {
-    title: 'The Solution',
-    body:
-      'Beacon makes the help that is present visible on the map, lets it be requested silently and ' +
-      'reversibly by holding a button, guides the person along a route to the nearest safe place, and ' +
-      'addresses helpers nearby individually with a clear task. Every challenge gets a concrete answer.',
   },
   {
     title: 'Help Becomes Visible',

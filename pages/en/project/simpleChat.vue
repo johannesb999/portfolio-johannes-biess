@@ -8,19 +8,21 @@
 
     <ProjectNav current="simpleChat" />
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['        [SIMPLECHAT]        ']" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        '       CHAT PLATFORM      ',
-        'WIREFRAMES   USERCENTERED ',
-        '   DESIGN THINKING        ',
-        '         USER INTERVIEWS  ',
-        '  FIGMA PROTOTYPE         ',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['        [SIMPLECHAT]        ']" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          '       CHAT PLATFORM      ',
+          'WIREFRAMES   USERCENTERED ',
+          '   DESIGN THINKING        ',
+          '         USER INTERVIEWS  ',
+          '  FIGMA PROTOTYPE         ',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/sc/thumbnail.svg" alt="SimpleChat thumbnail" />
+      <div class="wrapper">
+        <img src="/img/sc/thumbnail.svg" alt="SimpleChat thumbnail" />
+      </div>
     </div>
 
     <DetailsScroll />

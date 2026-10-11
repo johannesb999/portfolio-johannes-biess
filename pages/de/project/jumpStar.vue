@@ -7,21 +7,23 @@
     </div>
 
     <ProjectNav current="jumpStar" />
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
-        '        [JUMPSTAR]          ',
-      ]" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        '  WEB DEPLOYMENT PIPELINE ',
-        'THREEJS     SERVERHOSTING ',
-        '      DOCKER   SVELTE     ',
-        ' CLOUDFLARE      PORTAINER',
-        'MONGOOSE    GITHUB ACTIONS',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+          '        [JUMPSTAR]          ',
+        ]" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          '  WEB DEPLOYMENT PIPELINE ',
+          'THREEJS     SERVERHOSTING ',
+          '      DOCKER   SVELTE     ',
+          ' CLOUDFLARE      PORTAINER',
+          'MONGOOSE    GITHUB ACTIONS',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/js/thumbnail.svg" alt="JumpStar Thumbnail" />
+      <div class="wrapper">
+        <img src="/img/js/thumbnail.svg" alt="JumpStar Thumbnail" />
+      </div>
     </div>
 
     <DetailsScroll />
@@ -33,12 +35,12 @@
 
       <AppLink class="tryOutLink" href="https://starsapp.johannes-biess.com/" label="TRY IT OUT LIVE" size="xxxxl" weight="bold" underline />
 
-      <div class="project-section" style="padding-top: 2rem">
+      <div class="project-section">
         <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
           '                       [PROJEKT] [VIDEO]                       ',
         ]" />
         <div class="project-film">
-          <VideoEmbed id="5N_OzRcDetc" title="JumpStar — Projektvideo" />
+          <VideoEmbed id="5N_OzRcDetc" title="JumpStar — Projektvideo" poster="/img/js/video-poster.webp" />
         </div>
       </div>
       <div class="projectDetailsFlap">

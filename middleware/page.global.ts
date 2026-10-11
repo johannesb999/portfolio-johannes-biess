@@ -1,4 +1,5 @@
-import { mainProjects, playgroundProjects } from "~/composables/projects";
+import { mainProjects, playgroundProjects, projectNavigationSide } from "~/composables/projects";
+import { resumeSideForPath } from '~/composables/resume';
 
 export default defineNuxtRouteMiddleware((to, from) => {
   const getDepth = (path: string) =>
@@ -19,21 +20,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return null;
   };
 
-  const checkKeywords = (path: string) => {
-    if (
-      path.includes("bosch") ||
-      path.includes("hfg") ||
-      path.includes("dtack")
-    ) {
-      return "right";
-    } else if (path.includes("kbsz") || path.includes("internship")) {
-      return "left";
-    }
-    return null;
-  };
-
-  // Reihenfolge fuer die Richtung der Seitenuebergaenge — dieselbe Liste,
-  // die auch das Karussell bildet (composables/projects.ts)
+  // Reihenfolge als seitlicher Fallback fuer freie Wechsel ueber Playground-Kacheln.
   const projectPages = [
     ...mainProjects.map((p) => p.route),
     ...playgroundProjects.map((p) => p.route),
@@ -59,8 +46,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
   const fromDepth = getDepth(from.path);
   const toSpecial = checkSpecialRoutes(to.path);
   const fromSpecial = checkSpecialRoutes(from.path);
-  const toKeyword = checkKeywords(to.path);
-  const fromKeyword = checkKeywords(from.path);
+  const toResumeSide = resumeSideForPath(to.path);
+  const fromResumeSide = resumeSideForPath(from.path);
 
   const movingInProjectPages = fromIndex !== -1 && toIndex !== -1;
 
@@ -93,20 +80,21 @@ export default defineNuxtRouteMiddleware((to, from) => {
     return;
   }
 
-  // 2. Priorität: Wechsel auf die /resume-Seite von speziellen Routen oder Keywords
+  // Zurück zum Lebenslauf: Bewegung zur gegenüberliegenden Seite.
   if (to.path.includes("/resume")) {
-    if (fromKeyword || fromSpecial === "project-resume") {
+    if (fromResumeSide || fromSpecial === "project-resume") {
       const transitionName =
-        fromKeyword === "left" ? "page-right" : "page-left";
+        fromResumeSide === 'right' ? 'page-right' : 'page-left';
       to.meta.pageTransition = { name: transitionName };
       from.meta.pageTransition = { name: transitionName };
       return;
     }
   }
 
-  // 3. Priorität: Wechsel zwischen Routen mit speziellen Keywords
-  if (toKeyword) {
-    const transitionName = toKeyword === "left" ? "page-left" : "page-right";
+  // Die CSS-Namen beschreiben die Bewegung des Inhalts: Eine links liegende
+  // Seite tritt von links ein (page-right), eine rechte von rechts (page-left).
+  if (toResumeSide) {
+    const transitionName = toResumeSide === 'left' ? 'page-right' : 'page-left';
     to.meta.pageTransition = { name: transitionName };
     from.meta.pageTransition = { name: transitionName };
     return;
@@ -114,21 +102,21 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
   // 4. Priorität: Wechsel innerhalb der Projektseiten
   if (movingInProjectPages) {
+    const navigationSide = projectNavigationSide(
+      projectPages[fromIndex],
+      projectPages[toIndex],
+    );
     const lastIndex = projectPages.length - 1;
     const forward =
       (toIndex === 0 && fromIndex === lastIndex) ||
       (toIndex > fromIndex && !(fromIndex === 0 && toIndex === lastIndex));
-    const backward =
-      (fromIndex === 0 && toIndex === lastIndex) ||
-      (toIndex < fromIndex && !(toIndex === 0 && fromIndex === lastIndex));
-
-    if (forward) {
-      to.meta.pageTransition = { name: "page-left" };
-      from.meta.pageTransition = { name: "page-left" };
-    } else if (backward) {
-      to.meta.pageTransition = { name: "page-right" };
-      from.meta.pageTransition = { name: "page-right" };
-    }
+    // Der CSS-Name beschreibt die Bewegung des Inhalts: rechts liegende
+    // Ziele treten von rechts ein (page-left), linke von links (page-right).
+    const transitionName = navigationSide === "right" || (!navigationSide && forward)
+      ? "page-left"
+      : "page-right";
+    to.meta.pageTransition = { name: transitionName };
+    from.meta.pageTransition = { name: transitionName };
     return;
   }
 

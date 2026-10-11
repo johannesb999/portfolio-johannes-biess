@@ -4,14 +4,17 @@
 
 main {
   box-sizing: border-box;
-  min-height: 100dvh;
+  min-height: var(--layout__height--viewport);
   display: grid;
   grid-template-areas:
+    "spacer"
     "contact"
     "legal";
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-columns: minmax(0, 1fr);
   justify-items: center;
-  padding: var(--spacing--bigger) var(--spacing--xxxl);
+  gap: var(--spacing--xxl);
+  padding: var(--layout__inset--top) var(--spacing--big);
 }
 
 .contactMeText {
@@ -19,15 +22,18 @@ main {
   display: grid;
   align-content: center;
   justify-items: center;
+  min-width: 0;
 }
 
 .contact__legal {
   // Groesse per CSS, nicht per AppLink-Prop — sie aendert sich auf Mobile
   --app-link__size: var(--font__size--lg);
-  --app-link__weight: var(--font__weight--thin);
+  --app-link__weight: var(--font__weight--normal);
 
   grid-area: legal;
-  color: var(--color--gray);
+  align-self: end;
+  text-align: center;
+  color: var(--color--primary);
 }
 
 @include bp.mobile {

@@ -102,7 +102,7 @@ defineExpose({ flipChars });
   color: var(--color--black);
   font-family: inherit;
   // Ohne size/weight erbt der Link die Typografie seines Umfelds
-  font-size: var(--app-link__size, inherit);
+  font-size: max(var(--font__size--minimum), var(--app-link__size, 1em));
   font-weight: var(--app-link__weight, inherit);
   letter-spacing: inherit;
   text-decoration: none;

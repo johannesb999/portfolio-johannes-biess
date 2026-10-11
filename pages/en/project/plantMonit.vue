@@ -9,21 +9,23 @@
     <ProjectNav current="plantMonit" />
 
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
-        '[PLANTMONIT]',
-      ]" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        'PLANTS  SMART TOOL',
-        'SVELTE FIGMA',
-        'ESP32   WIREFRAMES',
-        'FUSION360  UI  UX',
-        'OPENAI   MQTT    MONGODB ',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+          '[PLANTMONIT]',
+        ]" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          'PLANTS  SMART TOOL',
+          'SVELTE FIGMA',
+          'ESP32   WIREFRAMES',
+          'FUSION360  UI  UX',
+          'OPENAI   MQTT    MONGODB ',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/pm/thumbnail.svg" alt="PlantMonit thumbnail" />
+      <div class="wrapper">
+        <img src="/img/pm/thumbnail.svg" alt="PlantMonit thumbnail" />
+      </div>
     </div>
 
     <DetailsScroll />
@@ -45,7 +47,7 @@
           '                         [PROJECT] [VIDEO]                          ',
         ]" />
         <div class="project-film">
-          <VideoEmbed id="bKC-N5-m5u0" title="PlantMonit — project video" />
+          <VideoEmbed id="bKC-N5-m5u0" title="PlantMonit — project video" poster="/img/pm/video-poster.webp" />
         </div>
       </div>
       <div class="projectDetailsFlap">

@@ -8,19 +8,21 @@
 
     <ProjectNav current="portfolio" />
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['        [PORTFOLIO]        ']" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        '      THIS WEBSITE       ',
-        '   NUXT3    WIREFRAMES   ',
-        '    GITHUB  USER TESTING ',
-        ' FIGMA        UI  UX     ',
-        'DOCKER       DEPLOYMENT  ',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['        [PORTFOLIO]        ']" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          '      THIS WEBSITE       ',
+          '   NUXT3    WIREFRAMES   ',
+          '    GITHUB  USER TESTING ',
+          ' FIGMA        UI  UX     ',
+          'DOCKER       DEPLOYMENT  ',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/po/thumbnail.svg" alt="Portfolio thumbnail" />
+      <div class="wrapper">
+        <img src="/img/po/thumbnail.svg" alt="Portfolio thumbnail" />
+      </div>
     </div>
 
     <DetailsScroll />

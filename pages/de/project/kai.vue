@@ -8,30 +8,32 @@
 
     <ProjectNav current="kai" />
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
-        '[KAI]',
-      ]" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        'SERVICE ASSISTANT',
-        'GPT4O   REALTIME API',
-        'SPEECH   FIGMA   UI UX',
-        'DESIGN SPRINT   TESTING',
-        'INDOOR NAVIGATION',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+          '[KAI]',
+        ]" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          'SERVICE ASSISTANT',
+          'GPT4O   REALTIME API',
+          'SPEECH   FIGMA   UI UX',
+          'DESIGN SPRINT   TESTING',
+          'INDOOR NAVIGATION',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/kai/thumbnail.webp" alt="KAI im Einsatz auf dem Smartphone einer Servicekraft" />
+      <div class="wrapper">
+        <img src="/img/kai/thumbnail.webp" alt="KAI im Einsatz auf dem Smartphone einer Servicekraft" />
+      </div>
     </div>
 
     <DetailsScroll />
 
     <div class="project-details">
       <section id="details-section">
-        <!-- Erstes im Detailbereich: das Projektvideo in voller Breite -->
+        <!-- Erstes im Detailbereich: das Projektvideo mit eigener Vorschau -->
         <div class="project-film">
-          <VideoEmbed id="8NNzapVb-Tk" title="KAI — Projektvideo" />
+          <VideoEmbed id="8NNzapVb-Tk" title="KAI — Projektvideo" poster="/img/kai/navigation.webp" />
         </div>
 
         <p class="project-intro">
@@ -50,6 +52,7 @@
         <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
           '[KEYDATA]',
           'SIXTH SEMESTER',
+          'GRADE: 1.3',
           'TEAMWORK',
         ]" />
       </div>
@@ -61,6 +64,20 @@
 // Semesterarbeit aus dem sechsten Semester. Aufbau wie pages/de/project/goEase.vue.
 const accordionItems = [
   {
+    title: 'Zweck, Lösungsansatz & Nutzen',
+    alwaysOpen: true,
+    body:
+      'Die Anwendung dient als digitaler Mentor, der ungeschultes Servicepersonal ermächtigt. Sie ' +
+      'adressiert die Herausforderung der hohen kognitiven Belastung, indem sie ihre Benutzeroberfläche ' +
+      'dynamisch an das spezifische Erfahrungsniveau des Benutzers anpasst. Anfänger erhalten ' +
+      'detaillierte Anleitungen, während erfahrene Mitarbeiter minimale Unterbrechungen erleben. Dieser ' +
+      'Ansatz minimiert betriebliche Fehler und ermöglicht es den Mitarbeitern, den Fokus auf persönliche ' +
+      'und soziale Interaktionen mit den Gästen zu behalten.',
+    images: [
+      '/img/kai/onboarding.webp',
+    ],
+  },
+  {
     title: 'Kernidee',
     body:
       'KAI ist eine Anwendung zur Unterstützung von Restaurantmitarbeitern, die auf künstlicher ' +
@@ -68,7 +85,7 @@ const accordionItems = [
       'Dieser Ansatz zielt darauf ab, die kognitive Belastung zu reduzieren und die betriebliche ' +
       'Effizienz insgesamt zu verbessern.',
     images: [
-      '/img/kai/thumbnail.webp',
+      '/img/kai/core-idea.webp',
     ],
   },
   {
@@ -112,19 +129,6 @@ const accordionItems = [
       'was zur Entwicklung einer visuellen räumlichen Karte führte. Beobachtungen von Mitarbeitern, die ' +
       'kritische Allergieinformationen raten mussten, führten zur Integration von verpflichtenden ' +
       'automatisierten Warnhinweisen.',
-  },
-  {
-    title: 'Zweck, Lösungsansatz & Nutzen',
-    body:
-      'Die Anwendung dient als digitaler Mentor, der ungeschultes Servicepersonal ermächtigt. Sie ' +
-      'adressiert die Herausforderung der hohen kognitiven Belastung, indem sie ihre Benutzeroberfläche ' +
-      'dynamisch an das spezifische Erfahrungsniveau des Benutzers anpasst. Anfänger erhalten ' +
-      'detaillierte Anleitungen, während erfahrene Mitarbeiter minimale Unterbrechungen erleben. Dieser ' +
-      'Ansatz minimiert betriebliche Fehler und ermöglicht es den Mitarbeitern, den Fokus auf persönliche ' +
-      'und soziale Interaktionen mit den Gästen zu behalten.',
-    images: [
-      '/img/kai/onboarding.webp',
-    ],
   },
   {
     title: 'Innovation',

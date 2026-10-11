@@ -8,18 +8,20 @@
 
     <ProjectNav current="trickyTowers" />
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['      [TRICKYTOWERS]       ']" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        '   INTERACTIVE WINDOW    ',
-        'HTML   CSS  JAVASCRIPT   ',
-        '  FIGMA        WEBCAM    ',
-        ' GOOGLE MEDIA PIPE       ',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['      [TRICKYTOWERS]       ']" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          '   INTERACTIVE WINDOW    ',
+          'HTML   CSS  JAVASCRIPT   ',
+          '  FIGMA        WEBCAM    ',
+          ' GOOGLE MEDIA PIPE       ',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/tt/tt (1).svg" alt="TrickyTowers thumbnail" />
+      <div class="wrapper">
+        <img src="/img/tt/tt (1).svg" alt="TrickyTowers thumbnail" />
+      </div>
     </div>
 
     <DetailsScroll />

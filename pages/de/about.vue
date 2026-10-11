@@ -2,18 +2,20 @@
   <main>
     <EdgeLink position="right" to="/de" label="START" />
     <EdgeLink class="about__resume-link" position="bottom" to="resume" label="LEBENSLAUF" />
-    <div class="aboutMeText">
-      <SplitFlapText preset="heroFlap" :align="'center'" :texts="['[ÜBER] [MICH]']" />
-      <SplitFlapText preset="heroFlap" :align="'random'" :texts="[
-        'FLEXIBEL  AGIL  NEUGIERIG',
-        'ANPASSUNGSFÄHIG      GENAU',
-        'PÜNKTLICHK      FAIR',
-        ' KREATIV   ENTSCHDIUNGSSTARK',
-      ]" />
-    </div>
-    <div class="wrapper">
-      <img src="/profilepicture.svg" alt="profilepicture" />
-      <div id="quote">“Es gibt nicht<br />- zu viel Käse.”</div>
+    <div class="about__content">
+      <div class="aboutMeText">
+        <SplitFlapText preset="heroFlap" :align="'center'" :texts="['[ÜBER] [MICH]']" />
+        <SplitFlapText preset="heroFlap" :align="'random'" :texts="[
+          'FLEXIBEL  AGIL  NEUGIERIG',
+          'ANPASSUNGSFÄHIG      GENAU',
+          'PÜNKTLICHK      FAIR',
+          ' KREATIV   ENTSCHDIUNGSSTARK',
+        ]" />
+      </div>
+      <div class="wrapper">
+        <img src="/profilepicture.svg" alt="profilepicture" />
+        <div id="quote">“Es gibt nicht<br />- zu viel Käse.”</div>
+      </div>
     </div>
     <AboutPresentationOverlay
       src="https://embed.figma.com/deck/xuIJAFTGRel4W79VvbLgOq/Selbst-Pr%C3%A4sentation-Scitis.io%C2%A0?node-id=22-655&p=f&viewport=-215%2C-530%2C0.23&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"

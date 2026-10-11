@@ -48,6 +48,8 @@
   --font__size--big: 2rem;
   --font__size--bigger: 2.4rem;
   --font__size--huge: 3.2rem;
+  // Die skalierte Layout-Basis darf lesbaren Text nicht unter 16px verkleinern.
+  --font__size--minimum: 16px;
 
   /* Schriftgewichte */
   --font__weight--thin: 100;
@@ -87,9 +89,41 @@
   --layout__inset--top: 1.3rem;
   --layout__inset--side: 1.3%;
   --layout__scrollbar-width: 0.01rem;
+  --layout__height--viewport: 100vh;
+  --about__content--max: 88rem;
+  --about__portrait--max: 35rem;
+  --project__hero--max: 112rem;
+  --project__hero--inset: 7%;
+  --project__hero--gap: 4.8rem;
+  --project__hero--clearance: 8rem;
+  --project__hero--stacked-reserve: 38rem;
+  --project__section--gap: clamp(48px, 6vw, 96px);
+  --project__media--gap: clamp(24px, 3vw, 48px);
+  --project__details--inset: calc(9vh + var(--project__media--gap));
+  --accordion__image--width: 480px;
+  --accordion__image--ratio: 4 / 3;
+  --playground__width--max: 87.5rem;
+  --playground__inset--side: 7%;
+  --playground__inset--top: max(80px, 12vh);
+  --playground__tiles--gap: clamp(16px, 2vw, 28px);
+  --playground__tile--row: clamp(224px, 26vh, 280px);
+  --playground__tile--ratio: 4 / 3;
+  --site-map__width: 128px;
+  --site-map__width--compact: 88px;
+  --site-map__stroke: 1px;
+  --timeline__width--max: 93.75rem;
+  --timeline__marker--size: 1.5625rem;
+  --timeline__axis--width: 0.25rem;
+  --timeline__marker--ring: 0.1875rem;
   --z--high: 100;
   --z--alert: 1000;
   --shadow--light: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+@supports (height: 100svh) {
+  :root {
+    --layout__height--viewport: 100svh;
+  }
 }
 
 :root[data-theme="dark"] {
@@ -107,7 +141,7 @@
 html {
   margin: var(--spacing--none);
   padding: var(--spacing--none);
-  min-height: 100dvh;
+  min-height: var(--layout__height--viewport);
   width: 100%;
   color: var(--color--primary);
   background-color: var(--color--background);
@@ -127,14 +161,16 @@ body {
 }
 
 body {
+  font-size: var(--font__size--minimum);
   /* Scrollbar dauerhaft reservieren, damit die Breite zwischen Seiten nicht springt */
   overflow-y: scroll;
 }
 
 img {
+  box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  height: fit-content;
+  height: auto;
   border: var(--border__size) solid var(--border__color);
   border-radius: var(--border__radius);
   object-fit: cover;

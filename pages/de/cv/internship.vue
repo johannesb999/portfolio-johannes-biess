@@ -2,7 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <EdgeLink position="left" fixed to="/de/resume" label="RESUME" />
+    <ResumeNav current="internship" />
 
     <div class="projectFlap">
       <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[

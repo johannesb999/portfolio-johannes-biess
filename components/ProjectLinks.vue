@@ -14,13 +14,13 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useRuntimeConfig } from "#imports";
 import AppLink from "./AppLink.vue";
-import { hideableProjects } from "@/composables/projects";
+import { visibleProjectRoutes } from "@/composables/projects";
 
 // Zugang zu den Projektseiten, solange sie ausgeblendet sind. Sichtbar nur,
 // wenn auch die Weiterleitungen in nuxt.config.ts aus sind — beides haengt an
 // derselben Variable, kann also nicht auseinanderlaufen.
 const showProjects = useRuntimeConfig().public.showProjects;
-const projectPages = hideableProjects;
+const projectPages = visibleProjectRoutes;
 
 const route = useRoute();
 const locale = computed(() => (route.path.startsWith("/de") ? "de" : "en"));

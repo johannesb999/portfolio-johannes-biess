@@ -6,18 +6,20 @@
       </client-only>
     </div>
     <ProjectNav current="goEase" />
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['          [GOEASE]          ']" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        '       SMART SYSTEM       ',
-        '  REACT NATIVE      GPS   ',
-        '     ESP32   ANDROIDSDK   ',
-        ' BLE     OPENMAPBOX       ',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['          [GOEASE]          ']" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          '       SMART SYSTEM       ',
+          '  REACT NATIVE      GPS   ',
+          '     ESP32   ANDROIDSDK   ',
+          ' BLE     OPENMAPBOX       ',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/ge/thumbnail.svg" alt="GoEase thumbnail" />
+      <div class="wrapper">
+        <img src="/img/ge/thumbnail.svg" alt="GoEase thumbnail" />
+      </div>
     </div>
 
     <DetailsScroll />
@@ -38,7 +40,7 @@
           '                       [PROJECT] [VIDEO]                        ',
         ]" />
         <div class="project-film">
-          <VideoEmbed id="_YpyL8_qQfw" title="GoEase — project video" />
+          <VideoEmbed id="_YpyL8_qQfw" title="GoEase — project video" poster="/img/ge/video-poster.webp" />
         </div>
         <div class="projectDetailsFlap">
           <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
@@ -57,6 +59,15 @@
 <script setup>
 const accordionItems = [
   {
+    title: 'Purpose, Approach & Benefits',
+    alwaysOpen: true,
+    body:
+      'The purpose of the solution is to remove access barriers in public transport. The approach ' +
+      'uses low-cost transmitters in buses to communicate with mobile phones. The benefit for ' +
+      'users lies in automatic route tracking and the autonomous calculation of fares.',
+    images: ['/img/ge/solution.svg'],
+  },
+  {
     title: 'Core Idea',
     body:
       'The core idea is the complete automation of ticket recording through locatable ' +
@@ -69,6 +80,7 @@ const accordionItems = [
       'The primary users are occasional riders of public transport. They find themselves in ' +
       'situations where taking the car is not an option at short notice. Their biggest challenge ' +
       'is being unfamiliar with local fares and the complex operation of the various ticket machines.',
+    images: ['/img/ge/problem.svg'],
   },
   {
     title: 'Context & User Journey',
@@ -83,6 +95,7 @@ const accordionItems = [
       'The process began with extensive ideation and the definition of a minimum viable product. ' +
       'Software development started with digital drafts and resulted in a cross-platform ' +
       'application. Repeated user tests supported continuous improvement.',
+    images: ['/img/ge/process.svg', '/img/ge/softwareProcess.svg'],
   },
   {
     title: 'Insights Shaping the Solution',
@@ -90,13 +103,6 @@ const accordionItems = [
       'The findings from the initial concept phase showed that an overly versatile system ' +
       'distracts from the core problem. This led to narrowing the scope down to automatic ticket ' +
       'recording on buses. Feedback from user tests then flowed directly into simplifying the setup process.',
-  },
-  {
-    title: 'Purpose, Approach & Benefits',
-    body:
-      'The purpose of the solution is to remove access barriers in public transport. The approach ' +
-      'uses low-cost transmitters in buses to communicate with mobile phones. The benefit for ' +
-      'users lies in automatic route tracking and the autonomous calculation of fares.',
   },
   {
     title: 'Innovation',
@@ -140,14 +146,7 @@ const accordionItems = [
       'The required hardware components were specifically designed for easy installation. The ' +
       '3D-printed plastic housings feature special mounting straps. These allow quick, tool-free ' +
       'installation on the handrails of existing buses.',
-    // Existing project images — parked here for now
-    images: [
-      '/img/ge/problem.svg',
-      '/img/ge/process.svg',
-      '/img/ge/softwareProcess.svg',
-      '/img/ge/hardwareProcess.svg',
-      '/img/ge/solution.svg',
-    ],
+    images: ['/img/ge/hardwareProcess.svg'],
   },
 ];
 </script>

@@ -2,7 +2,7 @@
   <main>
     <div class="background"></div>
 
-    <EdgeLink position="right" fixed to="/en/resume" label="RESUME" />
+    <ResumeNav current="hfgMaster" />
 
     <!--
       Placeholder: content follows. Structure mirrors pages/en/cv/hfg.vue

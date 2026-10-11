@@ -14,7 +14,7 @@ body {
 
 .container {
   position: relative;
-  min-height: 100dvh;
+  min-height: var(--layout__height--viewport);
   display: grid;
   place-content: center;
   justify-items: center;
@@ -55,23 +55,12 @@ body {
 
 @include bp.mobile {
 
-  html,
-  body {
-    height: -webkit-fill-available;
-  }
-
   .char {
     width: var(--spacing--xl);
   }
 }
 
 @include bp.tablet {
-
-  html,
-  body {
-    height: 100dvh;
-    width: 100dvw;
-  }
 
   .char {
     width: var(--spacing--xl);

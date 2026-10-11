@@ -7,20 +7,22 @@
     </div>
     <ProjectNav current="drawingLight" />
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
-        '      [DRAWINGLIGHT]      ',
-      ]" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        '      MECHATRONIK      ',
-        'TEAMWORK   PHOTOGRAPHIE ',
-        '    ARDUINO   FUSION360 ',
-        '      LICHTMALEREI      ',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+          '      [DRAWINGLIGHT]      ',
+        ]" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          '      MECHATRONIK      ',
+          'TEAMWORK   PHOTOGRAPHIE ',
+          '    ARDUINO   FUSION360 ',
+          '      LICHTMALEREI      ',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/dl/thumbnail.svg" alt="DrawingLight Thumbnail" />
+      <div class="wrapper">
+        <img src="/img/dl/thumbnail.svg" alt="DrawingLight Thumbnail" />
+      </div>
     </div>
 
     <DetailsScroll />
@@ -35,7 +37,7 @@
           '                          [PROJEKT] [VIDEO]                        ',
         ]" />
         <div class="project-film">
-          <VideoEmbed id="k3CHPyc4J4M" title="DrawingLight — Projektvideo" />
+          <VideoEmbed id="k3CHPyc4J4M" title="DrawingLight — Projektvideo" poster="/img/dl/video-poster.webp" />
         </div>
       </div>
 

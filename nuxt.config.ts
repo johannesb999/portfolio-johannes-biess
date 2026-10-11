@@ -2,6 +2,7 @@
 import {
   constructionRoute,
   entryProject,
+  archivedProjects,
   hideableProjects,
 } from "./composables/projects";
 
@@ -25,7 +26,14 @@ const showProjects =
     : process.env.NODE_ENV === "development";
 
 const hiddenProjectRoutes = showProjects
-  ? {}
+  ? Object.fromEntries(
+      ["de", "en"].flatMap((locale) =>
+        archivedProjects.map(({ route }) => [
+          `/${locale}/project/${route}`,
+          { redirect: { to: `/${locale}/project/playground`, statusCode: 302 } },
+        ])
+      )
+    )
   : Object.fromEntries(
       ["de", "en"].flatMap((locale) =>
         hideableProjects.map((name) => [

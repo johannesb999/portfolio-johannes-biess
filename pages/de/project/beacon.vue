@@ -8,21 +8,23 @@
 
     <ProjectNav current="beacon" />
 
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
-        '[BEACON]',
-      ]" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        'HILFENETZWERK',
-        'BACHELORARBEIT',
-        'FIGMA   UI   UX',
-        'RESEARCH   PROTOTYPING',
-        'BRANDING   KAMPAGNE',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+          '[BEACON]',
+        ]" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          'HILFENETZWERK',
+          'BACHELORARBEIT',
+          'FIGMA   UI   UX',
+          'RESEARCH   PROTOTYPING',
+          'BRANDING   KAMPAGNE',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/beacon/thumbnail.webp" alt="Beacon im Einsatz auf dem nächtlichen Heimweg" />
+      <div class="wrapper">
+        <img src="/img/beacon/thumbnail.webp" alt="Beacon im Einsatz auf dem nächtlichen Heimweg" />
+      </div>
     </div>
 
     <DetailsScroll />
@@ -45,6 +47,7 @@
           '[KEYDATA]',
           'BACHELOR THESIS',
           'SEVENTH SEMESTER',
+          'GRADE: 1.7',
           'TEAMWORK',
         ]" />
       </div>
@@ -56,6 +59,16 @@
 // Bachelorarbeit, Team Biess / Flaig / Kling. Aufbau wie pages/de/project/goEase.vue.
 // Die Doku liegt nur auf Deutsch vor, deshalb verweisen beide Sprachen auf dieselbe Datei.
 const accordionItems = [
+  {
+    title: 'Die Lösung',
+    alwaysOpen: true,
+    body:
+      'Beacon macht die vorhandene Hilfe auf der Karte sichtbar, lässt sie über einen gehaltenen Knopf ' +
+      'lautlos und umkehrbar anfordern, führt die Person auf einer Route zum nächsten sicheren Ort und ' +
+      'spricht Helfer in der Nähe einzeln mit einer klaren Aufgabe an. Jede Herausforderung bekommt so ' +
+      'eine konkrete Antwort.',
+    images: ['/img/beacon/overview.webp'],
+  },
   {
     title: 'Das Problem',
     body:
@@ -76,9 +89,6 @@ const accordionItems = [
       'abwarten, werden einzeln angesprochene Helfer mit einer klaren Aufgabe. Aus einem unsicheren Weg ' +
       'wird eine navigierbare Route zum nächsten sicheren Ort. So bleibt die Person in jeder Phase der ' +
       'Unsicherheit handlungsfähig, vom ersten mulmigen Gefühl bis zum Ernstfall.',
-    images: [
-      '/img/beacon/overview.webp',
-    ],
   },
   {
     title: 'Recherche',
@@ -164,14 +174,6 @@ const accordionItems = [
       'Vertrauen vor der Begegnung: Fremde helfen einander nur, wenn Vertrauen besteht. Und dieses ' +
       'Vertrauen muss schon bestehen, bevor die Situation eintritt, nicht erst in ihr.',
     ],
-  },
-  {
-    title: 'Die Lösung',
-    body:
-      'Beacon macht die vorhandene Hilfe auf der Karte sichtbar, lässt sie über einen gehaltenen Knopf ' +
-      'lautlos und umkehrbar anfordern, führt die Person auf einer Route zum nächsten sicheren Ort und ' +
-      'spricht Helfer in der Nähe einzeln mit einer klaren Aufgabe an. Jede Herausforderung bekommt so ' +
-      'eine konkrete Antwort.',
   },
   {
     title: 'Hilfe wird sichtbar',

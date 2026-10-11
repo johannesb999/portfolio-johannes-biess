@@ -1,6 +1,6 @@
 @use "./breakpoints" as bp;
 
-// Responsive Token-Overrides und globale UI-Anpassungen.
+// Responsive Token-Overrides.
 // Enthält NUR Abweichungen von den Basiswerten in app.vue (:root) —
 // identische Werte werden nicht wiederholt.
 
@@ -52,21 +52,11 @@
   :root {
     --font__size--base: 0.715rem;
   }
-
-  img {
-    height: auto;
-    object-fit: contain;
-  }
 }
 
 @include bp.laptop {
   :root {
     --font__size--base: 0.615rem;
-  }
-
-  img {
-    max-width: 80%;
-    height: auto;
   }
 }
 
@@ -85,6 +75,8 @@
 /* ---------- Mobile (≤480px) ---------- */
 @include bp.mobile {
   :root {
+    --project__hero--inset: var(--spacing--big);
+    --project__hero--stacked-reserve: 36rem;
     --border__color: #171717;
     --border__size: 0.08rem;
     --border__radius: 0.56rem;
@@ -125,14 +117,6 @@
     --line-height--big: 1.2;
   }
 
-  html {
-    height: 100dvh;
-    width: 100dvw;
-  }
-
-  img {
-    height: auto;
-  }
 }
 
 @include bp.mobile-xs {

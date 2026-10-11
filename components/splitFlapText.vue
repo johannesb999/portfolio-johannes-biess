@@ -188,6 +188,7 @@ function resolveColumns(texts) {
 
 const textArrays = ref([]);
 const showAlert = ref(false);
+let renderedColumns;
 
 const hasMailLink = computed(() =>
   textArrays.value.some((segments) => segments.some((seg) => seg.linkTarget === LINK_TARGETS["@"]))
@@ -196,7 +197,16 @@ const hasMailLink = computed(() =>
 function rebuild(texts) {
   const normalized = texts.map((t) => (t || "").replace(/\s+/g, " ").trim());
   const columns = resolveColumns(normalized);
+  renderedColumns = columns;
   textArrays.value = normalized.map((text, i) => fitToColumns(toSegments(text), columns, props.align, i));
+}
+
+// Beim Wechsel zwischen Desktop und Mobile auch das Spaltenraster aktualisieren.
+function handleResize() {
+  if (resolveColumns(props.texts) !== renderedColumns) {
+    rebuild(props.texts);
+    animateAll();
+  }
 }
 
 /* ---------- Animation ---------- */
@@ -281,6 +291,7 @@ let linkTimer;
 onMounted(() => {
   rebuild(props.texts);
   animateAll();
+  window.addEventListener('resize', handleResize);
   // Timer nur, wenn es überhaupt Links zu animieren gibt
   if (textArrays.value.some((segments) => segments.some((seg) => seg.isLink))) {
     linkTimer = setInterval(animateLinks, 6000);
@@ -288,6 +299,7 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleResize);
   if (linkTimer) clearInterval(linkTimer);
 });
 

@@ -1,19 +1,80 @@
 @use "./breakpoints" as bp;
 @use "./project-layout" as layout;
 
-// Breite der eingebetteten Medien (Video, Prototyp)
-$media-width: 85vw;
-
 // Projekt-Detailseiten (trickyTowers, goEase, ...).
 // Gemeinsames Layout kommt aus _project-layout.scss.
 
-main {
-  --hero__top: 30vh;
-  --hero__image-max: 30rem;
-  --details__offset: 100vh;
+@include layout.page;
+
+// Text und Bild bilden eine gemeinsame Komposition mit gleicher Mittelachse.
+// Das bestehende CV-Layout bleibt im gemeinsamen Mixin erhalten.
+.project-hero {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas: "flap image";
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: var(--project__hero--gap);
+  width: min(calc(100% - 2 * var(--project__hero--inset)), var(--project__hero--max));
+  min-height: var(--layout__height--viewport);
+  margin-inline: auto;
+  padding-block: var(--project__hero--clearance);
+
+  .projectFlap,
+  .wrapper {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+  }
+
+  .projectFlap {
+    grid-area: flap;
+    align-items: center;
+  }
+
+  .wrapper {
+    grid-area: image;
+    justify-content: center;
+  }
+
+  .wrapper img {
+    width: auto;
+    object-fit: contain;
+    max-height: calc(var(--layout__height--viewport) - 2 * var(--project__hero--clearance));
+  }
 }
 
-@include layout.page;
+.project-details {
+  padding-top: var(--spacing--xxl);
+}
+
+#details-section {
+  scroll-margin-top: var(--project__details--inset);
+}
+
+.project-details > .project-section {
+  margin-top: var(--project__section--gap);
+  row-gap: var(--project__media--gap);
+}
+
+#details-section > .project-film {
+  margin-bottom: var(--project__section--gap);
+}
+
+@include bp.stacked {
+  .project-hero {
+    grid-template-areas: "flap" "image";
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    gap: var(--spacing--xxxl);
+
+    .wrapper img {
+      max-height: calc(var(--layout__height--viewport) - var(--project__hero--stacked-reserve));
+    }
+  }
+}
 
 // Zentriert ohne transform: das kollidierte frueher mit dem Hover-Zoom,
 // wodurch der Link beim Ueberfahren nach rechts sprang.
@@ -21,16 +82,13 @@ main {
   display: block;
   width: fit-content;
   margin-inline: auto;
+  margin-block: var(--project__section--gap);
 }
 
-// Projektvideo: eigenstaendiges, auf der Seite zentriertes Element. Bewusst
-// breiter als die Textspalte, sonst liest es sich wie ein Inhaltsblock.
-// Die Hoehe kommt aus dem 16:9 von VideoEmbed — der fruehere feste Rahmen
-// (71dvw x 78dvh) war rund 3:2 und hat das Video oben und unten geletterboxt.
+// Film und Akkordeon teilen dieselben Inhaltskanten.
 .project-film {
-  width: $media-width;
-  margin-inline: calc((100% - #{$media-width}) / 2);
-  margin-bottom: var(--spacing--xxl);
+  width: 100%;
+  margin-inline: auto;
 }
 
 // Eingebettete Rahmen ohne eigene Komponente (z. B. Figma-Prototyp)
@@ -41,11 +99,3 @@ main {
   border: var(--border__size) solid var(--border__color);
   border-radius: var(--border__radius);
 }
-
-@include bp.stacked {
-  .project-film {
-    width: 92vw;
-    margin-inline: calc((100% - 92vw) / 2);
-  }
-}
-

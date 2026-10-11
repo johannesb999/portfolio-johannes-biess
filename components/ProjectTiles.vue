@@ -1,23 +1,23 @@
 <template>
   <ul class="tiles">
-    <li v-for="project in playgroundProjects" :key="project.route" class="tiles__item">
-      <NuxtLink class="tile" :to="`/${locale}/project/${project.route}`">
-        <img class="tile__image" :src="project.thumb" :alt="project.label" loading="lazy" />
+    <li v-for="project in playgroundProjects" :key="project.route" class="tiles__item" :style="{ gridArea: project.route }">
+      <AppLink class="tile" :to="`/${locale}/project/${project.route}`" :scale="false">
+        <img class="tile__image" :src="project.thumb" alt="" loading="lazy" />
         <span class="tile__label">{{ project.label }}</span>
-      </NuxtLink>
+      </AppLink>
     </li>
+    <li class="tiles__placeholder" aria-hidden="true" />
   </ul>
 </template>
 
-<script setup>
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-import { playgroundProjects } from "@/composables/projects";
+<script setup lang="ts">
+import { computed } from 'vue';
+import { playgroundProjects } from '@/composables/projects';
 
 // Vorschaukacheln der kleineren Arbeiten. Welche das sind, steht in
 // composables/projects.ts — dieselbe Liste, die auch ihre Karussell-Kette bildet.
 const route = useRoute();
-const locale = computed(() => (route.path.startsWith("/de") ? "de" : "en"));
+const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 </script>
 
 <style scoped lang="scss">
@@ -26,27 +26,43 @@ const locale = computed(() => (route.path.startsWith("/de") ? "de" : "en"));
 
 .tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: var(--spacing--xl);
+  grid-template-areas:
+    "trickyTowers trickyTowers jumpStar jumpStar"
+    "trickyTowers trickyTowers drawingLight placeholder";
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, var(--playground__tile--row));
+  gap: var(--playground__tiles--gap);
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.tile {
+.tiles__item {
+  min-width: 0;
+  min-height: 0;
+}
+
+.tile,
+.tiles__placeholder {
   display: grid;
   grid-template-areas:
     "image"
     "label";
   gap: var(--spacing--sm);
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+
+.tile {
+  margin: 0;
   color: var(--color--primary);
   text-decoration: none;
 
-  &:hover .tile__image,
-  &:focus-visible .tile__image {
-    // Statt die Kachel zu skalieren nur das Bild — so bleibt das Raster ruhig
-    transform: scale(1.03);
+  &:hover {
+    transform: none;
   }
 
   &:hover .tile__label,
@@ -62,29 +78,62 @@ const locale = computed(() => (route.path.startsWith("/de") ? "de" : "en"));
 
 .tile__image {
   grid-area: image;
-  aspect-ratio: 4 / 3;
-  height: auto;
+  box-sizing: border-box;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease;
 }
 
-.tile__label {
+.tile__label,
+.tiles__placeholder::after {
   grid-area: label;
   text-align: center;
   transition: color 0.3s ease;
   @include type.text(lg, light);
 }
 
+.tiles__placeholder {
+  grid-area: placeholder;
+
+  &::before {
+    content: '';
+    grid-area: image;
+    border: var(--border__size) solid var(--border__color);
+    border-radius: var(--border__radius);
+  }
+
+  // Gleiche Bildkante wie die beschrifteten Kacheln, ohne sichtbaren Inhalt.
+  &::after {
+    content: '\00a0';
+  }
+}
+
 @include bp.stacked {
   .tiles {
-    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-    gap: var(--spacing--md);
+    grid-template-areas:
+      "trickyTowers jumpStar"
+      "drawingLight placeholder";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, var(--playground__tile--row));
   }
 }
 
 @include bp.mobile {
   .tiles {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "trickyTowers"
+      "jumpStar"
+      "drawingLight"
+      "placeholder";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .tile__image,
+  .tiles__placeholder::before {
+    aspect-ratio: var(--playground__tile--ratio);
+    height: auto;
   }
 }
 </style>

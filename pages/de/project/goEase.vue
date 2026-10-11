@@ -6,20 +6,22 @@
       </client-only>
     </div>
     <ProjectNav current="goEase" />
-    <div class="projectFlap">
-      <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
-        '          [GOEASE]          ',
-      ]" />
-      <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-        '       SMART SYSTEM       ',
-        '  REACT NATIVE      GPS   ',
-        '     ESP32   ANDROIDSDK   ',
-        ' BLE     OPENMAPBOX       ',
-      ]" />
-    </div>
+    <div class="project-hero">
+      <div class="projectFlap">
+        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+          '          [GOEASE]          ',
+        ]" />
+        <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
+          '       SMART SYSTEM       ',
+          '  REACT NATIVE      GPS   ',
+          '     ESP32   ANDROIDSDK   ',
+          ' BLE     OPENMAPBOX       ',
+        ]" />
+      </div>
 
-    <div class="wrapper">
-      <img src="/img/ge/thumbnail.svg" alt="GoEase Thumbnail" />
+      <div class="wrapper">
+        <img src="/img/ge/thumbnail.svg" alt="GoEase Thumbnail" />
+      </div>
     </div>
 
     <DetailsScroll />
@@ -40,7 +42,7 @@
           '                       [PROJEKT] [VIDEO]                        ',
         ]" />
         <div class="project-film">
-          <VideoEmbed id="_YpyL8_qQfw" title="GoEase — Projektvideo" />
+          <VideoEmbed id="_YpyL8_qQfw" title="GoEase — Projektvideo" poster="/img/ge/video-poster.webp" />
         </div>
         <div class="projectDetailsFlap">
           <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
@@ -59,6 +61,15 @@
 <script setup>
 const accordionItems = [
   {
+    title: 'Zweck, Lösungsansatz & Nutzen',
+    alwaysOpen: true,
+    body:
+      'Zweck der Lösung ist die Beseitigung von Zugangsbarrieren im Nahverkehr. Der Ansatz nutzt ' +
+      'kostengünstige Sender in Bussen zur Kommunikation mit Mobiltelefonen. Der Nutzen für Anwender ' +
+      'liegt in der automatischen Streckenerfassung und der selbstständigen Berechnung der Fahrpreise.',
+    images: ['/img/ge/solution.svg'],
+  },
+  {
     title: 'Kernidee',
     body:
       'Die Kernidee besteht in der vollständigen Automatisierung der Fahrkartenerfassung durch ' +
@@ -71,6 +82,7 @@ const accordionItems = [
       'Die primären Nutzer sind Gelegenheitsfahrer des öffentlichen Nahverkehrs. Sie befinden sich in ' +
       'Situationen, in denen eine Autofahrt kurzfristig nicht möglich ist. Ihre größte Herausforderung ' +
       'ist die Unkenntnis über lokale Tarife und die komplexe Bedienung der unterschiedlichen Ticketautomaten.',
+    images: ['/img/ge/problem.svg'],
   },
   {
     title: 'Kontext & User Journey',
@@ -85,6 +97,7 @@ const accordionItems = [
       'Der Prozess begann mit einer umfassenden Ideenfindung und der Definition eines minimal ' +
       'funktionsfähigen Produkts. Die Softwareentwicklung startete mit digitalen Entwürfen und mündete ' +
       'in einer plattformübergreifenden Anwendung. Wiederholte Nutzertests halfen bei der kontinuierlichen Verbesserung.',
+    images: ['/img/ge/process.svg', '/img/ge/softwareProcess.svg'],
   },
   {
     title: 'Erkenntnisse für die Lösung',
@@ -92,13 +105,6 @@ const accordionItems = [
       'Die Erkenntnisse der anfänglichen Konzeptphase zeigten, dass ein zu vielseitiges System vom ' +
       'Kernproblem ablenkt. Dies führte zur Reduzierung auf die automatische Ticketerfassung in Bussen. ' +
       'Feedback aus den Nutzertests floss anschließend direkt in die Vereinfachung des Einrichtungsprozesses ein.',
-  },
-  {
-    title: 'Zweck, Lösungsansatz & Nutzen',
-    body:
-      'Zweck der Lösung ist die Beseitigung von Zugangsbarrieren im Nahverkehr. Der Ansatz nutzt ' +
-      'kostengünstige Sender in Bussen zur Kommunikation mit Mobiltelefonen. Der Nutzen für Anwender ' +
-      'liegt in der automatischen Streckenerfassung und der selbstständigen Berechnung der Fahrpreise.',
   },
   {
     title: 'Innovation',
@@ -141,14 +147,7 @@ const accordionItems = [
       'Die benötigten Hardwarekomponenten wurden gezielt für eine einfache Montage konzipiert. Die ' +
       'dreidimensional gedruckten Kunststoffgehäuse verfügen über spezielle Befestigungsbänder. Diese ' +
       'ermöglichen eine schnelle und werkzeuglose Installation an den Haltestangen in bestehenden Bussen.',
-    // Bestehende Projektbilder — vorerst hier zwischengeparkt
-    images: [
-      '/img/ge/problem.svg',
-      '/img/ge/process.svg',
-      '/img/ge/softwareProcess.svg',
-      '/img/ge/hardwareProcess.svg',
-      '/img/ge/solution.svg',
-    ],
+    images: ['/img/ge/hardwareProcess.svg'],
   },
 ];
 </script>
