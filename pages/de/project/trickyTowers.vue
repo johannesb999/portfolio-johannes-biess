@@ -10,7 +10,7 @@
 
     <div class="project-hero">
       <div class="projectFlap">
-        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h1" preset="detailsFlap" :align="'center'" :texts="[
           '      [TRICKYTOWERS]       ',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -22,7 +22,7 @@
       </div>
 
       <div class="wrapper">
-        <img src="/img/tt/tt (1).svg" alt="TrickyTowers Thumbnail" />
+        <ZoomableImage src="/img/tt/tt (1).svg" alt="TrickyTowers Thumbnail" />
       </div>
     </div>
 
@@ -30,10 +30,13 @@
 
     <div class="project-details">
       <section id="details-section">
+        <p class="project-intro">
+          TrickyTowers verwandelt das Schaufenster der Hochschule in ein gestengesteuertes Turmbauspiel. Die interaktive Installation entstand als einwöchiges Teamprojekt im zweiten Semester.
+        </p>
         <ProjectAccordion :items="accordionItems" id-prefix="trickytowers" />
       </section>
 
-      <AppLink class="tryOutLink" href="https://tricky.johannes-biess.com/" label="TRY IT OUT LIVE" size="xxxxl" weight="bold" underline />
+      <AppLink class="tryOutLink" href="https://tricky.johannes-biess.com/" label="LIVE AUSPROBIEREN" size="xxxxl" weight="bold" underline />
 
       <div class="projectDetailsFlap">
         <SplitFlapText preset="keydataFlap" :align="'center'" :texts="[
@@ -48,52 +51,47 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const accordionItems = [
   {
-    title: 'Problem',
-    body:
-      'Das Projekt befasste sich mit der Frage: Wie zieht man Aufmerksamkeit auf ein Schaufenster ' +
-      'oder Gebäude? In diesem Fall sollte herausgefunden werden, wie das Marketing der Hochschule ' +
-      'verbessert und sie für die Öffentlichkeit präsenter gemacht werden kann, um mehr potenzielle ' +
-      'Studierende anzusprechen. Ziel war es, eine interaktive Installation zu entwickeln, die das ' +
-      'Schaufenster der Hochschule in ein lebendiges, dynamisches Medium verwandelt.',
-    images: ['/img/tt/idea.svg'],
+    title: 'Die Lösung',
+    alwaysOpen: true,
+    body: 'Eine Webcam erkennt Handbewegungen und startet das Spiel. Die Spielenden stapeln fallende Bausteine zu einem möglichst hohen Turm. Eine Physik-Engine macht Balance und Geschick zum Kern der Interaktion; das Hochschulfenster wird zur Spielfläche.',
+    images: [
+      '/img/tt/solution.svg',
+    ],
+    imageAlts: [
+      'TrickyTowers-Konzept für das interaktive Schaufenster der Hochschule',
+    ],
+    imageCaptions: [
+      'Das Spiel verbindet die Hochschule mit einer direkten Einladung zur Interaktion.',
+    ],
   },
   {
-    title: 'Prozess',
-    body:
-      'Das Projekt begann mit einer intensiven Phase von Brainstorming und Recherche. Es sollte ' +
-      'herausgefunden werden, wie am besten junge Menschen, die sich sowohl für Technologie als ' +
-      'auch für Design interessieren, erreicht werden können, um sie auf das Studienangebot ' +
-      'aufmerksam zu machen. Schnell wurde klar, dass ein Schaufenster, das nur Animationen oder ' +
-      'Videos abspielt, nicht ausreichen würde. Nur wenige Passanten nehmen sich die Zeit, ' +
-      'stehenzubleiben und ein Video anzusehen. Die Entscheidung, eine interaktive Lösung zu ' +
-      'entwickeln, schien die beste Lösung. Es war entscheidend, ein Konzept zu entwerfen, das ' +
-      'Aufmerksamkeit erregt und gleichzeitig die Neugier der Passanten weckt. Die Installation ' +
-      'musste so gestaltet sein, dass die Interaktion intuitiv ist, um das anfängliche Interesse ' +
-      'aufrechtzuerhalten und die Hemmschwelle zur Nutzung möglichst gering zu halten. Neben der ' +
-      'Gestaltung der Benutzerinteraktion musste auch berücksichtigt werden, welche Technologie ' +
-      'sich am besten für die Umsetzung eignet. Das Ziel war, eine effektive Balance zwischen ' +
-      'einem auffälligen visuellen Design und einer benutzerfreundlichen, zugänglichen Interaktion ' +
-      'zu finden.',
-    images: ['/img/tt/process.svg'],
+    title: 'Vom Vorbeigehen zum Mitspielen',
+    body: 'Die Aufgabe war, die Hochschule im öffentlichen Raum sichtbarer zu machen. Das Konzept setzt auf Beteiligung statt auf das passive Ansehen eines Videos. Eine Handbewegung genügt zum Einstieg und macht die Verbindung von Technologie und Design unmittelbar erlebbar.',
+    images: [
+      '/img/tt/idea.svg',
+    ],
+    imageAlts: [
+      'Hochschulgebäude mit Schaufenstern als Ort der interaktiven Installation',
+    ],
+    imageCaptions: [
+      'Das Schaufenster ist die Schnittstelle zur Öffentlichkeit.',
+    ],
   },
   {
-    title: 'Ergebnis',
-    body:
-      'TrickyTowers ist ein interaktives Schaufenster, das Passanten auf spielerische Weise ' +
-      'anzieht und ein außergewöhnliches Erlebnis bietet. Die Installation besteht aus einem ' +
-      'Bildschirm, einem Rückprojektor und einer Web-App, die in Kombination mit einer Webcam und ' +
-      'Google MediaPipe die Handbewegungen der Nutzer erkennt. Sobald die Hand des Nutzers erkannt ' +
-      'wird, startet ein Spiel. Das Spielprinzip von TrickyTowers lässt sich am besten als eine ' +
-      'Art Tetris mit einer Physik-Engine beschreiben. Ziel ist es jedoch nicht, Reihen zu bilden, ' +
-      'sondern einen möglichst hohen Turm zu bauen. Die physikalischen Elemente machen das Bauen ' +
-      'zu einer Herausforderung, die Geschick und strategisches Denken erfordert. Dieses ' +
-      'interaktive Erlebnis zieht nicht nur Aufmerksamkeit auf sich, sondern lädt die Nutzer auch ' +
-      'aktiv dazu ein, mit der Installation zu interagieren und die Verbindung zur Hochschule auf ' +
-      'spielerische und positive Weise zu erleben.',
-    images: ['/img/tt/solution.svg'],
+    title: 'Gestaltung und technische Umsetzung',
+    body: 'Brainstorming und Recherche führten zur Auswahl einer einfachen Spielidee und einer Bedienung ohne zusätzliche Eingabegeräte. Die Web-App verbindet HTML, CSS und JavaScript mit Google MediaPipe. Webcam, Projektionsfläche und Rückprojektor bilden den räumlichen Aufbau.',
+    images: [
+      '/img/tt/process.svg',
+    ],
+    imageAlts: [
+      'TrickyTowers-Spieloberfläche mit fallenden Bausteinen und Höhenanzeige',
+    ],
+    imageCaptions: [
+      'Ein verständliches Ziel: Bausteine balancieren und den Turm wachsen lassen.',
+    ],
   },
 ];
 </script>

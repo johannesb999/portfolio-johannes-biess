@@ -10,7 +10,7 @@
 
     <div class="playground__content">
       <div class="playground__flap">
-        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h1" preset="detailsFlap" :align="'center'" :texts="[
           '[PLAYGROUND]',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[

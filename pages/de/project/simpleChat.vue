@@ -23,7 +23,7 @@
       </div>
 
       <div class="wrapper">
-        <img src="/img/sc/thumbnail.svg" alt="SimpleChat Thumbnail" />
+        <ZoomableImage src="/img/sc/thumbnail.svg" alt="SimpleChat Thumbnail" />
       </div>
     </div>
 

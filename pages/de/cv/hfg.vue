@@ -15,7 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <img src="/img/cv/hfgbuilding.svg" alt="Picture of HFG Building" />
+      <ZoomableImage src="/img/cv/hfgbuilding.svg" alt="Picture of HFG Building" />
     </div>
 
     <div class="project-details">
@@ -24,7 +24,7 @@
           <div class="text">
             <SplitFlapText :texts="['          [LEARNINGS]         ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
-              Während meiner Zeit an der HfG arbeitete ich an
+              Im Bachelorstudium Internet of Things (B.A.) an der HfG arbeitete ich an
               <AppLink :to="projectsPath" label="Projekten" underline :scale="false" />
               die von Anfang an sehr praxisorientiert waren. Ich wurde gelehrt,
               tief in grundlegende Fragen einzutauchen wie: Was lohnt sich zu
@@ -36,6 +36,7 @@
               sie in realen Projekten anwenden kann. Wie ich mich dabei
               geschlagen habe hier in meiner
               <AppLink href="/docs/hfg/leistungsbescheinigung-de.pdf" label="Leistungsbescheinigung" underline :scale="false" />.
+              Zuvor studierte ich drei Semester Digital Product Design and Development an der Hochschule Aalen.
             </div>
           </div>
 

@@ -91,6 +91,8 @@ defineExpose({ flipChars });
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/styles/breakpoints' as bp;
+
 // :where() nimmt der Basisregel die Spezifitaet (0,0,0). Dadurch koennen
 // aufrufende Seiten sie mit einer einfachen Klasse ueberschreiben, ohne
 // Spezifitaets-Wettruesten.
@@ -111,7 +113,7 @@ defineExpose({ flipChars });
 }
 
 .app-link--scale:hover {
-  transform: scale(1.1);
+  transform: scale(var(--link__hover--scale));
 }
 
 .app-link--underline {
@@ -160,7 +162,7 @@ defineExpose({ flipChars });
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@include bp.reduced-motion {
 
   .app-link,
   .app-link--pulse,

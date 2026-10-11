@@ -15,7 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <img src="/img/cv/musecase2.png" alt="Picture of me in front of goldengate bridge" />
+      <ZoomableImage src="/img/cv/musecase2.png" alt="Picture of me in front of goldengate bridge" />
     </div>
 
     <div class="project-details">

@@ -11,7 +11,7 @@
 
     <div class="project-hero">
       <div class="projectFlap">
-        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h1" preset="detailsFlap" :align="'center'" :texts="[
           '[PLANTMONIT]',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -24,7 +24,7 @@
       </div>
 
       <div class="wrapper">
-        <img src="/img/pm/thumbnail.svg" alt="PlantMonit thumbnail" />
+        <ZoomableImage src="/img/pm/thumbnail.svg" alt="PlantMonit thumbnail" />
       </div>
     </div>
 
@@ -33,17 +33,13 @@
     <div class="project-details">
       <section id="details-section">
         <p class="project-intro">
-          PlantMonit is a system of sensors and software for monitoring houseplants. The target
-          group includes people with little time or prior knowledge. The device measures
-          moisture, temperature, and light. A camera visually analyzes the plant's condition
-          using artificial intelligence. All data is bundled in a digital application, where
-          users receive clear recommendations to avoid care mistakes.
+          PlantMonit makes houseplant care needs visible through sensor data, camera images and clear advice in one application. The team developed the software and hardware prototype during the second semester over three months.
         </p>
         <ProjectAccordion :items="accordionItems" id-prefix="plantmonit" />
       </section>
 
       <div class="project-section">
-        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
           '                         [PROJECT] [VIDEO]                          ',
         ]" />
         <div class="project-film">
@@ -63,103 +59,71 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const accordionItems = [
   {
-    title: 'Core Idea',
-    body:
-      'The core idea of the project is an intelligent tool for monitoring plants. The solution ' +
-      'automatically collects data and provides care advice. This matters because many people ' +
-      'forget about plant care in their hectic everyday lives or lack the necessary knowledge. ' +
-      'Incorrect care often leads to plants dying.',
-  },
-  {
-    title: 'Users & Challenge',
-    body:
-      'The target group includes people with demanding jobs and numerous commitments, as well as ' +
-      'the millennial generation. These people often have little time and experience in plant ' +
-      'care. They usually notice diseases or incorrect watering too late. This leads to ' +
-      'frustration and the loss of houseplants.',
-  },
-  {
-    title: 'Context & User Journey',
-    body:
-      'The use case covers everyday plant care. A defined user journey describes the path from ' +
-      'installing the application to daily use. This journey was optimized through user testing ' +
-      'to ensure a seamless flow and to remove hurdles during setup early on.',
-  },
-  {
-    title: 'User-Centered Research & Process',
-    body:
-      'The process began with a competitor analysis to identify potential for improvement. This ' +
-      'was followed by defining a typical user group and designing the usage process in detail. ' +
-      'Software development started with drafts at various levels of fidelity and resulted in a ' +
-      'clickable prototype for user testing. Hardware development included a requirements ' +
-      'analysis, the selection of components, and rapid prototyping using 3D printing.',
-  },
-  {
-    title: 'Insights Shaping the Solution',
-    body:
-      'The findings from the market analysis flowed directly into the focus of the features. ' +
-      'Testing with the clickable prototype revealed potential improvements in the user flow. ' +
-      'This feedback was used to optimize the usability of the application.',
-  },
-  {
-    title: 'Purpose, Approach & Benefits',
-    body:
-      'The purpose of the system is to make plant care possible with minimal time investment. It ' +
-      'addresses hobby gardeners and experienced plant lovers alike. An integrated camera and ' +
-      'various sensors continuously record environmental data. As a result, users receive clear ' +
-      'and personalized recommendations.',
-  },
-  {
-    title: 'Innovation',
-    body:
-      'The solution uses artificial intelligence for the visual analysis of plant images. This ' +
-      'technology enables the early detection of pests or rot. The combination of sensor-based ' +
-      'data collection and image analysis represents an innovation. Data transmission is highly ' +
-      'efficient via a dedicated network interface.',
-  },
-  {
-    title: 'Outcome & Business Value',
-    body:
-      'The application is expected to succeed through high usability and reliable technology. ' +
-      'The target group consists of hobby gardeners and plant lovers.',
-  },
-  {
-    title: 'Competition & USP',
-    body:
-      'Competitors offer solutions that still leave potential untapped. The unique selling point ' +
-      'of this development is the combination of automatic sensor-based monitoring and ' +
-      'image-based diagnosis. As a result, users do not need any expert knowledge of their own.',
-  },
-  {
-    title: 'Accessibility, Responsibility & Trust',
-    body:
-      'The application has a highly intuitive user interface. Complex data is presented clearly. ' +
-      'This lowers the barrier for people without prior knowledge of plant care.',
-  },
-  {
-    title: 'Social & Ecological Values',
-    body:
-      'The product helps keep plants alive. This reduces the need for replacements and prevents ' +
-      'frustration.',
-  },
-  {
-    title: 'Additional Information',
-    body:
-      'The software was implemented with a modern framework and a scalable database structure. ' +
-      'The hardware consists of a microcontroller and sensors for soil moisture, humidity, ' +
-      'temperature, and light. The housing for these components was developed and printed ' +
-      'iteratively.',
-    // Existing project images — parked here for now
+    title: 'The solution',
+    alwaysOpen: true,
+    body: 'A device next to the plant records its environment; the app brings measurements and care advice together. People with little time or plant care experience no longer have to judge their houseplants by intuition alone. Sensors and visual analysis complement each other within the system.',
     images: [
-      '/img/pm/problem.svg',
-      '/img/pm/process.svg',
-      '/img/pm/software.svg',
-      '/img/pm/hardware.svg',
       '/img/pm/solution.svg',
     ],
+    imageAlts: [
+      'Houseplant with a PlantMonit camera and sensor unit in its pot',
+    ],
+    imageCaptions: [
+      'The device stays with the plant in everyday use.',
+    ],
+  },
+  {
+    title: 'Users and care needs',
+    body: 'The design focuses on people who want to look after their houseplants but have little time or experience. The important connection is between a noticeable condition and the next care action. Measurements on their own do not answer that question.',
+    images: [
+      '/img/pm/problem.svg',
+    ],
+    imageAlts: [
+      'Houseplant illustrating the starting question about its care needs',
+    ],
+    imageCaptions: [
+      'The condition of the plant is the starting point for clear care advice.',
+    ],
+  },
+  {
+    title: 'Research and prototyping',
+    body: 'Competitor analysis and a defined user group informed the journey from setup to daily use. Designs at several levels of detail became a clickable prototype. User tests provided feedback on the interface flow, while early hardware prototypes were developed in parallel.',
+  },
+  {
+    title: 'Software',
+    body: 'The app connects an overview of several plants with a detailed view of each one. Trends, camera images and care advice share the same context. The software uses Svelte and MongoDB; MQTT carries data from the hardware.',
+    images: [
+      '/img/pm/software.svg',
+    ],
+    imageAlts: [
+      'PlantMonit interfaces showing a plant overview, measurement trends and a camera image',
+    ],
+    imageCaptions: [
+      'From the plant overview to the measurements and advice for an individual plant.',
+    ],
+  },
+  {
+    title: 'Hardware',
+    body: 'The hardware combines an ESP32 with sensors for soil moisture, humidity, temperature and light. Component selection and requirements analysis led to several prototypes. The housing was developed iteratively and produced using 3D printing.',
+    images: [
+      '/img/pm/hardware.svg',
+      '/img/pm/process.svg',
+    ],
+    imageAlts: [
+      'PlantMonit hardware prototype with microcontroller, sensors and wiring',
+      'PlantMonit housing design with a camera and soil spike',
+    ],
+    imageCaptions: [
+      'The open prototype shows the technical components.',
+      'The housing design brings the camera and sensors together at the plant.',
+    ],
+  },
+  {
+    title: 'Sensors and image analysis',
+    body: 'Measurements describe the environment around the plant; camera images add its visible condition. AI-based analysis expands that information into care advice. PlantMonit connects environmental data with visible changes rather than relying on one measurement in isolation.',
   },
 ];
 </script>

@@ -5,8 +5,8 @@
         <span class="acc__index">{{ indexLabel(i) }}</span>
         <span class="acc__title">{{ item.title }}</span>
       </h2>
+      <h2 v-else class="acc__heading">
       <AppLink
-        v-else
         :id="headingId(i)"
         class="acc__top"
         :scale="false"
@@ -31,24 +31,34 @@
           <polyline points="6 9 12 15 18 9" />
         </svg>
       </AppLink>
+      </h2>
 
-      <div :id="bodyId(i)" class="acc__body" :class="{ 'is-open': isOpen(i) }" role="region" :aria-labelledby="headingId(i)" :aria-hidden="!isOpen(i)">
+      <div :id="bodyId(i)" class="acc__body" :class="{ 'is-open': isOpen(i) }" role="region" :aria-labelledby="headingId(i)" :aria-hidden="!isOpen(i)" :inert="!isOpen(i)">
         <div class="acc__body-inner">
-          <div class="acc__content" :class="{ 'acc__content--media': hasMedia(item) }">
+          <div v-if="item.slot && $slots[item.slot]" class="acc__custom">
+            <slot :name="item.slot" />
+          </div>
+          <div v-else class="acc__content" :class="{ 'acc__content--media': hasMedia(item) }">
             <div class="acc__answer">
               <p v-if="item.body" class="acc__text">{{ item.body }}</p>
+              <p v-for="paragraph in item.paragraphs" :key="paragraph" class="acc__text">{{ paragraph }}</p>
               <ul v-if="hasPoints(item)" class="acc__points">
                 <li v-for="(point, pointIdx) in item.points" :key="pointIdx">{{ point }}</li>
               </ul>
             </div>
             <div v-if="hasMedia(item)" class="acc__media">
-              <img
+              <figure
                 v-for="(src, imgIdx) in item.images"
                 :key="src"
+                class="acc__figure"
+              >
+              <ZoomableImage
                 :src="src"
-                :alt="`${item.title} — ${figureLabel} ${imgIdx + 1}`"
+                :alt="item.imageAlts?.[imgIdx] || `${item.title} — ${figureLabel} ${imgIdx + 1}`"
                 loading="lazy"
               />
+              <figcaption v-if="item.imageCaptions?.[imgIdx]">{{ item.imageCaptions[imgIdx] }}</figcaption>
+              </figure>
             </div>
           </div>
         </div>
@@ -63,8 +73,12 @@ import { computed, ref } from 'vue';
 type AccordionItem = {
   title: string;
   body?: string;
+  paragraphs?: string[];
   points?: string[];
   images?: string[];
+  imageAlts?: string[];
+  imageCaptions?: string[];
+  slot?: string;
   alwaysOpen?: boolean;
 };
 
@@ -99,6 +113,29 @@ const hasPoints = (item: AccordionItem) => Boolean(item.points?.length);
   width: 100%;
 }
 
+.acc__heading {
+  margin: 0;
+}
+
+.acc__custom {
+  padding-top: var(--spacing--xs);
+  padding-bottom: var(--project__media--gap);
+}
+
+.acc__custom,
+.acc__content {
+  padding-inline-start: calc(var(--accordion__index--width) + var(--spacing--lg));
+}
+
+.acc__figure {
+  margin: 0;
+
+  figcaption {
+    margin-top: var(--spacing--sm);
+    @include type.text(lg, normal, alt, big);
+  }
+}
+
 .acc__item {
   border-top: var(--border__size) solid var(--color--gray-light);
 
@@ -108,7 +145,9 @@ const hasPoints = (item: AccordionItem) => Boolean(item.points?.length);
 }
 
 .acc__top {
-  display: flex;
+  display: grid;
+  grid-template-areas: 'index title icon';
+  grid-template-columns: var(--accordion__index--width) minmax(0, 1fr) auto;
   align-items: center;
   gap: var(--spacing--lg);
   width: 100%;
@@ -125,12 +164,12 @@ const hasPoints = (item: AccordionItem) => Boolean(item.points?.length);
   }
 
   &:focus-visible {
-    outline: var(--border__size) solid var(--color--accent);
+    outline: var(--border__size) solid var(--accordion__color--interactive);
     outline-offset: var(--spacing--xxs);
   }
 
   &:not(.acc__top--static):hover .acc__title {
-    color: var(--color--accent);
+    color: var(--accordion__color--interactive);
   }
 
   &[aria-expanded="true"] .acc__icon {
@@ -143,19 +182,20 @@ const hasPoints = (item: AccordionItem) => Boolean(item.points?.length);
 }
 
 .acc__index {
-  min-width: 2.5ch;
+  grid-area: index;
   color: var(--color--accent);
   @include type.text(lg);
 }
 
 .acc__title {
-  flex: 1;
+  grid-area: title;
   transition: color 0.3s ease;
-  @include type.text(xxxl, light);
+  @include type.text(xxxl, normal);
+  font-size: max(var(--font__size--section-minimum), var(--font__size--xxxl));
 }
 
 .acc__icon {
-  flex-shrink: 0;
+  grid-area: icon;
   color: var(--color--accent);
   transition: transform 0.3s ease;
 }
@@ -222,12 +262,9 @@ const hasPoints = (item: AccordionItem) => Boolean(item.points?.length);
 
 // Die Bilder tragen Rahmen und Radius bereits aus der globalen img-Regel —
 // kein zusätzlicher Wrapper mit eigenem Rahmen (sonst Bild im Bild).
-.acc__media img {
-  box-sizing: border-box;
+.acc__media .zoom-image {
   width: 100%;
-  aspect-ratio: var(--accordion__image--ratio);
-  height: auto;
-  object-fit: contain;
+  --image__ratio: var(--accordion__image--ratio);
 }
 
 @include bp.side-by-side {
@@ -239,6 +276,14 @@ const hasPoints = (item: AccordionItem) => Boolean(item.points?.length);
 
   .acc__media {
     justify-self: end;
+  }
+}
+
+@include bp.reduced-motion {
+  .acc__body,
+  .acc__title,
+  .acc__icon {
+    transition: none;
   }
 }
 </style>

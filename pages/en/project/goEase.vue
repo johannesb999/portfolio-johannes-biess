@@ -8,7 +8,7 @@
     <ProjectNav current="goEase" />
     <div class="project-hero">
       <div class="projectFlap">
-        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['          [GOEASE]          ']" />
+        <SplitFlapText tag="h1" preset="detailsFlap" :align="'center'" :texts="['          [GOEASE]          ']" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
           '       SMART SYSTEM       ',
           '  REACT NATIVE      GPS   ',
@@ -18,7 +18,7 @@
       </div>
 
       <div class="wrapper">
-        <img src="/img/ge/thumbnail.svg" alt="GoEase thumbnail" />
+        <ZoomableImage src="/img/ge/thumbnail.svg" alt="GoEase thumbnail" />
       </div>
     </div>
 
@@ -27,16 +27,13 @@
     <div class="project-details">
       <section id="details-section">
         <p class="project-intro">
-          GoEase is a system for automating ticket purchases in public bus transport. The
-          solution connects small physical transmitters in the vehicles with a digital
-          application on the mobile phone. After a one-time setup, the system records journeys
-          in the background.
+          GoEase simplifies bus ticketing through automatic journey tracking. The software and hardware prototype was developed as a third-semester team project over two months.
         </p>
         <ProjectAccordion :items="accordionItems" id-prefix="goease" />
       </section>
 
       <div class="project-section">
-        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
           '                       [PROJECT] [VIDEO]                        ',
         ]" />
         <div class="project-film">
@@ -56,97 +53,73 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const accordionItems = [
   {
-    title: 'Purpose, Approach & Benefits',
+    title: 'The solution',
     alwaysOpen: true,
-    body:
-      'The purpose of the solution is to remove access barriers in public transport. The approach ' +
-      'uses low-cost transmitters in buses to communicate with mobile phones. The benefit for ' +
-      'users lies in automatic route tracking and the autonomous calculation of fares.',
-    images: ['/img/ge/solution.svg'],
+    body: 'Small transmitters on the bus communicate with the smartphone. After setup, GoEase records the journey in the background and shows the route and cost in the app. Passengers no longer need to choose the right fare before each trip. Automatic billing is part of the system concept.',
+    images: [
+      '/img/ge/solution.svg',
+    ],
+    imageAlts: [
+      'GoEase app showing a current bus journey on a map and a completed journey summary',
+    ],
+    imageCaptions: [
+      'The interface connects the current journey with a clear cost overview.',
+    ],
   },
   {
-    title: 'Core Idea',
-    body:
-      'The core idea is the complete automation of ticket recording through locatable ' +
-      'transmitters. This is essential because confusing fare structures and broken ticket ' +
-      'machines often present insurmountable barriers to the spontaneous use of public transport.',
+    title: 'Making the first journey easier',
+    body: 'The focus is on occasional passengers who are unfamiliar with local fares and ticket machines. Buying a ticket becomes an extra task when taking a bus at short notice. GoEase moves that decision into journey tracking and keeps the information together in one app.',
+    images: [
+      '/img/ge/problem.svg',
+    ],
+    imageAlts: [
+      'Illustration of the starting situation when buying a public transport ticket',
+    ],
+    imageCaptions: [
+      'The starting point is choosing a fare before a spontaneous journey.',
+    ],
   },
   {
-    title: 'Users & Challenge',
-    body:
-      'The primary users are occasional riders of public transport. They find themselves in ' +
-      'situations where taking the car is not an option at short notice. Their biggest challenge ' +
-      'is being unfamiliar with local fares and the complex operation of the various ticket machines.',
-    images: ['/img/ge/problem.svg'],
+    title: 'Narrowing the scope to buses',
+    body: 'The initial concept covered a more versatile system. The key decision was to concentrate on automatic ticket recording on buses. This produced a clear core journey: set up once, board, follow the trip and review the cost.',
+    images: [
+      '/img/ge/process.svg',
+    ],
+    imageAlts: [
+      'GoEase concept documents with sketched workflows and system components',
+    ],
+    imageCaptions: [
+      'The concept phase led to a narrower, achievable project scope.',
+    ],
   },
   {
-    title: 'Context & User Journey',
-    body:
-      'The context is the spontaneous use of buses in urban areas. A defined user journey exists ' +
-      'and was shortened through automation. After a one-time account setup, journey tracking and ' +
-      'payment happen entirely in the background without any further active input.',
+    title: 'Simplifying the app through iteration',
+    body: 'Digital designs led to a cross-platform application built with React Native. Repeated user tests informed a simpler setup process. The journey view shows the current route; the summary makes the start, destination and amount easy to review.',
+    images: [
+      '/img/ge/softwareProcess.svg',
+    ],
+    imageAlts: [
+      'Three GoEase interfaces from an early design to a detailed map view',
+    ],
+    imageCaptions: [
+      'The interface developed from initial screens into a focused journey view.',
+    ],
   },
   {
-    title: 'User-Centered Research & Process',
-    body:
-      'The process began with extensive ideation and the definition of a minimum viable product. ' +
-      'Software development started with digital drafts and resulted in a cross-platform ' +
-      'application. Repeated user tests supported continuous improvement.',
-    images: ['/img/ge/process.svg', '/img/ge/softwareProcess.svg'],
-  },
-  {
-    title: 'Insights Shaping the Solution',
-    body:
-      'The findings from the initial concept phase showed that an overly versatile system ' +
-      'distracts from the core problem. This led to narrowing the scope down to automatic ticket ' +
-      'recording on buses. Feedback from user tests then flowed directly into simplifying the setup process.',
-  },
-  {
-    title: 'Innovation',
-    body:
-      'The technology combines microcontrollers with local radio technology and satellite-based ' +
-      'positioning. The added value comes from eliminating manual input when buying tickets. The ' +
-      'application automatically calculates the amounts due based on the distance actually traveled.',
-  },
-  {
-    title: 'Outcome & Business Value',
-    body:
-      'The target group includes all potential passengers of public transport. The solution is ' +
-      'expected to succeed through a very low entry barrier for users and the easy retrofitting ' +
-      'of the transmitter modules in buses. A concrete business model is not further defined.',
-  },
-  {
-    title: 'Competition & USP',
-    body:
-      'The main competitors are the existing digital offerings of individual transport ' +
-      'associations as well as classic ticket machines. The unique selling point is the ' +
-      'elimination of active user input when buying tickets, enabled by a cross-network technical ' +
-      'solution installed in the buses.',
-  },
-  {
-    title: 'Accessibility, Responsibility & Trust',
-    body:
-      'Automating the ticket purchase reduces cognitive barriers in choosing the right fare. The ' +
-      'application allows users to view the running costs at any time during the journey. This ' +
-      'creates transparency and gives full control over the amounts charged.',
-  },
-  {
-    title: 'Social & Planetary Values',
-    body:
-      'Easy access to public transport can help reduce motorized individual traffic. In the long ' +
-      'term, this conserves material resources and promotes environmentally friendly mobility. ' +
-      'The entry barrier is lowered for all population groups.',
-  },
-  {
-    title: 'Additional Information',
-    body:
-      'The required hardware components were specifically designed for easy installation. The ' +
-      '3D-printed plastic housings feature special mounting straps. These allow quick, tool-free ' +
-      'installation on the handrails of existing buses.',
-    images: ['/img/ge/hardwareProcess.svg'],
+    title: 'Hardware for existing buses',
+    body: 'ESP32, Bluetooth Low Energy and GPS form the technical building blocks. The transmitters use custom 3D-printed housings. Mounting straps allow tool-free attachment to handrails in existing buses.',
+    images: [
+      '/img/ge/hardwareProcess.svg',
+    ],
+    imageAlts: [
+      'GoEase transmitter housing with a mounting strap beside a bus model',
+    ],
+    imageCaptions: [
+      'The transmitter housing is designed for retrofitting on a bus.',
+    ],
   },
 ];
 </script>

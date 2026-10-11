@@ -15,7 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <img src="/img/cv/musecase2.png" alt="musecase logo" />
+      <ZoomableImage src="/img/cv/musecase2.png" alt="musecase logo" />
     </div>
 
     <div class="project-details">
@@ -46,7 +46,7 @@
               teamwork, take responsibility, and learn from mistakes to continuously optimize the workflow.What muse
               case
               says about me can be found in my:
-              <AppLink href="/docs/internship/praxissemester-zeugnis-johannes-biess-e.pdf" label="Employment reference" underline :scale="false" />.
+              <AppLink href="/docs/internship/praxissemester-zeugnis-johannes-biess-d.pdf" label="Employment reference (DE)" hreflang="de" underline :scale="false" />.
             </div>
           </div>
         </div>

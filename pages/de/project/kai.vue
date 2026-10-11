@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="project--kai">
     <div class="background">
       <client-only>
         <ScrollLink />
@@ -10,7 +10,7 @@
 
     <div class="project-hero">
       <div class="projectFlap">
-        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h1" preset="detailsFlap" :align="'center'" :texts="[
           '[KAI]',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -23,7 +23,7 @@
       </div>
 
       <div class="wrapper">
-        <img src="/img/kai/thumbnail.webp" alt="KAI im Einsatz auf dem Smartphone einer Servicekraft" />
+        <ZoomableImage src="/img/kai/core-idea.webp" alt="KAI-Aufgabenübersicht im Restaurant mit UX Design Awards Nominierung 2026" />
       </div>
     </div>
 
@@ -31,19 +31,14 @@
 
     <div class="project-details">
       <section id="details-section">
-        <!-- Erstes im Detailbereich: das Projektvideo mit eigener Vorschau -->
         <div class="project-film">
           <VideoEmbed id="8NNzapVb-Tk" title="KAI — Projektvideo" poster="/img/kai/navigation.webp" />
         </div>
 
-        <p class="project-intro">
-          KAI ist eine KI-gestützte Bestelloberfläche, die unerfahrenen Servicekräften hilft, den
-          täglichen Betrieb sicher zu bewältigen. Als digitaler Buddy hört sie gesprochene
-          Bestellungen mit, erzeugt daraus automatisch Bestellpositionen samt Änderungswünschen und
-          übersetzt komplexe Kassenabläufe in klare, geführte Schritte. So bleibt den Mitarbeitenden
-          der Kopf frei für die Gäste.
-        </p>
-        <ProjectAccordion :items="accordionItems" id-prefix="kai" />
+        <ProjectAccordion :items="accordionItems" id-prefix="kai">
+          <template #research><KaiResearch language="de" /></template>
+          <template #prototype><KaiPrototype language="de" /></template>
+        </ProjectAccordion>
       </section>
 
       <AppLink class="tryOutLink" href="/docs/kai/kai-dokumentation-de.pdf" label="DOKU ANSEHEN" size="xxxxl" weight="bold" underline />
@@ -60,138 +55,65 @@
   </main>
 </template>
 
-<script setup>
-// Semesterarbeit aus dem sechsten Semester. Aufbau wie pages/de/project/goEase.vue.
+<script setup lang="ts">
 const accordionItems = [
   {
-    title: 'Zweck, Lösungsansatz & Nutzen',
+    title: 'Die Lösung',
     alwaysOpen: true,
-    body:
-      'Die Anwendung dient als digitaler Mentor, der ungeschultes Servicepersonal ermächtigt. Sie ' +
-      'adressiert die Herausforderung der hohen kognitiven Belastung, indem sie ihre Benutzeroberfläche ' +
-      'dynamisch an das spezifische Erfahrungsniveau des Benutzers anpasst. Anfänger erhalten ' +
-      'detaillierte Anleitungen, während erfahrene Mitarbeiter minimale Unterbrechungen erleben. Dieser ' +
-      'Ansatz minimiert betriebliche Fehler und ermöglicht es den Mitarbeitern, den Fokus auf persönliche ' +
-      'und soziale Interaktionen mit den Gästen zu behalten.',
+    paragraphs: [
+      'KAI vereinfacht den Service im Restaurant: Neue Servicekräfte nehmen Bestellungen im Gespräch auf, sehen die nächsten Aufgaben am jeweiligen Tisch und erhalten passende Hinweise direkt im Ablauf. Die Oberfläche bietet ausführliche Einstiegshilfen und reduziert diese mit wachsender Erfahrung.',
+      'Das Teamprojekt aus dem sechsten Semester verbindet einen ausgearbeiteten UI-Entwurf mit einem funktionalen Sprachprototyp. Wir entwickelten die Gestaltung gemeinsam; mein Schwerpunkt lag auf UI und UX sowie auf der inhaltlichen Herleitung und Struktur der Dokumentation.',
+    ],
     images: [
       '/img/kai/onboarding.webp',
     ],
-  },
-  {
-    title: 'Kernidee',
-    body:
-      'KAI ist eine Anwendung zur Unterstützung von Restaurantmitarbeitern, die auf künstlicher ' +
-      'Intelligenz basiert. Sie hört aktiv beim Bestellvorgang zu und bietet situative Unterstützung. ' +
-      'Dieser Ansatz zielt darauf ab, die kognitive Belastung zu reduzieren und die betriebliche ' +
-      'Effizienz insgesamt zu verbessern.',
-    images: [
-      '/img/kai/core-idea.webp',
+    imageAlts: [
+      'KAI-Einstiegshilfen und Bestellübersicht für Tisch 07 auf zwei Smartphone-Mockups',
+    ],
+    imageCaptions: [
+      'Einstieg und Bestellübersicht: Unterstützung direkt im Serviceablauf.',
     ],
   },
   {
-    title: 'Nutzer & Herausforderung',
-    body:
-      'Die Hauptbenutzer sind Restaurantmitarbeiter, insbesondere Anfänger und Aushilfen. Der ' +
-      'Gastronomiesektor hat mit einem kritischen Mangel an qualifizierten Arbeitskräften zu kämpfen, was ' +
-      'zu hohen Arbeitslasten und stressigen Bedingungen führt. Eine große Herausforderung ist die ' +
-      'unzureichende Einarbeitung in Kombination mit komplexen Kassensystemen, die an ' +
-      'Benutzerfreundlichkeit mangeln. Diese verwirrenden Oberflächen erhöhen die kognitive Belastung, ' +
-      'was zu einer hohen Fluktuation des Personals und häufigen Fehlern im täglichen Betrieb führt.',
+    title: 'Recherche',
+    slot: 'research',
   },
   {
-    title: 'Kontext & User Journey',
-    body:
-      'Der Kontext umfasst den gesamten Serviceablauf, vom Platzieren der Gäste über das Aufnehmen von ' +
-      'Bestellungen bis hin zur Zahlungsabwicklung. Das System verbessert diese Reise, indem es ' +
-      'Spracherkennung nutzt, um die Bestelleingabe zu automatisieren und manuelles Tippen zu ersetzen. ' +
-      'Es priorisiert aktiv dringende Aufgaben, anstatt statische Listen anzuzeigen. Darüber hinaus ' +
-      'bietet die Anwendung eine klare Innennavigation, die sicherstellt, dass die Mitarbeiter in einer ' +
-      'geschäftigen Umgebung bestimmte Tische leicht finden können.',
-    images: [
-      '/img/kai/navigation.webp',
-    ],
-  },
-  {
-    title: 'Nutzerzentrierte Recherche & Prozess',
-    body:
-      'Der Entwicklungsprozess begann mit einem Design-Sprint, um erste Annahmen schnell zu validieren. ' +
-      'Es folgten Desk Research und Interviews mit erfahrenen Servicekräften, um spezifische betriebliche ' +
-      'Probleme zu identifizieren. Das Team strukturierte die Ergebnisse mithilfe von ' +
-      'Wertversprechenkarten und Szenario-Workshops. Schließlich wurde ein funktionaler Prototyp mit ' +
-      'Echtzeit-Spracherkennung entwickelt und anschließend durch formative Benutzertests evaluiert.',
-  },
-  {
-    title: 'Erkenntnisse für die Lösung',
-    body:
-      'Die Forschung ergab, dass manuelle Dateneingabe langsam ist und komplexe Menüs schwer zu merken ' +
-      'sind. Dies beeinflusste direkt die Entscheidung, künstliche Intelligenz zur Sprachtranskription zu ' +
-      'implementieren. Darüber hinaus ergaben Interviews, dass abstrakte Tischnummern Verwirrung stiften, ' +
-      'was zur Entwicklung einer visuellen räumlichen Karte führte. Beobachtungen von Mitarbeitern, die ' +
-      'kritische Allergieinformationen raten mussten, führten zur Integration von verpflichtenden ' +
-      'automatisierten Warnhinweisen.',
-  },
-  {
-    title: 'Innovation',
-    body:
-      'Die Anwendung integriert Echtzeit-Sprachtranskription mit kontextsensitiven Cross-Selling- ' +
-      'Vorschlägen. Eine Schlüsselinnovation ist die dynamische Anpassung der Benutzeroberfläche ' +
-      'basierend auf einer Wissensvalidierungsbewertung. Dies ermöglicht dem System, nahtlos von ' +
-      'maximaler Anleitung zu minimalem Eingreifen überzugehen. Diese Technologien schaffen Wert, indem ' +
-      'sie passive Kassentools in proaktive Assistenten verwandeln, die die Bedürfnisse des Personals ' +
-      'antizipieren.',
+    title: 'Bestellaufnahme',
+    body: 'Die Spracheingabe übersetzt das Gespräch in Bestellpositionen und Änderungswünsche. Die Servicekraft prüft die sichtbare Liste und bearbeitet einzelne Positionen, bevor sie die Bestellung an die Küche sendet. Vorschläge und Warnungen erscheinen dort, wo die Entscheidung ansteht.',
     images: [
       '/img/kai/suggestions.webp',
     ],
+    imageAlts: [
+      'Drei KAI-Oberflächen mit Milchalternativen, Warnhinweis und Wissensabfrage vor dem Abschalten von Hilfen',
+    ],
+    imageCaptions: [
+      'Bestellpositionen bleiben bearbeitbar; Hinweise unterstützen die Auswahl.',
+    ],
   },
   {
-    title: 'KI-Implementierung',
-    body:
-      'Der funktionale Prototyp nutzt das Modell GPT-4o in Kombination mit einer Echtzeit- ' +
-      'Programmierschnittstelle für latenzarme Sprachverarbeitung. Die künstliche Intelligenz ' +
-      'transkribiert mitgehörte Gespräche und wandelt sie in strukturierte Bestelldaten um. ' +
-      'Systemaufforderungen beschränken das Modell darauf, nur Gerichte zu identifizieren, die ' +
-      'tatsächlich auf der Restaurantkarte verfügbar sind. Das sichert eine genaue Datenerfassung und ' +
-      'verhindert unbeabsichtigte Ausgaben.',
+    title: 'Tischübersicht und Navigation',
+    body: 'Die Tischübersicht verbindet offene Aufgaben mit ihrem Ort im Restaurant. Priorisierte Hinweise zeigen, wo Speisen bereitstehen oder Gäste bezahlen möchten. Die räumliche Karte ergänzt diese Liste und erleichtert die Orientierung zwischen den Tischen.',
+    images: [
+      '/img/kai/navigation.webp',
+      '/img/kai/thumbnail.webp',
+    ],
+    imageAlts: [
+      'Zwei KAI-Oberflächen mit Karte und Richtungsanzeige zur Navigation zu Tisch 07',
+      'KAI-Aufgabenübersicht nach Tischen auf einem Smartphone im Restaurant',
+    ],
+    imageCaptions: [
+      'Karte und Richtungsanzeige führen zum ausgewählten Tisch.',
+      'Offene Aufgaben sind dem jeweiligen Tisch zugeordnet.',
+    ],
   },
   {
-    title: 'Ergebnis & Business Value',
-    body:
-      'Der primäre Zielmarkt besteht aus traditionellen Restaurants und Cafés, die Tischservice anbieten. ' +
-      'Die Lösung soll erfolgreich sein, indem sie die Einarbeitungszeit für neue Mitarbeiter erheblich ' +
-      'reduziert und damit die hohe Fluktuation in der Branche angeht. Indem ungeschulte Mitarbeiter ' +
-      'effizient arbeiten können, senken Betriebe ihre Betriebskosten. Darüber hinaus sollen ' +
-      'automatisierte Upselling-Vorschläge den Gesamtumsatz steigern.',
+    title: 'Sprachprototyp',
+    slot: 'prototype',
   },
   {
-    title: 'Wettbewerb & USP',
-    body:
-      'Wettbewerber konzentrieren sich auf manuelle Eingaben und administrative Funktionen. Das ' +
-      'Alleinstellungsmerkmal ist die proaktive KI-Assistenzfunktion. Die Benutzeroberfläche passt sich ' +
-      'dynamisch an das Fähigkeitsniveau des Benutzers an und ersetzt komplexes manuelles Tippen.',
-  },
-  {
-    title: 'Zugänglichkeit, Verantwortung & Vertrauen',
-    body:
-      'Die Benutzeroberfläche nutzt hohe Kontraste und klare Typografie, um visuelle Zugänglichkeit zu ' +
-      'gewährleisten. Um Vertrauen zu wahren und Datenschutzbedenken hinsichtlich der Sprachaufzeichnung ' +
-      'zu adressieren, müssen Betriebe transparente Kommunikationsstrategien implementieren, um die Gäste ' +
-      'über die Technologie zu informieren.',
-  },
-  {
-    title: 'Soziale & planetarische Werte',
-    body:
-      'Die Anwendung fördert die soziale Nachhaltigkeit, indem sie emotionalen Stress und das Risiko von ' +
-      'Burnout unter dem Personal reduziert. Die Verbesserung der täglichen Arbeitsbedingungen trägt dazu ' +
-      'bei, den Gastronomieberuf attraktiver zu machen und das langfristige Wohlbefinden der Mitarbeiter ' +
-      'zu unterstützen.',
-  },
-  {
-    title: 'Weitere Informationen',
-    body:
-      'Das Projekt betont, dass menschliche Interaktion einen zentralen Wert in der europäischen ' +
-      'Gastronomie darstellt. Technologie wird strikt zur Unterstützung der persönlichen Gastfreundschaft ' +
-      'implementiert, anstatt sie durch totale Automatisierung zu ersetzen, um sicherzustellen, dass der ' +
-      'soziale Aspekt des Besuchs erhalten bleibt.',
+    title: 'Gestaltung und Datenschutz',
+    body: 'KAI unterstützt die persönliche Betreuung der Gäste. Klare Typografie und Kontraste strukturieren die Oberfläche; eine Wissensabfrage begleitet das Abschalten von Einstiegshilfen. Für einen Einsatz im Restaurant gehören ein transparenter Umgang mit Sprachaufnahmen und verlässliche Allergieinformationen zum System.',
   },
 ];
 </script>

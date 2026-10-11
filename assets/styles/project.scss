@@ -6,6 +6,14 @@
 
 @include layout.page;
 
+.project--beacon { --accordion__color--interactive: var(--beacon__color--interactive); }
+.project--kai { --accordion__color--interactive: var(--kai__color--interactive); }
+
+.project--beacon .acc,
+.project--kai .acc {
+  --line-height--big: var(--project__copy--leading);
+}
+
 // Text und Bild bilden eine gemeinsame Komposition mit gleicher Mittelachse.
 // Das bestehende CV-Layout bleibt im gemeinsamen Mixin erhalten.
 .project-hero {
@@ -39,10 +47,9 @@
     justify-content: center;
   }
 
-  .wrapper img {
-    width: auto;
-    object-fit: contain;
-    max-height: calc(var(--layout__height--viewport) - 2 * var(--project__hero--clearance));
+  .wrapper .zoom-image {
+    max-width: 100%;
+    --image__max-height: calc(var(--layout__height--viewport) - 2 * var(--project__hero--clearance));
   }
 }
 
@@ -70,8 +77,8 @@
     align-content: center;
     gap: var(--spacing--xxxl);
 
-    .wrapper img {
-      max-height: calc(var(--layout__height--viewport) - var(--project__hero--stacked-reserve));
+    .wrapper .zoom-image {
+      --image__max-height: calc(var(--layout__height--viewport) - var(--project__hero--stacked-reserve));
     }
   }
 }

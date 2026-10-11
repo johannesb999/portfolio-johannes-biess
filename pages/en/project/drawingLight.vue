@@ -9,7 +9,7 @@
 
     <div class="project-hero">
       <div class="projectFlap">
-        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['      [DRAWINGLIGHT]      ']" />
+        <SplitFlapText tag="h1" preset="detailsFlap" :align="'center'" :texts="['      [DRAWINGLIGHT]      ']" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
           '      MECHATRONICS      ',
           'TEAMWORK   PHOTOGRAPHY  ',
@@ -19,7 +19,7 @@
       </div>
 
       <div class="wrapper">
-        <img src="/img/dl/thumbnail.svg" alt="DrawingLight thumbnail" />
+        <ZoomableImage src="/img/dl/thumbnail.svg" alt="DrawingLight thumbnail" />
       </div>
     </div>
 
@@ -27,11 +27,14 @@
 
     <div class="project-details">
       <section id="details-section">
+        <p class="project-intro">
+          DrawingLight translates a hand movement into a mechanically drawn light trail. Built as a one-week team project in the second semester, the experiment combines gesture tracking, stepper motors and long-exposure photography.
+        </p>
         <ProjectAccordion :items="accordionItems" id-prefix="drawinglight" />
       </section>
 
       <div class="project-section">
-        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
           '                        [PROJECT] [VIDEO]                       ',
         ]" />
         <div class="project-film">
@@ -52,73 +55,72 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const accordionItems = [
   {
-    title: 'Idea',
-    body:
-      'DrawingLight was born out of a desire to reinterpret traditional art through the creative ' +
-      'use of modern technology. Instead of developing a simple machine that moves a pen across ' +
-      'paper, the goal was to create a tool that opens up a new dimension of artistic ' +
-      'possibilities and rethinks classic drawing machines in an innovative way. In photography, ' +
-      'the combination of light, movement, and time creates impressive works of art that capture ' +
-      'fleeting movements and traces of light, preserving them beyond the moment. DrawingLight ' +
-      'builds on this concept, taking it into an interactive dimension. It allows users not only ' +
-      'to observe light painting but to actively experience and create it. This opens up a ' +
-      'unique opportunity to merge art and technology dynamically. DrawingLight not only ' +
-      'provides artistic freedom to create individual works of light art, but also holds great ' +
-      'potential for interactive installations and events where light becomes a living means of ' +
-      'expression. By combining innovative technologies and creative approaches, it demonstrates ' +
-      'how technical solutions can expand the boundaries of art and unleash creative potential ' +
-      'that goes far beyond their original purpose.',
-    images: ['/img/dl/idea.svg'],
-  },
-  {
-    title: 'Process',
-    body:
-      'The process began by interpreting the generic task of developing a mechanical drawing ' +
-      'device to create lines and shapes in a way that goes beyond the obvious. My aim is always ' +
-      'to turn each task into something special, thinking outside the box rather than in a ' +
-      'straight line. This is how the idea of light painting emerged, inspired by an interest in ' +
-      'photography. The next step was selecting the appropriate technology. A light source was ' +
-      'needed that was flexible enough to create interesting and dynamic light patterns, yet not ' +
-      "too bright to ensure a pleasant visual experience. The focus was also on how best to " +
-      "implement the system's control. The input method needed to be intuitive, easily " +
-      'accessible, and novel for any user, regardless of previous experience. Various options ' +
-      'were explored—such as using a stylus on a tablet, controlling it with a mouse, or ' +
-      'recognizing hand gestures using modern tracking technologies like Google MediaPipe. This ' +
-      'exploratory phase allowed for the evaluation of different possibilities and an assessment ' +
-      'of the potential of each option for the concept. During prototyping, components were ' +
-      'continuously tested and improved to ensure they met the requirements and supported the ' +
-      'vision of a creative, interactive installation.',
-    images: ['/img/dl/process.svg'],
-  },
-  {
-    title: 'Implementation',
-    body:
-      'The implementation presented challenges in the finer details. Due to the dispersion of ' +
-      'the light source, a relatively large machine was built to achieve a detailed image. After ' +
-      'comparing various mechanical options for creating movement within a coordinate system, ' +
-      'the decision was made to use a system with two stepper motors. These motors were mounted ' +
-      'on tripods and moved a string by winding and unwinding it. To optimize the rollers ' +
-      'attached to the motors, custom 3D parts were modeled in Fusion 360. This solution allowed ' +
-      'for the creation of images in almost any size with relatively few resources, unlike a ' +
-      'conventional rail system. For the input, innovative control was achieved through hand ' +
-      'gesture recognition using Google MediaPipe. This was implemented via a Node.js script ' +
-      "using the laptop's webcam, enabling intuitive control of the light source. Additionally, " +
-      'a NeoPixel was used, allowing users to control the light color through a joystick. This ' +
-      'combination provided a dynamic and interactive control, where users could directly ' +
-      'influence the final result. The light painting process was structured as follows: Users ' +
-      "had 10 seconds to paint a figure in the air, with hand movements recorded via the " +
-      "laptop's webcam, tracking the palm's coordinates. The machine then used these coordinates " +
-      'to recreate the movement within 30 seconds, while the camera captured a long exposure of ' +
-      'the resulting artwork.',
+    title: 'The solution',
+    alwaysOpen: true,
+    body: 'A webcam records a shape drawn in the air by hand. The machine then moves a coloured light source along that path. A camera captures the movement in a long exposure, turning a fleeting gesture into a visible drawing.',
     images: [
       '/img/dl/implementation.svg',
+    ],
+    imageAlts: [
+      'DrawingLight setup with a gesturing hand, laptop and light source between two tripods',
+    ],
+    imageCaptions: [
+      'The built setup connects the recorded gesture with mechanical movement.',
+    ],
+  },
+  {
+    title: 'Using the hand as a drawing tool',
+    body: 'The brief was to build a mechanical drawing device for lines and shapes. An interest in photography led to the idea of light painting. Tablet, mouse and hand tracking were compared as input methods. The team chose gesture recognition with Google MediaPipe through the laptop webcam.',
+    images: [
+      '/img/dl/process.svg',
+    ],
+    imageAlts: [
+      'DrawingLight concept design for entering lines and shapes',
+    ],
+    imageCaptions: [
+      'The input was explored as a distinct part of the drawing process.',
+    ],
+  },
+  {
+    title: 'Mechanics with two stepper motors',
+    body: 'The spread of the light source called for a larger setup to produce recognisable detail. Two stepper motors on tripods move the light source by winding and unwinding a cord. Custom rollers were modelled in Fusion 360. The cord mechanism replaces a more elaborate rail system.',
+    points: [
+      'Node.js processes the hand coordinates captured with MediaPipe.',
+      'A NeoPixel provides coloured light; a joystick controls its colour.',
+    ],
+    images: [
+      '/img/dl/idea.svg',
+    ],
+    imageAlts: [
+      'Research on mechanical drawing devices displayed on a laptop',
+    ],
+    imageCaptions: [
+      'Mechanical drawing devices provided a starting point for the construction.',
+    ],
+  },
+  {
+    title: 'From a ten-second gesture to a light image',
+    body: 'The hand movement is recorded for ten seconds. The machine then traces it over 30 seconds while the camera exposes the photograph. The resulting images connect the input movement, mechanical path and colour changes.',
+    images: [
       '/img/dl/dl5.svg',
       '/img/dl/dl6.svg',
       '/img/dl/dl7.svg',
       '/img/dl/dl12.svg',
+    ],
+    imageAlts: [
+      'Multicoloured free-form light trails against a black background',
+      'Crossing light trails in red, green and blue',
+      'Two angular light figures in orange and blue-white',
+      'A white light trail forming a rectangle followed by a zigzag',
+    ],
+    imageCaptions: [
+      'Free movement with colour changes.',
+      'Overlapping paths in different colours.',
+      'Angular shapes drawn as light trails.',
+      'A continuous path combining a rectangle and a zigzag.',
     ],
   },
 ];

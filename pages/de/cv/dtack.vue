@@ -15,7 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <img src="/img/cv/dtack.svg" alt="Picture of D-TACK Building" />
+      <ZoomableImage src="/img/cv/dtack.svg" alt="Picture of D-TACK Building" />
     </div>
 
     <div class="project-details">

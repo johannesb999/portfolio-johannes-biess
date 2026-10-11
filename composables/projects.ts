@@ -9,6 +9,7 @@ export type ProjectEntry = {
   label: string;
   /** Vorschaubild fuer die Playground-Kacheln */
   thumb?: string;
+  description?: { de: string; en: string };
 };
 
 /**
@@ -29,9 +30,9 @@ export const mainProjects: ProjectEntry[] = [
  * man kann also nicht aus ihr herausfallen.
  */
 export const playgroundProjects: ProjectEntry[] = [
-  { route: "trickyTowers", label: "TRICKYTOWERS", thumb: "/img/tt/tt (1).svg" },
-  { route: "jumpStar", label: "JUMPSTAR", thumb: "/img/js/thumbnail.svg" },
-  { route: "drawingLight", label: "DRAWINGLIGHT", thumb: "/img/dl/thumbnail.svg" },
+  { route: "trickyTowers", label: "TRICKYTOWERS", thumb: "/img/tt/tt (1).svg", description: { de: 'Ein räumliches Spiel mit Projektion und Gesten.', en: 'A spatial game using projection and gestures.' } },
+  { route: "jumpStar", label: "JUMPSTAR", thumb: "/img/js/thumbnail.svg", description: { de: 'Sternendaten als interaktive Reise durch den Raum.', en: 'An interactive journey through stellar data.' } },
+  { route: "drawingLight", label: "DRAWINGLIGHT", thumb: "/img/dl/thumbnail.svg", description: { de: 'Gesten werden zu mechanischer Lichtmalerei.', en: 'Gestures translated into mechanical light painting.' } },
 ];
 
 /** Archivierte Arbeiten bleiben mit ihren Metadaten erhalten, sind aber nicht Teil der Navigation. */
@@ -96,5 +97,13 @@ export function projectNavigationSide(from: string, to: string): "left" | "right
   if (toNeighbours?.prev.route === from) return "right";
   if (toNeighbours?.next.route === from) return "left";
 
+  return null;
+}
+
+/** Kacheln liegen räumlich unter ihrer gemeinsamen Playground-Übersicht. */
+export function playgroundNavigationDirection(from: string, to: string): 'down' | 'up' | null {
+  const isSmall = (name: string) => playgroundProjects.some((project) => project.route === name);
+  if (from === 'playground' && isSmall(to)) return 'down';
+  if (isSmall(from) && to === 'playground') return 'up';
   return null;
 }

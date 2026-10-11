@@ -1,10 +1,13 @@
 <template>
   <ul class="tiles">
     <li v-for="project in playgroundProjects" :key="project.route" class="tiles__item" :style="{ gridArea: project.route }">
-      <AppLink class="tile" :to="`/${locale}/project/${project.route}`" :scale="false">
-        <img class="tile__image" :src="project.thumb" alt="" loading="lazy" />
-        <span class="tile__label">{{ project.label }}</span>
-      </AppLink>
+      <div class="tile">
+        <ZoomableImage class="tile__image" :src="project.thumb" :alt="project.label" loading="lazy" />
+        <AppLink class="tile__caption" :to="`/${locale}/project/${project.route}`" :scale="false">
+          <span class="tile__label">{{ project.label }} <span aria-hidden="true">↓</span></span>
+          <span v-if="project.description" class="tile__description">{{ project.description[locale] }}</span>
+        </AppLink>
+      </div>
     </li>
     <li class="tiles__placeholder" aria-hidden="true" />
   </ul>
@@ -27,9 +30,9 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 .tiles {
   display: grid;
   grid-template-areas:
-    "trickyTowers trickyTowers jumpStar jumpStar"
-    "trickyTowers trickyTowers drawingLight placeholder";
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+    "trickyTowers trickyTowers trickyTowers jumpStar jumpStar jumpStar"
+    "drawingLight drawingLight drawingLight drawingLight placeholder placeholder";
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(2, var(--playground__tile--row));
   gap: var(--playground__tiles--gap);
   width: 100%;
@@ -58,15 +61,15 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 
 .tile {
   margin: 0;
+}
+
+.tile__caption {
+  margin: 0;
   color: var(--color--primary);
   text-decoration: none;
 
-  &:hover {
-    transform: none;
-  }
-
-  &:hover .tile__label,
-  &:focus-visible .tile__label {
+  &:hover,
+  &:focus-visible {
     color: var(--color--accent);
   }
 
@@ -77,21 +80,25 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 }
 
 .tile__image {
+  --image__fit: cover;
+  --image__height: 100%;
   grid-area: image;
   box-sizing: border-box;
   min-height: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
-.tile__label,
+.tile__caption,
 .tiles__placeholder::after {
   grid-area: label;
   text-align: center;
   transition: color 0.3s ease;
-  @include type.text(lg, light);
+  @include type.text(lg, normal);
 }
+
+.tile__caption { display: grid; gap: var(--spacing--xs); }
+.tile__description { @include type.text(lg, light, alt, big); }
 
 .tiles__placeholder {
   grid-area: placeholder;
@@ -105,7 +112,8 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 
   // Gleiche Bildkante wie die beschrifteten Kacheln, ohne sichtbaren Inhalt.
   &::after {
-    content: '\00a0';
+    content: '\00a0\a\00a0';
+    white-space: pre;
   }
 }
 

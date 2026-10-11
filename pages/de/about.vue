@@ -4,16 +4,16 @@
     <EdgeLink class="about__resume-link" position="bottom" to="resume" label="LEBENSLAUF" />
     <div class="about__content">
       <div class="aboutMeText">
-        <SplitFlapText preset="heroFlap" :align="'center'" :texts="['[ÜBER] [MICH]']" />
+        <SplitFlapText tag="h1" preset="heroFlap" :align="'center'" :texts="['[ÜBER] [MICH]']" />
         <SplitFlapText preset="heroFlap" :align="'random'" :texts="[
           'FLEXIBEL  AGIL  NEUGIERIG',
           'ANPASSUNGSFÄHIG      GENAU',
-          'PÜNKTLICHK      FAIR',
-          ' KREATIV   ENTSCHDIUNGSSTARK',
+          'PÜNKTLICH      FAIR',
+          ' KREATIV   ENTSCHEIDUNGSSTARK',
         ]" />
       </div>
       <div class="wrapper">
-        <img src="/profilepicture.svg" alt="profilepicture" />
+        <ZoomableImage src="/profilepicture.svg" alt="Portrait von Johannes Biess" />
         <div id="quote">“Es gibt nicht<br />- zu viel Käse.”</div>
       </div>
     </div>

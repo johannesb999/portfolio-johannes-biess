@@ -5,10 +5,10 @@
     <EdgeLink position="left" to="/de" label="START" />
 
     <div class="contactMeText">
-      <SplitFlapText preset="heroFlap" :align="'center'" :texts="[
+      <SplitFlapText tag="h1" preset="heroFlap" :align="'center'" :texts="[
         '[KONTAKT]',
       ]" />
-      <SplitFlapText preset="heroFlap" :align="'random'" :texts="[
+      <SplitFlapText class="contact__channels" locale="de" preset="heroFlap" :align="'random'" :texts="[
         '$GITHUB$',
         '@EMAIL@',
         '|LINKEDIN|',

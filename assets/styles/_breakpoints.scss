@@ -19,6 +19,12 @@ $desktop-max: 1200px;
 $desktop-lg-min: 1201px;
 $desktop-xl-min: 1600px;
 
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
 @mixin mobile-xs {
   @media (max-width: $mobile-xs-max) {
     @content;

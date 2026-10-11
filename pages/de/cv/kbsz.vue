@@ -14,7 +14,7 @@
     </div>
 
     <div class="wrapper">
-      <img src="/img/cv/kbsz.svg" alt="Picture of KBSZ Building in Ellwangen" />
+      <ZoomableImage src="/img/cv/kbsz.svg" alt="Picture of KBSZ Building in Ellwangen" />
     </div>
 
     <div class="project-details">
@@ -23,11 +23,11 @@
           <div class="text">
             <SplitFlapText :texts="['          [LEARNINGS]         ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
-              Während meiner Zeit in der KBSZ habe ich das <br />
-              Baden-Würtenbergische Abitur mit schwerpunkt auf Wirtschaft und
+              Während meiner Zeit in der KBSZ habe ich <br />
+              die fachgebundene Fachhochschulreife mit Schwerpunkt auf Wirtschaft und
               Englisch erworben.
               <br />Besonders Prägend für mich war der Entschluss nach dem
-              Abitur nicht weiter in die Wirtschaft zu gehen sondern mich für
+              Abschluss nicht weiter in die Wirtschaft zu gehen sondern mich für
               ein Studium im Bereich der Informatik zu entscheiden.
             </div>
           </div>
@@ -36,7 +36,7 @@
             <SplitFlapText :texts="['       [ABOUT] [ABSCHLUSS]     ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               Das Kaufmännische Berufs- und Schulzentrum (KBSZ) in Ellwangen
-              bietet unter anderem das fachgebundene Fachabitur im Bereich
+              bietet unter anderem die fachgebundene Fachhochschulreife im Bereich
               Wirtschaft an. Dieser Bildungsgang bereitet die Schüler gezielt
               auf betriebswirtschaftliche und kaufmännische Berufe oder ein
               entsprechendes Studium vor. Schwerpunkte liegen in Fächern wie

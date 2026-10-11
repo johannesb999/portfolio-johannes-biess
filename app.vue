@@ -5,8 +5,26 @@
 
     <ThemeSwitch />
     <AppHeader />
+    <ImageViewer />
   </div>
 </template>
+
+<script setup lang="ts">
+const route = useRoute();
+const german = computed(() => route.path.startsWith('/de'));
+const pageNames: Record<string, [string, string]> = {
+  about: ['Über mich', 'About me'], contact: ['Kontakt', 'Contact'], resume: ['Lebenslauf', 'Resume'],
+  legal: ['Impressum', 'Legal information'], hfgMaster: ['Master · Strategische Gestaltung', 'Master · Strategic Design'],
+  hfg: ['Bachelor · Internet of Things', 'Bachelor · Internet of Things'],
+  beacon: ['Beacon', 'Beacon'], kai: ['KAI', 'KAI'], goEase: ['GoEase', 'GoEase'],
+  plantMonit: ['PlantMonit', 'PlantMonit'], playground: ['Playground', 'Playground'],
+  trickyTowers: ['TrickyTowers', 'TrickyTowers'], jumpStar: ['JumpStar', 'JumpStar'], drawingLight: ['DrawingLight', 'DrawingLight'],
+};
+useHead(() => {
+  const name = pageNames[route.path.split('/').filter(Boolean).at(-1) || ''];
+  return { htmlAttrs: { lang: german.value ? 'de' : 'en' }, title: name ? `${name[german.value ? 0 : 1]} · Johannes Biess` : 'Johannes Biess · Design & Development' };
+});
+</script>
 
 <style lang="scss">
 /* ---------------------------------------------------------------------------
@@ -50,6 +68,17 @@
   --font__size--huge: 3.2rem;
   // Die skalierte Layout-Basis darf lesbaren Text nicht unter 16px verkleinern.
   --font__size--minimum: 16px;
+  --font__size--section-minimum: 20px;
+  --font__size--title-minimum: 28px;
+  --control__size--minimum: 44px;
+  --link__hover--scale: 1.035;
+  --email__popup--width: 352px;
+  --viewer__inset: clamp(16px, 3vw, 48px);
+  --viewer__backdrop: rgba(251, 251, 251, 0.96);
+  --viewer__motion--duration: 280ms;
+  --flap__height: 1.9rem;
+  --flap__cell--minimum: 10px;
+  --flap__line-height: 2rem;
 
   /* Schriftgewichte */
   --font__weight--thin: 100;
@@ -64,6 +93,7 @@
   --line-height--small: 1;
   --line-height--normal: 2;
   --line-height--big: 1.5;
+  --project__copy--leading: 1.5;
 
   /* Abstände */
   --spacing--none: 0;
@@ -91,6 +121,7 @@
   --layout__scrollbar-width: 0.01rem;
   --layout__height--viewport: 100vh;
   --about__content--max: 88rem;
+  --home__intro--width: 38rem;
   --about__portrait--max: 35rem;
   --project__hero--max: 112rem;
   --project__hero--inset: 7%;
@@ -102,11 +133,18 @@
   --project__details--inset: calc(9vh + var(--project__media--gap));
   --accordion__image--width: 480px;
   --accordion__image--ratio: 4 / 3;
+  --accordion__index--width: 1.5rem;
+  --accordion__color--interactive: var(--color--accent);
+  --interaction__duration--color: 180ms;
+  --research__accent: #f44b17;
+  --beacon__color--interactive: #c4380e;
+  --kai__color--interactive: #356b79;
+  --research__mark--size: 3rem;
   --playground__width--max: 87.5rem;
   --playground__inset--side: 7%;
   --playground__inset--top: max(80px, 12vh);
   --playground__tiles--gap: clamp(16px, 2vw, 28px);
-  --playground__tile--row: clamp(224px, 26vh, 280px);
+  --playground__tile--row: clamp(300px, 32vw, 430px);
   --playground__tile--ratio: 4 / 3;
   --site-map__width: 128px;
   --site-map__width--compact: 88px;
@@ -127,6 +165,9 @@
 }
 
 :root[data-theme="dark"] {
+  --viewer__backdrop: rgba(23, 23, 23, 0.96);
+  --beacon__color--interactive: #ff784d;
+  --kai__color--interactive: #9ac5ce;
   --color--primary: #fbfbfb;
   --color--background: #171717;
   --color--secondary: #707070;
@@ -200,8 +241,8 @@ button {
   text-decoration: none;
   transition: transform 0.3s ease;
 
-  &:hover {
-    transform: scale(1.1);
+  &:not(.app-link):hover {
+    transform: scale(var(--link__hover--scale));
   }
 }
 </style>

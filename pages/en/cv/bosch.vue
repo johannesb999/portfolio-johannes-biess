@@ -14,7 +14,7 @@
     </div>
 
     <div class="wrapper">
-      <img src="/img/cv/bosch.svg" alt="Picture of Bosch Building" />
+      <ZoomableImage src="/img/cv/bosch.svg" alt="Picture of Bosch Building" />
     </div>
 
     <div class="project-details">

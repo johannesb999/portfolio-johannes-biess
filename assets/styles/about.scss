@@ -59,6 +59,10 @@ main {
   width: 100%;
   min-width: 0;
   max-width: var(--about__portrait--max);
+
+  .zoom-image {
+    width: 100%;
+  }
 }
 
 #quote {

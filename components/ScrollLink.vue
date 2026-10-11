@@ -12,6 +12,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
+import { playgroundProjects } from '@/composables/projects';
 
 // Oben: Link zurück zur Startseite. Gescrollt: "HOCH"/"UP" zum Seitenanfang.
 const isScrolled = ref(false);
@@ -38,7 +39,10 @@ onUnmounted(() => {
 
 const route = useRoute();
 const isGerman = computed(() => route.path.startsWith('/de'));
-const startPath = computed(() => (isGerman.value ? '/de' : '/'));
-const startLabel = computed(() => (isGerman.value ? 'STARTSEITE' : 'START'));
+const isPlaygroundChild = computed(() => playgroundProjects.some((project) => route.path.endsWith(`/project/${project.route}`)));
+const startPath = computed(() => isPlaygroundChild.value
+  ? `/${isGerman.value ? 'de' : 'en'}/project/playground`
+  : (isGerman.value ? '/de' : '/'));
+const startLabel = computed(() => isPlaygroundChild.value ? 'PLAYGROUND' : (isGerman.value ? 'STARTSEITE' : 'START'));
 const upLabel = computed(() => (isGerman.value ? 'HOCH' : 'UP'));
 </script>

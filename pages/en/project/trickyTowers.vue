@@ -10,7 +10,7 @@
 
     <div class="project-hero">
       <div class="projectFlap">
-        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="['      [TRICKYTOWERS]       ']" />
+        <SplitFlapText tag="h1" preset="detailsFlap" :align="'center'" :texts="['      [TRICKYTOWERS]       ']" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
           '   INTERACTIVE WINDOW    ',
           'HTML   CSS  JAVASCRIPT   ',
@@ -20,7 +20,7 @@
       </div>
 
       <div class="wrapper">
-        <img src="/img/tt/tt (1).svg" alt="TrickyTowers thumbnail" />
+        <ZoomableImage src="/img/tt/tt (1).svg" alt="TrickyTowers thumbnail" />
       </div>
     </div>
 
@@ -28,6 +28,9 @@
 
     <div class="project-details">
       <section id="details-section">
+        <p class="project-intro">
+          TrickyTowers turns the university window into a tower-building game controlled through hand gestures. The interactive installation was developed as a one-week team project in the second semester.
+        </p>
         <ProjectAccordion :items="accordionItems" id-prefix="trickytowers" />
       </section>
 
@@ -46,45 +49,47 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const accordionItems = [
   {
-    title: 'Problem',
-    body:
-      "The project focused on answering the question: What's the best way to draw attention to a " +
-      'shop window or building? The goal was to determine the most effective way to advertise the ' +
-      'university and increase its visibility in order to attract more potential students. The ' +
-      "aim was to create an interactive installation that would bring the university's shop " +
-      'window to life.',
-    images: ['/img/tt/idea.svg'],
+    title: 'The solution',
+    alwaysOpen: true,
+    body: 'A webcam recognises hand movements and starts the game. Players stack falling blocks into the tallest tower they can build. A physics engine makes balance and dexterity central to the interaction, turning the university window into a play space.',
+    images: [
+      '/img/tt/solution.svg',
+    ],
+    imageAlts: [
+      'TrickyTowers concept for the interactive university window',
+    ],
+    imageCaptions: [
+      'The game connects the university with a direct invitation to interact.',
+    ],
   },
   {
-    title: 'Process',
-    body:
-      'The project began with an extensive brainstorming and research phase. The aim was to ' +
-      'identify the best way to reach young people interested in both technology and design to ' +
-      'inform them about the degree program. It became clear that simply having a shop window ' +
-      'with animations or videos would not be sufficient, as few passers-by would take the time ' +
-      'to watch any videos. An interactive solution was quickly decided upon. It was essential to ' +
-      "develop a design that captures people's attention and piques their curiosity about what " +
-      'was being offered. The installation needed to be designed for easy interaction, helping to ' +
-      'maintain interest and ensuring simplicity of use.',
-    images: ['/img/tt/process.svg'],
+    title: 'From walking past to joining in',
+    body: 'The brief was to make the university more visible in public space. The concept invites participation rather than passive video viewing. A hand movement starts the experience and makes the combination of technology and design tangible.',
+    images: [
+      '/img/tt/idea.svg',
+    ],
+    imageAlts: [
+      'University building with windows as the location for the interactive installation',
+    ],
+    imageCaptions: [
+      'The window provides the point of contact with the public.',
+    ],
   },
   {
-    title: 'Solution',
-    body:
-      'TrickyTowers is an interactive shop window that attracts passers-by in a playful manner ' +
-      'and offers an extraordinary experience. The installation consists of a screen, a backlight ' +
-      'projector, and a web app which, in combination with a webcam and Google MediaPipe, ' +
-      "recognizes user hand movements. Once a user's hand is recognized, a game starts. The game " +
-      'principle of TrickyTowers can best be described as a type of Tetris with a physics engine. ' +
-      'However, the objective is not to build rows, but to construct a tower as high as possible. ' +
-      'The physical elements make building a challenge that requires skill and strategic ' +
-      'thinking. This interactive experience not only captures attention but also actively ' +
-      'invites users to engage with the installation and experience the connection to the ' +
-      'university in a playful and positive way.',
-    images: ['/img/tt/solution.svg'],
+    title: 'Design and technical implementation',
+    body: 'Brainstorming and research led to a simple game idea and interaction without additional input devices. The web app combines HTML, CSS and JavaScript with Google MediaPipe. A webcam, projection surface and rear projector form the physical installation.',
+    images: [
+      '/img/tt/process.svg',
+    ],
+    imageAlts: [
+      'TrickyTowers game interface with falling blocks and a height indicator',
+    ],
+    imageCaptions: [
+      'A clear objective: balance the blocks and build a taller tower.',
+    ],
   },
 ];
 </script>

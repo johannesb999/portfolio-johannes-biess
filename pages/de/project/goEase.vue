@@ -8,7 +8,7 @@
     <ProjectNav current="goEase" />
     <div class="project-hero">
       <div class="projectFlap">
-        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h1" preset="detailsFlap" :align="'center'" :texts="[
           '          [GOEASE]          ',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -20,7 +20,7 @@
       </div>
 
       <div class="wrapper">
-        <img src="/img/ge/thumbnail.svg" alt="GoEase Thumbnail" />
+        <ZoomableImage src="/img/ge/thumbnail.svg" alt="GoEase Thumbnail" />
       </div>
     </div>
 
@@ -29,16 +29,13 @@
     <div class="project-details">
       <section id="details-section">
         <p class="project-intro">
-          GoEase ist ein System zur Automatisierung des Ticketkaufs im öffentlichen Busverkehr.
-          Die Lösung verbindet kleine physische Sender in den Fahrzeugen mit einer digitalen
-          Anwendung auf dem Mobiltelefon. Nach einer einmaligen Einrichtung erfasst das System
-          Fahrten im Hintergrund.
+          GoEase vereinfacht den Ticketkauf im Bus durch automatische Fahrterfassung. In zwei Monaten entstand im dritten Semester ein Software- und Hardwareprototyp als Teamprojekt.
         </p>
         <ProjectAccordion :items="accordionItems" id-prefix="goease" />
       </section>
 
       <div class="project-section">
-        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
           '                       [PROJEKT] [VIDEO]                        ',
         ]" />
         <div class="project-film">
@@ -58,96 +55,73 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const accordionItems = [
   {
-    title: 'Zweck, Lösungsansatz & Nutzen',
+    title: 'Die Lösung',
     alwaysOpen: true,
-    body:
-      'Zweck der Lösung ist die Beseitigung von Zugangsbarrieren im Nahverkehr. Der Ansatz nutzt ' +
-      'kostengünstige Sender in Bussen zur Kommunikation mit Mobiltelefonen. Der Nutzen für Anwender ' +
-      'liegt in der automatischen Streckenerfassung und der selbstständigen Berechnung der Fahrpreise.',
-    images: ['/img/ge/solution.svg'],
+    body: 'Kleine Sender im Bus kommunizieren mit dem Smartphone. Nach der Einrichtung erfasst GoEase die Fahrt im Hintergrund und zeigt Strecke und Kosten in der App. Fahrgäste müssen damit nicht vor jeder Fahrt den passenden Tarif auswählen. Automatische Abrechnung ist Teil des Systemkonzepts.',
+    images: [
+      '/img/ge/solution.svg',
+    ],
+    imageAlts: [
+      'GoEase-App mit laufender Busfahrt auf einer Karte und Zusammenfassung einer abgeschlossenen Fahrt',
+    ],
+    imageCaptions: [
+      'Die Oberfläche verbindet die laufende Fahrt mit einer nachvollziehbaren Kostenübersicht.',
+    ],
   },
   {
-    title: 'Kernidee',
-    body:
-      'Die Kernidee besteht in der vollständigen Automatisierung der Fahrkartenerfassung durch ' +
-      'lokalisierbare Sender. Dies ist essenziell, da unübersichtliche Tarifstrukturen und defekte ' +
-      'Automaten oft unüberwindbare Barrieren für die spontane Nutzung öffentlicher Verkehrsmittel darstellen.',
+    title: 'Der Einstieg muss einfach sein',
+    body: 'Im Mittelpunkt stehen Gelegenheitsfahrgäste, die lokale Tarife und Ticketautomaten kaum kennen. Gerade bei einer spontanen Busfahrt wird der Ticketkauf damit zu einer zusätzlichen Aufgabe. GoEase verlagert diese Entscheidung in die Fahrterfassung und hält die Informationen in einer App zusammen.',
+    images: [
+      '/img/ge/problem.svg',
+    ],
+    imageAlts: [
+      'Darstellung der Ausgangssituation beim Ticketkauf im öffentlichen Nahverkehr',
+    ],
+    imageCaptions: [
+      'Ausgangspunkt ist die Tarifwahl vor einer spontanen Fahrt.',
+    ],
   },
   {
-    title: 'Nutzer & Herausforderung',
-    body:
-      'Die primären Nutzer sind Gelegenheitsfahrer des öffentlichen Nahverkehrs. Sie befinden sich in ' +
-      'Situationen, in denen eine Autofahrt kurzfristig nicht möglich ist. Ihre größte Herausforderung ' +
-      'ist die Unkenntnis über lokale Tarife und die komplexe Bedienung der unterschiedlichen Ticketautomaten.',
-    images: ['/img/ge/problem.svg'],
+    title: 'Den Umfang auf Busfahrten begrenzen',
+    body: 'Die erste Konzeptphase umfasste ein vielseitigeres System. Die entscheidende Eingrenzung war, sich auf die automatische Ticketerfassung in Bussen zu konzentrieren. Daraus entstand ein klarer Kernablauf: einmal einrichten, einsteigen, Fahrt verfolgen und Kosten einsehen.',
+    images: [
+      '/img/ge/process.svg',
+    ],
+    imageAlts: [
+      'GoEase-Konzeptunterlagen mit skizzierten Abläufen und Systembausteinen',
+    ],
+    imageCaptions: [
+      'Die Konzeptphase führte zu einem engeren, umsetzbaren Projektumfang.',
+    ],
   },
   {
-    title: 'Kontext & User Journey',
-    body:
-      'Der Kontext ist die spontane Nutzung von Bussen im städtischen Raum. Ein definierter Nutzerpfad ' +
-      'existiert und wurde durch Automatisierung verkürzt. Nach einer einmaligen Kontoeinrichtung erfolgt ' +
-      'die Erfassung der Fahrt sowie die Bezahlung vollständig im Hintergrund ohne weiteres aktives Zutun.',
+    title: 'Die App schrittweise vereinfachen',
+    body: 'Digitale Entwürfe führten zu einer plattformübergreifenden Anwendung mit React Native. Wiederholte Nutzertests flossen in die Vereinfachung der Einrichtung ein. Die Fahrtenansicht zeigt den aktuellen Verlauf; die Zusammenfassung macht Start, Ziel und Betrag nachvollziehbar.',
+    images: [
+      '/img/ge/softwareProcess.svg',
+    ],
+    imageAlts: [
+      'Drei GoEase-Oberflächen vom frühen Entwurf bis zur ausgearbeiteten Kartenansicht',
+    ],
+    imageCaptions: [
+      'Die Oberfläche entwickelte sich von ersten Screens zu einer fokussierten Fahrtenansicht.',
+    ],
   },
   {
-    title: 'Nutzerzentrierte Recherche & Prozess',
-    body:
-      'Der Prozess begann mit einer umfassenden Ideenfindung und der Definition eines minimal ' +
-      'funktionsfähigen Produkts. Die Softwareentwicklung startete mit digitalen Entwürfen und mündete ' +
-      'in einer plattformübergreifenden Anwendung. Wiederholte Nutzertests halfen bei der kontinuierlichen Verbesserung.',
-    images: ['/img/ge/process.svg', '/img/ge/softwareProcess.svg'],
-  },
-  {
-    title: 'Erkenntnisse für die Lösung',
-    body:
-      'Die Erkenntnisse der anfänglichen Konzeptphase zeigten, dass ein zu vielseitiges System vom ' +
-      'Kernproblem ablenkt. Dies führte zur Reduzierung auf die automatische Ticketerfassung in Bussen. ' +
-      'Feedback aus den Nutzertests floss anschließend direkt in die Vereinfachung des Einrichtungsprozesses ein.',
-  },
-  {
-    title: 'Innovation',
-    body:
-      'Die Technologie kombiniert Mikrocontroller mit lokaler Funktechnik und satellitengestützter ' +
-      'Positionsbestimmung. Der Mehrwert entsteht durch den Wegfall manueller Eingaben beim Ticketkauf. ' +
-      'Die Anwendung berechnet die fälligen Beträge automatisch auf Basis der tatsächlich gefahrenen Strecke.',
-  },
-  {
-    title: 'Ergebnis & Business Value',
-    body:
-      'Die Zielgruppe umfasst alle potenziellen Fahrgäste des öffentlichen Nahverkehrs. Die Lösung soll ' +
-      'durch eine sehr niedrige Einstiegshürde für Nutzer und die einfache Nachrüstbarkeit der ' +
-      'Senderbausteine in Bussen erfolgreich sein. Ein konkretes Geschäftsmodell ist nicht näher definiert.',
-  },
-  {
-    title: 'Wettbewerb & USP',
-    body:
-      'Hauptkonkurrenten sind bestehende digitale Angebote einzelner Verkehrsverbünde sowie klassische ' +
-      'Fahrkartenautomaten. Das Alleinstellungsmerkmal ist der Verzicht auf aktive Nutzereingaben beim ' +
-      'Ticketkauf über eine verbundübergreifende technische Lösung in den Bussen.',
-  },
-  {
-    title: 'Zugänglichkeit, Verantwortung & Vertrauen',
-    body:
-      'Die Automatisierung des Ticketkaufs reduziert kognitive Barrieren bei der Tarifwahl. Die Anwendung ' +
-      'ermöglicht es den Nutzern, die laufenden Kosten während der Fahrt jederzeit einzusehen. Dies schafft ' +
-      'Transparenz und gibt die volle Kontrolle über die abgebuchten Beträge.',
-  },
-  {
-    title: 'Soziale & planetarische Werte',
-    body:
-      'Eine einfache Nutzung des Nahverkehrs kann dazu beitragen, den motorisierten Individualverkehr zu ' +
-      'reduzieren. Dies schont langfristig materielle Ressourcen und fördert eine umweltfreundliche ' +
-      'Mobilität. Die Einstiegshürde wird für alle Bevölkerungsgruppen gesenkt.',
-  },
-  {
-    title: 'Weitere Informationen',
-    body:
-      'Die benötigten Hardwarekomponenten wurden gezielt für eine einfache Montage konzipiert. Die ' +
-      'dreidimensional gedruckten Kunststoffgehäuse verfügen über spezielle Befestigungsbänder. Diese ' +
-      'ermöglichen eine schnelle und werkzeuglose Installation an den Haltestangen in bestehenden Bussen.',
-    images: ['/img/ge/hardwareProcess.svg'],
+    title: 'Hardware zum Nachrüsten',
+    body: 'ESP32, Bluetooth Low Energy und GPS bilden die technischen Bausteine des Systems. Die Sender sitzen in eigens entwickelten, 3D-gedruckten Gehäusen. Befestigungsbänder erlauben eine werkzeuglose Montage an den Haltestangen bestehender Busse.',
+    images: [
+      '/img/ge/hardwareProcess.svg',
+    ],
+    imageAlts: [
+      'GoEase-Sendergehäuse mit Befestigungsband neben einem Busmodell',
+    ],
+    imageCaptions: [
+      'Das Sendergehäuse ist für die nachträgliche Montage im Bus gestaltet.',
+    ],
   },
 ];
 </script>

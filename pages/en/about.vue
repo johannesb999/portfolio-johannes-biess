@@ -5,7 +5,7 @@
 
     <div class="about__content">
       <div class="aboutMeText">
-        <SplitFlapText preset="heroFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h1" preset="heroFlap" :align="'center'" :texts="[
           '         [ABOUT] [ME]          ',
         ]" />
         <SplitFlapText preset="heroFlap" :align="'random'" :texts="[
@@ -16,7 +16,7 @@
         ]" />
       </div>
       <div class="wrapper">
-        <img src="/profilepicture.svg" alt="profilepicture" />
+        <ZoomableImage src="/profilepicture.svg" alt="Portrait of Johannes Biess" />
         <div id="quote">“There is never<br />- too much cheese.”</div>
       </div>
     </div>

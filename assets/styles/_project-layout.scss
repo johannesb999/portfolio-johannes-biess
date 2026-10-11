@@ -87,6 +87,10 @@ $content-max-width: 87.5rem;
     font-size: var(--font__size--xl);
   }
 
+  .wrapper .zoom-image {
+    width: 100%;
+  }
+
   @include bp.side-by-side {
     // Beide Hero-Elemente hängen an derselben Oberkante und fluchten mit der
     // Inhaltsspalte darunter: Flap-Text links, Bild rechts.

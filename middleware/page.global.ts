@@ -1,4 +1,4 @@
-import { mainProjects, playgroundProjects, projectNavigationSide } from "~/composables/projects";
+import { mainProjects, playgroundProjects, projectNavigationSide, playgroundNavigationDirection } from "~/composables/projects";
 import { resumeSideForPath } from '~/composables/resume';
 
 export default defineNuxtRouteMiddleware((to, from) => {
@@ -102,6 +102,13 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
   // 4. Priorität: Wechsel innerhalb der Projektseiten
   if (movingInProjectPages) {
+    const levelDirection = playgroundNavigationDirection(projectPages[fromIndex], projectPages[toIndex]);
+    if (levelDirection) {
+      const transitionName = levelDirection === 'down' ? 'page-up' : 'page-down';
+      to.meta.pageTransition = { name: transitionName };
+      from.meta.pageTransition = { name: transitionName };
+      return;
+    }
     const navigationSide = projectNavigationSide(
       projectPages[fromIndex],
       projectPages[toIndex],

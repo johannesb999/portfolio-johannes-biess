@@ -23,6 +23,28 @@ main {
   align-content: center;
   justify-items: center;
   min-width: 0;
+  max-width: 100%;
+  gap: var(--spacing--lg);
+}
+
+.contact__channels {
+  :deep(.mainText) {
+    min-height: var(--control__size--minimum);
+    line-height: var(--control__size--minimum);
+    overflow: visible;
+  }
+
+  :deep(.split-flap__link),
+  :deep(.email-contact__trigger) {
+    min-height: var(--control__size--minimum);
+    min-width: var(--control__size--minimum);
+    vertical-align: middle;
+  }
+
+  :deep(.link-style) {
+    font-size: max(var(--font__size--minimum), var(--font__size--xxxl));
+    font-weight: var(--font__weight--normal);
+  }
 }
 
 .contact__legal {
@@ -34,11 +56,23 @@ main {
   align-self: end;
   text-align: center;
   color: var(--color--primary);
+  min-height: var(--control__size--minimum);
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing--xs);
 }
 
 @include bp.mobile {
+  main {
+    padding-inline: var(--spacing--lg);
+  }
+
   .contactMeText {
     min-width: 80%;
+
+    :deep(.char) {
+      width: max(var(--flap__cell--minimum), min(var(--spacing--md), calc((100vw - var(--spacing--lg) * 2) / 29)));
+    }
   }
 
   .contact__legal {

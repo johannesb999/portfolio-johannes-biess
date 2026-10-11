@@ -14,7 +14,7 @@
     </div>
 
     <div class="wrapper">
-      <img src="/img/cv/kbsz.svg" alt="Picture of KBSZ Building in Ellwangen" />
+      <ZoomableImage src="/img/cv/kbsz.svg" alt="Picture of KBSZ Building in Ellwangen" />
     </div>
 
     <div class="project-details">
@@ -23,7 +23,7 @@
           <div class="text">
             <SplitFlapText :texts="['          [LEARNINGS]          ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
-              During my time at the KBSZ, I obtained the Baden-Würtenberg Abitur
+              During my time at the KBSZ, I obtained the Fachgebundene Fachhochschulreife
               with a focus on economics and English. The decision not to go into
               business after graduating from high school but to study computer
               science was particularly formative for me.
@@ -34,15 +34,10 @@
             <SplitFlapText :texts="['        [ABOUT] [DIPLOMA]      ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
               The "Fachgebundene Fachhochschulreife" is a school qualification
-              in Germany that enables students to study all courses at
-              universities of applied sciences and to study at universities in
-              the respective subject area. In contrast to the general Abitur,
-              there is no second foreign language and the focus is more on
-              practical and vocational content. In comparison to the American
-              education system, the subject-specific Fachhochschulreife lies
-              between a high school diploma and an associate's degree. It offers
-              access to specific, vocational courses of study, similar to the
-              Abitur.
+              in Germany with a business focus. Its curriculum includes
+              business administration, economics, accounting and business law,
+              alongside German, mathematics and English. The practical and
+              vocational content provided a foundation for my further studies.
             </div>
           </div>
         </div>

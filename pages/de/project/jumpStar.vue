@@ -9,7 +9,7 @@
     <ProjectNav current="jumpStar" />
     <div class="project-hero">
       <div class="projectFlap">
-        <SplitFlapText preset="detailsFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h1" preset="detailsFlap" :align="'center'" :texts="[
           '        [JUMPSTAR]          ',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
@@ -22,7 +22,7 @@
       </div>
 
       <div class="wrapper">
-        <img src="/img/js/thumbnail.svg" alt="JumpStar Thumbnail" />
+        <ZoomableImage src="/img/js/thumbnail.svg" alt="JumpStar Thumbnail" />
       </div>
     </div>
 
@@ -30,13 +30,16 @@
 
     <div class="project-details">
       <section id="details-section">
+        <p class="project-intro">
+          JumpStar ist eine interaktive 3D-Reise durch Sternendaten. Die Webanwendung entstand in einem zweimonatigen Teamprojekt im dritten Semester; der Kurs verband die Datenvisualisierung mit einer eigenen Deployment-Pipeline.
+        </p>
         <ProjectAccordion :items="accordionItems" id-prefix="jumpstar" />
       </section>
 
-      <AppLink class="tryOutLink" href="https://starsapp.johannes-biess.com/" label="TRY IT OUT LIVE" size="xxxxl" weight="bold" underline />
+      <AppLink class="tryOutLink" href="https://starsapp.johannes-biess.com/" label="LIVE AUSPROBIEREN" size="xxxxl" weight="bold" underline />
 
       <div class="project-section">
-        <SplitFlapText preset="bannerFlap" :align="'center'" :texts="[
+        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
           '                       [PROJEKT] [VIDEO]                       ',
         ]" />
         <div class="project-film">
@@ -56,59 +59,46 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const accordionItems = [
   {
-    title: 'Idee',
-    body:
-      'Der Kurs gab nur eine Vorgabe: Etwas mit Sternen machen. Dazu wurde ein Link zu einer ' +
-      'CSV-Datei mit etwa 340.000 Sternendaten bereitgestellt. Der Schwerpunkt des Kurses lag auf ' +
-      'dem Erlernen der Deployment Pipeline und weniger auf dem Nutzen der Inhalte. Trotzdem ' +
-      'sollte eine Website entwickelt werden, die in dieser Form nicht schon existiert. Viele ' +
-      'Menschen glauben, dass die Konstellation der Sterne zum Zeitpunkt ihrer Geburt eine ' +
-      'besondere Bedeutung für ihr Leben hat. Dieser Glaube beeinflusst Entscheidungen und ' +
-      'Einstellungen im Alltag, sei es durch Horoskope oder astrologische Vorhersagen. Mit der ' +
-      'Website sollte auf spielerische Weise gezeigt werden, dass Sternbilder letztlich nichts ' +
-      'anderes als eine zufällige Anordnung von Himmelskörpern sind, die nur durch unsere ' +
-      'Perspektive als zusammenhängend erscheinen. Ziel war es, den Menschen eine neue Sichtweise ' +
-      'auf das Universum zu eröffnen und die vermeintliche Bedeutung der Sternbilder als Fiktion ' +
-      'darzustellen.',
-    images: ['/img/js/js.png'],
+    title: 'Die Lösung',
+    alwaysOpen: true,
+    body: 'Ein simuliertes Raumschiff führt durch eine räumliche Sternenkarte. Beim Perspektivwechsel verändern sich die Linien zwischen den Sternen: Bekannte Sternbilder lösen sich auf. Die Anwendung macht sichtbar, wie stark ihre Form vom Blickpunkt abhängt.',
+    images: [
+      '/img/js/Implementaion.svg',
+    ],
+    imageAlts: [
+      'JumpStar-Webanwendung mit räumlicher Sternenkarte und zurückhaltenden Bedienelementen',
+    ],
+    imageCaptions: [
+      'Die räumliche Reise macht den Perspektivwechsel selbst zum Inhalt.',
+    ],
   },
   {
-    title: 'Prozess',
-    body:
-      'Zu Beginn des Projekts wurde überlegt, wie die Sterne dargestellt werden sollten. Schnell ' +
-      'fiel die Entscheidung, eine spielerische Komponente einzubringen, indem ein Raumschiff ' +
-      'simuliert wird, das durch das Weltall fliegt. Diese Herangehensweise ermöglicht es, Sterne ' +
-      'und Konstellationen aus verschiedenen Perspektiven zu betrachten und so die Zufälligkeit ' +
-      'der Anordnungen zu verdeutlichen. Die Idee, wissenschaftliche Daten aktiv anzuzeigen, ' +
-      'wurde nach einigen Feedbackgesprächen in den Hintergrund gerückt, um den Fokus stärker auf ' +
-      'das visuelle Erleben zu legen. Dezente Linien, die die Sterne so verbinden, dass ' +
-      'Sternkonstellationen erkennbar werden, verzerren sich im Laufe der Reise zunehmend. ' +
-      'Dadurch wird den Nutzern klar, dass schon eine kleine Veränderung der Perspektive ' +
-      'ausreicht, um die vermeintlichen Sternbilder aufzulösen. Um die Immersion zu verstärken, ' +
-      'wurde ein schlankes, unauffälliges Design für die Navigationstools gewählt, das sich ' +
-      'dezent in den Hintergrund einfügt und den visuellen Fokus auf die Sterne nicht stört.',
-    images: ['/img/js/Process.svg'],
+    title: 'Visuelles Erleben vor Datenfülle',
+    body: 'Ausgangspunkt war eine CSV-Datei mit etwa 340.000 Sternendatensätzen und die offene Aufgabe, etwas mit Sternen zu entwickeln. Nach Feedbackgesprächen rückte die ausführliche Datenanzeige in den Hintergrund. Die Reise, die Sternbildlinien und eine unauffällige Navigation konzentrieren den Blick auf das räumliche Erleben.',
+    images: [
+      '/img/js/Process.svg',
+      '/img/js/js.png',
+    ],
+    imageAlts: [
+      'JumpStar-Designentwürfe mit Sternenkarten und unterschiedlichen Ansichten',
+      'JumpStar-Projektansicht zur visuellen Sternenreise',
+    ],
+    imageCaptions: [
+      'Entwürfe vergleichen die Darstellung von Daten und räumlicher Bewegung.',
+      'Die Sternenreise steht im Mittelpunkt der Gestaltung.',
+    ],
   },
   {
-    title: 'Implementation',
-    body:
-      'Das Resultat ist eine interaktive Website, die den Nutzern eine spielerische Reise durch ' +
-      'das Weltall ermöglicht. Mithilfe eines simulierten Raumschiffs können Sterne und ' +
-      'Konstellationen aus verschiedenen Blickwinkeln betrachtet werden. Ziel ist es, ' +
-      'aufzuzeigen, dass Sternbilder reine Fiktion und eine Frage der Perspektive sind. Subtile ' +
-      'Animationen verdeutlichen, dass selbst kleinste Veränderungen im Blickwinkel die ' +
-      'scheinbare Ordnung der Sternbilder auflösen. Die Nutzer erleben so, wie zufällig die ' +
-      'Anordnung der Himmelskörper wirklich ist – nicht durch Belehrung, sondern durch eigenes ' +
-      'Entdecken und Erleben. Die Website basiert auf dem Framework Svelte, während THREE.js die ' +
-      '3D-Umgebung realisiert. Die Sternendaten werden in einer MongoDB-Datenbank gespeichert, ' +
-      'die zusammen mit dem Backend auf einem eigenen Server gehostet wird. Mithilfe von Docker ' +
-      'und Portainer wird die Infrastruktur verwaltet, und GitHub Actions sorgt für eine nahezu ' +
-      'automatisierte Deployment Pipeline. So wird eine effiziente und zuverlässige ' +
-      'Bereitstellung der Anwendung gewährleistet.',
-    images: ['/img/js/Implementaion.svg'],
+    title: 'Vom Browser bis zum eigenen Server',
+    body: 'Svelte bildet die Oberfläche, Three.js die 3D-Umgebung. Die Sternendaten liegen in MongoDB; Backend und Datenbank laufen auf einem eigenen Server. Docker und Portainer verwalten die Infrastruktur, GitHub Actions übernimmt die weitgehend automatisierte Bereitstellung.',
+    points: [
+      '3D-Darstellung im Browser.',
+      'Datenhaltung und Backend auf eigener Infrastruktur.',
+      'Ein durchgängiger Weg von Codeänderungen zur veröffentlichten Anwendung.',
+    ],
   },
 ];
 </script>

@@ -1,6 +1,65 @@
 # Portfolio-Audit
 
-Stand: 11. Oktober 2026 · Arbeitsfassung zur Überarbeitung der lokalen Vorschau
+Stand: 11. Oktober 2026 · Audit mit anschließendem Umsetzungsstand; jüngste Runde: Bildansicht, Kacheln und Sprachwechsel
+
+## Bildansicht, Kacheln und Sprachwechsel
+
+Alle inhaltlichen Bilder auf Projekt-, About- und CV-Seiten öffnen jetzt eine gemeinsame Großansicht. `ZoomableImage` ersetzt die einzelnen Bild-Tags; `ImageViewer` enthält den Dialog. Öffnen und Schließen zoomen zwischen Ausgangsbild und Großansicht; reduzierte Bewegung wird berücksichtigt. Scrollrad, Plus/Minus, Doppelklick und Tastatur steuern den Zoom, Ziehen verschiebt den Ausschnitt. Zwei Pointer ermöglichen Pinch-Zoom. Außenklick, Schließen-Link und Escape schließen die Ansicht; der Fokus kehrt zum Ausgangsbild zurück, die Seite bleibt an ihrer Scrollposition.
+
+Playground-Bilder füllen ihre Kacheln mit `cover`; das unveränderte Original wird vollständig in der Großansicht eingepasst. Bildklick öffnet die Großansicht, der separate Titel mit Abwärtspfeil führt weiterhin ins Projekt. Video-Poster behalten ihre Abspielfunktion. Im Sprachwechsel ist die aktive Sprache grau und deaktiviert, die andere verwendet die normale Textfarbe mit Unterstreichung bei Hover/Fokus.
+
+Eigene Chromium-Prüfung: Hero-, Akkordeon- und Kachelbilder, Scroll-Zoom, Plus/Minus, Verschieben, Einpassen, Öffnen per Tastatur, Escape, Außenklick, Fokus und wieder freigegebenes Seitenscrollen. Sprachfarben in DE/EN nach tatsächlichem Wechsel geprüft; mobile Kacheln und Bildansicht bei 375 px ohne horizontalen Überlauf. Die Dreifach-Kacheln wurden am Desktop auf übereinstimmende Bild- und Kachelmaße geprüft. Zwei Subagenten unterstützten die Einbindung in vorhandene Seiten sowie Kacheln/Sprachwechsel; Bildansicht und Integration durch den Hauptagenten.
+
+Produktionsbuild mit sichtbaren Projekten erfolgreich. Browsermeldungen der geprüften Interaktionen ohne Warnungen oder Fehler; helle und dunkle Großansicht geprüft.
+
+**Nicht geprüft:** Reale Zweifinger-Geste (das verfügbare Browserwerkzeug unterstützt keine Touch-Ereignisse), Safari/iOS und Firefox. Die Originalbilder wurden nicht verändert.
+
+## Aktueller Stand der Projektdetails
+
+Johannes' jüngste Rückmeldung ersetzt die früheren Vorschläge zu einem zusätzlichen Projekteinstieg und zu den ausgeschnittenen Beacon-Ansichten. KAI und Beacon beschreiben das Produkt jetzt einmal im dauerhaft offenen Lösungsabschnitt. KAI beginnt davor direkt mit dem Video.
+
+- **KAI:** Das Bild mit der UX Design Awards **Nominierung** steht im Hero; die Variante ohne Badge bei Tischübersicht und Navigation. Die Recherche behält Methoden, fünf Problemfelder und Priorisierung. Reiter stellen jeweils Beobachtung und zugehörigen Entwurf gegenüber. Der Sprachprototyp zeigt Verarbeitungsschritte und ein Bestellbeispiel. Die Gerichte und das Extra stammen aus der Dokumentation; der gesprochene Beispielsatz ist eine eigene Veranschaulichung und kein Transkript eines Tests.
+- **Beacon:** Die Reihenfolge ist Lösung → Recherche → Wahl des Hilfenetzwerks → Bedienung → Vertrauen und Vorbereitung → Projektumfang. Die Recherche verbindet vier Faktoren, Eskalationsstufen und sieben Anforderungen. Die fünf Bedienungsreiter werden nicht als die ursprünglichen How-Might-We-Fragen ausgegeben. Jeder erklärt eine konkrete Interaktion mit dem zugehörigen Originalmockup.
+- **Darstellung:** Akkordeoninhalt beginnt unter dem Titel, nicht unter der Nummer. Kompakte Reiter verwenden animierte Hover- und Auswahlzustände in Beacon-Orange beziehungsweise KAI-Blau. Pfeiltasten, Home und End wechseln die Auswahl. Die Texte beider Fallstudien behalten auch mobil 1,5-fachen Zeilenabstand und mindestens 16 px Schriftgröße.
+- **Offene Bildlieferung:** Die beiden aus dem PDF extrahierten Beacon-Ansichten sind nicht mehr eingebunden. Dateien und Komponente bleiben als verworfener Entwurf erhalten. Für „Vertrauen und Vorbereitung“ fehlt ein originales Smartphone-Mockup im gleichen Stil wie die übrigen Bilder: bevorzugt Identitätsprüfung und Einführung in die Helferrolle, alternativ der Demo-Ablauf. Bis dahin enthält der Abschnitt nur Text.
+
+**Grundlagen:** Die [KAI-Dokumentation](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/kai/kai-dokumentation-de.pdf), insbesondere Seiten 8, 11–13, 25–26, 50–56 und 110–111, wurde hierfür durch einen beauftragten Subagenten gelesen und visuell geprüft. Bei [Beacon](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/beacon/beacon-dokumentation-de.pdf) wurden die gedruckten Seiten 24–27, 32–35, 74–75 und 198–199 selbst gezielt gelesen; ein zweiter Subagent ergänzte die Konzeptalternativen und den Einstieg über bestehende sichere Orte. Formulierungen und programmierte Darstellungen sind eigene redaktionelle und gestalterische Vorschläge auf dieser Grundlage. Zusätzlich wurde der [Humanizer-Skill](C:/Users/biess/.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/humanizer/SKILL.md) für konkrete statt formelhafte Formulierungen verwendet.
+
+**Prüfung dieser Runde:** Eigene Chromium-Stichproben in DE und EN bei 1440, 768 und 375 px. KAI-Bildzuordnung, Bestellbeispiel, Rechercheauswahl und Tastaturwechsel sowie Beacons Recherche, wechselnde Bedienungsmockups, entfernte Vorbereitungsbilder und Dark Mode geprüft. Kein horizontaler Überlauf in den geprüften schmalen Ansichten, 16 px Fließtext mit 24 px Zeilenabstand; keine Warnungen oder Fehler in den geprüften Browsermeldungen. Produktionsbuild mit sichtbaren Projekten erfolgreich. Die Dateisandbox blockierte zunächst Nuxt mit EPERM; außerhalb dieser Beschränkung lief derselbe Build erfolgreich durch.
+
+**Nicht geprüft in dieser Runde:** Safari/iOS, Firefox, vollständige Screenreader-Bedienung und externe Videos. Die öffentliche Website wurde nicht verändert.
+
+## Umsetzung nach dem Audit
+
+Die nachfolgenden Audit-Befunde beschreiben den Ausgangsstand vor der hier dokumentierten Überarbeitung (Git-Basis `58bd931`). Alte Zeilenverweise und Aussagen über fehlende Inhalte sind daher keine erneute Bewertung der aktuellen Vorschau.
+
+**Johannes' anschließende Entscheidungen haben Vorrang:** Hochwertige Mockups bleiben die visuelle Hauptform. Produktnutzen wird selbstbewusst formuliert; Projektstatus und tatsächlicher Umfang werden einmal klar eingeordnet. Teamarbeit wird nicht in exklusive Rollen zerlegt. Der ergänzte Hinweis auf UI/UX sowie Herleitung und Struktur der Dokumentation beruht auf Johannes' Antwort im Chat; Teamleitung und Stundenangabe erscheinen nicht auf der Website.
+
+Umgesetzt in DE und EN:
+
+- Beacon: Faktoren, Eskalationsstufen und Anforderungen gemeinsam unter Recherche; programmierte Darstellungen mit drei Ansichten. Fünf Gestaltungsentscheidungen verbinden jeweils eine Frage mit dem passenden Mockup.
+- KAI und die weiteren aktiven Projekte: kürzere, projektspezifische Erzählungen, konkrete Bildbeschreibungen und Bildunterschriften; Lösung weiterhin offen. PlantMonit-Bilder stehen bei den jeweils passenden Inhalten.
+- Playground: größere Bento-Flächen mit kurzen Projektbeschreibungen. Alle Kacheln führen räumlich nach unten, der Rückweg nach oben; das Hauptkarussell bleibt zyklisch und seitlich.
+- Start, About und Lebenslauf: Nach Johannes' Rückmeldung ist der ursprüngliche Aufbau wiederhergestellt. Start zeigt ausschließlich das Split-Flap; nach dem Laden wechselt nur die Rollen-Zeile. About zeigt wieder Split-Flap, Porträt und den Weg zum Lebenslauf. Die Timeline steht vor dem PDF-Link. CV-Seiten verwenden wieder Split-Flap, Bild und die bisherigen Textspalten. Master hat vorläufig das vorhandene HfG-Bild und einen kurzen Studienbezug; der vorgeschlagene Denkrahmen wird nicht mehr angezeigt. Bachelor und vorheriges Studium in Aalen bleiben sachlich richtig unterschieden.
+- Kontakt: kleine Auswahl zwischen Mail-App und Zwischenablage, ohne ausgeschriebene Adresse. Stabile zugängliche Split-Flap-Texte, echte Überschriften, Tastaturbedienung, Bewegungspräferenzen und mindestens 16 px für lesbaren Text berücksichtigt.
+
+**Korrekturrunde nach Johannes' visueller Rückmeldung:** Die zusätzliche Positionierungsprosa auf Start, About und Resume wurde zurückgenommen. KAI hat einfache Abschnittstitel und eine ausführlichere, an der Dokumentation geprüfte Recherchebeschreibung; auch PlantMonit verwendet sachliche Überschriften. Beacons vier Faktoren stehen in einer schlichten Übersicht statt vier Symbolkacheln. Eskalation und Anforderungen bleiben erhalten. Unter Vertrauen und Vorbereitung sind zwei Originalansichten zu Identitätsprüfung und Verhaltensregeln ergänzt. Video-Thumbnails füllen ihre Fläche; normale Akkordeonbilder bleiben vollständig eingepasst. Ein globaler Hover-Selektor hatte auch Links mit abgeschaltetem Zoom vergrößert: Das ist korrigiert, der übrige Link-Zoom ist reduziert. Die E-Mail-Auswahl verwendet unterstrichene Textaktionen ohne Buttonrahmen.
+
+Zusätzliche inhaltliche Quellen dieser Umsetzung:
+
+- [Beacon-Dokumentation](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/beacon/beacon-dokumentation-de.pdf) — gezielt selbst gelesene und teilweise gerenderte Abschnitte, gedruckte Seiten 22–35 und 74–75; Grundlage der Recherchegrafiken und des Ansatzvergleichs. Keine vollständige Prüfung der Arbeit.
+- [Strategische Gestaltung](C:/Users/biess/Github/Master/master-s1/Kontext/strategische-gestaltung.md) und [Wie Gestalter denken](C:/Users/biess/Github/Master/master-s1/Kontext/wie-gestalter-denken.md) — vom beauftragten Subagenten gelesene Grundlagen für den Master-Text, erschlossen über den vorhandenen README-Einstieg.
+- [Lebenslauf-PDF](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/resume/johannes-biess-lebenslauf-de.pdf) — eigene gezielte Prüfung der Abschlussbezeichnungen und Zuordnung der Studiengänge. Die Datumsangabe „heute“ im älteren PDF wurde nicht als aktueller Studienstatus übernommen.
+- [KAI-Dokumentation](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/kai/kai-dokumentation-de.pdf) — Rechercheabschnitte, Seiten 8 und 11–13 sowie Priorisierung auf Seite 50, durch einen Subagenten gelesen und visuell geprüft; Grundlage des ausführlicheren zweiten Abschnitts.
+- [Beacon-Dokumentation, Vorbereitung](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/beacon/beacon-dokumentation-de.pdf#page=100) — gedruckte Seiten 198–199 selbst gelesen und gerendert; zwei originale Ansichten aus dem PDF mit Transparenz übernommen.
+
+Die Darstellungen und die redaktionelle Gewichtung sind Gestaltungsvorschläge. Es wurden keine neuen Testresultate, Nutzerzahlen oder technischen Fähigkeiten hinzuerfunden. Die Live-Website wurde nicht verändert.
+
+**Prüfung der Umsetzung:** Produktionsbuild mit sichtbaren Projekten erfolgreich; Prüfung aller direkt referenzierten Bild- und Dokumentpfade ohne fehlende Dateien. Der zuvor defekte englische Zeugnislink führt jetzt zur vorhandenen deutschen Fassung und ist entsprechend beschriftet. Karussellrichtungen für alle fünf Hauptprojekte sowie Ein- und Rückwege aller drei Playground-Arbeiten geprüft; TrickyTowers zusätzlich im Browser mit tatsächlichem Übergang nach unten/oben. Eigene Chromium-Stichproben bei 1440, 768 und 375 px: Beacon-Recherche und Entscheidungen, KAI-Medien, Playground, Start, About, Master, Resume und Kontakt; Englisch und Dark Mode an Beacon. Geprüfte schmale Ansichten ohne horizontalen Überlauf. KAI-Akkordeonbilder 480 × 360 px mit vollständigem Einpassen, Video und Akkordeon 1120 px breit am Desktop. E-Mail-Kopie, Tastaturöffnung, Escape und Fokus-Rückgabe geprüft; geschlossene Akkordeon-Inhalte sind nicht fokussierbar. Keine Warnungen oder Fehler in den geprüften Browsermeldungen. Drei Subagenten unterstützten Projektredaktion, CV-Texte und Kontakt/Zugänglichkeit; Integration und visuelle Stichproben erfolgten durch den Hauptagenten.
+
+**Offen:** Beide Lebenslauf-PDFs beschreiben noch den Stand vor dem Masterstudium. Safari/iOS und Firefox, reale Mail-Apps, vollständige Screenreader-Bedienung und sämtliche externen Demos/Filme sind in dieser Umsetzungsrunde nicht geprüft. Die Angaben zu Projektverlauf und Nutzen wurden redaktionell bearbeitet, nicht unabhängig wissenschaftlich validiert.
+
+**Prüfung der Korrekturrunde:** Der wiederhergestellte Aufbau von Start, About, Resume und Master wurde im Chromium-Browser geprüft. Zwei zeitlich getrennte Messungen bestätigen: Die drei oberen Startzeilen bleiben identisch, die letzte wechselt. Resume → Bachelor kommt von rechts; Master → Resume kommt von rechts, mit Rücklinks auf der jeweils gegenüberliegenden Kante. About und Resume bei 375 px ohne horizontalen Überlauf; das Zitat bleibt 16 px groß. Beacons Vorbereitung zeigt beide Originalansichten vollständig, auch mobil. Der Dokumentationslink hat bei tatsächlichem Hover keine Skalierung. KAI- und PlantMonit-Poster füllen bei 1440 px die 1120 × 630 px große Playerfläche. E-Mail-Aktionen sind ohne Rahmen und Füllfläche dargestellt; Kopierbestätigung und Escape mit Fokus-Rückgabe funktionieren. Keine Warnungen oder Fehler in den geprüften Browsermeldungen. Produktionsbuild erfolgreich; 76 vollständige statische Bild- und Dokumentpfade ohne fehlende Datei geprüft. Drei Subagenten unterstützten gezielt Wiederherstellung und Projektredaktion; Browserprüfung und Integration erfolgten durch den Hauptagenten.
 
 ## Einschätzung
 

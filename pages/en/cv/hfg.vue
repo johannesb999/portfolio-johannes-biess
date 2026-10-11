@@ -15,7 +15,7 @@
     </div>
 
     <div class="wrapper">
-      <img src="/img/cv/hfgbuilding.svg" alt="Picture of HFG Building" />
+      <ZoomableImage src="/img/cv/hfgbuilding.svg" alt="Picture of HFG Building" />
     </div>
 
     <div class="project-details">
@@ -24,7 +24,7 @@
           <div class="text">
             <SplitFlapText :texts="['          [LEARNINGS]         ']" preset="sectionFlap" :align="'center'" />
             <div class="paragraph">
-              When I was at the HfG, I worked on
+              During my bachelor’s studies in Internet of Things (B.A.) at the HfG, I worked on
               <AppLink :to="projectsPath" label="projects" underline :scale="false" />
               that were very focused on getting hands-on experience right from
               the start. I learned to think deeply about fundamental questions
@@ -34,6 +34,7 @@
               where I could not only build my design and technical skills, but
               also learn how to apply them in real projects. Take a look at my
               <AppLink href="/docs/hfg/transcript-of-records-en.pdf" label="Transcript of Records" underline :scale="false" />for more details.
+              Before moving to the HfG, I studied Digital Product Design and Development at Aalen University for three semesters.
             </div>
           </div>
 

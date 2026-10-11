@@ -1,7 +1,7 @@
 <template>
   <template v-if="neighbours">
-    <EdgeLink position="left" fixed :to="path(neighbours.prev.route)" :label="neighbours.prev.label" />
-    <EdgeLink position="right" fixed :to="path(neighbours.next.route)" :label="neighbours.next.label" />
+    <EdgeLink v-if="!isPlaygroundChild || neighbours.prev.route !== 'playground'" position="left" fixed :to="path(neighbours.prev.route)" :label="neighbours.prev.label" />
+    <EdgeLink v-if="!isPlaygroundChild || neighbours.next.route !== 'playground'" position="right" fixed :to="path(neighbours.next.route)" :label="neighbours.next.label" />
   </template>
 </template>
 
@@ -9,7 +9,7 @@
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import EdgeLink from "./EdgeLink.vue";
-import { projectNeighbours } from "@/composables/projects";
+import { projectNeighbours, playgroundProjects } from "@/composables/projects";
 
 // Die beiden seitlichen Karussell-Links einer Projektseite. Welche Seite
 // woneben liegt, steht in composables/projects.ts — nicht in den Seiten selbst.
@@ -22,5 +22,6 @@ const route = useRoute();
 const locale = computed(() => (route.path.startsWith("/de") ? "de" : "en"));
 
 const neighbours = computed(() => projectNeighbours(props.current));
+const isPlaygroundChild = computed(() => playgroundProjects.some((project) => project.route === props.current));
 const path = (name) => `/${locale.value}/project/${name}`;
 </script>

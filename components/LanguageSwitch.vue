@@ -1,16 +1,16 @@
 <template>
-  <nav class="lang" aria-label="Sprache">
-    <button
+  <nav class="lang" :aria-label="current === 'de' ? 'Sprache' : 'Language'">
+    <AppLink
       v-for="locale in locales"
       :key="locale"
       class="lang__option"
-      type="button"
+      :scale="false"
       :disabled="locale === current"
       :aria-current="locale === current ? 'true' : undefined"
       @click="switchTo(locale)"
     >
       {{ locale.toUpperCase() }}
-    </button>
+    </AppLink>
   </nav>
 </template>
 
@@ -58,7 +58,7 @@ function switchTo(locale) {
   margin: var(--spacing--xxs) 0;
   border: none;
   background: transparent;
-  color: var(--color--secondary);
+  color: var(--color--primary);
   cursor: pointer;
   @include type.text(xxxxl, extra-light);
 
@@ -66,16 +66,22 @@ function switchTo(locale) {
   & + &::before {
     content: "|";
     margin-right: var(--spacing--xxs);
-    color: var(--color--black);
+    color: var(--color--primary);
   }
 
   &:disabled {
-    color: var(--color--primary);
+    color: var(--color--accent);
     cursor: default;
   }
 
-  &:not(:disabled):hover {
-    color: var(--color--primary);
+  &:not(:disabled):hover,
+  &:not(:disabled):focus-visible {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: var(--border__size) solid var(--color--primary);
+    outline-offset: var(--spacing--xs);
   }
 }
 

@@ -106,7 +106,7 @@ async function play() {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   background-color: var(--color--gray-light);
 }
 

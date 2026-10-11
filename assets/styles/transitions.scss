@@ -1,3 +1,5 @@
+@use './breakpoints' as bp;
+
 /* Global page transition styles (loaded globally to avoid code-split issues) */
 .page-left-enter-active,
 .page-left-leave-active,
@@ -84,4 +86,24 @@
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+@include bp.reduced-motion {
+  .page-left-enter-active,
+  .page-left-leave-active,
+  .page-right-enter-active,
+  .page-right-leave-active,
+  .page-up-enter-active,
+  .page-up-leave-active,
+  .page-down-enter-active,
+  .page-down-leave-active {
+    transition: none;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: none;
+  }
 }

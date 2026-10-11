@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppLink class="app-header__home" :to="homePath" label="JB" />
+    <AppLink class="app-header__home" :to="homePath" label="JB" :aria-label="route.path.startsWith('/de') ? 'Johannes Biess – Startseite' : 'Johannes Biess – Home'" />
     <LanguageSwitch />
   </div>
 </template>

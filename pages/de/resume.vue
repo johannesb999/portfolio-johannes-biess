@@ -60,7 +60,7 @@
         <li :data-side="resumeSides.kbsz">
           <AppLink class="content" to="/de/cv/kbsz" :scale="false">
             <h2>BERUFSSCHULE</h2>
-            <p>FACHGEBUNDENE FACHHOCHSCHULREIFE <br />(WIRTSCHAFT)</p>
+            <p>FACHGEBUNDENE<br />FACHHOCHSCHULREIFE (WIRTSCHAFT)</p>
             <p class="location">ELLWANGEN, DEUTSCHLAND</p>
           </AppLink>
           <div class="date">

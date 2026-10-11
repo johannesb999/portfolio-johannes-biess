@@ -49,7 +49,7 @@
         <li :data-side="resumeSides.kbsz">
           <AppLink class="content" to="/en/cv/kbsz" :scale="false">
             <h2>VOCATIONAL SCHOOL</h2>
-            <p>DIPLOMA OF VOCATIONAL EDUCATION (BUSINESS)</p>
+            <p>ENTRANCE QUALIFICATION<br />(APPLIED SCIENCES)</p>
             <p class="location">ELLWANGEN, GERMANY</p>
           </AppLink>
           <div class="date">
