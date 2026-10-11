@@ -53,7 +53,7 @@ export const visibleProjectRoutes: string[] = [
   ...playgroundProjects.map((p) => p.route),
 ];
 
-/** Alle Projektseiten, die online ausgeblendet werden. */
+/** Projektseiten, die im Baustellen-Modus auf die Construction-Seite umleiten. */
 export const hideableProjects: string[] = [
   ...visibleProjectRoutes,
   ...archivedProjects.map((p) => p.route),

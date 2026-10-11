@@ -42,7 +42,14 @@ useHead(() => {
   --color--gray-light: #0000001d;
   --color--black: #171717;
   --color--primary-translucent: #171717b0;
-  --color--transition: rgba(146, 146, 146, 0.3);
+  /* Seitenwechsel: breite, weich auslaufende Übergangskante. */
+  --transition__shadow--edge: rgba(23, 23, 23, 0.1);
+  --transition__shadow--ambient: rgba(23, 23, 23, 0.2);
+  --transition__edge--offset: 0.375rem;
+  --transition__edge--blur: 3rem;
+  --transition__ambient--offset: 0.75rem;
+  --transition__ambient--blur: 6.5rem;
+  --transition__ambient--spread: -0.375rem;
 
   /* Rahmen */
   --border__size: 0.1rem;
@@ -76,6 +83,9 @@ useHead(() => {
   --viewer__inset: clamp(16px, 3vw, 48px);
   --viewer__backdrop: rgba(251, 251, 251, 0.96);
   --viewer__motion--duration: 280ms;
+  --video__motion--duration: 220ms;
+  --video__overlay--color: rgba(0, 0, 0, 0.22);
+  --video__play--scale: 1.15;
   --flap__height: 1.9rem;
   --flap__cell--minimum: 10px;
   --flap__line-height: 2rem;
@@ -165,6 +175,8 @@ useHead(() => {
 }
 
 :root[data-theme="dark"] {
+  --transition__shadow--edge: rgba(0, 0, 0, 0.3);
+  --transition__shadow--ambient: rgba(0, 0, 0, 0.42);
   --viewer__backdrop: rgba(23, 23, 23, 0.96);
   --beacon__color--interactive: #ff784d;
   --kai__color--interactive: #9ac5ce;

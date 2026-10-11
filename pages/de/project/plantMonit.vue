@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="project--plantmonit">
     <div class="background">
       <client-only>
         <ScrollLink />
@@ -31,16 +31,10 @@
 
     <div class="project-details">
       <section id="details-section">
-        <p class="project-intro">
-          PlantMonit macht den Pflegebedarf von Zimmerpflanzen sichtbar: Sensordaten, Kamerabilder und verständliche Hinweise in einer Anwendung. Das Team entwickelte den Software- und Hardwareprototyp im zweiten Semester über drei Monate.
-        </p>
         <ProjectAccordion :items="accordionItems" id-prefix="plantmonit" />
       </section>
 
       <div class="project-section">
-        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
-          '                         [PROJEKT] [VIDEO]                          ',
-        ]" />
         <div class="project-film">
           <VideoEmbed id="bKC-N5-m5u0" title="PlantMonit — Projektvideo" poster="/img/pm/video-poster.webp" />
         </div>
@@ -63,7 +57,10 @@ const accordionItems = [
   {
     title: 'Die Lösung',
     alwaysOpen: true,
-    body: 'Ein Gerät an der Pflanze erfasst ihre Umgebung; die App bündelt Messwerte und Pflegehinweise. So müssen Menschen mit wenig Zeit oder Pflegewissen den Zustand ihrer Zimmerpflanzen nicht allein nach Gefühl beurteilen. Sensorik und visuelle Analyse ergänzen sich im System.',
+    paragraphs: [
+      'PlantMonit hilft Menschen mit wenig Zeit oder Pflegewissen, ihre Zimmerpflanzen zu versorgen. Ein Gerät an der Pflanze erfasst Umgebungsdaten und Kamerabilder. Die App zeigt den Zustand der Pflanze und gibt passende Pflegehinweise.',
+      'Den Software- und Hardwareprototyp entwickelten wir im zweiten Semester in drei Monaten als Team.',
+    ],
     images: [
       '/img/pm/solution.svg',
     ],
@@ -111,6 +108,7 @@ const accordionItems = [
       '/img/pm/hardware.svg',
       '/img/pm/process.svg',
     ],
+    imageFits: ['cover', 'contain'] as const,
     imageAlts: [
       'PlantMonit-Hardwareprototyp mit Mikrocontroller, Sensoren und Verkabelung',
       'Gehäuseentwurf für PlantMonit mit Kamera und Erdspieß',

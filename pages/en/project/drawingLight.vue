@@ -34,9 +34,6 @@
       </section>
 
       <div class="project-section">
-        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
-          '                        [PROJECT] [VIDEO]                       ',
-        ]" />
         <div class="project-film">
           <VideoEmbed id="k3CHPyc4J4M" title="DrawingLight — project video" poster="/img/dl/video-poster.webp" />
         </div>

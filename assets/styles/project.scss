@@ -9,8 +9,11 @@
 .project--beacon { --accordion__color--interactive: var(--beacon__color--interactive); }
 .project--kai { --accordion__color--interactive: var(--kai__color--interactive); }
 
-.project--beacon .acc,
-.project--kai .acc {
+.project--plantmonit .acc {
+  --image__fit: cover;
+}
+
+.project-details .acc {
   --line-height--big: var(--project__copy--leading);
 }
 

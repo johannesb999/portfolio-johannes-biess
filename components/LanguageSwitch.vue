@@ -67,6 +67,7 @@ function switchTo(locale) {
     content: "|";
     margin-right: var(--spacing--xxs);
     color: var(--color--primary);
+    font-weight: var(--font__weight--extra-light);
   }
 
   &:disabled {
@@ -76,7 +77,8 @@ function switchTo(locale) {
 
   &:not(:disabled):hover,
   &:not(:disabled):focus-visible {
-    text-decoration: underline;
+    font-weight: var(--font__weight--bold);
+    text-decoration: none;
   }
 
   &:focus-visible {

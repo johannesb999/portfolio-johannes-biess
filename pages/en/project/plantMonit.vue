@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="project--plantmonit">
     <div class="background">
       <client-only>
         <ScrollLink />
@@ -32,16 +32,10 @@
 
     <div class="project-details">
       <section id="details-section">
-        <p class="project-intro">
-          PlantMonit makes houseplant care needs visible through sensor data, camera images and clear advice in one application. The team developed the software and hardware prototype during the second semester over three months.
-        </p>
         <ProjectAccordion :items="accordionItems" id-prefix="plantmonit" />
       </section>
 
       <div class="project-section">
-        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
-          '                         [PROJECT] [VIDEO]                          ',
-        ]" />
         <div class="project-film">
           <VideoEmbed id="bKC-N5-m5u0" title="PlantMonit — project video" poster="/img/pm/video-poster.webp" />
         </div>
@@ -64,7 +58,10 @@ const accordionItems = [
   {
     title: 'The solution',
     alwaysOpen: true,
-    body: 'A device next to the plant records its environment; the app brings measurements and care advice together. People with little time or plant care experience no longer have to judge their houseplants by intuition alone. Sensors and visual analysis complement each other within the system.',
+    paragraphs: [
+      'PlantMonit helps people with little time or plant care experience look after their houseplants. A device next to the plant captures environmental data and camera images. The app shows the plant’s condition and offers suitable care advice.',
+      'We developed the software and hardware prototype as a team over three months during our second semester.',
+    ],
     images: [
       '/img/pm/solution.svg',
     ],
@@ -112,6 +109,7 @@ const accordionItems = [
       '/img/pm/hardware.svg',
       '/img/pm/process.svg',
     ],
+    imageFits: ['cover', 'contain'] as const,
     imageAlts: [
       'PlantMonit hardware prototype with microcontroller, sensors and wiring',
       'PlantMonit housing design with a camera and soil spike',

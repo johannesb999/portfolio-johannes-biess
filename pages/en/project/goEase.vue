@@ -33,9 +33,6 @@
       </section>
 
       <div class="project-section">
-        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
-          '                       [PROJECT] [VIDEO]                        ',
-        ]" />
         <div class="project-film">
           <VideoEmbed id="_YpyL8_qQfw" title="GoEase — project video" poster="/img/ge/video-poster.webp" />
         </div>

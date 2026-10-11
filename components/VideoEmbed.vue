@@ -1,31 +1,35 @@
 <template>
-  <div class="video" :style="{ aspectRatio: ratio }">
-    <AppLink
-      v-if="poster && !isPlaying"
-      class="video__poster"
-      :scale="false"
-      :aria-label="resolvedPlayLabel"
-      @click="play"
-    >
-      <img class="video__image" :src="poster" alt="" />
-      <span class="video__play-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" focusable="false">
-          <path d="M8 5v14l11-7z" />
-        </svg>
-      </span>
-    </AppLink>
-    <iframe
-      v-else
-      ref="frame"
-      class="video__frame"
-      :src="src"
-      :title="title"
-      :loading="poster ? 'eager' : 'lazy'"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    />
-  </div>
+  <section class="project-video">
+    <SplitFlapText class="project-video__heading" tag="h2" preset="bannerFlap" align="center" :texts="videoHeading" />
+    <div class="video" :style="{ aspectRatio: ratio }">
+      <AppLink
+        v-if="poster && !isPlaying"
+        class="video__poster"
+        :scale="false"
+        :aria-label="resolvedPlayLabel"
+        @click="play"
+      >
+        <img class="video__image" :src="poster" alt="" />
+        <span class="video__shade" aria-hidden="true" />
+        <span class="video__play-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </span>
+      </AppLink>
+      <iframe
+        v-else
+        ref="frame"
+        class="video__frame"
+        :src="src"
+        :title="title"
+        :loading="poster ? 'eager' : 'lazy'"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      />
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -46,6 +50,7 @@ const props = withDefaults(defineProps<{
 });
 
 const route = useRoute();
+const videoHeading = computed(() => [route.path.startsWith('/de/') ? '[PROJEKT] [VIDEO]' : '[PROJECT] [VIDEO]']);
 const isPlaying = ref(false);
 const frame = ref<HTMLIFrameElement | null>(null);
 
@@ -69,7 +74,25 @@ async function play() {
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/styles/breakpoints' as bp;
+
+.project-video {
+  display: grid;
+  grid-template-areas: 'heading' 'player';
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--project__media--gap);
+  width: 100%;
+}
+
+.project-video__heading {
+  grid-area: heading;
+  display: grid;
+  justify-items: center;
+  margin: 0;
+}
+
 .video {
+  grid-area: player;
   position: relative;
   width: 100%;
 }
@@ -115,14 +138,30 @@ async function play() {
   top: 50%;
   left: 50%;
   display: grid;
-  width: var(--spacing--big);
+  width: max(var(--control__size--minimum), var(--spacing--big));
   aspect-ratio: 1;
   place-items: center;
   border-radius: 50%;
   background-color: var(--color--primary-translucent);
   color: var(--color--background);
   transform: translate(-50%, -50%);
+  transition: transform var(--video__motion--duration) ease;
   pointer-events: none;
+}
+
+.video__shade {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--video__overlay--color);
+  opacity: 0;
+  transition: opacity var(--video__motion--duration) ease;
+  pointer-events: none;
+}
+
+.video__poster:is(:hover, :focus-visible) {
+  .video__shade { opacity: 1; }
+  .video__play-icon { transform: translate(-50%, -50%) scale(var(--video__play--scale)); }
 }
 
 .video__play-icon svg {
@@ -137,5 +176,11 @@ async function play() {
   border: var(--border__size) solid var(--border__color);
   border-radius: var(--border__radius);
   background-color: var(--color--gray-light);
+}
+
+@include bp.reduced-motion {
+  .video__shade,
+  .video__play-icon { transition: none; }
+  .video__poster:is(:hover, :focus-visible) .video__play-icon { transform: translate(-50%, -50%); }
 }
 </style>

@@ -47,6 +47,7 @@ function enlarge(event: MouseEvent) {
     max-height: var(--image__max-height, none);
     aspect-ratio: var(--image__ratio, auto);
     object-fit: var(--image__fit, contain);
+    background: var(--image__background, transparent);
   }
 }
 </style>

@@ -51,9 +51,11 @@
                 v-for="(src, imgIdx) in item.images"
                 :key="src"
                 class="acc__figure"
+                :class="{ 'acc__figure--contained': item.imageFits?.[imgIdx] === 'contain' }"
               >
               <ZoomableImage
                 :src="src"
+                :style="{ '--image__fit': item.imageFits?.[imgIdx] }"
                 :alt="item.imageAlts?.[imgIdx] || `${item.title} — ${figureLabel} ${imgIdx + 1}`"
                 loading="lazy"
               />
@@ -76,6 +78,7 @@ type AccordionItem = {
   paragraphs?: string[];
   points?: string[];
   images?: string[];
+  imageFits?: readonly ('contain' | 'cover')[];
   imageAlts?: string[];
   imageCaptions?: string[];
   slot?: string;
@@ -266,6 +269,9 @@ const hasPoints = (item: AccordionItem) => Boolean(item.points?.length);
   width: 100%;
   --image__ratio: var(--accordion__image--ratio);
 }
+
+// Portrait product renderings retain the entire object on a filled canvas.
+.acc__figure--contained { --image__background: var(--color--gray-light); }
 
 @include bp.side-by-side {
   .acc__content--media {

@@ -1,13 +1,13 @@
 <template>
   <ul class="tiles">
     <li v-for="project in playgroundProjects" :key="project.route" class="tiles__item" :style="{ gridArea: project.route }">
-      <div class="tile">
-        <ZoomableImage class="tile__image" :src="project.thumb" :alt="project.label" loading="lazy" />
-        <AppLink class="tile__caption" :to="`/${locale}/project/${project.route}`" :scale="false">
-          <span class="tile__label">{{ project.label }} <span aria-hidden="true">↓</span></span>
+      <AppLink class="tile" :to="`/${locale}/project/${project.route}`" :scale="false">
+        <img class="tile__image" :src="project.thumb" alt="" loading="lazy" />
+        <span class="tile__caption">
+          <span class="tile__label">{{ project.label }}</span>
           <span v-if="project.description" class="tile__description">{{ project.description[locale] }}</span>
-        </AppLink>
-      </div>
+        </span>
+      </AppLink>
     </li>
     <li class="tiles__placeholder" aria-hidden="true" />
   </ul>
@@ -61,15 +61,11 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 
 .tile {
   margin: 0;
-}
-
-.tile__caption {
-  margin: 0;
   color: var(--color--primary);
   text-decoration: none;
 
-  &:hover,
-  &:focus-visible {
+  &:hover .tile__caption,
+  &:focus-visible .tile__caption {
     color: var(--color--accent);
   }
 
@@ -80,8 +76,8 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 }
 
 .tile__image {
-  --image__fit: cover;
-  --image__height: 100%;
+  display: block;
+  object-fit: cover;
   grid-area: image;
   box-sizing: border-box;
   min-height: 0;

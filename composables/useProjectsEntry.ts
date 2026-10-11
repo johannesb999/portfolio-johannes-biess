@@ -5,9 +5,8 @@ import { useRuntimeConfig } from "#imports";
 /**
  * Pfad, auf den jeder "Projekte"-Link zeigen soll.
  *
- * Solange die Projektseiten online ausgeblendet sind, ist das die
- * Baustellen-Seite; lokal (bzw. sobald sie freigeschaltet sind) die erste
- * Station des Karussells. Festgelegt wird das in nuxt.config.ts
+ * Standardmaessig die erste Station des Karussells; nur im ausdruecklich
+ * aktivierten Baustellen-Modus die Construction-Seite. Festgelegt wird das in nuxt.config.ts
  * (runtimeConfig.public.projectsEntry), damit es zu den Weiterleitungen passt.
  *
  * composables/projects.ts bleibt bewusst frei von Nuxt-Imports — die Datei wird

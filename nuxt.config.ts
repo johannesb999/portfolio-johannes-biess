@@ -9,21 +9,17 @@ import {
 // Allow deploying under a subpath by honoring NUXT_APP_BASE_URL (e.g. "/portfolio-johannes-biess/")
 const base = process.env.NUXT_APP_BASE_URL || "/";
 
-// Die einzelnen Projektseiten sind online ausgeblendet ("under construction"),
-// lokal aber erreichbar:
-//   npm run dev                  -> Projektseiten sichtbar
-//   npm run build / generate     -> Direktaufrufe landen auf der Baustellen-Seite
+// Projektseiten sind standardmaessig sichtbar:
+//   npm run dev / build / generate -> Projekte sichtbar
 //
-// Umschaltbar über SHOW_PROJECTS, um den jeweils anderen Zustand zu pruefen:
-//   SHOW_PROJECTS=false npm run dev       -> lokal wie online (Baustelle)
-//   SHOW_PROJECTS=true  npm run build     -> Projekte gehen online
+// SHOW_PROJECTS=false aktiviert bei Bedarf den Baustellen-Modus, auch im Build.
 //
 // Der Wert steuert beides: die Weiterleitungen hier und die Projektliste auf der
 // Baustellen-Seite (ueber runtimeConfig.public.showProjects).
 const showProjects =
   process.env.SHOW_PROJECTS !== undefined
     ? process.env.SHOW_PROJECTS === "true"
-    : process.env.NODE_ENV === "development";
+    : true;
 
 const hiddenProjectRoutes = showProjects
   ? Object.fromEntries(

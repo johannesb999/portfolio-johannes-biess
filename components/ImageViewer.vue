@@ -265,13 +265,14 @@ onBeforeUnmount(() => { if (import.meta.client) finishClose(); });
   min-width: 0;
   min-height: 0;
   overflow: hidden;
+  border-radius: var(--border__radius);
   touch-action: none;
 }
 .viewer__image {
   display: block;
   max-width: none;
   border: 0;
-  border-radius: 0;
+  border-radius: var(--border__radius);
   object-fit: contain;
   cursor: zoom-in;
   user-select: none;

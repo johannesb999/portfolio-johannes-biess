@@ -37,9 +37,6 @@
       <AppLink class="tryOutLink" href="https://starsapp.johannes-biess.com/" label="TRY IT OUT LIVE" size="xxxxl" weight="bold" underline />
 
       <div class="project-section">
-        <SplitFlapText tag="h2" preset="bannerFlap" :align="'center'" :texts="[
-          '                       [PROJECT] [VIDEO]                       ',
-        ]" />
         <div class="project-film">
           <VideoEmbed id="5N_OzRcDetc" title="JumpStar — project video" poster="/img/js/video-poster.webp" />
         </div>

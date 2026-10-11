@@ -1,6 +1,34 @@
 # Portfolio-Audit
 
-Stand: 11. Oktober 2026 · Audit mit anschließendem Umsetzungsstand; jüngste Runde: Bildansicht, Kacheln und Sprachwechsel
+Stand: 11. Oktober 2026 · Audit mit anschließendem Umsetzungsstand; jüngste Runde: Seitenwechsel, Playground und Projektfreigabe
+
+## Seitenwechsel, Playground und Projektfreigabe
+
+Der Seitenwechsel behält seine 700 ms und die bisherige Beschleunigung. Ein gerichteter Schatten an der gemeinsamen Kante ersetzt den Rundum-Schatten beider Seiten. Auf Johannes' Wunsch läuft die Kante jetzt deutlich breiter und weicher aus: Der Blur der nahen Schattenebene steigt von 0,75 auf 3 rem, der äußeren Ebene von 3,25 auf 6,5 rem. Deckkraft und Versatz bleiben auf der zuletzt abgeschwächten Abstimmung (10/20 % im hellen Farbschema), damit der größere Verlauf nicht dunkler wird. Im Dark Mode bleibt der Schatten dunkel. Die vorhandenen Regeln für reduzierte Bewegung bleiben erhalten. Umsetzung in [transitions.scss](C:/Users/biess/Github/portfolio-johannes-biess/assets/styles/transitions.scss) und den [Design-Token](C:/Users/biess/Github/portfolio-johannes-biess/app.vue); die konkreten Werte sind ein eigener Gestaltungsvorschlag nach Johannes' Rückmeldung.
+
+[LanguageSwitch](C:/Users/biess/Github/portfolio-johannes-biess/components/LanguageSwitch.vue) setzt den verfügbaren Sprachlink bei Hover und Tastaturfokus fett, ohne Unterstrich. Die aktuelle Sprache bleibt grau. Die gesamten [Playground-Kacheln](C:/Users/biess/Github/portfolio-johannes-biess/components/ProjectTiles.vue) sind jetzt Projektlinks ohne Pfeile. Ihre Bilder öffnen keine Großansicht; Hinweg nach unten und Rückweg nach oben bleiben bestehen. PlantMonits bisherige Einleitung ist mit dem offenen Lösungsabschnitt zusammengeführt, in [Deutsch](C:/Users/biess/Github/portfolio-johannes-biess/pages/de/project/plantMonit.vue) und [Englisch](C:/Users/biess/Github/portfolio-johannes-biess/pages/en/project/plantMonit.vue). Grundlage sind die bestehenden Seitentexte; es wurden keine neuen Projektangaben ergänzt.
+
+Der Produktionsstandard in [nuxt.config.ts](C:/Users/biess/Github/portfolio-johannes-biess/nuxt.config.ts) ist jetzt `showProjects: true`. Die bisherige Entwicklungsprüfung war der Grund für den Construction-Einstieg online. Ein Subagent änderte gezielt diesen Standard und die zugehörigen Hinweise; Integration und Prüfung erfolgten selbst. `SHOW_PROJECTS=false` bleibt ein ausdrücklicher Baustellen-Modus. Archivierte Projekte bleiben ausgeblendet. Der Build muss für die Veröffentlichung erneut bereitgestellt werden; die öffentliche Website wurde nicht verändert.
+
+**Prüfung:** Produktionsbuild ohne `SHOW_PROJECTS`-Sonderfreigabe erfolgreich; lokale HTTP-Prüfung bestätigt 200 für aktive Projekte, Beacon als Ziel beider Startseiten und 302 von archivierten Projekten nach Playground. Chromium bei 1280 und 375 px: Bildklick öffnet TrickyTowers ohne Dialog, Tastatur öffnet DrawingLight, alle drei Kacheln besitzen den richtigen Projektlink. Kein horizontaler Überlauf in den geprüften schmalen Ansichten. Beide Sprach-Hover verwenden Schriftgewicht 700 ohne Unterstrich oder Breitenänderung. PlantMonit zeigt genau einen Einstieg und 16 px Fließtext auf Mobile. Richtungen links/rechts/unten/oben geprüft; die verstärkte Schattenfassung zusätzlich seitlich und nach unten visuell geprüft. Keine Warnungen oder Fehler in der geprüften Produktionsvorschau.
+
+Die feinere Schattenabstimmung wurde beim Übergang Start → Über mich im Chromium-Browser geprüft. Der anschließend verbreiterte Blur wurde erneut erfolgreich gebaut und beim Wechsel Beacon → Playground visuell kontrolliert: 700 ms und Beschleunigung unverändert, nach Ende des Übergangs kein verbleibender Schatten.
+
+**Nicht geprüft:** Safari/iOS, Firefox und erneute Veröffentlichung auf dem Live-Host.
+
+## Videos und PlantMonit-Bilder
+
+`VideoEmbed` enthält jetzt die gemeinsame Split-Flap-Überschrift „PROJEKT VIDEO“ / „PROJECT VIDEO“. Die bisherigen Überschriften auf den einzelnen Seiten wurden entfernt, KAI erhält dieselbe Überschrift automatisch. Überschrift–Player verwendet den Medienabstand, vor beziehungsweise nach dem Videoblock bleibt der größere Abschnittsabstand. Alle fünf Videos in beiden Sprachen verwenden diesen Aufbau. Die gesamte Posterfläche reagiert auf Hover und Tastaturfokus: Eine dunkle Überlagerung blendet ein und der Play-Kreis wächst auf 115 %. Bei reduzierter Bewegung bleibt die Rückmeldung ohne Animation und Skalierung. Der Play-Kreis ist auch mobil mindestens 44 px groß.
+
+PlantMonits SVG-Dateien haben unterschiedliche Seitenverhältnisse. Die festen 4:3-Vorschauen füllen sich nun mit `cover`; das hochkantige, transparente Gehäuserendering bleibt vollständig eingepasst auf einer neutral gefüllten Kachel, damit die Kamera nicht abgeschnitten wird. Die Großansicht zeigt weiterhin das vollständige Original. Bilder und begrenzender Ausschnitt der Großansicht besitzen wieder den gemeinsamen Eckenradius. Der auf KAI/Beacon bereits geprüfte 1,5-fache Zeilenabstand gilt jetzt für alle Projektakkordeons.
+
+Quellgeometrie und Transparenz unter [PlantMonit-Bilder](C:/Users/biess/Github/portfolio-johannes-biess/public/img/pm) wurden durch einen lesenden Subagenten untersucht, die Bildausschnitte selbst im Browser geprüft. Eigene Chromium-Stichproben bei 1280 und 375 px: KAI besitzt genau eine Videoüberschrift, mit rund 38/24 px Abstand zum Player und rund 77/48 px zum folgenden Akkordeon. Hover wechselt von transparenter Überlagerung und 100 % Icongröße zu sichtbarer Überlagerung und 115 %, über 220 ms. Tastaturfokus zeigt dieselbe Rückmeldung; Enter erzeugt den YouTube-Player mit Autoplay und übergibt den Fokus. Englische Überschrift, erhaltene Playerbreite von 300 px auf Mobile, kein horizontaler Überlauf und der Großansichts-Radius wurden geprüft.
+
+Die hier noch doppelte PlantMonit-Einleitung wurde in der nachfolgenden Runde mit dem Lösungsabschnitt zusammengeführt; siehe den aktuellen Stand oben.
+
+Produktionsbuild mit sichtbaren Projekten erfolgreich.
+
+**Nicht geprüft:** Vollständige externe Videowiedergabe, Safari/iOS und Firefox.
 
 ## Bildansicht, Kacheln und Sprachwechsel
 
