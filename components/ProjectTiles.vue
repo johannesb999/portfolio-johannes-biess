@@ -2,7 +2,10 @@
   <ul class="tiles">
     <li v-for="project in playgroundProjects" :key="project.route" class="tiles__item" :style="{ gridArea: project.route }">
       <AppLink class="tile" :to="`/${locale}/project/${project.route}`" :scale="false">
-        <img class="tile__image" :src="project.thumb" alt="" loading="lazy" />
+        <svg v-if="project.thumbFrame" class="tile__image" :viewBox="project.thumbFrame.viewBox" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <image :href="project.thumb" :width="project.thumbFrame.width" :height="project.thumbFrame.height" />
+        </svg>
+        <img v-else class="tile__image" :src="project.thumb" alt="" loading="lazy" />
         <span class="tile__caption">
           <span class="tile__label">{{ project.label }}</span>
           <span v-if="project.description" class="tile__description">{{ project.description[locale] }}</span>
@@ -30,11 +33,12 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 .tiles {
   display: grid;
   grid-template-areas:
-    "trickyTowers trickyTowers trickyTowers jumpStar jumpStar jumpStar"
-    "drawingLight drawingLight drawingLight drawingLight placeholder placeholder";
+    "trickyTowers trickyTowers jumpStar jumpStar jumpStar jumpStar"
+    "trickyTowers trickyTowers drawingLight drawingLight drawingLight placeholder";
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  grid-template-rows: repeat(2, var(--playground__tile--row));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: var(--playground__tiles--gap);
+  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -52,7 +56,7 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
   grid-template-areas:
     "image"
     "label";
-  gap: var(--spacing--sm);
+  gap: var(--spacing--xs);
   grid-template-rows: minmax(0, 1fr) auto;
   min-width: 0;
   min-height: 0;
@@ -78,11 +82,20 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 .tile__image {
   display: block;
   object-fit: cover;
+  object-position: center;
   grid-area: image;
   box-sizing: border-box;
+  min-width: 0;
   min-height: 0;
   width: 100%;
   height: 100%;
+}
+
+// A viewport removes whitespace in the source without changing the original.
+svg.tile__image {
+  overflow: hidden;
+  border: var(--border__size) solid var(--border__color);
+  border-radius: var(--border__radius);
 }
 
 .tile__caption,
@@ -91,9 +104,10 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
   text-align: center;
   transition: color 0.3s ease;
   @include type.text(lg, normal);
+  line-height: var(--line-height--big);
 }
 
-.tile__caption { display: grid; gap: var(--spacing--xs); }
+.tile__caption { display: grid; gap: var(--spacing--xxs); }
 .tile__description { @include type.text(lg, light, alt, big); }
 
 .tiles__placeholder {
@@ -110,6 +124,7 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
   &::after {
     content: '\00a0\a\00a0';
     white-space: pre;
+    padding-bottom: var(--spacing--xxs);
   }
 }
 
@@ -120,6 +135,7 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
       "drawingLight placeholder";
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(2, var(--playground__tile--row));
+    height: auto;
   }
 }
 

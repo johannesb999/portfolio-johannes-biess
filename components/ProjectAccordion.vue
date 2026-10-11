@@ -171,7 +171,7 @@ const hasPoints = (item: AccordionItem) => Boolean(item.points?.length);
     outline-offset: var(--spacing--xxs);
   }
 
-  &:not(.acc__top--static):hover .acc__title {
+  &:not(.acc__top--static):is(:hover, :focus-visible) .acc__title {
     color: var(--accordion__color--interactive);
   }
 

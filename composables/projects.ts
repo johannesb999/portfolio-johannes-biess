@@ -9,6 +9,8 @@ export type ProjectEntry = {
   label: string;
   /** Vorschaubild fuer die Playground-Kacheln */
   thumb?: string;
+  /** Artwork viewport, excluding empty margins in the original SVG. */
+  thumbFrame?: { viewBox: string; width: number; height: number };
   description?: { de: string; en: string };
 };
 
@@ -19,19 +21,18 @@ export type ProjectEntry = {
 export const mainProjects: ProjectEntry[] = [
   { route: "beacon", label: "BEACON" },
   { route: "kai", label: "KAI" },
-  { route: "goEase", label: "GOEASE" },
   { route: "plantMonit", label: "PLANTMONIT" },
   { route: "playground", label: "PLAYGROUND" },
+  { route: "goEase", label: "GOEASE" },
 ];
 
 /**
  * Kleinere Arbeiten. Liegen als Kacheln auf der Playground-Seite und bilden
- * dort eine eigene Kette, die an beiden Enden zurueck zum Playground fuehrt —
- * man kann also nicht aus ihr herausfallen.
+ * dort eine eigene, geschlossene Kette.
  */
 export const playgroundProjects: ProjectEntry[] = [
-  { route: "trickyTowers", label: "TRICKYTOWERS", thumb: "/img/tt/tt (1).svg", description: { de: 'Ein räumliches Spiel mit Projektion und Gesten.', en: 'A spatial game using projection and gestures.' } },
-  { route: "jumpStar", label: "JUMPSTAR", thumb: "/img/js/thumbnail.svg", description: { de: 'Sternendaten als interaktive Reise durch den Raum.', en: 'An interactive journey through stellar data.' } },
+  { route: "trickyTowers", label: "TRICKYTOWERS", thumb: "/img/tt/tt (1).svg", thumbFrame: { viewBox: '1100 205 800 1610', width: 3000, height: 2250 }, description: { de: 'Ein räumliches Spiel mit Projektion und Gesten.', en: 'A spatial game using projection and gestures.' } },
+  { route: "jumpStar", label: "JUMPSTAR", thumb: "/img/js/thumbnail.svg", thumbFrame: { viewBox: '225 220 1020 575', width: 1500, height: 1125 }, description: { de: 'Sternendaten als interaktive Reise durch den Raum.', en: 'An interactive journey through stellar data.' } },
   { route: "drawingLight", label: "DRAWINGLIGHT", thumb: "/img/dl/thumbnail.svg", description: { de: 'Gesten werden zu mechanischer Lichtmalerei.', en: 'Gestures translated into mechanical light painting.' } },
 ];
 
@@ -60,12 +61,10 @@ export const hideableProjects: string[] = [
 ];
 
 /**
- * Nachbarn im Karussell. Hauptprojekte laufen im Kreis; bei den kleineren
- * Arbeiten steht an beiden Enden der Playground.
+ * Nachbarn im Karussell. Hauptprojekte und kleinere Arbeiten laufen jeweils
+ * in einem eigenen Kreis.
  */
 export function projectNeighbours(current: string): { prev: ProjectEntry; next: ProjectEntry } | null {
-  const playground = mainProjects.find((p) => p.route === "playground")!;
-
   const mainIdx = mainProjects.findIndex((p) => p.route === current);
   if (mainIdx !== -1) {
     return {
@@ -77,8 +76,8 @@ export function projectNeighbours(current: string): { prev: ProjectEntry; next: 
   const smallIdx = playgroundProjects.findIndex((p) => p.route === current);
   if (smallIdx !== -1) {
     return {
-      prev: playgroundProjects[smallIdx - 1] ?? playground,
-      next: playgroundProjects[smallIdx + 1] ?? playground,
+      prev: playgroundProjects[(smallIdx - 1 + playgroundProjects.length) % playgroundProjects.length],
+      next: playgroundProjects[(smallIdx + 1) % playgroundProjects.length],
     };
   }
 

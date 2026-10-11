@@ -14,11 +14,11 @@
           '[BEACON]',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-          'HELP NETWORK',
-          'BACHELOR THESIS',
-          'FIGMA   UI   UX',
-          'RESEARCH   PROTOTYPING',
-          'BRANDING   CAMPAIGN',
+          'LOCAL SUPPORT NETWORK',
+          'CONCEPT DEVELOPMENT',
+          'USE UNDER STRESS',
+          'ROLES AND RESPONSIBILITY',
+          'TESTING AND ITERATION',
         ]" />
       </div>
 
@@ -56,11 +56,11 @@
 // Content follows the documentation; interface questions are editorial, not the original HMW set.
 const accordionItems = [
   {
-    "title": "The solution",
+    "title": "Beacon on the way home",
     "alwaysOpen": true,
-    "body": "Beacon is a local support network for walking home at night. The app connects people who feel unsafe with helpers and safe places nearby. They can see where support is available before a situation becomes an emergency.",
+    "body": "Someone who feels unsafe on the way home at night can use Beacon to see whether people and safe places are available nearby. This orientation is available before they need to request help.",
     "paragraphs": [
-      "A request for help can be prepared and sent discreetly. Beacon assigns helpers a concrete task and guides the person seeking help to a safe place. They know what to do next and do not have to face the situation alone."
+      "When help is needed, they can send a discreet request. Individual helpers receive a specific task: offer a safe place or walk towards the person. The map and direction arrow show the person seeking help where they can go."
     ],
     "images": [
       "/img/beacon/overview.webp"
@@ -69,45 +69,45 @@ const accordionItems = [
       "Beacon: map of available support, request for help and navigation to a safe place"
     ],
     "imageCaptions": [
-      "The app shows available support and guides the journey until people meet."
+      "Available help, a request for support and a route to a safe place in one sequence."
     ]
   },
   {
-    "title": "Research: understanding uncertainty",
+    "title": "When the way home feels unsafe",
     "slot": "research"
   },
   {
-    "title": "Why a support network?",
-    "body": "The research showed that help needs to be available early and along a freely chosen route home. We developed four approaches: a support network, fixed safe spaces, stationed drones and forming groups. Using the Thinking Hats method, we compared their impact, potential and risks against the seven requirements.",
+    "title": "A network of people and places",
+    "body": "Two requirements mattered most when choosing the concept: help should be available early and work along a freely chosen route, including between fixed safe spaces. We compared four approaches: a support network, fixed safe spaces, stationed drones and forming groups. We assessed them against the seven requirements drawn from the research.",
     "paragraphs": [
-      "We chose to develop the support network because it involves existing people and places and offers support between individual safe spaces. This requires clear limits to the helpers’ roles: they offer a safe place or walk towards the person seeking help. Before a request, their locations must not reveal their movements or absence."
+      "The support network makes use of existing people and places, so it can offer help between individual safe spaces. Participants have distinct roles: one person seeks help, mobile helpers can walk towards them, and a safe place gives them a destination. Before a request, Beacon shows only how many helpers are available. Their exact locations stay hidden so their movements and absence cannot be inferred."
+    ]
+  },
+  {
+    "title": "Using Beacon under stress",
+    "slot": "decisions"
+  },
+  {
+    "title": "Trust and launching the network",
+    "body": "People in the network usually do not know each other. Everyone therefore provides the same personal details, verifies their identity and acknowledges the rules of conduct. Helpers also learn to put their own safety before intervening.",
+    "paragraphs": [
+      "Before first use, a demo introduces the request for help and its haptic feedback. People who want to help learn their task and its limits. To launch the network, we considered starting with existing places open at night. Their staff need clear procedures and an introduction before private helpers can extend the service."
     ],
     "images": [
       "/img/beacon/campaign.webp"
     ],
     "imageAlts": [
-      "Beacon campaign for the local support network"
+      "Beacon campaign inviting people to join the support network"
     ],
     "imageCaptions": [
-      "The campaign invites people to join the network as helpers."
+      "The campaign invites more people to join the network as helpers."
     ]
   },
   {
-    "title": "Using Beacon",
-    "slot": "decisions"
-  },
-  {
-    "title": "Trust and preparation",
-    "body": "The network brings together people who usually do not know each other. They start with the same requirements: everyone provides the same personal details, verifies their identity and acknowledges the rules of conduct. These include putting their own safety before intervention.",
+    "title": "Team and project status",
+    "body": "Beacon was a bachelor’s thesis by Johannes Biess, Jannik Flaig and Aileen Kling. We developed the research, concept and design together. My focus was UI and UX, along with the reasoning and structure of the documentation.",
     "paragraphs": [
-      "Before the first use, a demo guides people through a request for help. It introduces the interaction and haptic feedback so these do not have to be learned in an unsafe situation. The preparation also explains what kind of help is expected and where the helpers’ responsibilities end."
-    ]
-  },
-  {
-    "title": "Project scope",
-    "body": "Beacon was our bachelor’s thesis as the Biess, Flaig and Kling team. We developed the research, concept and design together. My focus was UI and UX, along with the reasoning and structure of the documentation.",
-    "paragraphs": [
-      "The work includes the interaction concept, detailed interfaces, branding and a campaign. We also considered how to launch the network through existing places that are open at night. Their staff need clear procedures and an introduction to their role before private helpers expand the network."
+      "The work includes the interaction concept, detailed interfaces, branding and a campaign. A programmed prototype simulated the three roles and how they exchange information. Participants tested the interactions under time pressure. That did not establish whether Beacon would also be easy to use when someone is truly afraid."
     ],
     "images": [
       "/img/beacon/team.webp"
@@ -116,7 +116,7 @@ const accordionItems = [
       "The Beacon project team"
     ],
     "imageCaptions": [
-      "A joint bachelor’s thesis by Biess, Flaig and Kling."
+      "A joint bachelor’s thesis by Johannes Biess, Jannik Flaig and Aileen Kling."
     ]
   }
 ];

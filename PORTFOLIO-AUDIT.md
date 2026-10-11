@@ -1,6 +1,63 @@
 # Portfolio-Audit
 
-Stand: 11. Oktober 2026 · Audit mit anschließendem Umsetzungsstand; jüngste Runde: Seitenwechsel, Playground und Projektfreigabe
+Stand: 11. Oktober 2026 · Audit mit anschließendem Umsetzungsstand; jüngste Runde: kompakter Playground, KAI-Kontrast und Vorschlag zur Projektgeschichte
+
+## Playground, Kontrast und Projektgeschichte
+
+### Umgesetzt
+
+Der Playground hat auf Desktop dieselbe Höhe während und nach dem Seitenwechsel. Damit entfällt das nachträgliche Versetzen der zentrierten Inhalte. Die Komposition ist auf 68 rem Breite und 48 rem Höhe begrenzt und passt sich kleineren Bildschirmhöhen an. TrickyTowers erhält eine hohe Kachel, JumpStar eine breite, DrawingLight und der leere Platzhalter teilen sich die untere rechte Reihe. Das lässt den Motiven mehr Raum als zwei gleichmäßig flache Bildreihen. Beschriftungen bleiben mindestens 16 px groß; mobil darf die Seite scrollen.
+
+TrickyTowers und JumpStar verwenden enger gefasste SVG-Bildausschnitte, die leere Ränder der Vorlagen ausnehmen. DrawingLight füllt die Kachel proportional. Die Originaldateien bleiben unverändert. Alle Kacheln führen nach unten in die Projekte; deren seitliche Navigation bildet jetzt den geschlossenen Kreis TrickyTowers → JumpStar → DrawingLight → TrickyTowers. Der obere Link führt zurück zur Übersicht.
+
+KAI verwendet für Hover, Auswahl und Tastaturfokus ein dunkleres Blau: `#34536e` auf `#fbfbfb` (Kontrast 7,78:1), im dunklen Farbschema `#7595bc` auf `#171717` (5,79:1). Die Unterstreichung der Reiter greift den originalen Verlauf `#818db4 → #6dafb5` auf. Die kräftigere Schriftfarbe erhält die Lesbarkeit. Die Verlaufsfarben wurden durch einen Subagenten aus der KAI-Dokumentation, PDF-Seiten 116–118, geprüft und mit dem vorhandenen Mockup verglichen.
+
+Die Teamnamen stehen in beiden Sprachen vollständig in den Showcases: KAI mit Johannes Biess, Jannik Flaig und Paula Romanessi; Beacon mit Johannes Biess, Jannik Flaig und Aileen Kling. Ein inhaltlicher Fehler bei Beacon wurde ebenfalls korrigiert: Der finale Hilferuf beginnt mit Ziehen und anschließendem Halten. Der Text benennt die im Test beobachtete Verwechslung und die daraus entstandene Änderung. Das Taschenlampensignal wird mit dem tatsächlichen Testbefund eingeordnet; das zusätzlich erwogene Codewort erscheint nicht als bereits umgesetzte Funktion.
+
+### Vorschlag für die nächste redaktionelle Runde
+
+**Status: redaktioneller Vorschlag, noch kein Umbau der Showcases.** Johannes' berufliches Profil beschreibt eine bereichsübergreifende Arbeitsweise: den Kontext erschließen, Annahmen prüfen, Erkenntnisse ordnen und die Teile eines Entwurfs zu einem stimmigen Gesamtprojekt verbinden. Meine Ableitung für das Portfolio: Diese Arbeitsweise sollte an Entscheidungen in den Projekten sichtbar werden. Ein zusätzlicher Selbstdarstellungstext auf Start oder About ist dafür nicht nötig.
+
+Die bisherigen Tool- und Methodenlisten zeigen nur begrenzt, was Johannes gestalterisch beitragen kann. Figma, Recherche und Prototyping können bei den Projektdaten stehen. Im Splitflap würde ich Projektart und fachliche Schwerpunkte verbinden:
+
+- **Beacon:** LOKALES HILFENETZWERK · KONZEPTENTWICKLUNG · BEDIENUNG UNTER STRESS · ROLLEN UND VERANTWORTUNG · TESTS UND ITERATION.
+- **KAI:** SERVICEASSISTENZ · MENSCH KI INTERAKTION · ADAPTIVE OBERFLÄCHEN · KONTEXTUELLE HINWEISE · SPRACHPROTOTYP.
+
+Das sind Vorschläge für die Einordnung des Teamprojekts, keine Behauptung, Johannes habe jede zugrunde liegende Leistung allein erbracht. Sein eigener Schwerpunkt bleibt einmal im Teamkontext benannt: UI/UX und die inhaltliche Herleitung und Struktur der Dokumentation, bei gemeinsamen Konzeptentscheidungen.
+
+**KAI:** Der bislang zu wenig sichtbare Gedanke ist die Prüfung der ursprünglichen Problemannahme. Nach dem Sprint ging es nicht mehr nur um die Oberfläche eines Kassensystems, sondern um fehlendes Wissen und Routine bei neuen Servicekräften. Daraus ergeben sich die Assistenz, die anpassbaren Einstiegshilfen und die Einbindung in das Gespräch mit Gästen. Vorgeschlagene Kapitel:
+
+1. **KAI im Service:** In wenigen Sätzen erklären, was die Assistenz leistet; den heutigen offenen Lösungsabschnitt und hochwertige Mockups behalten.
+2. **Einarbeitung im Restaurant:** Die ursprüngliche Annahme, die Recherche und den veränderten Problemfokus verbinden. Die fünf Problemfelder bleiben als Vertiefung erhalten.
+3. **Bestellaufnahme per Sprache:** Das Zusammenspiel von Spracheingabe, sichtbaren Positionen und menschlicher Prüfung erklären. Der programmierte Ablauf des Sprachprototyps passt hierher.
+4. **Hinweise beim Bestellen:** Kontextbezogene Hilfe und anpassbare Einstiegshilfen mit dem passenden Mockup erläutern. Das derzeitige Bild unter „Bestellaufnahme“ zeigt vor allem Hinweise und Wissensabfrage; an dieser Stelle wäre seine Zuordnung schlüssiger.
+5. **Tischübersicht und Orientierung:** Zeigen, wie Aufgaben, Status und Ort zusammengehören.
+6. **Erprobung:** Sprachprototyp und formativen UI-Test konkret auswerten. Beispielsweise funktionierende Bestellaufnahme, Schwierigkeiten bei nachträglichen Änderungen sowie unklare Schritte bei Tischöffnung und Gästezahl. Beobachtung, bereits umgesetzte Änderung und noch offene Aufgabe sauber auseinanderhalten.
+
+**Beacon:** Die besondere Leistung liegt im Zusammenspiel von individueller Unsicherheit, Helferrollen, sicheren Orten und einer verständlichen Bedienung. Der Aufbau des Netzwerks gehört zur Konzeptgeschichte und geht momentan unter „Projektumfang“ unter. Vorgeschlagene Kapitel:
+
+1. **Beacon auf dem Heimweg:** Das Angebot anhand eines kurzen Ablaufs verstehen: Hilfe sehen, anfordern, einen sicheren Ort erreichen.
+2. **Unsicherheit und Eskalation:** Vier Faktoren, Eskalationsstufen und Anforderungen als zusammenhängende Herleitung erklären; die vorhandenen Reiter bleiben sinnvoll.
+3. **Das lokale Hilfenetzwerk:** Die Wahl gegenüber anderen Konzepten und die Aufgaben der Beteiligten erklären. Eine kleine programmierte Darstellung von hilfesuchender Person, mobilen Helfenden und sicherem Ort wäre hier aussagekräftiger als ein Kampagnenbild.
+4. **Bedienung unter Stress:** Die zentralen Interaktionen mit ihren Originalmockups zeigen. Die Begründung jeweils direkt an der Entscheidung nennen.
+5. **Test und Überarbeitung:** An einem gut nachvollziehbaren Beispiel zeigen, was sich geändert hat: Antippen statt Halten wurde beobachtet; der Entwurf erhielt eine vorgelagerte Zieh-Geste. Eine schlichte Gegenüberstellung von getesteter und überarbeiteter Interaktion kann diesen Schritt verständlich machen.
+6. **Vertrauen und Aufbau des Netzwerks:** Identitätsprüfung, Vorbereitung der Helfenden und den Einstieg über bereits bestehende sichere Orte zusammenbringen. Team und Studienkontext anschließend kompakt bei den Projektdaten einordnen.
+
+Die Kapitel sollen auch einzeln verständlich sein: ein konkreter Einstieg, ein entscheidender Gedanke und das passende Mockup oder eine sparsame programmierte Darstellung. Bei fortlaufender Lektüre muss jeweils erkennbar sein, wie die vorherige Erkenntnis den nächsten Entwurfsschritt beeinflusst. Dafür würde ich vage Titel wie „Projektumfang“ und allgemeine Methodennamen durch konkrete Gegenstände ersetzen. Die sprachliche Referenz bleiben die Dokumentationen. Produktnutzen darf selbstbewusst stehen; genaue Testbefunde zeigen zusätzlich die gestalterische Arbeit.
+
+### Eingeflossen
+
+- [Steckbrief](<G:/Meine Ablage/Beruf/Johannes - Berufliches Profil/Steckbrief.md>), [Denk- und Arbeitsweise](<G:/Meine Ablage/Beruf/Johannes - Berufliches Profil/08_Wie-ich-denke-und-arbeite/Denkweise.md>) und [Fähigkeiten und Projektbelege](<G:/Meine Ablage/Beruf/Johannes - Berufliches Profil/09_Faehigkeiten-und-Projektbelege/Faehigkeiten-und-Projektbelege.md>) — selbst gezielt gelesen; berufliche Schwerpunkte, eigene Einordnung und Unterscheidung zwischen Selbstauskunft und abgeleiteten Aussagen. Stellen, die das bestehende Portfolio zitieren, wurden nicht als unabhängiger Beleg gewertet.
+- [KAI-Dokumentation](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/kai/kai-dokumentation-de.pdf) — durch einen Subagenten gezielt textlich und visuell geprüft, insbesondere PDF-Seiten 2, 25–26, 36–37, 110–118: Team, Problemfokus, Erprobung und Originalfarben.
+- [Beacon-Dokumentation](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/beacon/beacon-dokumentation-de.pdf) — durch einen Subagenten gezielt geprüft, insbesondere PDF-Seiten 1–2, 74–75, 82–88 und 120: Team, Drei-Rollen-Prototyp, Beobachtungen und Änderungen an der Interaktion. Die PDF zeigt Doppelseiten.
+- [Projektstruktur](C:/Users/biess/Github/portfolio-johannes-biess/composables/projects.ts), [Kacheln](C:/Users/biess/Github/portfolio-johannes-biess/components/ProjectTiles.vue), [Playground-Layout](C:/Users/biess/Github/portfolio-johannes-biess/assets/styles/playground.scss), KAI-/Beacon-Seiten und ihre Detailkomponenten — Ist-Aufbau und Umsetzung. Drei Subagenten unterstützten Navigation, Raster und Dokumentationsabgleich; Integration und Browserprüfung durch den Hauptagenten.
+- [Humanizer-Leitfaden](C:/Users/biess/.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/humanizer/SKILL.md) — Hilfe für konkrete, sachliche Formulierungen; inhaltliche Aussagen stammen aus den oben benannten Quellen und Johannes' Rückmeldungen.
+
+**Prüfung:** Eigene Chromium-Stichproben bei 1280×720, 1366×768, 1920×1080 und 375×812. Desktop-Komposition vollständig innerhalb des Viewports, mobil kein horizontaler Überlauf und 16 px Beschriftungen. Beim seitlichen Einstieg in den Playground blieben Inhaltshöhe und Abstand zur Seitenoberkante während und nach der Animation identisch. DrawingLight → TrickyTowers im Browser mit tatsächlichem gerichteten Übergang geprüft. KAI-Auswahlfarbe und Originalverlauf in der gerenderten Oberfläche, helle und dunkle Schriftfarbe sowie Hover geprüft; keine Warnungen oder Fehler in den dabei geprüften Browsermeldungen.
+
+Produktionsbuild mit sichtbaren Projekten erfolgreich. Die lokale Entwicklungsvorschau wurde anschließend wieder gestartet. Die KAI-Dokumentation bezeichnet die Ergebnisse des UI-Tests auf PDF-Seite 114 ausdrücklich als Optimierungsvorschläge; ihre Umsetzung oder ein erneuter Test sind dort nicht belegt und werden im Vorschlag nicht behauptet.
+
+**Nicht geprüft:** Safari/iOS und Firefox; keine Volllektüre aller Projekt- und Karriereunterlagen. Das berufliche Profil wurde gezielt als redaktionelle Grundlage gelesen, nicht gegen sämtliche dort verlinkten Zeugnisse und Originalartefakte neu validiert. Für Beacon fehlen weiterhin originale Smartphone-Mockups zur Identitätsprüfung und Vorbereitung der Helfenden. Die weitergehende Neufassung ist oben als Vorschlag festgehalten.
 
 ## Seitenwechsel, Playground und Projektfreigabe
 

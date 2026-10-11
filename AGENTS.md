@@ -54,8 +54,8 @@ A component owns its own responsive rules. `responsive.scss` is only for token o
 
 `composables/projects.ts` is the single source of truth and is read both by the app (auto-import) and by `nuxt.config.ts` (explicit import). Add or reorder projects **there**, not in the pages.
 
-- `mainProjects` — the carousel, cycling: `beacon → kai → goEase → plantMonit → playground → beacon`.
-- `playgroundProjects` — the smaller works. They are tiles on the playground page and form their own chain with `playground` at **both** ends, so you cannot fall out of it.
+- `mainProjects` — the carousel, cycling: `beacon → kai → plantMonit → playground → goEase → beacon`. Beacon opens with GoEase on the left and KAI on the right; Playground sits two steps away.
+- `playgroundProjects` — the smaller works. They are tiles on the playground page and form their own closed carousel: `trickyTowers → jumpStar → drawingLight → trickyTowers`.
 - `construction` is a standalone page: no `ProjectNav`, it deliberately leads nowhere. It is never redirected — it is the redirect target.
 - Every "projects" link (start page, CV prose) uses `useProjectsEntry()`, which resolves to the first carousel project or to the construction page depending on `showProjects`.
 

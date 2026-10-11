@@ -14,11 +14,11 @@
           '[KAI]',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-          'SERVICE ASSISTANT',
-          'GPT4O   REALTIME API',
-          'SPEECH   FIGMA   UI UX',
-          'DESIGN SPRINT   TESTING',
-          'INDOOR NAVIGATION',
+          'SERVICE WITHOUT DISTRACTION',
+          'SPEECH TO ORDER ITEMS',
+          'CONTEXTUAL GUIDANCE',
+          'TABLE TASKS AND ROUTES',
+          'TESTED FUNCTIONAL PROTOTYPE',
         ]" />
       </div>
 
@@ -58,11 +58,11 @@
 <script setup lang="ts">
 const accordionItems = [
   {
-    title: 'The solution',
+    title: 'KAI in service',
     alwaysOpen: true,
     paragraphs: [
-      'KAI simplifies restaurant service: new staff take orders in conversation, see the next tasks for each table and receive relevant guidance within their workflow. The interface provides detailed assistance for beginners and reduces it as their experience grows.',
-      'This sixth-semester team project combines a detailed UI design with a functional speech prototype. We developed the design together; my focus was UI and UX, alongside the reasoning and structure of the documentation.',
+      'KAI is a mobile assistant for new restaurant staff. With guests, it turns spoken orders into visible items. During a shift, it shows table status, open tasks and the route to the next table. Guidance makes knowledge available when a decision calls for it.',
+      'Johannes Biess, Jannik Flaig and Paula Romanessi developed this sixth-semester team project together. It combines detailed interfaces for the service workflow with a functional prototype for taking orders. My focus was UI and UX, alongside the reasoning and structure of the documentation.',
     ],
     images: [
       '/img/kai/onboarding.webp',
@@ -71,16 +71,20 @@ const accordionItems = [
       'KAI onboarding guidance and the order overview for table 07 on two smartphone mockups',
     ],
     imageCaptions: [
-      'Onboarding and order overview: guidance within the service workflow.',
+      'Beginner guidance and an order view show how KAI supports new staff within the workflow.',
     ],
   },
   {
-    title: 'Research',
+    title: 'Learning the restaurant workflow',
     slot: 'research',
   },
   {
-    title: 'Taking orders',
-    body: 'Speech input translates the conversation into order items and modifications. Staff review the visible list and edit individual items before sending the order to the kitchen. Suggestions and warnings appear where a decision is needed.',
+    title: 'Guidance while taking orders',
+    body: 'A live transcript turns spoken orders into visible items. Staff review dishes and modifications, correct individual entries and only then send the order to the kitchen. This keeps them in control when speech input is misinterpreted.',
+    paragraphs: [
+      'Guidance appears at specific decision points: KAI might suggest a milk alternative or warn about a problematic selection. Beginner assistance can be reduced as experience grows, with a knowledge check accompanying that step. The design keeps information available without crowding the screen throughout the task.',
+      'Use in a restaurant would also require transparent information for guests about speech recording and reliable allergen data.',
+    ],
     images: [
       '/img/kai/suggestions.webp',
     ],
@@ -88,12 +92,15 @@ const accordionItems = [
       'Three KAI screens showing milk alternatives, a warning and a knowledge check before disabling guidance',
     ],
     imageCaptions: [
-      'Order items remain editable; guidance supports the choice.',
+      'Milk alternative, warning and knowledge check: each cue appears in its decision context.',
     ],
   },
   {
     title: 'Table overview and navigation',
-    body: 'The table overview connects open tasks to their location in the restaurant. Prioritised prompts show where meals are ready or guests want to pay. A spatial map complements the list and makes it easier to find the right table.',
+    body: 'A list of table numbers alone would be too abstract for new staff. The overview therefore connects each table to its status, timing and open tasks: food and drinks are ready, guests want to pay, or there is nothing to do yet. Before moving, staff can see where service is needed.',
+    paragraphs: [
+      'Navigation answers a different question: where is that table in the room? A map shows its location in the restaurant, while a direction indicator guides staff towards it. The overview and navigation remain separate so staff can choose a task first, then find their way to it.',
+    ],
     images: [
       '/img/kai/navigation.webp',
       '/img/kai/thumbnail.webp',
@@ -103,17 +110,20 @@ const accordionItems = [
       'KAI tasks grouped by table on a smartphone in a restaurant',
     ],
     imageCaptions: [
-      'The map and direction indicator guide staff to the selected table.',
-      'Open tasks are assigned to their respective tables.',
+      'The map and direction indicator locate table 07 in the restaurant.',
+      'The overview shows status, timing and next tasks for each table.',
     ],
   },
   {
-    title: 'Speech prototype',
+    title: 'Functional prototype',
     slot: 'prototype',
   },
   {
-    title: 'Design and privacy',
-    body: 'KAI supports personal hospitality. Clear typography and contrast structure the interface; a knowledge check accompanies the decision to disable beginner guidance. Using it in a restaurant requires transparent handling of speech recordings and reliable allergen information.',
+    title: 'Testing the service flow',
+    body: 'A newcomer to restaurant service tried the mobile UI prototype in two scenarios: guiding a guest to table 7 and taking an order. The test examined whether she understood table status, the next action and KAI’s assistance without further explanation.',
+    paragraphs: [
+      'The test exposed gaps in the guidance. Opening a table and entering the number of guests were not self-explanatory; order entry moved too quickly, and the quiz was skipped. For the next iteration, we proposed clearer step-by-step guidance, a guided introduction and more explicit system feedback.',
+    ],
   },
 ];
 </script>

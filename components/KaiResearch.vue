@@ -47,14 +47,14 @@ const panelId = computed(() => `kai-research-${props.language}-relationship`);
 const content = {
   de: {
     intro: [
-      'Im Design-Sprint untersuchten wir bestehende Kassensysteme und den Serviceablauf vom Platzieren der Gäste bis zur Zahlung. Interviews mit Kommilitoninnen und Kommilitonen mit Gastronomieerfahrung ergänzten die Recherche um konkrete Situationen aus ihrem Arbeitsalltag.',
-      'Wir fragten zunächst offen nach Problemen, um unsere Annahmen zu prüfen, ohne die Antworten vorzugeben. Danach vertieften wir die Bestellaufnahme, die verwendeten Geräte und die Einarbeitung. Aus den Ergebnissen entstanden fünf Problemfelder.',
+      'Im Design-Sprint untersuchten wir bestehende Kassensysteme und den Serviceablauf vom Platzieren der Gäste bis zur Zahlung. Interviews mit Kommilitoninnen und Kommilitonen mit Gastronomieerfahrung ergänzten die Recherche um Situationen aus ihrem Arbeitsalltag. Offene Fragen halfen uns, eigene Annahmen zu prüfen, bevor wir Bestellaufnahme, Geräte und Einarbeitung vertieften.',
+      'Nach dem Sprint fragten wir, ob eine bessere Oberfläche allein neue Servicekräfte entlasten würde. Die Recherche zum Fachkräftemangel zeigte weitere Ursachen; im Arbeitsablauf wurden besonders fehlendes Wissen, wenig Routine und Überforderung sichtbar. KAI richtet seine Unterstützung auf diese konkreten Momente aus.',
     ],
-    heading: 'Problemfelder',
+    heading: 'Fünf Problemfelder im Service',
     fieldsLabel: 'Problemfeld auswählen',
     observation: 'Beobachtung',
     design: 'Im Entwurf',
-    selection: 'Ein Serviceszenario bündelte die Problemfelder in einer Schicht. Mit Priority Guides und einer Impact-Effort-Map bewerteten wir Nutzen und Aufwand der Funktionen und wählten aus, was wir im Prototyp erproben wollten.',
+    selection: 'Ein Serviceszenario mit der neuen Mitarbeiterin Lea führte die fünf Problemfelder durch eine Schicht zusammen. Priority Guides und eine Impact-Effort-Map halfen uns, die Eingriffe nach Nutzen und Aufwand zu ordnen. Daraus leiteten wir die Bestellaufnahme, situative Hinweise und die Verbindung von Tischstatus und räumlicher Orientierung ab.',
     fields: [
       {
         title: 'Wissenslücken',
@@ -85,14 +85,14 @@ const content = {
   },
   en: {
     intro: [
-      'During the design sprint, we examined existing POS systems and the service workflow from seating guests to payment. Interviews with fellow students who had worked in hospitality added concrete situations from their daily work.',
-      'We first asked open questions about problems to test our assumptions without steering the answers. We then focused on taking orders, the devices they used and their training. We grouped the findings into five problem areas.',
+      'During the design sprint, we examined existing POS systems and the service workflow from seating guests to payment. Interviews with fellow students who had worked in hospitality added situations from their daily work. Open questions helped us test our assumptions before focusing on order entry, devices and training.',
+      'After the sprint, we asked whether a better interface alone would ease the load on new staff. Our review of staff shortages revealed broader causes; within the workflow, missing knowledge, limited routine and overload stood out. KAI focuses its assistance on those specific moments.',
     ],
-    heading: 'Problem areas',
+    heading: 'Five problem areas in service',
     fieldsLabel: 'Choose a problem area',
     observation: 'Observation',
     design: 'In the design',
-    selection: 'A service scenario brought the problem areas together within one shift. Priority guides and an impact-effort map helped us assess the value and effort of features and select what to explore in the prototype.',
+    selection: 'A service scenario following new employee Lea through a shift brought the five problem areas together. Priority guides and an impact-effort map helped us weigh value against effort. From this, we developed order capture, guidance at the point of choice, and table status paired with spatial navigation.',
     fields: [
       {
         title: 'Knowledge gaps',
@@ -179,12 +179,11 @@ function onTabKey(event: KeyboardEvent, index: number) {
   @include type.text(lg, normal, alt, big);
   transition: color var(--interaction__duration--color), border-color var(--interaction__duration--color);
 
-  &[aria-selected='true'] {
+  &[aria-selected='true'],
+  &:hover {
     color: var(--kai__color--interactive);
-    border-bottom-color: currentColor;
+    border-image: var(--kai__gradient--accent) 1;
   }
-
-  &:hover { color: var(--kai__color--interactive); border-bottom-color: currentColor; }
 
   &:focus-visible {
     outline: var(--border__size) solid var(--kai__color--interactive);

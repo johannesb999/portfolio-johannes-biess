@@ -14,11 +14,11 @@
           '[KAI]',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-          'SERVICE ASSISTANT',
-          'GPT4O   REALTIME API',
-          'SPEECH   FIGMA   UI UX',
-          'DESIGN SPRINT   TESTING',
-          'INDOOR NAVIGATION',
+          'SERVICE IM GESPRÄCH',
+          'BESTELLUNG PER SPRACHE',
+          'SITUATIVE HINWEISE',
+          'TISCHSTATUS UND WEGE',
+          'ERPROBTER FUNKTIONSPROTOTYP',
         ]" />
       </div>
 
@@ -58,11 +58,11 @@
 <script setup lang="ts">
 const accordionItems = [
   {
-    title: 'Die Lösung',
+    title: 'KAI im Service',
     alwaysOpen: true,
     paragraphs: [
-      'KAI vereinfacht den Service im Restaurant: Neue Servicekräfte nehmen Bestellungen im Gespräch auf, sehen die nächsten Aufgaben am jeweiligen Tisch und erhalten passende Hinweise direkt im Ablauf. Die Oberfläche bietet ausführliche Einstiegshilfen und reduziert diese mit wachsender Erfahrung.',
-      'Das Teamprojekt aus dem sechsten Semester verbindet einen ausgearbeiteten UI-Entwurf mit einem funktionalen Sprachprototyp. Wir entwickelten die Gestaltung gemeinsam; mein Schwerpunkt lag auf UI und UX sowie auf der inhaltlichen Herleitung und Struktur der Dokumentation.',
+      'KAI ist eine mobile Assistenz für neue Servicekräfte. Beim Gast macht die App gesprochene Bestellungen als einzelne Positionen sichtbar. Während der Schicht zeigt sie Tischstatus, offene Aufgaben und den Weg zum nächsten Tisch. Hinweise erschließen Wissen genau dann, wenn es für eine Entscheidung gebraucht wird.',
+      'Johannes Biess, Jannik Flaig und Paula Romanessi entwickelten das Teamprojekt im sechsten Semester gemeinsam. Es verbindet ausgearbeitete Oberflächen für den Serviceablauf mit einem Funktionsprototyp für die Bestellaufnahme. Mein Schwerpunkt lag auf UI und UX sowie auf der inhaltlichen Herleitung und Struktur der Dokumentation.',
     ],
     images: [
       '/img/kai/onboarding.webp',
@@ -71,16 +71,20 @@ const accordionItems = [
       'KAI-Einstiegshilfen und Bestellübersicht für Tisch 07 auf zwei Smartphone-Mockups',
     ],
     imageCaptions: [
-      'Einstieg und Bestellübersicht: Unterstützung direkt im Serviceablauf.',
+      'Einstiegshilfe und Bestellansicht zeigen, wie KAI neue Servicekräfte im Ablauf begleitet.',
     ],
   },
   {
-    title: 'Recherche',
+    title: 'Einarbeitung im Restaurant',
     slot: 'research',
   },
   {
-    title: 'Bestellaufnahme',
-    body: 'Die Spracheingabe übersetzt das Gespräch in Bestellpositionen und Änderungswünsche. Die Servicekraft prüft die sichtbare Liste und bearbeitet einzelne Positionen, bevor sie die Bestellung an die Küche sendet. Vorschläge und Warnungen erscheinen dort, wo die Entscheidung ansteht.',
+    title: 'Hinweise bei der Bestellaufnahme',
+    body: 'Die laufende Mitschrift macht gesprochene Bestellungen als einzelne Positionen sichtbar. Die Servicekraft prüft Gerichte und Sonderwünsche, korrigiert einzelne Einträge und sendet die Bestellung erst danach an die Küche. So bleibt sie auch bei einer Fehlinterpretation der Spracheingabe im Ablauf handlungsfähig.',
+    paragraphs: [
+      'Hinweise greifen an konkreten Entscheidungspunkten ein: KAI schlägt etwa eine Milchalternative vor oder warnt bei einer problematischen Auswahl. Anfängerhilfen lassen sich mit wachsender Erfahrung reduzieren; eine Wissensabfrage begleitet diesen Schritt. Der Entwurf hält die Informationen damit verfügbar, ohne sie ständig in den Vordergrund zu stellen.',
+      'Für einen Einsatz im Restaurant müssten Gäste transparent über Sprachaufnahmen informiert und Angaben zu Allergenen verlässlich gepflegt werden.',
+    ],
     images: [
       '/img/kai/suggestions.webp',
     ],
@@ -88,12 +92,15 @@ const accordionItems = [
       'Drei KAI-Oberflächen mit Milchalternativen, Warnhinweis und Wissensabfrage vor dem Abschalten von Hilfen',
     ],
     imageCaptions: [
-      'Bestellpositionen bleiben bearbeitbar; Hinweise unterstützen die Auswahl.',
+      'Milchalternative, Warnung und Wissensabfrage: Die Hinweise erscheinen im jeweiligen Entscheidungskontext.',
     ],
   },
   {
     title: 'Tischübersicht und Navigation',
-    body: 'Die Tischübersicht verbindet offene Aufgaben mit ihrem Ort im Restaurant. Priorisierte Hinweise zeigen, wo Speisen bereitstehen oder Gäste bezahlen möchten. Die räumliche Karte ergänzt diese Liste und erleichtert die Orientierung zwischen den Tischen.',
+    body: 'Eine reine Liste von Tischnummern wäre für neue Servicekräfte zu abstrakt. Die Tischübersicht verbindet deshalb jeden Tisch mit seinem Status, Zeitangaben und offenen Aufgaben: Speisen und Getränke stehen bereit, ein Tisch möchte bezahlen oder es gibt gerade nichts zu tun. So lässt sich vor dem nächsten Weg erkennen, wo Service gebraucht wird.',
+    paragraphs: [
+      'Die Navigation beantwortet eine andere Frage: Wo befindet sich dieser Tisch im Raum? Eine Karte zeigt seine Lage im Restaurant, eine Richtungsanzeige führt dorthin. Übersicht und Navigation bleiben getrennt, damit die Servicekraft zuerst die Aufgabe wählen und sich anschließend gezielt orientieren kann.',
+    ],
     images: [
       '/img/kai/navigation.webp',
       '/img/kai/thumbnail.webp',
@@ -103,17 +110,20 @@ const accordionItems = [
       'KAI-Aufgabenübersicht nach Tischen auf einem Smartphone im Restaurant',
     ],
     imageCaptions: [
-      'Karte und Richtungsanzeige führen zum ausgewählten Tisch.',
-      'Offene Aufgaben sind dem jeweiligen Tisch zugeordnet.',
+      'Karte und Richtungsanzeige verorten Tisch 07 im Restaurant.',
+      'Die Übersicht zeigt Status, Zeitangaben und nächste Aufgaben pro Tisch.',
     ],
   },
   {
-    title: 'Sprachprototyp',
+    title: 'Funktionsprototyp',
     slot: 'prototype',
   },
   {
-    title: 'Gestaltung und Datenschutz',
-    body: 'KAI unterstützt die persönliche Betreuung der Gäste. Klare Typografie und Kontraste strukturieren die Oberfläche; eine Wissensabfrage begleitet das Abschalten von Einstiegshilfen. Für einen Einsatz im Restaurant gehören ein transparenter Umgang mit Sprachaufnahmen und verlässliche Allergieinformationen zum System.',
+    title: 'Erprobung im Serviceablauf',
+    body: 'Eine Service-Anfängerin erprobte den mobilen UI-Prototyp in zwei Szenarien: einen Gast zu Tisch 7 führen und eine Bestellung aufnehmen. Beobachtet wurde, ob sie Tischstatus, nächste Handlung und die Unterstützung durch KAI ohne zusätzliche Erklärung verstand.',
+    paragraphs: [
+      'Der Test zeigte, wo die Führung noch nicht ausreichte. Das Öffnen eines Tisches und die Abfrage der Gästezahl waren nicht selbsterklärend; die Bestellaufnahme verlief zu schnell, und das Quiz wurde übersprungen. Für die nächste Iteration leiteten wir daraus eine deutlichere Schrittführung, einen geführten Einstieg und klareres Systemfeedback ab.',
+    ],
   },
 ];
 </script>

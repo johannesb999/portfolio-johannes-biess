@@ -14,11 +14,11 @@
           '[BEACON]',
         ]" />
         <SplitFlapText preset="detailsFlap" :align="'random'" :texts="[
-          'HILFENETZWERK',
-          'BACHELORARBEIT',
-          'FIGMA   UI   UX',
-          'RESEARCH   PROTOTYPING',
-          'BRANDING   KAMPAGNE',
+          'LOKALES HILFENETZWERK',
+          'KONZEPTENTWICKLUNG',
+          'BEDIENUNG UNTER STRESS',
+          'ROLLEN UND VERANTWORTUNG',
+          'TESTS UND ITERATION',
         ]" />
       </div>
 
@@ -56,11 +56,11 @@
 // Content follows the documentation; interface questions are editorial, not the original HMW set.
 const accordionItems = [
   {
-    "title": "Die Lösung",
+    "title": "Beacon auf dem Heimweg",
     "alwaysOpen": true,
-    "body": "Beacon ist ein lokales Hilfenetzwerk für den nächtlichen Heimweg. Die Anwendung verbindet Menschen, die sich unsicher fühlen, mit Helfenden und sicheren Orten in ihrer Umgebung. Bereits vor einem Notfall sehen sie, wo Unterstützung erreichbar ist.",
+    "body": "Wer sich nachts auf dem Heimweg unsicher fühlt, sieht in Beacon, ob Menschen und sichere Orte in der Nähe erreichbar sind. Diese Orientierung ist schon möglich, bevor ein Hilferuf nötig wird.",
     "paragraphs": [
-      "Ein Hilferuf lässt sich diskret vorbereiten und auslösen. Beacon weist Helfenden eine konkrete Aufgabe zu und führt die hilfesuchende Person zu einem sicheren Ort. So bleibt sie mit der Situation nicht allein und weiß, was sie als Nächstes tun kann."
+      "Wird Hilfe gebraucht, lässt sich der Hilferuf diskret auslösen. Einzelne Helfende erhalten eine konkrete Aufgabe: einen sicheren Ort anbieten oder der Person entgegengehen. Karte und Richtungspfeil zeigen der hilfesuchenden Person, wohin sie gehen kann."
     ],
     "images": [
       "/img/beacon/overview.webp"
@@ -69,45 +69,45 @@ const accordionItems = [
       "Beacon: Karte mit verfügbarer Hilfe, Hilferuf und Navigation zum sicheren Ort"
     ],
     "imageCaptions": [
-      "Die Anwendung zeigt verfügbare Hilfe und begleitet den Weg bis zum Zusammentreffen."
+      "Verfügbare Hilfe, Hilferuf und Weg zum sicheren Ort in einem Ablauf."
     ]
   },
   {
-    "title": "Recherche: Unsicherheit verstehen",
+    "title": "Wenn der Heimweg unsicher wird",
     "slot": "research"
   },
   {
-    "title": "Warum ein Hilfenetzwerk?",
-    "body": "Aus der Recherche ging hervor, dass Hilfe früh erreichbar sein und entlang eines frei gewählten Heimwegs funktionieren muss. Wir entwickelten vier Ansätze: ein Hilfenetzwerk, feste Schutzräume, stationierte Drohnen und die Bildung von Gruppen. Mit der Thinking-Hats-Methode verglichen wir ihre Wirkung, ihr Potenzial und ihre Risiken anhand der sieben Anforderungen.",
+    "title": "Ein Netzwerk aus Menschen und Orten",
+    "body": "Für die Konzeptwahl waren zwei Anforderungen besonders wichtig: Hilfe soll früh erreichbar sein und auch zwischen festen Schutzräumen entlang eines frei gewählten Heimwegs funktionieren. Wir verglichen dafür vier Ansätze: ein Hilfenetzwerk, feste Schutzräume, stationierte Drohnen und Gruppenbildung. Maßstab waren die sieben Anforderungen aus der Recherche.",
     "paragraphs": [
-      "Wir verfolgten das Hilfenetzwerk weiter, weil es vorhandene Personen und Orte einbezieht und Unterstützung auch zwischen einzelnen Schutzräumen ermöglicht. Dafür müssen die Rollen klar begrenzt sein: Helfende bieten einen sicheren Ort an oder kommen der Person entgegen. Ihre Standorte dürfen vor einem Hilferuf keine Rückschlüsse auf Bewegungen oder Abwesenheiten zulassen."
+      "Das Hilfenetzwerk nutzt vorhandene Personen und Orte und kann Hilfe auch zwischen einzelnen Schutzräumen anbieten. Dabei übernehmen Beteiligte unterschiedliche Aufgaben: Eine Person sucht Hilfe, mobile Helfende können ihr entgegengehen, und ein sicherer Ort bietet ein Ziel. Vor einem Hilferuf zeigt Beacon nur, wie viele Helfende erreichbar sind. Ihre genauen Standorte bleiben verborgen, damit Bewegungen und Abwesenheiten nicht erkennbar werden."
+    ]
+  },
+  {
+    "title": "Bedienung unter Stress",
+    "slot": "decisions"
+  },
+  {
+    "title": "Vertrauen und Start des Netzwerks",
+    "body": "Im Hilfenetzwerk begegnen sich Menschen, die sich meist nicht kennen. Alle hinterlegen deshalb dieselben Angaben zur Person, verifizieren ihre Identität und bestätigen Verhaltensregeln. Helfende erfahren dabei auch, dass ihr eigener Schutz vor einem Eingreifen steht.",
+    "paragraphs": [
+      "Eine Demo führt vor der ersten Nutzung durch den Hilferuf und das haptische Feedback. Wer helfen möchte, lernt die eigene Aufgabe und ihre Grenzen kennen. Für den Start des Netzwerks betrachteten wir zunächst bestehende, nachts geöffnete Orte. Ihre Mitarbeitenden brauchen klare Abläufe und eine Einführung, bevor private Helfende das Angebot erweitern können."
     ],
     "images": [
       "/img/beacon/campaign.webp"
     ],
     "imageAlts": [
-      "Beacon-Kampagne für das lokale Hilfenetzwerk"
+      "Beacon-Kampagne, die zur Beteiligung am Hilfenetzwerk einlädt"
     ],
     "imageCaptions": [
-      "Die Kampagne spricht Menschen an, die sich als Helfende am Netzwerk beteiligen."
+      "Die Kampagne lädt weitere Menschen ein, als Helfende am Netzwerk teilzunehmen."
     ]
   },
   {
-    "title": "Die Bedienung",
-    "slot": "decisions"
-  },
-  {
-    "title": "Vertrauen und Vorbereitung",
-    "body": "Das Hilfenetzwerk bringt Menschen zusammen, die sich in der Regel nicht kennen. Deshalb beginnt die Nutzung mit einer gemeinsamen Grundlage: Alle hinterlegen dieselben Angaben zur Person, verifizieren ihre Identität und bestätigen die Verhaltensregeln. Dazu gehört, den eigenen Schutz vor ein Eingreifen zu stellen.",
+    "title": "Team und Projektstand",
+    "body": "Beacon entstand als Bachelorarbeit von Johannes Biess, Jannik Flaig und Aileen Kling. Wir entwickelten Recherche, Konzept und Gestaltung gemeinsam. Mein Schwerpunkt lag auf UI und UX sowie auf der inhaltlichen Herleitung und Struktur der Dokumentation.",
     "paragraphs": [
-      "Eine Demo führt vor der ersten Nutzung durch den Hilferuf. Sie macht den Ablauf und das haptische Feedback vertraut, damit diese Bedienung nicht erst in einer unsicheren Situation erlernt werden muss. Die Vorbereitung klärt außerdem, welche Hilfe erwartet wird und wo die Verantwortung der Helfenden endet."
-    ]
-  },
-  {
-    "title": "Projektumfang",
-    "body": "Beacon entstand als Bachelorarbeit im Team Biess, Flaig und Kling. Wir entwickelten Recherche, Konzept und Gestaltung gemeinsam. Mein Schwerpunkt lag auf UI und UX sowie auf der inhaltlichen Herleitung und Struktur der Dokumentation.",
-    "paragraphs": [
-      "Die Arbeit umfasst das Interaktionskonzept, die ausgearbeiteten Oberflächen, das Branding und eine Kampagne. Für den Betrieb des Netzwerks haben wir außerdem den Einstieg über bestehende, nachts geöffnete Orte betrachtet. Deren Mitarbeitende brauchen klare Abläufe und eine Einführung in ihre Rolle, bevor private Helfende das Netzwerk erweitern."
+      "Die Arbeit umfasst das Interaktionskonzept, ausgearbeitete Oberflächen, Branding und Kampagne. Ein programmierter Prototyp bildete die drei Rollen und ihren Austausch ab. Im Test übten Teilnehmende die Abläufe unter Zeitdruck. Ob Beacon auch bei echter Angst verständlich zu bedienen ist, wurde damit nicht geprüft."
     ],
     "images": [
       "/img/beacon/team.webp"
@@ -116,7 +116,7 @@ const accordionItems = [
       "Das Beacon-Projektteam"
     ],
     "imageCaptions": [
-      "Gemeinsame Bachelorarbeit von Biess, Flaig und Kling."
+      "Gemeinsame Bachelorarbeit von Johannes Biess, Jannik Flaig und Aileen Kling."
     ]
   }
 ];
