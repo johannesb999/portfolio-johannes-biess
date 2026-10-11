@@ -33,6 +33,7 @@
       <section id="details-section">
         <ProjectAccordion :items="accordionItems" id-prefix="beacon">
           <template #research><BeaconResearch /></template>
+          <template #network><BeaconNetwork /></template>
           <template #decisions><BeaconDecisions /></template>
         </ProjectAccordion>
       </section>
@@ -58,7 +59,7 @@ const accordionItems = [
   {
     "title": "Beacon auf dem Heimweg",
     "alwaysOpen": true,
-    "body": "Wer sich nachts auf dem Heimweg unsicher fühlt, sieht in Beacon, ob Menschen und sichere Orte in der Nähe erreichbar sind. Diese Orientierung ist schon möglich, bevor ein Hilferuf nötig wird.",
+    "body": "Beacon ist ein digitales, lokales Hilfsnetzwerk für Orientierung, Handlungssicherheit und Zivilcourage im öffentlichen Raum. Wer sich nachts auf dem Heimweg unsicher fühlt, sieht, ob Menschen und sichere Orte in der Nähe erreichbar sind – schon bevor ein Hilferuf nötig wird.",
     "paragraphs": [
       "Wird Hilfe gebraucht, lässt sich der Hilferuf diskret auslösen. Einzelne Helfende erhalten eine konkrete Aufgabe: einen sicheren Ort anbieten oder der Person entgegengehen. Karte und Richtungspfeil zeigen der hilfesuchenden Person, wohin sie gehen kann."
     ],
@@ -78,10 +79,7 @@ const accordionItems = [
   },
   {
     "title": "Ein Netzwerk aus Menschen und Orten",
-    "body": "Für die Konzeptwahl waren zwei Anforderungen besonders wichtig: Hilfe soll früh erreichbar sein und auch zwischen festen Schutzräumen entlang eines frei gewählten Heimwegs funktionieren. Wir verglichen dafür vier Ansätze: ein Hilfenetzwerk, feste Schutzräume, stationierte Drohnen und Gruppenbildung. Maßstab waren die sieben Anforderungen aus der Recherche.",
-    "paragraphs": [
-      "Das Hilfenetzwerk nutzt vorhandene Personen und Orte und kann Hilfe auch zwischen einzelnen Schutzräumen anbieten. Dabei übernehmen Beteiligte unterschiedliche Aufgaben: Eine Person sucht Hilfe, mobile Helfende können ihr entgegengehen, und ein sicherer Ort bietet ein Ziel. Vor einem Hilferuf zeigt Beacon nur, wie viele Helfende erreichbar sind. Ihre genauen Standorte bleiben verborgen, damit Bewegungen und Abwesenheiten nicht erkennbar werden."
-    ]
+    "slot": "network"
   },
   {
     "title": "Bedienung unter Stress",
@@ -94,13 +92,13 @@ const accordionItems = [
       "Eine Demo führt vor der ersten Nutzung durch den Hilferuf und das haptische Feedback. Wer helfen möchte, lernt die eigene Aufgabe und ihre Grenzen kennen. Für den Start des Netzwerks betrachteten wir zunächst bestehende, nachts geöffnete Orte. Ihre Mitarbeitenden brauchen klare Abläufe und eine Einführung, bevor private Helfende das Angebot erweitern können."
     ],
     "images": [
-      "/img/beacon/campaign.webp"
+      "/img/beacon/recognition.webp"
     ],
     "imageAlts": [
-      "Beacon-Kampagne, die zur Beteiligung am Hilfenetzwerk einlädt"
+      "Beacon beim Zusammentreffen: Hinweise für Helfende und die Ansicht You are Safe mit persönlichen Kontakten"
     ],
     "imageCaptions": [
-      "Die Kampagne lädt weitere Menschen ein, als Helfende am Netzwerk teilzunehmen."
+      "Nach dem Zusammentreffen bleiben konkrete Hilfen und persönliche Kontakte erreichbar."
     ]
   },
   {

@@ -1,9 +1,10 @@
 <template>
   <ul class="tiles">
-    <li v-for="project in playgroundProjects" :key="project.route" class="tiles__item" :style="{ gridArea: project.route }">
+    <li v-for="project in playgroundProjects" :key="project.route" class="tiles__item" :class="`tiles__item--${project.route}`" :style="{ gridArea: project.route }">
       <AppLink class="tile" :to="`/${locale}/project/${project.route}`" :scale="false">
-        <svg v-if="project.thumbFrame" class="tile__image" :viewBox="project.thumbFrame.viewBox" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-          <image :href="project.thumb" :width="project.thumbFrame.width" :height="project.thumbFrame.height" />
+        <svg v-if="project.thumbFrame" class="tile__image" :viewBox="project.thumbFrame.viewBox" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+          <defs><clipPath :id="`tile-crop-${locale}-${project.route}`"><rect v-bind="cropRect(project.thumbFrame.viewBox)" /></clipPath></defs>
+          <image :href="project.thumb" :width="project.thumbFrame.width" :height="project.thumbFrame.height" :clip-path="`url(#tile-crop-${locale}-${project.route})`" />
         </svg>
         <img v-else class="tile__image" :src="project.thumb" alt="" loading="lazy" />
         <span class="tile__caption">
@@ -24,6 +25,11 @@ import { playgroundProjects } from '@/composables/projects';
 // composables/projects.ts — dieselbe Liste, die auch ihre Karussell-Kette bildet.
 const route = useRoute();
 const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
+
+function cropRect(viewBox: string) {
+  const [x, y, width, height] = viewBox.split(' ').map(Number);
+  return { x, y, width, height };
+}
 </script>
 
 <style scoped lang="scss">
@@ -33,9 +39,9 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
 .tiles {
   display: grid;
   grid-template-areas:
-    "trickyTowers trickyTowers jumpStar jumpStar jumpStar jumpStar"
-    "trickyTowers trickyTowers drawingLight drawingLight drawingLight placeholder";
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+    "trickyTowers jumpStar jumpStar"
+    "trickyTowers drawingLight placeholder";
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.15fr) minmax(0, 0.55fr);
   grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: var(--playground__tiles--gap);
   height: 100%;
@@ -91,9 +97,10 @@ const locale = computed(() => (route.path.startsWith('/de') ? 'de' : 'en'));
   height: 100%;
 }
 
-// A viewport removes whitespace in the source without changing the original.
+// An artwork viewport keeps the preview proportional without changing the original.
 svg.tile__image {
   overflow: hidden;
+  background: var(--playground__image--background);
   border: var(--border__size) solid var(--border__color);
   border-radius: var(--border__radius);
 }
@@ -128,6 +135,10 @@ svg.tile__image {
   }
 }
 
+@include bp.desktop-lg {
+  .tiles__placeholder::after { content: '\00a0\a\00a0\a\00a0'; }
+}
+
 @include bp.stacked {
   .tiles {
     grid-template-areas:
@@ -154,6 +165,10 @@ svg.tile__image {
   .tiles__placeholder::before {
     aspect-ratio: var(--playground__tile--ratio);
     height: auto;
+  }
+
+  .tiles__item--trickyTowers .tile__image {
+    aspect-ratio: var(--playground__tile--portrait-ratio);
   }
 }
 </style>

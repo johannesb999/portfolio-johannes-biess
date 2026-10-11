@@ -1,8 +1,55 @@
 # Portfolio-Audit
 
-Stand: 11. Oktober 2026 · Audit mit anschließendem Umsetzungsstand; jüngste Runde: kompakter Playground, KAI-Kontrast und Vorschlag zur Projektgeschichte
+Stand: 11. Oktober 2026 · Audit mit anschließendem Umsetzungsstand; jüngste Runde: interaktive Herleitungen für KAI und Beacon
 
-## Playground, Kontrast und Projektgeschichte
+## Interaktive Herleitungen — umgesetzt
+
+KAI Kapitel 02 verbindet die fünf dokumentierten Problemfelder mit drei Schwerpunkten des Entwurfs. Die auswählbare Grafik macht gemeinsame Bezüge sichtbar, etwa von Abläufen zu Bestellaufnahme und Tischübersicht. Darunter steht eine zusammenhängende Erklärung zum gewählten Feld. Die zuvor parallelen Textspalten „Beobachtung / Im Entwurf“ entfallen. Die Verbindungen sind eine redaktionelle Zuordnung anhand der Problemfelder und der ausgearbeiteten Funktionen, keine Messwerte oder im Original vorliegende Priorisierungsgrafik. Mobil zeigt die kompakte Fassung die jeweils zugehörigen Funktionen. Johannes hat diese Interaktionsrichtung während der Umsetzung bestätigt.
+
+Beacon Kapitel 03 ergänzt ein Rollenbild mit den Zuständen vor dem Hilferuf und im Einsatz. Reine Textreiter steuern es; die Texte beider Zustände reservieren gemeinsam den nötigen Platz und verhindern einen Höhensprung. Orange steht für die hilfesuchende Person, Violett für die helfende Seite, entsprechend den vorhandenen Mockups. Die ersten, frei gezeichneten Personen-/Gebäude-Icons und der erklärende Untertitel wurden nach Johannes' Rückmeldung ersetzt. Auch die überflüssige Grundlinie unter den Reitern in Recherche und Bedienung ist entfernt.
+
+Johannes' Definition des digitalen lokalen Hilfsnetzwerks für Orientierung, Handlungssicherheit und Zivilcourage steht jetzt am Anfang von Kapitel 01. Nach seiner abschließenden Bildzuordnung steht das Kampagnenmotiv aus dem bisherigen Vertrauens-Kapitel bei „Ein Netzwerk aus Menschen und Orten“; „You are Safe“ mit den Kontaktpersonen steht bei „Vertrauen und Start des Netzwerks“. Zwischenzeitliche Vorschläge mit den anderen Doppel-Mockups sind damit verworfen. Deutsch und Englisch sind angepasst. PDF-Links mit einer Seitenmarke öffnen jetzt ebenfalls in einem neuen Tab.
+
+### Eingeflossen
+
+- [evri: ReSource](https://evri.design/project_Resource.html) — selbst im Browser betrachtet; die Verbindungsgrafik zum Materialkreislauf als Beispiel dafür, Beziehungen unmittelbar sichtbar zu machen. Keine Übernahme des Layouts oder der Aussagen.
+- [KAI-Dokumentation](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/kai/kai-dokumentation-de.pdf) — Subagent sichtete S. 35–37 und 50–56; die Originalseiten 51–56 wurden zusätzlich selbst visuell geprüft. Fünf gleichzeitige Problemfelder, keine zeitliche Stufenfolge. Funktionen und Szenario stammen außerdem aus der vorigen dokumentierten Sichtung.
+- [Beacon-Dokumentation](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/beacon/beacon-dokumentation-de.pdf) — Subagent prüfte PDF-Seiten 38, 63–64, 70 und 105, entsprechend gedruckten S. 74–75, 124–127, 138–139 und 208–209: Konzeptwahl, Rollen, Standorte und Verfügbarkeit.
+- [Beacon-Mockups](C:/Users/biess/Github/portfolio-johannes-biess/public/img/beacon/helpers.webp), [Kampagne](C:/Users/biess/Github/portfolio-johannes-biess/public/img/beacon/campaign.webp) und [Zusammentreffen](C:/Users/biess/Github/portfolio-johannes-biess/public/img/beacon/recognition.webp) — selbst angesehen; Farbbezug und Bildzuordnung, ergänzt durch Johannes' konkrete Korrekturen.
+
+**Prüfung:** Chromium bei 1440×900 und 375×812, Deutsch/Englisch sowie hell/dunkel. KAI-Auswahl per Maus und Leertaste; Beacon-Reiter per Pfeiltasten. Kein horizontaler Überlauf, im mobilen Inhalt mindestens 16 px. Die Beacon-Darstellung behält zwischen beiden Zuständen exakt dieselbe Höhe (Desktop 292,8 px, mobile englische Fassung 510,3 px); das Folgekapitel bleibt auf derselben Dokumentposition. Keine Fehler/Warnungen in den geprüften Browsermeldungen.
+
+Der abschließende Produktionsbuild (`npm run build`) ist erfolgreich; `git diff --check` meldet keine Formatierungsfehler.
+
+**Nicht geprüft:** Safari/iOS und Firefox. Die neu programmierte Zuordnung in KAI ist eine eigene redaktionelle Visualisierung; sie ersetzt keine originale Auswertungsmatrix aus der Dokumentation.
+
+## Playground-Proportionen und Projektgeschichten — umgesetzt
+
+Auf breiten Desktops stehen Splitflap und Bento jetzt nebeneinander. Damit bekommen beide mehr Abstand, während die Bilder weniger flach ausfallen und die Übersicht weiterhin in einen 16:9-Viewport passt. TrickyTowers bleibt hochformatig, JumpStar breit, DrawingLight steht neben dem leeren Platzhalter. Die SVG-Vorschauen skalieren proportional innerhalb eines festgelegten Ausschnitts des Originalmotivs; die Quelldateien bleiben unverändert. Mobil steht das Raster unter dem Splitflap mit mindestens 40 px Abstand. Die feste Desktop-Seitenhöhe bleibt erhalten, damit sich die Komposition nach einem Seitenwechsel nicht neu zentriert.
+
+Das Hauptkarussell läuft jetzt nach rechts durch **Beacon → KAI → PlantMonit → Playground → GoEase → Beacon**. Damit liegt GoEase links und KAI rechts von Beacon; Playground ist in beiden Richtungen mindestens zwei Schritte entfernt. Der geschlossene Kreis der kleineren Arbeiten bleibt erhalten.
+
+Die redaktionelle Neufassung darunter ist inzwischen in Deutsch und Englisch umgesetzt, mit angepasster Kapitelfolge. KAI erklärt den Wechsel vom Kassensystem zur Unterstützung neuer Servicekräfte, danach Hinweise, Tischübersicht und Orientierung, Funktionsprototyp und Erprobung. Die Tischübersicht benennt jetzt konkret den Zusammenhang von Status, Aufgaben und Weg. Beacon führt vom Heimweg über Unsicherheit und Konzeptwahl zum Hilfenetzwerk, seinen Interaktionen und der Vorbereitung der Beteiligten. Teamnamen sind ausgeschrieben; der persönliche Beitrag bleibt im gemeinsamen Projekt verortet.
+
+In allen sichtbaren KAI-Texten heißt es **Funktionsprototyp / Functional prototype**. Das programmierte Bestellbeispiel verwendet einzelne weiße Positionskarten und den Originalverlauf von KAI statt eines grauen Balkens. Es ist als schematische Darstellung bezeichnet und kein vorgeblicher Screenshot. Testbeobachtungen und Vorschläge für eine weitere Iteration werden getrennt beschrieben.
+
+Meine redaktionelle Ableitung aus evris n-1-Projekt: Methoden werden dann interessant, wenn klar wird, welche Erkenntnis oder Entscheidung sie ermöglicht haben. Das wurde auf die eigenen Projektinhalte übertragen; die Gestaltung und werblichen Formulierungen der Referenz wurden nicht übernommen.
+
+### Eingeflossen
+
+- [evri: n-1](https://evri.design/project_n-1.html) — selbst gelesen, einschließlich der Methodik-Details; Referenz für Problem, Ergebnis und Nutzen der Vorgehensweise.
+- [KAI-Dokumentation](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/kai/kai-dokumentation-de.pdf) — durch einen Subagenten erneut gezielt geprüft, insbesondere PDF-Seiten 8, 11–13, 25–26, 35–37, 50–56, 70, 75, 80 und 110–118; Problemfokus, Funktionen, Erprobung und Farbverlauf.
+- [Beacon-Dokumentation](C:/Users/biess/Github/portfolio-johannes-biess/public/docs/beacon/beacon-dokumentation-de.pdf) — in dieser Runde wurden die zuvor durch einen Subagenten geprüften Befunde weiterverwendet, insbesondere Drei-Rollen-Prototyp und Tests auf PDF-Seiten 74–75, 82–88 und 120; keine erneute eigene PDF-Lektüre.
+- [Berufliches Profil: Denkweise](<G:/Meine Ablage/Beruf/Johannes - Berufliches Profil/08_Wie-ich-denke-und-arbeite/Denkweise.md>) — aus der vorherigen eigenen Sichtung übernommen; Grundlage dafür, die Verbindung zwischen Recherche und Entwurfsentscheidungen sichtbar zu machen.
+- [KAI-Mockups](C:/Users/biess/Github/portfolio-johannes-biess/public/img/kai/onboarding.webp), [TrickyTowers-Original](<C:/Users/biess/Github/portfolio-johannes-biess/public/img/tt/tt (1).svg>), bestehende Komponenten und Seiten — visuelle Grundlage und Umsetzung; Originalmotive selbst angesehen, Textarbeit von zwei Subagenten unterstützt und anschließend integriert.
+
+**Prüfung:** Karussell-Reihenfolge, gegenseitige Nachbarn und Übergangsrichtungen programmatisch geprüft; GoEase → Beacon und Beacons beide Nachbarn zusätzlich im Browser. Eigene Chromium-Prüfung des Playgrounds bei 1280×720, 1366×768 und 1920×1080 ohne Überlauf; bei 375×812 kein horizontaler Überlauf und 40 px Abstand vor den Kacheln. KAI-Funktionsprototyp auf Desktop und mobil, Deutsch/Englisch sowie im hellen und dunklen Farbschema angesehen. Keine Warnungen oder Fehler in den geprüften Browsermeldungen. Screenshots der finalen Desktop-Kompositionen gespeichert.
+
+Produktionsbuild erfolgreich; die lokale Vorschau wurde anschließend wieder gestartet.
+
+**Nicht geprüft:** Safari/iOS und Firefox. Keine Volllektüre der Dokumentationen; die vorherigen Quellenprüfungen sind oben von der erneuten Sichtung getrennt ausgewiesen.
+
+## Vorherige Runde: Playground, Kontrast und Vorschlag zur Projektgeschichte
 
 ### Umgesetzt
 

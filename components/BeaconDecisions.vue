@@ -71,7 +71,6 @@ function onTabKey(event: KeyboardEvent, index: number) {
   width: fit-content;
   max-width: 100%;
   gap: var(--spacing--xs) var(--spacing--lg);
-  border-bottom: var(--border__size) solid var(--border__color);
   [role='tab'] {
     min-height: var(--control__size--minimum);
     margin: 0;

@@ -148,6 +148,9 @@ useHead(() => {
   --interaction__duration--color: 180ms;
   --research__accent: #f44b17;
   --beacon__color--interactive: #c4380e;
+  --beacon__color--helper: #7064d8;
+  --beacon__network--marker-size: 2.4rem;
+  --beacon__network--title-height: 3rem;
   --kai__color--interactive: #34536e;
   --kai__gradient--accent: linear-gradient(90deg, #818db4, #6dafb5);
   --kai__color--surface: #f1f3f4;
@@ -155,6 +158,9 @@ useHead(() => {
   --kai__color--ink: #161616;
   --kai__prototype--width: 38rem;
   --kai__prototype--accent-size: 3px;
+  --kai__research--map-height: 30rem;
+  --kai__research--detail-height: 13rem;
+  --kai__research--dot-size: 0.6rem;
   --research__mark--size: 3rem;
   --playground__width--max: 100rem;
   --playground__inset--side: 7%;
@@ -166,6 +172,8 @@ useHead(() => {
   --playground__flap--cell: 0.95rem;
   --playground__tile--row: 18rem;
   --playground__tile--ratio: 4 / 3;
+  --playground__tile--portrait-ratio: 2 / 3;
+  --playground__image--background: #000;
   --site-map__width: 128px;
   --site-map__width--compact: 88px;
   --site-map__stroke: 1px;
@@ -189,6 +197,7 @@ useHead(() => {
   --transition__shadow--ambient: rgba(0, 0, 0, 0.42);
   --viewer__backdrop: rgba(23, 23, 23, 0.96);
   --beacon__color--interactive: #ff784d;
+  --beacon__color--helper: #aaa0ff;
   --kai__color--interactive: #7595bc;
   --kai__color--surface: #20242b;
   --kai__color--paper: #2a3039;

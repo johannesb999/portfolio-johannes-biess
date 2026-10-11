@@ -9,7 +9,7 @@ export type ProjectEntry = {
   label: string;
   /** Vorschaubild fuer die Playground-Kacheln */
   thumb?: string;
-  /** Artwork viewport, excluding empty margins in the original SVG. */
+  /** Artwork viewport for a proportional preview; the original SVG is retained. */
   thumbFrame?: { viewBox: string; width: number; height: number };
   description?: { de: string; en: string };
 };
@@ -31,7 +31,7 @@ export const mainProjects: ProjectEntry[] = [
  * dort eine eigene, geschlossene Kette.
  */
 export const playgroundProjects: ProjectEntry[] = [
-  { route: "trickyTowers", label: "TRICKYTOWERS", thumb: "/img/tt/tt (1).svg", thumbFrame: { viewBox: '1100 205 800 1610', width: 3000, height: 2250 }, description: { de: 'Ein räumliches Spiel mit Projektion und Gesten.', en: 'A spatial game using projection and gestures.' } },
+  { route: "trickyTowers", label: "TRICKYTOWERS", thumb: "/img/tt/tt (1).svg", thumbFrame: { viewBox: '1125 331 780 1214', width: 3000, height: 2250 }, description: { de: 'Ein räumliches Spiel mit Projektion und Gesten.', en: 'A spatial game using projection and gestures.' } },
   { route: "jumpStar", label: "JUMPSTAR", thumb: "/img/js/thumbnail.svg", thumbFrame: { viewBox: '225 220 1020 575', width: 1500, height: 1125 }, description: { de: 'Sternendaten als interaktive Reise durch den Raum.', en: 'An interactive journey through stellar data.' } },
   { route: "drawingLight", label: "DRAWINGLIGHT", thumb: "/img/dl/thumbnail.svg", description: { de: 'Gesten werden zu mechanischer Lichtmalerei.', en: 'Gestures translated into mechanical light painting.' } },
 ];

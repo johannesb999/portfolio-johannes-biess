@@ -33,6 +33,7 @@
       <section id="details-section">
         <ProjectAccordion :items="accordionItems" id-prefix="beacon">
           <template #research><BeaconResearch /></template>
+          <template #network><BeaconNetwork /></template>
           <template #decisions><BeaconDecisions /></template>
         </ProjectAccordion>
       </section>
@@ -58,7 +59,7 @@ const accordionItems = [
   {
     "title": "Beacon on the way home",
     "alwaysOpen": true,
-    "body": "Someone who feels unsafe on the way home at night can use Beacon to see whether people and safe places are available nearby. This orientation is available before they need to request help.",
+    "body": "Beacon is a digital, local support network that helps people find their way, act with confidence and support others in public spaces. Someone who feels unsafe on the way home at night can see whether people and safe places are available nearby, before they need to request help.",
     "paragraphs": [
       "When help is needed, they can send a discreet request. Individual helpers receive a specific task: offer a safe place or walk towards the person. The map and direction arrow show the person seeking help where they can go."
     ],
@@ -78,10 +79,7 @@ const accordionItems = [
   },
   {
     "title": "A network of people and places",
-    "body": "Two requirements mattered most when choosing the concept: help should be available early and work along a freely chosen route, including between fixed safe spaces. We compared four approaches: a support network, fixed safe spaces, stationed drones and forming groups. We assessed them against the seven requirements drawn from the research.",
-    "paragraphs": [
-      "The support network makes use of existing people and places, so it can offer help between individual safe spaces. Participants have distinct roles: one person seeks help, mobile helpers can walk towards them, and a safe place gives them a destination. Before a request, Beacon shows only how many helpers are available. Their exact locations stay hidden so their movements and absence cannot be inferred."
-    ]
+    "slot": "network"
   },
   {
     "title": "Using Beacon under stress",
@@ -94,13 +92,13 @@ const accordionItems = [
       "Before first use, a demo introduces the request for help and its haptic feedback. People who want to help learn their task and its limits. To launch the network, we considered starting with existing places open at night. Their staff need clear procedures and an introduction before private helpers can extend the service."
     ],
     "images": [
-      "/img/beacon/campaign.webp"
+      "/img/beacon/recognition.webp"
     ],
     "imageAlts": [
-      "Beacon campaign inviting people to join the support network"
+      "Meeting through Beacon: guidance for helpers and the You are Safe view with personal contacts"
     ],
     "imageCaptions": [
-      "The campaign invites more people to join the network as helpers."
+      "After meeting, practical support and personal contacts remain available."
     ]
   },
   {

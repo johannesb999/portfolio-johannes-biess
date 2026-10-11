@@ -56,7 +56,7 @@ const tag = computed(() => {
 
 // Alles, was nicht auf der eigenen Seite liegt, oeffnet in einem neuen Tab.
 const isExternal = computed(
-  () => !!props.href && (/^[a-z]+:/i.test(props.href) || props.href.endsWith(".pdf"))
+  () => !!props.href && (/^[a-z]+:/i.test(props.href) || /\.pdf(?:[?#]|$)/i.test(props.href))
 );
 
 const linkAttrs = computed(() => {

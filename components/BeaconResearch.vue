@@ -168,7 +168,6 @@ function onTabKey(event: KeyboardEvent, index: number) {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing--xs) var(--spacing--lg);
-  border-bottom: var(--border__size) solid var(--border__color);
 }
 .research__tabs [role='tab'] {
   min-height: var(--control__size--minimum);

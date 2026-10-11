@@ -61,7 +61,7 @@ const accordionItems = [
     title: 'KAI in service',
     alwaysOpen: true,
     paragraphs: [
-      'KAI is a mobile assistant for new restaurant staff. With guests, it turns spoken orders into visible items. During a shift, it shows table status, open tasks and the route to the next table. Guidance makes knowledge available when a decision calls for it.',
+      'KAI is a mobile assistant for new restaurant staff. With guests, it turns spoken orders into visible items. During a shift, it shows table status, open tasks and the route to the next table. Relevant guidance on dishes and service tasks is available directly in the app.',
       'Johannes Biess, Jannik Flaig and Paula Romanessi developed this sixth-semester team project together. It combines detailed interfaces for the service workflow with a functional prototype for taking orders. My focus was UI and UX, alongside the reasoning and structure of the documentation.',
     ],
     images: [
@@ -92,14 +92,14 @@ const accordionItems = [
       'Three KAI screens showing milk alternatives, a warning and a knowledge check before disabling guidance',
     ],
     imageCaptions: [
-      'Milk alternative, warning and knowledge check: each cue appears in its decision context.',
+      'A suitable milk alternative, a warning and the knowledge check before turning off beginner assistance.',
     ],
   },
   {
     title: 'Table overview and navigation',
-    body: 'A list of table numbers alone would be too abstract for new staff. The overview therefore connects each table to its status, timing and open tasks: food and drinks are ready, guests want to pay, or there is nothing to do yet. Before moving, staff can see where service is needed.',
+    body: 'New staff first need to learn table numbers and service routines. The overview connects each table to its status, timing and open tasks: food and drinks are ready, guests want to pay, or there is nothing to do yet. Before moving, staff can see where service is needed.',
     paragraphs: [
-      'Navigation answers a different question: where is that table in the room? A map shows its location in the restaurant, while a direction indicator guides staff towards it. The overview and navigation remain separate so staff can choose a task first, then find their way to it.',
+      'A map and direction indicator help staff find the selected table in the restaurant. Staff choose a task from the overview, then receive guidance on how to get there. As they gain experience, they can work from the task list without using navigation.',
     ],
     images: [
       '/img/kai/navigation.webp',

@@ -61,7 +61,7 @@ const accordionItems = [
     title: 'KAI im Service',
     alwaysOpen: true,
     paragraphs: [
-      'KAI ist eine mobile Assistenz für neue Servicekräfte. Beim Gast macht die App gesprochene Bestellungen als einzelne Positionen sichtbar. Während der Schicht zeigt sie Tischstatus, offene Aufgaben und den Weg zum nächsten Tisch. Hinweise erschließen Wissen genau dann, wenn es für eine Entscheidung gebraucht wird.',
+      'KAI ist eine mobile Assistenz für neue Servicekräfte. Beim Gast macht die App gesprochene Bestellungen als einzelne Positionen sichtbar. Während der Schicht zeigt sie Tischstatus, offene Aufgaben und den Weg zum nächsten Tisch. Bei Fragen zu Gerichten und Abläufen stehen passende Hinweise direkt in der Anwendung bereit.',
       'Johannes Biess, Jannik Flaig und Paula Romanessi entwickelten das Teamprojekt im sechsten Semester gemeinsam. Es verbindet ausgearbeitete Oberflächen für den Serviceablauf mit einem Funktionsprototyp für die Bestellaufnahme. Mein Schwerpunkt lag auf UI und UX sowie auf der inhaltlichen Herleitung und Struktur der Dokumentation.',
     ],
     images: [
@@ -92,14 +92,14 @@ const accordionItems = [
       'Drei KAI-Oberflächen mit Milchalternativen, Warnhinweis und Wissensabfrage vor dem Abschalten von Hilfen',
     ],
     imageCaptions: [
-      'Milchalternative, Warnung und Wissensabfrage: Die Hinweise erscheinen im jeweiligen Entscheidungskontext.',
+      'Eine passende Milchalternative, ein Warnhinweis und die Wissensabfrage vor dem Abschalten der Einstiegshilfen.',
     ],
   },
   {
     title: 'Tischübersicht und Navigation',
-    body: 'Eine reine Liste von Tischnummern wäre für neue Servicekräfte zu abstrakt. Die Tischübersicht verbindet deshalb jeden Tisch mit seinem Status, Zeitangaben und offenen Aufgaben: Speisen und Getränke stehen bereit, ein Tisch möchte bezahlen oder es gibt gerade nichts zu tun. So lässt sich vor dem nächsten Weg erkennen, wo Service gebraucht wird.',
+    body: 'Neue Servicekräfte müssen Tischnummern und Abläufe erst kennenlernen. Die Tischübersicht verbindet jeden Tisch mit seinem Status, Zeitangaben und offenen Aufgaben: Speisen und Getränke stehen bereit, ein Tisch möchte bezahlen oder es gibt gerade nichts zu tun. So lässt sich vor dem nächsten Weg erkennen, wo Service gebraucht wird.',
     paragraphs: [
-      'Die Navigation beantwortet eine andere Frage: Wo befindet sich dieser Tisch im Raum? Eine Karte zeigt seine Lage im Restaurant, eine Richtungsanzeige führt dorthin. Übersicht und Navigation bleiben getrennt, damit die Servicekraft zuerst die Aufgabe wählen und sich anschließend gezielt orientieren kann.',
+      'Eine Karte und eine Richtungsanzeige helfen, den ausgewählten Tisch im Restaurant zu finden. Die Servicekraft wählt zunächst eine Aufgabe aus der Übersicht und erhält anschließend die räumliche Orientierung für den Weg dorthin. Mit zunehmender Erfahrung kann sie auf die Navigationshilfe verzichten und weiter mit der Aufgabenliste arbeiten.',
     ],
     images: [
       '/img/kai/navigation.webp',
